@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+torch
+jsonlines
+tqdm
+transformers
+tensorboardX
+nltk
+spacy
