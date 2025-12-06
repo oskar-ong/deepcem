@@ -101,10 +101,7 @@ if __name__=="__main__":
 
     scores = classify(test_ditto, model, lm="roberta", max_len=128)
 
-    with open(f"data/interim/splits/{task}/full/test.txt", "r", encoding="utf-8") as f:
-        lines = [l.strip() for l in f if l.strip()]
-
-    y_true = [int(l.split("\t")[2]) for l in lines]
+    y_true = [int(l[2]) for l in test]
 
     y_pred = scores[0] 
 
