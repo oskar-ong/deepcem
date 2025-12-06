@@ -1,0 +1,3 @@
+[submodule "models/ditto"]
+	path = models/ditto
+	url = https://github.com/oskar-ong/ditto.git

@@ -9,9 +9,9 @@ from deepcem.graph import create_hyperedges, extract_references
 from deepcem.metrics import get_pred_labels, get_true_labels
 from deepcem.utils import attach_run_file_handler, extract_relation, get_attrs_for_keys, setup_base_logger
 
-task = "dirty-dblp-scholar"
+task = "dirty/dblp-scholar"
 lm = "ditto"
-dataset_dir = f"./data/raw/{task}"
+dataset_dir = f"./data/raw/deepmatcher/{task}"
 output_dir = f"./data/processed/{lm}-splits/{task}"
 checkpoint_dir = f"./models/ditto/checkpoints/{task}_inline"
 log_dir = f"./logs"
@@ -25,13 +25,13 @@ def encode_relations(dataset):
         if label == 1:
             uf.union(left[index_column], right[index_column])
 
-    print(uf.get_sets())
-
     serialized_lines = []
 
     for left, right, label in dataset:
-        line = (left,right,label)
-        serialized_lines.append(line)
+
+        # TODO: Calculate cluster stats 
+
+        serialized_lines.append(line_with_cluster_stats)
     return serialized_lines
 
 if __name__=="__main__":
@@ -72,11 +72,11 @@ if __name__=="__main__":
 
     if not Path(f"{checkpoint_dir}/model.pt").exists():
 
-        serialized_lines_train, gold_labels = encode_relations(train)
+        serialized_lines_train = encode_relations(train)
         with open(f"{output_dir}/inline/train.txt","w", encoding="utf-8") as f:
             f.write("\n".join(serialized_lines_train))
         
-        serialized_lines_valid, gold_labels = encode_relations(valid)
+        serialized_lines_valid = encode_relations(valid)
         with open(f"{output_dir}/inline/valid.txt","w", encoding="utf-8") as f:
             f.write("\n".join(serialized_lines_valid))
 
@@ -141,7 +141,7 @@ if __name__=="__main__":
         candidates, references, hyperedges)
     logger.info("Done: Bootstrap Clusters")
     logger.info(f"Created Clusters: {len(clusters)}")
-    
+
     # --------------------------------------------------
     logger.info("Start: Initialize Priority Queue")
     pq, clusters = init_pq(clusters, references, hyperedges, parents, cfg)
