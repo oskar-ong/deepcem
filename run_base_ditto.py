@@ -95,7 +95,7 @@ if __name__=="__main__":
 
         subprocess.run(cmd, env=env)
 
-    config, model = load_model(task, "checkpoints",
+    config, model = load_model(task, "./models/ditto/checkpoints",
                             "roberta", False, False)
     model.eval()
 
