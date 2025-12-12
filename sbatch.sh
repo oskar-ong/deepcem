@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
- 
-#SBATCH --job-name=deepcem-test
-#SBATCH --partition=test
-#SBATCH --time=1-0
 
 # Request one Task (unless using mpi4py)
-#SBATCH --ntasks=1
+#SBATCH --job-name=deepcem-test
+#SBATCH --partition=epyc-gpu
+#SBATCH --time=1-0
+
 # Request memory per CPU
 #SBATCH --mem-per-cpu=1G
 # Request n CPUs for your task.
-#SBATCH --cpus-per-task=n
+#SBATCH --cpus-per-task=1
+# Request GPU Ressources (model:number)
+#SBATCH --gpus=a100:1
 
 # Clear all interactively loaded modules
 module purge
