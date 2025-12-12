@@ -356,7 +356,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
     return pq, clusters
 
 
-def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges: dict[str, Hyperedge], references: dict[str, Reference], cfg):
+def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges: dict[str, Hyperedge], references: dict[str, Reference], cfg: PipelineConfig):
     # Step 6: Iterative merging loop
     threshold = cfg.threshold  # similarity cutoff
     iteration = 0
@@ -395,7 +395,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
             if get_cluster(ck, clusters, parents).id != cij.id:
                 
                 # TODO change function signature
-                sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, ci, cj, references, hyperedges, cfg)
+                sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cij, ck, references, hyperedges, cfg)
 
                 # insert sim(cij, ck), cij, ck into q
                 pq.add(-sim_cij_ck, (min(cij.id, ck), max(cij.id, ck)))
@@ -415,7 +415,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
                 ck_rep = get_cluster(ck, clusters, parents).id
                 if cn_rep != ck_rep:
                     
-                    sim_ck_cn = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, ci, cj, references, hyperedges, cfg)
+                    sim_ck_cn = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cn, ck, references, hyperedges, cfg)
 
                     # update q sim(ck, cn), ck, cn
                     pq.update_priority(

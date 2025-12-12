@@ -63,7 +63,7 @@ def find(cid, parents):
         parents[cid] = find(parents[cid], parents)  # path compression
     return parents[cid]
 
-def get_cluster(cid, clusters, parents):
+def get_cluster(cid, clusters, parents) -> Cluster:
     """Return the current cluster object for a given id."""
     rep = find(cid, parents)
     return clusters[rep]

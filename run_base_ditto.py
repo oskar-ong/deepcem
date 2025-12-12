@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 from deepcem.serialize import serialize_to_ditto_wo_id
 from deepcem.utils import get_attrs_for_keys
-from matcher import load_model, classify
+from matcher import load_model, classify 
 
 dataset = "dirty/dblp-scholar"
 task = f"{dataset}_base"

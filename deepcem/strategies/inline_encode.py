@@ -1,10 +1,13 @@
 import numpy as np
 
+from ditto_light import DittoModel
+
 from deepcem.config import PipelineConfig
 from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import nbr
 from deepcem.strategies.base import Strategy
+from matcher import classify, load_model
 
 class InlineEncode(Strategy):
     def __init__(self):

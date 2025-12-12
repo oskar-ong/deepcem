@@ -59,12 +59,5 @@ def get_pred_labels(y_true, candidates, references, clusters, parents):
     f1 = f1_score(y_true, y_pred, zero_division=0)
     return acc, prec, rec, f1
 
-def get_true_labels(cfg):
-    with open(f"data/interim/{cfg.dataset}/extracted/splits/test.txt", "r", encoding="utf-8") as f:
-        lines = [l.strip() for l in f if l.strip()]
-
-    y_true = [int(l.split("\t")[2]) for l in lines]
-    return y_true
-
 if __name__ == "__main__":
     print('not implemented yet')
