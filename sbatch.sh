@@ -19,7 +19,7 @@ module purge
 module load anaconda # or micromamba or anaconda
 
 # Activate a certain environment
-conda activate deepcem
+conda activate deepcem2
  
 # set number of OpenMP threads (i.e. for numpy, etc...)
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
