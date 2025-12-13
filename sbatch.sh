@@ -6,7 +6,7 @@
 #SBATCH --time=1-0
 
 # Request memory per CPU
-#SBATCH --mem-per-cpu=1G
+#SBATCH --mem-per-cpu=32G
 # Request n CPUs for your task.
 #SBATCH --cpus-per-task=1
 # Request GPU Ressources (model:number)
