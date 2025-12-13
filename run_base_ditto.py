@@ -96,7 +96,7 @@ if __name__=="__main__":
         subprocess.run(cmd, env=env)
 
     config, model = load_model(task, "./models/ditto/checkpoints",
-                            "roberta", False, False)
+                            "roberta", True, False)
     model.eval()
 
     scores = classify(test_ditto, model, lm="roberta", max_len=128)
