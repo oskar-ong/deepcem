@@ -27,5 +27,13 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 # probably want to set OMP_NUM_THREADS=1 instead, in order 
 # to prevent the creation of too many threads (massive slowdown!)
 
+# export cache
+export HF_HOME=/hpc/gpfs2/scratch/u/zeru47vu/hf
+export HF_HUB_CACHE= /hpc/gpfs2/scratch/u/zeru47vu/hf/hub
+
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+export HF_DATASETS_OFFLINE=1
+
 # No need to pass number of tasks to srun
 srun python run_base_ditto.py
