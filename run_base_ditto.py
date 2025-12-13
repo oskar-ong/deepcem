@@ -91,7 +91,7 @@ if __name__=="__main__":
         ]
 
         env = os.environ.copy()
-        env["CUDA_VISIBLE_DEVICES"] = "0"
+        #env["CUDA_VISIBLE_DEVICES"] = "0"
 
         subprocess.run(cmd, env=env)
 
