@@ -29,7 +29,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-1}
 
 # export cache
 export HF_HOME=/hpc/gpfs2/scratch/u/zeru47vu/hf
-export HF_HUB_CACHE= /hpc/gpfs2/scratch/u/zeru47vu/hf/hub
+export HF_HUB_CACHE=/hpc/gpfs2/scratch/u/zeru47vu/hf/hub
 
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
