@@ -395,7 +395,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
             if get_cluster(ck, clusters, parents).id != cij.id:
                 
                 # TODO change function signature
-                sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cij, ck, references, hyperedges, cfg)
+                sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cij.id, ck, references, hyperedges, cfg)
 
                 # insert sim(cij, ck), cij, ck into q
                 pq.add(-sim_cij_ck, (min(cij.id, ck), max(cij.id, ck)))
