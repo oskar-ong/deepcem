@@ -1,6 +1,6 @@
 import numpy as np
 
-from ditto_light import DittoModel
+from matcher import DittoModel
 
 from deepcem.config import PipelineConfig
 from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
