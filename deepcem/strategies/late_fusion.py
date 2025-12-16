@@ -6,6 +6,7 @@ from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import RelationalSimilarity, choose_rel_similarity_measure
 from deepcem.strategies.base import Strategy
+from matcher import load_model, classify, DittoModel 
 
 logger = logging.getLogger("cem.late_fusion")
 
@@ -16,7 +17,7 @@ class LateFusion(Strategy):
 
     def get_ditto_model(self, cfg: PipelineConfig):
         if not self.ditto_model: 
-            _, self.ditto_model = load_model(f"{cfg.dataset}_extracted", cfg.ckpt, cfg.lm, cfg.use_gpu, cfg.fp16)
+            _, self.ditto_model = load_model(f"{cfg.dataset}", cfg.ckpt, cfg.lm, cfg.use_gpu, cfg.fp16)
 
         return self.ditto_model
 

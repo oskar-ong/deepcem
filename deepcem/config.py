@@ -9,6 +9,7 @@ INLINE_ENCODE = 2
 class PipelineConfig:
 
     dataset = "citations_extracted"
+    task = ""
     alpha = 0.1
     threshold = 0.5
     k = 2

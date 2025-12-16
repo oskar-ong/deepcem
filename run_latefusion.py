@@ -103,6 +103,8 @@ if __name__=="__main__":
     cfg = PipelineConfig()
     cfg.dataset = task
     cfg.strategy = LATE_FUSION
+    cfg.use_gpu = True
+    cfg.fp16 = True
     cfg.alpha = 0.1
     alpha_str = str(cfg.alpha).replace('.', '-')
     threshold = 0.8
