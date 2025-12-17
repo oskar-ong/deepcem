@@ -28,6 +28,10 @@ class PriorityQueue:
     def update_priority(self, item, new_priority):
         """Update the priority of an existing item."""
         if item not in self.position_map:
+            other_way = (item[1], item[0])
+            logger.info(other_way)
+            if other_way in self.position_map:
+                logger.info("Other way!")
             raise KeyError(f"Item {item} not found in priority queue")
         idx = self.position_map[item]
         old_priority = self.heap[idx][0]
