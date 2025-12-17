@@ -9,6 +9,7 @@ from deepcem.data_structures import Reference, Hyperedge, Cluster, get_cluster, 
 from deepcem.strategies.factory import strategy_factory
 
 logger = logging.getLogger("cem.clustering")
+deleted_pq_entries = set() # debug 
 class PriorityQueue:
     def __init__(self):
         self.heap = []               # list of tuples: (priority, item)
@@ -28,10 +29,8 @@ class PriorityQueue:
     def update_priority(self, item, new_priority):
         """Update the priority of an existing item."""
         if item not in self.position_map:
-            other_way = (item[1], item[0])
-            logger.info(other_way)
-            if other_way in self.position_map:
-                logger.info("Other way!")
+            logger.info(item)
+            print(deleted_pq_entries)
             raise KeyError(f"Item {item} not found in priority queue")
         idx = self.position_map[item]
         old_priority = self.heap[idx][0]
@@ -335,10 +334,10 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
     already_compared = set()
     logger.debug("Iterate over all Clusters")
     for ci in clusters:
-        logger.debug(f"ci: {ci}")
+        #logger.debug(f"ci: {ci}")
         # iterate over all similar clusters:
         for cj in clusters[ci].similar_clusters:
-            logger.debug(f"ci: {ci}, cj: {cj}")
+            #logger.debug(f"ci: {ci}, cj: {cj}")
             # dont self-compare and avoid duplicate comparisons (ci, cj) <-> (cj,ci)
             if ci != cj and cluster_pair(ci,cj) not in already_compared:
                 
@@ -347,7 +346,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
                 # Insert tuple into the heap
                 # -sim : store negative similarity
                 pq.add(-sim_ci_cj, cluster_pair(ci,cj))
-                logger.debug(f"cluster similarity: {-sim_ci_cj}, {ci}, {cj}")
+                #logger.debug(f"cluster similarity: {-sim_ci_cj}, {ci}, {cj}")
 
                 # store queue entries on each cluster
                 clusters[ci].pq_entries[cluster_pair(ci,cj)] = -sim_ci_cj
@@ -375,7 +374,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
 
         all_pq_entries = get_cluster(ci, clusters, parents).pq_entries
         all_pq_entries.update(get_cluster(cj, clusters, parents).pq_entries)
-        deleted_pq_entries = set() # debugging purposes
+
         del all_pq_entries[(ci, cj)]
         for q_entry in all_pq_entries:
             # remove q_entry from pq
@@ -417,12 +416,6 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
                     sim_ck_cn = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cn, ck, references, hyperedges, cfg)
 
                     # update q sim(ck, cn), ck, cn
-                    logger.info(f"Try to update following pair: {cluster_pair(ck,cn)}")
-                    if cluster_pair(ck,cn) in deleted_pq_entries:
-                        entry_deleted = True
-                    else: 
-                        entry_deleted = False
-                    logger.info(f"Pair was deleted prior?: {entry_deleted}")
                     pq.update_priority(cluster_pair(ck,cn), -sim_ck_cn)
                     get_cluster(ck, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
                     get_cluster(cn, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
