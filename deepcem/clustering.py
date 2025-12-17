@@ -429,7 +429,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
             # add pqentry for cluster cij
             get_cluster(cij.id, clusters, parents).pq_entries[cluster_pair(cij.id,rk)] = -sim_cij_ck
             # add pqentry for cluster ck
-            get_cluster(ck, clusters, parents).pq_entries[cluster_pair(cij.id,rk)] = -sim_cij_ck
+            get_cluster(rk, clusters, parents).pq_entries[cluster_pair(cij.id,rk)] = -sim_cij_ck
 
         # Iterate over each neighbor cn of cij
         logger.debug(f"Iterate over all neighboring clusters of {cij.id}: {len(cij.neighboring_clusters)} Clusters")
