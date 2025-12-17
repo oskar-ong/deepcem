@@ -336,23 +336,21 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
         for cj in clusters[ci].similar_clusters:
             logger.debug(f"ci: {ci}, cj: {cj}")
             # dont self-compare and avoid duplicate comparisons (ci, cj) <-> (cj,ci)
-            if ci != cj and (min(ci, cj), max(ci, cj)) not in already_compared:
+            if ci != cj and cluster_pair(ci,cj) not in already_compared:
                 
                 sim_ci_cj = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, ci, cj, references, hyperedges, cfg)
 
                 # Insert tuple into the heap
                 # -sim : store negative similarity
-                pq.add(-sim_ci_cj, (min(ci, cj), max(ci, cj)))
+                pq.add(-sim_ci_cj, cluster_pair(ci,cj))
                 logger.debug(f"cluster similarity: {-sim_ci_cj}, {ci}, {cj}")
 
                 # store queue entries on each cluster
-                clusters[ci].pq_entries[(
-                    min(ci, cj), max(ci, cj))] = -sim_ci_cj
-                clusters[cj].pq_entries[(
-                    min(ci, cj), max(ci, cj))] = -sim_ci_cj
+                clusters[ci].pq_entries[cluster_pair(ci,cj)] = -sim_ci_cj
+                clusters[cj].pq_entries[cluster_pair(ci,cj)] = -sim_ci_cj
 
                 # remember already compared
-                already_compared.add((min(ci, cj), max(ci, cj)))
+                already_compared.add(cluster_pair(ci,cj))
     return pq, clusters
 
 
@@ -363,7 +361,6 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
     while pq:
         logger.debug(f"Current Iteration: {iteration}")
         iteration += 1
-        # neg_sim, ci, cj = heapq.heappop(pq)
         neg_sim, (ci, cj) = pq.pop()
         sim = -neg_sim
         logger.debug(f"Current Cluster: {(ci, cj)}, similarity: {sim}")
@@ -374,10 +371,12 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
 
         all_pq_entries = get_cluster(ci, clusters, parents).pq_entries
         all_pq_entries.update(get_cluster(cj, clusters, parents).pq_entries)
+        deleted_pq_entries = set() # debugging purposes
         del all_pq_entries[(ci, cj)]
         for q_entry in all_pq_entries:
             # remove q_entry from pq
             if q_entry in pq.position_map:
+                deleted_pq_entries.add(q_entry)
                 pq.remove(q_entry)
 
         # Merge clusters ci and cj
@@ -397,32 +396,35 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
                 # TODO change function signature
                 sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cij.id, ck, references, hyperedges, cfg)
 
-                # insert sim(cij, ck), cij, ck into q
-                pq.add(-sim_cij_ck, (min(cij.id, ck), max(cij.id, ck)))
+                # insert sim(cij, ck), cij, ck into pq
+                pq.add(-sim_cij_ck, cluster_pair(cij.id,ck))
                 # add pqentry for cluster cij
-                get_cluster(cij.id, clusters, parents).pq_entries[(
-                    min(cij.id, ck), max(cij.id, ck))] = -sim_cij_ck
+                get_cluster(cij.id, clusters, parents).pq_entries[cluster_pair(cij.id,ck)] = -sim_cij_ck
                 # add pqentry for cluster ck
-                get_cluster(ck, clusters, parents).pq_entries[(
-                    min(cij.id, ck), max(cij.id, ck))] = -sim_cij_ck
+                get_cluster(ck, clusters, parents).pq_entries[cluster_pair(cij.id,ck)] = -sim_cij_ck
 
         # Iterate over each neighbor cn of cij
         logger.debug(f"Iterate over all neighboring clusters of {cij.id}: {len(cij.neighboring_clusters)} Clusters")
-        for cn in tqdm(cij.neighboring_clusters):
-            cn_rep = get_cluster(cn, clusters, parents).id
+        for cn in cij.neighboring_clusters:
             # find all clusters "ck" that are similar to cn
             for ck in get_cluster(cn, clusters, parents).similar_clusters:
-                ck_rep = get_cluster(ck, clusters, parents).id
-                if cn_rep != ck_rep:
-                    
+                if cn != ck:
+               
                     sim_ck_cn = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cn, ck, references, hyperedges, cfg)
 
                     # update q sim(ck, cn), ck, cn
-                    pq.update_priority(
-                        (min(ck_rep, cn_rep), max(ck_rep, cn_rep)), -sim_ck_cn)
-                    get_cluster(ck, clusters, parents).pq_entries[(
-                        min(ck, cn), max(ck, cn))] = -sim_ck_cn
-                    get_cluster(cn, clusters, parents).pq_entries[(
-                        min(ck, cn), max(ck, cn))] = -sim_ck_cn
+                    logger.info(f"Try to update following pair: {cluster_pair(ck,cn)}")
+                    if cluster_pair(ck,cn) in deleted_pq_entries:
+                        entry_deleted = True
+                    else: 
+                        entry_deleted = False
+                    logger.info(f"Pair was deleted prior?: {entry_deleted}")
+                    pq.update_priority(cluster_pair(ck,cn), -sim_ck_cn)
+                    get_cluster(ck, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
+                    get_cluster(cn, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
 
     return clusters, references, hyperedges, parents
+
+def cluster_pair(a, b):
+    return (a, b) if a <= b else (b, a)
+
