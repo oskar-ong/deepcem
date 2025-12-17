@@ -1,3 +1,6 @@
+from deepcem.utils import cluster_pair
+
+
 class Reference:
     def __init__(self, id):
         self.id = id
@@ -29,7 +32,8 @@ class Cluster:
 def merge_clusters(c1: Cluster, c2: Cluster, clusters: dict, parents:dict) -> tuple[Cluster, dict, dict]:
     """Merge two clusters into a new one and update mappings recursively."""
     rep1, rep2 = find(c1.id, parents), find(c2.id, parents)
-    new_id = rep1 + rep2
+    rep1, rep2 = cluster_pair(rep1, rep2)
+    new_id = f"{rep1}{rep2}"
     new_cluster = Cluster(new_id)
 
     #references
@@ -41,10 +45,7 @@ def merge_clusters(c1: Cluster, c2: Cluster, clusters: dict, parents:dict) -> tu
     #sim clusters
     new_cluster.similar_clusters.update(c1.similar_clusters)
     new_cluster.similar_clusters.update(c2.similar_clusters)
-    if c1.id in new_cluster.similar_clusters:
-        new_cluster.similar_clusters.remove(c1.id)
-    if c2.id in new_cluster.similar_clusters:
-        new_cluster.similar_clusters.remove(c2.id)
+
     #neighbor clusters
     new_cluster.neighboring_clusters.update(c1.neighboring_clusters)
     new_cluster.neighboring_clusters.update(c2.neighboring_clusters)
@@ -52,6 +53,16 @@ def merge_clusters(c1: Cluster, c2: Cluster, clusters: dict, parents:dict) -> tu
     parents[rep1] = new_id
     parents[rep2] = new_id
     parents[new_id] = new_id
+
+    # normalize to reps
+    new_cluster.similar_clusters = {find(x, parents) for x in new_cluster.similar_clusters}
+    new_cluster.neighboring_clusters = {find(x, parents) for x in new_cluster.neighboring_clusters}
+
+    # remove self refs / old endpoints
+    for x in (rep1, rep2, new_id):
+        new_cluster.similar_clusters.discard(x)
+        new_cluster.neighboring_clusters.discard(x)
+
     # store under its own id
     clusters[new_id] = new_cluster
 

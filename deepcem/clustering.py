@@ -5,8 +5,9 @@ import pandas as pd
 from tqdm import tqdm
 
 from deepcem.config import PipelineConfig
-from deepcem.data_structures import Reference, Hyperedge, Cluster, get_cluster, make_cluster, merge_clusters
+from deepcem.data_structures import Reference, Hyperedge, Cluster, get_cluster, make_cluster, merge_clusters, find
 from deepcem.strategies.factory import strategy_factory
+from deepcem.utils import cluster_pair
 
 logger = logging.getLogger("cem.clustering")
 deleted_pq_entries = set() # debug 
@@ -358,70 +359,100 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
 
 
 def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges: dict[str, Hyperedge], references: dict[str, Reference], cfg: PipelineConfig):
-    # Step 6: Iterative merging loop
     threshold = cfg.threshold  # similarity cutoff
     iteration = 0
+
+    strategy = strategy_factory(cfg)
+
     while pq:
         logger.debug(f"Current Iteration: {iteration}")
         iteration += 1
+
         neg_sim, (ci, cj) = pq.pop()
+        ci, cj = cluster_pair(ci,cj)
+
+        # skip stale entries
+        rci = find(ci,parents)
+        rcj = find(cj,parents)
+
+        if rci != ci or rcj != cj:
+            # stale clusters
+            continue
+        
+        if rci == rcj:
+            # stale cause already merged
+            continue
+
         sim = -neg_sim
         logger.debug(f"Current Cluster: {(ci, cj)}, similarity: {sim}")
-        # Stopping condition
         if sim < threshold:
             logger.debug("Threshold reached, break")
             break
 
-        all_pq_entries = get_cluster(ci, clusters, parents).pq_entries
-        all_pq_entries.update(get_cluster(cj, clusters, parents).pq_entries)
+        # all_pq_entries = get_cluster(ci, clusters, parents).pq_entries
+        # all_pq_entries.update(get_cluster(cj, clusters, parents).pq_entries)
 
-        del all_pq_entries[(ci, cj)]
-        for q_entry in all_pq_entries:
-            # remove q_entry from pq
-            if q_entry in pq.position_map:
-                deleted_pq_entries.add(q_entry)
-                pq.remove(q_entry)
+        # del all_pq_entries[(ci, cj)]
+        # for q_entry in all_pq_entries:
+        #     # remove q_entry from pq
+        #     if q_entry in pq.position_map:
+        #         deleted_pq_entries.add(q_entry)
+        #         pq.remove(q_entry)
 
         # Merge clusters ci and cj
-        cij, clusters, parents = merge_clusters(get_cluster(
-            ci, clusters, parents), get_cluster(cj, clusters, parents), clusters, parents)
-        # delete clusters ci and cj
-        if ci in clusters:
-            del clusters[ci]
-        if cj in clusters:
-            del clusters[cj]
+        cij, clusters, parents = merge_clusters(
+            get_cluster(ci, clusters, parents), 
+            get_cluster(cj, clusters, parents), 
+            clusters, 
+            parents)
+        # # delete clusters ci and cj
+        # if ci in clusters:
+        #     del clusters[ci]
+        # if cj in clusters:
+        #     del clusters[cj]
 
         # Find all clusters "ck" that are similar to cij
         logger.debug(f"Iterate over all similar clusters of {cij.id}: {len(cij.similar_clusters)} Clusters")
-        for ck in cij.similar_clusters:
-            if get_cluster(ck, clusters, parents).id != cij.id:
-                
-                # TODO change function signature
-                sim_cij_ck = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cij.id, ck, references, hyperedges, cfg)
 
-                # insert sim(cij, ck), cij, ck into pq
-                pq.add(-sim_cij_ck, cluster_pair(cij.id,ck))
-                # add pqentry for cluster cij
-                get_cluster(cij.id, clusters, parents).pq_entries[cluster_pair(cij.id,ck)] = -sim_cij_ck
-                # add pqentry for cluster ck
-                get_cluster(ck, clusters, parents).pq_entries[cluster_pair(cij.id,ck)] = -sim_cij_ck
+
+        for ck_id in cij.similar_clusters:
+            rk = find(ck_id,parents)
+            if rk == cij.id:
+                continue
+
+            
+            # TODO change function signature
+            sim_cij_ck = strategy.calculate_cluster_similarity(clusters, parents, cij.id, rk, references, hyperedges, cfg)
+
+            # insert sim(cij, ck), cij, ck into pq
+            pq.add(-sim_cij_ck, cluster_pair(cij.id,rk))
+            # add pqentry for cluster cij
+            get_cluster(cij.id, clusters, parents).pq_entries[cluster_pair(cij.id,rk)] = -sim_cij_ck
+            # add pqentry for cluster ck
+            get_cluster(ck, clusters, parents).pq_entries[cluster_pair(cij.id,rk)] = -sim_cij_ck
 
         # Iterate over each neighbor cn of cij
         logger.debug(f"Iterate over all neighboring clusters of {cij.id}: {len(cij.neighboring_clusters)} Clusters")
-        for cn in cij.neighboring_clusters:
-            # find all clusters "ck" that are similar to cn
-            for ck in get_cluster(cn, clusters, parents).similar_clusters:
-                if cn != ck:
-               
-                    sim_ck_cn = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, cn, ck, references, hyperedges, cfg)
+        for cn_id in cij.neighboring_clusters:
 
-                    # update q sim(ck, cn), ck, cn
-                    pq.update_priority(cluster_pair(ck,cn), -sim_ck_cn)
-                    get_cluster(ck, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
-                    get_cluster(cn, clusters, parents).pq_entries[cluster_pair(ck,cn)] = -sim_ck_cn
+            rn = find(cn_id, parents)
+            if rn == cij.id:
+                continue
+            
+            cn = get_cluster(rn,clusters,parents)
+
+            # find all clusters "ck" that are similar to cn
+            for ck_id in cn.similar_clusters:
+                rk = find(ck_id,parents)
+                if rk == rn:
+                    continue
+
+                sim_ck_cn = strategy.calculate_cluster_similarity(clusters, parents, rk, rn, references, hyperedges, cfg)
+
+                # update q sim(ck, cn), ck, cn
+                pq.add(-sim_ck_cn, cluster_pair(rn,rk))
+
+                get_cluster(rk, clusters, parents).pq_entries[cluster_pair(rk,rn)] = -sim_ck_cn
+                get_cluster(rn, clusters, parents).pq_entries[cluster_pair(rk,rn)] = -sim_ck_cn
 
     return clusters, references, hyperedges, parents
-
-def cluster_pair(a, b):
-    return (a, b) if a <= b else (b, a)
-

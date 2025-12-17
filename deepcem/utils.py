@@ -131,3 +131,6 @@ def get_run_id(log_dir):
         latest_run_id = max(log_dirs)
         run_id = int(latest_run_id) + 1
     return run_id
+
+def cluster_pair(a, b):
+    return (a, b) if a <= b else (b, a)
