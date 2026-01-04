@@ -35,11 +35,11 @@ def classification_metrics(
     }
     return metrics
 
-def get_pred_labels(y_true, candidates, references, clusters, parents):
+def get_pred_labels(y_true, candidates, references, clusters, parents, index_column):
     result_set = []
     for _, row in candidates.iterrows():
-        left_id = row[0]["Id"]
-        right_id = row[1]["Id"]
+        left_id = row[0][index_column]
+        right_id = row[1][index_column]
         left_cluster = get_cluster(
             references[left_id].cluster, clusters, parents)
         right_cluster = get_cluster(

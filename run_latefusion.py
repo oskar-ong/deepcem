@@ -161,7 +161,7 @@ if __name__=="__main__":
     # Evaluate result
     y_true = [int(l[2]) for l in test]
     acc, prec, rec, f1 = get_pred_labels(
-        y_true, candidates, references, clusters, parents)
+        y_true, candidates, references, clusters, parents, index_column)
 
     logger.info(f"accuracy : {acc}")
     logger.info(f"precision: {prec}")
