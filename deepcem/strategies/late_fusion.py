@@ -50,7 +50,7 @@ class LateFusion(Strategy):
                         lines.append(serialize_ditto(
                             references[ri], references[rj]))
                         comparisons.append(cluster_pair(ri,rj))
-        if len(lines>0):    
+        if len(lines) > 0:    
             labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.lm)
 
             for key,value in zip(comparisons,scores):
