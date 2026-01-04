@@ -105,7 +105,7 @@ if __name__=="__main__":
     cfg.strategy = LATE_FUSION
     cfg.use_gpu = True
     cfg.fp16 = True
-    cfg.alpha = 0.1
+    cfg.alpha = 0.2
     alpha_str = str(cfg.alpha).replace('.', '-')
     threshold = 0.8
     cfg.threshold = threshold
@@ -148,7 +148,7 @@ if __name__=="__main__":
     logger.info("Start: Initialize Priority Queue")
     pq, clusters = init_pq(clusters, references, hyperedges, parents, cfg)
     logger.info("Done: Priority Queue Initialized")
-    logger.debug(pq.peek(5))
+    logger.debug(pq.peek(5)) 
 
     # --------------------------------------------------
     logger.info("Start: Iterative Merge")

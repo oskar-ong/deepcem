@@ -6,6 +6,7 @@ from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import RelationalSimilarity, choose_rel_similarity_measure
 from deepcem.strategies.base import Strategy
+from deepcem.utils import cluster_pair
 from matcher import load_model, classify, DittoModel 
 
 logger = logging.getLogger("cem.late_fusion")
@@ -14,6 +15,7 @@ class LateFusion(Strategy):
     def __init__(self):
         self.ditto_model: DittoModel = ""
         self.rel_sim: RelationalSimilarity = ""
+        self._cache: dict[tuple[str, str], float] = {}
 
     def get_ditto_model(self, cfg: PipelineConfig):
         if not self.ditto_model: 
@@ -30,6 +32,8 @@ class LateFusion(Strategy):
 
         # compare all references of ci with all references of cj
         lines = []
+        comparisons = []
+        old_scores = []
         # iterate over all references of ci
 
         c_i = get_cluster(ci, clusters,parents)
@@ -40,11 +44,19 @@ class LateFusion(Strategy):
                 logger.debug(f"serialize Ditto: ci: {ci}, ri: {ri}, cj: {cj}, rj: {rj}")
 
                 if ri != rj:
-                    lines.append(serialize_ditto(
-                        references[ri], references[rj]))
+                    if cluster_pair(ri,rj) in self._cache:
+                        old_scores.append(self._cache[cluster_pair(ri,rj)])
+                    else:
+                        lines.append(serialize_ditto(
+                            references[ri], references[rj]))
+                        comparisons.append(cluster_pair(ri,rj))
                 
         labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.lm)
 
+        for key,value in zip(comparisons,scores):
+            self._cache[key] = value
+
+        scores.extend(old_scores)
         # find highest score in scores
         highest_score = 0
         for score in scores:
