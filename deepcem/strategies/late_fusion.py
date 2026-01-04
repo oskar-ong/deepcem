@@ -50,13 +50,15 @@ class LateFusion(Strategy):
                         lines.append(serialize_ditto(
                             references[ri], references[rj]))
                         comparisons.append(cluster_pair(ri,rj))
-                
-        labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.lm)
+        if len(lines>0):    
+            labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.lm)
 
-        for key,value in zip(comparisons,scores):
-            self._cache[key] = value
+            for key,value in zip(comparisons,scores):
+                self._cache[key] = value
 
-        scores.extend(old_scores)
+            scores.extend(old_scores)
+        else:
+            scores = old_scores
         # find highest score in scores
         highest_score = 0
         for score in scores:
