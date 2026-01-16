@@ -11,6 +11,7 @@ from deepcem.graph import create_hyperedges, extract_references
 from deepcem.metrics import get_pred_labels
 from deepcem.serialize import serialize_to_ditto_wo_id
 from deepcem.utils import attach_run_file_handler, extract_relation, get_attrs_for_keys, setup_base_logger
+from deepcem.preprocessing import normalize, reduce
 
 dataset = "dirty/dblp-scholar"
 task = f"{dataset}_lf"
@@ -21,7 +22,7 @@ checkpoint_dir = f"./models/ditto/checkpoints/{task}"
 model_path = f"./models/ditto/checkpoints/{task}/model.pt"
 configs_path = f"./models/ditto/configs.json"
 log_dir = f"./logs"
-index_column = "id"
+index_column = "id" 
 
 if __name__=="__main__":
 
@@ -34,6 +35,11 @@ if __name__=="__main__":
 
     df_A = pd.read_csv(f"{dataset_dir}/tableA.csv")  # left
     df_B = pd.read_csv(f"{dataset_dir}/tableB.csv")  # right
+
+    train_a = reduce(train_fp, f"{dataset_dir}/tableA.csv", f"./data/processed/reduced/train_a.csv", "id", "ltable_id", "rtable_id")
+
+    norm_a = normalize(f"{dataset_dir}/tableA.csv")
+    norm_b = normalize(f"{dataset_dir}/tableB.csv")
 
     # Convert to string once and index by 'id'
     df_A_idx = df_A.set_index(index_column)
@@ -107,7 +113,7 @@ if __name__=="__main__":
     cfg.fp16 = True
     cfg.alpha = 0.2
     alpha_str = str(cfg.alpha).replace('.', '-')
-    threshold = 0.8
+    threshold = 0.6
     cfg.threshold = threshold
     threshold_str = str(threshold).replace('.', '_')
 
@@ -131,7 +137,7 @@ if __name__=="__main__":
     logger.info("Done: Extract References")
     logger.info(f"Amount References: {len(references)}")
 
-    # --------------------------------------------------
+    # -------------------------------------------------- 
     logger.info("Start: Create Hyperedges")
     hyperedges, references = create_hyperedges(references, relationships)
     logger.info("Done: Create Hyperedges")

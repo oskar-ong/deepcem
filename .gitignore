@@ -208,3 +208,6 @@ __marimo__/
 
 # Macos
 .DS_store
+
+# data
+/data/processed/

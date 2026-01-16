@@ -1,0 +1,154 @@
+
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+from deepcem.preprocessing import build_ditto_file_from_labels, normalize, reduce
+
+dataset = "dirty/dblp-scholar"
+task = "testing-setup"
+lm = "ditto"
+dataset_dir = f"./data/raw/deepmatcher/{dataset}"
+output_dir = f"./data/processed/{lm}-splits/testing_setup"
+checkpoint_dir = f"./models/ditto/checkpoints/{task}"
+model_path = f"./models/ditto/checkpoints/{task}/model.pt"
+configs_path = f"./models/ditto/configs.json"
+log_dir = f"./logs"
+index_column = "id" 
+
+if __name__=="__main__":
+
+    # train_fp = f"{dataset_dir}/train.csv" 
+
+    # train_a_reduced_fp = f"./data/processed/reduced/train_a.csv"
+    # train_b_reduced_fp = f"./data/processed/reduced/train_b.csv"
+    # train_a = reduce(train_fp, f"{dataset_dir}/tableA.csv", train_a_reduced_fp, "id", "ltable_id")
+    # train_b = reduce(train_fp, f"{dataset_dir}/tableB.csv", train_b_reduced_fp, "id", "rtable_id")
+
+    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(train_a_reduced_fp, "id", "authors", ",")
+    # print(len(publications_a))
+    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(train_b_reduced_fp, "id", "authors", ",")
+    # print(len(publications_b))
+
+    # # create ditto finetune file
+    # # -> serialize publications_a u publications_b to ditto format
+    # build_ditto_file_from_labels(train_fp, publications_a, publications_b, output_dir)
+
+    # valid_fp = f"{dataset_dir}/valid.csv" 
+
+    # valid_a_reduced_fp = f"./data/processed/reduced/valid_a.csv"
+    # valid_b_reduced_fp = f"./data/processed/reduced/valid_b.csv"
+    # valid_a = reduce(valid_fp, f"{dataset_dir}/tableA.csv", valid_a_reduced_fp, "id", "ltable_id")
+    # valid_b = reduce(valid_fp, f"{dataset_dir}/tableB.csv", valid_b_reduced_fp, "id", "rtable_id")
+
+    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(valid_a_reduced_fp, "id", "authors", ",")
+    # print(len(publications_a))
+    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(valid_b_reduced_fp, "id", "authors", ",")
+    # print(len(publications_b))
+
+    # # create ditto finetune file
+    # # -> serialize publications_a u publications_b to ditto format
+    # build_ditto_file_from_labels(valid_fp, publications_a, publications_b, output_dir)
+
+    # test_fp = f"{dataset_dir}/test.csv" 
+
+    # test_a_reduced_fp = f"./data/processed/reduced/test_a.csv"
+    # test_b_reduced_fp = f"./data/processed/reduced/test_b.csv"
+    # test_a = reduce(test_fp, f"{dataset_dir}/tableA.csv", test_a_reduced_fp, "id", "ltable_id")
+    # test_b = reduce(test_fp, f"{dataset_dir}/tableB.csv", test_b_reduced_fp, "id", "rtable_id")
+
+    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(test_a_reduced_fp, "id", "authors", ",")
+    # print(len(publications_a))
+    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(test_b_reduced_fp, "id", "authors", ",")
+    # print(len(publications_b))
+
+    # # create ditto finetune file
+    # # -> serialize publications_a u publications_b to ditto format
+    # build_ditto_file_from_labels(test_fp, publications_a, publications_b, output_dir)
+
+    splits = ["train", "valid", "test"]
+    table_configs = [("a", "ltable_id"), ("b", "rtable_id")]
+
+    # Access via: results['train']['a']['authors']
+    results = {split: {} for split in splits}
+
+    for split in splits:
+        split_fp = f"{dataset_dir}/{split}.csv"
+        
+        for suffix, id_col in table_configs:
+            reduced_fp = f"./data/processed/reduced/{split}_{suffix}.csv"
+            table_raw_fp = f"{dataset_dir}/table{suffix.upper()}.csv"
+            
+            # 1. Reduce
+            reduce(split_fp, table_raw_fp, reduced_fp, "id", id_col)
+            
+            # 2. Normalize and save all 4 attributes in the results dict
+            norm_data = normalize(reduced_fp, "id", "authors", ",")
+            
+            results[split][suffix] = {
+                "publications": norm_data[0],
+                "authors":      norm_data[1],
+                "pub_to_auth":  norm_data[2],
+                "auth_to_pub":  norm_data[3]
+            }
+            
+            print(f"{split} {suffix} count: {len(norm_data[0])}")
+
+        # 3. Build Ditto file
+        build_ditto_file_from_labels(
+            split_fp, 
+            results[split]["a"]["publications"], 
+            results[split]["b"]["publications"], 
+            output_dir,
+            split
+        )
+
+    # fine tune 
+    with Path(configs_path).open("r", encoding="utf-8") as f:
+        file_data: list = json.load(f)
+
+    if any(entry.get("name") == task for entry in file_data):
+        print("Entry already exists")
+    else:
+        new_config_entry = {
+            "name": task,
+            "task_type": "classification",
+            "vocab": ["0", "1"],
+            "trainset": f"{output_dir}/train.txt",
+            "validset": f"{output_dir}/valid.txt",
+            "testset": f"{output_dir}/test.txt"
+        }
+        file_data.append(new_config_entry)
+        with Path(configs_path).open("w", encoding="utf-8") as f:
+            json.dump(file_data, f, indent=4)
+        print("Entry added")
+
+    if not Path(model_path).exists():
+        print("Path does not exist")
+        shutil.copyfile(configs_path, 'configs.json')
+        cmd = [
+            "python",
+            f"./models/{lm}/train_ditto.py",
+            "--task", task,
+            "--batch_size", "32",
+            "--max_len", "128",
+            "--lr", "3e-5",
+            "--n_epochs", "1",
+            "--finetuning",
+            "--lm", "roberta",
+            "--fp16",
+            "--save_model",
+            "--logdir", "./models/ditto/checkpoints/",
+        ]
+
+        env = os.environ.copy()
+        #env["CUDA_VISIBLE_DEVICES"] = "0"
+
+        subprocess.run(cmd, env=env)
+
+# cluster all authors (authors_a and authors_b) via exact_match other conservative matching 
+
+
+
+    

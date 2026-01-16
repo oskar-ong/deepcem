@@ -33,6 +33,7 @@ class JaccardCoefficient(RelationalSimilarity):
 def nbr(ci: Cluster, hyperedges: dict[str, Hyperedge], references: dict[str, Reference]):
     neighbors = set()
     # TODO sort neighborhoods by relations
+    # TODO: nbr(publication) = {author1, author2, ..}
     for h_id in ci.hyperedges:           # all hyperedges touching ci
         h = hyperedges[h_id]
         for r in h.references:        # all references in that hyperedge

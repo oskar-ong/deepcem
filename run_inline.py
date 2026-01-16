@@ -54,6 +54,9 @@ if __name__=="__main__":
     valid = get_attrs_for_keys(df_A_idx, df_B_idx, valid_df)
     test  = get_attrs_for_keys(df_A_idx, df_B_idx, test_df)
 
+    
+    
+
     # train_ditto = serialize_to_ditto_wo_id(train)
     # with open(f"{output_dir}/base/train.txt","w", encoding="utf-8") as f:
     #     f.write("\n".join(train_ditto))

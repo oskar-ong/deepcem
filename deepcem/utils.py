@@ -102,7 +102,6 @@ def extract_relation(l, subject):
         author_left = row[0][subject]
         author_right = row[1][subject]
 
-
         create_rdf_triple(row, relationships, author_left, "isAuthor", ',', 'id')
         create_rdf_triple(row, relationships, author_right, "isAuthor", ',', 'id')
 
