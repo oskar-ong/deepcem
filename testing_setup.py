@@ -4,7 +4,8 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
-from deepcem.preprocessing import build_ditto_file_from_labels, normalize, reduce
+from deepcem.clustering import UnionFind
+from deepcem.preprocessing import build_block_index, build_ditto_file_from_labels, match_authors, normalize, normalize_simple_author, reduce
 
 dataset = "dirty/dblp-scholar"
 task = "testing-setup"
@@ -105,50 +106,69 @@ if __name__=="__main__":
         )
 
     # fine tune 
-    with Path(configs_path).open("r", encoding="utf-8") as f:
-        file_data: list = json.load(f)
+    if 0 == 1:
+        with Path(configs_path).open("r", encoding="utf-8") as f:
+            file_data: list = json.load(f)
 
-    if any(entry.get("name") == task for entry in file_data):
-        print("Entry already exists")
-    else:
-        new_config_entry = {
-            "name": task,
-            "task_type": "classification",
-            "vocab": ["0", "1"],
-            "trainset": f"{output_dir}/train.txt",
-            "validset": f"{output_dir}/valid.txt",
-            "testset": f"{output_dir}/test.txt"
-        }
-        file_data.append(new_config_entry)
-        with Path(configs_path).open("w", encoding="utf-8") as f:
-            json.dump(file_data, f, indent=4)
-        print("Entry added")
+        if any(entry.get("name") == task for entry in file_data):
+            print("Entry already exists")
+        else:
+            new_config_entry = {
+                "name": task,
+                "task_type": "classification",
+                "vocab": ["0", "1"],
+                "trainset": f"{output_dir}/train.txt",
+                "validset": f"{output_dir}/valid.txt",
+                "testset": f"{output_dir}/test.txt"
+            }
+            file_data.append(new_config_entry)
+            with Path(configs_path).open("w", encoding="utf-8") as f:
+                json.dump(file_data, f, indent=4)
+            print("Entry added")
 
-    if not Path(model_path).exists():
-        print("Path does not exist")
-        shutil.copyfile(configs_path, 'configs.json')
-        cmd = [
-            "python",
-            f"./models/{lm}/train_ditto.py",
-            "--task", task,
-            "--batch_size", "32",
-            "--max_len", "128",
-            "--lr", "3e-5",
-            "--n_epochs", "1",
-            "--finetuning",
-            "--lm", "roberta",
-            "--fp16",
-            "--save_model",
-            "--logdir", "./models/ditto/checkpoints/",
-        ]
+        if not Path(model_path).exists():
+            print("Path does not exist")
+            shutil.copyfile(configs_path, 'configs.json')
+            cmd = [
+                "python",
+                f"./models/{lm}/train_ditto.py",
+                "--task", task,
+                "--batch_size", "32",
+                "--max_len", "128",
+                "--lr", "3e-5",
+                "--n_epochs", "1",
+                "--finetuning",
+                "--lm", "roberta",
+                "--fp16",
+                "--save_model",
+                "--logdir", "./models/ditto/checkpoints/",
+            ]
 
-        env = os.environ.copy()
-        #env["CUDA_VISIBLE_DEVICES"] = "0"
+            env = os.environ.copy()
+            #env["CUDA_VISIBLE_DEVICES"] = "0"
 
-        subprocess.run(cmd, env=env)
+            subprocess.run(cmd, env=env)
 
-# cluster all authors (authors_a and authors_b) via exact_match other conservative matching 
+    # cluster all authors (authors_a and authors_b) via exact_match other conservative matching 
+    all_authors: dict = results['test']['a']['authors'] | results['test']['b']['authors']
+    print(len(results['test']['a']['authors']))
+    print(len(results['test']['b']['authors']))
+    print(len(all_authors))
 
+    for k in all_authors.keys():
+        all_authors[k]['normalized'] = normalize_simple_author(all_authors[k]['name'])
+
+    #print(all_authors.values())
+
+    blocks = build_block_index(all_authors)
+
+    clusters_authors = UnionFind()
+    for author in all_authors:
+        clusters_authors.add(author)
+
+    print(f"Before matching authors: {len(clusters_authors.get_sets())}")
+    clusters_authors = match_authors(all_authors, blocks,clusters_authors)
+    print(f"After matching authors: {len(clusters_authors.get_sets())}")
 
 
     

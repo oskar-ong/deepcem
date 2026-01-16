@@ -1,10 +1,18 @@
 from csv import DictReader
 import csv
+from itertools import combinations
 import uuid
 
 import pandas as pd
 
+from deepcem.clustering import UnionFind
 from deepcem.serialize import sanitize_value
+
+
+import re
+import unicodedata
+from dataclasses import dataclass
+from typing import Dict, List, Tuple
 
 def normalize(fp, pk="id", m2m="authors", delimiter=','):
     # MAIN TABLE: PUBLICATIONS
@@ -93,5 +101,94 @@ def build_ditto_file_from_labels(pairs_fp, table_a, table_b, output_dir, split):
 
 
 
+@dataclass(frozen=True)
+class SimpleAuthorFields:
+    raw: str
+    norm: str
+    first_initial: str
+    middle_initial: str
+    last_name: str
+    canon_full: str
+    canon_init: str
+    block_key: Tuple[str, str]
+
+def _strip_diacritics(s: str) -> str:
+    return "".join(
+        ch for ch in unicodedata.normalize("NFKD", s)
+        if not unicodedata.combining(ch)
+    )
+
+def normalize_simple_author(name: str) -> SimpleAuthorFields:
+    raw = name or ""
+
+    # 1) cleanup: lowercase, strip diacritics, keep only letters/spaces
+    s = raw.strip().lower()
+    s = _strip_diacritics(s)
+    s = re.sub(r"[^a-z\s]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+
+    parts = s.split()
+    initials = parts[0] if len(parts) >= 1 else ""
+    initials = re.sub(r"[^a-z]", "", initials)
+
+    # 2) robust last name selection: last token (after initials) with len >= 2
+    last = ""
+    if len(parts) >= 2:
+        for tok in reversed(parts[1:]):
+            tok = re.sub(r"[^a-z]", "", tok)
+            if len(tok) >= 2:
+                last = tok
+                break
+
+    first_initial = initials[0] if len(initials) >= 1 else ""
+    middle_initial = initials[1] if len(initials) >= 2 else ""
+
+    canon_full = f"{last} {initials}".strip()
+    canon_init = f"{last} {first_initial}" + (f" {middle_initial}" if middle_initial else "")
+    canon_init = canon_init.strip()
+
+    block_key = (last, first_initial)  # if last=="" then block_key is ("", "e") -> easy to ignore later
+
+    return SimpleAuthorFields(
+        raw=raw,
+        norm=s,
+        first_initial=first_initial,
+        middle_initial=middle_initial,
+        last_name=last,
+        canon_full=canon_full,
+        canon_init=canon_init,
+        block_key=block_key,
+    )
+
+def build_block_index(dictionary):
+    blocks: Dict[Tuple[str, str], List[str]] = {}
+
+    for mention in dictionary:
+        last_name = dictionary[mention]['normalized'].last_name
+        if last_name == "":
+            continue
+        if len(last_name) < 2:
+            continue
+        
+        first_initial = dictionary[mention]['normalized'].first_initial
+        blocks.setdefault((last_name, first_initial), []).append(mention)
+
+    return blocks
+
+def match_authors(authors, blocks, clusters_authors: UnionFind):
+
+    for k,v in blocks.items():
+        for val1, val2 in combinations(v, 2):
+            if is_author_match(val1, val2, authors):
+                clusters_authors.union(val1, val2)
+
+    return clusters_authors
+
+
+def is_author_match(a1, a2, authors):
+    if authors[a1]['normalized'].canon_full == authors[a2]['normalized'].canon_full:
+        return True
+    else:
+        return False
 # Usage
 #filter_publications('pairs.csv', 'publications.csv', 'publications_reduced.csv')

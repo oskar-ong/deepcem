@@ -36,4 +36,5 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 # No need to pass number of tasks to srun
-srun python run_latefusion.py
+#srun python run_latefusion.py
+srun python testing_setup.py
