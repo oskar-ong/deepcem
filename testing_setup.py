@@ -210,8 +210,6 @@ if __name__=="__main__":
 
     
     pub_to_authors = tmp_pub_to_authors
-    print(pub_to_authors['1133'])
-    print(pub_to_authors[1133])
     author_to_pubs: dict[str, list] = {}
 
     for pub, clusters in pub_to_authors.items():
