@@ -1351,5 +1351,16 @@
         "trainset": "./data/processed/ditto-splits/dirty/dblp-scholar/base/train.txt",
         "validset": "./data/processed/ditto-splits/dirty/dblp-scholar/base/valid.txt",
         "testset": "./data/processed/ditto-splits/dirty/dblp-scholar/base/test.txt"
+    },
+    {
+        "name": "testing-setup",
+        "task_type": "classification",
+        "vocab": [
+            "0",
+            "1"
+        ],
+        "trainset": "./data/processed/ditto-splits/testing_setup/train.txt",
+        "validset": "./data/processed/ditto-splits/testing_setup/valid.txt",
+        "testset": "./data/processed/ditto-splits/testing_setup/test.txt"
     }
 ]

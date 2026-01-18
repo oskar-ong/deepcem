@@ -23,6 +23,7 @@ model_path = f"./models/ditto/checkpoints/{task}/model.pt"
 configs_path = f"./models/ditto/configs.json"
 log_dir = f"./logs"
 index_column = "id" 
+finetune = True
 
 
 cfg = PipelineConfig()
@@ -127,48 +128,48 @@ if __name__=="__main__":
         save_as_ditto_file(enriched_pairs[split], output_dir,split)
 
     # fine tune 
+    if finetune:
+        with Path(configs_path).open("r", encoding="utf-8") as f:
+            file_data: list = json.load(f)
 
-    with Path(configs_path).open("r", encoding="utf-8") as f:
-        file_data: list = json.load(f)
+        if any(entry.get("name") == task for entry in file_data):
+            print("Entry already exists")
+        else:
+            new_config_entry = {
+                "name": task,
+                "task_type": "classification",
+                "vocab": ["0", "1"],
+                "trainset": f"{output_dir}/train.txt",
+                "validset": f"{output_dir}/valid.txt",
+                "testset": f"{output_dir}/test.txt"
+            }
+            file_data.append(new_config_entry)
+            with Path(configs_path).open("w", encoding="utf-8") as f:
+                json.dump(file_data, f, indent=4)
+            print("Entry added")
 
-    if any(entry.get("name") == task for entry in file_data):
-        print("Entry already exists")
-    else:
-        new_config_entry = {
-            "name": task,
-            "task_type": "classification",
-            "vocab": ["0", "1"],
-            "trainset": f"{output_dir}/train.txt",
-            "validset": f"{output_dir}/valid.txt",
-            "testset": f"{output_dir}/test.txt"
-        }
-        file_data.append(new_config_entry)
-        with Path(configs_path).open("w", encoding="utf-8") as f:
-            json.dump(file_data, f, indent=4)
-        print("Entry added")
+        if not Path(model_path).exists():
+            print("Path does not exist. Fine Tune")
+            shutil.copyfile(configs_path, 'configs.json')
+            cmd = [
+                "python",
+                f"./models/{lm}/train_ditto.py",
+                "--task", task,
+                "--batch_size", "32",
+                "--max_len", "128",
+                "--lr", "3e-5",
+                "--n_epochs", "1",
+                "--finetuning",
+                "--lm", "roberta",
+                "--fp16",
+                "--save_model",
+                "--logdir", "./models/ditto/checkpoints/",
+            ]
 
-    if not Path(model_path).exists():
-        print("Path does not exist. Fine Tune")
-        shutil.copyfile(configs_path, 'configs.json')
-        cmd = [
-            "python",
-            f"./models/{lm}/train_ditto.py",
-            "--task", task,
-            "--batch_size", "32",
-            "--max_len", "128",
-            "--lr", "3e-5",
-            "--n_epochs", "1",
-            "--finetuning",
-            "--lm", "roberta",
-            "--fp16",
-            "--save_model",
-            "--logdir", "./models/ditto/checkpoints/",
-        ]
+            env = os.environ.copy()
+            #env["CUDA_VISIBLE_DEVICES"] = "0"
 
-        env = os.environ.copy()
-        #env["CUDA_VISIBLE_DEVICES"] = "0"
-
-        subprocess.run(cmd, env=env)
+            subprocess.run(cmd, env=env)
 
     # cluster all authors (authors_a and authors_b) via exact_match other conservative matching 
     all_authors: dict = results['test']['a']['authors'] | results['test']['b']['authors']
@@ -209,7 +210,8 @@ if __name__=="__main__":
 
     
     pub_to_authors = tmp_pub_to_authors
-
+    print(pub_to_authors['1133'])
+    print(pub_to_authors[1133])
     author_to_pubs: dict[str, list] = {}
 
     for pub, clusters in pub_to_authors.items():

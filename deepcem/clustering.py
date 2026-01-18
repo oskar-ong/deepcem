@@ -237,7 +237,7 @@ class UnionFind:
         return list(groups.values())
 
 
-def bootstrap_clusters(df, references: dict[str, Reference], hyperedges, author_to_pubs) -> tuple[dict[str, Cluster], dict]:
+def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, author_to_pubs) -> tuple[dict[str, Cluster], dict]:
     uf = UnionFind()
 
     # Every record is a distinct cluster
@@ -292,7 +292,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges, author_
         for ref in clusters[c].references:
             similar_refs.update(references[ref].similar_references)
             #c_hyperedges.update(references[ref].hyperedges)
-            c_hyperedges.add(hyperedges[ref]) # list
+            c_hyperedges.add(hyperedges.get(ref)) # list
 
         # logger.debug(f"Similar Refs: {similar_refs}")
         for sr in similar_refs:
