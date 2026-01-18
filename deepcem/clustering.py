@@ -237,7 +237,7 @@ class UnionFind:
         return list(groups.values())
 
 
-def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[str, Hyperedge]) -> tuple[dict[str, Cluster], dict]:
+def bootstrap_clusters(df, references: dict[str, Reference], hyperedges, author_to_pubs) -> tuple[dict[str, Cluster], dict]:
     uf = UnionFind()
 
     # Every record is a distinct cluster
@@ -263,7 +263,6 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[st
     #     uf.union(hm[0], hm[1])
 
     all_sets = uf.get_sets()
-    logger.debug(f"all sets length: {len(all_sets)}")
 
     # create cluster for each set
     clusters: dict[str, Cluster] = {}
@@ -274,7 +273,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[st
         c_hyperedges: set[str] = set()
         for ref_id in s:
             c_refs.add(ref_id)
-            c_hyperedges.update(references[ref_id].hyperedges)
+            #c_hyperedges.update(references[ref_id].hyperedges)
             references[ref_id].cluster = f"c{i}"
 
         _, parents, clusters = make_cluster(f"c{i}", parents, clusters)
@@ -288,12 +287,12 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[st
         similar_refs: set[str] = set()
         c_hyperedges: set[str] = set()
 
-
         # similar clusters: Clusters that appear as potential matches in the candidate set
 
         for ref in clusters[c].references:
             similar_refs.update(references[ref].similar_references)
-            c_hyperedges.update(references[ref].hyperedges)
+            #c_hyperedges.update(references[ref].hyperedges)
+            c_hyperedges.add(hyperedges[ref]) # list
 
         # logger.debug(f"Similar Refs: {similar_refs}")
         for sr in similar_refs:
@@ -309,7 +308,8 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[st
         neighbor_refs: set[str] = set()
         # iterate over all hyperedges of the cluster
         for h in c_hyperedges:
-            neighbor_refs.update(hyperedges[h].references)
+            #neighbor_refs.update(hyperedges[h].references)
+            neighbor_refs.add(author_to_pubs[h])
 
         # find cluster of each neighbor ref
         for nr in neighbor_refs:
@@ -320,7 +320,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict[st
     return clusters, parents
 
 
-def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges: dict[str, Hyperedge], parents: dict, cfg: PipelineConfig):
+def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: PipelineConfig):
 
     # Build priority queue of similarities
     # initialize empty list as priqority queue
@@ -358,8 +358,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
     return pq, clusters
 
 
-def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges: dict[str, Hyperedge], references: dict[str, Reference], cfg: PipelineConfig):
-    threshold = cfg.threshold  # similarity cutoff
+def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: PipelineConfig):
     iteration = 0
 
     strategy = strategy_factory(cfg)
@@ -385,19 +384,9 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
 
         sim = -neg_sim
         logger.debug(f"Current Cluster: {(ci, cj)}, similarity: {sim}")
-        if sim < threshold:
+        if sim < cfg.threshold:
             logger.debug("Threshold reached, break")
             break
-
-        # all_pq_entries = get_cluster(ci, clusters, parents).pq_entries
-        # all_pq_entries.update(get_cluster(cj, clusters, parents).pq_entries)
-
-        # del all_pq_entries[(ci, cj)]
-        # for q_entry in all_pq_entries:
-        #     # remove q_entry from pq
-        #     if q_entry in pq.position_map:
-        #         deleted_pq_entries.add(q_entry)
-        #         pq.remove(q_entry)
 
         # Merge clusters ci and cj
         cij, clusters, parents = merge_clusters(
@@ -405,23 +394,15 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
             get_cluster(cj, clusters, parents), 
             clusters, 
             parents)
-        # # delete clusters ci and cj
-        # if ci in clusters:
-        #     del clusters[ci]
-        # if cj in clusters:
-        #     del clusters[cj]
 
         # Find all clusters "ck" that are similar to cij
         logger.debug(f"Iterate over all similar clusters of {cij.id}: {len(cij.similar_clusters)} Clusters")
-
 
         for ck_id in cij.similar_clusters:
             rk = find(ck_id,parents)
             if rk == cij.id:
                 continue
 
-            
-            # TODO change function signature
             sim_cij_ck = strategy.calculate_cluster_similarity(clusters, parents, cij.id, rk, references, hyperedges, cfg)
 
             # insert sim(cij, ck), cij, ck into pq

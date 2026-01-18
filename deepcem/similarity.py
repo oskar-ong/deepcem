@@ -14,33 +14,28 @@ class RelationalSimilarity():
 
 
 class JaccardCoefficient(RelationalSimilarity):
-    def calculate(self, ci: Cluster, cj: Cluster, hyperedges: dict[str, Hyperedge], references: dict[str, Reference]):
+    def calculate(self, ci: Cluster, cj: Cluster, hyperedges):
         # JaccardCoef f (ci, cj ) = |N br(ci) ⋂ N br(cj )|  |N br(ci) ⋃ N br(cj )|
-        neighborhood_a = nbr(ci, hyperedges, references)
-        neighborhood_b = nbr(cj, hyperedges, references)
+        neighborhood_a = nbr(ci, hyperedges)
+        neighborhood_b = nbr(cj, hyperedges)
 
         # if any of the neighborhoods is empty return 0
-        if len(neighborhood_a) == 0 or len(neighborhood_b) == 0:
-            return 0
-        else:
-            intersection_nbr_a_b = neighborhood_a & neighborhood_b
-            union_nbr_a_b = neighborhood_a | neighborhood_b
+        if not neighborhood_a or not neighborhood_b:
+            return 0.0
 
-            similarity = len(intersection_nbr_a_b) / len(union_nbr_a_b)
-            return similarity
+        intersection_nbr_a_b = neighborhood_a & neighborhood_b
+        union_nbr_a_b = neighborhood_a | neighborhood_b
 
+        similarity = len(intersection_nbr_a_b) / len(union_nbr_a_b)
+        return similarity
 
-def nbr(ci: Cluster, hyperedges: dict[str, Hyperedge], references: dict[str, Reference]):
-    neighbors = set()
-    # TODO sort neighborhoods by relations
-    # TODO: nbr(publication) = {author1, author2, ..}
-    for h_id in ci.hyperedges:           # all hyperedges touching ci
-        h = hyperedges[h_id]
-        for r in h.references:        # all references in that hyperedge
-            cj = references[r].cluster
-            if cj != ci:              # exclude self
-                neighbors.add(cj)
-    return neighbors
+def nbr(c: Cluster, hyperedges: dict[str, Hyperedge]):
+
+    neighborhood = set()
+    for r_id in c.references: 
+        for a in hyperedges.get(r_id, []):
+            neighborhood.add(a)
+    return neighborhood
 
 
 def typed_neighbor_clusters(

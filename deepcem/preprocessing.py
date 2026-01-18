@@ -77,9 +77,7 @@ def reduce(pairs, src, out, id_src, id_pairs):
             if row[id_src] in selected_ids:
                 writer.writerow(row)
 
-def build_ditto_file_from_labels(pairs_fp, table_a, table_b, output_dir, split):
-
-    pairs = pd.read_csv(pairs_fp, dtype={'left': str, 'right': str})
+def build_ditto_file_from_labels(pairs, table_a, table_b, output_dir, split):
 
     pairs['ltable_id'] = pairs['ltable_id'].astype(str).str.strip()
     pairs['rtable_id'] = pairs['rtable_id'].astype(str).str.strip()
@@ -98,7 +96,46 @@ def build_ditto_file_from_labels(pairs_fp, table_a, table_b, output_dir, split):
             str_right = " ".join(f"COL {k} VAL {sanitize_value(v)}" for k, v in data_right.items())
             out_row = f"{str_left}\t{str_right}\t{label}\n"
             f.write(out_row)
+    
+def enrich_pairs_dataframe(pairs, table_a, table_b) -> list[tuple[dict,dict,int]]:
+    """
+    Map the attributes to the keys of the split
+    """
 
+    df = pairs.copy()
+
+    df['ltable_id'] = df['ltable_id'].astype(str).str.strip()
+    df['rtable_id'] = df['rtable_id'].astype(str).str.strip()
+
+    df['row_left'] = df['ltable_id'].map(table_a)
+    df['row_right'] = df['rtable_id'].map(table_b)
+
+    candidates = list(zip(df['row_left'], df['row_right'], df['label']))
+
+    enriched_pairs: list[tuple[dict,dict,int]] = []
+
+    for _, row in df.iterrows():
+        left_dict = {"id": row['ltable_id'], **row['row_left']}
+        right_dict = {"id": row['rtable_id'], **row['row_right']}
+        
+        enriched_pairs.append((left_dict, right_dict, int(row['label'])))
+    
+    return enriched_pairs
+
+def save_as_ditto_file(enriched_pairs: list[tuple[dict,dict,int]], output_dir, split):
+    """
+    Build a ditto file from enriched pairs
+    """
+    output_path = f"{output_dir}/{split}.txt"
+    
+    with open(output_path, "w", encoding="utf-8") as f:
+        for left, right, label in enriched_pairs:
+
+            # Ditto-specific string serialization logic
+            str_left = " ".join(f"COL {k} VAL {sanitize_value(v)}" for k, v in left.items() if k != 'id')
+            str_right = " ".join(f"COL {k} VAL {sanitize_value(v)}" for k, v in right.items() if k != 'id')
+            
+            f.write(f"{str_left}\t{str_right}\t{label}\n")
 
 
 @dataclass(frozen=True)
@@ -190,5 +227,9 @@ def is_author_match(a1, a2, authors):
         return True
     else:
         return False
+    
+def build_cs(pairs):
+
+    return True
 # Usage
 #filter_publications('pairs.csv', 'publications.csv', 'publications_reduced.csv')
