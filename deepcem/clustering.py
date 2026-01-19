@@ -293,7 +293,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
             similar_refs.update(references[ref].similar_references)
             #c_hyperedges.update(references[ref].hyperedges)
             if hyperedges.get(ref) != None:
-                c_hyperedges.add(hyperedges.get(ref)) # list
+                c_hyperedges.update(hyperedges.get(ref)) # list
 
         # logger.debug(f"Similar Refs: {similar_refs}")
         for sr in similar_refs:
