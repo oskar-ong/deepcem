@@ -292,7 +292,8 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
         for ref in clusters[c].references:
             similar_refs.update(references[ref].similar_references)
             #c_hyperedges.update(references[ref].hyperedges)
-            c_hyperedges.add(hyperedges.get(ref)) # list
+            if hyperedges.get(ref) != None:
+                c_hyperedges.add(hyperedges.get(ref)) # list
 
         # logger.debug(f"Similar Refs: {similar_refs}")
         for sr in similar_refs:
@@ -312,9 +313,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
             # TODO: Debug 
             try:
                 neighbor_refs.add(author_to_pubs[h])
-            except:
-                print(h)
-                print(author_to_pubs)
+            except KeyError:
                 raise Exception(f"Key Error in author_to_pubs for Key {h}")
         # find cluster of each neighbor ref
         for nr in neighbor_refs:
