@@ -126,7 +126,7 @@ if __name__=="__main__":
         enriched_pairs[split] = enrich_pairs_dataframe(pairs[split], results[split]["a"]["publications"], results[split]["b"]["publications"])
 
         save_as_ditto_file(enriched_pairs[split], output_dir,split)
-
+    
     # fine tune 
     if finetune:
         with Path(configs_path).open("r", encoding="utf-8") as f:
@@ -239,7 +239,7 @@ if __name__=="__main__":
     )
 
     # Evaluate result
-    y_true = [int(l[2]) for l in pairs['test']]
+    y_true = pairs['test']['label'].astype(int).tolist()
     acc, prec, rec, f1 = get_pred_labels(
         y_true, candidates, references, clusters, parents, index_column)
 
