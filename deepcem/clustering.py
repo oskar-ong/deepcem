@@ -309,8 +309,13 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
         # iterate over all hyperedges of the cluster
         for h in c_hyperedges:
             #neighbor_refs.update(hyperedges[h].references)
-            neighbor_refs.add(author_to_pubs[h])
-
+            # TODO: Debug 
+            try:
+                neighbor_refs.add(author_to_pubs[h])
+            except:
+                print(h)
+                print(author_to_pubs)
+                raise Exception(f"Key Error in author_to_pubs for Key {h}")
         # find cluster of each neighbor ref
         for nr in neighbor_refs:
             if references[nr].cluster != c:
