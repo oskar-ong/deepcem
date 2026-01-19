@@ -8,7 +8,7 @@ class RelationalSimilarity():
     def __init__(self):
         pass
 
-    def calculate(self, neighborhood_a, neighborhood_b):
+    def calculate(self, neighborhood_a, neighborhood_b, hyperedges):
         similarity = 0
         return similarity
 

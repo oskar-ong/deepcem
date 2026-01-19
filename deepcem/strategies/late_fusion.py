@@ -71,7 +71,7 @@ class LateFusion(Strategy):
 
         # sim.r(ci,cj)
         sim_r = self.get_rel_sim(cfg).calculate(
-            get_cluster(ci, clusters, parents), get_cluster(cj, clusters, parents), hyperedges, references)
+            get_cluster(ci, clusters, parents), get_cluster(cj, clusters, parents), hyperedges)
         logger.debug(f"sim_r score: {sim_r}")
         # calculate sim(ci,cj)
         sim_ci_cj = (1-cfg.alpha) * sim_a + cfg.alpha * sim_r
