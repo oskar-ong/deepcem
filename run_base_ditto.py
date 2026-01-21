@@ -11,7 +11,7 @@ from deepcem.utils import get_attrs_for_keys
 from matcher import load_model, classify 
 
 dataset = "dirty/dblp-scholar"
-task = f"{dataset}_base"
+task = f"{dataset}_base_no_author"
 lm = "ditto"
 dataset_dir = f"./data/raw/deepmatcher/{dataset}"
 output_dir = f"./data/processed/{lm}-splits/{dataset}"
@@ -31,7 +31,10 @@ if __name__=="__main__":
     test_df = pd.read_csv(f"{dataset_dir}/test.csv")
 
     df_A = pd.read_csv(f"{dataset_dir}/tableA.csv")  # left
+    df_A.drop(columns=["authors"], inplace=True)
+
     df_B = pd.read_csv(f"{dataset_dir}/tableB.csv")  # right
+    df_B.drop(columns=["authors"], inplace=True)
 
     # Convert to string once and index by 'id'
     df_A_idx = df_A.set_index(index_column)
