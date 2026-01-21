@@ -1,4 +1,5 @@
 
+import argparse
 import json
 import os
 from pathlib import Path
@@ -31,16 +32,24 @@ cfg.dataset = task
 cfg.strategy = LATE_FUSION
 cfg.use_gpu = True
 cfg.fp16 = True
-cfg.alpha = 0.2
-alpha_str = str(cfg.alpha).replace('.', '-')
-threshold = 0.6
-cfg.threshold = threshold
-threshold_str = str(threshold).replace('.', '_')
 
 logger = setup_base_logger("cem")
 
-if __name__=="__main__":
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--threshold", type=float, default=0.5)
+    parser.add_argument("--alpha", type=float, default=0.1)
+    
+    args = parser.parse_args()
 
+    threshold = args.threshold
+    cfg.threshold = threshold
+    threshold_str = str(threshold).replace('.', '_')
+
+    cfg.alpha = args.alpha
+    alpha_str = str(cfg.alpha).replace('.', '-')
+    
+    print(f"Starting experiment with Threshold: {cfg.threshold} and Alpha: {cfg.alpha}")
     # train_fp = f"{dataset_dir}/train.csv" 
 
     # train_a_reduced_fp = f"./data/processed/reduced/train_a.csv"
@@ -250,3 +259,5 @@ if __name__=="__main__":
 
     logger.info(f"=== End Pipeline Run ===")
 
+if __name__=="__main__":
+    main()

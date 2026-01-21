@@ -12,6 +12,9 @@
 # Request GPU Ressources (model:number)
 #SBATCH --gpus=a100:1
 
+THRESHOLD=0.9
+ALPHA=0.2
+
 # Clear all interactively loaded modules
 module purge
 
@@ -37,4 +40,4 @@ export HF_DATASETS_OFFLINE=1
 
 # No need to pass number of tasks to srun
 #srun python run_latefusion.py
-srun python testing_setup.py
+srun -J "T${THRESHOLD}_A${ALPHA}" python testing_setup.py --threshold $THRESHOLD --alpha $ALPHA
