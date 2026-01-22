@@ -1,0 +1,48 @@
+dataset:
+  dataset_dir: ./data/raw/deepmatcher/dirty/dblp-scholar
+  splits: [train, valid, test]
+  split_ext: csv
+
+  left_id_col: ltable_id
+  right_id_col: rtable_id
+  label_col: label
+
+  prim_id_col: id
+  context_field: authors
+  context_sep: ","
+  context_name_field: name
+
+  table_configs:
+    - [a, ltable_id]
+    - [b, rtable_id]
+
+run:
+  run_name: dblp_scholar_alpha01_thr05
+  output_root: ./data/processed
+  reduced_root: ./data/processed/reduced
+  logs_root: ./logs
+  checkpoints_root: ./models/ditto/checkpoints
+  ditto_configs_path: ./models/ditto/configs.json
+  splits_dirname: splits
+  model_filename: model.pt
+
+algo:
+  alpha: 0.1
+  threshold: 0.5
+  k: 2
+  strategy: LATE_FUSION
+  rel_similarity: jaccard_coefficient
+  is_relations_triples: true
+  use_gpu: true
+  fp16: true
+
+finetune:
+  enabled: true
+  task: testing-setup
+  lm: ditto
+  encoder: roberta
+  batch_size: 32
+  max_len: 128
+  lr: 3e-5
+  n_epochs: 1
+  fp16: true

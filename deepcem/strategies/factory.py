@@ -1,4 +1,4 @@
-from ..config import PipelineConfig
+from ..config import AlgoConfig
 from .base import Strategy
 from .late_fusion import LateFusion
 from .inline_encode import InlineEncode
@@ -12,7 +12,7 @@ _STRATEGY_REGISTRY: dict[int, type[Strategy]] = {
 # map "strategy id" -> *instance*
 _STRATEGY_INSTANCES: dict[int, Strategy] = {}
 
-def strategy_factory(configuration: PipelineConfig) -> Strategy:
+def strategy_factory(configuration: AlgoConfig) -> Strategy:
     """
     Return a Strategy instance:
       - first call for a given configuration.strategy => create and cache

@@ -12,6 +12,9 @@
 # Request GPU Ressources (model:number)
 #SBATCH --gpus=a100:1
 
+THRESHOLD=0.9
+ALPHA=0.2
+
 # Clear all interactively loaded modules
 module purge
 
@@ -36,4 +39,7 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 # No need to pass number of tasks to srun
-srun python run_base_ditto.py
+
+# Run the python script and pass the variables
+# -J flag to dynamically set the job name
+srun -J "T${THRESHOLD}_A${ALPHA}" python script.py --threshold $THRESHOLD --alpha $ALPHA

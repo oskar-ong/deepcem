@@ -155,7 +155,7 @@ def _strip_diacritics(s: str) -> str:
         if not unicodedata.combining(ch)
     )
 
-def normalize_simple_author(name: str) -> SimpleAuthorFields:
+def normalize_simple_context(name: str) -> SimpleAuthorFields:
     raw = name or ""
 
     # 1) cleanup: lowercase, strip diacritics, keep only letters/spaces
@@ -212,7 +212,7 @@ def build_block_index(dictionary):
 
     return blocks
 
-def match_authors(authors, blocks, clusters_authors: UnionFind):
+def match_context_entities(authors, blocks, clusters_authors: UnionFind):
 
     for k,v in blocks.items():
         for val1, val2 in combinations(v, 2):
@@ -227,9 +227,5 @@ def is_author_match(a1, a2, authors):
         return True
     else:
         return False
-    
-def build_cs(pairs):
-
-    return True
 # Usage
 #filter_publications('pairs.csv', 'publications.csv', 'publications_reduced.csv')

@@ -4,7 +4,7 @@ import logging
 import pandas as pd
 from tqdm import tqdm
 
-from deepcem.config import PipelineConfig
+from deepcem.config import AlgoConfig
 from deepcem.data_structures import Reference, Hyperedge, Cluster, get_cluster, make_cluster, merge_clusters, find
 from deepcem.strategies.factory import strategy_factory
 from deepcem.utils import cluster_pair
@@ -324,7 +324,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
     return clusters, parents
 
 
-def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: PipelineConfig):
+def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: AlgoConfig):
 
     # Build priority queue of similarities
     # initialize empty list as priqority queue
@@ -362,7 +362,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
     return pq, clusters
 
 
-def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: PipelineConfig):
+def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: AlgoConfig):
     iteration = 0
 
     strategy = strategy_factory(cfg)

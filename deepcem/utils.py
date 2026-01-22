@@ -3,7 +3,7 @@ import os
 
 import pandas as pd
 
-from deepcem.config import PipelineConfig
+from deepcem.config import AlgoConfig
 
 def setup_logging(fp):
     logger = logging.getLogger("cem")
@@ -48,7 +48,7 @@ def setup_base_logger(name="cem"):
     return logger
 
 
-def attach_run_file_handler(logger: logging.Logger, log_dir: str, alpha: str, threshold: str):
+def attach_run_file_handler(logger: logging.Logger, log_dir: str, alpha, threshold):
     """Attach a run-specific file handler for this threshold."""
     # remove old FileHandlers (keep console handler)
     logger.handlers = [
@@ -57,7 +57,8 @@ def attach_run_file_handler(logger: logging.Logger, log_dir: str, alpha: str, th
     ]
     
     Path(f"{log_dir}").mkdir(exist_ok=True)
-
+    threshold = str(threshold).replace(".", "_")
+    alpha = str(alpha).replace(".", "-")
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
     logfile = f"{log_dir}/alpha_{alpha}_t_{threshold}_{ts}.log"
 
@@ -116,7 +117,7 @@ def create_rdf_triple(row, relationships, subject, predicate,delimiter, object):
         for r in subject:
             relationships.append((r.strip(), predicate, row[0][object]))
 
-def set_log_dir(cfg: PipelineConfig):
+def set_log_dir(cfg: AlgoConfig):
     log_dir = f"{cfg.log_dir}/{cfg.dataset}"
     return log_dir
 

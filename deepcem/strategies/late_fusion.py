@@ -1,7 +1,7 @@
 import logging
 import numpy as np
 
-from deepcem.config import PipelineConfig
+from deepcem.config import AlgoConfig
 from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import RelationalSimilarity, choose_rel_similarity_measure
@@ -17,18 +17,18 @@ class LateFusion(Strategy):
         self.rel_sim: RelationalSimilarity = ""
         self._cache: dict[tuple[str, str], float] = {}
 
-    def get_ditto_model(self, cfg: PipelineConfig):
+    def get_ditto_model(self, cfg: AlgoConfig):
         if not self.ditto_model: 
             _, self.ditto_model = load_model(f"{cfg.dataset}", cfg.ckpt, cfg.lm, cfg.use_gpu, cfg.fp16)
 
         return self.ditto_model
 
-    def get_rel_sim(self, cfg: PipelineConfig):
+    def get_rel_sim(self, cfg: AlgoConfig):
         if not self.rel_sim:
             self.rel_sim = choose_rel_similarity_measure(cfg.rel_similarity)
         return self.rel_sim
 
-    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: PipelineConfig ):
+    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AlgoConfig ):
 
         # compare all references of ci with all references of cj
         lines = []

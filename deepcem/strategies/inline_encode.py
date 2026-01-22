@@ -2,7 +2,7 @@ import numpy as np
 
 from matcher import DittoModel
 
-from deepcem.config import PipelineConfig
+from deepcem.config import AlgoConfig
 from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import nbr
@@ -13,13 +13,13 @@ class InlineEncode(Strategy):
     def __init__(self):
         self.ditto_model: DittoModel
 
-    def get_ditto_model(self, cfg: PipelineConfig):
+    def get_ditto_model(self, cfg: AlgoConfig):
         if not self.ditto_model: 
             _, self.ditto_model = load_model(f"{cfg.dataset}_extracted", cfg.ckpt, cfg.lm, cfg.use_gpu, cfg.fp16)
 
         return self.ditto_model
     
-    def calculate_record_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, ri: Reference, rj: Reference, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: PipelineConfig):
+    def calculate_record_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, ri: Reference, rj: Reference, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AlgoConfig):
         inline_encode_option = ""
 
         if inline_encode_option == "top-k":
@@ -41,7 +41,7 @@ class InlineEncode(Strategy):
 
         return True
 
-    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, ri: Reference, rj: Reference, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: PipelineConfig ):
+    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, ri: Reference, rj: Reference, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AlgoConfig ):
         
         neighbors_ci = nbr(ci, hyperedges, references)
 

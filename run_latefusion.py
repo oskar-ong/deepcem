@@ -6,7 +6,7 @@ import subprocess
 import pandas as pd
 
 from deepcem.clustering import bootstrap_clusters, init_pq, iterative_merge
-from deepcem.config import LATE_FUSION, PipelineConfig
+from deepcem.config import LATE_FUSION, AlgoConfig
 from deepcem.graph import create_hyperedges, extract_references
 from deepcem.metrics import get_pred_labels
 from deepcem.serialize import serialize_to_ditto_wo_id
@@ -106,7 +106,7 @@ if __name__=="__main__":
 
         subprocess.run(cmd, env=env)
 
-    cfg = PipelineConfig()
+    cfg = AlgoConfig()
     cfg.dataset = task
     cfg.strategy = LATE_FUSION
     cfg.use_gpu = True

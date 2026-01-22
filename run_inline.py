@@ -4,7 +4,7 @@ import subprocess
 import pandas as pd
 
 from deepcem.clustering import UnionFind, bootstrap_clusters, init_pq, iterative_merge
-from deepcem.config import INLINE_ENCODE, PipelineConfig
+from deepcem.config import INLINE_ENCODE, AlgoConfig
 from deepcem.graph import create_hyperedges, extract_references
 from deepcem.metrics import get_pred_labels, get_true_labels
 from deepcem.utils import attach_run_file_handler, extract_relation, get_attrs_for_keys, setup_base_logger
@@ -104,7 +104,7 @@ if __name__=="__main__":
         subprocess.run(cmd, env=env)
 
 
-    cfg = PipelineConfig()
+    cfg = AlgoConfig()
     cfg.dataset = task
     cfg.strategy = INLINE_ENCODE
     cfg.alpha = 0.1

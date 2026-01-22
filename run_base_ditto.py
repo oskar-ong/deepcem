@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 from pathlib import Path
@@ -21,7 +22,8 @@ configs_path = f"./models/ditto/configs.json"
 log_dir = f"./logs"
 index_column = "id"
 
-if __name__=="__main__":
+
+def main():
 
     train_fp = f"{dataset_dir}/train.csv" 
     train_df = pd.read_csv(train_fp)
@@ -116,3 +118,6 @@ if __name__=="__main__":
     print("precision:", base_prec)
     print("recall   :", base_rec)
     print("f1       :", base_f1)
+
+if __name__=="__main__":
+    main()

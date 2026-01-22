@@ -8,10 +8,10 @@ import subprocess
 
 import pandas as pd
 from deepcem.clustering import UnionFind, bootstrap_clusters, init_pq, iterative_merge
-from deepcem.config import LATE_FUSION, PipelineConfig
+from deepcem.config import LATE_FUSION, AlgoConfig
 from deepcem.graph import create_hyperedges, extract_references
 from deepcem.metrics import get_pred_labels
-from deepcem.preprocessing import build_block_index, build_cs, build_ditto_file_from_labels, enrich_pairs_dataframe, match_authors, normalize, normalize_simple_author, reduce, save_as_ditto_file
+from deepcem.preprocessing import build_block_index, build_ditto_file_from_labels, enrich_pairs_dataframe, match_context_entities, normalize, normalize_simple_context, reduce, save_as_ditto_file
 from deepcem.utils import attach_run_file_handler, setup_base_logger
 
 dataset = "dirty/dblp-scholar"
@@ -27,7 +27,7 @@ index_column = "id"
 finetune = True
 
 
-cfg = PipelineConfig()
+cfg = AlgoConfig()
 cfg.dataset = task
 cfg.strategy = LATE_FUSION
 cfg.use_gpu = True
@@ -50,53 +50,6 @@ def main():
     alpha_str = str(cfg.alpha).replace('.', '-')
     
     print(f"Starting experiment with Threshold: {cfg.threshold} and Alpha: {cfg.alpha}")
-    # train_fp = f"{dataset_dir}/train.csv" 
-
-    # train_a_reduced_fp = f"./data/processed/reduced/train_a.csv"
-    # train_b_reduced_fp = f"./data/processed/reduced/train_b.csv"
-    # train_a = reduce(train_fp, f"{dataset_dir}/tableA.csv", train_a_reduced_fp, "id", "ltable_id")
-    # train_b = reduce(train_fp, f"{dataset_dir}/tableB.csv", train_b_reduced_fp, "id", "rtable_id")
-
-    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(train_a_reduced_fp, "id", "authors", ",")
-    # print(len(publications_a))
-    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(train_b_reduced_fp, "id", "authors", ",")
-    # print(len(publications_b))
-
-    # # create ditto finetune file
-    # # -> serialize publications_a u publications_b to ditto format
-    # build_ditto_file_from_labels(train_fp, publications_a, publications_b, output_dir)
-
-    # valid_fp = f"{dataset_dir}/valid.csv" 
-
-    # valid_a_reduced_fp = f"./data/processed/reduced/valid_a.csv"
-    # valid_b_reduced_fp = f"./data/processed/reduced/valid_b.csv"
-    # valid_a = reduce(valid_fp, f"{dataset_dir}/tableA.csv", valid_a_reduced_fp, "id", "ltable_id")
-    # valid_b = reduce(valid_fp, f"{dataset_dir}/tableB.csv", valid_b_reduced_fp, "id", "rtable_id")
-
-    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(valid_a_reduced_fp, "id", "authors", ",")
-    # print(len(publications_a))
-    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(valid_b_reduced_fp, "id", "authors", ",")
-    # print(len(publications_b))
-
-    # # create ditto finetune file
-    # # -> serialize publications_a u publications_b to ditto format
-    # build_ditto_file_from_labels(valid_fp, publications_a, publications_b, output_dir)
-
-    # test_fp = f"{dataset_dir}/test.csv" 
-
-    # test_a_reduced_fp = f"./data/processed/reduced/test_a.csv"
-    # test_b_reduced_fp = f"./data/processed/reduced/test_b.csv"
-    # test_a = reduce(test_fp, f"{dataset_dir}/tableA.csv", test_a_reduced_fp, "id", "ltable_id")
-    # test_b = reduce(test_fp, f"{dataset_dir}/tableB.csv", test_b_reduced_fp, "id", "rtable_id")
-
-    # publications_a, authors_a, pub_to_authors_a, author_to_pubs_a = normalize(test_a_reduced_fp, "id", "authors", ",")
-    # print(len(publications_a))
-    # publications_b, authors_b, pub_to_authors_b, author_to_pubs_b = normalize(test_b_reduced_fp, "id", "authors", ",")
-    # print(len(publications_b))
-
-    # # create ditto finetune file
-    # # -> serialize publications_a u publications_b to ditto format
-    # build_ditto_file_from_labels(test_fp, publications_a, publications_b, output_dir)
 
     splits = ["train", "valid", "test"]
     table_configs = [("a", "ltable_id"), ("b", "rtable_id")]
@@ -187,7 +140,7 @@ def main():
     print(len(all_authors))
 
     for k in all_authors.keys():
-        all_authors[k]['normalized'] = normalize_simple_author(all_authors[k]['name'])
+        all_authors[k]['normalized'] = normalize_simple_context(all_authors[k]['name'])
 
     #print(all_authors.values())
 
@@ -198,7 +151,7 @@ def main():
         clusters_authors.add(author)
 
     print(f"Before matching authors: {len(clusters_authors.get_sets())}")
-    clusters_authors = match_authors(all_authors, blocks,clusters_authors)
+    clusters_authors = match_context_entities(all_authors, blocks,clusters_authors)
     print(f"After matching authors: {len(clusters_authors.get_sets())}")
 
     mention_to_cluster = {}
