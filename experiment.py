@@ -256,10 +256,10 @@ def run_cem(
     hyperedges = primary_to_context
 
     clusters, parents = bootstrap_clusters(cs, references, hyperedges, context_to_primary)
-    pq, clusters = init_pq(clusters, references, hyperedges, parents, config.algo)
+    pq, clusters = init_pq(clusters, references, hyperedges, parents, config)
 
     clusters, references, hyperedges, parents = iterative_merge(
-        pq, clusters, parents, hyperedges, references, config.algo
+        pq, clusters, parents, hyperedges, references, config
     )
 
     y_true = pairs_test[config.dataset.label_col].astype(int).tolist()

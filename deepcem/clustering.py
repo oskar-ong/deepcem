@@ -4,7 +4,7 @@ import logging
 import pandas as pd
 from tqdm import tqdm
 
-from deepcem.config import AlgoConfig
+from deepcem.config import AlgoConfig, AppConfig
 from deepcem.data_structures import Reference, Hyperedge, Cluster, get_cluster, make_cluster, merge_clusters, find
 from deepcem.strategies.factory import strategy_factory
 from deepcem.utils import cluster_pair
@@ -324,7 +324,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
     return clusters, parents
 
 
-def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: AlgoConfig):
+def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: AppConfig):
 
     # Build priority queue of similarities
     # initialize empty list as priqority queue
@@ -338,6 +338,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
 
     already_compared = set()
     logger.debug("Iterate over all Clusters")
+    strategy = strategy_factory(cfg.algo.strategy)
     for ci in clusters:
         #logger.debug(f"ci: {ci}")
         # iterate over all similar clusters:
@@ -346,7 +347,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
             # dont self-compare and avoid duplicate comparisons (ci, cj) <-> (cj,ci)
             if ci != cj and cluster_pair(ci,cj) not in already_compared:
                 
-                sim_ci_cj = strategy_factory(cfg).calculate_cluster_similarity(clusters, parents, ci, cj, references, hyperedges, cfg)
+                sim_ci_cj = strategy.calculate_cluster_similarity(clusters, parents, ci, cj, references, hyperedges, cfg)
 
                 # Insert tuple into the heap
                 # -sim : store negative similarity
@@ -362,10 +363,10 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
     return pq, clusters
 
 
-def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: AlgoConfig):
+def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: AppConfig):
     iteration = 0
 
-    strategy = strategy_factory(cfg)
+    strategy = strategy_factory(cfg.algo.strategy)
 
     while pq:
         logger.debug(f"Current Iteration: {iteration}")
@@ -388,7 +389,7 @@ def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: di
 
         sim = -neg_sim
         logger.debug(f"Current Cluster: {(ci, cj)}, similarity: {sim}")
-        if sim < cfg.threshold:
+        if sim < cfg.algo.threshold:
             logger.debug("Threshold reached, break")
             break
 

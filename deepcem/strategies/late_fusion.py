@@ -1,7 +1,7 @@
 import logging
 import numpy as np
 
-from deepcem.config import AlgoConfig
+from deepcem.config import AlgoConfig, AppConfig
 from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
 from deepcem.ditto_utils import serialize_ditto
 from deepcem.similarity import RelationalSimilarity, choose_rel_similarity_measure
@@ -17,18 +17,18 @@ class LateFusion(Strategy):
         self.rel_sim: RelationalSimilarity = ""
         self._cache: dict[tuple[str, str], float] = {}
 
-    def get_ditto_model(self, cfg: AlgoConfig):
+    def get_ditto_model(self, cfg: AppConfig):
         if not self.ditto_model: 
-            _, self.ditto_model = load_model(f"{cfg.dataset}", cfg.ckpt, cfg.lm, cfg.use_gpu, cfg.fp16)
+            _, self.ditto_model = load_model(f"{cfg.finetune.task}", str(cfg.paths.checkpoint_dir), cfg.finetune.encoder, cfg.algo.use_gpu, cfg.algo.fp16)
 
         return self.ditto_model
 
-    def get_rel_sim(self, cfg: AlgoConfig):
+    def get_rel_sim(self, cfg: AppConfig):
         if not self.rel_sim:
-            self.rel_sim = choose_rel_similarity_measure(cfg.rel_similarity)
+            self.rel_sim = choose_rel_similarity_measure(cfg.algo.rel_similarity)
         return self.rel_sim
 
-    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AlgoConfig ):
+    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AppConfig ):
 
         # compare all references of ci with all references of cj
         lines = []
@@ -51,7 +51,7 @@ class LateFusion(Strategy):
                             references[ri], references[rj]))
                         comparisons.append(cluster_pair(ri,rj))
         if len(lines) > 0:    
-            labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.lm)
+            labels, scores = classify(lines, self.get_ditto_model(cfg), lm=cfg.finetune.encoder)
 
             for key,value in zip(comparisons,scores):
                 self._cache[key] = value
@@ -74,5 +74,5 @@ class LateFusion(Strategy):
             get_cluster(ci, clusters, parents), get_cluster(cj, clusters, parents), hyperedges)
         logger.debug(f"sim_r score: {sim_r}")
         # calculate sim(ci,cj)
-        sim_ci_cj = (1-cfg.alpha) * sim_a + cfg.alpha * sim_r
+        sim_ci_cj = (1-cfg.algo.alpha) * sim_a + cfg.algo.alpha * sim_r
         return sim_ci_cj
