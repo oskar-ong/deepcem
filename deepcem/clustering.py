@@ -366,7 +366,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
 def iterative_merge(pq: PriorityQueue, clusters: dict[str, Cluster], parents: dict, hyperedges, references: dict[str, Reference], cfg: AppConfig):
     iteration = 0
 
-    strategy = strategy_factory(cfg.algo.strategy)
+    strategy = strategy_factory(cfg.algo)
 
     while pq:
         logger.debug(f"Current Iteration: {iteration}")

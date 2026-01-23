@@ -19,7 +19,7 @@ class LateFusion(Strategy):
 
     def get_ditto_model(self, cfg: AppConfig):
         if not self.ditto_model: 
-            _, self.ditto_model = load_model(f"{cfg.finetune.task}", str(cfg.run.checkpoints_root), cfg.finetune.encoder, cfg.algo.use_gpu, cfg.algo.fp16)
+            _, self.ditto_model = load_model(f"{cfg.finetune.task}", str(cfg.run.checkpoints_root), cfg.finetune.encoder, cfg.algo.use_gpu, cfg.algo.fp16) #load model concatenates root + task
 
         return self.ditto_model
 
