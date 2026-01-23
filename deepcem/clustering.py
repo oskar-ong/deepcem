@@ -338,7 +338,7 @@ def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hype
 
     already_compared = set()
     logger.debug("Iterate over all Clusters")
-    strategy = strategy_factory(cfg.algo.strategy)
+    strategy = strategy_factory(cfg.algo)
     for ci in clusters:
         #logger.debug(f"ci: {ci}")
         # iterate over all similar clusters:
