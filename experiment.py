@@ -282,8 +282,6 @@ def main():
     args = parse_args()
     config = load_config(args.config)
 
-    
-
     logger = setup_base_logger("cem")
     attach_run_file_handler(logger, str(config.paths.log_dir), config.algo.alpha, config.algo.threshold)
 

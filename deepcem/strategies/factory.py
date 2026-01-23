@@ -4,9 +4,9 @@ from .late_fusion import LateFusion
 from .inline_encode import InlineEncode
 
 # map "strategy id" -> class
-_STRATEGY_REGISTRY: dict[int, type[Strategy]] = {
-    1: LateFusion,
-    2: InlineEncode,
+_STRATEGY_REGISTRY: dict[str, type[Strategy]] = {
+    "LATE_FUSION": LateFusion,
+    "INLINE_ENCODE": InlineEncode,
 }
 
 # map "strategy id" -> *instance*
