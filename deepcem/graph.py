@@ -48,55 +48,6 @@ def create_hyperedges(references: dict[str, Reference], relationships):
         hyperedges[edge_id] = h
     return hyperedges, references
 
-from collections import defaultdict
-
-def create_hyperedges_from_author_to_pubs(
-    references: dict[str, "Reference"],
-    author_to_publications: dict[str, list[str]],
-    relation: str = "writes",
-    min_targets: int = 2,
-):
-    """
-    Create hyperedges from an author -> publications table.
-
-    One hyperedge per author (source), connecting all publications (targets).
-
-    Args:
-        references: dict of Reference objects keyed by reference id (publication ids live here).
-        author_to_publications: dict[author_id -> list[pub_id]] (author clusters recommended).
-        relation: relation name stored in hyperedge attributes (default: "writes").
-        min_targets: skip authors with fewer than this many publications (default: 2).
-
-    Returns:
-        (hyperedges, references)
-    """
-    hyperedges: dict[str, "Hyperedge"] = {}
-
-    i = 0
-    for author_id, pubs in author_to_publications.items():
-        # Deduplicate pubs and (optionally) filter out tiny hyperedges
-        targets = list({p for p in pubs if p})
-        if len(targets) < min_targets:
-            continue
-
-        edge_id = f"e{i}"
-        i += 1
-
-        edge_references = set()
-        for pub_id in targets:
-            if pub_id not in references:
-                references[pub_id] = Reference(pub_id)
-
-            references[pub_id].hyperedges.add(edge_id)
-            edge_references.add(pub_id)
-
-        h = Hyperedge(edge_id, {"relation": relation, "source": author_id})
-        h.references.update(edge_references)
-        hyperedges[edge_id] = h
-
-    return hyperedges, references
-
-
 def extract_references(candidates: pd.DataFrame) -> dict[str, Reference]:
     # All References
     references: dict[str, Reference]

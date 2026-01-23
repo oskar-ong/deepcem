@@ -1,5 +1,5 @@
 dataset:
-  dataset_dir: ./data/raw/deepmatcher/dirty/dblp-scholar
+  dataset_dir: ./data/raw/deepmatcher/structured/dblp-scholar
   splits: [train, valid, test]
   split_ext: csv
 
@@ -17,7 +17,7 @@ dataset:
     - [b, rtable_id]
 
 run:
-  run_name: dblp_scholar_alpha01_thr05
+  run_name: dblp_str_scholar_alpha03_thr05
   output_root: ./data/processed
   reduced_root: ./data/processed/reduced
   logs_root: ./logs
@@ -27,7 +27,7 @@ run:
   model_filename: model.pt
 
 algo:
-  alpha: 0.1
+  alpha: 0.3
   threshold: 0.5
   k: 2
   strategy: LATE_FUSION
@@ -38,7 +38,7 @@ algo:
 
 finetune:
   enabled: true
-  task: testing-setup
+  task: struc_dblp_scholar
   lm: ditto
   encoder: roberta
   batch_size: 32

@@ -80,7 +80,6 @@ def get_row_as_dict_idx(df_idx: pd.DataFrame, key: str, value: str) -> dict[str,
     result['id'] = value
     return result
 
-
 def get_attrs_for_keys(df_A_idx, df_B_idx, df_pairs: pd.DataFrame):
     result: list[tuple[dict, dict, int]] = []
 
@@ -94,7 +93,6 @@ def get_attrs_for_keys(df_A_idx, df_B_idx, df_pairs: pd.DataFrame):
 
         result.append((left, right, label))
     return result
-
 
 def extract_relation(l, subject):
     relationships = []
