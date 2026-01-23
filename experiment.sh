@@ -37,4 +37,4 @@ export HF_DATASETS_OFFLINE=1
 
 # No need to pass number of tasks to srun
 #srun python run_latefusion.py
-srun python experiment.py --config 
+srun python experiment.py --config experiment.yaml

@@ -1,5 +1,4 @@
 import logging
-from typing import List, Union
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 
 from deepcem.data_structures import get_cluster

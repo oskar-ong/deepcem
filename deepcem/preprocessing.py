@@ -3,8 +3,6 @@ import csv
 from itertools import combinations
 import uuid
 
-import pandas as pd
-
 from deepcem.clustering import UnionFind
 from deepcem.serialize import sanitize_value
 

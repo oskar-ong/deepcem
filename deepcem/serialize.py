@@ -1,7 +1,5 @@
 import re
 from typing import Dict, List, Tuple
-from deepcem.data_structures import Cluster, Hyperedge, Reference
-from deepcem.similarity import cluster_stats, pairwise_neighbor_stats
 
 def sanitize_value(v: str) -> str:
     if v is None:
