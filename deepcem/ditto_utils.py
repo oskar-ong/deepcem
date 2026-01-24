@@ -10,15 +10,17 @@ def serialize_ditto(ri: Reference, rj: Reference):
     Returns:
         str: A Ditto-formatted string.
     """
-    def serialize_record(record):
+
+
+    left = serialize_record(ri.attrs)
+    right = serialize_record(rj.attrs)
+
+    return f"{left}\t{right}\t0"
+
+def serialize_record(record):
         parts = []
         for col, val in record.items():
             if val is None:
                 continue
             parts.append(f'{col} : "{val}"')
         return " , ".join(parts)
-
-    left = serialize_record(ri.attrs)
-    right = serialize_record(rj.attrs)
-
-    return f"{left}\t{right}\t0"

@@ -28,7 +28,7 @@ class LateFusion(Strategy):
             self.rel_sim = choose_rel_similarity_measure(cfg.algo.rel_similarity)
         return self.rel_sim
 
-    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges: dict[str, Hyperedge], cfg: AppConfig ):
+    def calculate_cluster_similarity(self, clusters: dict[str, Cluster], parents, ci: str, cj: str, references: dict[str, Reference], hyperedges, cfg: AppConfig ):
 
         # compare all references of ci with all references of cj
         lines = []

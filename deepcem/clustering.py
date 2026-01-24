@@ -1,5 +1,6 @@
 from collections import defaultdict
 import logging
+from typing import List
 
 import pandas as pd
 from tqdm import tqdm
@@ -324,7 +325,7 @@ def bootstrap_clusters(df, references: dict[str, Reference], hyperedges: dict, a
     return clusters, parents
 
 
-def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges, parents: dict, cfg: AppConfig):
+def init_pq(clusters: dict[str, Cluster], references: dict[str, Reference], hyperedges: dict[str, List[str]], parents: dict, cfg: AppConfig):
 
     # Build priority queue of similarities
     # initialize empty list as priqority queue

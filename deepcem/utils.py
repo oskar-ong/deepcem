@@ -132,3 +132,15 @@ def get_run_id(log_dir):
 
 def cluster_pair(a, b):
     return (a, b) if a <= b else (b, a)
+
+
+def top_k(nbr, k=5):
+    seen = set()
+    result = []
+    for x in nbr: 
+        if x not in seen:
+            seen.add(x)
+            result.append(x)
+        if len(result) >= k:
+            break
+    return result

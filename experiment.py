@@ -1,4 +1,5 @@
 import argparse
+from collections import defaultdict
 import json
 import logging
 import os
@@ -23,7 +24,7 @@ from deepcem.preprocessing import (
     reduce,
     save_as_ditto_file,
 )
-from deepcem.utils import attach_run_file_handler, setup_base_logger
+from deepcem.utils import attach_run_file_handler, setup_base_logger, top_k
 
 @dataclass
 class SideData:
@@ -35,7 +36,7 @@ class SideData:
 @dataclass
 class SplitArtifacts:
     pairs: pd.DataFrame
-    enriched_pairs: pd.DataFrame
+    enriched_pairs: list[tuple[dict,dict,int]]
     # For each side (a/b): dicts from normalize()
     # { "primary_entities": ..., "context_entities": ..., "primary_to_contexxt": ..., "context_to_primary": ... }
     side_data: Dict[str, SideData]
@@ -49,12 +50,6 @@ def preprocess_split(
     config: AppConfig,
     split: str,
 ) -> SplitArtifacts:
-    """
-    For a split:
-      - reduce tableA/tableB w.r.t. pairs
-      - normalize reduced tables into primary_entities/context_entities/edges
-      - enrich pairs into Ditto format and save
-    """
     pairs_fp = split_pairs_path(config.dataset, split)
     pairs_df = pd.read_csv( pairs_fp,
                             dtype={config.dataset.left_id_col: str, config.dataset.right_id_col: str},
@@ -110,7 +105,6 @@ def preprocess_split(
 def preprocess_all_splits(
     config: AppConfig,
 ) -> Dict[str, SplitArtifacts]:
-    logger = logging.getLogger("cem")
     config.paths.reduced_dir.mkdir(parents=True, exist_ok=True)
     artifacts: Dict[str, SplitArtifacts] = {}
     for split in config.dataset.splits:
@@ -244,7 +238,7 @@ def build_context_clusters_and_hyperedges(
 # ----------------------------
 
 def run_cem(
-    enriched_pairs_test: pd.DataFrame,
+    enriched_pairs_test: list[tuple[dict,dict,int]],
     pairs_test: pd.DataFrame,
     primary_to_context: Dict[str, List[str]],
     context_to_primary: Dict[str, List[str]],
@@ -287,6 +281,88 @@ def main():
 
     # 1) preprocess all splits (dataset-agnostic pipeline)
     artifacts = preprocess_all_splits(config)
+
+    if config.algo.strategy == "INLINE_ENCODE":
+        ufs: dict[str, UnionFind] = {}
+        # Every record is a distinct cluster
+
+        for split in ["train", "valid"]:
+            primary_to_context, context_to_primary = build_context_clusters_and_hyperedges(artifacts[split], config)
+            all_ids = set()
+            ufs[split] = UnionFind()
+            for index, row in artifacts[split].pairs.iterrows():
+                l = str(row['ltable_id'])
+                r = str(row['rtable_id'])
+                ufs[split].add(l)
+                ufs[split].add(r)
+                if row['label'] == 1:
+                    ufs[split].union(l,r)
+                all_ids.add(l)
+                all_ids.add(r)
+
+            clusters = defaultdict(set)
+            for x in all_ids:
+                root = ufs[split].find(x)
+                clusters[root].add(x)
+
+            enriched_pairs = []
+            for row in artifacts[split].enriched_pairs:
+                # add neighborhood to line of enriched pair
+
+                neighborhood_left = []
+                left_id = row[0][config.dataset.prim_id_col]
+                left_root = ufs[split].find(left_id)
+                for left in clusters[left_root]: 
+                    for a in primary_to_context.get(left, []):
+                        neighborhood_left.append(a)
+
+
+                nbr_left_list = top_k(neighborhood_left, 5)
+
+                neighborhood_right = []
+                right_id = row[1][config.dataset.prim_id_col]
+                right_root = ufs[split].find(right_id)
+                for right in clusters[right_root]: 
+                    for a in primary_to_context.get(right, []):
+                        neighborhood_right.append(a)
+
+                nbr_right_list = top_k(neighborhood_right, 5)
+
+                A = set(neighborhood_left)
+                B = set(neighborhood_right)
+
+                inter = len(A & B)
+                union = len(A | B)
+                minsz = min(len(A), len(B))
+
+                jaccard = (inter / union) if union else 0.0
+                overlap = (inter / minsz) if minsz else 0.0
+                containL = (inter / len(A)) if len(A) else 0.0
+                containR = (inter / len(B)) if len(B) else 0.0
+                        
+                weighted_jaccard = 0 # TODO
+                cosine_sim = 0 # TODO
+                rare_overlap_count = 0 # TODO
+                
+                nbr_ci_str =  f"{' | '.join(nbr_left_list)}"
+                nbr_cj_str =  f"{' | '.join(nbr_right_list)}"
+
+                pairwise_summary = f"jac={jaccard:.3f} overlap={overlap:.3f} containL={containL:.3f} containR={containR:.3f}"
+
+                left_fields = dict(row[0])
+                left_fields[config.dataset.context_field] = nbr_ci_str
+
+                right_fields = dict(row[1])
+                right_fields[config.dataset.context_field] = nbr_cj_str
+
+                left_fields["pairwise_summary"] = pairwise_summary
+                right_fields["pairwise_summary"] = pairwise_summary
+
+                enriched_pairs.append((left_fields, right_fields, row[2]))
+
+            save_as_ditto_file(enriched_pairs, config.paths.output_dir, split)
+
+
 
     # 2) optional finetuning
     if config.finetune.enabled:

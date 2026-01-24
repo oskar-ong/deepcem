@@ -1,3 +1,4 @@
+from typing import List
 from deepcem.data_structures import Cluster, Hyperedge
 
 class RelationalSimilarity():
@@ -10,10 +11,10 @@ class RelationalSimilarity():
 
 
 class JaccardCoefficient(RelationalSimilarity):
-    def calculate(self, ci: Cluster, cj: Cluster, hyperedges):
+    def calculate(self, ci: Cluster, cj: Cluster, hyperedges: dict[str, List[str]]):
         # JaccardCoef f (ci, cj ) = |N br(ci) ⋂ N br(cj )|  |N br(ci) ⋃ N br(cj )|
-        neighborhood_a = nbr(ci, hyperedges)
-        neighborhood_b = nbr(cj, hyperedges)
+        neighborhood_a = set(nbr(ci, hyperedges))
+        neighborhood_b = set(nbr(cj, hyperedges))
 
         # if any of the neighborhoods is empty return 0
         if not neighborhood_a or not neighborhood_b:
@@ -25,12 +26,12 @@ class JaccardCoefficient(RelationalSimilarity):
         similarity = len(intersection_nbr_a_b) / len(union_nbr_a_b)
         return similarity
 
-def nbr(c: Cluster, hyperedges: dict[str, Hyperedge]):
+def nbr(c: Cluster, hyperedges: dict[str, List[str]]):
 
-    neighborhood = set()
+    neighborhood = []
     for r_id in c.references: 
         for a in hyperedges.get(r_id, []):
-            neighborhood.add(a)
+            neighborhood.append(a)
     return neighborhood
 
 def choose_rel_similarity_measure(name):
