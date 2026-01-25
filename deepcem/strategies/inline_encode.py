@@ -16,7 +16,7 @@ logger = logging.getLogger("cem.inline_encoded")
 
 class InlineEncode(Strategy):
     def __init__(self):
-        self.ditto_model: DittoModel
+        self.ditto_model: DittoModel = None
         self._cache = {}
 
     def get_ditto_model(self, cfg: AppConfig):
