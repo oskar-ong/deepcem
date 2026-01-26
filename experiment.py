@@ -155,11 +155,11 @@ def finetune_ditto_if_needed(
     logger = logging.getLogger("cem")
     ensure_ditto_task_config(config.finetune.task, config.paths.ditto_configs_path, config.paths.output_dir)
 
-    if config.paths.model_path.exists():
-        logger.info("[finetune] model exists, skipping: %s", config.paths.model_path)
-        return
+    # if config.paths.model_path.exists():
+    #     logger.info("[finetune] model exists, skipping: %s", config.paths.model_path)
+    #     return
 
-    logger.info("[finetune] model missing, fine-tuning…")
+    logger.info("fine-tuning…")
     config.paths.checkpoint_dir.mkdir(parents=True, exist_ok=True)
 
     # Some Ditto scripts look for configs.json in cwd
