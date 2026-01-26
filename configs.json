@@ -1362,5 +1362,16 @@
         "trainset": "./data/processed/ditto-splits/testing_setup/train.txt",
         "validset": "./data/processed/ditto-splits/testing_setup/valid.txt",
         "testset": "./data/processed/ditto-splits/testing_setup/test.txt"
+    },
+    {
+        "name": "struc_dblp_scholar",
+        "task_type": "classification",
+        "vocab": [
+            "0",
+            "1"
+        ],
+        "trainset": "data/processed/splits/dblp_str_scholar_alpha03_thr05/train.txt",
+        "validset": "data/processed/splits/dblp_str_scholar_alpha03_thr05/valid.txt",
+        "testset": "data/processed/splits/dblp_str_scholar_alpha03_thr05/test.txt"
     }
 ]

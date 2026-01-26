@@ -144,3 +144,12 @@ def top_k(nbr, k=5):
         if len(result) >= k:
             break
     return result
+
+def bucket(x):
+    if x == 0:
+        return "zero"
+    if x < 0.3:
+        return "low"
+    if x <0.6:
+        return "medium"
+    return "high"

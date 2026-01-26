@@ -24,7 +24,7 @@ from deepcem.preprocessing import (
     reduce,
     save_as_ditto_file,
 )
-from deepcem.utils import attach_run_file_handler, setup_base_logger, top_k
+from deepcem.utils import attach_run_file_handler, bucket, setup_base_logger, top_k
 
 @dataclass
 class SideData:
@@ -347,7 +347,10 @@ def main():
                 nbr_ci_str =  f"{' | '.join(nbr_left_list)}"
                 nbr_cj_str =  f"{' | '.join(nbr_right_list)}"
 
-                pairwise_summary = f"jac={jaccard:.3f} overlap={overlap:.3f} containL={containL:.3f} containR={containR:.3f}"
+                # Bucket
+                jac = bucket(jaccard)
+                # pairwise_summary = f"jac={jaccard:.3f} overlap={overlap:.3f} containL={containL:.3f} containR={containR:.3f}"
+                pairwise_summary = f"jac={jac}"
 
                 left_fields = dict(row[0])
                 left_fields[config.dataset.context_field] = nbr_ci_str

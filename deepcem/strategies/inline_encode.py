@@ -2,12 +2,12 @@ import logging
 from typing import List
 import numpy as np
 
-from deepcem.utils import cluster_pair
+from deepcem.utils import bucket, cluster_pair
 from matcher import DittoModel
 
-from deepcem.config import AlgoConfig, AppConfig
-from deepcem.data_structures import Cluster, Hyperedge, Reference, get_cluster
-from deepcem.ditto_utils import serialize_ditto, serialize_record
+from deepcem.config import AppConfig
+from deepcem.data_structures import Cluster, Reference, get_cluster
+from deepcem.ditto_utils import serialize_record
 from deepcem.similarity import nbr
 from deepcem.strategies.base import Strategy
 from matcher import classify, load_model
@@ -44,7 +44,6 @@ class InlineEncode(Strategy):
         nbr_ci: List[str] = nbr(c_i, hyperedges)
         nbr_cj: List[str] = nbr(c_j, hyperedges)
 
-
         def top_k(nbr, k=5):
             seen = set()
             result = []
@@ -78,7 +77,10 @@ class InlineEncode(Strategy):
         nbr_ci_str =  f"{' | '.join(nbr_ci_list)}"
         nbr_cj_str =  f"{' | '.join(nbr_cj_list)}"
 
-        pairwise_summary = f"jac={jaccard:.3f} overlap={overlap:.3f} containL={containL:.3f} containR={containR:.3f}"
+        # Bucket
+        jac = bucket(jaccard)
+        # pairwise_summary = f"jac={jaccard:.3f} overlap={overlap:.3f} containL={containL:.3f} containR={containR:.3f}"
+        pairwise_summary = f"jac={jac}"
 
         for ri in c_i.references:
             # iterate over all references in cj
@@ -109,7 +111,7 @@ class InlineEncode(Strategy):
             # scores[1]: The logit for class 1 "match"
             if probs[1].item() >= highest_score:
                 highest_score = probs[1].item()
-        sim = highest_score
+        sim = round(highest_score,3)
         logger.debug(f"Similarity Score for {ci} - {cj}: {sim}")
 
         return sim
