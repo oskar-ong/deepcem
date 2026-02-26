@@ -1,6 +1,7 @@
 from __future__ import annotations
 import csv
 import itertools
+import json
 import random
 import re
 from collections import defaultdict
@@ -22,12 +23,12 @@ PATH_RAW_TITLE_DUPS       = "../data/raw/imdb/title_basics_dups.csv"
 PATH_RAW_NAME_BASICS     = "../data/raw/imdb/name_basics.csv"
 PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
 
-PATH_OUT_MOVIE_TRAIN      = "../data/processed/imdb/movie/train.csv"
-PATH_OUT_MOVIE_VALID      = "../data/processed/imdb/movie/valid.csv"
-PATH_OUT_MOVIE_TEST       = "../data/processed/imdb/movie/test.csv"
-PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.csv"
-PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.csv"
-PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.csv"
+PATH_OUT_MOVIE_TRAIN      = "../data/processed/imdb/movie/train.jsonl"
+PATH_OUT_MOVIE_VALID      = "../data/processed/imdb/movie/valid.jsonl"
+PATH_OUT_MOVIE_TEST       = "../data/processed/imdb/movie/test.jsonl"
+PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.jsonl"
+PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.jsonl"
+PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.jsonl"
 
 # --- Column Names ---
 COL_TCONST     = "tconst"
@@ -212,13 +213,6 @@ def analyze_dataset_difficulty(pairs: List[Tuple[dict, dict, int]]):
     avg_pos = sum(pos_sims) / len(pos_sims) if pos_sims else 0
     print(f"--- Dataset Difficulty Report ---\nAvg Match Sim: {avg_pos:.4f}\nAvg Neg Sim:   {avg_neg:.4f}")
 
-def write_list_to_csv(lines: list, output_path: str):
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["lid", "rid", "label"])
-        for item in lines:
-            writer.writerow(item if isinstance(item, (list, tuple)) else [item])
-
 # ==========================================
 # MAIN EXECUTION
 # ==========================================
@@ -274,10 +268,15 @@ def main():
     
     # 5. Save
     for p, path in zip([p_train_m, p_valid_m, p_test_m], [PATH_OUT_MOVIE_TRAIN, PATH_OUT_MOVIE_VALID, PATH_OUT_MOVIE_TEST]):
-        write_list_to_csv(p, path)
+        with open(path, "w") as f:
+            for entry in p:
+                f.write(json.dumps(entry) + "\n")
     for p, path in zip([p_train_n, p_valid_n, p_test_n], [PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST]):
-        write_list_to_csv(p, path)
+        with open(path, "w") as f:
+            for entry in p:
+                f.write(json.dumps(entry) + "\n")
 
     return p_test_m, p_test_m, p_test_m
+
 if __name__ == "__main__":
     main()
