@@ -1,0 +1,488 @@
+COL primaryName VAL Gerda Coppens COL primaryProfession VAL producer	COL primaryName VAL Gerda Coppens COL primaryProfession VAL producer	1
+COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	0
+COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	0
+COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	1
+COL primaryName VAL Gábor MarosiV COL primaryProfession VAL cinematographer-camera_department-writer	COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	0
+COL primaryName VAL Liz RephL COL primaryProfession VAL producer-writer-director	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Jef Neve COL primaryProfession VAL composer	COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	1
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL writer	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	1
+COL primaryName VAL Marcius Barbieri COL primaryProfession VAL editor-director-actor	COL primaryName VAL Liz Reph COL primaryProfession VAL producer-writer-director	0
+COL primaryName VAL João Fonseca COL primaryProfession VAL assistant_director-production_manager-actor	COL primaryName VAL João Fonseca COL primaryProfession VAL assistant_director-production_manager-actor	1
+COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	1
+COL primaryName VAL Turgud Ören COL primaryProfession VAL cinematographer-writer-camera_department	COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Robin Coulonge COL primaryProfession VAL actress	COL primaryName VAL Mino Carta II	0
+COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer	0
+COL primaryName VAL Houston Curtis COL primaryProfession VAL producer-writer-director	COL primaryName VAL Houston Curtis COL primaryProfession VAL producer-writer-director	1
+COL primaryName VAL Harvey Berger COL primaryProfession VAL editor-writer-assistant_director	COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	0
+COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	0
+COL primaryName VAL Roman Lytvinenkod COL primaryProfession VAL writer	COL primaryName VAL Eduardo Flores Torresl COL primaryProfession VAL casting_director-camera_department-director	0
+COL primaryName VAL Judit Czakó COL primaryProfession VAL editor-script_department-actress	COL primaryName VAL Lawrence Wilkerson	0
+COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	1
+COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor	COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	0
+COL primaryName VAL Thomas Benski COL primaryProfession VAL producer-camera_department-executive	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	0
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	0
+COL primaryName VAL Mino Carta IID COL primaryProfession VAL animation_department	COL primaryName VAL Mino Carta II	1
+COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	1
+COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department	COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	0
+COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	1
+COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	1
+COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer	0
+COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	1
+COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department	COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department	1
+COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	COL primaryName VAL Inka Gogálová COL primaryProfession VAL special_effects	0
+COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	0
+COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer	COL primaryName VAL James Webber COL primaryProfession VAL producer-director-writer	1
+COL primaryName VAL Thomas Cowan	COL primaryName VAL Andrew Taggarti COL primaryProfession VAL soundtrack-composer-actor	0
+COL primaryName VAL Nemanja Mosurovic COL primaryProfession VAL composer-music_department	COL primaryName VAL Chris ShepherdN COL primaryProfession VAL visual_effects-writer-animation_department	0
+COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	COL primaryName VAL Megumi Ishii COL primaryProfession VAL actress	0
+COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Ava Gardnerq COL primaryProfession VAL sound_department-soundtrack-stunts	0
+COL primaryName VAL Davide Cirri	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	0
+COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	1
+COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director	0
+COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress	COL primaryName VAL Gary Porter	0
+COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Tim Vine COL primaryProfession VAL actor-writer-director	0
+COL primaryName VAL Victor Baker	COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	1
+COL primaryName VAL Faisal COL primaryProfession VAL cinematographer	COL primaryName VAL Faisalu COL primaryProfession VAL production_designer	1
+COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	0
+COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	1
+COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	COL primaryName VAL Dave Scott	0
+COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor	COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor	1
+COL primaryName VAL Gerda Coppens COL primaryProfession VAL producer	COL primaryName VAL Matthew Rudgec COL primaryProfession VAL stunts-writer-actor	0
+COL primaryName VAL Lawrence Wilkersonr COL primaryProfession VAL sound_department	COL primaryName VAL Lawrence Wilkerson	1
+COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	0
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Lawrence Wilkerson	0
+COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department	COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer	0
+COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	COL primaryName VAL Chris ShepherdN COL primaryProfession VAL visual_effects-writer-animation_department	0
+COL primaryName VAL Kat Kairoj COL primaryProfession VAL editorial_department	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	1
+COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	0
+COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	0
+COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Leo Houlding COL primaryProfession VAL producer-miscellaneous	COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	0
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	0
+COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	0
+COL primaryName VAL Jus Riddickm COL primaryProfession VAL editor-producer-director	COL primaryName VAL Jus Riddick COL primaryProfession VAL actor-producer-director	1
+COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	0
+COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department	1
+COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	1
+COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor	COL primaryName VAL Simon BeaufilsS COL primaryProfession VAL editorial_department-camera_department	0
+COL primaryName VAL Ava Gardner COL primaryProfession VAL actress-soundtrack-stunts	COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack	0
+COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Patricia Couvillers COL primaryProfession VAL actress	0
+COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	COL primaryName VAL Alec Soth COL primaryProfession VAL producer	0
+COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress	0
+COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor	0
+COL primaryName VAL Tom Scharpling COL primaryProfession VAL producer-actor-writer	COL primaryName VAL Thomas Cowan	0
+COL primaryName VAL Lucas Neff COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Zsombor Dyga COL primaryProfession VAL director-assistant_director-writer	0
+COL primaryName VAL Anaïs BarbeauLavalette COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Kat Kairoj COL primaryProfession VAL editorial_department	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	1
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	0
+COL primaryName VAL Tim Vine COL primaryProfession VAL actor-writer-director	COL primaryName VAL Tim Vine COL primaryProfession VAL actor-writer-director	1
+COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	COL primaryName VAL Martin Waetzold	0
+COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Dave Scott	COL primaryName VAL Dave Scott	1
+COL primaryName VAL Yu Baie COL primaryProfession VAL actor	COL primaryName VAL Haleigh Oliverp COL primaryProfession VAL actress	0
+COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	COL primaryName VAL Enrique Jarlego COL primaryProfession VAL editor-director-actor	0
+COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department	COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department	1
+COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	COL primaryName VAL Robin Coulonge COL primaryProfession VAL actress	0
+COL primaryName VAL Simon BeaufilsS COL primaryProfession VAL editorial_department-camera_department	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer	0
+COL primaryName VAL Laurent Preyalek COL primaryProfession VAL location_management-writer-editor	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	0
+COL primaryName VAL Derek H Potts COL primaryProfession VAL location_management-producer-writer	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	0
+COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	1
+COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Hans Bayer COL primaryProfession VAL actor	COL primaryName VAL João Fonseca COL primaryProfession VAL assistant_director-production_manager-actor	0
+COL primaryName VAL Miki Andoy COL primaryProfession VAL actress	COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	0
+COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Martina Dräger COL primaryProfession VAL actress	0
+COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	1
+COL primaryName VAL Wera Cleve COL primaryProfession VAL editor	COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	0
+COL primaryName VAL Michaela Furney COL primaryProfession VAL miscellaneous	COL primaryName VAL Eloïse GenetA COL primaryProfession VAL miscellaneous	0
+COL primaryName VAL Megan Jones COL primaryProfession VAL actress	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Gary PorterK COL primaryProfession VAL casting_director	0
+COL primaryName VAL Tom Scharpling COL primaryProfession VAL producer-actor-writer	COL primaryName VAL Andrew Taggart COL primaryProfession VAL soundtrack-composer-actor	0
+COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	COL primaryName VAL Chris Shepherd COL primaryProfession VAL director-writer-animation_department	0
+COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	0
+COL primaryName VAL Roy Robertsf COL primaryProfession VAL make_up_department	COL primaryName VAL Haleigh Oliverp COL primaryProfession VAL actress	0
+COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	COL primaryName VAL Thomas Cowan	0
+COL primaryName VAL Rosie Day COL primaryProfession VAL actress-director-writer	COL primaryName VAL Rosie Dayv COL primaryProfession VAL producer-director-writer	1
+COL primaryName VAL Wera Cleve COL primaryProfession VAL editor	COL primaryName VAL John Chase COL primaryProfession VAL actor	0
+COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer	1
+COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer	1
+COL primaryName VAL Matteo StocchinoZ COL primaryProfession VAL set_decorator-music_department	COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	1
+COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Rosie Day COL primaryProfession VAL actress-director-writer	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL John Chaser COL primaryProfession VAL actor	0
+COL primaryName VAL Rolf Bergn COL primaryProfession VAL art_department	COL primaryName VAL Michael Lisk COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	1
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL writer	COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Mike Cunliffe COL primaryProfession VAL director-editor-actor	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Gábor MarosiV COL primaryProfession VAL cinematographer-camera_department-writer	COL primaryName VAL Derek H Potts COL primaryProfession VAL actor-producer-writer	0
+COL primaryName VAL Gábor MarosiV COL primaryProfession VAL cinematographer-camera_department-writer	COL primaryName VAL Gábor Marosi COL primaryProfession VAL cinematographer-camera_department-writer	1
+COL primaryName VAL Thomas Cowan	COL primaryName VAL Thomas Cowan	1
+COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	COL primaryName VAL Victor Baker	0
+COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	COL primaryName VAL Eduardo Flores Torresl COL primaryProfession VAL casting_director-camera_department-director	1
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Jus Riddick COL primaryProfession VAL actor-producer-director	0
+COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Nikolay Yeriomin COL primaryProfession VAL writer-miscellaneous-actor	0
+COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	1
+COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	0
+COL primaryName VAL Gary Porter	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	0
+COL primaryName VAL Marcius Barbieri COL primaryProfession VAL editor-director-actor	COL primaryName VAL Marcius Barbieri COL primaryProfession VAL editor-director-actor	1
+COL primaryName VAL Roman Lytvinenko	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	0
+COL primaryName VAL Zsombor Dyga COL primaryProfession VAL actor-assistant_director-writer	COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	0
+COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	COL primaryName VAL Mike Cunliffe COL primaryProfession VAL director-editor-actor	0
+COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	1
+COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	1
+COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	1
+COL primaryName VAL Derek H Potts COL primaryProfession VAL location_management-producer-writer	COL primaryName VAL Derek H Potts COL primaryProfession VAL actor-producer-writer	1
+COL primaryName VAL Inka Gogálová COL primaryProfession VAL actress	COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	0
+COL primaryName VAL Ryuji NoharaM COL primaryProfession VAL script_department	COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department	0
+COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer	1
+COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	0
+COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	0
+COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer	1
+COL primaryName VAL Eloïse GenetA COL primaryProfession VAL miscellaneous	COL primaryName VAL Eloïse Genet COL primaryProfession VAL actress	1
+COL primaryName VAL Matteo StocchinoZ COL primaryProfession VAL set_decorator-music_department	COL primaryName VAL Eloïse GenetA COL primaryProfession VAL miscellaneous	0
+COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Simon BeaufilsS COL primaryProfession VAL editorial_department-camera_department	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Snake COL primaryProfession VAL composer	1
+COL primaryName VAL Christoph Hildebrandt	COL primaryName VAL Péter Kálloy Molnár COL primaryProfession VAL actor-writer-director	0
+COL primaryName VAL Leo HouldingU COL primaryProfession VAL producer-miscellaneous	COL primaryName VAL Miki Andoy COL primaryProfession VAL actress	0
+COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	1
+COL primaryName VAL Patricia Couvillers COL primaryProfession VAL actress	COL primaryName VAL Patricia Couvillers COL primaryProfession VAL actress	1
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	1
+COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	1
+COL primaryName VAL Marcius Barbieri COL primaryProfession VAL editor-director-actor	COL primaryName VAL Lucas Neff COL primaryProfession VAL actor-soundtrack-producer	0
+COL primaryName VAL Francisco Buencamino Jr COL primaryProfession VAL composer-music_department-soundtrack	COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department	0
+COL primaryName VAL Roman Lytvinenkod COL primaryProfession VAL writer	COL primaryName VAL Roman Lytvinenko	1
+COL primaryName VAL Matteo StocchinoZ COL primaryProfession VAL set_decorator-music_department	COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	1
+COL primaryName VAL Belinda Mason COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Eloïse GenetA COL primaryProfession VAL miscellaneous	0
+COL primaryName VAL Dave Scott	COL primaryName VAL Faisalu COL primaryProfession VAL production_designer	0
+COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	COL primaryName VAL Matteo StocchinoZ COL primaryProfession VAL set_decorator-music_department	0
+COL primaryName VAL Lawrence Wilkerson	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Victor BakerU COL primaryProfession VAL manager	0
+COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	COL primaryName VAL Péter Kálloy Molnár COL primaryProfession VAL actor-writer-director	0
+COL primaryName VAL Inka Gogálová COL primaryProfession VAL special_effects	COL primaryName VAL Derek H Potts COL primaryProfession VAL location_management-producer-writer	0
+COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	COL primaryName VAL Michael Lisk COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Lucy ClementsG COL primaryProfession VAL director-actress	COL primaryName VAL Laurent Preyalek COL primaryProfession VAL location_management-writer-editor	0
+COL primaryName VAL Nick Brian Walters COL primaryProfession VAL camera_department-cinematographer-actor	COL primaryName VAL Nick Brian Waltersd COL primaryProfession VAL composer-cinematographer-actor	1
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Stig Björkman COL primaryProfession VAL director-writer-miscellaneous	0
+COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	0
+COL primaryName VAL Michel Hadadj COL primaryProfession VAL cinematographer-camera_department	COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	0
+COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	0
+COL primaryName VAL Helder Faria COL primaryProfession VAL editor-director-writer	COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer	1
+COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Jack A Marta COL primaryProfession VAL cinematographer-camera_department-miscellaneous	0
+COL primaryName VAL Lucas Neff COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Eloïse Genet COL primaryProfession VAL actress	COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	0
+COL primaryName VAL Iain Stewart COL primaryProfession VAL actor-miscellaneous	COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	0
+COL primaryName VAL Tony Santos COL primaryProfession VAL actor-director-writer	COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Dave Scott	0
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL writer	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	1
+COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department	COL primaryName VAL Turgud Ören COL primaryProfession VAL cinematographer-writer-camera_department	0
+COL primaryName VAL Sean Patrick Flanery COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	0
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	COL primaryName VAL Lisa CordileoneX COL primaryProfession VAL electrical_department-producer-writer	0
+COL primaryName VAL Judit Czakó COL primaryProfession VAL editor-script_department-actress	COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	0
+COL primaryName VAL Inka Gogálová COL primaryProfession VAL actress	COL primaryName VAL Inka Gogálová COL primaryProfession VAL special_effects	1
+COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	COL primaryName VAL Peter Hudsonz COL primaryProfession VAL producer	0
+COL primaryName VAL AJ WalshH COL primaryProfession VAL actor	COL primaryName VAL Mino Carta II	0
+COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	0
+COL primaryName VAL Andrew Taggarti COL primaryProfession VAL soundtrack-composer-actor	COL primaryName VAL Andrew Taggart COL primaryProfession VAL soundtrack-composer-actor	1
+COL primaryName VAL William Raban COL primaryProfession VAL director-cinematographer-editor	COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	0
+COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	0
+COL primaryName VAL James Whitney COL primaryProfession VAL director-cinematographer-editor	COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	0
+COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Victor Baker	COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	0
+COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL AJ Walsh COL primaryProfession VAL actor	COL primaryName VAL Nick Brian Waltersd COL primaryProfession VAL composer-cinematographer-actor	0
+COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	0
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	COL primaryName VAL Lucy ClementsG COL primaryProfession VAL director-actress	0
+COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	1
+COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director	0
+COL primaryName VAL Shirley Clarke COL primaryProfession VAL director-editor-producer	COL primaryName VAL Roman Lytvinenko	0
+COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer	COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	0
+COL primaryName VAL Kat Kairoj COL primaryProfession VAL editorial_department	COL primaryName VAL Dave Scott	0
+COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer	COL primaryName VAL Iain Stewart COL primaryProfession VAL actor-miscellaneous	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	1
+COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director	1
+COL primaryName VAL Victor Baker	COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Shirley Clarkej COL primaryProfession VAL director-editor-producer	COL primaryName VAL Shirley Clarke COL primaryProfession VAL director-editor-producer	1
+COL primaryName VAL Francisco Buencamino Jr COL primaryProfession VAL composer-music_department-soundtrack	COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	0
+COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Eduardo Flores Torresl COL primaryProfession VAL casting_director-camera_department-director	0
+COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	COL primaryName VAL Snake COL primaryProfession VAL composer	0
+COL primaryName VAL Thomas Cowan	COL primaryName VAL Lisa Leeman COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Faisalu COL primaryProfession VAL production_designer	COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	0
+COL primaryName VAL Ava Gardnerq COL primaryProfession VAL sound_department-soundtrack-stunts	COL primaryName VAL Robin Coulonge COL primaryProfession VAL actress	0
+COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	0
+COL primaryName VAL Wera Cleve COL primaryProfession VAL editor	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	0
+COL primaryName VAL Yu Baie COL primaryProfession VAL actor	COL primaryName VAL Francisco Buencamino Jr COL primaryProfession VAL composer-music_department-soundtrack	0
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	1
+COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director	COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	0
+COL primaryName VAL Lucas Neff COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Lucas Neff COL primaryProfession VAL actor-soundtrack-producer	1
+COL primaryName VAL Lamberto V Avellana COL primaryProfession VAL director-writer-producer	COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	1
+COL primaryName VAL Laurent Preyalek COL primaryProfession VAL location_management-writer-editor	COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	1
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	COL primaryName VAL AJ Walsh COL primaryProfession VAL actor	0
+COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Wera Cleve COL primaryProfession VAL editor	COL primaryName VAL Lawrence Wilkerson	0
+COL primaryName VAL John McCainu COL primaryProfession VAL actor-writer	COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	0
+COL primaryName VAL Rolf Bergn COL primaryProfession VAL art_department	COL primaryName VAL Lisa Leeman COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Gary Porter	COL primaryName VAL Thomas Cowan	0
+COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	0
+COL primaryName VAL Liz Reph COL primaryProfession VAL producer-writer-director	COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	COL primaryName VAL Inka Gogálová COL primaryProfession VAL actress	0
+COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	1
+COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department	COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	0
+COL primaryName VAL Derek H Potts COL primaryProfession VAL location_management-producer-writer	COL primaryName VAL John McCain COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	0
+COL primaryName VAL Andrew Taggarti COL primaryProfession VAL soundtrack-composer-actor	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	0
+COL primaryName VAL Ghalia BenaliC COL primaryProfession VAL actress	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	1
+COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	1
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Christoph Hildebrandt	0
+COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	1
+COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	0
+COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	0
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Snake COL primaryProfession VAL composer	0
+COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL visual_effects-writer-producer	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	1
+COL primaryName VAL Jef Neve COL primaryProfession VAL composer	COL primaryName VAL Michael Lisk COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Snake COL primaryProfession VAL composer	0
+COL primaryName VAL Péter Kálloy Molnár COL primaryProfession VAL actor-writer-director	COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	0
+COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress	COL primaryName VAL Megan Jones COL primaryProfession VAL actress	1
+COL primaryName VAL Lucy ClementsG COL primaryProfession VAL director-actress	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	0
+COL primaryName VAL AJ Walsh COL primaryProfession VAL actor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	0
+COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	0
+COL primaryName VAL Belinda Mason COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department	0
+COL primaryName VAL Houston Curtis COL primaryProfession VAL producer-writer-director	COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Rolf Bergn COL primaryProfession VAL art_department	COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	0
+COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	0
+COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	0
+COL primaryName VAL Ryuji NoharaM COL primaryProfession VAL script_department	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	0
+COL primaryName VAL Liz Reph COL primaryProfession VAL producer-writer-director	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Inka Gogálová COL primaryProfession VAL special_effects	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	0
+COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	0
+COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	COL primaryName VAL Michel Hadadj COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor	COL primaryName VAL Péter Kálloy Molnár COL primaryProfession VAL actor-writer-director	0
+COL primaryName VAL Inka Gogálová COL primaryProfession VAL special_effects	COL primaryName VAL Houston Curtis COL primaryProfession VAL producer-writer-director	0
+COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	COL primaryName VAL Jawad Rhalib COL primaryProfession VAL director-writer	0
+COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	0
+COL primaryName VAL Mark Gerstorfer COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Lamberto V Avellana COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL Martin Waetzold	COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Liz Reph COL primaryProfession VAL producer-writer-director	0
+COL primaryName VAL Jef Neve COL primaryProfession VAL composer	COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress	0
+COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	0
+COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer	COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	0
+COL primaryName VAL Gary PorterK COL primaryProfession VAL casting_director	COL primaryName VAL Gary Porter	1
+COL primaryName VAL Kat Kairoj COL primaryProfession VAL editorial_department	COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director	0
+COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	0
+COL primaryName VAL Jus Riddickm COL primaryProfession VAL editor-producer-director	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	0
+COL primaryName VAL Belinda Mason COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL James Webber COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	0
+COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	COL primaryName VAL Christoph Hildebrandt	0
+COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor	COL primaryName VAL Nick Brian Waltersd COL primaryProfession VAL composer-cinematographer-actor	0
+COL primaryName VAL Rosie Day COL primaryProfession VAL actress-director-writer	COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	0
+COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	COL primaryName VAL Davide Cirri	0
+COL primaryName VAL Faisal COL primaryProfession VAL cinematographer	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Eduardo Flores Torresl COL primaryProfession VAL casting_director-camera_department-director	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	0
+COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	COL primaryName VAL Matteo Stocchino COL primaryProfession VAL composer-music_department	1
+COL primaryName VAL Davide Cirri	COL primaryName VAL Davide Cirri	1
+COL primaryName VAL Mark Gerstorfer COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL León Felipe González COL primaryProfession VAL editor-sound_department-writer	0
+COL primaryName VAL Mark Gerstorfer COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Eloïse Genet COL primaryProfession VAL actress	0
+COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	0
+COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	0
+COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	COL primaryName VAL Tim Vine COL primaryProfession VAL actor-writer-director	0
+COL primaryName VAL William Heise COL primaryProfession VAL cinematographer-director-producer	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	0
+COL primaryName VAL Zsombor Dyga COL primaryProfession VAL director-assistant_director-writer	COL primaryName VAL Kazuaki Yoshiga COL primaryProfession VAL cinematographer	0
+COL primaryName VAL Mark Gerstorfer COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Mark Gerstorfer COL primaryProfession VAL cinematographer-director-writer	1
+COL primaryName VAL João Fonseca COL primaryProfession VAL assistant_director-production_manager-actor	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	0
+COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Davide Cirri	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	0
+COL primaryName VAL Judit Czakó COL primaryProfession VAL editor-script_department-actress	COL primaryName VAL Judit Czakó COL primaryProfession VAL editor-script_department-actress	1
+COL primaryName VAL Helder Faria COL primaryProfession VAL editor-director-writer	COL primaryName VAL Andrew Halliwell COL primaryProfession VAL actor-composer-producer	0
+COL primaryName VAL AJ WalshH COL primaryProfession VAL actor	COL primaryName VAL AJ Walsh COL primaryProfession VAL actor	1
+COL primaryName VAL Faisal COL primaryProfession VAL cinematographer	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	1
+COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Chris Shepherd COL primaryProfession VAL director-writer-animation_department	COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	0
+COL primaryName VAL Joseph de Cordova COL primaryProfession VAL actor-writer-assistant_director	COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	0
+COL primaryName VAL John McCainu COL primaryProfession VAL actor-writer	COL primaryName VAL John McCain COL primaryProfession VAL actor-writer	1
+COL primaryName VAL Harvey BergerG COL primaryProfession VAL editor-writer-assistant_director	COL primaryName VAL Harvey Berger COL primaryProfession VAL editor-writer-assistant_director	1
+COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor	COL primaryName VAL Antonis Katsaris_ COL primaryProfession VAL art_department	1
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	0
+COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director	COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	0
+COL primaryName VAL James Whitney COL primaryProfession VAL director-cinematographer-editor	COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	0
+COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	0
+COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	0
+COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Matthew F ReyesS COL primaryProfession VAL miscellaneous-camera_department-special_effects	1
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	1
+COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Mirjana Bohanec COL primaryProfession VAL actress	0
+COL primaryName VAL Kazuaki Yoshiga COL primaryProfession VAL cinematographer	COL primaryName VAL Enrique Jarlego COL primaryProfession VAL editor-director-actor	0
+COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	COL primaryName VAL Lamberto V Avellana COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	0
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	1
+COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	0
+COL primaryName VAL Ralf Moeller COL primaryProfession VAL actor-producer	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	0
+COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	COL primaryName VAL Gábor MarosiV COL primaryProfession VAL cinematographer-camera_department-writer	0
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	COL primaryName VAL Sean Patrick Flanery COL primaryProfession VAL actor-soundtrack-producer	0
+COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	1
+COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director	COL primaryName VAL Buddy Watson\\ COL primaryProfession VAL actor-director-cinematographer	0
+COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer	0
+COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	1
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Chris ShepherdN COL primaryProfession VAL visual_effects-writer-animation_department	0
+COL primaryName VAL Laurent Preyale COL primaryProfession VAL director-writer-editor	COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	0
+COL primaryName VAL Anaïs BarbeauLavalette COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	COL primaryName VAL Jus Riddickm COL primaryProfession VAL editor-producer-director	0
+COL primaryName VAL Christoph Hildebrandt	COL primaryName VAL Christoph Hildebrandt	1
+COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Mino Carta II	0
+COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	0
+COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	1
+COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer	COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer	1
+COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	1
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Dave Scott	0
+COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	COL primaryName VAL Judit Czakó COL primaryProfession VAL editor-script_department-actress	0
+COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Iain Stewart COL primaryProfession VAL actor-miscellaneous	0
+COL primaryName VAL Laurent Preyalek COL primaryProfession VAL location_management-writer-editor	COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Wera Cleveq COL primaryProfession VAL editor	COL primaryName VAL Wera Cleve COL primaryProfession VAL editor	1
+COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	0
+COL primaryName VAL Dave Scott	COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL León Felipe González COL primaryProfession VAL editor-sound_department-writer	COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	0
+COL primaryName VAL Rolf Bergn COL primaryProfession VAL art_department	COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	0
+COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	0
+COL primaryName VAL Matteo StocchinoZ COL primaryProfession VAL set_decorator-music_department	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	0
+COL primaryName VAL William Heise COL primaryProfession VAL cinematographer-director-producer	COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	0
+COL primaryName VAL Robin Coulonge COL primaryProfession VAL actress	COL primaryName VAL Robin Coulonge COL primaryProfession VAL actress	1
+COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	COL primaryName VAL Ava Gardnerq COL primaryProfession VAL sound_department-soundtrack-stunts	0
+COL primaryName VAL Thomas Cowan	COL primaryName VAL Wera Cleveq COL primaryProfession VAL editor	0
+COL primaryName VAL José Lorenzo Wasner COL primaryProfession VAL camera_department-cinematographer-sound_department	COL primaryName VAL Inka Gogálová COL primaryProfession VAL actress	0
+COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	COL primaryName VAL Miriam Cutler COL primaryProfession VAL composer-soundtrack-music_department	1
+COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	COL primaryName VAL Iain Stewart COL primaryProfession VAL actor-miscellaneous	0
+COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director	0
+COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer	1
+COL primaryName VAL Lawrence Wilkerson	COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	0
+COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director	1
+COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	COL primaryName VAL Michael LiskI COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	1
+COL primaryName VAL Jef Neve COL primaryProfession VAL composer	COL primaryName VAL Bernardo de la Mora COL primaryProfession VAL actor	0
+COL primaryName VAL Jus Riddickm COL primaryProfession VAL editor-producer-director	COL primaryName VAL Michael LiskI COL primaryProfession VAL actor-writer	0
+COL primaryName VAL Yu Baie COL primaryProfession VAL actor	COL primaryName VAL Jonathan Pryce COL primaryProfession VAL actor-soundtrack-producer	0
+COL primaryName VAL Tim Vine COL primaryProfession VAL actor-writer-director	COL primaryName VAL Ava Gardner COL primaryProfession VAL actress-soundtrack-stunts	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress	0
+COL primaryName VAL Harvey BergerG COL primaryProfession VAL editor-writer-assistant_director	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director	0
+COL primaryName VAL Jude Leak COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	0
+COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	COL primaryName VAL Michel Hadadj COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer	COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department	0
+COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor	COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	0
+COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer	COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor	0
+COL primaryName VAL Thomas Cowan	COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department	0
+COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	COL primaryName VAL Olivier Meidinger COL primaryProfession VAL production_designer-art_department-actor	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Harvey Berger COL primaryProfession VAL editor-writer-assistant_director	0
+COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor	COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	0
+COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Matthew F Reyes COL primaryProfession VAL miscellaneous-camera_department-special_effects	0
+COL primaryName VAL Eloïse Genet COL primaryProfession VAL actress	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Ryuji NoharaM COL primaryProfession VAL script_department	COL primaryName VAL Dave Scott	0
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL writer	COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	0
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	0
+COL primaryName VAL Zsombor Dyga COL primaryProfession VAL director-assistant_director-writer	COL primaryName VAL Zsombor Dyga COL primaryProfession VAL actor-assistant_director-writer	1
+COL primaryName VAL John Chase COL primaryProfession VAL actor	COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	0
+COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	0
+COL primaryName VAL Andrew Halliwell COL primaryProfession VAL actor-composer-producer	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager	0
+COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	0
+COL primaryName VAL Charles Fitzgerald COL primaryProfession VAL producer-writer	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	0
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	1
+COL primaryName VAL Liz RephL COL primaryProfession VAL producer-writer-director	COL primaryName VAL Liz Reph COL primaryProfession VAL producer-writer-director	1
+COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	COL primaryName VAL Jonathan Prycee COL primaryProfession VAL set_decorator-soundtrack-producer	0
+COL primaryName VAL Ava Gardnerq COL primaryProfession VAL sound_department-soundtrack-stunts	COL primaryName VAL Ava Gardner COL primaryProfession VAL actress-soundtrack-stunts	1
+COL primaryName VAL Nick Brian Waltersd COL primaryProfession VAL composer-cinematographer-actor	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Michaela Furney COL primaryProfession VAL miscellaneous	COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	0
+COL primaryName VAL Michael Lisk COL primaryProfession VAL actor-writer	COL primaryName VAL Michael LiskI COL primaryProfession VAL actor-writer	1
+COL primaryName VAL Enrique Jarlego COL primaryProfession VAL editor-director-actor	COL primaryName VAL Enrique Jarlego COL primaryProfession VAL editor-director-actor	1
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Jef Neve COL primaryProfession VAL composer	0
+COL primaryName VAL Chris Shepherd COL primaryProfession VAL director-writer-animation_department	COL primaryName VAL Chris ShepherdN COL primaryProfession VAL visual_effects-writer-animation_department	1
+COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer	COL primaryName VAL Shirley Clarke COL primaryProfession VAL director-editor-producer	0
+COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department	0
+COL primaryName VAL Leo Houlding COL primaryProfession VAL producer-miscellaneous	COL primaryName VAL Leo HouldingU COL primaryProfession VAL producer-miscellaneous	1
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Alexia Bell COL primaryProfession VAL actress	0
+COL primaryName VAL Shirley Clarkej COL primaryProfession VAL director-editor-producer	COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	0
+COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	COL primaryName VAL Robby Rotfeld COL primaryProfession VAL music_department-editor	1
+COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department	COL primaryName VAL Tom Scharpling COL primaryProfession VAL producer-actor-writer	0
+COL primaryName VAL Bashar Samman COL primaryProfession VAL editorial_department-editor-camera_department	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor	0
+COL primaryName VAL Rajko Grlic COL primaryProfession VAL writer-director-producer	COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department	COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department	1
+COL primaryName VAL Lawrence Wilkersonr COL primaryProfession VAL sound_department	COL primaryName VAL Chris Shepherd COL primaryProfession VAL director-writer-animation_department	0
+COL primaryName VAL Naim SutherlandT COL primaryProfession VAL costume_department-camera_department-producer	COL primaryName VAL Naim Sutherland COL primaryProfession VAL cinematographer-camera_department-producer	1
+COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack	COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	0
+COL primaryName VAL Jus Riddick COL primaryProfession VAL actor-producer-director	COL primaryName VAL Derek H Potts COL primaryProfession VAL actor-producer-writer	0
+COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor	0
+COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	COL primaryName VAL Michel Hadadj COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	COL primaryName VAL Anaïs BarbeauLavalette COL primaryProfession VAL director-writer-cinematographer	0
+COL primaryName VAL Jus Riddick COL primaryProfession VAL actor-producer-director	COL primaryName VAL Faisal COL primaryProfession VAL cinematographer	0
+COL primaryName VAL Leo HouldingU COL primaryProfession VAL producer-miscellaneous	COL primaryName VAL Matthew Rudgec COL primaryProfession VAL stunts-writer-actor	0
+COL primaryName VAL Snake COL primaryProfession VAL composer	COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	0
+COL primaryName VAL Zsombor Dyga COL primaryProfession VAL director-assistant_director-writer	COL primaryName VAL James Webber COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL León Felipe González COL primaryProfession VAL editor-sound_department-writer	COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department	0
+COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	COL primaryName VAL Lisa Leeman COL primaryProfession VAL editor-director-writer	1
+COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Lisa LeemanC COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Tom Scharplingl COL primaryProfession VAL special_effects-actor-writer	COL primaryName VAL Tom Scharpling COL primaryProfession VAL producer-actor-writer	1
+COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	COL primaryName VAL Harvey BergerG COL primaryProfession VAL editor-writer-assistant_director	0
+COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	COL primaryName VAL Rosie Dayv COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Wera Cleveq COL primaryProfession VAL editor	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Don Carmody COL primaryProfession VAL producer-miscellaneous-production_manager	0
+COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	COL primaryName VAL Lucy ClementsG COL primaryProfession VAL director-actress	0
+COL primaryName VAL León Felipe González COL primaryProfession VAL editor-sound_department-writer	COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	0
+COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	1
+COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	COL primaryName VAL Roy Robertsf COL primaryProfession VAL make_up_department	1
+COL primaryName VAL Jack A Marta COL primaryProfession VAL cinematographer-camera_department-miscellaneous	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress	0
+COL primaryName VAL John McCain COL primaryProfession VAL actor-writer	COL primaryName VAL Andrei Gryazev COL primaryProfession VAL director-writer-cinematographer	0
+COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	1
+COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer	COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	0
+COL primaryName VAL Kat Kairo COL primaryProfession VAL make_up_department	COL primaryName VAL Davide Cirri	0
+COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer	COL primaryName VAL Gill Lopez COL primaryProfession VAL editor	0
+COL primaryName VAL Alec Soth COL primaryProfession VAL producer	COL primaryName VAL Eloïse Genet COL primaryProfession VAL actress	0
+COL primaryName VAL Andre Matthias COL primaryProfession VAL composer	COL primaryName VAL Tom Scharplingl COL primaryProfession VAL special_effects-actor-writer	0
+COL primaryName VAL Lucy ClementsG COL primaryProfession VAL director-actress	COL primaryName VAL Belinda Mason COL primaryProfession VAL director-writer-cinematographer	0
+COL primaryName VAL Jude LeakJ COL primaryProfession VAL editor-actress-editorial_department	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	0
+COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor	0
+COL primaryName VAL Nick Crawford COL primaryProfession VAL actor	COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department	0
+COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer	COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	0
+COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director	COL primaryName VAL Gábor Marosi COL primaryProfession VAL cinematographer-camera_department-writer	0
+COL primaryName VAL Ryuji NoharaM COL primaryProfession VAL script_department	COL primaryName VAL Shirley Clarkej COL primaryProfession VAL director-editor-producer	0
+COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	COL primaryName VAL João Fonseca COL primaryProfession VAL assistant_director-production_manager-actor	0
+COL primaryName VAL Gary Porter	COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director	0
+COL primaryName VAL Andrew Halliwell COL primaryProfession VAL actor-composer-producer	COL primaryName VAL Chris Candy COL primaryProfession VAL actor-sound_department-writer	0
+COL primaryName VAL Martin Waetzold	COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack	1
+COL primaryName VAL Jade ChengK COL primaryProfession VAL actress	COL primaryName VAL Jeffrey Boehm COL primaryProfession VAL actor-writer-producer	0
+COL primaryName VAL Andrew Halliwell COL primaryProfession VAL actor-composer-producer	COL primaryName VAL Andrew Halliwell COL primaryProfession VAL actor-composer-producer	1
+COL primaryName VAL Joseph de Cordova COL primaryProfession VAL actor-writer-assistant_director	COL primaryName VAL Jef NeveA COL primaryProfession VAL composer	0
+COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department	COL primaryName VAL Harry BakerC COL primaryProfession VAL editor-director-writer	0
+COL primaryName VAL Oskar Kaszynski COL primaryProfession VAL actor-director-writer	COL primaryName VAL Roy Roberts COL primaryProfession VAL producer	0
+COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer	0
+COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	COL primaryName VAL KueiAn Kan COL primaryProfession VAL actor	1
+COL primaryName VAL Gerda Coppens COL primaryProfession VAL producer	COL primaryName VAL Aaron Greenberg COL primaryProfession VAL producer-production_manager-visual_effects	0
+COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	COL primaryName VAL Miklós Kapácsy COL primaryProfession VAL actor	1
+COL primaryName VAL Martina Dräger COL primaryProfession VAL actress	COL primaryName VAL Eduardo Flores Torres COL primaryProfession VAL cinematographer-camera_department-director	0
+COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor	1
+COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	COL primaryName VAL Alex Pop COL primaryProfession VAL producer-sound_department-writer	1
+COL primaryName VAL Joseph de Cordova COL primaryProfession VAL actor-writer-assistant_director	COL primaryName VAL Martin Waetzold	0
+COL primaryName VAL Merridy Eastman COL primaryProfession VAL actress	COL primaryName VAL Gustavo Galvão COL primaryProfession VAL producer-director-writer	0
+COL primaryName VAL Lamberto V AvellanaD COL primaryProfession VAL costume_designer-writer-producer	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer	0
+COL primaryName VAL John Chaser COL primaryProfession VAL actor	COL primaryName VAL John Chase COL primaryProfession VAL actor	1

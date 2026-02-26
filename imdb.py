@@ -13,9 +13,8 @@ from deepcem.utils import get_attrs_for_keys
 from matcher import load_model, predict 
 
 dataset = "imdb"
-task = f"{dataset}_base_no_author"
+task = f"{dataset}_base"
 lm = "ditto"
-
 
 movie_dir = f"./data/processed/imdb/movie/ditto"
 movie_train_fp = f"{movie_dir}/train.txt"
@@ -33,36 +32,6 @@ configs_path = f"./models/ditto/configs.json"
 log_dir = f"./logs"
 index_column = "id"
 
-def to_str(ent1, ent2, summarizer=None, max_len=256):
-    """Serialize a pair of data entries
-
-    Args:
-        ent1 (Dictionary): the 1st data entry
-        ent2 (Dictionary): the 2nd data entry
-        summarizer (Summarizer, optional): the summarization module
-        max_len (int, optional): the max sequence length
-
-    Returns:
-        string: the serialized version
-    """
-    content = ''
-    for ent in [ent1, ent2]:
-        if isinstance(ent, str):
-            content += ent
-        else:
-            for attr in ent.keys():
-                content += 'COL %s VAL %s ' % (attr, ent[attr])
-        content += '\t'
-
-    content += '0'
-
-    if summarizer is not None:
-        content = summarizer.transform(content, max_len=max_len)
-
-    new_ent1, new_ent2, _ = content.split('\t')
-
-    return new_ent1 + '\t' + new_ent2 + '\t0'
-
 def main():
 
     with Path(configs_path).open("r", encoding="utf-8") as f:
@@ -75,9 +44,9 @@ def main():
             "name": task,
             "task_type": "classification",
             "vocab": ["0", "1"],
-            "trainset": f"{movie_train_fp}",
-            "validset": f"{movie_valid_fp}",
-            "testset": f"{movie_test_fp}"
+            "trainset": movie_train_fp,
+            "validset": movie_valid_fp,
+            "testset": movie_test_fp
         }
         file_data.append(new_config_entry)
         with Path(configs_path).open("w", encoding="utf-8") as f:
