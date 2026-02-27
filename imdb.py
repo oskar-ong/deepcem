@@ -10,6 +10,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 from deepcem.serialize import serialize_to_ditto_wo_id
 from deepcem.utils import get_attrs_for_keys
+from evaluate import calc_metrics
 from matcher import load_model, predict 
 
 dataset = "imdb"
@@ -91,6 +92,9 @@ def main():
             lm="roberta",
             dk_injector=None,
             threshold=None)
+    
+    acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task}.jsonl", movie_test_fp)
+    print(acc, prec, rec, f1)
 
 if __name__=="__main__":
     main()
