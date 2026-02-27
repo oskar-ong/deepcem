@@ -13,8 +13,9 @@ from deepcem.utils import get_attrs_for_keys
 from matcher import load_model, predict 
 
 dataset = "imdb"
-task = f"{dataset}_base"
+task = f"{dataset}_no_title"
 lm = "ditto"
+do_train = True
 
 movie_dir = f"./data/processed/imdb/movie/ditto"
 movie_train_fp = f"{movie_dir}/train.txt"
@@ -53,7 +54,11 @@ def main():
             json.dump(file_data, f, indent=4)
         print("Entry added")
 
-    if not Path(model_path).exists():
+    
+    # If no model already exists -> Train
+    # If flag is set -> Train
+    # otherwise skip to prediction
+    if not Path(model_path).exists() or do_train == True:
         print("Path does not exist")
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
