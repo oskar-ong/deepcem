@@ -72,11 +72,13 @@ def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_pa
 
 if __name__ == "__main__":
     # Example usage
-    drop_list = ['tconst', 'cluster_id', 'block_key']
+    # drop_list = ['tconst', 'cluster_id', 'block_key']
+    drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
     process_and_save_ditto("./data/processed/imdb/movie/train.jsonl", drop_list, "./data/processed/imdb/movie/ditto/train.txt")
     process_and_save_ditto("./data/processed/imdb/movie/valid.jsonl", drop_list, "./data/processed/imdb/movie/ditto/valid.txt")
     process_and_save_ditto("./data/processed/imdb/movie/test.jsonl", drop_list, "./data/processed/imdb/movie/ditto/test.txt")
-    drop_list = ['nconst', 'cluster_id', 'block_key']
+    # drop_list = ['nconst', 'cluster_id', 'block_key']
+    drop_list = ['primaryName', 'originalTitle', 'cluster_id', 'block_key']
     process_and_save_ditto("./data/processed/imdb/name/train.jsonl", drop_list, "./data/processed/imdb/name/ditto/train.txt")
     process_and_save_ditto("./data/processed/imdb/name/valid.jsonl", drop_list, "./data/processed/imdb/name/ditto/valid.txt")
     process_and_save_ditto("./data/processed/imdb/name/test.jsonl", drop_list, "./data/processed/imdb/name/ditto/test.txt")

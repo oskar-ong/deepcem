@@ -80,7 +80,7 @@ def main():
                             "roberta", True, False)
     model.eval()
 
-    predict(movie_test_fp,"./ditto_out", config, model,
+    predict(movie_test_fp,f"./ditto_out/{task}.jsonl", config, model,
             summarizer=None,
             max_len=128,
             lm="roberta",
