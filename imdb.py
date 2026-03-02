@@ -168,8 +168,5 @@ def main():
     acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task}.jsonl", movie_test_fp)
     print(acc, prec, rec, f1)
 
-
-    
-
 if __name__=="__main__":
     main()
