@@ -114,6 +114,45 @@ def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
             
     return ditto_lines
 
+def process_relationship_scores(df, m_to_p, uf_p, col_tconst, dropout_prob):
+    """
+    Applies Union-Find matching logic and signal dropout to a MultiIndex DataFrame.
+    """
+    # Initialize with neutral score
+    df[("left", "REL_SCORE")] = 0.5
+    df[("right", "REL_SCORE")] = 0.5
+
+    for idx, row in df.iterrows():
+        left_id = row[("left", col_tconst)]
+        right_id = row[("right", col_tconst)]
+
+        authors_left = m_to_p.get(left_id, set())
+        authors_right = m_to_p.get(right_id, set())
+
+        max_pool_score = 0.5 # Default for missing data
+        
+        if authors_left and authors_right:
+            is_match_found = False
+            for a_left in authors_left:
+                for a_right in authors_right:
+                    # Check if both IDs exist in the UF structure to avoid KeyErrors
+                    if a_left in uf_p.parent and a_right in uf_p.parent:
+                        if uf_p.find(a_left) == uf_p.find(a_right):
+                            is_match_found = True
+                            break
+                if is_match_found: break
+            
+            max_pool_score = 1.0 if is_match_found else 0.0
+
+        # Signal Dropout logic
+        final_score = 0.5 if random.random() < dropout_prob else max_pool_score
+
+        # Update specific row
+        df.at[idx, ("left", "REL_SCORE")] = final_score
+        df.at[idx, ("right", "REL_SCORE")] = final_score
+    
+    return df
+
 PATH_RAW_PRINCIPALS = "../data/raw/imdb/title_principals.csv"
 PATH_RAW_TITLE_BASICS     = "../data/raw/imdb/title_basics.csv"
 PATH_RAW_TITLE_DUPS       = "../data/raw/imdb/title_basics_dups.csv"
@@ -126,53 +165,58 @@ DROPOUT_PROB = 0.15
 m_to_p = build_relation_map(PATH_RAW_PRINCIPALS, COL_TCONST, COL_NCONST)
 p_to_m = build_relation_map(PATH_RAW_PRINCIPALS, COL_NCONST, COL_TCONST)
 uf_p = build_unionfind_with_singletons(PATH_RAW_NAME_BASICS, PATH_RAW_NAME_DUPS, COL_NCONST)
+uf_m = build_unionfind_with_singletons(PATH_RAW_TITLE_BASICS, PATH_RAW_TITLE_DUPS, COL_TCONST)
 
-train_df = load_to_multiindex("../data/processed/imdb/movie/train.jsonl")
-#valid_file = read_valid_file()
 
-train_df[("left", "REL_SCORE")] = 0.5
-train_df[("right", "REL_SCORE")] = 0.5
+# --- Execution ---
 
-for idx, row in train_df.iterrows():
-    left_id = row[("left", COL_TCONST)]
-    right_id = row[("right", COL_TCONST)]
+data_paths = {
+    "train": "../data/processed/imdb/movie/train.jsonl",
+    "valid": "../data/processed/imdb/movie/valid.jsonl",
+    "test":  "../data/processed/imdb/movie/test.jsonl" # Corrected path from your snippet
+}
 
-    authors_left = m_to_p.get(left_id, set())
-    authors_right = m_to_p.get(right_id, set())
+dataframes = {}
 
-    max_pool_score = 0.0
+for split, path in data_paths.items():
+    print(f"Processing {split}...")
+    df = load_to_multiindex(path)
     
-    # Only compute if both sets exist
-    if authors_left and authors_right:
-        is_match_found = False
-        for a_left in authors_left:
-            for a_right in authors_right:
-                try:
-                    # UnionFind.find will fail if ID wasn't in basics_csv
-                    # Ensure both IDs exist in the UF structure
-                    if a_left in uf_p.parent and a_right in uf_p.parent:
-                        if uf_p.find(a_left) == uf_p.find(a_right):
-                            is_match_found = True
-                            break
-                except KeyError:
-                    continue
-            if is_match_found: break
-        
-        max_pool_score = 1.0 if is_match_found else 0.0
-    else:
-        # Default for cases where no principal data is available
-        max_pool_score = 0.5
+    # Apply logic
+    df = process_relationship_scores(df, m_to_p, uf_p, COL_TCONST, DROPOUT_PROB)
+    drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
+    df = df.drop(columns=drop_list, level=1, errors='ignore')
+    # Serialize
+    serialize_to_ditto(df, f"../data/processed/imdb/movie/ditto/{split}_movie_rel_score.txt")
+    
+    # Store back to original variables if needed
+    dataframes[split] = df
 
-    # 2. Implement Signal Dropout
-    # Randomly decide whether to keep the score or use the neutral [UNK] value (0.5)
-    if random.random() < DROPOUT_PROB:
-        final_score = 0.5  # Dropout / Unknown state
-    else:
-        final_score = max_pool_score
+# Optional: Re-assign to individual variables
+train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
 
-    # 2. Use .at or .loc with the specific index (idx) to update only the current row
-    train_df.at[idx, ("left", "REL_SCORE")] = final_score
-    train_df.at[idx, ("right", "REL_SCORE")] = final_score
+# NAMES
+data_paths = {
+    "train": "../data/processed/imdb/name/train.jsonl",
+    "valid": "../data/processed/imdb/name/valid.jsonl",
+    "test":  "../data/processed/imdb/name/test.jsonl" # Corrected path from your snippet
+}
 
-# Now serialize the updated DataFrame
-serialize_to_ditto(train_df, "rel_score.txt")
+dataframes = {}
+
+for split, path in data_paths.items():
+    print(f"Processing {split}...")
+    df = load_to_multiindex(path)
+    
+    # Apply logic
+    df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
+    drop_list = ['primaryName', 'cluster_id', 'block_key']
+    df = df.drop(columns=drop_list, level=1, errors='ignore')
+    # Serialize
+    serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_name_rel_score.txt")
+    
+    # Store back to original variables if needed
+    dataframes[split] = df
+
+# Optional: Re-assign to individual variables
+train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
