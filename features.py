@@ -33,9 +33,6 @@ def load_to_multiindex(file_path: str, columns_to_drop: List[str] = None) -> pd.
         # errors='ignore' ensures it doesn't crash if a column is already missing
         df = df.drop(columns=columns_to_drop, level=1, errors='ignore')
 
-    # Shuffle
-    df = df.sample(frac=1, random_state=42).reset_index(drop=True)
-
     return df
 
 def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
@@ -55,7 +52,7 @@ def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
     if output_path:
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write("\n".join(ditto_lines) + "\n")
-            
+
     return ditto_lines
 
 def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_path: str):
