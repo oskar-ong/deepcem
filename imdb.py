@@ -40,7 +40,7 @@ def main():
         file_data: list = json.load(f)
 
     if any(entry.get("name") == task for entry in file_data):
-        print("Entry already exists")
+        print("Config entry already exists")
     else:
         new_config_entry = {
             "name": task,
@@ -53,14 +53,14 @@ def main():
         file_data.append(new_config_entry)
         with Path(configs_path).open("w", encoding="utf-8") as f:
             json.dump(file_data, f, indent=4)
-        print("Entry added")
+        print("Config Entry added")
 
     
     # If no model already exists -> Train
     # If flag is set -> Train
     # otherwise skip to prediction
     if not Path(model_path).exists() or do_train == True:
-        print("Path does not exist")
+        print(f"Start Finetuning for task: {task}")
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
             "python",
@@ -81,6 +81,7 @@ def main():
         #env["CUDA_VISIBLE_DEVICES"] = "0"
 
         subprocess.run(cmd, env=env)
+        print(f"Finished Finetuning for task: {task}")
 
     config, model = load_model(task, "./models/ditto/checkpoints",
                             "roberta", True, False)

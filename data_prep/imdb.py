@@ -245,6 +245,7 @@ def main():
 
     def prep_subset(ids):
         df: pd.DataFrame = df_basics[df_basics[column].isin(ids)].copy()
+        df['REL_SCORE'] = ""
         df[COL_CLUSTER_ID] = df[column].map(mapping)
         df[COL_BLOCK_KEY] = df.apply(create_block_key, axis=1)
         return df
@@ -268,6 +269,7 @@ def main():
     
     # 5. Save
     for p, path in zip([p_train_m, p_valid_m, p_test_m], [PATH_OUT_MOVIE_TRAIN, PATH_OUT_MOVIE_VALID, PATH_OUT_MOVIE_TEST]):
+        random.shuffle(p)
         with open(path, "w") as f:
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
