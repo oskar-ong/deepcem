@@ -75,7 +75,7 @@ if __name__ == "__main__":
     process_and_save_ditto("./data/processed/imdb/movie/valid.jsonl", drop_list, "./data/processed/imdb/movie/ditto/valid.txt")
     process_and_save_ditto("./data/processed/imdb/movie/test.jsonl", drop_list, "./data/processed/imdb/movie/ditto/test.txt")
     # drop_list = ['nconst', 'cluster_id', 'block_key']
-    drop_list = ['primaryName', 'originalTitle', 'cluster_id', 'block_key']
+    drop_list = ['primaryName', 'cluster_id', 'block_key']
     process_and_save_ditto("./data/processed/imdb/name/train.jsonl", drop_list, "./data/processed/imdb/name/ditto/train.txt")
     process_and_save_ditto("./data/processed/imdb/name/valid.jsonl", drop_list, "./data/processed/imdb/name/ditto/valid.txt")
     process_and_save_ditto("./data/processed/imdb/name/test.jsonl", drop_list, "./data/processed/imdb/name/ditto/test.txt")
