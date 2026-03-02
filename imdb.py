@@ -86,7 +86,7 @@ def main():
             threshold=None)
     
     acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task_movie}.jsonl", movie_test_fp)
-    print(acc, prec, rec, f1)
+    print(task_movie, acc, prec, rec, f1)
 
 
     # FINE TUNE NAME TABLE
@@ -165,7 +165,7 @@ def main():
             threshold=None)
     
     acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task_name}.jsonl", name_test_fp)
-    print(acc, prec, rec, f1)
+    print(task_name, acc, prec, rec, f1)
 
     # FINE TUNE MOVIE TABLE WITH REL SCORE
     dataset = "imdb"
@@ -243,7 +243,7 @@ def main():
             threshold=None)
     
     acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task_movie_rel}.jsonl", movie_test_fp)
-    print(acc, prec, rec, f1)
+    print(task_movie_rel, acc, prec, rec, f1)
 
     # FINE TUNE NAME TABLE
     dataset = "imdb"
@@ -321,7 +321,7 @@ def main():
             threshold=None)
     
     acc, prec, rec, f1 = calc_metrics(f"./ditto_out/{task_name_rel}.jsonl", name_test_fp)
-    print(acc, prec, rec, f1)
+    print(task_name_rel, acc, prec, rec, f1)
 
 if __name__=="__main__":
     main()
