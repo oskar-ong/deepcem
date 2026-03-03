@@ -90,7 +90,7 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
 
     name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
     acc, prec, rec, f1 = calc_metrics(f"ditto_out/name_{iter_num}.jsonl", name_testset_fp)
-    print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
+    print(f"NAME METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
 def extract_scores(fp, dependency_scores, id_attribute):
     with open(fp, 'r', encoding='utf-8') as f:
@@ -161,16 +161,16 @@ def main():
     # Configuration
     MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
 
-    movie_input_template = "./data/processed/imdb/movie/test_no_label.jsonl"
-    name_input_template = "./data/processed/imdb/name/test_no_label.jsonl"
+    movie_input_template = "./data/processed/imdb/movie/input.jsonl"
+    name_input_template = "./data/processed/imdb/name/input.jsonl"
 
     # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
     movie_table_key = "tconst"
-    movie_pairs = extract_pairs('./data/processed/imdb/movie/test_no_label.jsonl', movie_table_key)
+    movie_pairs = extract_pairs(movie_input_template, movie_table_key)
     movie_pairs_score = dict.fromkeys(movie_pairs, 0.5)
     # name_test_df = pd.read_parquet('data_prep/name_test_rel_score.parquet')
     name_table_key = "nconst"
-    name_pairs = extract_pairs('./data/processed/imdb/name/test_no_label.jsonl', name_table_key) # list of pairs from name test set
+    name_pairs = extract_pairs(name_input_template, name_table_key) # list of pairs from name test set
     name_pairs_score = dict.fromkeys(name_pairs, 0.5)
 
     PATH_RAW_PRINCIPALS = "./data/raw/imdb/title_principals.csv"

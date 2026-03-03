@@ -153,76 +153,73 @@ def process_relationship_scores(df, m_to_p, uf_p, col_tconst, dropout_prob):
     
     return df
 
-PATH_RAW_PRINCIPALS = "../data/raw/imdb/title_principals.csv"
-PATH_RAW_TITLE_BASICS     = "../data/raw/imdb/title_basics.csv"
-PATH_RAW_TITLE_DUPS       = "../data/raw/imdb/title_basics_dups.csv"
-PATH_RAW_NAME_BASICS     = "../data/raw/imdb/name_basics.csv"
-PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
-COL_TCONST     = "tconst"
-COL_NCONST = "nconst"
-DROPOUT_PROB = 0.15
+# PATH_RAW_PRINCIPALS = "../data/raw/imdb/title_principals.csv"
+# PATH_RAW_TITLE_BASICS     = "../data/raw/imdb/title_basics.csv"
+# PATH_RAW_TITLE_DUPS       = "../data/raw/imdb/title_basics_dups.csv"
+# PATH_RAW_NAME_BASICS     = "../data/raw/imdb/name_basics.csv"
+# PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
+# COL_TCONST     = "tconst"
+# COL_NCONST = "nconst"
+# DROPOUT_PROB = 0.15
 
-m_to_p = build_relation_map(PATH_RAW_PRINCIPALS, COL_TCONST, COL_NCONST)
-p_to_m = build_relation_map(PATH_RAW_PRINCIPALS, COL_NCONST, COL_TCONST)
-uf_p = build_unionfind_with_singletons(PATH_RAW_NAME_BASICS, PATH_RAW_NAME_DUPS, COL_NCONST)
-uf_m = build_unionfind_with_singletons(PATH_RAW_TITLE_BASICS, PATH_RAW_TITLE_DUPS, COL_TCONST)
+# m_to_p = build_relation_map(PATH_RAW_PRINCIPALS, COL_TCONST, COL_NCONST)
+# p_to_m = build_relation_map(PATH_RAW_PRINCIPALS, COL_NCONST, COL_TCONST)
+# uf_p = build_unionfind_with_singletons(PATH_RAW_NAME_BASICS, PATH_RAW_NAME_DUPS, COL_NCONST)
+# uf_m = build_unionfind_with_singletons(PATH_RAW_TITLE_BASICS, PATH_RAW_TITLE_DUPS, COL_TCONST)
 
+# data_paths = {
+#     "train": "../data/processed/imdb/movie/train.jsonl",
+#     "valid": "../data/processed/imdb/movie/valid.jsonl",
+#     "test":  "../data/processed/imdb/movie/test.jsonl" 
+# }
 
-# --- Execution ---
-data_paths = {
-    "train": "../data/processed/imdb/movie/train.jsonl",
-    "valid": "../data/processed/imdb/movie/valid.jsonl",
-    "test":  "../data/processed/imdb/movie/test.jsonl" # Corrected path from your snippet
-}
+# dataframes = {}
 
-dataframes = {}
-
-for split, path in data_paths.items():
-    print(f"Processing {split}...")
-    df = load_to_multiindex(path)
+# for split, path in data_paths.items():
+#     print(f"Processing {split}...")
+#     df = load_to_multiindex(path)
     
-    # Apply logic
-    df = process_relationship_scores(df, m_to_p, uf_p, COL_TCONST, DROPOUT_PROB)
-    drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
-    df = df.drop(columns=drop_list, level=1, errors='ignore')
-    # Serialize
-    serialize_to_ditto(df, f"../data/processed/imdb/movie/ditto/{split}_movie_rel_score.txt")
+#     # Apply logic
+#     df = process_relationship_scores(df, m_to_p, uf_p, COL_TCONST, DROPOUT_PROB)
+#     drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
+#     df = df.drop(columns=drop_list, level=1, errors='ignore')
+#     # Serialize
+#     serialize_to_ditto(df, f"../data/processed/imdb/movie/ditto/{split}_movie_rel_score.txt")
     
-    # Store back to original variables if needed
-    dataframes[split] = df
+#     dataframes[split] = df
 
-# Optional: Re-assign to individual variables
-train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
-train_df.to_parquet('movie_train_rel_score.parquet')
-valid_df.to_parquet('movie_valid_rel_score.parquet')
-test_df.to_parquet('movie_test_rel_score.parquet')
+# # Optional: Re-assign to individual variables
+# train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
+# train_df.to_parquet('movie_train_rel_score.parquet')
+# valid_df.to_parquet('movie_valid_rel_score.parquet')
+# test_df.to_parquet('movie_test_rel_score.parquet')
 
-# NAMES
-data_paths = {
-    "train": "../data/processed/imdb/name/train.jsonl",
-    "valid": "../data/processed/imdb/name/valid.jsonl",
-    "test":  "../data/processed/imdb/name/test.jsonl" 
-}
+# # NAMES
+# data_paths = {
+#     "train": "../data/processed/imdb/name/train.jsonl",
+#     "valid": "../data/processed/imdb/name/valid.jsonl",
+#     "test":  "../data/processed/imdb/name/test.jsonl" 
+# }
 
-dataframes = {}
+# dataframes = {}
 
-for split, path in data_paths.items():
-    print(f"Processing {split}...")
-    df = load_to_multiindex(path)
+# for split, path in data_paths.items():
+#     print(f"Processing {split}...")
+#     df = load_to_multiindex(path)
     
-    # Apply logic
-    df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
-    drop_list = ['primaryName', 'cluster_id', 'block_key']
-    df = df.drop(columns=drop_list, level=1, errors='ignore')
-    # Serialize
-    serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_name_rel_score.txt")
+#     # Apply logic
+#     df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
+#     drop_list = ['primaryName', 'cluster_id', 'block_key']
+#     df = df.drop(columns=drop_list, level=1, errors='ignore')
+#     # Serialize
+#     serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_name_rel_score.txt")
     
-    # Store back to original variables if needed
-    dataframes[split] = df
+#     # Store back to original variables if needed
+#     dataframes[split] = df
 
-# Optional: Re-assign to individual variables
-train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
-train_df.to_parquet('name_train_rel_score.parquet')
-valid_df.to_parquet('name_valid_rel_score.parquet')
-test_df.to_parquet('name_test_rel_score.parquet')
+# # Optional: Re-assign to individual variables
+# train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
+# train_df.to_parquet('name_train_rel_score.parquet')
+# valid_df.to_parquet('name_valid_rel_score.parquet')
+# test_df.to_parquet('name_test_rel_score.parquet')
 

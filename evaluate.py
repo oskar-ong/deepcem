@@ -5,7 +5,6 @@ def calc_metrics(predict_fp, true_fp):
     # Initialize local variables as lists
     y_pred = []
     y_true = []
-    confidences = []
 
     with open(predict_fp, "r", encoding="utf-8") as f:
         for line in f:
@@ -14,7 +13,6 @@ def calc_metrics(predict_fp, true_fp):
             
             # Access and store the specific attributes
             y_pred.append(data["match"])
-            confidences.append(data["match_confidence"])
 
     with open(true_fp, "r", encoding="utf-8") as f:
         for line in f:

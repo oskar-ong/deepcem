@@ -12,6 +12,9 @@ from typing import Callable, Dict, Iterable, List, Literal, Optional, Sequence, 
 
 import pandas as pd
 
+from imdb_build_rel_train import process_relationship_scores, serialize_to_ditto
+from features import process_and_save_ditto
+
 # ==========================================
 # CENTRAL CONSTANTS & CONFIGURATION
 # ==========================================
@@ -26,11 +29,11 @@ PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
 PATH_OUT_MOVIE_TRAIN      = "../data/processed/imdb/movie/train.jsonl"
 PATH_OUT_MOVIE_VALID      = "../data/processed/imdb/movie/valid.jsonl"
 PATH_OUT_MOVIE_TEST       = "../data/processed/imdb/movie/test.jsonl"
-PATH_OUT_MOVIE_TEST_WO_LABEL       = "../data/processed/imdb/movie/test_no_label.jsonl"
+PATH_OUT_MOVIE_TEST_WO_LABEL       = "../data/processed/imdb/movie/input_template.jsonl"
 PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.jsonl"
 PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.jsonl"
 PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.jsonl"
-PATH_OUT_NAME_TEST_WO_LABEL       = "../data/processed/imdb/name/test_no_label.jsonl"
+PATH_OUT_NAME_TEST_WO_LABEL       = "../data/processed/imdb/name/input_template.jsonl"
 
 # --- Column Names ---
 COL_TCONST     = "tconst"
@@ -215,7 +218,7 @@ def analyze_dataset_difficulty(pairs: List[Tuple[dict, dict, int]]):
     avg_pos = sum(pos_sims) / len(pos_sims) if pos_sims else 0
     print(f"--- Dataset Difficulty Report ---\nAvg Match Sim: {avg_pos:.4f}\nAvg Neg Sim:   {avg_neg:.4f}")
 
-def write_input_json(input_fp, output_fp):
+def write_input_json(input_fp, output_fp, columns_to_remove):
 
     with open(input_fp, 'r', encoding='utf-8') as infile, \
         open(output_fp, 'w', encoding='utf-8') as outfile:
@@ -226,6 +229,17 @@ def write_input_json(input_fp, output_fp):
                 
             # Parse the line into a Python list
             data = json.loads(line)
+
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict):
+                        for col in columns_to_remove:
+                            item.pop(col, None)
+            
+            # Handles 'data' as a single dictionary
+            elif isinstance(data, dict):
+                for col in columns_to_remove:
+                    data.pop(col, None)
             
             # Check if the last element is an integer (0 or 1) and remove it
             if isinstance(data[-1], int):
@@ -295,14 +309,31 @@ def main():
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
 
-    write_input_json(PATH_OUT_MOVIE_TEST, PATH_OUT_MOVIE_TEST_WO_LABEL)
-
     for p, path in zip([p_train_n, p_valid_n, p_test_n], [PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST]):
+        random.shuffle(p)
         with open(path, "w") as f:
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
-    write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL)
-                     
+    
+    DROPOUT_PROB = 0.15
+    drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
+    write_input_json(PATH_OUT_MOVIE_TEST, PATH_OUT_MOVIE_TEST_WO_LABEL, drop_list)
+    for ip, op, split in zip([PATH_OUT_MOVIE_TRAIN, PATH_OUT_MOVIE_VALID, PATH_OUT_MOVIE_TEST], 
+                      ["../data/processed/imdb/movie/ditto/train.txt", "../data/processed/imdb/movie/ditto/valid.txt", 
+                       "../data/processed/imdb/movie/ditto/test.txt"], ["train", "valid", "test"]):
+        df = process_and_save_ditto(ip, drop_list, op)
+        df = process_relationship_scores(df, m_to_p, uf_p, COL_TCONST, DROPOUT_PROB)
+        serialize_to_ditto(df, f"../data/processed/imdb/movie/ditto/{split}_rel_score.txt")
+
+    drop_list = ['primaryName', 'cluster_id', 'block_key']
+    write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
+    for ip, op in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
+                      ["../data/processed/imdb/name/ditto/train.txt", "../data/processed/imdb/name/ditto/valid.txt", 
+                       "../data/processed/imdb/name/ditto/test.txt"]):
+        df = process_and_save_ditto(ip, drop_list, op)
+        df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
+        serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_rel_score.txt")
+
     return p_test_m, p_test_m, p_test_m
 
 if __name__ == "__main__":
