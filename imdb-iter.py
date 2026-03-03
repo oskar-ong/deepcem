@@ -161,8 +161,8 @@ def main():
     # Configuration
     MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
 
-    movie_input_template = "./data/processed/imdb/movie/input.jsonl"
-    name_input_template = "./data/processed/imdb/name/input.jsonl"
+    movie_input_template = "./data/processed/imdb/movie/input_template.jsonl"
+    name_input_template = "./data/processed/imdb/name/input_template.jsonl"
 
     # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
     movie_table_key = "tconst"
