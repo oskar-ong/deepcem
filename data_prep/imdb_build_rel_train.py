@@ -169,7 +169,6 @@ uf_m = build_unionfind_with_singletons(PATH_RAW_TITLE_BASICS, PATH_RAW_TITLE_DUP
 
 
 # --- Execution ---
-
 data_paths = {
     "train": "../data/processed/imdb/movie/train.jsonl",
     "valid": "../data/processed/imdb/movie/valid.jsonl",
@@ -194,12 +193,15 @@ for split, path in data_paths.items():
 
 # Optional: Re-assign to individual variables
 train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
+train_df.to_parquet('movie_train_rel_score.parquet')
+valid_df.to_parquet('movie_valid_rel_score.parquet')
+test_df.to_parquet('movie_test_rel_score.parquet')
 
 # NAMES
 data_paths = {
     "train": "../data/processed/imdb/name/train.jsonl",
     "valid": "../data/processed/imdb/name/valid.jsonl",
-    "test":  "../data/processed/imdb/name/test.jsonl" # Corrected path from your snippet
+    "test":  "../data/processed/imdb/name/test.jsonl" 
 }
 
 dataframes = {}
@@ -220,3 +222,7 @@ for split, path in data_paths.items():
 
 # Optional: Re-assign to individual variables
 train_df, valid_df, test_df = dataframes["train"], dataframes["valid"], dataframes["test"]
+train_df.to_parquet('name_train_rel_score.parquet')
+valid_df.to_parquet('name_valid_rel_score.parquet')
+test_df.to_parquet('name_test_rel_score.parquet')
+

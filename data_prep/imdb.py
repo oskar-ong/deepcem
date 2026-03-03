@@ -26,9 +26,11 @@ PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
 PATH_OUT_MOVIE_TRAIN      = "../data/processed/imdb/movie/train.jsonl"
 PATH_OUT_MOVIE_VALID      = "../data/processed/imdb/movie/valid.jsonl"
 PATH_OUT_MOVIE_TEST       = "../data/processed/imdb/movie/test.jsonl"
+PATH_OUT_MOVIE_TEST_WO_LABEL       = "../data/processed/imdb/movie/test_no_label.jsonl"
 PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.jsonl"
 PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.jsonl"
 PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.jsonl"
+PATH_OUT_NAME_TEST_WO_LABEL       = "../data/processed/imdb/name/test_no_label.jsonl"
 
 # --- Column Names ---
 COL_TCONST     = "tconst"
@@ -213,6 +215,25 @@ def analyze_dataset_difficulty(pairs: List[Tuple[dict, dict, int]]):
     avg_pos = sum(pos_sims) / len(pos_sims) if pos_sims else 0
     print(f"--- Dataset Difficulty Report ---\nAvg Match Sim: {avg_pos:.4f}\nAvg Neg Sim:   {avg_neg:.4f}")
 
+def write_input_json(input_fp, output_fp):
+
+    with open(input_fp, 'r', encoding='utf-8') as infile, \
+        open(output_fp, 'w', encoding='utf-8') as outfile:
+        
+        for line in infile:
+            if not line.strip():
+                continue
+                
+            # Parse the line into a Python list
+            data = json.loads(line)
+            
+            # Check if the last element is an integer (0 or 1) and remove it
+            if isinstance(data[-1], int):
+                data.pop()
+                
+            # Write the modified list back as a JSON line
+            outfile.write(json.dumps(data) + '\n')
+
 # ==========================================
 # MAIN EXECUTION
 # ==========================================
@@ -273,11 +294,15 @@ def main():
         with open(path, "w") as f:
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
+
+    write_input_json(PATH_OUT_MOVIE_TEST, PATH_OUT_MOVIE_TEST_WO_LABEL)
+
     for p, path in zip([p_train_n, p_valid_n, p_test_n], [PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST]):
         with open(path, "w") as f:
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
-
+    write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL)
+                     
     return p_test_m, p_test_m, p_test_m
 
 if __name__ == "__main__":

@@ -1,18 +1,18 @@
 COL nconst VAL nm21969022 COL primaryProfession VAL set_decorator-soundtrack-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm0000596 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 1.0	COL nconst VAL nm0001257 COL primaryProfession VAL actress-soundtrack-stunts COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21957109 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm0070174 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21960796 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 1.0	COL nconst VAL nm21961562 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21960796 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.5	COL nconst VAL nm21961562 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm0162668 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21959208 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm0164999 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm0184336 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm0164999 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm0184336 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21962657 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 1.0	COL nconst VAL nm0193948 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm0284678 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm0284678 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967226 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm0342748 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 1.0	COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21955658 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm0564587 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21958188 COL primaryProfession VAL executive-producer-editorial_department COL REL_SCORE VAL 1.0	COL nconst VAL nm0767298 COL primaryProfession VAL editor-producer-editorial_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm0871456 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm0871456 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 1.0	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm0990104 COL primaryProfession VAL actor-writer-director COL REL_SCORE VAL 1.0	COL nconst VAL nm21967259 COL primaryProfession VAL actor-writer-director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21966903 COL primaryProfession VAL location_management-producer-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm10399609 COL primaryProfession VAL actor-producer-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21957970 COL REL_SCORE VAL 1.0	COL nconst VAL nm10580671 COL REL_SCORE VAL 1.0	1
@@ -23,9 +23,9 @@ COL nconst VAL nm21965041 COL primaryProfession VAL actor-sound_department-write
 COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm1135263 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21959480 COL primaryProfession VAL cinematographer-camera_department-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm1310651 COL primaryProfession VAL cinematographer-camera_department-writer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm1383059 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	COL nconst VAL nm21957004 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm1383059 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	COL nconst VAL nm21957004 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21962987 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm1587303 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21958489 COL primaryProfession VAL editor COL REL_SCORE VAL 0.5	COL nconst VAL nm1644883 COL primaryProfession VAL editor COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21958489 COL primaryProfession VAL editor COL REL_SCORE VAL 1.0	COL nconst VAL nm1644883 COL primaryProfession VAL editor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21962984 COL primaryProfession VAL art_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	COL nconst VAL nm1864247 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 1.0	COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 1.0	1
@@ -35,8 +35,8 @@ COL nconst VAL nm21955152 COL primaryProfession VAL cinematographer-director-wri
 COL nconst VAL nm0791756 COL primaryProfession VAL director-writer-animation_department COL REL_SCORE VAL 1.0	COL nconst VAL nm21955811 COL primaryProfession VAL visual_effects-writer-animation_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 1.0	COL nconst VAL nm2988594 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21956264 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 1.0	COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21956569 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm3295266 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21956873 COL primaryProfession VAL location_management-writer-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21956569 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm3295266 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21956873 COL primaryProfession VAL location_management-writer-editor COL REL_SCORE VAL 1.0	COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm8032810 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 1.0	COL nconst VAL nm21957873 COL primaryProfession VAL production_designer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm1856741 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21958213 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm0247660 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
@@ -47,7 +47,7 @@ COL nconst VAL nm0005241 COL primaryProfession VAL actor-producer COL REL_SCORE 
 COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21960612 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21960613 COL primaryProfession VAL producer COL REL_SCORE VAL 1.0	COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm0731548 COL primaryProfession VAL producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21961171 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm4342062 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21961854 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm4342062 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21961854 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21961855 COL primaryProfession VAL special_effects-actor-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm1376372 COL primaryProfession VAL producer-actor-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21962313 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 1.0	COL nconst VAL nm8185241 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 1.0	1
@@ -57,118 +57,118 @@ COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL RE
 COL nconst VAL nm21962986 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	COL nconst VAL nm3609484 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21963145 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm1742016 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21963145 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm1742016 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm1742016 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21963205 COL primaryProfession VAL editor-cinematographer-producer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21964862 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm3938812 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	COL nconst VAL nm21965436 COL primaryProfession VAL composer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21965509 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21965509 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21965881 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm2546047 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm0282802 COL primaryProfession VAL cinematographer-camera_department-director COL REL_SCORE VAL 1.0	COL nconst VAL nm21965977 COL primaryProfession VAL casting_director-camera_department-director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm3103430 COL primaryProfession VAL camera_department-cinematographer-actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21966107 COL primaryProfession VAL composer-cinematographer-actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm3349504 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm4384917 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 1.0	COL nconst VAL nm21966183 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm0587459 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm4384917 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.5	COL nconst VAL nm21966183 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm0587459 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm0957595 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21966400 COL primaryProfession VAL producer COL REL_SCORE VAL 1.0	COL nconst VAL nm3424706 COL primaryProfession VAL producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm1309825 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 1.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm0324632 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21967227 COL primaryProfession VAL special_effects COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm0324632 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm21967227 COL primaryProfession VAL special_effects COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967260 COL primaryProfession VAL editorial_department COL REL_SCORE VAL 1.0	COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967260 COL primaryProfession VAL editorial_department COL REL_SCORE VAL 1.0	COL nconst VAL nm1870199 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 1.0	COL nconst VAL nm1870199 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21967588 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 1.0	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm0042885 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21967639 COL primaryProfession VAL costume_designer-writer-producer COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm21968108 COL primaryProfession VAL animation_department COL REL_SCORE VAL 1.0	COL nconst VAL nm8208176 COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21967588 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.5	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 1.0	COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm0042885 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21967639 COL primaryProfession VAL costume_designer-writer-producer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21968108 COL primaryProfession VAL animation_department COL REL_SCORE VAL 0.5	COL nconst VAL nm8208176 COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21968270 COL primaryProfession VAL writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21968270 COL primaryProfession VAL writer COL REL_SCORE VAL 0.5	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21968270 COL primaryProfession VAL writer COL REL_SCORE VAL 1.0	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm2616835 COL REL_SCORE VAL 1.0	COL nconst VAL nm21969269 COL primaryProfession VAL manager COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21969508 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21969509 COL primaryProfession VAL costume_department-camera_department-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm2503560 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21962613 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21955657 COL primaryProfession VAL sound_department COL REL_SCORE VAL 0.5	COL nconst VAL nm2512610 COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm2541364 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.5	COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm21966399 COL primaryProfession VAL director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21955657 COL primaryProfession VAL sound_department COL REL_SCORE VAL 1.0	COL nconst VAL nm2512610 COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm2541364 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 1.0	COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21966399 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	COL nconst VAL nm21960681 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	COL nconst VAL nm21960681 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm2993084 COL primaryProfession VAL actor-writer-producer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21960795 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.5	COL nconst VAL nm21960681 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm2993084 COL primaryProfession VAL actor-writer-producer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21960795 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm3157695 COL REL_SCORE VAL 1.0	COL nconst VAL nm21959385 COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm3157936 COL REL_SCORE VAL 1.0	COL nconst VAL nm21959386 COL primaryProfession VAL soundtrack COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21962985 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 1.0	COL nconst VAL nm3192494 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21965574 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 1.0	COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21969561 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm3305543 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
-COL nconst VAL nm3432505 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21956102 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm21969561 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm3305543 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm3432505 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 1.0	COL nconst VAL nm21956102 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21958422 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm3662284 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 1.0	COL nconst VAL nm21965870 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm4193003 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21967587 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21956263 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.5	1
+COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21956263 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm5025293 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm5092758 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 1.0	COL nconst VAL nm21961129 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm5092758 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21961129 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21966981 COL primaryProfession VAL miscellaneous COL REL_SCORE VAL 1.0	COL nconst VAL nm5184000 COL primaryProfession VAL actress COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 1.0	COL nconst VAL nm21963206 COL primaryProfession VAL director COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21955659 COL primaryProfession VAL casting_director COL REL_SCORE VAL 1.0	COL nconst VAL nm5588560 COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967053 COL primaryProfession VAL set_decorator-music_department COL REL_SCORE VAL 1.0	COL nconst VAL nm21967052 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967053 COL primaryProfession VAL set_decorator-music_department COL REL_SCORE VAL 1.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21967052 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm6757563 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm6757563 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm6999239 COL primaryProfession VAL editor COL REL_SCORE VAL 0.5	COL nconst VAL nm21963062 COL primaryProfession VAL editor COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 1.0	COL nconst VAL nm7305568 COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21963175 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 1.0	COL nconst VAL nm7353507 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 1.0	1
 COL nconst VAL nm21959207 COL REL_SCORE VAL 1.0	COL nconst VAL nm7669443 COL REL_SCORE VAL 1.0	1
-COL nconst VAL nm21960579 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm8979816 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	1
+COL nconst VAL nm21960579 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm8979816 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	1
 COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0374658 COL primaryProfession VAL cinematographer-director-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2546047 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966981 COL primaryProfession VAL miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1864247 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967052 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0084983 COL primaryProfession VAL director-writer-miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959574 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963272 COL primaryProfession VAL electrical_department-producer-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.5	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21958489 COL primaryProfession VAL editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21961854 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21956263 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0005241 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0194332 COL primaryProfession VAL editor-script_department-actress COL REL_SCORE VAL 0.0	COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21962313 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21965574 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21962313 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21965574 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1448796 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm0005241 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm1448796 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0005241 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0564587 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm7669443 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955657 COL primaryProfession VAL sound_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.0	COL nconst VAL nm2993084 COL primaryProfession VAL actor-writer-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm10823725 COL REL_SCORE VAL 0.5	COL nconst VAL nm21967227 COL primaryProfession VAL special_effects COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm10823725 COL REL_SCORE VAL 0.0	COL nconst VAL nm21967227 COL primaryProfession VAL special_effects COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962987 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm4087886 COL primaryProfession VAL writer-miscellaneous-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967260 COL primaryProfession VAL editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0245814 COL primaryProfession VAL director-assistant_director-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0005241 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960612 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960681 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm1581681 COL primaryProfession VAL actor-miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959385 COL REL_SCORE VAL 0.0	COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21959385 COL REL_SCORE VAL 0.5	COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965870 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21967588 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966399 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0119190 COL primaryProfession VAL composer-music_department-soundtrack COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.5	COL nconst VAL nm0084983 COL primaryProfession VAL director-writer-miscellaneous COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm0084983 COL primaryProfession VAL director-writer-miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1097681 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966400 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1309825 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21959572 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0164999 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965870 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm4342062 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0609252 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm3938812 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21956569 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21956569 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21967639 COL primaryProfession VAL costume_designer-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0208112 COL primaryProfession VAL actor-writer-assistant_director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0282802 COL primaryProfession VAL cinematographer-camera_department-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1587303 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955152 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962613 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0164999 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0164999 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959572 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm3103430 COL primaryProfession VAL camera_department-cinematographer-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21956263 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0342748 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm0342748 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21962479 COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21962480 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963449 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0042885 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	0
@@ -176,29 +176,29 @@ COL nconst VAL nm21955151 COL primaryProfession VAL cinematographer-director-wri
 COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955659 COL primaryProfession VAL casting_director COL REL_SCORE VAL 0.0	COL nconst VAL nm21959574 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm21955151 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0134112 COL primaryProfession VAL director-script_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0324632 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm3424706 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.5	COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21963954 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959386 COL primaryProfession VAL soundtrack COL REL_SCORE VAL 0.0	COL nconst VAL nm21958213 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957109 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21963981 COL primaryProfession VAL editorial_department-camera_department COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966107 COL primaryProfession VAL composer-cinematographer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm4193003 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3157695 COL REL_SCORE VAL 0.0	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm3157695 COL REL_SCORE VAL 0.5	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965436 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21965870 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21967052 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2993084 COL primaryProfession VAL actor-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963205 COL primaryProfession VAL editor-cinematographer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962613 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962657 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm3349504 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0194332 COL primaryProfession VAL editor-script_department-actress COL REL_SCORE VAL 0.0	COL nconst VAL nm8208176 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2616835 COL REL_SCORE VAL 0.0	COL nconst VAL nm21962987 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0609252 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm5092758 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1581681 COL primaryProfession VAL actor-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0871456 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1097681 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
@@ -207,24 +207,24 @@ COL nconst VAL nm21966978 COL primaryProfession VAL editor-sound_department-writ
 COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm0245814 COL primaryProfession VAL director-assistant_director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958213 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962984 COL primaryProfession VAL art_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3424706 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21969022 COL primaryProfession VAL set_decorator-soundtrack-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2546047 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm0374658 COL primaryProfession VAL cinematographer-director-producer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2546047 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm0374658 COL primaryProfession VAL cinematographer-director-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2616835 COL REL_SCORE VAL 0.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4942259 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm1864247 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.5	COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21960579 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm5184000 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0374658 COL primaryProfession VAL cinematographer-director-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm10823725 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4193003 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3609484 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm3609484 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.5	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21957109 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21967226 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963981 COL primaryProfession VAL editorial_department-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0609252 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0587459 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm21959385 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962657 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21969022 COL primaryProfession VAL set_decorator-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm2317243 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21967587 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21967587 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm10580671 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21968270 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21959571 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4341871 COL primaryProfession VAL cinematographer-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21959481 COL primaryProfession VAL editor-script_department-actress COL REL_SCORE VAL 0.0	0
@@ -234,14 +234,14 @@ COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL RE
 COL nconst VAL nm21962656 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1097681 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm8208176 COL REL_SCORE VAL 0.0	COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm8208176 COL REL_SCORE VAL 0.5	COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21959478 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21962986 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21968516 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm7353507 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm7353507 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1026675 COL primaryProfession VAL director-editor-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.5	COL nconst VAL nm3103430 COL primaryProfession VAL camera_department-cinematographer-actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm3103430 COL primaryProfession VAL camera_department-cinematographer-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0767298 COL primaryProfession VAL editor-producer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959207 COL REL_SCORE VAL 0.0	COL nconst VAL nm5588560 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967639 COL primaryProfession VAL costume_designer-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm2541364 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	0
@@ -250,14 +250,14 @@ COL nconst VAL nm21957970 COL REL_SCORE VAL 0.0	COL nconst VAL nm21967640 COL pr
 COL nconst VAL nm21956873 COL primaryProfession VAL location_management-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0564587 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958597 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0342748 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0871456 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm5025293 COL primaryProfession VAL actor COL REL_SCORE VAL 1.0	COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 1.0	0
-COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21956873 COL primaryProfession VAL location_management-writer-editor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm5025293 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21956873 COL primaryProfession VAL location_management-writer-editor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21961130 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959207 COL REL_SCORE VAL 0.5	COL nconst VAL nm21962479 COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21959207 COL REL_SCORE VAL 0.0	COL nconst VAL nm21962479 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1309825 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21960613 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm0247660 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0247660 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0767298 COL primaryProfession VAL editor-producer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966183 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm7305568 COL REL_SCORE VAL 0.0	COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 0.0	0
@@ -266,22 +266,22 @@ COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL R
 COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm3432505 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm6999239 COL primaryProfession VAL editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21969384 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21969384 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21967587 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955658 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21957251 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 0.5	COL nconst VAL nm21958597 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21956199 COL primaryProfession VAL editor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm21958597 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21959385 COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959208 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962987 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21959208 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21962987 COL primaryProfession VAL cinematographer-camera_department-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21959385 COL REL_SCORE VAL 0.0	COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21956569 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965977 COL primaryProfession VAL casting_director-camera_department-director COL REL_SCORE VAL 0.0	COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1620376 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm1620376 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955064 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21961373 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963981 COL primaryProfession VAL editorial_department-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960795 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21960612 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969384 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966981 COL primaryProfession VAL miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966183 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21959479 COL primaryProfession VAL actor-assistant_director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0208112 COL primaryProfession VAL actor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21961129 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
@@ -289,11 +289,11 @@ COL nconst VAL nm2546047 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	C
 COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21957109 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959207 COL REL_SCORE VAL 0.0	COL nconst VAL nm3349504 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm5025293 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2047752 COL primaryProfession VAL camera_department-cinematographer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1581681 COL primaryProfession VAL actor-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm21960795 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966978 COL primaryProfession VAL editor-sound_department-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21959207 COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21966978 COL primaryProfession VAL editor-sound_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21959207 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1376372 COL primaryProfession VAL producer-actor-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm1067911 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969385 COL primaryProfession VAL art_department COL REL_SCORE VAL 0.0	COL nconst VAL nm1097681 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1856741 COL primaryProfession VAL actor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm4342062 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	0
@@ -303,12 +303,12 @@ COL nconst VAL nm21960796 COL primaryProfession VAL director-script_department-w
 COL nconst VAL nm3260797 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21962480 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966107 COL primaryProfession VAL composer-cinematographer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3157695 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957970 COL REL_SCORE VAL 0.0	COL nconst VAL nm21958188 COL primaryProfession VAL executive-producer-editorial_department COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959386 COL primaryProfession VAL soundtrack COL REL_SCORE VAL 0.0	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21959386 COL primaryProfession VAL soundtrack COL REL_SCORE VAL 0.5	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm0477577 COL primaryProfession VAL actor-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21962986 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0651995 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0193948 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0990104 COL primaryProfession VAL actor-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm7669443 COL REL_SCORE VAL 0.0	COL nconst VAL nm4384917 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1644883 COL primaryProfession VAL editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm1644883 COL primaryProfession VAL editor COL REL_SCORE VAL 0.5	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21960681 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm2063773 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955659 COL primaryProfession VAL casting_director COL REL_SCORE VAL 0.0	COL nconst VAL nm1870199 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm6757563 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21955064 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
@@ -318,22 +318,22 @@ COL nconst VAL nm21959574 COL primaryProfession VAL cinematographer COL REL_SCOR
 COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm1937112 COL primaryProfession VAL actor-producer-assistant_director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1383059 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0498658 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0498658 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963206 COL primaryProfession VAL director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 0.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 0.5	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959121 COL primaryProfession VAL producer-production_manager-visual_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm7669443 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm6999239 COL primaryProfession VAL editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962479 COL REL_SCORE VAL 0.0	COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21967260 COL primaryProfession VAL editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21967260 COL primaryProfession VAL editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm10580671 COL REL_SCORE VAL 0.0	COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm8208176 COL REL_SCORE VAL 0.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm8208176 COL REL_SCORE VAL 0.5	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21959465 COL primaryProfession VAL art_department-producer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966903 COL primaryProfession VAL location_management-producer-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3305543 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21962656 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm3305543 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21962656 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm3295266 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm5588560 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962657 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965977 COL primaryProfession VAL casting_director-camera_department-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21959573 COL primaryProfession VAL script_department COL REL_SCORE VAL 0.0	0
@@ -341,37 +341,37 @@ COL nconst VAL nm21959479 COL primaryProfession VAL actor-assistant_director-wri
 COL nconst VAL nm4678220 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm8185241 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21968270 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21959479 COL primaryProfession VAL actor-assistant_director-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm0498658 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm0498658 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21960613 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21961171 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21958188 COL primaryProfession VAL executive-producer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965436 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm1210598 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3192494 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm3192494 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0119190 COL primaryProfession VAL composer-music_department-soundtrack COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21957323 COL primaryProfession VAL writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0001218 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21961129 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958489 COL primaryProfession VAL editor COL REL_SCORE VAL 0.0	COL nconst VAL nm21957109 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969561 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21955064 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0001218 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21969269 COL primaryProfession VAL manager COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3157695 COL REL_SCORE VAL 0.5	COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm3157695 COL REL_SCORE VAL 0.0	COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959208 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21969508 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21969508 COL primaryProfession VAL actor-composer-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965041 COL primaryProfession VAL actor-sound_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21968516 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm4384917 COL primaryProfession VAL producer-miscellaneous-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21958597 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21958597 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960987 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm8208176 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959386 COL primaryProfession VAL soundtrack COL REL_SCORE VAL 0.0	COL nconst VAL nm21968516 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21967226 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm4078964 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21967226 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm4078964 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966236 COL primaryProfession VAL stunts-writer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm0138502 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0791756 COL primaryProfession VAL director-writer-animation_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0284678 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21964862 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966822 COL primaryProfession VAL cinematographer-writer-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm8979816 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21966822 COL primaryProfession VAL cinematographer-writer-camera_department COL REL_SCORE VAL 0.5	COL nconst VAL nm8979816 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm5025293 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm10399609 COL primaryProfession VAL actor-producer-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959571 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.5	0
-COL nconst VAL nm21969269 COL primaryProfession VAL manager COL REL_SCORE VAL 0.5	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21969269 COL primaryProfession VAL manager COL REL_SCORE VAL 0.0	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3609484 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm2503560 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967639 COL primaryProfession VAL costume_designer-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21963272 COL primaryProfession VAL electrical_department-producer-writer COL REL_SCORE VAL 0.0	0
@@ -381,15 +381,15 @@ COL nconst VAL nm21959207 COL REL_SCORE VAL 0.0	COL nconst VAL nm3424706 COL pri
 COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21963146 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967227 COL primaryProfession VAL special_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.5	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0005785 COL primaryProfession VAL cinematographer-camera_department-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969386 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm8979816 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966400 COL primaryProfession VAL producer COL REL_SCORE VAL 0.5	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21966400 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3432505 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21969269 COL primaryProfession VAL manager COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963175 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1910737 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21955811 COL primaryProfession VAL visual_effects-writer-animation_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21967588 COL primaryProfession VAL editorial_department-editor-camera_department COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966399 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21966399 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21961129 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0001218 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm21961562 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3192494 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm0556594 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	0
@@ -399,90 +399,90 @@ COL nconst VAL nm21963206 COL primaryProfession VAL director COL REL_SCORE VAL 0
 COL nconst VAL nm1309825 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm0084983 COL primaryProfession VAL director-writer-miscellaneous COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963954 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1309825 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21966982 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm0498658 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969386 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21963204 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0193948 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21961562 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm10823725 COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0208112 COL primaryProfession VAL actor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21959214 COL primaryProfession VAL actor-director-cinematographer COL REL_SCORE VAL 0.5	COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm10823725 COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0208112 COL primaryProfession VAL actor-writer-assistant_director COL REL_SCORE VAL 0.5	COL nconst VAL nm21964271 COL primaryProfession VAL producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21961562 COL primaryProfession VAL producer-miscellaneous-production_manager COL REL_SCORE VAL 0.0	COL nconst VAL nm8032810 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1937112 COL primaryProfession VAL actor-producer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm1964434 COL primaryProfession VAL producer-camera_department-executive COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3157936 COL REL_SCORE VAL 0.0	COL nconst VAL nm21962480 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm21962480 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21963447 COL primaryProfession VAL visual_effects-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962480 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969270 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm4078964 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21969386 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21958188 COL primaryProfession VAL executive-producer-editorial_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21969386 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21958188 COL primaryProfession VAL executive-producer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0374658 COL primaryProfession VAL cinematographer-director-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960612 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21956264 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21956264 COL primaryProfession VAL camera_department-cinematographer-sound_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960588 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm3283332 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21966978 COL primaryProfession VAL editor-sound_department-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21958412 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21966978 COL primaryProfession VAL editor-sound_department-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm6570746 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967258 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	COL nconst VAL nm10823725 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21959574 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0000033 COL primaryProfession VAL director-producer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21965509 COL primaryProfession VAL director-actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966903 COL primaryProfession VAL location_management-producer-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960588 COL primaryProfession VAL actor-producer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21963449 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21955659 COL primaryProfession VAL casting_director COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21963449 COL primaryProfession VAL editor-actress-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm21955659 COL primaryProfession VAL casting_director COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966317 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21956872 COL primaryProfession VAL sound_department-soundtrack-stunts COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21966400 COL primaryProfession VAL producer COL REL_SCORE VAL 0.0	COL nconst VAL nm0495790 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21969386 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm4342062 COL primaryProfession VAL actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm2541364 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21958421 COL primaryProfession VAL producer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21962657 COL primaryProfession VAL composer-soundtrack-music_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21960579 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21969385 COL primaryProfession VAL art_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3157936 COL REL_SCORE VAL 0.0	COL nconst VAL nm4422429 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959574 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21967226 COL primaryProfession VAL writer-director-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1964434 COL primaryProfession VAL producer-camera_department-executive COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955152 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm3120206 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0878031 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0878031 COL primaryProfession VAL cinematographer-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm4078964 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm3589032 COL primaryProfession VAL producer-writer-production_manager COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 0.0	COL nconst VAL nm10580671 COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0001257 COL primaryProfession VAL actress-soundtrack-stunts COL REL_SCORE VAL 0.0	COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 0.5	COL nconst VAL nm10580671 COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0001257 COL primaryProfession VAL actress-soundtrack-stunts COL REL_SCORE VAL 0.5	COL nconst VAL nm21962614 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21963145 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3432505 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955150 COL primaryProfession VAL editor-writer-editorial_department COL REL_SCORE VAL 0.5	COL nconst VAL nm21960612 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm4078964 COL primaryProfession VAL director-cinematographer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm1310651 COL primaryProfession VAL cinematographer-camera_department-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967052 COL primaryProfession VAL composer-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21963272 COL primaryProfession VAL electrical_department-producer-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm2541364 COL primaryProfession VAL producer-miscellaneous COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1581681 COL primaryProfession VAL actor-miscellaneous COL REL_SCORE VAL 0.0	COL nconst VAL nm0957595 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm1581681 COL primaryProfession VAL actor-miscellaneous COL REL_SCORE VAL 0.5	COL nconst VAL nm0957595 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm8208176 COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21967053 COL primaryProfession VAL set_decorator-music_department COL REL_SCORE VAL 0.0	COL nconst VAL nm21963981 COL primaryProfession VAL editorial_department-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21955063 COL primaryProfession VAL director-actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21969561 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21957970 COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm1346476 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21957970 COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965041 COL primaryProfession VAL actor-sound_department-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21957970 COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm5374866 COL primaryProfession VAL director-writer-editor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0871456 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21966552 COL primaryProfession VAL cinematographer-editor-camera_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0587459 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm1026675 COL primaryProfession VAL director-editor-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm3846085 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.5	COL nconst VAL nm21957251 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	0
-COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21965881 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21965881 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21959479 COL primaryProfession VAL actor-assistant_director-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1133857 COL primaryProfession VAL actress-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21956102 COL primaryProfession VAL actor-soundtrack-producer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21958214 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm21957004 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21967548 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21957004 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 0.0	COL nconst VAL nm21959465 COL primaryProfession VAL art_department-producer-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1870199 COL primaryProfession VAL make_up_department COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm2645127 COL primaryProfession VAL director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21966108 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm0609833 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21963175 COL primaryProfession VAL soundtrack-composer-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21968516 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm7669443 COL REL_SCORE VAL 0.0	COL nconst VAL nm21961855 COL primaryProfession VAL special_effects-actor-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm4193003 COL primaryProfession VAL producer-sound_department-writer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1864247 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm0284678 COL primaryProfession VAL assistant_director-production_manager-actor COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21962478 COL primaryProfession VAL music_department-editor COL REL_SCORE VAL 0.5	COL nconst VAL nm3291308 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm0208112 COL primaryProfession VAL actor-writer-assistant_director COL REL_SCORE VAL 0.0	COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm8032810 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21962656 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm8032810 COL primaryProfession VAL cinematographer COL REL_SCORE VAL 0.5	COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm21962656 COL primaryProfession VAL editor-director-writer COL REL_SCORE VAL 0.0	COL nconst VAL nm21966318 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm0091983 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	COL nconst VAL nm21965978 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962818 COL primaryProfession VAL assistant_director-writer-editor COL REL_SCORE VAL 0.0	COL nconst VAL nm0990104 COL primaryProfession VAL actor-writer-director COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21963980 COL primaryProfession VAL production_designer-art_department-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm3938812 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm0042885 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.5	COL nconst VAL nm4087886 COL primaryProfession VAL writer-miscellaneous-actor COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm0042885 COL primaryProfession VAL director-writer-producer COL REL_SCORE VAL 0.0	COL nconst VAL nm4087886 COL primaryProfession VAL writer-miscellaneous-actor COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21959571 COL primaryProfession VAL actress COL REL_SCORE VAL 0.5	COL nconst VAL nm2762552 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	0
-COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21956198 COL primaryProfession VAL director-editor-producer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21965882 COL primaryProfession VAL actor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm0184336 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm1056892 COL primaryProfession VAL producer-production_manager-visual_effects COL REL_SCORE VAL 0.0	COL nconst VAL nm0194332 COL primaryProfession VAL editor-script_department-actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm21968269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	COL nconst VAL nm21967640 COL primaryProfession VAL editor-director-actor COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21966979 COL primaryProfession VAL cinematographer-camera_department COL REL_SCORE VAL 0.0	COL nconst VAL nm1932706 COL primaryProfession VAL director-writer-cinematographer COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm21962985 COL primaryProfession VAL editor-producer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm2884109 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.5	0
-COL nconst VAL nm1383059 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.5	0
+COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm1745269 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm1383059 COL primaryProfession VAL composer COL REL_SCORE VAL 0.0	COL nconst VAL nm21960680 COL primaryProfession VAL miscellaneous-camera_department-special_effects COL REL_SCORE VAL 0.0	0
 COL nconst VAL nm5404297 COL primaryProfession VAL director COL REL_SCORE VAL 0.0	COL nconst VAL nm21957251 COL primaryProfession VAL actress COL REL_SCORE VAL 0.0	0
-COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.0	COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.0	0
+COL nconst VAL nm2148145 COL primaryProfession VAL producer-writer-director COL REL_SCORE VAL 0.5	COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm21963448 COL primaryProfession VAL producer-writer COL REL_SCORE VAL 0.5	COL nconst VAL nm21965436 COL primaryProfession VAL composer COL REL_SCORE VAL 0.5	0
 COL nconst VAL nm10823725 COL REL_SCORE VAL 0.0	COL nconst VAL nm2395461 COL primaryProfession VAL actor COL REL_SCORE VAL 0.0	0
