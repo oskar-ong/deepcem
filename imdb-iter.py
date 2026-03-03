@@ -20,7 +20,7 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
 # Dependency map: Dict[movie_ids: str, Dict[entity_type, List[ids: str]]]
 
 
-def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, movie_pairs_score, movie_table_key, name_table_key, name_pairs_score, movie_dependency_map, name_dependency_map):
+def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map):
     # MOVIES (MAIN ENTITY FIRST)
 
     # Update Paper JSONL with Venue scores from previous iter
