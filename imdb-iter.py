@@ -59,9 +59,9 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
     
     # Update STATE with new Paper results
     #STATE["paper_pairs"] = extract_scores(f"results_paper_{iter_num}.jsonl")
-    movie_pairs_score = extract_scores(f"output/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
+    movie_pairs_score = extract_scores(f"ditto_out/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
     movie_testset_fp = f"./data/processed/imdb/movie/ditto/test.txt"
-    acc, prec, rec, f1 = calc_metrics(f"output/movie_{iter_num}.jsonl", movie_testset_fp)
+    acc, prec, rec, f1 = calc_metrics(f"ditto_out/movie_{iter_num}.jsonl", movie_testset_fp)
     print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
     # NAMES (DEPENDENCY ENTITY)
@@ -86,10 +86,10 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
 
     subprocess.run(cmd, env=env)
     
-    name_pairs_score = extract_scores(f"output/name_{iter_num}.jsonl", name_pairs_score, name_table_key)
+    name_pairs_score = extract_scores(f"ditto_out/name_{iter_num}.jsonl", name_pairs_score, name_table_key)
 
     name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
-    acc, prec, rec, f1 = calc_metrics(f"output/movie_{iter_num}.jsonl", name_testset_fp)
+    acc, prec, rec, f1 = calc_metrics(f"ditto_out/movie_{iter_num}.jsonl", name_testset_fp)
     print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
 def extract_scores(fp, dependency_scores, id_attribute):
