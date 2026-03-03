@@ -100,11 +100,8 @@ def main():
     name_valid_fp = f"{name_dir}/valid.txt"
     name_test_fp = f"{name_dir}/test.txt"
 
-    checkpoint_dir = f"./models/ditto/checkpoints/{task_name}"
     model_path = f"./models/ditto/checkpoints/{task_name}/model.pt"
     configs_path = f"./models/ditto/configs.json"
-    log_dir = f"./logs"
-    index_column = "id"
 
     with Path(configs_path).open("r", encoding="utf-8") as f:
         file_data: list = json.load(f)

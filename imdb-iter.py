@@ -1,5 +1,6 @@
 from collections import defaultdict
 import csv
+import os
 import subprocess
 import json
 from typing import Dict, List, Set
@@ -7,7 +8,7 @@ from typing import Dict, List, Set
 import pandas as pd
 
 # Configuration
-MODELS = {"movies": "output/paper_relational/", "venue": "output/venue_relational/"}
+MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
 
 movie_input_template = "./data/processed/imdb/movie/test_no_label.jsonl"
 name_input_template = "./data/processed/imdb/name/test_no_label.jsonl"
@@ -36,22 +37,88 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
 
 # Dependency map: Dict[movie_ids: str, Dict[entity_type, List[ids: str]]]
 movie_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, movie_table_key, name_table_key)
-
+name_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, name_table_key, movie_table_key)
 
 def run_iteration(iter_num):
     # MOVIES (MAIN ENTITY FIRST)
 
-    # 1. Update Paper JSONL with Venue scores from previous iter
+    # Update Paper JSONL with Venue scores from previous iter
     update_input_files(movie_input_template, movie_dependency_map, name_pairs_score, f"movie_{iter_num}_input.jsonl", movie_table_key)
     
-    # 2. Run Ditto Inference
-    #subprocess.run(["python", "matcher.py", "--task", "paper", "--checkpoint", MODELS["paper"], "--input", "papers_to_match.jsonl", "--output", f"results_paper_{iter_num}.jsonl"])
+    # Run Ditto Inference
+    # Command from Ditto Docs
+    #     python matcher.py \
+    # --task wdc_all_small \
+    # --input_path input/input_small.jsonl \
+    # --output_path output/output_small.jsonl \
+    # --lm distilbert \
+    # --max_len 64 \
+    # --use_gpu \
+    # --fp16 \
+    # --checkpoint_path checkpoints/
+    cmd = [
+            "python",
+            f"./models/ditto/matcher.py",
+            "--task", MODELS["movies"],
+            "input_path", f"movie_{iter_num}_input.jsonl",
+            "out_path", f"output/movie_{iter_num}.jsonl",
+            "--lm", "roberta",
+            "--max_len", "128",
+            "--use_gpu",
+            "--fp16",
+            "--checkpoint_path", "./models/ditto/checkpoints/",
+        ]
+
+    env = os.environ.copy()
+    #env["CUDA_VISIBLE_DEVICES"] = "0"
+
+    subprocess.run(cmd, env=env)
     
-    # 3. Update STATE with new Paper results
+    # Update STATE with new Paper results
     #STATE["paper_pairs"] = extract_scores(f"results_paper_{iter_num}.jsonl")
+    movie_pairs_score = extract_scores(f"output/movie_{iter_num}.jsonl")
+
+
+    # NAMES (DEPENDENCY ENTITY)
+
+    update_input_files(movie_input_template, movie_dependency_map, movie_pairs_score, f"name_{iter_num}_input.jsonl", name_table_key)
     
-    # 4. Repeat for Venue (using the updated Paper scores)
-    # ...
+    cmd = [
+            "python",
+            f"./models/ditto/matcher.py",
+            "--task", MODELS["names"],
+            "input_path", f"name_{iter_num}_input.jsonl",
+            "out_path", f"output/name_{iter_num}.jsonl",
+            "--lm", "roberta",
+            "--max_len", "128",
+            "--use_gpu",
+            "--fp16",
+            "--checkpoint_path", "./models/ditto/checkpoints/",
+        ]
+
+    env = os.environ.copy()
+    #env["CUDA_VISIBLE_DEVICES"] = "0"
+
+    subprocess.run(cmd, env=env)
+    
+    name_pairs_score = extract_scores(f"output/name_{iter_num}.jsonl")
+
+
+def extract_scores(fp, dependency_scores, id_attribute):
+    with open(fp, 'r', encoding='utf-8') as f:
+        for line in f:
+            data = json.loads(line)
+            
+            left_id = data['left'][id_attribute]
+            right_id = data['right'][id_attribute]
+            match = int(data['match'])
+            confidence = data['match_confidence']
+            
+            if match == 1:
+                dependency_scores[(left_id, right_id)] = confidence
+            elif match == 0:
+                dependency_scores[(left_id, right_id)] = (1 - confidence) 
+    return dependency_scores
 
 def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key):
     with open(input_template, 'r') as infile, open(output_json_fp, 'w') as outfile:
@@ -90,5 +157,5 @@ def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, L
         
     return max(all_possible_scores) if all_possible_scores else 0.5
 
-
+run_iteration(0)
 run_iteration(1)
