@@ -171,9 +171,9 @@ def main():
     do_train = True
 
     movie_dir = f"./data/processed/imdb/movie/ditto"
-    movie_train_fp = f"{movie_dir}/train_movie_rel_score.txt"
-    movie_valid_fp = f"{movie_dir}/valid_movie_rel_score.txt"
-    movie_test_fp = f"{movie_dir}/test_movie_rel_score.txt"
+    movie_train_fp = f"{movie_dir}/train_rel_score.txt"
+    movie_valid_fp = f"{movie_dir}/valid_rel_score.txt"
+    movie_test_fp = f"{movie_dir}/test_rel_score.txt"
 
     checkpoint_dir = f"./models/ditto/checkpoints/{task_movie_rel}"
     model_path = f"./models/ditto/checkpoints/{task_movie_rel}/model.pt"
@@ -249,9 +249,9 @@ def main():
     do_train = True
 
     name_dir = f"./data/processed/imdb/name/ditto"
-    name_train_fp = f"{name_dir}/train_name_rel_score.txt"
-    name_valid_fp = f"{name_dir}/valid_name_rel_score.txt"
-    name_test_fp = f"{name_dir}/test_name_rel_score.txt"
+    name_train_fp = f"{name_dir}/train_rel_score.txt"
+    name_valid_fp = f"{name_dir}/valid_rel_score.txt"
+    name_test_fp = f"{name_dir}/test_rel_score.txt"
 
     checkpoint_dir = f"./models/ditto/checkpoints/{task_name_rel}"
     model_path = f"./models/ditto/checkpoints/{task_name_rel}/model.pt"
