@@ -111,6 +111,7 @@ def extract_pairs(fp, id_attribute):
             right_id = data[1][id_attribute]
 
             pairs.append((left_id, right_id))
+    return pairs
 
 def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key):
     with open(input_template, 'r') as infile, open(output_json_fp, 'w') as outfile:
