@@ -329,7 +329,7 @@ def main():
     write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
     for ip, op in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
                       ["../data/processed/imdb/name/ditto/train.txt", "../data/processed/imdb/name/ditto/valid.txt", 
-                       "../data/processed/imdb/name/ditto/test.txt"]):
+                       "../data/processed/imdb/name/ditto/test.txt"],["train", "valid", "test"]):
         df = process_and_save_ditto(ip, drop_list, op)
         df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
         serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_rel_score.txt")
