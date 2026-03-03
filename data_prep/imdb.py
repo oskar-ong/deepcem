@@ -327,7 +327,7 @@ def main():
 
     drop_list = ['primaryName', 'cluster_id', 'block_key']
     write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
-    for ip, op in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
+    for ip, op, split in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
                       ["../data/processed/imdb/name/ditto/train.txt", "../data/processed/imdb/name/ditto/valid.txt", 
                        "../data/processed/imdb/name/ditto/test.txt"],["train", "valid", "test"]):
         df = process_and_save_ditto(ip, drop_list, op)
