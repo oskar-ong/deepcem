@@ -122,6 +122,7 @@ def extract_pairs(fp, id_attribute):
     return pairs
 
 def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key):
+    threshold = 0.15
     with open(input_template, 'r') as infile, open(output_json_fp, 'w') as outfile:
         for line in infile:
             # 1. Parse the line (a list of two dictionaries)
@@ -134,6 +135,10 @@ def update_input_files(input_template, relationship_map, dependency_scores, outp
                 
                 # 3. Calculate the score
                 score = aggregate_dependency_scores(left_id, right_id, relationship_map, dependency_scores)
+
+                # is score meaningful enough? If too fuzzy, ignore
+                if abs(score - 0.5) < threshold:
+                    score = 0.5 
                 
                 # 4. Inject the score back into both objects
                 record_pair[0]["REL_SCORE"] = score
