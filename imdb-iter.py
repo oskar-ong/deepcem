@@ -182,6 +182,8 @@ def main():
     name_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, name_table_key, movie_table_key)
     movie_pairs_score, name_pairs_score = run_iteration(0, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
     movie_pairs_score, name_pairs_score = run_iteration(1, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
+    movie_pairs_score, name_pairs_score = run_iteration(2, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
+    movie_pairs_score, name_pairs_score = run_iteration(3, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
 
 if __name__=="__main__":
     main()
