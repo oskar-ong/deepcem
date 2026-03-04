@@ -98,13 +98,14 @@ def extract_scores(fp, dependency_scores, id_attribute):
             
             left_id = data['left'][id_attribute]
             right_id = data['right'][id_attribute]
+            key = tuple(sorted((left_id, right_id)))
             match = int(data['match'])
             confidence = data['match_confidence']
             
             if match == 1:
-                dependency_scores[(left_id, right_id)] = confidence
+                dependency_scores[key] = confidence
             elif match == 0:
-                dependency_scores[(left_id, right_id)] = (1 - confidence) 
+                dependency_scores[key] = (1 - confidence) 
     return dependency_scores
 
 def extract_pairs(fp, id_attribute):
@@ -166,11 +167,13 @@ def main():
     # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
     movie_table_key = "tconst"
     movie_pairs = extract_pairs(movie_input_template, movie_table_key)
-    movie_pairs_score = dict.fromkeys(movie_pairs, 0.5)
+    # movie_pairs_score = dict.fromkeys(movie_pairs, 0.5)
+    movie_pairs_score = {tuple(sorted(pair)): 0.5 for pair in movie_pairs}
     # name_test_df = pd.read_parquet('data_prep/name_test_rel_score.parquet')
     name_table_key = "nconst"
     name_pairs = extract_pairs(name_input_template, name_table_key) # list of pairs from name test set
-    name_pairs_score = dict.fromkeys(name_pairs, 0.5)
+    # name_pairs_score = dict.fromkeys(name_pairs, 0.5)
+    name_pairs_score = {tuple(sorted(pair)): 0.5 for pair in name_pairs}
 
     PATH_RAW_PRINCIPALS = "./data/raw/imdb/title_principals.csv"
     # Dependency map: Dict[movie_ids: str, Dict[entity_type, List[ids: str]]]
