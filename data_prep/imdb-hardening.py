@@ -21,7 +21,9 @@ uf_movies = build_unionfind_with_singletons(PATH_RAW_TITLE_BASICS, PATH_RAW_TITL
 df['cluster_id'] = df[COL_TCONST].apply(lambda x: uf_movies.find(x))
 
 filtered_df = df[df[COL_TCONST] != df['cluster_id']].copy()
-filtered_df.to_csv("imdb_duplicates.csv", columns=["tconst", "primaryTitle"])
+filtered_df.set_index("tconst")
+filtered_df.to_csv("imdb_duplicates.csv", columns=["tconst", "primaryTitle"], index=False)
+# print(filtered_df.columns)
 
 
 # Mutation Rate
