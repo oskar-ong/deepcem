@@ -20,21 +20,21 @@ from features import process_and_save_ditto
 # ==========================================
 
 # --- File Paths ---
-PATH_RAW_PRINCIPALS = "../data/raw/imdb/title_principals.csv"
-PATH_RAW_TITLE_BASICS     = "../data/raw/imdb/title_basics.csv"
-PATH_RAW_TITLE_DUPS       = "../data/raw/imdb/title_basics_dups.csv"
-PATH_RAW_NAME_BASICS     = "../data/raw/imdb/name_basics.csv"
-PATH_RAW_NAME_DUPS       = "../data/raw/imdb/name_basics_dups.csv"
+PATH_RAW_PRINCIPALS = "./data/raw/imdb/title_principals.csv"
+PATH_RAW_TITLE_BASICS     = "./data/raw/imdb/title_basics.csv"
+PATH_RAW_TITLE_DUPS       = "./data/raw/imdb/title_basics_dups.csv"
+PATH_RAW_NAME_BASICS     = "./data/raw/imdb/name_basics.csv"
+PATH_RAW_NAME_DUPS       = "./data/raw/imdb/name_basics_dups.csv"
 
-PATH_OUT_MOVIE_TRAIN      = "../data/processed/imdb/movie/train.jsonl"
-PATH_OUT_MOVIE_VALID      = "../data/processed/imdb/movie/valid.jsonl"
-PATH_OUT_MOVIE_TEST       = "../data/processed/imdb/movie/test.jsonl"
-PATH_OUT_MOVIE_TEST_WO_LABEL       = "../data/processed/imdb/movie/input_template.jsonl"
-PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.jsonl"
-PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.jsonl"
-PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.jsonl"
-PATH_OUT_NAME_INFERENCE     = "../data/processed/imdb/name/inference.jsonl"
-PATH_OUT_NAME_TEST_WO_LABEL       = "../data/processed/imdb/name/input_template.jsonl"
+PATH_OUT_MOVIE_TRAIN      = "./data/processed/imdb/movie/train.jsonl"
+PATH_OUT_MOVIE_VALID      = "./data/processed/imdb/movie/valid.jsonl"
+PATH_OUT_MOVIE_TEST       = "./data/processed/imdb/movie/test.jsonl"
+PATH_OUT_MOVIE_TEST_WO_LABEL       = "./data/processed/imdb/movie/input_template.jsonl"
+PATH_OUT_NAME_TRAIN      = "./data/processed/imdb/name/train.jsonl"
+PATH_OUT_NAME_VALID      = "./data/processed/imdb/name/valid.jsonl"
+PATH_OUT_NAME_TEST       = "./data/processed/imdb/name/test.jsonl"
+PATH_OUT_NAME_INFERENCE     = "./data/processed/imdb/name/inference.jsonl"
+PATH_OUT_NAME_TEST_WO_LABEL       = "./data/processed/imdb/name/input_template.jsonl"
 
 # --- Column Names ---
 COL_TCONST     = "tconst"
@@ -376,21 +376,21 @@ def main():
     drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
     write_input_json(PATH_OUT_MOVIE_TEST, PATH_OUT_MOVIE_TEST_WO_LABEL, drop_list)
     for ip, op, split in zip([PATH_OUT_MOVIE_TRAIN, PATH_OUT_MOVIE_VALID, PATH_OUT_MOVIE_TEST], 
-                      ["../data/processed/imdb/movie/ditto/train.txt", "../data/processed/imdb/movie/ditto/valid.txt", 
-                       "../data/processed/imdb/movie/ditto/test.txt"], ["train", "valid", "test"]):
+                      ["./data/processed/imdb/movie/ditto/train.txt", "./data/processed/imdb/movie/ditto/valid.txt", 
+                       "./data/processed/imdb/movie/ditto/test.txt"], ["train", "valid", "test"]):
         df = process_and_save_ditto(ip, drop_list, op)
         df = process_relationship_scores(df, m_to_p, uf_p, COL_TCONST, DROPOUT_PROB)
-        serialize_to_ditto(df, f"../data/processed/imdb/movie/ditto/{split}_rel_score.txt")
+        serialize_to_ditto(df, f"./data/processed/imdb/movie/ditto/{split}_rel_score.txt")
 
     drop_list = ['primaryName', 'cluster_id', 'block_key']
 
     write_input_json(PATH_OUT_NAME_INFERENCE, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
     for ip, op, split in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
-                      ["../data/processed/imdb/name/ditto/train.txt", "../data/processed/imdb/name/ditto/valid.txt", 
-                       "../data/processed/imdb/name/ditto/test.txt"],["train", "valid", "test"]):
+                      ["./data/processed/imdb/name/ditto/train.txt", "./data/processed/imdb/name/ditto/valid.txt", 
+                       "./data/processed/imdb/name/ditto/test.txt"],["train", "valid", "test"]):
         df = process_and_save_ditto(ip, drop_list, op)
         df = process_relationship_scores(df, p_to_m, uf_m, COL_NCONST, DROPOUT_PROB)
-        serialize_to_ditto(df, f"../data/processed/imdb/name/ditto/{split}_rel_score.txt")
+        serialize_to_ditto(df, f"./data/processed/imdb/name/ditto/{split}_rel_score.txt")
 
     return p_test_m, p_test_m, p_test_m
 
