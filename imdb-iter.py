@@ -85,8 +85,9 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
     
     name_pairs_score = extract_scores(f"ditto_out/name_{iter_num}.jsonl", name_pairs_score, name_table_key)
 
-    name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
-    acc, prec, rec, f1 = calc_metrics(f"ditto_out/name_{iter_num}.jsonl", name_testset_fp)
+    # name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
+    name_inference = "./data/processed/imdb/name/inference.jsonl"
+    acc, prec, rec, f1 = calc_metrics(f"ditto_out/name_{iter_num}.jsonl", name_inference)
     print(f"NAME METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
     return movie_pairs_score, name_pairs_score

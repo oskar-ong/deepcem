@@ -33,6 +33,7 @@ PATH_OUT_MOVIE_TEST_WO_LABEL       = "../data/processed/imdb/movie/input_templat
 PATH_OUT_NAME_TRAIN      = "../data/processed/imdb/name/train.jsonl"
 PATH_OUT_NAME_VALID      = "../data/processed/imdb/name/valid.jsonl"
 PATH_OUT_NAME_TEST       = "../data/processed/imdb/name/test.jsonl"
+PATH_OUT_NAME_INFERENCE     = "../data/processed/imdb/name/inference.jsonl"
 PATH_OUT_NAME_TEST_WO_LABEL       = "../data/processed/imdb/name/input_template.jsonl"
 
 # --- Column Names ---
@@ -367,11 +368,9 @@ def main():
                 f.write(json.dumps(entry) + "\n")
 
     random.shuffle(p)
-    with open(PATH_OUT_NAME_TEST_WO_LABEL, "w") as f:
+    with open(PATH_OUT_NAME_INFERENCE, "w") as f:
         for entry in labeled_inference_names:
             f.write(json.dumps(entry) + "\n")
-
-    
     
     DROPOUT_PROB = 0.15
     drop_list = ['primaryTitle', 'originalTitle', 'cluster_id', 'block_key']
@@ -385,7 +384,7 @@ def main():
 
     drop_list = ['primaryName', 'cluster_id', 'block_key']
 
-    #write_input_json(PATH_OUT_NAME_TEST, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
+    write_input_json(PATH_OUT_NAME_INFERENCE, PATH_OUT_NAME_TEST_WO_LABEL, drop_list)
     for ip, op, split in zip([PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST], 
                       ["../data/processed/imdb/name/ditto/train.txt", "../data/processed/imdb/name/ditto/valid.txt", 
                        "../data/processed/imdb/name/ditto/test.txt"],["train", "valid", "test"]):
