@@ -218,6 +218,44 @@ def analyze_dataset_difficulty(pairs: List[Tuple[dict, dict, int]]):
     avg_pos = sum(pos_sims) / len(pos_sims) if pos_sims else 0
     print(f"--- Dataset Difficulty Report ---\nAvg Match Sim: {avg_pos:.4f}\nAvg Neg Sim:   {avg_neg:.4f}")
 
+def propagate_dependency_pairs(
+    parent_pairs: List[Tuple[dict, dict, int]], 
+    dependency_map: Dict[str, Set[str]]
+) -> List[Tuple[str, str, int]]:
+
+    required_name_pairs = set()
+    
+    for p1_dict, p2_dict, movie_label in parent_pairs:
+        # Get IDs (e.g., 'tt12345')
+        id1, id2 = p1_dict[COL_TCONST], p2_dict[COL_TCONST]
+        
+        # Get related actors for both movies
+        deps1 = dependency_map.get(id1, set())
+        deps2 = dependency_map.get(id2, set())
+        
+        # Create the Cartesian Product: (n1, n3), (n2, n3)
+        for n_a, n_b in itertools.product(deps1, deps2):
+            if n_a == n_b:
+                continue # Skip self-comparisons
+                
+            # Ensure canonical ordering for the set (n_small, n_large)
+            pair = tuple(sorted((n_a, n_b)))
+            required_name_pairs.add(pair)
+            
+    return list(required_name_pairs)
+
+def add_labels(pairs, uf, df, id_col):
+    labeled_pairs = []
+    # Convert DF to dict for O(1) lookup
+    df_tmp = df.copy()
+    name_lookup = df_tmp.set_index(id_col, drop=False).to_dict('index')
+    
+    for n1, n2 in pairs:
+        if n1 in name_lookup and n2 in name_lookup:
+            label = 1 if uf.find(n1) == uf.find(n2) else 0
+            labeled_pairs.append((name_lookup[n1], name_lookup[n2], label))
+    return labeled_pairs
+
 def write_input_json(input_fp, output_fp, columns_to_remove):
 
     with open(input_fp, 'r', encoding='utf-8') as infile, \
@@ -267,7 +305,7 @@ def main():
         return {node for c in comps for node in c if node.startswith("nm")}
 
     train_ids_m, valid_ids_m, test_ids_m = map(get_m_ids, splits)
-    train_ids_p, valid_ids_p, test_ids_p = map(get_p_ids, splits)
+    # train_ids_p, valid_ids_p, test_ids_p = map(get_p_ids, splits)
 
     # 3. Load & Cluster
     df_basics_m = pd.read_csv(PATH_RAW_TITLE_BASICS)
@@ -290,15 +328,27 @@ def main():
     create_block_key = create_block_key_movie
     column = COL_TCONST
     m_train, m_valid, m_test = map(prep_subset, [train_ids_m, valid_ids_m, test_ids_m])
-    df_basics: pd.DataFrame = df_basics_p.copy()
-    mapping = mapping_p
-    column = COL_NCONST
-    create_block_key = create_block_key_name
-    n_train, n_valid, n_test = map(prep_subset, [train_ids_p, valid_ids_p, test_ids_p])
+    # df_basics: pd.DataFrame = df_basics_p.copy()
+    # mapping = mapping_p
+    # column = COL_NCONST
+    # create_block_key = create_block_key_name
+    # n_train, n_valid, n_test = map(prep_subset, [train_ids_p, valid_ids_p, test_ids_p])
 
     # 4. Pairs
     p_train_m, p_valid_m, p_test_m = map(generate_pairs_for_subset, [m_train, m_valid, m_test])
-    p_train_n, p_valid_n, p_test_n = map(generate_pairs_for_subset, [n_train, n_valid, n_test])
+    # p_train_names, p_valid_names, p_test_names = map(propagate_dependency_pairs, [m_train, m_valid, m_test])
+    p_train_names = propagate_dependency_pairs(p_train_m, m_to_p)
+    labeled_train_names = add_labels(p_train_names, uf_p, df_basics_p, COL_NCONST)
+    if labeled_train_names:
+        example_pair = labeled_train_names[0]
+        print(f"DEBUG: Does entity 1 have nconst? {'nconst' in example_pair[0]}")
+        print(f"DEBUG: Entity keys: {example_pair[0].keys()}")
+    p_valid_names = propagate_dependency_pairs(p_valid_m, m_to_p)
+    labeled_valid_names = add_labels(p_valid_names, uf_p, df_basics_p, COL_NCONST)
+    p_test_names = propagate_dependency_pairs(p_test_m, m_to_p)
+    labeled_test_names = add_labels(p_test_names, uf_p, df_basics_p, COL_NCONST)
+    # p_train_n, p_valid_n, p_test_n = map(generate_pairs_for_subset, [n_train, n_valid, n_test])
+
 
     analyze_dataset_difficulty(p_train_m)
     
@@ -309,7 +359,7 @@ def main():
             for entry in p:
                 f.write(json.dumps(entry) + "\n")
 
-    for p, path in zip([p_train_n, p_valid_n, p_test_n], [PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST]):
+    for p, path in zip([labeled_train_names, labeled_valid_names, labeled_test_names], [PATH_OUT_NAME_TRAIN, PATH_OUT_NAME_VALID, PATH_OUT_NAME_TEST]):
         random.shuffle(p)
         with open(path, "w") as f:
             for entry in p:
