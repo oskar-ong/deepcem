@@ -14,7 +14,6 @@ def main():
     # FINE TUNE MOVIE TABLE
     dataset = "imdb_hard"
     task_movie = f"{dataset}_movies"
-    lm = "ditto"
     do_train = True
 
     movie_dir = f"./data/{dataset}/movie"
@@ -22,11 +21,8 @@ def main():
     movie_valid_fp = f"{movie_dir}/valid.txt"
     movie_test_fp = f"{movie_dir}/test.txt"
 
-    checkpoint_dir = f"./models/ditto/checkpoints/{task_movie}"
     model_path = f"./models/ditto/checkpoints/{task_movie}/model.pt"
     configs_path = f"./models/ditto/configs.json"
-    log_dir = f"./logs"
-    index_column = "id"
 
     with Path(configs_path).open("r", encoding="utf-8") as f:
         file_data: list = json.load(f)
@@ -55,7 +51,7 @@ def main():
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
             "python",
-            f"./models/{lm}/train_ditto.py",
+            f"./models/ditto/train_ditto.py",
             "--task", task_movie,
             "--batch_size", "32",
             "--max_len", "128",
@@ -91,9 +87,8 @@ def main():
 
     # FINE TUNE NAME TABLE
     task_name = f"{dataset}_names"
-    lm = "ditto"
     do_train = True
-    
+
     name_dir = f"./data/{dataset}/name"
     name_train_fp = f"{name_dir}/train.txt"
     name_valid_fp = f"{name_dir}/valid.txt"
@@ -130,7 +125,7 @@ def main():
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
             "python",
-            f"./models/{lm}/train_ditto.py",
+            f"./models/ditto/train_ditto.py",
             "--task", task_name,
             "--batch_size", "32",
             "--max_len", "128",
@@ -165,18 +160,14 @@ def main():
 
     # FINE TUNE MOVIE TABLE WITH REL SCORE
     task_movie_rel = f"{dataset}_movies_rel_score"
-    lm = "ditto"
     do_train = True
 
     movie_train_fp = f"{movie_dir}/train_rel_score.txt"
     movie_valid_fp = f"{movie_dir}/valid_rel_score.txt"
     movie_test_fp = f"{movie_dir}/test_rel_score.txt"
 
-    checkpoint_dir = f"./models/ditto/checkpoints/{task_movie_rel}"
     model_path = f"./models/ditto/checkpoints/{task_movie_rel}/model.pt"
     configs_path = f"./models/ditto/configs.json"
-    log_dir = f"./logs"
-    index_column = "id"
 
     with Path(configs_path).open("r", encoding="utf-8") as f:
         file_data: list = json.load(f)
@@ -205,7 +196,7 @@ def main():
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
             "python",
-            f"./models/{lm}/train_ditto.py",
+            f"./models/ditto/train_ditto.py",
             "--task", task_movie_rel,
             "--batch_size", "32",
             "--max_len", "128",
@@ -242,9 +233,7 @@ def main():
     # FINE TUNE NAME TABLE
 
     task_name_rel = f"{dataset}_names_rel_score"
-    lm = "ditto"
     do_train = True
-
 
     name_train_fp = f"{name_dir}/train_rel_score.txt"
     name_valid_fp = f"{name_dir}/valid_rel_score.txt"
@@ -280,7 +269,7 @@ def main():
         shutil.copyfile(configs_path, 'configs.json')
         cmd = [
             "python",
-            f"./models/{lm}/train_ditto.py",
+            f"./models/ditto/train_ditto.py",
             "--task", task_name_rel,
             "--batch_size", "32",
             "--max_len", "128",
