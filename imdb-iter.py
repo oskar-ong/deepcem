@@ -56,8 +56,8 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
     
     # Update STATE with new Paper results
     movie_pairs_score = extract_scores(f"ditto_out/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
-    dir = "./data/imdb_hard/"
-    movie_testset_fp = f"./data/{dir}/movie/ditto/test.txt"
+
+    movie_testset_fp = f"./data/imdb_hard/movie/ditto/test.txt"
     acc, prec, rec, f1 = calc_metrics(f"ditto_out/movie_{iter_num}.jsonl", movie_testset_fp)
     print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
