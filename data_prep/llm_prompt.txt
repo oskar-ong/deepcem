@@ -2004,3 +2004,32 @@ tt3364206,Topsy and Tim
 tt12534376,4Cylinder 400
 tt12540259,Lilies
 tt12533848,Horses in Winter
+
+
+For each line in the following csv, create a different name for the primary title. 
+The new title should have a low string similarity to the old title, but should semantically relate to the title. 
+The titles are from movies or tv shows. Return in the same format so i can copy it to my clipboard:
+
+tt12539759,Suyamvaram
+tt0086973,Blame It on Rio
+tt12535208,The Old Barn Dance
+tt12540075,Fairyland Lovers
+tt12540202,Top
+tt0052547,Everybody Loves Peter
+tt3089896,Ali AlZibaq
+tt12532524,CovenK
+tt7905602,Kala Varam Aaye
+tt1847750,Who Is Dayani Cristal
+tt3692292,A ThirtyYear Olds Health and Physical Education
+tt12541726,Whitney Houston Where Do Broken Hearts Goq
+tt12540368,Checkmate
+tt12545742,How to Get Out of a Speeding Ticket
+tt12538060,100 Jahre Mattscheibe
+tt12536433,A primera vistai
+tt6083652,An Acquired Taste
+tt12543703,New Initial D the Movie Legend 3  DreamV
+tt12544360,Marilyn Manson Tourniquet
+tt0158117,The Letter
+tt12540322,Dirty MoviesH
+tt12541653,Sheng Baoluo yi yuan zhi miF
+tt12532665,Madames Cravings

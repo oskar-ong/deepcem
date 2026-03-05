@@ -12,12 +12,12 @@ from matcher import load_model, predict
 def main():
 
     # FINE TUNE MOVIE TABLE
-    dataset = "imdb"
+    dataset = "imdb_hard"
     task_movie = f"{dataset}_movies"
     lm = "ditto"
     do_train = True
 
-    movie_dir = f"./data/processed/imdb/movie/ditto"
+    movie_dir = f"./data/{dataset}/movie/ditto"
     movie_train_fp = f"{movie_dir}/train.txt"
     movie_valid_fp = f"{movie_dir}/valid.txt"
     movie_test_fp = f"{movie_dir}/test.txt"
@@ -90,12 +90,10 @@ def main():
 
 
     # FINE TUNE NAME TABLE
-    dataset = "imdb"
     task_name = f"{dataset}_names"
     lm = "ditto"
     do_train = True
 
-    name_dir = f"./data/processed/imdb/name/ditto"
     name_train_fp = f"{name_dir}/train.txt"
     name_valid_fp = f"{name_dir}/valid.txt"
     name_test_fp = f"{name_dir}/test.txt"
@@ -165,12 +163,10 @@ def main():
     print(task_name, acc, prec, rec, f1)
 
     # FINE TUNE MOVIE TABLE WITH REL SCORE
-    dataset = "imdb"
     task_movie_rel = f"{dataset}_movies_rel_score"
     lm = "ditto"
     do_train = True
 
-    movie_dir = f"./data/processed/imdb/movie/ditto"
     movie_train_fp = f"{movie_dir}/train_rel_score.txt"
     movie_valid_fp = f"{movie_dir}/valid_rel_score.txt"
     movie_test_fp = f"{movie_dir}/test_rel_score.txt"
@@ -243,21 +239,18 @@ def main():
     print(task_movie_rel, acc, prec, rec, f1)
 
     # FINE TUNE NAME TABLE
-    dataset = "imdb"
+
     task_name_rel = f"{dataset}_names_rel_score"
     lm = "ditto"
     do_train = True
 
-    name_dir = f"./data/processed/imdb/name/ditto"
+    name_dir = f"./data/{dataset}/name/ditto"
     name_train_fp = f"{name_dir}/train_rel_score.txt"
     name_valid_fp = f"{name_dir}/valid_rel_score.txt"
     name_test_fp = f"{name_dir}/test_rel_score.txt"
-
-    checkpoint_dir = f"./models/ditto/checkpoints/{task_name_rel}"
     model_path = f"./models/ditto/checkpoints/{task_name_rel}/model.pt"
     configs_path = f"./models/ditto/configs.json"
-    log_dir = f"./logs"
-    index_column = "id"
+
 
     with Path(configs_path).open("r", encoding="utf-8") as f:
         file_data: list = json.load(f)

@@ -19,7 +19,6 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
                 relation_map[c1].add(c2)
     return dict(relation_map)
 
-
 def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map):
     # MOVIES (MAIN ENTITY FIRST)
 
@@ -57,7 +56,7 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
     
     # Update STATE with new Paper results
     movie_pairs_score = extract_scores(f"ditto_out/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
-    movie_testset_fp = f"./data/processed/imdb/movie/ditto/test.txt"
+    movie_testset_fp = f"./data/imdb/movie/ditto/test.txt"
     acc, prec, rec, f1 = calc_metrics(f"ditto_out/movie_{iter_num}.jsonl", movie_testset_fp)
     print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
@@ -86,7 +85,7 @@ def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, m
     name_pairs_score = extract_scores(f"ditto_out/name_{iter_num}.jsonl", name_pairs_score, name_table_key)
 
     # name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
-    name_inference = "./data/processed/imdb/name/inference.jsonl"
+    name_inference = "./data/imdb/name/inference.jsonl"
     acc, prec, rec, f1 = calc_metrics(f"ditto_out/name_{iter_num}.jsonl", name_inference)
     print(f"NAME METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
 
@@ -166,9 +165,9 @@ def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, L
 def main():
     # Configuration
     MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
-
-    movie_input_template = "./data/processed/imdb/movie/input_template.jsonl"
-    name_input_template = "./data/processed/imdb/name/input_template.jsonl"
+    dir = "./data/imdb_hard/"
+    movie_input_template = f"{dir}movie/input_template.jsonl"
+    name_input_template = f"{dir}/name/input_template.jsonl"
 
     # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
     movie_table_key = "tconst"
@@ -181,7 +180,7 @@ def main():
     # name_pairs_score = dict.fromkeys(name_pairs, 0.5)
     name_pairs_score = {tuple(sorted(pair)): 0.5 for pair in name_pairs}
 
-    PATH_RAW_PRINCIPALS = "./data/raw/imdb/title_principals.csv"
+    PATH_RAW_PRINCIPALS = f"{dir}/title_principals.csv"
     # Dependency map: Dict[movie_ids: str, Dict[entity_type, List[ids: str]]]
     movie_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, movie_table_key, name_table_key)
     name_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, name_table_key, movie_table_key)
