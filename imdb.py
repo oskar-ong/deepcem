@@ -1,11 +1,8 @@
-import argparse
 import json
 import os
 from pathlib import Path
 import shutil
 import subprocess
-import jsonlines
-import pandas as pd
 from evaluate import calc_metrics
 from matcher import load_model, predict 
 
