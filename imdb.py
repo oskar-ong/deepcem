@@ -17,7 +17,7 @@ def main():
     lm = "ditto"
     do_train = True
 
-    movie_dir = f"./data/{dataset}/movie/ditto"
+    movie_dir = f"./data/{dataset}/movie"
     movie_train_fp = f"{movie_dir}/train.txt"
     movie_valid_fp = f"{movie_dir}/valid.txt"
     movie_test_fp = f"{movie_dir}/test.txt"
@@ -93,7 +93,8 @@ def main():
     task_name = f"{dataset}_names"
     lm = "ditto"
     do_train = True
-
+    
+    name_dir = f"./data/{dataset}/name"
     name_train_fp = f"{name_dir}/train.txt"
     name_valid_fp = f"{name_dir}/valid.txt"
     name_test_fp = f"{name_dir}/test.txt"
@@ -244,7 +245,7 @@ def main():
     lm = "ditto"
     do_train = True
 
-    name_dir = f"./data/{dataset}/name/ditto"
+
     name_train_fp = f"{name_dir}/train_rel_score.txt"
     name_valid_fp = f"{name_dir}/valid_rel_score.txt"
     name_test_fp = f"{name_dir}/test_rel_score.txt"
