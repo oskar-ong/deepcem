@@ -86,6 +86,9 @@ def evaluate(task, input_path, output_path, dataset_dir):
     #env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
 
+    # TODO: REMOVE
+    log.info(output_path)
+
     true_fp = f"{dataset_dir}/test.txt"
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
     log.info(f"{task} METRICS", acc, prec, rec, f1)
@@ -104,8 +107,8 @@ def main():
 
     finetune(configs_path, task, dataset_dir)
 
-    input_path = f"movie_baseline_0_input.jsonl"
-    output_path = f"ditto_out/movie_baseline_0.jsonl"
+    input_path = f"{dataset_dir}/input.jsonl"
+    output_path = f"ditto_out/{entity}_baseline_0.jsonl"
     evaluate(task, input_path, output_path, dataset_dir)
 
     # ================================================================================
@@ -117,7 +120,7 @@ def main():
 
     finetune(configs_path, task_name, dataset_dir)
 
-    input_path = f"{dir}/input.jsonl"
+    input_path = f"{dataset_dir}/input.jsonl"
     output_path = f"ditto_out/{entity}_baseline_0.jsonl"
     evaluate(task_name, input_path, output_path, dataset_dir)
 
