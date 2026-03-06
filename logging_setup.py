@@ -1,6 +1,5 @@
-import datetime
+from datetime import datetime
 import logging
-
 
 def setup_logger(base_name="CollectiveER"):
     # Generate timestamp: e.g., 20260306_1012
