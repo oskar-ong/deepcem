@@ -110,7 +110,7 @@ def main():
     task = f"{dataset}_{entity}_baseline_0"
     dataset_dir = f"./data/{dataset}/movie/baseline0"
 
-    # finetune(configs_path, task, dataset_dir)
+    finetune(configs_path, task, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
     output_path = f"./ditto_out/{entity}_baseline_0.jsonl"
@@ -123,7 +123,7 @@ def main():
     task_name = f"{dataset}_{entity}_baseline_0"
     dataset_dir = f"./data/{dataset}/{entity}/baseline0" # TODO: Should build like this: dataset_dir -> task_dir -> entity type
 
-    # finetune(configs_path, task_name, dataset_dir)
+    finetune(configs_path, task_name, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
     output_path = f"./ditto_out/{entity}_baseline_0.jsonl"
