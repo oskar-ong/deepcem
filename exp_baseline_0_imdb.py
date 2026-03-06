@@ -91,7 +91,7 @@ def evaluate(task, input_path, output_path, dataset_dir):
     env = os.environ.copy()
     #env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
-    
+
     log.info(f"Finished Predicting")
 
     true_fp = f"{dataset_dir}/test.txt"
@@ -113,7 +113,7 @@ def main():
     # finetune(configs_path, task, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
-    output_path = f"ditto_out/{entity}_baseline_0.jsonl"
+    output_path = f"./ditto_out/{entity}_baseline_0.jsonl"
     evaluate(task, input_path, output_path, dataset_dir)
 
     # ================================================================================
@@ -126,7 +126,7 @@ def main():
     # finetune(configs_path, task_name, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
-    output_path = f"ditto_out/{entity}_baseline_0.jsonl"
+    output_path = f"./ditto_out/{entity}_baseline_0.jsonl"
     evaluate(task_name, input_path, output_path, dataset_dir)
 
 if __name__=="__main__":
