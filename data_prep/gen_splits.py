@@ -543,11 +543,14 @@ def main():
         template_src = f"{cfg.path_out_dir}test.jsonl" if cfg.is_main else f"{cfg.path_out_dir}inference.jsonl"
         template_dst = f"{cfg.path_out_dir}input_template.jsonl"
         write_input_json(template_src, template_dst, cfg.drop_list)
+
+        # BASELINE 0
         baseline_0_input_json = f"{cfg.path_out_dir}baseline0/input.jsonl"
         # remove "REL_SCORE" from baseline0 experiment
         baseline_0_drop_list = cfg.drop_list.copy()
         baseline_0_drop_list.append("REL_SCORE")
         write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
+
 
         # --- D. Ditto Specific Serialization ---
         for split in ["train", "valid", "test"]:
