@@ -13,6 +13,7 @@ from typing import Callable, Dict, Iterable, List, Literal, Optional, Sequence, 
 
 import pandas as pd
 
+# TODO: IMPORT AS ARGPASRSE
 from entity_configs.imdb_hard import CONFIGS
 
 # --- Parameters ---
@@ -542,6 +543,11 @@ def main():
         template_src = f"{cfg.path_out_dir}test.jsonl" if cfg.is_main else f"{cfg.path_out_dir}inference.jsonl"
         template_dst = f"{cfg.path_out_dir}input_template.jsonl"
         write_input_json(template_src, template_dst, cfg.drop_list)
+        baseline_0_input_json = f"{cfg.path_out_dir}baseline0/input.jsonl"
+        # remove "REL_SCORE" from baseline0 experiment
+        baseline_0_drop_list = cfg.drop_list.copy()
+        baseline_0_drop_list.append("REL_SCORE")
+        write_input_json(template_dst, baseline_0_input_json, baseline_0_drop_list)
 
         # --- D. Ditto Specific Serialization ---
         for split in ["train", "valid", "test"]:
@@ -573,7 +579,13 @@ def main():
                 
             # 3. Final serialization to text
             serialize_to_ditto(df_ditto, rel_score_out)
-        
+
+            ### BASELINE 0
+            jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
+            ditto_txt_out = f"{cfg.path_out_dir}baseline0/{split}.txt"
+            df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out)
+            
+
     return processed_entities[main_cfg.name]["pairs"]["test"] # or whatever you need to return
 if __name__ == "__main__":
     main()
