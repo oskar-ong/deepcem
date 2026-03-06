@@ -1,4 +1,5 @@
 from __future__ import annotations
+import argparse
 import csv
 from dataclasses import dataclass
 import itertools
@@ -13,8 +14,7 @@ from typing import Callable, Dict, Iterable, List, Literal, Optional, Sequence, 
 
 import pandas as pd
 
-# TODO: IMPORT AS ARGPASRSE
-from entity_configs.imdb_hard import CONFIGS
+from entity_configs.entityConfig import REGISTRY
 
 # --- Parameters ---
 SPLIT_RATIOS   = (0.7, 0.1, 0.2)  # Train, Val, Test
@@ -137,16 +137,6 @@ def build_unionfind_with_singletons(
                 a, b = row[0].strip(), row[1].strip()
                 if a and b: uf.union(a, b)
     return uf
-
-def create_block_key_movie(row: pd.Series) -> str:
-    title = str(row.get("primaryTitle", "")).lower()
-    title = re.sub(r'^(the|a|an)\s+', '', title)
-    return re.sub(r'[^a-z0-9]', '', title)
-
-def create_block_key_name(row: pd.Series) -> str:
-    title = str(row.get("primaryName", "")).lower()
-    title = re.sub(r'^(the|a|an)\s+', '', title)
-    return re.sub(r'[^a-z0-9]', '', title)
 
 def generate_hard_negatives(df: pd.DataFrame, count: int) -> List[Tuple[dict, dict, int]]:
     neg_pairs = []
@@ -303,6 +293,10 @@ def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
             
     return ditto_lines
 
+
+
+
+
 def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout_prob, rel_name=""):
     """
     Applies Union-Find matching logic and signal dropout to a MultiIndex DataFrame.
@@ -348,87 +342,96 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
     return df
 
 def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_path: str):
-    """
-    Main pipeline function.
-    """
-    # 1. Load and Clean
+
     df = load_to_multiindex(file_path, columns_to_drop)
     print(f"Loaded and cleaned {len(df)} pairs.")
     
-    # 2. Serialize and Save
     serialize_to_ditto(df, output_path)
     print(f"Ditto file saved to: {output_path}")
     return df
 
-@dataclass
-class EntityConfig:
-    name: str                  # e.g., "movie", "name", "studio"
-    id_col: str                # e.g., "tconst", "nconst"
-    id_prefix: str             # e.g., "tt", "nm" (used to extract IDs from components)
-    path_basics: str
-    path_dups: str
-    path_out_dir: str          # e.g., "./data/processed/imdb/movie/"
-    block_key_func: Callable
-    drop_list: List[str]
-    is_main: bool = False
-    ditto_dir: str = ""
+def process_and_save_flattened_ditto(file_path: str, columns_to_drop: List[str], output_path: str, representatives: Dict):
+
+    df = load_flattened_to_multiindex(file_path, columns_to_drop, representatives)
+    print(f"Loaded and cleaned {len(df)} pairs.")
     
-    # Only needed for dependent entities: how they relate to the main entity
-    rel_csv_path: str = ""
-    rel_main_col: str = ""
-    rel_dep_col: str = ""
+    # 2. Serialize and Save
+    serialize_flattened_to_ditto(df, output_path)
+    print(f"Ditto file saved to: {output_path}")
+    return df
 
+def serialize_flattened_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
+    def format_row(row):
+        def fmt(side):
+            # Iterates through columns for 'left' or 'right'
+            # Skips NaN values to keep the Ditto string clean
+            items = []
+            for col, val in row[side].items():
+                if pd.notna(val) and val != "":
+                    items.append(f"COL {col} VAL {val}")
+            return " ".join(items)
+        
+        # Ditto format: LeftEntity \t RightEntity \t Label
+        return f"{fmt('left')}\t{fmt('right')}\t{row['metadata', 'match']}"
 
-# CONFIGS = [
-#     # Create config entry for each entity
+    ditto_lines = df.apply(format_row, axis=1).tolist()
 
-#     # MAIN entity
-#     EntityConfig(
-#         name="movie",
-#         id_col="tconst",
-#         id_prefix="tt",
-#         path_basics="./data/raw/imdb/title_basics.csv",
-#         path_dups="./data/raw/imdb/title_basics_dups.csv",
-#         path_out_dir="./data/processed/imdb_ref/movie/",
-#         block_key_func=create_block_key_movie,
-#         drop_list=['primaryTitle', 'originalTitle', 'cluster_id', 'block_key'],
-#         is_main=True,
-#         ditto_dir= "./data/processed/imdb_ref/movie/"
-#     ),
+    if output_path:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            f.write("\n".join(ditto_lines) + "\n")
+            
+    return ditto_lines
 
-#     # DEPENDENT ENTITY 
-#     EntityConfig(
-#         name="name",
-#         id_col="nconst",
-#         id_prefix="nm",
-#         path_basics="./data/raw/imdb/name_basics.csv",
-#         path_dups="./data/raw/imdb/name_basics_dups.csv",
-#         path_out_dir="./data/processed/imdb_ref/name/",
-#         block_key_func=create_block_key_name,
-#         drop_list=['primaryName', 'cluster_id', 'block_key'],
-#         rel_csv_path="./data/raw/imdb/title_principals.csv",
-#         rel_main_col="tconst",
-#         rel_dep_col="nconst",
-#         ditto_dir= "./data/processed/imdb_ref/name/"
-#     ),
-    # DEPENDENT ENTITY 2, .., n
-    # EntityConfig(
-    #     name="name",
-    #     id_col="nconst",
-    #     id_prefix="nm",
-    #     path_basics="./data/raw/imdb/name_basics.csv",
-    #     path_dups="./data/raw/imdb/name_basics_dups.csv",
-    #     path_out_dir="./data/processed/imdb/name/",
-    #     block_key_func=create_block_key_name,
-    #     drop_list=['primaryName', 'cluster_id', 'block_key'],
-    #     rel_csv_path="./data/raw/imdb/title_principals.csv",
-    #     rel_main_col="tconst",
-    #     rel_dep_col="nconst"
-    # )
+def load_flattened_to_multiindex(
+    file_path: str, 
+    columns_to_drop: List[str], 
+    dep_map: Dict[str, str]
+) -> pd.DataFrame:
+    rows = []
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            if not line.strip(): continue
+            data = json.loads(line)
+            # Structure: [left_dict, right_dict, label]
+            left_ent, right_ent, label = data[0], data[1], data[2]
+            
+            def clean_entity(ent):
+                # 1. Handle mapped dependencies (e.g., name -> primaryName)
+                for dep_col, inner_key in dep_map.items():
+                    if dep_col in ent and isinstance(ent[dep_col], list):
+                        vals = [str(item.get(inner_key, '')) for item in ent[dep_col]]
+                        ent[dep_col] = " ".join(filter(None, vals))
+                
+                # 2. Safety Catch: Ensure NO lists remain in any column
+                # This prevents the ValueError during serialization
+                for col in list(ent.keys()):
+                    if isinstance(ent[col], list):
+                        # Fallback: just stringify the list if not in dep_map
+                        ent[col] = " ".join(map(str, ent[col]))
+                    
+                    if col in columns_to_drop:
+                        ent.pop(col, None)
+                return ent
 
-# ]
+            rows.append({
+                'left': clean_entity(left_ent.copy()),
+                'right': clean_entity(right_ent.copy()),
+                'label': label
+            })
+
+    df_left = pd.DataFrame([r['left'] for r in rows])
+    df_right = pd.DataFrame([r['right'] for r in rows])
+    df_meta = pd.DataFrame([r['label'] for r in rows], columns=['match'])
+
+    return pd.concat([df_left, df_right, df_meta], axis=1, keys=['left', 'right', 'metadata'])
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("dataset", type=str)
+    args = parser.parse_args()
+
+    CONFIGS = REGISTRY[args.dataset]
 
     main_cfg = next(c for c in CONFIGS if c.is_main)
     dep_cfgs = [c for c in CONFIGS if not c.is_main]
@@ -516,7 +519,52 @@ def main():
         processed_entities[dep.name]["pairs"]["inference"] = labeled_inference
 
     # ==========================================
-    # 4. Save to Disk & Ditto Serialization
+    # Create Flattened Schema (BASELINE 1)
+    # ==========================================
+
+    def get_related_records(ids, source_df, id_col):
+        """Filters the source_df for the given IDs and returns records as a list of dicts."""
+        if not ids:
+            return []
+        # Fetch all rows where the ID matches
+        subset = source_df[source_df[id_col].isin(ids)]
+        # Convert those rows to a list of dictionaries
+        return subset.to_dict(orient='records')
+    
+    flattened_relations = {}
+    df_main_flat = processed_entities[main_cfg.name]["df_basics"].copy()
+
+    for dep in dep_cfgs:
+
+        df_main_flat[dep.name] = df_main_flat[main_cfg.id_col].apply(
+            lambda mid: get_related_records(relation_maps[dep.name].get(mid, []), processed_entities[dep.name]["df_basics"], dep.id_col)
+        )
+
+    master_flat_map = df_main_flat.set_index(main_cfg.id_col).to_dict(orient='index')
+
+    def enrich_pairs_flattened(pairs: List[Tuple[dict, dict, int]], lookup_map, id_col):
+        enriched_list = []
+        
+        for left, right, label in pairs:
+            id_a = left.get(id_col)
+            id_b = right.get(id_col)
+            
+            # Pull the full flattened attributes from our master map
+            # We use .get() to avoid KeyErrors if an ID is missing
+            extra_attrs_a = lookup_map.get(id_a, {})
+            extra_attrs_b = lookup_map.get(id_b, {})
+            
+            # Merge the new attributes into the existing dictionaries
+            # .copy() ensures we don't accidentally modify the original list in-place
+            new_left = {**left, **extra_attrs_a}
+            new_right = {**right, **extra_attrs_b}
+            
+            enriched_list.append((new_left, new_right, label))
+            
+        return enriched_list
+
+    # ==========================================
+    # Save to Disk & Ditto Serialization
     # ==========================================
     DROPOUT_PROB = 0.15
 
@@ -531,6 +579,14 @@ def main():
             with open(out_path, "w") as f:
                 for entry in pairs:
                     f.write(json.dumps(entry) + "\n")
+
+            ## Baseline 1:
+            if cfg.is_main:
+                enriched_pairs = enrich_pairs_flattened(processed_entities[main_cfg.name]["pairs"][split_name], master_flat_map, cfg.id_col)
+                out_path = f"{cfg.path_out_dir}/baseline1/{split_name}.jsonl"
+                with open(out_path, "w") as f:
+                    for entry in enriched_pairs:
+                        f.write(json.dumps(entry) + "\n")
                     
         # Save inference (only for dependents)
         if not cfg.is_main:
@@ -552,6 +608,17 @@ def main():
         write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
 
 
+        # BASELINE 1
+        baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
+        # remove "REL_SCORE" from baseline0 experiment
+        baseline_1_drop_list = cfg.drop_list.copy()
+        baseline_1_drop_list.append("REL_SCORE")
+        write_input_json(f"{cfg.path_out_dir}/baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
+
+        reps = {}
+        for dep_cfg in dep_cfgs:
+            reps[dep_cfg.name] = dep_cfg.rep
+
         # --- D. Ditto Specific Serialization ---
         for split in ["train", "valid", "test"]:
             jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
@@ -560,6 +627,13 @@ def main():
             
             # 1. Base Ditto string formatting
             df_ditto = process_and_save_ditto(jsonl_in, cfg.drop_list, ditto_txt_out)
+
+            # Baseline 1 
+            jsonl_in_flat = f"{cfg.path_out_dir}/baseline1/{split}.jsonl"
+            ditto_txt_flat_out = f"{cfg.ditto_dir}/baseline1/{split}.txt"
+
+            
+            df_ditto_flattened = process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps)
             
             # 2. Relationship Scoring
             if cfg.is_main:
