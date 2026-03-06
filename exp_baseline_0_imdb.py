@@ -96,7 +96,8 @@ def evaluate(task, input_path, output_path, dataset_dir):
 
     true_fp = f"{dataset_dir}/test.txt"
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
-    log.info(f"{task} METRICS", acc, prec, rec, f1)
+    log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
+    log.info(f"{task} METRICS: {round(acc,3)}, {round(prec,3)}, {round(rec,3)}, {round(f1,3)}")
     print(f"{task} METRICS BASELINE 0", acc, prec, rec, f1)
 
 def main():
