@@ -547,7 +547,7 @@ def main():
         # remove "REL_SCORE" from baseline0 experiment
         baseline_0_drop_list = cfg.drop_list.copy()
         baseline_0_drop_list.append("REL_SCORE")
-        write_input_json(template_dst, baseline_0_input_json, baseline_0_drop_list)
+        write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
 
         # --- D. Ditto Specific Serialization ---
         for split in ["train", "valid", "test"]:

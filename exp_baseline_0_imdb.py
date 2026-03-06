@@ -109,7 +109,7 @@ def main():
     # ================================================================================
     entity = "movie"
     task = f"{dataset}_{entity}_baseline_0"
-    dataset_dir = f"./data/{dataset}/movie/baseline0"
+    dataset_dir = f"./data/{dataset}/{entity}/baseline0"
 
     finetune(configs_path, task, dataset_dir)
 
