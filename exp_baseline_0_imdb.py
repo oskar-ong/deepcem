@@ -69,6 +69,12 @@ def finetune(configs_path, task, dataset_dir):
     print(f"Finished Finetuning for task: {task}")
 
 def evaluate(task, input_path, output_path, dataset_dir):
+
+    log.info("Start Predicting: ")
+    log.info(f"Task: {task} ")
+    log.info(f"Output Path: {output_path} ")
+    log.info(f"Input Path: {input_path} ")
+
     cmd = [
             "python",
             f"./models/ditto/matcher.py",
@@ -85,9 +91,8 @@ def evaluate(task, input_path, output_path, dataset_dir):
     env = os.environ.copy()
     #env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
-
-    # TODO: REMOVE
-    log.info(output_path)
+    
+    log.info(f"Finished Predicting")
 
     true_fp = f"{dataset_dir}/test.txt"
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
@@ -105,7 +110,7 @@ def main():
     task = f"{dataset}_{entity}_baseline_0"
     dataset_dir = f"./data/{dataset}/movie/baseline0"
 
-    finetune(configs_path, task, dataset_dir)
+    # finetune(configs_path, task, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
     output_path = f"ditto_out/{entity}_baseline_0.jsonl"
@@ -118,7 +123,7 @@ def main():
     task_name = f"{dataset}_{entity}_baseline_0"
     dataset_dir = f"./data/{dataset}/{entity}/baseline0" # TODO: Should build like this: dataset_dir -> task_dir -> entity type
 
-    finetune(configs_path, task_name, dataset_dir)
+    # finetune(configs_path, task_name, dataset_dir)
 
     input_path = f"{dataset_dir}/input.jsonl"
     output_path = f"ditto_out/{entity}_baseline_0.jsonl"
