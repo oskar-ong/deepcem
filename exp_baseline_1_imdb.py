@@ -10,7 +10,6 @@ from logging_setup import setup_logger
 log = setup_logger("exp_baseline_1_imdb")
 log.info("Start Experiment: Baseline 1 - Flattened Schema")
 
-
 def finetune(configs_path, task, dataset_dir):
 
     # ================================================================================
@@ -113,22 +112,10 @@ def main():
 
     finetune(configs_path, task, dataset_dir)
 
-    input_path = f"{dataset_dir}/input.jsonl"
+    # input_path = f"{dataset_dir}/input.jsonl"
+    input_path = f"{dataset_dir}/test.txt"
     output_path = f"./ditto_out/{entity}_baseline_1.jsonl"
     evaluate(task, input_path, output_path, dataset_dir)
-
-    # ================================================================================
-    # NAMES
-    # ================================================================================
-    entity = "name"
-    task_name = f"{dataset}_{entity}_baseline_1"
-    dataset_dir = f"./data/{dataset}/{entity}/baseline1" # TODO: Should build like this: dataset_dir -> task_dir -> entity type
-
-    finetune(configs_path, task_name, dataset_dir)
-
-    input_path = f"{dataset_dir}/input.jsonl"
-    output_path = f"./ditto_out/{entity}_baseline_1.jsonl"
-    evaluate(task_name, input_path, output_path, dataset_dir)
 
 if __name__=="__main__":
     main()

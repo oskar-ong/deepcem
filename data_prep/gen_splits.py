@@ -1,16 +1,12 @@
 from __future__ import annotations
 import argparse
 import csv
-from dataclasses import dataclass
 import itertools
 import json
 import random
-import re
 from collections import defaultdict
-from difflib import SequenceMatcher
-from itertools import combinations
 from queue import Queue
-from typing import Callable, Dict, Iterable, List, Literal, Optional, Sequence, Set, Tuple
+from typing import Dict, List, Literal, Sequence, Set, Tuple
 
 import pandas as pd
 
@@ -29,7 +25,6 @@ def build_relation_map(csv_fp: str, column1: str, column2: str, prefix1: str, pr
         reader = csv.DictReader(f)
         for row in reader:
             c1, c2 = row[column1], row[column2]
-            # c1, c2 = f"{prefix1}{row[column1]}", f"{prefix2}{row[column2]}"
             if c1 and c2:
                 relation_map[c1].add(c2)
     return dict(relation_map)
@@ -273,14 +268,14 @@ def load_to_multiindex(file_path: str, columns_to_drop: List[str] = None) -> pd.
 
     return df
 
-def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
+def serialize_to_ditto(df: pd.DataFrame, output_path: str, id_col: str) -> List[str]:
     """
     Converts a MultiIndex DataFrame into Ditto serialization format.
     """
     def format_row(row):
         # Helper to format one side into COL VAL strings
         def fmt(side):
-            return " ".join([f"COL {k} VAL {v}" for k, v in row[side].items() if pd.notna(v)])
+            return " ".join([f"COL {k} VAL {v}" for k, v in row[side].items() if pd.notna(v) and k != id_col])
         
         return f"{fmt('left')}\t{fmt('right')}\t{row['metadata', 'match']}"
 
@@ -292,10 +287,6 @@ def serialize_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
             f.write("\n".join(ditto_lines) + "\n")
             
     return ditto_lines
-
-
-
-
 
 def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout_prob, rel_name=""):
     """
@@ -341,33 +332,33 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
     
     return df
 
-def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_path: str):
+def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_path: str, id_col):
 
     df = load_to_multiindex(file_path, columns_to_drop)
     print(f"Loaded and cleaned {len(df)} pairs.")
     
-    serialize_to_ditto(df, output_path)
+    serialize_to_ditto(df, output_path, id_col)
     print(f"Ditto file saved to: {output_path}")
     return df
 
-def process_and_save_flattened_ditto(file_path: str, columns_to_drop: List[str], output_path: str, representatives: Dict):
+def process_and_save_flattened_ditto(file_path: str, columns_to_drop: List[str], output_path: str, representatives: Dict, id_col):
 
     df = load_flattened_to_multiindex(file_path, columns_to_drop, representatives)
     print(f"Loaded and cleaned {len(df)} pairs.")
     
     # 2. Serialize and Save
-    serialize_flattened_to_ditto(df, output_path)
+    serialize_flattened_to_ditto(df, output_path, id_col)
     print(f"Ditto file saved to: {output_path}")
     return df
 
-def serialize_flattened_to_ditto(df: pd.DataFrame, output_path: str = None) -> List[str]:
+def serialize_flattened_to_ditto(df: pd.DataFrame, output_path: str, id_col) -> List[str]:
     def format_row(row):
         def fmt(side):
             # Iterates through columns for 'left' or 'right'
             # Skips NaN values to keep the Ditto string clean
             items = []
             for col, val in row[side].items():
-                if pd.notna(val) and val != "":
+                if pd.notna(val) and val != "" and col != id_col:
                     items.append(f"COL {col} VAL {val}")
             return " ".join(items)
         
@@ -609,11 +600,13 @@ def main():
 
 
         # BASELINE 1
-        baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
-        # remove "REL_SCORE" from baseline0 experiment
-        baseline_1_drop_list = cfg.drop_list.copy()
-        baseline_1_drop_list.append("REL_SCORE")
-        write_input_json(f"{cfg.path_out_dir}/baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
+        if cfg.is_main:
+            baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
+            # remove "REL_SCORE" from baseline0 experiment
+            baseline_1_drop_list = cfg.drop_list.copy()
+            baseline_1_drop_list.append("REL_SCORE")
+            baseline_1_drop_list.append(cfg.id_col)
+            write_input_json(f"{cfg.path_out_dir}baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
 
         reps = {}
         for dep_cfg in dep_cfgs:
@@ -626,14 +619,14 @@ def main():
             rel_score_out = f"{cfg.ditto_dir}{split}_rel_score.txt"
             
             # 1. Base Ditto string formatting
-            df_ditto = process_and_save_ditto(jsonl_in, cfg.drop_list, ditto_txt_out)
+            df_ditto = process_and_save_ditto(jsonl_in, cfg.drop_list, ditto_txt_out, cfg.id_col)
 
-            # Baseline 1 
-            jsonl_in_flat = f"{cfg.path_out_dir}/baseline1/{split}.jsonl"
-            ditto_txt_flat_out = f"{cfg.ditto_dir}/baseline1/{split}.txt"
-
-            
-            df_ditto_flattened = process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps)
+            if cfg.is_main:
+                # Baseline 1 
+                jsonl_in_flat = f"{cfg.path_out_dir}baseline1/{split}.jsonl"
+                ditto_txt_flat_out = f"{cfg.ditto_dir}baseline1/{split}.txt"
+                
+                df_ditto_flattened = process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps, cfg.id_col)
             
             # 2. Relationship Scoring
             if cfg.is_main:
@@ -655,12 +648,12 @@ def main():
                 )
                 
             # 3. Final serialization to text
-            serialize_to_ditto(df_ditto, rel_score_out)
+            serialize_to_ditto(df_ditto, rel_score_out, cfg.id_col)
 
             ### BASELINE 0
             jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
             ditto_txt_out = f"{cfg.path_out_dir}baseline0/{split}.txt"
-            df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out)
+            df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out, cfg.id_col)
             
 
     return processed_entities[main_cfg.name]["pairs"]["test"] # or whatever you need to return
