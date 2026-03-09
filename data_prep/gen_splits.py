@@ -32,18 +32,30 @@ def build_relation_map(csv_fp: str, column1: str, column2: str, prefix1: str, pr
 def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Set[str]]:
     used = set()
     components = []
+    # for every entity in relation map
     for node in rel_map.keys():
+        # disregard already seen entities
         if node in used: continue
-        comp, queue = set(), Queue()
+        # component = set of entities
+        comp = set()
+        # use queue object to store nodes to look at 
+        queue = Queue()
+        # add entity to queue and mark as seen
         queue.put(node)
         used.add(node)
+        # go through the queue
         while not queue.empty():
             u = queue.get()
+            # add entity to component
             comp.add(u)
+            # for every related entity to current queue pop
             for v in rel_map.get(u, []):
+                # check if already seen
                 if v not in used:
+                    # add to queue and mark as seen
                     used.add(v)
                     queue.put(v)
+        # return the component (set of nodes)
         components.append(comp)
     return components
 
@@ -432,18 +444,43 @@ def main():
     # ==========================================
     # Build a massive graph: Main <-> Dep1, Main <-> Dep2, etc.
     global_rel_map = defaultdict(set)
+    entity_ufs = {}
+
+    for cfg in CONFIGS:
+        # create a union find for each entity type based on duplicate csv (transitive closure)
+        uf = build_unionfind_with_singletons(cfg.path_basics, cfg.path_dups, cfg.id_col)
+        entity_ufs[cfg.name] = uf
+
+        # connect each duplicate to their root in global map
+        # for every reference 
+        for node in uf.parent.keys():
+            # find the root 
+            root = uf.find(node)
+            # if reference is not the root -> duplicate
+            if node != root:
+                # add connection to global relation map
+                # duplicate -> root
+                global_rel_map[node].add(root)
+                # root -> duplicate
+                global_rel_map[root].add(node)
+
     relation_maps = {} # Store these for inference later
-    
+
+
+    # TODO: THIS ONLY TAKES 1 TO 1 RELATIONSHIP INTO ACCOUNT?
     for dep in dep_cfgs:
         # Main to Dependent
         m_to_d = build_relation_map(dep.rel_csv_path, dep.rel_main_col, dep.rel_dep_col, main_cfg.id_prefix, dep.id_prefix)
         relation_maps[dep.name] = m_to_d
         
         # Dependent to Main
+        # Do i need this?
         d_to_m = build_relation_map(dep.rel_csv_path, dep.rel_dep_col, dep.rel_main_col, dep.id_prefix, main_cfg.id_prefix)
         
         # Merge into global map
+        # for every main, {dep_1, ..., dep_n} -> update global_rel_map for main
         for k, v in m_to_d.items(): global_rel_map[k].update(v)
+        # for every dep, {main1, ..., main_n} -> update global_rel_map for dep
         for k, v in d_to_m.items(): global_rel_map[k].update(v)
 
     components = find_connected_components(global_rel_map)
