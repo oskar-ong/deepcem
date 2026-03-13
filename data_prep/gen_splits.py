@@ -3,6 +3,7 @@ import argparse
 import csv
 import itertools
 import json
+import pickle
 import random
 from collections import defaultdict
 from queue import Queue
@@ -83,15 +84,29 @@ def assign_components_to_splits(
                 comps_list[n_train + n_val:])
 
     if mode == "nodes":
+        # how many nodes we have in total 
         total_nodes = sum(len(c) for c in comps_list)
+        # assign absolute ratios to splits
         targets = {"train": r_train * total_nodes, "val": r_val * total_nodes, "test": r_test * total_nodes}
+        # sort components by number of nodes
         comps_sorted = sorted(comps_list, key=len, reverse=True)
+        # split: (components, current number of nodes)
         splits = {"train": ([], 0.0), "val": ([], 0.0), "test": ([], 0.0)}
 
+        # iterate over all components
         for comp in comps_sorted:
+            # current component size (count member nodes)
             size = float(len(comp))
+            # calculate how many nodes are still needed for each split
             needs = {name: (targets[name] - curr) for name, (lst, curr) in splits.items()}
+            # new dict for splits that still need nodes 
+            # example: {train: 100, test :30}
             positive = {k: v for k, v in needs.items() if v > 0}
+            # choose the split which is missing the most nodes. If no splits need new nodes, choose the split with the lowest amount of nodes
+            # positive.items() returns list of tuples (train, 100), (test:30)
+            # max(key=) specifies which maximum we want
+            # lambda kv: kv[1] -> function: take the 1st element (the amount of nodes needed) of the tuple as key
+            # return 0 element (the split name) of tuple
             chosen = max(positive.items(), key=lambda kv: kv[1])[0] if positive else min(splits.items(), key=lambda kv: kv[1][1])[0]
             lst, current = splits[chosen]
             lst.append(comp)
@@ -429,6 +444,36 @@ def load_flattened_to_multiindex(
 
     return pd.concat([df_left, df_right, df_meta], axis=1, keys=['left', 'right', 'metadata'])
 
+def profile_components(components, configs, entity_ufs):
+    analysis_data = []
+
+    for i, comp in enumerate(components):
+        row = {"comp_id": i, "total_nodes": len(comp)}
+        
+        for cfg in configs:
+            # 1. Filter nodes of this specific type
+            nodes = [n for n in comp if n.startswith(cfg.id_prefix)]
+            row[f"{cfg.name}_nodes"] = len(nodes)
+            
+            # 2. Identify Duplicates (Unique Clusters vs. Total Nodes)
+            if cfg.name in entity_ufs:
+                # How many real-world entities do these nodes represent?
+                #unique_clusters = {entity_ufs[cfg.name].find(n) for n in nodes}
+                uf = entity_ufs[cfg.name]
+                unique_clusters = {
+                    uf.find(n) if n in uf.parent else n 
+                    for n in nodes
+                }
+                row[f"{cfg.name}_clusters"] = len(unique_clusters)
+                row[f"{cfg.name}_dupe_count"] = len(nodes) - len(unique_clusters)
+        
+        analysis_data.append(row)
+
+    return pd.DataFrame(analysis_data)
+
+# Usage in main():
+# df_stats = profile_components(components, CONFIGS, entity_ufs)
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
@@ -463,28 +508,43 @@ def main():
                 global_rel_map[node].add(root)
                 # root -> duplicate
                 global_rel_map[root].add(node)
-
+    
     relation_maps = {} # Store these for inference later
 
-
-    # TODO: THIS ONLY TAKES 1 TO 1 RELATIONSHIP INTO ACCOUNT?
     for dep in dep_cfgs:
         # Main to Dependent
         m_to_d = build_relation_map(dep.rel_csv_path, dep.rel_main_col, dep.rel_dep_col, main_cfg.id_prefix, dep.id_prefix)
         relation_maps[dep.name] = m_to_d
+
+        for m_id, d_ids in m_to_d.items():
+            for d_id in d_ids:
+                global_rel_map[m_id].add(d_id)
+                global_rel_map[d_id].add(m_id)
         
         # Dependent to Main
         # Do i need this?
-        d_to_m = build_relation_map(dep.rel_csv_path, dep.rel_dep_col, dep.rel_main_col, dep.id_prefix, main_cfg.id_prefix)
+        #d_to_m = build_relation_map(dep.rel_csv_path, dep.rel_dep_col, dep.rel_main_col, dep.id_prefix, main_cfg.id_prefix)
         
-        # Merge into global map
-        # for every main, {dep_1, ..., dep_n} -> update global_rel_map for main
-        for k, v in m_to_d.items(): global_rel_map[k].update(v)
-        # for every dep, {main1, ..., main_n} -> update global_rel_map for dep
-        for k, v in d_to_m.items(): global_rel_map[k].update(v)
+        # # Merge into global map
+        # # for every main, {dep_1, ..., dep_n} -> update global_rel_map for main
+        # for k, v in m_to_d.items(): global_rel_map[k].update(v)
+        # # for every dep, {main1, ..., main_n} -> update global_rel_map for dep
+        # for k, v in d_to_m.items(): global_rel_map[k].update(v)
 
     components = find_connected_components(global_rel_map)
+
+    df_stats = profile_components(components, CONFIGS, entity_ufs)
+    with open ('pickles/stats.pickle', 'wb') as f:
+        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
+
+
     splits = assign_components_to_splits(components)
+
+    # pickling to evaluate created components and splits in different file
+    with open ('pickles/components.pickle', 'wb') as f:
+        pickle.dump(components, f, pickle.HIGHEST_PROTOCOL)
+    with open ('pickles/splits.pickle', 'wb') as f:
+        pickle.dump(splits, f, pickle.HIGHEST_PROTOCOL)
 
     # ==========================================
     # 2. Generic Prep & Pair Generation

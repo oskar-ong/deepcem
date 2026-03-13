@@ -79,11 +79,11 @@ REGISTRY = {
             id_prefix="tt",
             path_basics="./data/raw/imdb/title_basics.csv",
             path_dups="./data/raw/imdb/title_basics_dups.csv",
-            path_out_dir="./data/processed/imdb_ref/movie/",
+            path_out_dir="./data/processed/imdb/movie/",
             block_key_func=create_block_key_movie,
             drop_list=['primaryTitle', 'originalTitle', 'cluster_id', 'block_key'],
             is_main=True,
-            ditto_dir= "./data/processed/imdb_ref/movie/"
+            ditto_dir= "./data/processed/imdb/movie/"
         ),
 
         # DEPENDENT ENTITY 
@@ -93,13 +93,13 @@ REGISTRY = {
             id_prefix="nm",
             path_basics="./data/raw/imdb/name_basics.csv",
             path_dups="./data/raw/imdb/name_basics_dups.csv",
-            path_out_dir="./data/processed/imdb_ref/name/",
+            path_out_dir="./data/processed/imdb/name/",
             block_key_func=create_block_key_name,
             drop_list=['primaryName', 'cluster_id', 'block_key'],
             rel_csv_path="./data/raw/imdb/title_principals.csv",
             rel_main_col="tconst",
             rel_dep_col="nconst",
-            ditto_dir= "./data/processed/imdb_ref/name/"
+            ditto_dir= "./data/processed/imdb/name/"
         )
     ]
 
