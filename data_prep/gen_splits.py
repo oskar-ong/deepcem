@@ -315,7 +315,7 @@ def serialize_to_ditto(df: pd.DataFrame, output_path: str, id_col: str) -> List[
             
     return ditto_lines
 
-def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout_prob, rel_name=""):
+def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout_prob, rel_name="", is_bin=False):
     """
     Applies Union-Find matching logic and signal dropout to a MultiIndex DataFrame.
     Dynamically names the output column to support multiple relationship types.
@@ -326,6 +326,11 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
     # Initialize with neutral score
     df[("left", score_col)] = 0.5
     df[("right", score_col)] = 0.5
+
+    if is_bin == True:
+        df[("left", score_col)] = "UNC"
+        df[("right", score_col)] = "UNC"
+
 
     for idx, row in df.iterrows():
         left_id = row[("left", main_id_col)]
@@ -350,8 +355,40 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
             
             max_pool_score = 1.0 if is_match_found else 0.0
 
+        # TODO: MONGE ELKAN
+        scores = []
+
+        if deps_left and deps_right:
+            for d_left in deps_left:
+                c_max = 0.0 # current max score for this dependency
+                for d_right in deps_right:
+                    if d_left in dep_uf.parent and d_right in dep_uf.parent:
+                        if dep_uf.find(d_left) == dep_uf.find(d_right):
+                            score = 1
+                        else:
+                            score = 0
+                    else: 
+                        score = 0
+                    if score > c_max:
+                        c_max = score
+                scores.append(c_max)
+            
+            monge_elkan = ( 1/len(deps_left) ) * sum(scores) 
+        else: 
+            monge_elkan = 0.5
+
         # Signal Dropout logic
-        final_score = 0.5 if random.random() < dropout_prob else max_pool_score
+        # final_score = 0.5 if random.random() < dropout_prob else max_pool_score
+        final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
+
+        # BINNING
+        if is_bin == True:
+            if final_score >= 0.85: 
+                final_score = "HIGH"
+            if final_score <= 0.15:
+                final_score = "LOW"
+            if 0.15 < final_score < 0.85:
+                final_score = "UNC" # uncertain
 
         # Update specific row with the dynamic column
         df.at[idx, ("left", score_col)] = final_score

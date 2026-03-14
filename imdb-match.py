@@ -1,13 +1,13 @@
 from collections import defaultdict
 import csv
-import os
-import subprocess
 import json
 from typing import Dict, List, Set
 
-import pandas as pd
+from ditto_wrapper import evaluate
+from logging_setup import setup_logger
 
-from evaluate import calc_metrics
+log = setup_logger("exp_baseline_iterative_imdb_hard-matching")
+log.info("Start Experiment: Iterative Matching - IMDB HARD - matching")
 
 def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
@@ -20,80 +20,33 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map):
-    # MOVIES (MAIN ENTITY FIRST)
-
-    # Update Paper JSONL with Venue scores from previous iter
-    update_input_files(movie_input_template, movie_dependency_map, name_pairs_score, f"movie_{iter_num}_input.jsonl", movie_table_key)
+    # ================================================================================
+    # MOVIES
+    # ================================================================================
+    entity = "movie"
+    input_path = f"{entity}_{iter_num}_input.jsonl"
+    update_input_files(movie_input_template, movie_dependency_map, name_pairs_score, input_path, movie_table_key)
     
-    # Run Ditto Inference
-    # Command from Ditto Docs
-    #     python matcher.py \
-    # --task wdc_all_small \
-    # --input_path input/input_small.jsonl \
-    # --output_path output/output_small.jsonl \
-    # --lm distilbert \
-    # --max_len 64 \
-    # --use_gpu \
-    # --fp16 \
-    # --checkpoint_path checkpoints/
-
-
-    #TODO: Extract
-    cmd = [
-            "python",
-            f"./models/ditto/matcher.py",
-            "--task", MODELS["movies"],
-            "--input_path", f"movie_{iter_num}_input.jsonl",
-            "--output_path", f"ditto_out/movie_{iter_num}.jsonl",
-            "--lm", "roberta",
-            "--max_len", "128",
-            "--use_gpu",
-            "--fp16",
-            "--checkpoint_path", "./models/ditto/checkpoints/",
-        ]
-
-    env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
-
-    subprocess.run(cmd, env=env)
-    
-
+    output_path_name = f"ditto_out/{entity}_{iter_num}.jsonl"
+    true_movie_inference = f"./data/imdb_hard/{entity}/inference.jsonl"
     movie_testset_fp = f"./data/imdb_hard/movie/test.txt"
-    acc, prec, rec, f1 = calc_metrics(f"ditto_out/movie_{iter_num}.jsonl", movie_testset_fp)
-    print(f"MOVIE METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
+    evaluate(MODELS[entity], input_path, output_path_name, "", log, true_movie_inference)
 
-    # NAMES (DEPENDENCY ENTITY)
-
-    update_input_files(name_input_template, name_dependency_map, movie_pairs_score, f"name_{iter_num}_input.jsonl", name_table_key)
+    # ================================================================================
+    # NAMES
+    # ================================================================================
+    input_path = f"name_{iter_num}_input.jsonl"
+    update_input_files(name_input_template, name_dependency_map, movie_pairs_score, input_path, name_table_key)
     
-    #TODO: Extract
-    cmd = [
-            "python",
-            f"./models/ditto/matcher.py",
-            "--task", MODELS["names"],
-            "--input_path", f"name_{iter_num}_input.jsonl",
-            "--output_path", f"ditto_out/name_{iter_num}.jsonl",
-            "--lm", "roberta",
-            "--max_len", "128",
-            "--use_gpu",
-            "--fp16",
-            "--checkpoint_path", "./models/ditto/checkpoints/",
-        ]
+    output_path_name = f"ditto_out/name_{iter_num}.jsonl"
+    true_name_inference = "./data/imdb_hard/name/inference.jsonl"
+    evaluate(MODELS["names"], input_path, output_path_name, "", log, true_name_inference)
 
-    env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
-
-    subprocess.run(cmd, env=env)
-    
-    # name_testset_fp = f"./data/processed/imdb/name/ditto/test.txt"
-    name_inference = "./data/imdb_hard/name/inference.jsonl"
-    acc, prec, rec, f1 = calc_metrics(f"ditto_out/name_{iter_num}.jsonl", name_inference)
-    print(f"NAME METRICS FOR ITERATION {iter_num}", acc, prec, rec, f1)
-
-
-    # Update scores
+    # ================================================================================
+    # UPDATE SCORES 
+    # ================================================================================
     movie_pairs_score = extract_scores(f"ditto_out/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
-    name_pairs_score = extract_scores(f"ditto_out/name_{iter_num}.jsonl", name_pairs_score, name_table_key)
+    name_pairs_score = extract_scores(output_path_name, name_pairs_score, name_table_key)
 
     return movie_pairs_score, name_pairs_score
 
@@ -173,15 +126,29 @@ def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, L
     dependencies_left = relationship_map.get(left_id, set())
     dependencies_right = relationship_map.get(right_id, set())
 
-    all_possible_scores = []
-    
+    # Switch places so the neighborhood with fewer entries is always the left one
+    # Is this necessary? 
+    if len(dependencies_right) < len(dependencies_left):
+        tmp = dependencies_right
+        dependencies_right = dependencies_left
+        dependencies_left = tmp
+
+    scores = []
+
     if dependencies_left and dependencies_right:
         for dep_left in dependencies_left:
+            c_max = 0.0 # current max score for this dependency
             for dep_right in dependencies_right:
                 score = dependency_scores.get(tuple(sorted((dep_left, dep_right))), 0.5)
-                all_possible_scores.append(score)
+
+                if score > c_max:
+                    c_max = score
+            scores.append(c_max)
         
-    return max(all_possible_scores) if all_possible_scores else 0.5
+        monge_elkan = ( 1/len(dependencies_left) ) * sum(scores) 
+        return round(monge_elkan,2)
+    else:
+        return 0.5
 
 def main():
     # Configuration
