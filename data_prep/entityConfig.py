@@ -4,7 +4,6 @@ from typing import Callable, List
 
 import pandas as pd
 
-
 @dataclass
 class EntityConfig:
     name: str                  # e.g., "movie", "name", "studio"
@@ -13,6 +12,7 @@ class EntityConfig:
     path_basics: str
     path_dups: str
     path_out_dir: str          # e.g., "./data/processed/imdb/movie/"
+    deps: List[str]            # e.g. "names", ""
     block_key_func: Callable
     drop_list: List[str]
     is_main: bool = False

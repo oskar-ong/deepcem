@@ -355,7 +355,6 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
             
             max_pool_score = 1.0 if is_match_found else 0.0
 
-        # TODO: MONGE ELKAN
         scores = []
 
         if deps_left and deps_right:
@@ -527,6 +526,7 @@ def main():
     # Build a massive graph: Main <-> Dep1, Main <-> Dep2, etc.
     global_rel_map = defaultdict(set)
     entity_ufs = {}
+    relation_maps = {} # Store these for inference later
 
     for cfg in CONFIGS:
         # create a union find for each entity type based on duplicate csv (transitive closure)
@@ -545,28 +545,17 @@ def main():
                 global_rel_map[node].add(root)
                 # root -> duplicate
                 global_rel_map[root].add(node)
-    
-    relation_maps = {} # Store these for inference later
 
-    for dep in dep_cfgs:
-        # Main to Dependent
-        m_to_d = build_relation_map(dep.rel_csv_path, dep.rel_main_col, dep.rel_dep_col, main_cfg.id_prefix, dep.id_prefix)
-        relation_maps[dep.name] = m_to_d
 
-        for m_id, d_ids in m_to_d.items():
-            for d_id in d_ids:
-                global_rel_map[m_id].add(d_id)
-                global_rel_map[d_id].add(m_id)
-        
-        # Dependent to Main
-        # Do i need this?
-        #d_to_m = build_relation_map(dep.rel_csv_path, dep.rel_dep_col, dep.rel_main_col, dep.id_prefix, main_cfg.id_prefix)
-        
-        # # Merge into global map
-        # # for every main, {dep_1, ..., dep_n} -> update global_rel_map for main
-        # for k, v in m_to_d.items(): global_rel_map[k].update(v)
-        # # for every dep, {main1, ..., main_n} -> update global_rel_map for dep
-        # for k, v in d_to_m.items(): global_rel_map[k].update(v)
+        for dep_name in cfg.deps:
+            dep = CONFIGS[dep_name]
+            m_to_d = build_relation_map(dep.rel_csv_path, dep.rel_main_col, dep.rel_dep_col, main_cfg.id_prefix, dep.id_prefix)
+            relation_maps[dep.name] = m_to_d
+
+            for m_id, d_ids in m_to_d.items():
+                for d_id in d_ids:
+                    global_rel_map[m_id].add(d_id)
+                    global_rel_map[d_id].add(m_id)
 
     components = find_connected_components(global_rel_map)
 
