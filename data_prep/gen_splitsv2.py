@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse
 import csv
+from dataclasses import dataclass
 import itertools
 import json
 import pickle
@@ -11,7 +12,7 @@ from typing import Dict, List, Literal, Sequence, Set, Tuple
 
 import pandas as pd
 
-from entityConfig import REGISTRY
+from entityConfig import REGISTRY, EntityConfig
 
 # --- Parameters ---
 SPLIT_RATIOS   = (0.7, 0.1, 0.2)  # Train, Val, Test
@@ -20,7 +21,7 @@ RANDOM_SEED    = 0
 BLOCK_LIMIT    = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
-def build_relation_map(csv_fp: str, column1: str, column2: str, prefix1: str, prefix2: str) -> Dict[str, Set[str]]:
+def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
     with open(csv_fp, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -30,15 +31,15 @@ def build_relation_map(csv_fp: str, column1: str, column2: str, prefix1: str, pr
                 relation_map[c1].add(c2)
     return dict(relation_map)
 
-def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Set[str]]:
+def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Dict[str, Set[str]]]:
     used = set()
     components = []
     # for every entity in relation map
     for node in rel_map.keys():
         # disregard already seen entities
         if node in used: continue
-        # component = set of entities
-        comp = set()
+        # component = dict of set of entities, 1 dict entry for each entity type
+        comp: Dict[str, Set[str]] = defaultdict(set)
         # use queue object to store nodes to look at 
         queue = Queue()
         # add entity to queue and mark as seen
@@ -48,7 +49,9 @@ def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Set[str]]:
         while not queue.empty():
             u = queue.get()
             # add entity to component
-            comp.add(u)
+            ent_comp = comp[u[1]] # second element of the tuple denotes entity type
+            ent_comp.add(u[0])
+            comp["all_nodes"].add(u[0])
             # for every related entity to current queue pop
             for v in rel_map.get(u, []):
                 # check if already seen
@@ -61,11 +64,11 @@ def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Set[str]]:
     return components
 
 def assign_components_to_splits(
-    comps: Sequence[Set[str]],
+    comps: list[Dict[str, Set[str]]],
     ratios: Tuple[float, float, float] = SPLIT_RATIOS,
     seed: int = RANDOM_SEED,
     mode: SplitMode = "nodes",
-) -> Tuple[List[Set[str]], List[Set[str]], List[Set[str]]]:
+) -> Tuple[list[Dict[str, Set[str]]],list[Dict[str, Set[str]]],list[Dict[str, Set[str]]]]:
     if not comps: return [], [], []
     r_train, r_val, r_test = ratios
     s = sum(ratios)
@@ -85,18 +88,19 @@ def assign_components_to_splits(
 
     if mode == "nodes":
         # how many nodes we have in total 
-        total_nodes = sum(len(c) for c in comps_list)
+        total_nodes = sum(len(c["all_nodes"]) for c in comps_list)
         # assign absolute ratios to splits
         targets = {"train": r_train * total_nodes, "val": r_val * total_nodes, "test": r_test * total_nodes}
         # sort components by number of nodes
-        comps_sorted = sorted(comps_list, key=len, reverse=True)
+        comps_sorted = sorted(comps_list, key=lambda kv: len(kv["all_nodes"]), reverse=True)
         # split: (components, current number of nodes)
         splits = {"train": ([], 0.0), "val": ([], 0.0), "test": ([], 0.0)}
 
         # iterate over all components
         for comp in comps_sorted:
+            all_nodes = comp["all_nodes"]
             # current component size (count member nodes)
-            size = float(len(comp))
+            size = float(len(all_nodes))
             # calculate how many nodes are still needed for each split
             needs = {name: (targets[name] - curr) for name, (lst, curr) in splits.items()}
             # new dict for splits that still need nodes 
@@ -480,55 +484,87 @@ def load_flattened_to_multiindex(
 
     return pd.concat([df_left, df_right, df_meta], axis=1, keys=['left', 'right', 'metadata'])
 
-def profile_components(components, configs, entity_ufs):
+def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str, EntityConfig], entity_ufs: Dict[str, UnionFind]):
     analysis_data = []
 
     for i, comp in enumerate(components):
-        row = {"comp_id": i, "total_nodes": len(comp)}
-        
-        for cfg in configs:
-            # 1. Filter nodes of this specific type
-            nodes = [n for n in comp if n.startswith(cfg.id_prefix)]
-            row[f"{cfg.name}_nodes"] = len(nodes)
+        row = {"comp_id": i, "type_count": len(comp)}
+        total_nodes = 0
+        for ent_type, nodes in comp.items():
+            total_nodes += len(nodes)
             
-            # 2. Identify Duplicates (Unique Clusters vs. Total Nodes)
-            if cfg.name in entity_ufs:
+            row[f"{ent_type}_nodes"] = len(nodes)
+
+
+                
+                # 2. Identify Duplicates (Unique Clusters vs. Total Nodes)
+            if ent_type in entity_ufs:
                 # How many real-world entities do these nodes represent?
                 #unique_clusters = {entity_ufs[cfg.name].find(n) for n in nodes}
-                uf = entity_ufs[cfg.name]
+                uf = entity_ufs[ent_type]
                 unique_clusters = {
                     uf.find(n) if n in uf.parent else n 
                     for n in nodes
                 }
-                row[f"{cfg.name}_clusters"] = len(unique_clusters)
-                row[f"{cfg.name}_dupe_count"] = len(nodes) - len(unique_clusters)
-        
-        analysis_data.append(row)
+                row[f"{ent_type}_clusters"] = len(unique_clusters)
+                row[f"{ent_type}_dupe_count"] = len(nodes) - len(unique_clusters)
+            
+            analysis_data.append(row)
 
     return pd.DataFrame(analysis_data)
 
-# Usage in main():
-# df_stats = profile_components(components, CONFIGS, entity_ufs)
+def get_related_records(ids, source_df, id_col):
+    """Filters the source_df for the given IDs and returns records as a list of dicts."""
+    if not ids:
+        return []
+    # Fetch all rows where the ID matches
+    subset = source_df[source_df[id_col].isin(ids)]
+    # Convert those rows to a list of dictionaries
+    return subset.to_dict(orient='records')
+
+def enrich_pairs_flattened(pairs: List[Tuple[dict, dict, int]], lookup_map, id_col):
+    enriched_list = []
+    
+    for left, right, label in pairs:
+        id_a = left.get(id_col)
+        id_b = right.get(id_col)
+        
+        # Pull the full flattened attributes from our master map
+        # We use .get() to avoid KeyErrors if an ID is missing
+        extra_attrs_a = lookup_map.get(id_a, {})
+        extra_attrs_b = lookup_map.get(id_b, {})
+        
+        # Merge the new attributes into the existing dictionaries
+        # .copy() ensures we don't accidentally modify the original list in-place
+        new_left = {**left, **extra_attrs_a}
+        new_right = {**right, **extra_attrs_b}
+        
+        enriched_list.append((new_left, new_right, label))
+        
+    return enriched_list
+
+@dataclass
+class processedEntity:
+    uf: UnionFind
+    df: pd.DataFrame
+    pairs: Dict[str, List]
+    flat_map: Dict
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
     args = parser.parse_args()
 
-    CONFIGS = REGISTRY[args.dataset]
+    CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
 
-    main_cfg = next(c for c in CONFIGS if c.is_main)
-    dep_cfgs = [c for c in CONFIGS if not c.is_main]
+    # main_cfg = next(c for c in CONFIGS if c.is_main)
+    # dep_cfgs = [c for c in CONFIGS if not c.is_main]
 
-    # ==========================================
-    # 1. Global Connected Components (Anti-Leakage)
-    # ==========================================
-    # Build a massive graph: Main <-> Dep1, Main <-> Dep2, etc.
-    global_rel_map = defaultdict(set)
-    entity_ufs = {}
+    global_rel_map: Dict[Tuple[str, str], Set[Tuple[str, str]]] = defaultdict(set)
+    entity_ufs: Dict[str, UnionFind] = {}
     relation_maps = {} # Store these for inference later
 
-    for cfg in CONFIGS:
+    for cfg_name, cfg in CONFIGS.items():
         # create a union find for each entity type based on duplicate csv (transitive closure)
         uf = build_unionfind_with_singletons(cfg.path_basics, cfg.path_dups, cfg.id_col)
         entity_ufs[cfg.name] = uf
@@ -542,27 +578,26 @@ def main():
             if node != root:
                 # add connection to global relation map
                 # duplicate -> root
-                global_rel_map[node].add(root)
+                global_rel_map[(node, cfg_name)].add((root, cfg_name)) 
                 # root -> duplicate
-                global_rel_map[root].add(node)
+                global_rel_map[(root, cfg_name)].add((node, cfg_name))
 
-
-        for dep_name in cfg.deps:
-            dep = CONFIGS[dep_name]
-            m_to_d = build_relation_map(dep.rel_csv_path, dep.rel_main_col, dep.rel_dep_col, main_cfg.id_prefix, dep.id_prefix)
-            relation_maps[dep.name] = m_to_d
+        for rel_dict in cfg.rels:
+            rel_name = rel_dict["rel_name"]
+            rel_cfg = CONFIGS[rel_name] 
+            m_to_d = build_relation_map(rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col)
+            relation_maps[rel_name] = m_to_d
 
             for m_id, d_ids in m_to_d.items():
                 for d_id in d_ids:
-                    global_rel_map[m_id].add(d_id)
-                    global_rel_map[d_id].add(m_id)
+                    global_rel_map[(m_id, cfg_name)].add((d_id, rel_name))
+                    global_rel_map[(d_id, rel_name)].add((m_id, cfg_name))
 
     components = find_connected_components(global_rel_map)
 
     df_stats = profile_components(components, CONFIGS, entity_ufs)
     with open ('pickles/stats.pickle', 'wb') as f:
         pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
-
 
     splits = assign_components_to_splits(components)
 
@@ -573,22 +608,24 @@ def main():
         pickle.dump(splits, f, pickle.HIGHEST_PROTOCOL)
 
     # ==========================================
-    # 2. Generic Prep & Pair Generation
+    # Generic Prep & Pair Generation
     # ==========================================
-    processed_entities = {}
+    processed_entities: Dict[str, processedEntity] = {} # TODO: CONVERT TO DATACLASS 
 
-    for cfg in CONFIGS:
+    for cfg_name, cfg in CONFIGS.items():
         print(f"Processing entity: {cfg.name}")
         
         # Extract IDs specific to this entity from the global splits
-        def get_ids(comps):
-            return {node for c in comps for node in c if node.startswith(cfg.id_prefix)}
+        def get_ids(comps: list[Dict[str, Set[str]]]):
+            # for every component in components
+            # return every node of component[current entity type]
+            return {node for c in comps for node in c[cfg_name]}
         
         train_ids, valid_ids, test_ids = map(get_ids, splits)
 
-        # Load & Cluster
         df_basics = pd.read_csv(cfg.path_basics)
-        uf = build_unionfind_with_singletons(cfg.path_basics, cfg.path_dups, cfg.id_col)
+        uf: UnionFind = entity_ufs[cfg.name]
+        # map every entity to its root
         mapping = {entity: uf.find(entity) for entity in uf.parent.keys()}
 
         def prep_subset(ids):
@@ -603,87 +640,70 @@ def main():
         # Generate Pairs
         p_train, p_valid, p_test = map(generate_pairs_for_subset, [train_df, valid_df, test_df])
 
+        for pairs in [p_train, p_valid, p_test]:
+            random.shuffle(pairs)
+
         # Store for saving and inference later
-        processed_entities[cfg.name] = {
-            "uf": uf,
-            "df_basics": df_basics,
-            "pairs": {"train": p_train, "valid": p_valid, "test": p_test}
-        }
+        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, None)
 
     # ==========================================
-    # 3. Dependent Inference (Cartesian Product)
-    # ==========================================
-    main_test_pairs = processed_entities[main_cfg.name]["pairs"]["test"]
-
-    for dep in dep_cfgs:
-        print(f"Generating inference for dependent: {dep.name}")
-        m_to_d_map = relation_maps[dep.name]
-        
-        # Create cartesian product pairs
-        p_inference = propagate_dependency_pairs(main_test_pairs, m_to_d_map, main_cfg.id_col)
-        
-        # Label them
-        labeled_inference = add_labels(
-            p_inference, 
-            processed_entities[dep.name]["uf"], 
-            processed_entities[dep.name]["df_basics"], 
-            dep.id_col
-        )
-        
-        processed_entities[dep.name]["pairs"]["inference"] = labeled_inference
-
-    # ==========================================
-    # Create Flattened Schema (BASELINE 1)
+    # SPLITS AND PAIRS ARE NOW LOCKED!
+    # CONTINUE WITH INDIVIDUAL EXPERIMENT 
+    # NOT REALLY BEST PERFORMANCE BUT SPLIT FOR READABILITY / UNDERSTANDING
     # ==========================================
 
-    def get_related_records(ids, source_df, id_col):
-        """Filters the source_df for the given IDs and returns records as a list of dicts."""
-        if not ids:
-            return []
-        # Fetch all rows where the ID matches
-        subset = source_df[source_df[id_col].isin(ids)]
-        # Convert those rows to a list of dictionaries
-        return subset.to_dict(orient='records')
-    
-    flattened_relations = {}
-    df_main_flat = processed_entities[main_cfg.name]["df_basics"].copy()
-
-    for dep in dep_cfgs:
-
-        df_main_flat[dep.name] = df_main_flat[main_cfg.id_col].apply(
-            lambda mid: get_related_records(relation_maps[dep.name].get(mid, []), processed_entities[dep.name]["df_basics"], dep.id_col)
-        )
-
-    master_flat_map = df_main_flat.set_index(main_cfg.id_col).to_dict(orient='index')
-
-    def enrich_pairs_flattened(pairs: List[Tuple[dict, dict, int]], lookup_map, id_col):
-        enriched_list = []
-        
-        for left, right, label in pairs:
-            id_a = left.get(id_col)
-            id_b = right.get(id_col)
+    # ==========================================
+    # MAIN EXPERIMENT: 
+    # Cartesian Product for each entity to be matched 
+    # ==========================================
+    for cfg_name, cfg in CONFIGS.items():
+        main_test_pairs = processed_entities[cfg.name].pairs["test"]
+        for rel in cfg.rels:
+            rel_name = rel["rel_name"]
+            print(f"Generating inference for dependent: {rel_name}")
+            m_to_d_map = relation_maps[rel_name]
             
-            # Pull the full flattened attributes from our master map
-            # We use .get() to avoid KeyErrors if an ID is missing
-            extra_attrs_a = lookup_map.get(id_a, {})
-            extra_attrs_b = lookup_map.get(id_b, {})
+            # Create cartesian product pairs
+            p_inference = propagate_dependency_pairs(main_test_pairs, m_to_d_map, cfg.id_col)
             
-            # Merge the new attributes into the existing dictionaries
-            # .copy() ensures we don't accidentally modify the original list in-place
-            new_left = {**left, **extra_attrs_a}
-            new_right = {**right, **extra_attrs_b}
+            # Label them
+            labeled_inference = add_labels(
+                p_inference, 
+                processed_entities[rel_name].uf, 
+                processed_entities[rel_name].df, 
+                CONFIGS[rel_name].id_col
+            )
             
-            enriched_list.append((new_left, new_right, label))
-            
-        return enriched_list
+            # WHEN MATCHING ENTITY A -> USE THESE PAIRS FOR GENERATING REL SCORES
+            # e.g. Matching: Movies 
+            # then use: 
+            # processed_entities["names"]["pairs"]["movies"]
+            processed_entities[rel_name].pairs[cfg_name] = labeled_inference
+
+    # ==========================================
+    # BASELINE A
+    # Create Flattened Schema
+    # FLATTEN THE PAIRS FOR EVERY ENTITY TYPE
+    # ==========================================
+    for cfg_name, cfg in CONFIGS.items():
+        df_main_flat: pd.DataFrame = processed_entities[cfg.name].df.copy()
+
+        for rel in cfg.rels:
+            rel_name = rel["rel_name"]
+            df_main_flat[rel_name] = df_main_flat[cfg.id_col].apply(
+                lambda mid: get_related_records(relation_maps[rel_name].get(mid, []), processed_entities[rel_name].df, CONFIGS[rel_name].id_col)
+            )
+
+        master_flat_map = df_main_flat.set_index(cfg.id_col).to_dict(orient='index')
+        processed_entities[cfg_name].flat_map = master_flat_map
 
     # ==========================================
     # Save to Disk & Ditto Serialization
     # ==========================================
     DROPOUT_PROB = 0.15
 
-    for cfg in CONFIGS:
-        pairs_dict = processed_entities[cfg.name]["pairs"]
+    for cfg_name, cfg in CONFIGS.items():
+        pairs_dict = processed_entities[cfg.name].pairs
         
         # Save standard splits
         for split_name in ["train", "valid", "test"]:
