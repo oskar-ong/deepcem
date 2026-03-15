@@ -340,24 +340,9 @@ def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout
         left_id = row[("left", main_id_col)]
         right_id = row[("right", main_id_col)]
 
-        # Get dependent entities (formerly "authors")
+        # Get dependent entities
         deps_left = entity_to_deps.get(left_id, set())
         deps_right = entity_to_deps.get(right_id, set())
-
-        max_pool_score = 0.5 # Default for missing data
-        
-        if deps_left and deps_right:
-            is_match_found = False
-            for d_left in deps_left:
-                for d_right in deps_right:
-                    # Check if both IDs exist in the UF structure to avoid KeyErrors
-                    if d_left in dep_uf.parent and d_right in dep_uf.parent:
-                        if dep_uf.find(d_left) == dep_uf.find(d_right):
-                            is_match_found = True
-                            break
-                if is_match_found: break
-            
-            max_pool_score = 1.0 if is_match_found else 0.0
 
         scores = []
 
@@ -547,7 +532,7 @@ def enrich_pairs_flattened(pairs: List[Tuple[dict, dict, int]], lookup_map, id_c
 class processedEntity:
     uf: UnionFind
     df: pd.DataFrame
-    pairs: Dict[str, List]
+    pairs: Dict[str, List[Tuple[dict, dict, int]]]
     flat_map: Dict
 
 def main():
@@ -610,7 +595,7 @@ def main():
     # ==========================================
     # Generic Prep & Pair Generation
     # ==========================================
-    processed_entities: Dict[str, processedEntity] = {} # TODO: CONVERT TO DATACLASS 
+    processed_entities: Dict[str, processedEntity] = {}
 
     for cfg_name, cfg in CONFIGS.items():
         print(f"Processing entity: {cfg.name}")
@@ -705,100 +690,103 @@ def main():
     for cfg_name, cfg in CONFIGS.items():
         pairs_dict = processed_entities[cfg.name].pairs
         
-        # Save standard splits
-        for split_name in ["train", "valid", "test"]:
-            out_path = f"{cfg.path_out_dir}{split_name}.jsonl"
-            pairs = pairs_dict[split_name]
-            random.shuffle(pairs)
-            with open(out_path, "w") as f:
-                for entry in pairs:
-                    f.write(json.dumps(entry) + "\n")
+        ## BASELINE A: 
+        # baseline_0_input_json = f"{cfg.path_out_dir}baseline0/input.jsonl"
+        # # remove "REL_SCORE" from baseline0 experiment
+        # baseline_0_drop_list = cfg.drop_list.copy()
+        # baseline_0_drop_list.append("REL_SCORE")
+        # write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
+        # jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
+        # ditto_txt_out = f"{cfg.path_out_dir}baseline0/{split}.txt"
+        # df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out, cfg.id_col)
 
-            ## Baseline 1:
-            if cfg.is_main:
-                enriched_pairs = enrich_pairs_flattened(processed_entities[main_cfg.name]["pairs"][split_name], master_flat_map, cfg.id_col)
-                out_path = f"{cfg.path_out_dir}/baseline1/{split_name}.jsonl"
-                with open(out_path, "w") as f:
-                    for entry in enriched_pairs:
-                        f.write(json.dumps(entry) + "\n")
-                    
-        # Save inference (only for dependents)
-        if not cfg.is_main:
-            inf_path = f"{cfg.path_out_dir}inference.jsonl"
-            random.shuffle(pairs_dict["inference"])
-            with open(inf_path, "w") as f:
-                for entry in pairs_dict["inference"]:
-                    f.write(json.dumps(entry) + "\n")
+        # ## Baseline B:
+        # enriched_pairs = enrich_pairs_flattened(processed_entities[main_cfg.name]["pairs"][split_name], master_flat_map, cfg.id_col)
+        # template_src = f"{cfg.path_out_dir}test.jsonl" if cfg.is_main else f"{cfg.path_out_dir}inference.jsonl"
+        # template_dst = f"{cfg.path_out_dir}input_template.jsonl"
+        # write_input_json(template_src, template_dst, cfg.drop_list)
 
-        template_src = f"{cfg.path_out_dir}test.jsonl" if cfg.is_main else f"{cfg.path_out_dir}inference.jsonl"
-        template_dst = f"{cfg.path_out_dir}input_template.jsonl"
-        write_input_json(template_src, template_dst, cfg.drop_list)
+        # baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
+        # # remove "REL_SCORE" from baseline0 experiment
+        # baseline_1_drop_list = cfg.drop_list.copy()
+        # baseline_1_drop_list.append("REL_SCORE")
+        # baseline_1_drop_list.append(cfg.id_col)
+        # write_input_json(f"{cfg.path_out_dir}baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
 
-        # BASELINE 0
-        baseline_0_input_json = f"{cfg.path_out_dir}baseline0/input.jsonl"
-        # remove "REL_SCORE" from baseline0 experiment
-        baseline_0_drop_list = cfg.drop_list.copy()
-        baseline_0_drop_list.append("REL_SCORE")
-        write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
+        def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
+            lines = []
+            for pair in pairs:
+                left = pair[0]
+                right = pair[1]
+                label = pair[2]
 
+                l_part: str = ""
+                r_part: str = ""
 
-        # BASELINE 1
-        if cfg.is_main:
-            baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
-            # remove "REL_SCORE" from baseline0 experiment
-            baseline_1_drop_list = cfg.drop_list.copy()
-            baseline_1_drop_list.append("REL_SCORE")
-            baseline_1_drop_list.append(cfg.id_col)
-            write_input_json(f"{cfg.path_out_dir}baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
+                # Helper to format one side into COL VAL strings
+                def fmt(pair_part: Dict, drop_list):
+                    return " ".join([f"COL {k} VAL {v}" for k, v in pair_part.items() if pd.notna(v) and k not in drop_list])
 
-        reps = {}
-        for dep_cfg in dep_cfgs:
-            reps[dep_cfg.name] = dep_cfg.rep
+                l_part = fmt(left, cfg.drop_list)
+                r_part = fmt(right, cfg.drop_list)
 
+                line = f"{l_part}\t{r_part}\t{label}"
+                lines.append(line)
+            return lines
         # --- D. Ditto Specific Serialization ---
-        for split in ["train", "valid", "test"]:
-            jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
-            ditto_txt_out = f"{cfg.ditto_dir}{split}.txt"
-            rel_score_out = f"{cfg.ditto_dir}{split}_rel_score.txt"
-            
-            # 1. Base Ditto string formatting
-            df_ditto = process_and_save_ditto(jsonl_in, cfg.drop_list, ditto_txt_out, cfg.id_col)
+        for split, pairs in pairs_dict.items():
 
-            if cfg.is_main:
-                # Baseline 1 
-                jsonl_in_flat = f"{cfg.path_out_dir}baseline1/{split}.jsonl"
-                ditto_txt_flat_out = f"{cfg.ditto_dir}baseline1/{split}.txt"
+            if split in ["train", "valid", "test"]:
+                # ==========================================
+                # BASELINE A: 
+                # ==========================================
+                pairs_baselineA = pairs.copy()
+                lines = serialize(pairs_baselineA)
+                with open(f"{cfg.path_out_dir}baseA/{split}.txt", 'w', encoding='utf-8') as f:
+                    f.write("\n".join(lines) + "\n")
                 
-                df_ditto_flattened = process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps, cfg.id_col)
-            
-            # 2. Relationship Scoring
-            if cfg.is_main:
-                # Main entity gets relationship scores injected from ALL its dependents
-                for dep in dep_cfgs:
-                    m_to_d_map = relation_maps[dep.name] 
-                    dep_uf = processed_entities[dep.name]["uf"]
-                    
-                    df_ditto = process_relationship_scores(
-                        df_ditto, m_to_d_map, dep_uf, cfg.id_col, DROPOUT_PROB, rel_name=dep.name
-                    )
-            else:
-                # Dependent entity gets relationship scores injected from the Main entity
-                d_to_m_map = build_relation_map(cfg.rel_csv_path, cfg.rel_dep_col, cfg.rel_main_col, dep.id_prefix, main_cfg.id_prefix)
-                main_uf = processed_entities[main_cfg.name]["uf"]
-                
-                df_ditto = process_relationship_scores(
-                    df_ditto, d_to_m_map, main_uf, cfg.id_col, DROPOUT_PROB, rel_name=main_cfg.name
-                )
-                
-            # 3. Final serialization to text
-            serialize_to_ditto(df_ditto, rel_score_out, cfg.id_col)
+                # ==========================================
+                # BASELINE B: 
+                # ==========================================
+                pairs_baselineB = pairs.copy()
 
-            ### BASELINE 0
-            jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
-            ditto_txt_out = f"{cfg.path_out_dir}baseline0/{split}.txt"
-            df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out, cfg.id_col)
-            
+                # TODO: Flatten Schema:
+                # process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps, cfg.id_col)
 
-    return processed_entities[main_cfg.name]["pairs"]["test"] # or whatever you need to return
+                lines = serialize(pairs_baselineB)
+                with open(f"{cfg.path_out_dir}baseB/{split}.txt", 'w', encoding='utf-8') as f:
+                    f.write("\n".join(lines) + "\n")
+
+            # ==========================================
+            # SCORES EMPTY: 
+            # ==========================================
+            pairs_empty_scores = pairs.copy()
+
+            # TODO: ADD SCORE Key for each relationship
+
+            lines = serialize(pairs_empty_scores)
+            with open(f"{cfg.path_out_dir}emptyScores/{split}.txt", 'w', encoding='utf-8') as f:
+                f.write("\n".join(lines) + "\n")
+
+            # ==========================================
+            # SCORES INJECTED: 
+            # ==========================================
+            pairs_injected_scores = pairs_empty_scores.copy()
+
+            # TODO: INJECT score for each relationship
+
+            # df_ditto = process_relationship_scores(
+            #         df_ditto, m_to_d_map, dep_uf, cfg.id_col, DROPOUT_PROB, rel_name=dep.name
+            #     )
+            lines = serialize(pairs_injected_scores)
+            with open(f"{cfg.path_out_dir}injectedScores/{split}.txt", 'w', encoding='utf-8') as f:
+                f.write("\n".join(lines) + "\n")
+
+
+            
+            # ==========================================
+            # DONE!!!
+            # ==========================================
+
 if __name__ == "__main__":
     main()

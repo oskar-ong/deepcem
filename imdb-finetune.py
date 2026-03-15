@@ -53,7 +53,7 @@ def main():
     evaluate(task_movie, input_path, output_path, dataset_dir_movie, log)
 
     # ================================================================================
-    # PHASE 1: RE-TUNE - INCLUDE RELATIONAL SCORES
+    # PHASE 2: RE-TUNE - INCLUDE RELATIONAL SCORES
     # ================================================================================
 
     # ================================================================================

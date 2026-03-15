@@ -160,12 +160,9 @@ def main():
     # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
     movie_table_key = "tconst"
     movie_pairs = extract_pairs(movie_input_template, movie_table_key)
-    # movie_pairs_score = dict.fromkeys(movie_pairs, 0.5)
     movie_pairs_score = {tuple(sorted(pair)): 0.5 for pair in movie_pairs}
-    # name_test_df = pd.read_parquet('data_prep/name_test_rel_score.parquet')
     name_table_key = "nconst"
     name_pairs = extract_pairs(name_input_template, name_table_key) # list of pairs from name test set
-    # name_pairs_score = dict.fromkeys(name_pairs, 0.5)
     name_pairs_score = {tuple(sorted(pair)): 0.5 for pair in name_pairs}
 
     PATH_RAW_PRINCIPALS = f"{dir}/title_principals.csv"
