@@ -1,9 +1,11 @@
 from __future__ import annotations
 import argparse
+import copy
 import csv
 from dataclasses import dataclass
 import itertools
 import json
+from pathlib import Path
 import pickle
 import random
 from collections import defaultdict
@@ -225,7 +227,6 @@ def add_labels(pairs, uf, df, id_col):
     labeled_pairs = []
     # Convert DF to dict for O(1) lookup
     df_tmp = df.copy()
-    df_tmp['REL_SCORE'] = ""
     name_lookup = df_tmp.set_index(id_col, drop=False).to_dict('index')
     
     for n1, n2 in pairs:
@@ -234,240 +235,52 @@ def add_labels(pairs, uf, df, id_col):
             labeled_pairs.append((name_lookup[n1], name_lookup[n2], label))
     return labeled_pairs
 
-def write_input_json(input_fp, output_fp, columns_to_remove):
+def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
 
-    with open(input_fp, 'r', encoding='utf-8') as infile, \
-        open(output_fp, 'w', encoding='utf-8') as outfile:
-        
-        for line in infile:
-            if not line.strip():
-                continue
-                
-            # Parse the line into a Python list
-            data = json.loads(line)
-
-            if isinstance(data, list):
-                for item in data:
-                    if isinstance(item, dict):
-                        for col in columns_to_remove:
-                            item.pop(col, None)
-            
-            # Handles 'data' as a single dictionary
-            elif isinstance(data, dict):
-                for col in columns_to_remove:
-                    data.pop(col, None)
-            
-            # Check if the last element is an integer (0 or 1) and remove it
-            if isinstance(data[-1], int):
-                data.pop()
-                
-            # Write the modified list back as a JSON line
-            outfile.write(json.dumps(data) + '\n')
-
-import random
-
-def load_to_multiindex(file_path: str, columns_to_drop: List[str] = None) -> pd.DataFrame:
-    """
-    Loads JSONL data and converts it into a MultiIndex DataFrame (left, right, metadata).
-    """
-    raw_data = []
-    with open(file_path, "r", encoding="utf-8") as f:
-        for line in f:
-            raw_data.append(tuple(json.loads(line)))
-
-    # Unzip components
-    left_list, right_list, labels = zip(*raw_data)
-
-    # Create individual DataFrames
-    df_left = pd.DataFrame(left_list)
-    df_right = pd.DataFrame(right_list)
-    df_label = pd.DataFrame(labels, columns=['match'])
-
-    # Build MultiIndex
-    df = pd.concat([df_left, df_right, df_label], axis=1)
-    columns = (
-        [('left', col) for col in df_left.columns] +
-        [('right', col) for col in df_right.columns] +
-        [('metadata', 'match')]
-    )
-    df.columns = pd.MultiIndex.from_tuples(columns)
-
-    # Drop unwanted columns across both sides
-    if columns_to_drop:
-        # errors='ignore' ensures it doesn't crash if a column is already missing
-        df = df.drop(columns=columns_to_drop, level=1, errors='ignore')
-
-    return df
-
-def serialize_to_ditto(df: pd.DataFrame, output_path: str, id_col: str) -> List[str]:
-    """
-    Converts a MultiIndex DataFrame into Ditto serialization format.
-    """
-    def format_row(row):
-        # Helper to format one side into COL VAL strings
-        def fmt(side):
-            return " ".join([f"COL {k} VAL {v}" for k, v in row[side].items() if pd.notna(v) and k != id_col])
-        
-        return f"{fmt('left')}\t{fmt('right')}\t{row['metadata', 'match']}"
-
-    # Use apply for faster row-wise processing
-    ditto_lines = df.apply(format_row, axis=1).tolist()
-
-    if output_path:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write("\n".join(ditto_lines) + "\n")
-            
-    return ditto_lines
-
-def process_relationship_scores(df, entity_to_deps, dep_uf, main_id_col, dropout_prob, rel_name="", is_bin=False):
-    """
-    Applies Union-Find matching logic and signal dropout to a MultiIndex DataFrame.
-    Dynamically names the output column to support multiple relationship types.
-    """
-    # Create a dynamic column name based on the entity type
-    score_col = f"REL_SCORE_{rel_name.upper()}" if rel_name else "REL_SCORE"
-    
-    # Initialize with neutral score
-    df[("left", score_col)] = 0.5
-    df[("right", score_col)] = 0.5
+    final_score = 0.5
 
     if is_bin == True:
-        df[("left", score_col)] = "UNC"
-        df[("right", score_col)] = "UNC"
+        final_score = "UNC"
 
+    # Get dependent entities
+    deps_left = entity_to_deps.get(left_id, set())
+    deps_right = entity_to_deps.get(right_id, set())
 
-    for idx, row in df.iterrows():
-        left_id = row[("left", main_id_col)]
-        right_id = row[("right", main_id_col)]
+    scores = []
 
-        # Get dependent entities
-        deps_left = entity_to_deps.get(left_id, set())
-        deps_right = entity_to_deps.get(right_id, set())
-
-        scores = []
-
-        if deps_left and deps_right:
-            for d_left in deps_left:
-                c_max = 0.0 # current max score for this dependency
-                for d_right in deps_right:
-                    if d_left in dep_uf.parent and d_right in dep_uf.parent:
-                        if dep_uf.find(d_left) == dep_uf.find(d_right):
-                            score = 1
-                        else:
-                            score = 0
-                    else: 
+    if deps_left and deps_right:
+        for d_left in deps_left:
+            c_max = 0.0 # current max score for this dependency
+            for d_right in deps_right:
+                if d_left in dep_uf.parent and d_right in dep_uf.parent:
+                    if dep_uf.find(d_left) == dep_uf.find(d_right):
+                        score = 1
+                    else:
                         score = 0
-                    if score > c_max:
-                        c_max = score
-                scores.append(c_max)
-            
-            monge_elkan = ( 1/len(deps_left) ) * sum(scores) 
-        else: 
-            monge_elkan = 0.5
-
-        # Signal Dropout logic
-        # final_score = 0.5 if random.random() < dropout_prob else max_pool_score
-        final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
-
-        # BINNING
-        if is_bin == True:
-            if final_score >= 0.85: 
-                final_score = "HIGH"
-            if final_score <= 0.15:
-                final_score = "LOW"
-            if 0.15 < final_score < 0.85:
-                final_score = "UNC" # uncertain
-
-        # Update specific row with the dynamic column
-        df.at[idx, ("left", score_col)] = final_score
-        df.at[idx, ("right", score_col)] = final_score
-    
-    return df
-
-def process_and_save_ditto(file_path: str, columns_to_drop: List[str], output_path: str, id_col):
-
-    df = load_to_multiindex(file_path, columns_to_drop)
-    print(f"Loaded and cleaned {len(df)} pairs.")
-    
-    serialize_to_ditto(df, output_path, id_col)
-    print(f"Ditto file saved to: {output_path}")
-    return df
-
-def process_and_save_flattened_ditto(file_path: str, columns_to_drop: List[str], output_path: str, representatives: Dict, id_col):
-
-    df = load_flattened_to_multiindex(file_path, columns_to_drop, representatives)
-    print(f"Loaded and cleaned {len(df)} pairs.")
-    
-    # 2. Serialize and Save
-    serialize_flattened_to_ditto(df, output_path, id_col)
-    print(f"Ditto file saved to: {output_path}")
-    return df
-
-def serialize_flattened_to_ditto(df: pd.DataFrame, output_path: str, id_col) -> List[str]:
-    def format_row(row):
-        def fmt(side):
-            # Iterates through columns for 'left' or 'right'
-            # Skips NaN values to keep the Ditto string clean
-            items = []
-            for col, val in row[side].items():
-                if pd.notna(val) and val != "" and col != id_col:
-                    items.append(f"COL {col} VAL {val}")
-            return " ".join(items)
+                else: 
+                    score = 0
+                if score > c_max:
+                    c_max = score
+            scores.append(c_max)
         
-        # Ditto format: LeftEntity \t RightEntity \t Label
-        return f"{fmt('left')}\t{fmt('right')}\t{row['metadata', 'match']}"
+        monge_elkan = ( 1/len(deps_left) ) * sum(scores) 
+    else: 
+        monge_elkan = 0.5
 
-    ditto_lines = df.apply(format_row, axis=1).tolist()
+    # Signal Dropout logic
+    # final_score = 0.5 if random.random() < dropout_prob else max_pool_score
+    final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
 
-    if output_path:
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write("\n".join(ditto_lines) + "\n")
-            
-    return ditto_lines
+    # BINNING
+    if is_bin == True:
+        if final_score >= 0.85: 
+            final_score = "HIGH"
+        if final_score <= 0.15:
+            final_score = "LOW"
+        if 0.15 < final_score < 0.85:
+            final_score = "UNC" # uncertain
 
-def load_flattened_to_multiindex(
-    file_path: str, 
-    columns_to_drop: List[str], 
-    dep_map: Dict[str, str]
-) -> pd.DataFrame:
-    rows = []
-    
-    with open(file_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if not line.strip(): continue
-            data = json.loads(line)
-            # Structure: [left_dict, right_dict, label]
-            left_ent, right_ent, label = data[0], data[1], data[2]
-            
-            def clean_entity(ent):
-                # 1. Handle mapped dependencies (e.g., name -> primaryName)
-                for dep_col, inner_key in dep_map.items():
-                    if dep_col in ent and isinstance(ent[dep_col], list):
-                        vals = [str(item.get(inner_key, '')) for item in ent[dep_col]]
-                        ent[dep_col] = " ".join(filter(None, vals))
-                
-                # 2. Safety Catch: Ensure NO lists remain in any column
-                # This prevents the ValueError during serialization
-                for col in list(ent.keys()):
-                    if isinstance(ent[col], list):
-                        # Fallback: just stringify the list if not in dep_map
-                        ent[col] = " ".join(map(str, ent[col]))
-                    
-                    if col in columns_to_drop:
-                        ent.pop(col, None)
-                return ent
-
-            rows.append({
-                'left': clean_entity(left_ent.copy()),
-                'right': clean_entity(right_ent.copy()),
-                'label': label
-            })
-
-    df_left = pd.DataFrame([r['left'] for r in rows])
-    df_right = pd.DataFrame([r['right'] for r in rows])
-    df_meta = pd.DataFrame([r['label'] for r in rows], columns=['match'])
-
-    return pd.concat([df_left, df_right, df_meta], axis=1, keys=['left', 'right', 'metadata'])
+    return final_score
 
 def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str, EntityConfig], entity_ufs: Dict[str, UnionFind]):
     analysis_data = []
@@ -571,7 +384,7 @@ def main():
             rel_name = rel_dict["rel_name"]
             rel_cfg = CONFIGS[rel_name] 
             m_to_d = build_relation_map(rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col)
-            relation_maps[rel_name] = m_to_d
+            relation_maps[cfg_name+rel_name] = m_to_d
 
             for m_id, d_ids in m_to_d.items():
                 for d_id in d_ids:
@@ -615,7 +428,6 @@ def main():
 
         def prep_subset(ids):
             df = df_basics[df_basics[cfg.id_col].isin(ids)].copy()
-            df['REL_SCORE'] = ""
             df['cluster_id'] = df[cfg.id_col].map(mapping)
             df['block_key'] = df.apply(cfg.block_key_func, axis=1)
             return df
@@ -646,7 +458,7 @@ def main():
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
             print(f"Generating inference for dependent: {rel_name}")
-            m_to_d_map = relation_maps[rel_name]
+            m_to_d_map = relation_maps[cfg_name+rel_name]
             
             # Create cartesian product pairs
             p_inference = propagate_dependency_pairs(main_test_pairs, m_to_d_map, cfg.id_col)
@@ -666,7 +478,7 @@ def main():
             processed_entities[rel_name].pairs[cfg_name] = labeled_inference
 
     # ==========================================
-    # BASELINE A
+    # BASELINE B
     # Create Flattened Schema
     # FLATTEN THE PAIRS FOR EVERY ENTITY TYPE
     # ==========================================
@@ -676,7 +488,7 @@ def main():
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
             df_main_flat[rel_name] = df_main_flat[cfg.id_col].apply(
-                lambda mid: get_related_records(relation_maps[rel_name].get(mid, []), processed_entities[rel_name].df, CONFIGS[rel_name].id_col)
+                lambda mid: get_related_records(relation_maps[cfg_name+rel_name].get(mid, []), processed_entities[rel_name].df, CONFIGS[rel_name].id_col)
             )
 
         master_flat_map = df_main_flat.set_index(cfg.id_col).to_dict(orient='index')
@@ -689,29 +501,6 @@ def main():
 
     for cfg_name, cfg in CONFIGS.items():
         pairs_dict = processed_entities[cfg.name].pairs
-        
-        ## BASELINE A: 
-        # baseline_0_input_json = f"{cfg.path_out_dir}baseline0/input.jsonl"
-        # # remove "REL_SCORE" from baseline0 experiment
-        # baseline_0_drop_list = cfg.drop_list.copy()
-        # baseline_0_drop_list.append("REL_SCORE")
-        # write_input_json(f"{cfg.path_out_dir}test.jsonl", baseline_0_input_json, baseline_0_drop_list)
-        # jsonl_in = f"{cfg.path_out_dir}{split}.jsonl"
-        # ditto_txt_out = f"{cfg.path_out_dir}baseline0/{split}.txt"
-        # df_ditto = process_and_save_ditto(jsonl_in, baseline_0_drop_list, ditto_txt_out, cfg.id_col)
-
-        # ## Baseline B:
-        # enriched_pairs = enrich_pairs_flattened(processed_entities[main_cfg.name]["pairs"][split_name], master_flat_map, cfg.id_col)
-        # template_src = f"{cfg.path_out_dir}test.jsonl" if cfg.is_main else f"{cfg.path_out_dir}inference.jsonl"
-        # template_dst = f"{cfg.path_out_dir}input_template.jsonl"
-        # write_input_json(template_src, template_dst, cfg.drop_list)
-
-        # baseline_1_input_json = f"{cfg.path_out_dir}baseline1/input.jsonl"
-        # # remove "REL_SCORE" from baseline0 experiment
-        # baseline_1_drop_list = cfg.drop_list.copy()
-        # baseline_1_drop_list.append("REL_SCORE")
-        # baseline_1_drop_list.append(cfg.id_col)
-        # write_input_json(f"{cfg.path_out_dir}baseline1/test.jsonl", baseline_1_input_json, baseline_1_drop_list)
 
         def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
             lines = []
@@ -733,60 +522,137 @@ def main():
                 line = f"{l_part}\t{r_part}\t{label}"
                 lines.append(line)
             return lines
-        # --- D. Ditto Specific Serialization ---
+        
         for split, pairs in pairs_dict.items():
 
             if split in ["train", "valid", "test"]:
-                # ==========================================
+                # ========================================================================================================================================================================
                 # BASELINE A: 
-                # ==========================================
-                pairs_baselineA = pairs.copy()
+                # ========================================================================================================================================================================
+                pairs_baselineA = copy.deepcopy(pairs)
                 lines = serialize(pairs_baselineA)
-                with open(f"{cfg.path_out_dir}baseA/{split}.txt", 'w', encoding='utf-8') as f:
+                baseA_dir = f"{cfg.path_out_dir}baseA/"
+                Path(baseA_dir).mkdir(parents=True, exist_ok=True)
+                with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
                 
-                # ==========================================
+                # ========================================================================================================================================================================
                 # BASELINE B: 
-                # ==========================================
-                pairs_baselineB = pairs.copy()
+                # ========================================================================================================================================================================
 
-                # TODO: Flatten Schema:
-                # process_and_save_flattened_ditto(jsonl_in_flat, baseline_0_drop_list, ditto_txt_flat_out, reps, cfg.id_col)
+                # TODO: Add Relation Columns to all entries, even the ones with null values
+
+                pairs_baselineB = copy.deepcopy(pairs)
+                
+                # get all unique ids in pairs
+                ids = set([d[cfg.id_col] for d1, d2, _ in pairs for d in (d1, d2)])
+                flat: Dict[str, Dict[str, Dict[str, List[str]]]] = defaultdict(lambda: defaultdict(dict)) # maincfg -> relation -> relation_attributes -> List of attribute values
+
+                # preload all related dfs and set id as index
+                indexed_dfs = {
+                    rel["rel_name"]: processed_entities[rel["rel_name"]].df.set_index(CONFIGS[rel["rel_name"]].id_col)
+                    for rel in cfg.rels
+                }
+
+                for m_id in ids:
+                    for rel in cfg.rels:
+                        rel_name = rel["rel_name"]
+                        rel_map = relation_maps[cfg_name+rel_name]
+                        related_entries = rel_map.get(m_id, [])
+
+                        df = indexed_dfs[rel_name]
+                        relation_attributes = defaultdict(list)
+
+                        for entry in related_entries:
+                            try: 
+                                row = df.loc[entry]
+                            
+                                if isinstance(row, pd.DataFrame):
+                                    raise LookupError(f"More than 1 entry for ID {entry}")
+                                
+                                for col_name, value in row.items():
+                                    relation_attributes[col_name].append(value)
+
+                            except KeyError:
+                                continue
+
+                            for col_name, value in row.items():
+                                relation_attributes[col_name].append(value)
+
+                        flat[m_id][rel_name] = dict(relation_attributes)
+                for left, right, label in pairs_baselineB:
+                    l_id = left.get(cfg.id_col)
+                    extra_data = flat.get(l_id, {})
+
+                    # The transformation
+                    flattened = {
+                        f"{rel}_{attr}": " ".join(str(v) for v in values)
+                        for rel, attributes in extra_data.items() 
+                        for attr, values in attributes.items()
+                    }
+
+                    left.update(flattened)
+
+                    r_id = right.get(cfg.id_col)
+                    extra_data = flat.get(r_id, {})
+                    flattened = {
+                        f"{rel}_{attr}": " ".join(str(v) for v in values)
+                        for rel, attributes in extra_data.items() 
+                        for attr, values in attributes.items()
+                    }
+                    right.update(flattened)
+
 
                 lines = serialize(pairs_baselineB)
-                with open(f"{cfg.path_out_dir}baseB/{split}.txt", 'w', encoding='utf-8') as f:
+                baseB_dir = f"{cfg.path_out_dir}baseB/"
+                Path(baseB_dir).mkdir(parents=True, exist_ok=True)
+                with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
 
-            # ==========================================
+            # ========================================================================================================================================================================
             # SCORES EMPTY: 
-            # ==========================================
-            pairs_empty_scores = pairs.copy()
+            # ========================================================================================================================================================================
+            pairs_empty_scores = copy.deepcopy(pairs)
 
-            # TODO: ADD SCORE Key for each relationship
+            for rel in cfg.rels:
+                rel_name = rel["rel_name"]
+                for left, right, label in pairs_empty_scores:
+                    left[f"{rel_name}_score"] = ""
+                    right[f"{rel_name}_score"] = ""
 
             lines = serialize(pairs_empty_scores)
-            with open(f"{cfg.path_out_dir}emptyScores/{split}.txt", 'w', encoding='utf-8') as f:
+            empty_scores_dir = f"{cfg.path_out_dir}emptyScores/"
+            Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
+            with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
 
-            # ==========================================
+            # ========================================================================================================================================================================
             # SCORES INJECTED: 
-            # ==========================================
-            pairs_injected_scores = pairs_empty_scores.copy()
+            # ========================================================================================================================================================================
+            pairs_injected_scores = copy.deepcopy(pairs_empty_scores)
 
-            # TODO: INJECT score for each relationship
+            for rel in cfg.rels:
+                rel_name = rel["rel_name"]
+                for left, right, label in pairs_injected_scores:
+                    score = calculate_relationship_scores(
+                        left[cfg.id_col], 
+                        right[cfg.id_col], 
+                        relation_maps[cfg_name+rel_name], 
+                        processed_entities[rel_name].uf,
+                        DROPOUT_PROB,
+                        False)
+                    left[f"{rel_name}_score"] = score
+                    right[f"{rel_name}_score"] = score
 
-            # df_ditto = process_relationship_scores(
-            #         df_ditto, m_to_d_map, dep_uf, cfg.id_col, DROPOUT_PROB, rel_name=dep.name
-            #     )
             lines = serialize(pairs_injected_scores)
-            with open(f"{cfg.path_out_dir}injectedScores/{split}.txt", 'w', encoding='utf-8') as f:
+            injected_scores_dir = f"{cfg.path_out_dir}injectedScores/"
+            Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
+            with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
 
-
-            
-            # ==========================================
+            # ========================================================================================================================================================================
             # DONE!!!
-            # ==========================================
+            # ========================================================================================================================================================================
 
 if __name__ == "__main__":
     main()
