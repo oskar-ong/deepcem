@@ -1,9 +1,11 @@
 from collections import defaultdict
 import csv
 import json
+import shutil
 from typing import Dict, List, Set
 
 from ditto_wrapper import evaluate
+from experiment_config import REGISTRY, EntityConfig
 from logging_setup import setup_logger
 
 log = setup_logger("exp_baseline_iterative_imdb_hard-matching")
@@ -19,7 +21,18 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
                 relation_map[c1].add(c2)
     return dict(relation_map)
 
-def run_iteration(iter_num, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map):
+def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps):
+
+    for entity in config.values():
+        input_fp = f"{entity.name}_{iter_num}_input.jsonl"
+        shutil.copyfile(entity.template, input_fp)
+        for r in entity.relations:
+            update_input_files(input_fp, relation_maps[f"{entity.name}{r.name}"], scores[r.name], "", entity.id_col, r.score_col, False)
+        output_path_name = f"ditto_out/{entity.name}_{iter_num}.jsonl"
+        
+
+
+
     # ================================================================================
     # MOVIES
     # ================================================================================
@@ -85,7 +98,7 @@ def extract_pairs(fp, id_attribute):
             pairs.append((left_id, right_id))
     return pairs
 
-def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key, is_bin=False):
+def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key, score_col, is_bin=False):
     threshold = 0.15
     with open(input_template, 'r') as infile, open(output_json_fp, 'w') as outfile:
         for line in infile:
@@ -114,8 +127,8 @@ def update_input_files(input_template, relationship_map, dependency_scores, outp
                         score = 0.5 
                 
                 # 4. Inject the score back into both objects
-                record_pair[0]["REL_SCORE"] = score
-                record_pair[1]["REL_SCORE"] = score
+                record_pair[0][score_col] = score
+                record_pair[1][score_col] = score
                 
             # 5. Write the modified list back as a single line
             json.dump(record_pair, outfile)
@@ -151,6 +164,19 @@ def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, L
         return 0.5
 
 def main():
+    config = REGISTRY["imdb"]
+    scores = {}
+    relation_maps = {}
+    for entity in config.values():
+        pairs = extract_pairs(entity.template, entity.id_col)
+        scores[entity.name] = {tuple(sorted(pair)): 0.5 for pair in pairs}
+        for r in entity.relations:
+            relation_maps[f"{entity.name}{r.name}"] = build_relation_map(r.junction_table, entity.id_col, r.fk)
+
+    run_iteration(0, config, scores, relation_maps)
+
+
+
     # Configuration
     MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
     dir = "./data/imdb_hard/"
