@@ -235,7 +235,7 @@ def add_labels(pairs, uf, df, id_col):
     return labeled_pairs
 
 def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
-
+    # Monge elkan
     final_score = 0.5
 
     if is_bin == True:
@@ -244,6 +244,11 @@ def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dro
     # Get dependent entities
     deps_left = entity_to_deps.get(left_id, set())
     deps_right = entity_to_deps.get(right_id, set())
+
+    if len(deps_right) < len(deps_left):
+        tmp = deps_right
+        deps_right = deps_left
+        deps_left = tmp
 
     scores = []
 

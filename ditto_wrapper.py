@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+from typing import Tuple
 
 from evaluate import calc_metrics
 
@@ -117,7 +118,7 @@ def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
     subprocess.run(cmd, env=env)
     log.info(f"Finished Finetuning for task: {task}")
 
-def evaluate(task, input_path, output_path, dataset_dir, log, true_y:str=None):
+def evaluate(task, input_path, output_path, log, true_fp:str) -> Tuple[float, float, float, float]:
 
     log.info("Start Predicting: ")
     log.info(f"Task: {task} ")
@@ -143,12 +144,10 @@ def evaluate(task, input_path, output_path, dataset_dir, log, true_y:str=None):
 
     log.info(f"Finished Predicting")
 
-    # automatically get true y
-    true_fp = f"{dataset_dir}/test.txt"
-    if true_y:
-        true_fp = true_y # overwrite
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
+    acc, prec, rec, f1 = round(acc,3), round(prec,3), round(rec,3), round(f1,3) 
     log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
-    log.info(f"{task} METRICS: {round(acc,3)}, {round(prec,3)}, {round(rec,3)}, {round(f1,3)}")
+    log.info(f"{task} METRICS: {acc}, {prec}, {rec}, {f1}")
     print(f"{task} METRICS BASELINE 1", acc, prec, rec, f1)
+    return acc, prec, rec, f1
 

@@ -16,9 +16,8 @@ class EntityConfig:
     template: str
     relations: List[Relation]  
     true_cp_fp: str
+    true_test_fp: str
 
-
-          
 imdb_entities = {
 
     "movies": EntityConfig(

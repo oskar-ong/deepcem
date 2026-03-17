@@ -1,12 +1,11 @@
 from collections import defaultdict
 import csv
 import json
-import shutil
 from typing import Dict, List, Set
 
 from ditto_wrapper import evaluate
 from experiment_config import REGISTRY, EntityConfig
-from logging_setup import setup_logger
+from logging_setup import ExperimentLogger, setup_logger
 
 log = setup_logger("exp_baseline_iterative_imdb_hard-matching")
 log.info("Start Experiment: Iterative Matching - IMDB HARD - matching")
@@ -21,47 +20,34 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
                 relation_map[c1].add(c2)
     return dict(relation_map)
 
-def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps):
+def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id):
 
     for entity in config.values():
-        input_fp = f"{entity.name}_{iter_num}_input.jsonl"
-        shutil.copyfile(entity.template, input_fp)
-        for r in entity.relations:
-            update_input_files(input_fp, relation_maps[f"{entity.name}{r.name}"], scores[r.name], "", entity.id_col, r.score_col, False)
-        output_path_name = f"ditto_out/{entity.name}_{iter_num}.jsonl"
-        
+        cp_input_fp = f"{entity.name}_{iter_num}_input_cp.jsonl" # Update Scores
+        conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergenc
 
+        # A cleaner and more performant solution would be to update both in one go, possible TODO
+        update_input_files(entity.template, cp_input_fp, entity, relation_maps, scores, is_bin=False)
+        update_input_files(entity.template, conv_input_fp, entity, relation_maps, scores, is_bin=False)
+                           
+        # Generate new Scores
+        cp_output_fp = f"ditto_out/{entity.name}_{iter_num}_cp.jsonl"
+        metrics = evaluate(entity.model, cp_input_fp, cp_output_fp, log, entity.true_cp_fp)
+        metrics_cp = {"accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
+        sql_log.log_metrics(run_id, iter_num, entity.name, metrics_cp)
 
+        # Track convergence
+        conv_output_fp = f"ditto_out/{entity.name}_{iter_num}_conv.jsonl"
+        metrics = evaluate(entity.model, conv_input_fp, conv_output_fp, log, entity.true_test_fp)
+        metrics_conv = {"accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
+        sql_log.log_metrics(run_id, iter_num, entity.name, metrics_conv)
 
-    # ================================================================================
-    # MOVIES
-    # ================================================================================
-    entity = "movie"
-    input_path = f"{entity}_{iter_num}_input.jsonl"
-    update_input_files(movie_input_template, movie_dependency_map, name_pairs_score, input_path, movie_table_key)
-    
-    output_path_name = f"ditto_out/{entity}_{iter_num}.jsonl"
-    true_movie_inference = f"./data/imdb_hard/{entity}/inference.jsonl"
-    movie_testset_fp = f"./data/imdb_hard/movie/test.txt"
-    evaluate(MODELS[entity], input_path, output_path_name, "", log, true_movie_inference)
+    # Update Scores Map
+    # Start new Loop -> Synchronous Update
+    for entity in config.values():
+        scores[entity.name] = extract_scores(f"ditto_out/{entity.name}_{iter_num}_cp.jsonl", scores[entity.name], entity.id_col)
 
-    # ================================================================================
-    # NAMES
-    # ================================================================================
-    input_path = f"name_{iter_num}_input.jsonl"
-    update_input_files(name_input_template, name_dependency_map, movie_pairs_score, input_path, name_table_key)
-    
-    output_path_name = f"ditto_out/name_{iter_num}.jsonl"
-    true_name_inference = "./data/imdb_hard/name/inference.jsonl"
-    evaluate(MODELS["names"], input_path, output_path_name, "", log, true_name_inference)
-
-    # ================================================================================
-    # UPDATE SCORES 
-    # ================================================================================
-    movie_pairs_score = extract_scores(f"ditto_out/movie_{iter_num}.jsonl", movie_pairs_score, movie_table_key)
-    name_pairs_score = extract_scores(output_path_name, name_pairs_score, name_table_key)
-
-    return movie_pairs_score, name_pairs_score
+    return scores, metrics_conv
 
 def extract_scores(fp, dependency_scores, id_attribute, is_damp=False):
     with open(fp, 'r', encoding='utf-8') as f:
@@ -98,49 +84,46 @@ def extract_pairs(fp, id_attribute):
             pairs.append((left_id, right_id))
     return pairs
 
-def update_input_files(input_template, relationship_map, dependency_scores, output_json_fp, table_key, score_col, is_bin=False):
+def update_input_files(template_fp, out_fp, entity_cfg: EntityConfig, relationship_maps, all_scores, is_bin=False):
     threshold = 0.15
-    with open(input_template, 'r') as infile, open(output_json_fp, 'w') as outfile:
+    with open(template_fp, 'r') as infile, open(out_fp, 'w') as outfile:
         for line in infile:
-            # 1. Parse the line (a list of two dictionaries)
             record_pair = json.loads(line.strip())
             
             if len(record_pair) >= 2:
-                # 2. Extract tconst values
-                left_id = record_pair[0].get(table_key)
-                right_id = record_pair[1].get(table_key)
-                
-                # 3. Calculate the score
-                score = aggregate_dependency_scores(left_id, right_id, relationship_map, dependency_scores)
+                left_id = record_pair[0].get(entity_cfg.id_col)
+                right_id = record_pair[1].get(entity_cfg.id_col)
 
-                # BINNING
-                if is_bin == True:
-                    if score >= 0.85: 
-                        score = "HIGH"
-                    if score <= 0.15:
-                        score = "LOW"
-                    if 0.15 < score < 0.85:
-                        score = "UNC" # uncertain
-                else:
-                    # is score meaningful enough? If too fuzzy, ignore
-                    if abs(score - 0.5) < threshold:
-                        score = 0.5 
+                for r in entity_cfg.relations:
+                    relation_map = relationship_maps[f"{entity_cfg.name}{r.name}"]
+                    related_scores = all_scores[r.name]
                 
-                # 4. Inject the score back into both objects
-                record_pair[0][score_col] = score
-                record_pair[1][score_col] = score
+                    score = calc_monge_elkan(left_id, right_id, relation_map, related_scores)
+
+                    # BINNING
+                    if is_bin == True:
+                        if score >= 0.85: 
+                            score = "HIGH"
+                        if score <= 0.15:
+                            score = "LOW"
+                        if 0.15 < score < 0.85:
+                            score = "UNC" # uncertain
+                    else:
+                        # is score meaningful enough? If too fuzzy, ignore
+                        if abs(score - 0.5) < threshold:
+                            score = 0.5 
+                    
+                    record_pair[0][r.score_col] = score
+                    record_pair[1][r.score_col] = score
                 
-            # 5. Write the modified list back as a single line
             json.dump(record_pair, outfile)
             outfile.write('\n')
 
-def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, List[str]], dependency_scores):
+def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], dependency_scores):
 
     dependencies_left = relationship_map.get(left_id, set())
     dependencies_right = relationship_map.get(right_id, set())
 
-    # Switch places so the neighborhood with fewer entries is always the left one
-    # Is this necessary? 
     if len(dependencies_right) < len(dependencies_left):
         tmp = dependencies_right
         dependencies_right = dependencies_left
@@ -164,6 +147,12 @@ def aggregate_dependency_scores(left_id, right_id, relationship_map: Dict[str, L
         return 0.5
 
 def main():
+    sql_log = ExperimentLogger("entity_resolution_results.db")
+    run_params = {'model': 'Ditto', 'lr': 3e-5, 'batch_size': 16}
+    run_id = sql_log.log_run(run_params)
+    prev_f1 = 0.0
+    max_iters = 4
+
     config = REGISTRY["imdb"]
     scores = {}
     relation_maps = {}
@@ -173,32 +162,13 @@ def main():
         for r in entity.relations:
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(r.junction_table, entity.id_col, r.fk)
 
-    run_iteration(0, config, scores, relation_maps)
+    for i in range(0, max_iters):
+        scores, metrics = run_iteration(i, config, scores, relation_maps, sql_log, run_id)
 
-
-
-    # Configuration
-    MODELS = {"movies": "imdb_movies_rel_score", "names": "imdb_names_rel_score"}
-    dir = "./data/imdb_hard/"
-    movie_input_template = f"{dir}movie/input_template.jsonl"
-    name_input_template = f"{dir}/name/input_template.jsonl"
-
-    # movie_pairs = list(zip(movie_test_df[('left', 'tconst')], movie_test_df[('right', 'tconst')])) # list of pairs from movie test set
-    movie_table_key = "tconst"
-    movie_pairs = extract_pairs(movie_input_template, movie_table_key)
-    movie_pairs_score = {tuple(sorted(pair)): 0.5 for pair in movie_pairs}
-    name_table_key = "nconst"
-    name_pairs = extract_pairs(name_input_template, name_table_key) # list of pairs from name test set
-    name_pairs_score = {tuple(sorted(pair)): 0.5 for pair in name_pairs}
-
-    PATH_RAW_PRINCIPALS = f"{dir}/title_principals.csv"
-    # Dependency map: Dict[movie_ids: str, Dict[entity_type, List[ids: str]]]
-    movie_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, movie_table_key, name_table_key)
-    name_dependency_map = build_relation_map(PATH_RAW_PRINCIPALS, name_table_key, movie_table_key)
-    movie_pairs_score, name_pairs_score = run_iteration(0, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
-    movie_pairs_score, name_pairs_score = run_iteration(1, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
-    movie_pairs_score, name_pairs_score = run_iteration(2, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
-    movie_pairs_score, name_pairs_score = run_iteration(3, MODELS, movie_input_template, name_input_template, movie_pairs_score, name_pairs_score, movie_table_key, name_table_key, movie_dependency_map, name_dependency_map)
+        if metrics["f1_score"] == prev_f1:
+            break
+        
+        prev_f1 = metrics["f1_score"]
 
 if __name__=="__main__":
     main()
