@@ -204,7 +204,6 @@ def propagate_dependency_pairs(
     required_name_pairs = set()
     
     for p1_dict, p2_dict, _label in parent_pairs:
-        # Get IDs (e.g., 'tt12345')
         id1, id2 = p1_dict[id_col], p2_dict[id_col]
         
         # Get related actors for both movies
@@ -359,9 +358,6 @@ def main():
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
 
-    # main_cfg = next(c for c in CONFIGS if c.is_main)
-    # dep_cfgs = [c for c in CONFIGS if not c.is_main]
-
     global_rel_map: Dict[Tuple[str, str], Set[Tuple[str, str]]] = defaultdict(set)
     entity_ufs: Dict[str, UnionFind] = {}
     relation_maps = {} # Store these for inference later
@@ -459,6 +455,7 @@ def main():
     # ==========================================
     for cfg_name, cfg in CONFIGS.items():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
+        pairs_cp = []
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
             print(f"Generating inference for dependent: {rel_name}")
@@ -474,12 +471,11 @@ def main():
                 processed_entities[rel_name].df, 
                 CONFIGS[rel_name].id_col
             )
-            
-            # WHEN MATCHING ENTITY A -> USE THESE PAIRS FOR GENERATING REL SCORES
-            # e.g. Matching: Movies 
-            # then use: 
-            # processed_entities["names"]["pairs"]["movies"]
-            processed_entities[rel_name].pairs[cfg_name] = labeled_inference
+
+            try:
+                processed_entities[rel_name].pairs["cp"] = processed_entities[rel_name].pairs["cp"] +labeled_inference
+            except KeyError:
+                processed_entities[rel_name].pairs["cp"] = labeled_inference
 
     # ==========================================
     # BASELINE B
