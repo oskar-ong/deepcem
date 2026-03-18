@@ -12,6 +12,7 @@ from queue import Queue
 from typing import Dict, List, Literal, Set, Tuple
 
 import pandas as pd
+import networkx as nx
 
 from entityConfig import REGISTRY, EntityConfig
 
@@ -22,12 +23,17 @@ RANDOM_SEED    = 0
 BLOCK_LIMIT    = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
-def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
+def build_relation_map(csv_fp: str, column1: str, column2: str, blacklist: set = None) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
     with open(csv_fp, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             c1, c2 = row[column1], row[column2]
+
+            # disregard central nodes
+            if c1 in blacklist or c2 in blacklist:
+                continue
+
             if c1 and c2:
                 relation_map[c1].add(c2)
     return dict(relation_map)
@@ -51,7 +57,7 @@ def find_connected_components(rel_map: Dict[str, Set[str]]) -> list[Dict[str, Se
             u = queue.get()
             # add entity to component
             ent_comp = comp[u[1]] # second element of the tuple denotes entity type
-            ent_comp.add(u[0])
+            ent_comp.add(u[0]) # add node to its entity type set
             comp["all_nodes"].add(u[0])
             # for every related entity to current queue pop
             for v in rel_map.get(u, []):
@@ -295,10 +301,7 @@ def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str,
             total_nodes += len(nodes)
             
             row[f"{ent_type}_nodes"] = len(nodes)
-
-
-                
-                # 2. Identify Duplicates (Unique Clusters vs. Total Nodes)
+            # 2. Identify Duplicates (Unique Clusters vs. Total Nodes)
             if ent_type in entity_ufs:
                 # How many real-world entities do these nodes represent?
                 #unique_clusters = {entity_ufs[cfg.name].find(n) for n in nodes}
@@ -314,42 +317,49 @@ def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str,
 
     return pd.DataFrame(analysis_data)
 
-def get_related_records(ids, source_df, id_col):
-    """Filters the source_df for the given IDs and returns records as a list of dicts."""
-    if not ids:
-        return []
-    # Fetch all rows where the ID matches
-    subset = source_df[source_df[id_col].isin(ids)]
-    # Convert those rows to a list of dictionaries
-    return subset.to_dict(orient='records')
+def analyze_graph_centrality(global_rel_map):
+    # 1. Build the NetworkX graph
+    G = nx.Graph()
+    for node, neighbors in global_rel_map.items():
+        for neighbor in neighbors:
+            G.add_edge(node, neighbor)
 
-def enrich_pairs_flattened(pairs: List[Tuple[dict, dict, int]], lookup_map, id_col):
-    enriched_list = []
+    print(f"Graph stats: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
+
+    # 2. Find Articulation Points (Cut Vertices)
+    # These are nodes that, if removed, increase the number of connected components.
+    articulation_points = list(nx.articulation_points(G))
     
-    for left, right, label in pairs:
-        id_a = left.get(id_col)
-        id_b = right.get(id_col)
-        
-        # Pull the full flattened attributes from our master map
-        # We use .get() to avoid KeyErrors if an ID is missing
-        extra_attrs_a = lookup_map.get(id_a, {})
-        extra_attrs_b = lookup_map.get(id_b, {})
-        
-        # Merge the new attributes into the existing dictionaries
-        # .copy() ensures we don't accidentally modify the original list in-place
-        new_left = {**left, **extra_attrs_a}
-        new_right = {**right, **extra_attrs_b}
-        
-        enriched_list.append((new_left, new_right, label))
-        
-    return enriched_list
+    # 3. Calculate Betweenness Centrality
+    # This measures how often a node appears on the shortest path between any two other nodes.
+    # We sample (k=...) for speed if the graph is very large.
+    print("Calculating betweenness centrality (this may take a while)...")
+    centrality = nx.betweenness_centrality(G, k=min(1000, len(G)//10)) 
+
+    # 4. Compile Results
+    analysis = []
+    for node in G.nodes():
+        analysis.append({
+            "node_id": node[0],
+            "entity_type": node[1],
+            "degree": G.degree(node),
+            "betweenness": centrality.get(node, 0),
+            "is_articulation_point": node in articulation_points
+        })
+
+    return pd.DataFrame(analysis).sort_values(by="betweenness", ascending=False)
+
+def get_high_degree_nodes(junction_csv: str, id_col: str, threshold: int= 500):
+    df = pd.read_csv(junction_csv)
+    counts = df[id_col].value_counts()
+    high_degree_nodes = counts[counts > threshold].index.tolist()
+    return set(high_degree_nodes)
 
 @dataclass
 class processedEntity:
     uf: UnionFind
     df: pd.DataFrame
     pairs: Dict[str, List[Tuple[dict, dict, int]]]
-    flat_map: Dict
 
 def main():
     parser = argparse.ArgumentParser()
@@ -383,7 +393,9 @@ def main():
         for rel_dict in cfg.rels:
             rel_name = rel_dict["rel_name"]
             rel_cfg = CONFIGS[rel_name] 
-            m_to_d = build_relation_map(rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col)
+            blacklist = get_high_degree_nodes(rel_dict["junction_table"], rel_cfg.id_col, threshold = 10)
+            print(blacklist)
+            m_to_d = build_relation_map(rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col, blacklist)
             relation_maps[cfg_name+rel_name] = m_to_d
 
             for m_id, d_ids in m_to_d.items():
@@ -393,9 +405,28 @@ def main():
 
     components = find_connected_components(global_rel_map)
 
+    # ==========================================
+    # ANALYSIS 
+    # ==========================================
+
+    # Identify the largest component
+    largest_comp_size = max(len(c["all_nodes"]) for c in components)
+    print(f"Largest component size: {largest_comp_size}")
+
+    # Analyze the bottlenecks
+    df_centrality = analyze_graph_centrality(global_rel_map)
+    print("Top 10 nodes responsible for connectivity:")
+    print(df_centrality.head(10))
+
+    # Export for inspection
+    df_centrality.to_csv("graph_bottlenecks.csv", index=False)
     df_stats = profile_components(components, CONFIGS, entity_ufs)
     with open ('pickles/stats.pickle', 'wb') as f:
         pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
+
+    # ==========================================
+    # END ANALYSIS 
+    # ==========================================
 
     splits = assign_components_to_splits(components)
 
@@ -441,7 +472,7 @@ def main():
             random.shuffle(pairs)
 
         # Store for saving and inference later
-        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, None)
+        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test})
 
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
@@ -455,7 +486,6 @@ def main():
     # ==========================================
     for cfg_name, cfg in CONFIGS.items():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
-        pairs_cp = []
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
             print(f"Generating inference for dependent: {rel_name}")
@@ -476,23 +506,6 @@ def main():
                 processed_entities[rel_name].pairs["cp"] = processed_entities[rel_name].pairs["cp"] +labeled_inference
             except KeyError:
                 processed_entities[rel_name].pairs["cp"] = labeled_inference
-
-    # ==========================================
-    # BASELINE B
-    # Create Flattened Schema
-    # FLATTEN THE PAIRS FOR EVERY ENTITY TYPE
-    # ==========================================
-    for cfg_name, cfg in CONFIGS.items():
-        df_main_flat: pd.DataFrame = processed_entities[cfg.name].df.copy()
-
-        for rel in cfg.rels:
-            rel_name = rel["rel_name"]
-            df_main_flat[rel_name] = df_main_flat[cfg.id_col].apply(
-                lambda mid: get_related_records(relation_maps[cfg_name+rel_name].get(mid, []), processed_entities[rel_name].df, CONFIGS[rel_name].id_col)
-            )
-
-        master_flat_map = df_main_flat.set_index(cfg.id_col).to_dict(orient='index')
-        processed_entities[cfg_name].flat_map = master_flat_map
 
     # ==========================================
     # Save to Disk & Ditto Serialization
