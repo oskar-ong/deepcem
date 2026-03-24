@@ -18,12 +18,70 @@ from entityConfig import REGISTRY, EntityConfig
 
 # --- Parameters ---
 SPLIT_RATIOS   = (0.7, 0.1, 0.2)  # Train, Val, Test
-NEG_RATIO      = 3                # Negatives per 1 Positive
+NEG_RATIO      = 10               # Negatives per 1 Positive
 RANDOM_SEED    = 0
 BLOCK_LIMIT    = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
 import networkx as nx
+
+import matplotlib.pyplot as plt
+from pyvis.network import Network # Run: pip install pyvis
+
+def visualize_graph_structure(G: nx.Graph, output_prefix: str = "graph_viz"):
+    """
+    Visualizes the top largest components to show the 'Giant Component' vs others.
+    """
+    # 1. Get components and sort by size
+    components = sorted(nx.connected_components(G), key=len, reverse=True)
+    print(f"Total Components: {len(components)}")
+    print(f"Top 5 sizes: {[len(c) for c in components[:5]]}")
+
+    # 2. Define color map based on entity type
+    # Note: Your nodes are tuples (node_id, entity_type)
+    color_map = {
+        "track": "#1DB954",  # Spotify Green
+        "artist": "#1976D2", # Blue
+        "area": "#FFA000"    # Amber
+    }
+
+    # 3. Create a subgraph of the top N components (to keep it readable)
+    # We take the largest (the giant) and a few small ones for contrast
+    nodes_to_viz = set()
+    for i in range(min(5, len(components))): # Top 5 components
+        nodes_to_viz.update(components[i])
+    
+    sub_G = G.subgraph(nodes_to_viz)
+
+    # --- Option A: Interactive Pyvis (Best for exploring) ---
+    try:
+        net = Network(height="750px", width="100%", bgcolor="#222222", font_color="white")
+        for node, data in sub_G.nodes(data=True):
+            n_id, n_type = node
+            net.add_node(str(node), label=f"{n_type}: {n_id}", color=color_map.get(n_type, "grey"))
+        
+        for u, v in sub_G.edges():
+            net.add_edge(str(u), str(v))
+        
+        net.force_atlas_2based() # Layout algorithm
+        net.show(f"{output_prefix}_interactive.html", notebook=False)
+        print(f"Interactive viz saved to {output_prefix}_interactive.html")
+    except Exception as e:
+        print(f"Pyvis failed: {e}. Falling back to Matplotlib.")
+
+    # --- Option B: Static Matplotlib ---
+    plt.figure(figsize=(12, 12))
+    pos = nx.spring_layout(sub_G, k=0.15, iterations=20)
+    
+    colors = [color_map.get(node[1], "grey") for node in sub_G.nodes()]
+    
+    nx.draw_networkx_nodes(sub_G, pos, node_size=20, node_color=colors, alpha=0.7)
+    nx.draw_networkx_edges(sub_G, pos, alpha=0.1, edge_color="white")
+    
+    plt.title("Largest Components (The Giant Component vs. Isolated Bundles)")
+    plt.axis('off')
+    plt.savefig(f"{output_prefix}_static.png", facecolor='#222222')
+    print(f"Static image saved to {output_prefix}_static.png")
 
 def find_louvain_bundles(G: nx.Graph, seed: int = RANDOM_SEED) -> list[Dict[str, Set[str]]]:
     """
@@ -415,10 +473,12 @@ class processedEntity:
     uf: UnionFind
     df: pd.DataFrame
     pairs: Dict[str, List[Tuple[dict, dict, int]]]
+    cp: List[Tuple[dict, dict]]
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
+    parser.add_argument("strategy", type=str, default="cc")
     args = parser.parse_args()
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
@@ -429,11 +489,12 @@ def main():
     splitting_blacklist = set()
 
     # Dynamic Blacklist 
-    for cfg_name, cfg in CONFIGS.items():
-        for rel_dict in cfg.rels:
-            # We prune the top 5% of most common relations to break the Giant Component
-            hubs = get_dynamic_blacklist(rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.95)
-            splitting_blacklist.update(hubs)
+    if args.strategy == "louvain":
+        for cfg_name, cfg in CONFIGS.items():
+            for rel_dict in cfg.rels:
+                # We prune the top 5% of most common relations to break the Giant Component
+                hubs = get_dynamic_blacklist(rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.95)
+                splitting_blacklist.update(hubs)
 
     for cfg_name, cfg in CONFIGS.items():
         # create a union find for each entity type based on duplicate csv (transitive closure)
@@ -467,16 +528,20 @@ def main():
                     global_rel_map[(m_id, cfg_name)].add((d_id, rel_name))
                     global_rel_map[(d_id, rel_name)].add((m_id, cfg_name))
 
-    G = nx.Graph()
-    for u, neighbors in global_rel_map.items():
-        for v in neighbors:
-            G.add_edge(u, v)
+    if args.strategy == "louvain":
+        G = nx.Graph()
+        for u, neighbors in global_rel_map.items():
+            for v in neighbors:
+                G.add_edge(u, v)
 
-    G_pruned = prune_graph_bridges(G, threshold_percentile=0.95)
+        # visualize_graph_structure(G, output_prefix=f"{args.dataset}_pre_prune")
+        G_pruned = prune_graph_bridges(G, threshold_percentile=0.95)
+        # visualize_graph_structure(G, output_prefix=f"{args.dataset}_post_prune")
+        components = find_louvain_bundles(G_pruned) 
+    elif args.strategy == "cc":
 
-    #components = find_connected_components(global_rel_map)
+        components = find_connected_components(global_rel_map)
 
-    components = find_louvain_bundles(G_pruned)
 
     # ==========================================
     # ANALYSIS 
@@ -545,7 +610,7 @@ def main():
             random.shuffle(pairs)
 
         # Store for saving and inference later
-        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test})
+        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [])
 
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
@@ -561,7 +626,7 @@ def main():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
-            print(f"Generating inference for dependent: {rel_name}")
+            print(f"Generating cp for: {cfg_name} {rel_name}")
             m_to_d_map = relation_maps[cfg_name+rel_name]
             
             # Create cartesian product pairs
@@ -576,9 +641,10 @@ def main():
             )
 
             try:
-                processed_entities[rel_name].pairs["cp"] = processed_entities[rel_name].pairs["cp"] +labeled_inference
+                processed_entities[rel_name].cp = processed_entities[rel_name].cp +labeled_inference
             except KeyError:
-                processed_entities[rel_name].pairs["cp"] = labeled_inference
+                print("Key Error!")
+                processed_entities[rel_name].cp = labeled_inference
 
     # ==========================================
     # Save to Disk & Ditto Serialization
@@ -590,10 +656,14 @@ def main():
 
         def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
             lines = []
+            amt_pos = 0
+            amt_neg = 0
             for pair in pairs:
                 left = pair[0]
                 right = pair[1]
                 label = pair[2]
+                if label == 1: amt_pos += 1
+                if label == 0: amt_neg += 1
 
                 l_part: str = ""
                 r_part: str = ""
@@ -607,7 +677,7 @@ def main():
 
                 line = f"{l_part}\t{r_part}\t{label}"
                 lines.append(line)
-            return lines
+            return lines, amt_pos, amt_neg
         
         for split, pairs in pairs_dict.items():
 
@@ -616,11 +686,12 @@ def main():
                 # BASELINE A: 
                 # ========================================================================================================================================================================
                 pairs_baselineA = copy.deepcopy(pairs)
-                lines = serialize(pairs_baselineA)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineA)
                 baseA_dir = f"{cfg.path_out_dir}baseA/"
                 Path(baseA_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineA {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
                 
                 # ========================================================================================================================================================================
                 # BASELINE B: 
@@ -689,11 +760,12 @@ def main():
                     right.update(flattened)
 
 
-                lines = serialize(pairs_baselineB)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineB)
                 baseB_dir = f"{cfg.path_out_dir}baseB/"
                 Path(baseB_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineB {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES EMPTY: 
@@ -706,11 +778,12 @@ def main():
                     left[f"{rel_name}_score"] = ""
                     right[f"{rel_name}_score"] = ""
 
-            lines = serialize(pairs_empty_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_empty_scores)
             empty_scores_dir = f"{cfg.path_out_dir}emptyScores/"
             Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for empty scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES INJECTED: 
@@ -730,15 +803,34 @@ def main():
                     left[f"{rel_name}_score"] = score
                     right[f"{rel_name}_score"] = score
 
-            lines = serialize(pairs_injected_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_injected_scores)
             injected_scores_dir = f"{cfg.path_out_dir}injectedScores/"
             Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for injected scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
-            # ========================================================================================================================================================================
-            # DONE!!!
-            # ========================================================================================================================================================================
+        # ========================================================================================================================================================================
+        # DONE!!!
+        # ========================================================================================================================================================================
+
+        pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
+
+        for rel in cfg.rels:
+            rel_name = rel["rel_name"]
+            for left, right, label in pairs_cp:
+                left[f"{rel_name}_score"] = ""
+                right[f"{rel_name}_score"] = ""
+
+        lines, amt_pos, amt_neg = serialize(pairs_cp)
+        cp_dir = f"{cfg.path_out_dir}emptyScores/"
+        Path(cp_dir).mkdir(parents=True, exist_ok=True)
+        with open(f"{cp_dir}cp.txt", 'w', encoding='utf-8') as f:
+            f.write("\n".join(lines) + "\n")
+        print(f"Wrote {len(lines)} lines for cp {cfg_name}. Pos: {amt_pos}, Neg: {amt_neg}")
+        # ========================================================================================================================================================================
+        # DONE!!!
+        # ========================================================================================================================================================================
 
 if __name__ == "__main__":
     main()
