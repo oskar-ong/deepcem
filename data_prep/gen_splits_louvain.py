@@ -23,6 +23,49 @@ RANDOM_SEED    = 0
 BLOCK_LIMIT    = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
+import networkx as nx
+
+def find_louvain_bundles(G: nx.Graph, seed: int = RANDOM_SEED) -> list[Dict[str, Set[str]]]:
+    """
+    Uses the Louvain algorithm to find tight clusters (bundles).
+    Converts Louvain sets into the dict format: {entity_type: {ids}, 'all_nodes': {ids}}
+    """
+    print("Running Louvain Community Detection...")
+    # Get communities as sets of nodes: {(id, type), (id, type), ...}
+    communities = nx.community.louvain_communities(G, seed=seed)
+    
+    comp_list = []
+    for comm in communities:
+        # Reformat into the dictionary structure your existing code uses
+        bundle: Dict[str, Set[str]] = defaultdict(set)
+        for node_id, ent_type in comm:
+            bundle[ent_type].add(node_id)
+            bundle["all_nodes"].add(node_id)
+        comp_list.append(bundle)
+        
+    print(f"Detected {len(comp_list)} Louvain bundles.")
+    return comp_list
+
+def prune_graph_bridges(G: nx.Graph, threshold_percentile: float = 0.98) -> nx.Graph:
+    """
+    Surgically removes high-degree 'Bridge' nodes that cause the Giant Component.
+    """
+    # Calculate degree for all nodes
+    degrees = dict(G.degree())
+    degree_values = pd.Series(list(degrees.values()))
+    
+    # Identify the threshold for the top 2% (or your chosen percentile)
+    cutoff = degree_values.quantile(threshold_percentile)
+    bridges = [node for node, deg in degrees.items() if deg > cutoff]
+    for b in bridges:
+        print(b)
+    print(f"Pruning {len(bridges)} bridge nodes (Degree > {cutoff})...")
+    
+    # Create a copy and remove these bridges
+    G_pruned = G.copy()
+    G_pruned.remove_nodes_from(bridges)
+    return G_pruned
+
 def build_relation_map(csv_fp: str, column1: str, column2: str, blacklist: set = None) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
     with open(csv_fp, newline="", encoding="utf-8") as f:
@@ -424,7 +467,16 @@ def main():
                     global_rel_map[(m_id, cfg_name)].add((d_id, rel_name))
                     global_rel_map[(d_id, rel_name)].add((m_id, cfg_name))
 
-    components = find_connected_components(global_rel_map)
+    G = nx.Graph()
+    for u, neighbors in global_rel_map.items():
+        for v in neighbors:
+            G.add_edge(u, v)
+
+    G_pruned = prune_graph_bridges(G, threshold_percentile=0.95)
+
+    #components = find_connected_components(global_rel_map)
+
+    components = find_louvain_bundles(G_pruned)
 
     # ==========================================
     # ANALYSIS 
@@ -473,7 +525,7 @@ def main():
         
         train_ids, valid_ids, test_ids = map(get_ids, splits)
 
-        df_basics = pd.read_csv(cfg.path_basics)
+        df_basics = pd.read_csv(cfg.path_basics, dtype={cfg.id_col: str})
         uf: UnionFind = entity_ufs[cfg.name]
         # map every entity to its root
         mapping = {entity: uf.find(entity) for entity in uf.parent.keys()}

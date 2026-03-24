@@ -30,6 +30,19 @@ def create_block_key_pokemon(row: pd.Series) -> str:
     title = re.sub(r'^(the|a|an)\s+', '', title)
     return re.sub(r'[^a-z0-9]', '', title)
 
+def create_block_key_ability(row: pd.Series) -> str:
+    title = str(row.get("ability", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+def create_block_key_move(row: pd.Series) -> str:
+    title = str(row.get("move", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+def create_block_key_item(row: pd.Series) -> str:
+    title = str(row.get("item", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
 REGISTRY = {
 
     "imdb_hard" :
@@ -44,8 +57,6 @@ REGISTRY = {
             block_key_func=create_block_key_movie,
             drop_list=['originalTitle', 'cluster_id', 'block_key'],
         ),
-
-        # DEPENDENT ENTITY 
         "name": EntityConfig(
             name="name",
             id_col="nconst",
@@ -58,7 +69,7 @@ REGISTRY = {
         )
     },
     "pokemon":
-    {
+        {
         "pokemon": EntityConfig(
             name="pokemon",
             id_col="pokemon",
@@ -82,7 +93,7 @@ REGISTRY = {
             path_out_dir="./data/processed/pokemon/ability/",
             rels = [
                 {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_ability.csv"}],
-            block_key_func=create_block_key_pokemon,
+            block_key_func=create_block_key_ability,
             drop_list=['cluster_id', 'block_key'],
         ),
         "item": EntityConfig(
@@ -94,7 +105,7 @@ REGISTRY = {
             rels = [
                 {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_item.csv"}
                 ],
-            block_key_func=create_block_key_pokemon,
+            block_key_func=create_block_key_item,
             drop_list=['cluster_id', 'block_key'],
         ),
         "move": EntityConfig(
@@ -106,8 +117,152 @@ REGISTRY = {
             rels = [
                 {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
                 ],
-            block_key_func=create_block_key_pokemon,
-            drop_list=['cluster_id', 'block_key'],
+            block_key_func=create_block_key_move,
+            drop_list=['cluster_id', 'block_key']
         )
-    }
+    },
+
+    "music": 
+        {
+        "track": EntityConfig(
+            name="track",
+            id_col="track",
+            path_basics="./data/raw/music/10/track.csv",
+            path_dups="./data/raw/music/10/track_dups.csv",
+            path_out_dir="./data/processed/music/track/",
+            rels = [
+                {"rel_name": "artist_credit", "junction_table": "./data/interim/music/track_artistcredit.csv"}
+                ],
+            block_key_func=create_block_key_name,
+            drop_list=['cluster_id', 'block_key']
+        ),
+        "artist_credit": EntityConfig(
+            name="artist_credit",
+            id_col="artist_credit",
+            path_basics="./data/raw/music/10/artist_credit.csv",
+            path_dups="./data/raw/music/10/artist_credit_dups.csv",
+            path_out_dir="./data/processed/music/artist_credit/",
+            rels = [
+                {"rel_name": "artist", "junction_table": "./data/raw/music/artist_credit_name.csv"}
+                ],
+            block_key_func=create_block_key_name,
+            drop_list=['cluster_id', 'block_key']
+        ),
+        "artist": EntityConfig(
+            name="artist",
+            id_col="artist",
+            path_basics="./data/raw/music/10/artist.csv",
+            path_dups="./data/raw/music/10/artist.csv",
+            path_out_dir="./data/processed/music/artist",
+            rels = [
+                {"rel_name": "artist_credit", "junction_table": "./data/raw/music/artist_credit_name.csv"}
+                # ,
+                # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                ],
+            block_key_func=create_block_key_name,
+            drop_list=['cluster_id', 'block_key']
+        ),
+        "area": EntityConfig(
+            name="area",
+            id_col="area",
+            path_basics="./data/raw/music/10/area.csv",
+            path_dups="./data/raw/music/10/area.csv",
+            path_out_dir="./data/processed/music/area",
+            rels = [
+                {"rel_name": "artist_area", "junction_table": "./data/raw/music/artist_area.csv"}
+                # ,
+                # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                ],
+            block_key_func=create_block_key_name,
+            drop_list=['cluster_id', 'block_key']
+        )
+        # ,
+        # "area": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "label": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "place": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "recording": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "label": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "label": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "label": EntityConfig(
+        #     name="move",
+        #     id_col="move",
+        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
+        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+        #     path_out_dir="./data/processed/pokemon/move/",
+        #     rels = [
+        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+        #         ],
+        #     block_key_func=create_block_key_pokemon,
+        #     drop_list=['cluster_id', 'block_key']
+        # ),
+        # "place": 
+}
 }
