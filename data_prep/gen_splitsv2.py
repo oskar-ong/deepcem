@@ -99,11 +99,6 @@ def validate_splits(splits, global_rel_map, entity_ufs):
     density = {}
     for name in ["train", "valid", "test"]:
         nodes_in_split = [n for n, s in node_to_split.items() if s == name]
-        # Count internal edges
-        internal_edges = 0
-        for n in nodes_in_split:
-            # Note: simplified for logic
-            pass 
         density[name] = len(nodes_in_split)
 
     print("--- DATASET HEALTH REPORT ---")
@@ -112,8 +107,6 @@ def validate_splits(splits, global_rel_map, entity_ufs):
     print(f"Node Distribution: {density}")
     
     return leaky_edges == 0 and spilled_clusters == 0
-
-
 
 def build_relation_map(csv_fp: str, column1: str, column2: str, blacklist: set = None) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
@@ -417,7 +410,7 @@ def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str,
                 row[f"{ent_type}_clusters"] = len(unique_clusters)
                 row[f"{ent_type}_dupe_count"] = len(nodes) - len(unique_clusters)
             
-            analysis_data.append(row)
+        analysis_data.append(row)
 
     return pd.DataFrame(analysis_data)
 
@@ -590,6 +583,9 @@ def main():
         # Store for saving and inference later
         processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [])
 
+    for name, ids in [("Train", train_ids), ("Test", test_ids)]:
+        roots = {entity_ufs[cfg_name].find(i) for i in ids if i in entity_ufs[cfg_name].parent}
+        print(f"{name} unique roots: {len(roots)}")
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
     # CONTINUE WITH INDIVIDUAL EXPERIMENT 

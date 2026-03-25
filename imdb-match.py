@@ -27,8 +27,8 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
         conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergence
 
         # A cleaner and more performant solution would be to update both in one go, possible TODO
-        update_input_files(entity.template, cp_input_fp, entity, relation_maps, scores, is_bin=False)
-        update_input_files(entity.template, conv_input_fp, entity, relation_maps, scores, is_bin=False)
+        update_input_files(entity.template_cp, cp_input_fp, entity, relation_maps, scores, is_bin=False)
+        update_input_files(entity.template_conv, conv_input_fp, entity, relation_maps, scores, is_bin=False)
                            
         # Generate new Scores
         cp_output_fp = f"ditto_out/{entity.name}_{iter_num}_cp.jsonl"

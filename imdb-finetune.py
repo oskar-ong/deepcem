@@ -42,7 +42,7 @@ def main():
 
     finetune(configs_path, task_name, dataset_dir_name, log)
 
-    input_path = f"{dataset_dir_name}/emptyScores/test.txt"
+    input_path = f"{dataset_dir_name}/test.txt"
     output_path = f"./ditto_out/{dataset}_{entity}_base_finetune.jsonl"
     evaluate(task_name, input_path, output_path, log, input_path)
 
