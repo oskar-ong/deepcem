@@ -30,7 +30,7 @@ def main():
 
     input_path = f"{dataset_dir_movie}/test.txt"
     output_path = f"./ditto_out/{dataset}_{entity}_base_finetune.jsonl"
-    evaluate(task_movie, input_path, output_path, dataset_dir_movie, log)
+    evaluate(task_movie, input_path, output_path, log, input_path)
 
     # ================================================================================
     # NAMES
@@ -44,7 +44,7 @@ def main():
 
     input_path = f"{dataset_dir_name}/emptyScores/test.txt"
     output_path = f"./ditto_out/{dataset}_{entity}_base_finetune.jsonl"
-    evaluate(task_movie, input_path, output_path, dataset_dir_movie, log)
+    evaluate(task_name, input_path, output_path, log, input_path)
 
     # ================================================================================
     # PHASE 2: RE-TUNE - INCLUDE RELATIONAL SCORES
@@ -61,7 +61,7 @@ def main():
 
     input_path = f"{dataset_dir_movie_injected}/test.txt"
     output_path = f"./ditto_out/{entity}_injected_finetune.jsonl"
-    evaluate(task_movie_relscore, input_path, output_path, dataset_dir_movie, log)
+    evaluate(task_movie_relscore, input_path, output_path, log, input_path)
 
     # ================================================================================
     # NAME REL SCORE
@@ -74,7 +74,7 @@ def main():
 
     input_path = f"{dataset_dir_name}/test.txt"
     output_path = f"./ditto_out/{entity}_injected_finetune.jsonl"
-    evaluate(task_movie_relscore, input_path, output_path, dataset_dir_name, log)
+    evaluate(task_name_relscore, input_path, output_path, log, input_path)
 
 if __name__=="__main__":
     main()
