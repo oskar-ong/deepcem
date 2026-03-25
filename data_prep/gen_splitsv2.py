@@ -14,7 +14,6 @@ from typing import Dict, List, Literal, Set, Tuple
 import pandas as pd
 import networkx as nx
 
-from gen_splits_domain_aware import validate_splits
 from entityConfig import REGISTRY, EntityConfig
 
 # --- Parameters ---
@@ -62,6 +61,57 @@ def generate_metadata(args, components, processed_entities, output_path):
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(metadata, f, indent=4)
     print(f"Metadata file created at: {output_path}")
+
+def validate_splits(splits, global_rel_map, entity_ufs):
+    report = []
+    
+    # Map node -> split_name
+    node_to_split = {}
+    for name, components in zip(["train", "valid", "test"], splits):
+        for comp in components:
+            for node_id in comp.get("all_nodes", []):
+                node_to_split[node_id] = name
+
+    # --- 1. Leakage Check ---
+    leaky_edges = 0
+    for u, neighbors in global_rel_map.items():
+        u_id = u[0]
+        for v_id, v_type in neighbors:
+            if u_id in node_to_split and v_id in node_to_split:
+                if node_to_split[u_id] != node_to_split[v_id]:
+                    leaky_edges += 1
+    
+    # --- 2. Duplicate Integrity Check ---
+    spilled_clusters = 0
+    for ent_type, uf in entity_ufs.items():
+        cluster_to_splits = defaultdict(set)
+        for node_id, split in node_to_split.items():
+            # Only check nodes of the current entity type
+            if node_id in uf.parent:
+                root = uf.find(node_id)
+                cluster_to_splits[root].add(split)
+        
+        for root, split_set in cluster_to_splits.items():
+            if len(split_set) > 1:
+                spilled_clusters += 1
+
+    # --- 3. Density Check ---
+    density = {}
+    for name in ["train", "valid", "test"]:
+        nodes_in_split = [n for n, s in node_to_split.items() if s == name]
+        # Count internal edges
+        internal_edges = 0
+        for n in nodes_in_split:
+            # Note: simplified for logic
+            pass 
+        density[name] = len(nodes_in_split)
+
+    print("--- DATASET HEALTH REPORT ---")
+    print(f"Relational Leakage (Cross-Split Edges): {leaky_edges}")
+    print(f"Duplicate Spillage (Clusters in >1 split): {spilled_clusters}")
+    print(f"Node Distribution: {density}")
+    
+    return leaky_edges == 0 and spilled_clusters == 0
 
 
 
@@ -414,6 +464,7 @@ class processedEntity:
     uf: UnionFind
     df: pd.DataFrame
     pairs: Dict[str, List[Tuple[dict, dict, int]]]
+    cp: List
 
 def main():
     parser = argparse.ArgumentParser()
@@ -537,7 +588,7 @@ def main():
             random.shuffle(pairs)
 
         # Store for saving and inference later
-        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test})
+        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [])
 
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
@@ -553,7 +604,7 @@ def main():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
-            print(f"Generating inference for dependent: {rel_name}")
+            print(f"Generating cp for: {cfg_name} {rel_name}")
             m_to_d_map = relation_maps[cfg_name+rel_name]
             
             # Create cartesian product pairs
@@ -568,9 +619,10 @@ def main():
             )
 
             try:
-                processed_entities[rel_name].pairs["cp"] = processed_entities[rel_name].pairs["cp"] +labeled_inference
+                processed_entities[rel_name].cp = processed_entities[rel_name].cp +labeled_inference
             except KeyError:
-                processed_entities[rel_name].pairs["cp"] = labeled_inference
+                print("Key Error!")
+                processed_entities[rel_name].cp = labeled_inference
 
     # ==========================================
     # Save to Disk & Ditto Serialization
@@ -582,10 +634,14 @@ def main():
 
         def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
             lines = []
+            amt_pos = 0
+            amt_neg = 0
             for pair in pairs:
                 left = pair[0]
                 right = pair[1]
                 label = pair[2]
+                if label == 1: amt_pos += 1
+                if label == 0: amt_neg += 1
 
                 l_part: str = ""
                 r_part: str = ""
@@ -599,7 +655,7 @@ def main():
 
                 line = f"{l_part}\t{r_part}\t{label}"
                 lines.append(line)
-            return lines
+            return lines, amt_pos, amt_neg
         
         for split, pairs in pairs_dict.items():
 
@@ -608,11 +664,12 @@ def main():
                 # BASELINE A: 
                 # ========================================================================================================================================================================
                 pairs_baselineA = copy.deepcopy(pairs)
-                lines = serialize(pairs_baselineA)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineA)
                 baseA_dir = f"{cfg.path_out_dir}baseA/"
                 Path(baseA_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineA {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
                 
                 # ========================================================================================================================================================================
                 # BASELINE B: 
@@ -681,11 +738,12 @@ def main():
                     right.update(flattened)
 
 
-                lines = serialize(pairs_baselineB)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineB)
                 baseB_dir = f"{cfg.path_out_dir}baseB/"
                 Path(baseB_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineB {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES EMPTY: 
@@ -698,11 +756,12 @@ def main():
                     left[f"{rel_name}_score"] = ""
                     right[f"{rel_name}_score"] = ""
 
-            lines = serialize(pairs_empty_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_empty_scores)
             empty_scores_dir = f"{cfg.path_out_dir}emptyScores/"
             Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for empty scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES INJECTED: 
@@ -722,15 +781,74 @@ def main():
                     left[f"{rel_name}_score"] = score
                     right[f"{rel_name}_score"] = score
 
-            lines = serialize(pairs_injected_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_injected_scores)
             injected_scores_dir = f"{cfg.path_out_dir}injectedScores/"
             Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for injected scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
-            # ========================================================================================================================================================================
-            # DONE!!!
-            # ========================================================================================================================================================================
+        # ========================================================================================================================================================================
+        # CARTESIAN PRODUCT (SCORES MAPPING)
+        # ========================================================================================================================================================================
+        # pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
+
+        # for rel in cfg.rels:
+        #     rel_name = rel["rel_name"]
+        #     for left, right, label in pairs_cp:
+        #         left[f"{rel_name}_score"] = ""
+        #         right[f"{rel_name}_score"] = ""
+
+        # lines, amt_pos, amt_neg = serialize(pairs_cp)
+        # cp_dir = f"{cfg.path_out_dir}emptyScores/"
+        # Path(cp_dir).mkdir(parents=True, exist_ok=True)
+        # with open(f"{cp_dir}cp.txt", 'w', encoding='utf-8') as f:
+        #     f.write("\n".join(lines) + "\n")
+        # print(f"Wrote {len(lines)} lines for cp {cfg_name}. Pos: {amt_pos}, Neg: {amt_neg}")
+
+        pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
+        # Define directory and ensure it exists
+        cp_dir = f"{cfg.path_out_dir}emptyScores/"
+        Path(cp_dir).mkdir(parents=True, exist_ok=True)
+        amt_pos = 0
+        amt_neg = 0
+        total_pairs = 0
+
+        with open(f"{cp_dir}cp_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
+             open(f"{cp_dir}cp_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
+
+            for left, right, label in pairs_cp:
+                # 1. Update scores within the entities
+
+                filtered_left = {k: v for k, v in left.items() if k not in cfg.drop_list}
+                filtered_right = {k: v for k, v in right.items() if k not in cfg.drop_list}
+                for rel in cfg.rels:
+                    rel_name = rel["rel_name"]
+                    filtered_left[f"{rel_name}_score"] = ""
+                    filtered_right[f"{rel_name}_score"] = ""
+
+                # 2. Track label counts (for the print statement)
+                if label == 1 or str(label).lower() == 'true':
+                    amt_pos += 1
+                else:
+                    amt_neg += 1
+
+                # 4. Create the labeled and unlabeled objects
+                pair_list = [filtered_left, filtered_right]
+                f_unlab.write(json.dumps(pair_list, ensure_ascii=False) + "\n")
+
+                # 5. Write each as a single line in their respective files
+                labeled_list = [filtered_left, filtered_right, label]
+                f_lab.write(json.dumps(labeled_list, ensure_ascii=False) + "\n")
+                
+                total_pairs += 1
+
+        print(f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
+    # ========================================================================================================================================================================
+    # Check requirements:
+    # No leakage
+    # Relational Evidence remains
+    # ========================================================================================================================================================================
     validate_splits(splits, global_rel_map, entity_ufs)
     metadata_fp = f"{args.dataset}_metadata.json"
     generate_metadata(args, components, processed_entities, metadata_fp)

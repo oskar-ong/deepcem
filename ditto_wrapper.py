@@ -67,9 +67,9 @@ def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
     # ================================================================================
     # Update ditto/configs.json with datasets
     # ================================================================================
-    train_fp = f"{dataset_dir}/train_rel_score.txt"
-    valid_fp = f"{dataset_dir}/valid_rel_score.txt"
-    test_fp = f"{dataset_dir}/test_rel_score.txt"
+    train_fp = f"{dataset_dir}/train.txt"
+    valid_fp = f"{dataset_dir}/valid.txt"
+    test_fp = f"{dataset_dir}/test.txt"
     configs_path = f"./models/ditto/configs.json"
 
     with Path(configs_path).open("r", encoding="utf-8") as f:

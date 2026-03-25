@@ -1,3 +1,4 @@
+import argparse
 from collections import defaultdict
 import csv
 import json
@@ -24,7 +25,7 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
 
     for entity in config.values():
         cp_input_fp = f"{entity.name}_{iter_num}_input_cp.jsonl" # Update Scores
-        conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergence
+        conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergenc
 
         # A cleaner and more performant solution would be to update both in one go, possible TODO
         update_input_files(entity.template, cp_input_fp, entity, relation_maps, scores, is_bin=False)
@@ -147,13 +148,16 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
         return 0.5
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("dataset", type=str)
+    args = parser.parse_args()
     sql_log = ExperimentLogger("entity_resolution_results.db")
     run_params = {'model': 'Ditto', 'lr': 3e-5, 'batch_size': 16}
     run_id = sql_log.log_run(run_params)
     prev_f1 = 0.0
     max_iters = 4
 
-    config = REGISTRY["imdb"]
+    config = REGISTRY[args.dataset]
     scores = {}
     relation_maps = {}
     for entity in config.values():
