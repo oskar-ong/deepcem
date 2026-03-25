@@ -38,7 +38,7 @@ def main():
     
     entity = "name"
     task_name = config["names"].model_base
-    dataset_dir_name = f"./data/{dataset}/{entity}"
+    dataset_dir_name = f"./data/{dataset}/{entity}/emptyScores"
 
     finetune(configs_path, task_name, dataset_dir_name, log)
 

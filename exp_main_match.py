@@ -28,8 +28,8 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
         conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergenc
 
         # A cleaner and more performant solution would be to update both in one go, possible TODO
-        update_input_files(entity.template, cp_input_fp, entity, relation_maps, scores, is_bin=False)
-        update_input_files(entity.template, conv_input_fp, entity, relation_maps, scores, is_bin=False)
+        update_input_files(entity.template_cp, cp_input_fp, entity, relation_maps, scores, is_bin=False)
+        update_input_files(entity.template_conv, conv_input_fp, entity, relation_maps, scores, is_bin=False)
                            
         # Generate new Scores
         cp_output_fp = f"ditto_out/{entity.name}_{iter_num}_cp.jsonl"
@@ -162,7 +162,7 @@ def main():
     relation_maps = {}
     for entity in config.values():
         # Pairs are for Score Generation -> CP 
-        pairs = extract_pairs(entity.template, entity.id_col)
+        pairs = extract_pairs(entity.template_cp, entity.id_col)
         scores[entity.name] = {tuple(sorted(pair)): 0.5 for pair in pairs}
         for r in entity.relations:
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(r.junction_table, entity.id_col, r.fk)
