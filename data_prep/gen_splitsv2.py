@@ -25,6 +25,23 @@ SplitMode = Literal["count", "nodes"]
 
 import json
 
+def print_overlap_table(CONFIGS, processed_entities):
+    rows = []
+    for ent_name, proc in processed_entities.items():
+        train_ids = set([p[0][CONFIGS[ent_name].id_col] for p in proc.pairs['train']])
+        test_ids = set([p[0][CONFIGS[ent_name].id_col] for p in proc.pairs['test']])
+        
+        overlap = train_ids.intersection(test_ids)
+        rows.append({
+            "Entity": ent_name,
+            "Train Nodes": len(train_ids),
+            "Test Nodes": len(test_ids),
+            "Overlap (Leakage)": len(overlap)
+        })
+    
+    df_leakage = pd.DataFrame(rows)
+    print(df_leakage.to_markdown())
+
 def generate_metadata(args, components, processed_entities, output_path):
     metadata = {
         "dataset": args.dataset,
@@ -544,6 +561,8 @@ def main():
         pickle.dump(components, f, pickle.HIGHEST_PROTOCOL)
     with open (f"pickles/{args.dataset}_splits.pickle", 'wb') as f:
         pickle.dump(splits, f, pickle.HIGHEST_PROTOCOL)
+    with open (f"pickles/{args.dataset}_relmap.pickle", 'wb') as f:
+        pickle.dump(global_rel_map, f, pickle.HIGHEST_PROTOCOL)
 
     # ==========================================
     # Generic Prep & Pair Generation
@@ -883,6 +902,7 @@ def main():
     validate_splits(splits, global_rel_map, entity_ufs)
     metadata_fp = f"{args.dataset}_metadata.json"
     generate_metadata(args, components, processed_entities, metadata_fp)
+    print_overlap_table(CONFIGS, processed_entities)
 
 if __name__ == "__main__":
     main()

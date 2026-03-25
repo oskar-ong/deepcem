@@ -27,7 +27,7 @@ imdb_entities = {
         model = "imdb_movies_rel_score",
         model_base = "imdb_movies",
         id_col = "tconst",
-        template_cp = "./data/imdb_hard/movie/emptyScores/test_unlabeled.jsonl",
+        template_cp = "./data/imdb_hard/movie/emptyScores/cp_unlabeled.jsonl",
         template_conv = "./data/imdb_hard/movie/emptyScores/test_unlabeled.jsonl",
         relations = [Relation(name="names", junction_table="./data/imdb_hard/title_principals.csv", fk="nconst", score_col="name_score")],
         true_cp_fp = f"./data/imdb_hard/movie/emptyScores/cp_labeled.jsonl",
