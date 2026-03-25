@@ -44,5 +44,5 @@ imdb_entities = {
     }
 
 REGISTRY = {
-    "imdb": imdb_entities
+    "imdb_hard": imdb_entities
 }
