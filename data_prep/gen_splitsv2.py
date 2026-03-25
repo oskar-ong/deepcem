@@ -763,6 +763,41 @@ def main():
                 f.write("\n".join(lines) + "\n")
             print(f"Wrote {len(lines)} lines for empty scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
+            if split == "test":
+                total_pairs = 0
+                amt_pos = 0
+                amt_neg = 0
+                with open(f"{empty_scores_dir}test_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
+                open(f"{empty_scores_dir}test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
+
+                    for left, right, label in pairs_empty_scores:
+                        # 1. Update scores within the entities
+
+                        filtered_left = {k: v for k, v in left.items() if k not in cfg.drop_list}
+                        filtered_right = {k: v for k, v in right.items() if k not in cfg.drop_list}
+                        for rel in cfg.rels:
+                            rel_name = rel["rel_name"]
+                            filtered_left[f"{rel_name}_score"] = ""
+                            filtered_right[f"{rel_name}_score"] = ""
+
+                        # 2. Track label counts (for the print statement)
+                        if label == 1 or str(label).lower() == 'true':
+                            amt_pos += 1
+                        else:
+                            amt_neg += 1
+
+                        # 4. Create the labeled and unlabeled objects
+                        pair_list = [filtered_left, filtered_right]
+                        f_unlab.write(json.dumps(pair_list, ensure_ascii=False) + "\n")
+
+                        # 5. Write each as a single line in their respective files
+                        labeled_list = [filtered_left, filtered_right, label]
+                        f_lab.write(json.dumps(labeled_list, ensure_ascii=False) + "\n")
+                        
+                        total_pairs += 1
+
+                    print(f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
+
             # ========================================================================================================================================================================
             # SCORES INJECTED: 
             # ========================================================================================================================================================================
