@@ -14,7 +14,6 @@ from typing import Dict, List, Literal, Set, Tuple
 import pandas as pd
 import networkx as nx
 
-from gen_splits_domain_aware import validate_splits
 from entityConfig import REGISTRY, EntityConfig
 
 # --- Parameters ---
@@ -24,46 +23,191 @@ RANDOM_SEED    = 0
 BLOCK_LIMIT    = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
-import json
-
-def generate_metadata(args, components, processed_entities, output_path):
-    metadata = {
-        "dataset": args.dataset,
-        "components": [],
-        "splits_summary": {
-            "train": {"positive_pairs": 0, "total_pairs": 0},
-            "valid": {"positive_pairs": 0, "total_pairs": 0},
-            "test": {"positive_pairs": 0, "total_pairs": 0}
-        }
-    }
-
-    # 1. Component Metadata
-    for i, comp in enumerate(components):
-        # Calculate makeup: how many of each entity type
-        makeup = {ent_type: len(nodes) for ent_type, nodes in comp.items() if ent_type != "all_nodes"}
+def debug_spilled_clusters(node_to_split, entity_ufs):
+    print("--- Investigating the 13 Spilled Clusters ---")
+    for ent_type, uf in entity_ufs.items():
+        cluster_to_splits = defaultdict(set)
+        cluster_to_nodes = defaultdict(list)
         
-        comp_info = {
-            "component_id": i,
-            "total_size": len(comp["all_nodes"]),
-            "makeup": makeup
-        }
-        metadata["components"].append(comp_info)
+        for node_id, split in node_to_split.items():
+            if node_id in uf.parent:
+                root = uf.find(node_id)
+                cluster_to_splits[root].add(split)
+                cluster_to_nodes[root].append(node_id)
+        
+        for root, split_set in cluster_to_splits.items():
+            if len(split_set) > 1:
+                print(f"Cluster Root: {root} | Entity Type: {ent_type}")
+                print(f"  Splits involved: {split_set}")
+                print(f"  Nodes in cluster: {cluster_to_nodes[root][:5]}...") # See the IDs
 
-    # 2. Split Metadata (Aggregated across all entity types)
-    for entity_name, proc_ent in processed_entities.items():
-        for split_name in ["train", "valid", "test"]:
-            pairs = proc_ent.pairs.get(split_name, [])
-            pos_count = sum(1 for p in pairs if p[2] == 1)
+def merge_components_to_super_components(family_components, entity_ufs, max_comp_ratio=0.2):
+    total_nodes = sum(len(c["all_nodes"]) for c in family_components)
+    max_size = total_nodes * max_comp_ratio
+    
+    # 1. Map node -> ALL component indices
+    node_to_indices = defaultdict(list)
+    for idx, comp in enumerate(family_components):
+        for node_id in comp.get("all_nodes", []):
+            node_to_indices[str(node_id)].append(idx)
+
+    comp_uf = UnionFind()
+    # Track sizes of components in the UnionFind
+    comp_sizes = {str(i): len(family_components[i]["all_nodes"]) for i in range(len(family_components))}
+    for i in range(len(family_components)): comp_uf.add(str(i))
+
+    # 2. Strategic Welding
+    for ent_type, uf in entity_ufs.items():
+        cluster_groups = defaultdict(list)
+        for node_id in uf.parent.keys():
+            root = uf.find(node_id)
+            cluster_groups[str(root)].append(str(node_id))
+
+        for root, nodes in cluster_groups.items():
+            involved = set()
+            for n in nodes:
+                for idx in node_to_indices.get(str(n), []):
+                    involved.add(comp_uf.find(str(idx)))
             
-            metadata["splits_summary"][split_name]["positive_pairs"] += pos_count
-            metadata["splits_summary"][split_name]["total_pairs"] += len(pairs)
+            if len(involved) > 1:
+                # Calculate potential new size
+                new_size = sum(comp_sizes[idx] for idx in involved)
+                
+                if new_size < max_size or ent_type == "pokemon":
+                    # Weld them (We ALWAYS weld Pokemon to keep primary duplicates together)
+                    indices = list(involved)
+                    first = indices[0]
+                    for other in indices[1:]:
+                        comp_uf.union(first, other)
+                    
+                    # Update size of the new root
+                    new_root = comp_uf.find(first)
+                    comp_sizes[new_root] = new_size
+                else:
+                    print(f"Skipping weld for {ent_type} cluster {root} to prevent Giant Component (Size: {new_size})")
 
-    # Save to file
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(metadata, f, indent=4)
-    print(f"Metadata file created at: {output_path}")
+    # 3. Final Aggregation
+    super_comps = defaultdict(lambda: defaultdict(set))
+    for idx in range(len(family_components)):
+        root_idx = comp_uf.find(str(idx))
+        for ent_type, nodes in family_components[idx].items():
+            super_comps[root_idx][ent_type].update(nodes)
+            
+    return list(super_comps.values())
+def validate_splits(splits, global_rel_map, entity_ufs):
+    report = []
+    
+    # Map node -> split_name
+    node_to_split = {}
+    for name, components in zip(["train", "valid", "test"], splits):
+        for comp in components:
+            for node_id in comp.get("all_nodes", []):
+                node_to_split[node_id] = name
 
+    # --- 1. Leakage Check ---
+    leaky_edges = 0
+    for u, neighbors in global_rel_map.items():
+        u_id = u[0]
+        for v_id, v_type in neighbors:
+            if u_id in node_to_split and v_id in node_to_split:
+                if node_to_split[u_id] != node_to_split[v_id]:
+                    leaky_edges += 1
+    
+    # --- 2. Duplicate Integrity Check ---
+    spilled_clusters = 0
+    for ent_type, uf in entity_ufs.items():
+        cluster_to_splits = defaultdict(set)
+        for node_id, split in node_to_split.items():
+            # Only check nodes of the current entity type
+            if node_id in uf.parent:
+                root = uf.find(node_id)
+                cluster_to_splits[root].add(split)
+        
+        for root, split_set in cluster_to_splits.items():
+            if len(split_set) > 1:
+                spilled_clusters += 1
 
+    # --- 3. Density Check ---
+    density = {}
+    for name in ["train", "valid", "test"]:
+        nodes_in_split = [n for n, s in node_to_split.items() if s == name]
+        # Count internal edges
+        internal_edges = 0
+        for n in nodes_in_split:
+            # Note: simplified for logic
+            pass 
+        density[name] = len(nodes_in_split)
+
+    print("--- DATASET HEALTH REPORT ---")
+    print(f"Relational Leakage (Cross-Split Edges): {leaky_edges}")
+    print(f"Duplicate Spillage (Clusters in >1 split): {spilled_clusters}")
+    print(f"Node Distribution: {density}")
+
+    debug_spilled_clusters(node_to_split, entity_ufs)
+    
+    return leaky_edges == 0 and spilled_clusters == 0
+
+def get_family_map(species_csv: str) -> Dict[str, int]:
+    """
+    Reads the species table and groups species into families 
+    based on the 'evolves_from_species' adjacency list.
+    """
+    df_species = pd.read_csv(species_csv)
+    G = nx.Graph()
+    
+    for _, row in df_species.iterrows():
+        current_s = str(row['species'])
+        parent_s = str(row['evolves_from_species'])
+        
+        G.add_node(current_s)
+        # If there is a parent, create an edge
+        if parent_s and parent_s != "nan" and parent_s != "":
+            G.add_edge(current_s, parent_s)
+            
+    # Each connected component is one evolutionary line (e.g., Bulbasaur/Ivysaur/Venusaur)
+    families = list(nx.connected_components(G))
+    
+    # Map: species_id -> family_index
+    species_to_family = {}
+    for idx, family_set in enumerate(families):
+        for s_id in family_set:
+            species_to_family[s_id] = idx
+            
+    return species_to_family
+
+def find_family_components(df_pokemon, species_to_family, global_rel_map):
+    """
+    Groups all entities into components based on evolutionary families.
+    """
+    # 1. Map Pokémon to their Family
+    # Assume df_pokemon has a 'species_id' column
+    df_pokemon['family_id'] = df_pokemon['species'].astype(str).map(species_to_family)
+    
+    # 2. Group by Family
+    family_groups = df_pokemon.groupby('family_id')
+    
+    components = []
+    for f_id, group in family_groups:
+        comp = defaultdict(set)
+        comp["all_nodes"] = set()
+        
+        # Add all Pokémon in this family
+        p_ids = group['pokemon'].astype(str).tolist()
+        for p_id in p_ids:
+            comp['pokemon'].add(str(p_id))
+            comp["all_nodes"].add(str(p_id))
+            
+            # Pull in ALL related entities (Moves, Abilities, Items) 
+            # for every Pokémon in this family
+            neighbors = global_rel_map.get((p_id, 'pokemon'), [])
+            for n_id, n_type in neighbors:
+                comp[n_type].add(str(n_id))
+                comp["all_nodes"].add(str(n_id))
+        
+        components.append(comp)
+        
+    print(f"Generated {len(components)} Family-based components.")
+    return components
 
 def build_relation_map(csv_fp: str, column1: str, column2: str, blacklist: set = None) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
@@ -414,6 +558,7 @@ class processedEntity:
     uf: UnionFind
     df: pd.DataFrame
     pairs: Dict[str, List[Tuple[dict, dict, int]]]
+    cp: List
 
 def main():
     parser = argparse.ArgumentParser()
@@ -427,14 +572,10 @@ def main():
     relation_maps = {} # Store these for inference later
     splitting_blacklist = set()
 
-    # Dynamic Blacklist 
-    do_blacklist = False
-    if do_blacklist == True:
-        for cfg_name, cfg in CONFIGS.items():
-            for rel_dict in cfg.rels:
-                # We prune the top 5% of most common relations to break the Giant Component
-                hubs = get_dynamic_blacklist(rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.95)
-                splitting_blacklist.update(hubs)
+    species_to_family = get_family_map("./data/raw/pokemon/50/species.csv")
+
+    df_pokemon = pd.read_csv(CONFIGS['pokemon'].path_basics)
+    
 
     for cfg_name, cfg in CONFIGS.items():
         # create a union find for each entity type based on duplicate csv (transitive closure)
@@ -468,7 +609,10 @@ def main():
                     global_rel_map[(m_id, cfg_name)].add((d_id, rel_name))
                     global_rel_map[(d_id, rel_name)].add((m_id, cfg_name))
 
-    components = find_connected_components(global_rel_map)
+    #components = find_connected_components(global_rel_map)
+    components = find_family_components(df_pokemon, species_to_family, global_rel_map)
+
+    super_components = merge_components_to_super_components(components, entity_ufs)
 
     # ==========================================
     # ANALYSIS 
@@ -493,7 +637,7 @@ def main():
     # END ANALYSIS 
     # ==========================================
 
-    splits = assign_components_to_splits(components)
+    splits = assign_components_to_splits(super_components)
 
     # pickling to evaluate created components and splits in different file
     with open (f"pickles/{args.dataset}_components.pickle", 'wb') as f:
@@ -517,7 +661,7 @@ def main():
         
         train_ids, valid_ids, test_ids = map(get_ids, splits)
 
-        df_basics = pd.read_csv(cfg.path_basics)
+        df_basics = pd.read_csv(cfg.path_basics, dtype={cfg.id_col: str})
         uf: UnionFind = entity_ufs[cfg.name]
         # map every entity to its root
         mapping = {entity: uf.find(entity) for entity in uf.parent.keys()}
@@ -537,7 +681,7 @@ def main():
             random.shuffle(pairs)
 
         # Store for saving and inference later
-        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test})
+        processed_entities[cfg.name] = processedEntity(uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [])
 
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
@@ -553,7 +697,7 @@ def main():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
-            print(f"Generating inference for dependent: {rel_name}")
+            print(f"Generating cp for: {cfg_name} {rel_name}")
             m_to_d_map = relation_maps[cfg_name+rel_name]
             
             # Create cartesian product pairs
@@ -568,9 +712,10 @@ def main():
             )
 
             try:
-                processed_entities[rel_name].pairs["cp"] = processed_entities[rel_name].pairs["cp"] +labeled_inference
+                processed_entities[rel_name].cp = processed_entities[rel_name].cp +labeled_inference
             except KeyError:
-                processed_entities[rel_name].pairs["cp"] = labeled_inference
+                print("Key Error!")
+                processed_entities[rel_name].cp = labeled_inference
 
     # ==========================================
     # Save to Disk & Ditto Serialization
@@ -582,10 +727,14 @@ def main():
 
         def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
             lines = []
+            amt_pos = 0
+            amt_neg = 0
             for pair in pairs:
                 left = pair[0]
                 right = pair[1]
                 label = pair[2]
+                if label == 1: amt_pos += 1
+                if label == 0: amt_neg += 1
 
                 l_part: str = ""
                 r_part: str = ""
@@ -599,7 +748,7 @@ def main():
 
                 line = f"{l_part}\t{r_part}\t{label}"
                 lines.append(line)
-            return lines
+            return lines, amt_pos, amt_neg
         
         for split, pairs in pairs_dict.items():
 
@@ -608,11 +757,12 @@ def main():
                 # BASELINE A: 
                 # ========================================================================================================================================================================
                 pairs_baselineA = copy.deepcopy(pairs)
-                lines = serialize(pairs_baselineA)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineA)
                 baseA_dir = f"{cfg.path_out_dir}baseA/"
                 Path(baseA_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineA {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
                 
                 # ========================================================================================================================================================================
                 # BASELINE B: 
@@ -681,11 +831,12 @@ def main():
                     right.update(flattened)
 
 
-                lines = serialize(pairs_baselineB)
+                lines, amt_pos, amt_neg = serialize(pairs_baselineB)
                 baseB_dir = f"{cfg.path_out_dir}baseB/"
                 Path(baseB_dir).mkdir(parents=True, exist_ok=True)
                 with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
+                print(f"Wrote {len(lines)} lines for BaselineB {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES EMPTY: 
@@ -698,11 +849,12 @@ def main():
                     left[f"{rel_name}_score"] = ""
                     right[f"{rel_name}_score"] = ""
 
-            lines = serialize(pairs_empty_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_empty_scores)
             empty_scores_dir = f"{cfg.path_out_dir}emptyScores/"
             Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for empty scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
             # ========================================================================================================================================================================
             # SCORES INJECTED: 
@@ -722,18 +874,41 @@ def main():
                     left[f"{rel_name}_score"] = score
                     right[f"{rel_name}_score"] = score
 
-            lines = serialize(pairs_injected_scores)
+            lines, amt_pos, amt_neg = serialize(pairs_injected_scores)
             injected_scores_dir = f"{cfg.path_out_dir}injectedScores/"
             Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
             with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
+            print(f"Wrote {len(lines)} lines for injected scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
-            # ========================================================================================================================================================================
-            # DONE!!!
-            # ========================================================================================================================================================================
+        # ========================================================================================================================================================================
+        # CARTESIAN PRODUCT (SCORES MAPPING)
+        # ========================================================================================================================================================================
+
+        pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
+
+        for rel in cfg.rels:
+            rel_name = rel["rel_name"]
+            for left, right, label in pairs_cp:
+                left[f"{rel_name}_score"] = ""
+                right[f"{rel_name}_score"] = ""
+
+        lines, amt_pos, amt_neg = serialize(pairs_cp)
+        cp_dir = f"{cfg.path_out_dir}emptyScores/"
+        Path(cp_dir).mkdir(parents=True, exist_ok=True)
+        with open(f"{cp_dir}cp.txt", 'w', encoding='utf-8') as f:
+            f.write("\n".join(lines) + "\n")
+        print(f"Wrote {len(lines)} lines for cp {cfg_name}. Pos: {amt_pos}, Neg: {amt_neg}")
+    # ========================================================================================================================================================================
+    # Check requirements:
+    # No leakage
+    # Relational Evidence remains
+    # ========================================================================================================================================================================
     validate_splits(splits, global_rel_map, entity_ufs)
-    metadata_fp = f"{args.dataset}_metadata.json"
-    generate_metadata(args, components, processed_entities, metadata_fp)
+
+    # ========================================================================================================================================================================
+    # DONE!!!
+    # ========================================================================================================================================================================
 
 if __name__ == "__main__":
     main()

@@ -28,6 +28,38 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network # Run: pip install pyvis
 
+import networkx as nx
+from community import community_louvain  # pip install python-louvain
+
+def prune_edges_by_community(G: nx.Graph) -> nx.Graph:
+    """
+    Identifies and removes edges that connect different Louvain communities.
+    """
+    print(f"Original Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
+    
+    # 1. Compute the best partition using Louvain
+    # partition is a dict: {node: community_id}
+    partition = community_louvain.best_partition(G, random_state=RANDOM_SEED)
+    
+    # 2. Identify 'Cross-Community' edges
+    edges_to_remove = []
+    for u, v in G.edges():
+        if partition[u] != partition[v]:
+            edges_to_remove.append((u, v))
+            
+    print(f"Identified {len(edges_to_remove)} inter-community edges to prune.")
+    
+    # 3. Create a pruned copy
+    G_pruned = G.copy()
+    G_pruned.remove_edges_from(edges_to_remove)
+    
+    # 4. Verify the break-up
+    components = list(nx.connected_components(G_pruned))
+    print(f"Post-Pruning: {len(components)} isolated components.")
+    print(f"Largest component size: {len(max(components, key=len))}")
+    
+    return G_pruned
+
 def visualize_graph_structure(G: nx.Graph, output_prefix: str = "graph_viz"):
     """
     Visualizes the top largest components to show the 'Giant Component' vs others.
@@ -37,14 +69,6 @@ def visualize_graph_structure(G: nx.Graph, output_prefix: str = "graph_viz"):
     print(f"Total Components: {len(components)}")
     print(f"Top 5 sizes: {[len(c) for c in components[:5]]}")
 
-    # 2. Define color map based on entity type
-    # Note: Your nodes are tuples (node_id, entity_type)
-    color_map = {
-        "track": "#1DB954",  # Spotify Green
-        "artist": "#1976D2", # Blue
-        "area": "#FFA000"    # Amber
-    }
-
     # 3. Create a subgraph of the top N components (to keep it readable)
     # We take the largest (the giant) and a few small ones for contrast
     nodes_to_viz = set()
@@ -53,29 +77,29 @@ def visualize_graph_structure(G: nx.Graph, output_prefix: str = "graph_viz"):
     
     sub_G = G.subgraph(nodes_to_viz)
 
-    # --- Option A: Interactive Pyvis (Best for exploring) ---
-    try:
-        net = Network(height="750px", width="100%", bgcolor="#222222", font_color="white")
-        for node, data in sub_G.nodes(data=True):
-            n_id, n_type = node
-            net.add_node(str(node), label=f"{n_type}: {n_id}", color=color_map.get(n_type, "grey"))
+    # # --- Option A: Interactive Pyvis (Best for exploring) ---
+    # try:
+    #     net = Network(height="750px", width="100%", bgcolor="#222222", font_color="white")
+    #     for node, data in sub_G.nodes(data=True):
+    #         n_id, n_type = node
+    #         net.add_node(str(node), label=f"{n_type}: {n_id}")
         
-        for u, v in sub_G.edges():
-            net.add_edge(str(u), str(v))
+    #     for u, v in sub_G.edges():
+    #         net.add_edge(str(u), str(v))
         
-        net.force_atlas_2based() # Layout algorithm
-        net.show(f"{output_prefix}_interactive.html", notebook=False)
-        print(f"Interactive viz saved to {output_prefix}_interactive.html")
-    except Exception as e:
-        print(f"Pyvis failed: {e}. Falling back to Matplotlib.")
+    #     net.force_atlas_2based() # Layout algorithm
+    #     net.show(f"{output_prefix}_interactive.html", notebook=False)
+    #     print(f"Interactive viz saved to {output_prefix}_interactive.html")
+    # except Exception as e:
+    #     print(f"Pyvis failed: {e}. Falling back to Matplotlib.")
 
     # --- Option B: Static Matplotlib ---
     plt.figure(figsize=(12, 12))
     pos = nx.spring_layout(sub_G, k=0.15, iterations=20)
     
-    colors = [color_map.get(node[1], "grey") for node in sub_G.nodes()]
+    #colors = [color_map.get(node[1], "grey") for node in sub_G.nodes()]
     
-    nx.draw_networkx_nodes(sub_G, pos, node_size=20, node_color=colors, alpha=0.7)
+    nx.draw_networkx_nodes(sub_G, pos, node_size=20, alpha=0.7)
     nx.draw_networkx_edges(sub_G, pos, alpha=0.1, edge_color="white")
     
     plt.title("Largest Components (The Giant Component vs. Isolated Bundles)")
@@ -115,8 +139,6 @@ def prune_graph_bridges(G: nx.Graph, threshold_percentile: float = 0.98) -> nx.G
     # Identify the threshold for the top 2% (or your chosen percentile)
     cutoff = degree_values.quantile(threshold_percentile)
     bridges = [node for node, deg in degrees.items() if deg > cutoff]
-    for b in bridges:
-        print(b)
     print(f"Pruning {len(bridges)} bridge nodes (Degree > {cutoff})...")
     
     # Create a copy and remove these bridges
@@ -325,7 +347,7 @@ def propagate_dependency_pairs(
     for p1_dict, p2_dict, _label in parent_pairs:
         id1, id2 = p1_dict[id_col], p2_dict[id_col]
         
-        # Get related actors for both movies
+        # Get related nodes for both parents
         deps1 = dependency_map.get(id1, set())
         deps2 = dependency_map.get(id2, set())
         
@@ -493,7 +515,7 @@ def main():
         for cfg_name, cfg in CONFIGS.items():
             for rel_dict in cfg.rels:
                 # We prune the top 5% of most common relations to break the Giant Component
-                hubs = get_dynamic_blacklist(rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.95)
+                hubs = get_dynamic_blacklist(rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.55)
                 splitting_blacklist.update(hubs)
 
     for cfg_name, cfg in CONFIGS.items():
@@ -534,14 +556,22 @@ def main():
             for v in neighbors:
                 G.add_edge(u, v)
 
-        # visualize_graph_structure(G, output_prefix=f"{args.dataset}_pre_prune")
-        G_pruned = prune_graph_bridges(G, threshold_percentile=0.95)
-        # visualize_graph_structure(G, output_prefix=f"{args.dataset}_post_prune")
-        components = find_louvain_bundles(G_pruned) 
+        visualize_graph_structure(G, output_prefix=f"{args.dataset}_pre_prune")
+        # G_pruned = prune_graph_bridges(G, threshold_percentile=0.95)
+        G_shattered = prune_edges_by_community(G)
+        visualize_graph_structure(G_shattered, output_prefix=f"{args.dataset}_shattered")
+        # components = find_louvain_bundles(G_pruned) 
+        components = []
+        for c_nodes in nx.connected_components(G_shattered):
+            comp: Dict[str, Set[str]] = defaultdict(set)
+            comp["all_nodes"] = set()
+            for node_id, ent_type in c_nodes:
+                comp[ent_type].add(node_id)
+                comp["all_nodes"].add(node_id)
+            components.append(comp)
     elif args.strategy == "cc":
 
         components = find_connected_components(global_rel_map)
-
 
     # ==========================================
     # ANALYSIS 
@@ -811,7 +841,7 @@ def main():
             print(f"Wrote {len(lines)} lines for injected scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
         # ========================================================================================================================================================================
-        # DONE!!!
+        # CARTESIAN PRODUCT (SCORES MAPPING)
         # ========================================================================================================================================================================
 
         pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)

@@ -38,11 +38,23 @@ def create_block_key_move(row: pd.Series) -> str:
     title = str(row.get("move", "")).lower()
     title = re.sub(r'^(the|a|an)\s+', '', title)
     return re.sub(r'[^a-z0-9]', '', title)
+
 def create_block_key_item(row: pd.Series) -> str:
     title = str(row.get("item", "")).lower()
     title = re.sub(r'^(the|a|an)\s+', '', title)
     return re.sub(r'[^a-z0-9]', '', title)
-
+def create_block_key_track(row: pd.Series) -> str:
+    title = str(row.get("track", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+def create_block_key_artist(row: pd.Series) -> str:
+    title = str(row.get("artist", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+def create_block_key_area(row: pd.Series) -> str:
+    title = str(row.get("area", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
 REGISTRY = {
 
     "imdb_hard" :
@@ -127,55 +139,44 @@ REGISTRY = {
         "track": EntityConfig(
             name="track",
             id_col="track",
-            path_basics="./data/raw/music/10/track.csv",
-            path_dups="./data/raw/music/10/track_dups.csv",
+            path_basics="./data/raw/music/new_ids/track.csv",
+            path_dups="./data/raw/music/new_ids/track_dups.csv",
             path_out_dir="./data/processed/music/track/",
             rels = [
-                {"rel_name": "artist_credit", "junction_table": "./data/interim/music/track_artistcredit.csv"}
+                {"rel_name": "artist", "junction_table": "./data/raw/music/new_ids/track_artist.csv"}
                 ],
-            block_key_func=create_block_key_name,
-            drop_list=['cluster_id', 'block_key']
-        ),
-        "artist_credit": EntityConfig(
-            name="artist_credit",
-            id_col="artist_credit",
-            path_basics="./data/raw/music/10/artist_credit.csv",
-            path_dups="./data/raw/music/10/artist_credit_dups.csv",
-            path_out_dir="./data/processed/music/artist_credit/",
-            rels = [
-                {"rel_name": "artist", "junction_table": "./data/raw/music/artist_credit_name.csv"}
-                ],
-            block_key_func=create_block_key_name,
+            block_key_func=create_block_key_track,
             drop_list=['cluster_id', 'block_key']
         ),
         "artist": EntityConfig(
             name="artist",
             id_col="artist",
-            path_basics="./data/raw/music/10/artist.csv",
-            path_dups="./data/raw/music/10/artist.csv",
-            path_out_dir="./data/processed/music/artist",
+            path_basics="./data/raw/music/new_ids/artist.csv",
+            path_dups="./data/raw/music/new_ids/artist_dups.csv",
+            path_out_dir="./data/processed/music/artist/",
             rels = [
-                {"rel_name": "artist_credit", "junction_table": "./data/raw/music/artist_credit_name.csv"}
+                {"rel_name": "track", "junction_table": "./data/raw/music/new_ids/track_artist.csv"},
+                {"rel_name": "area", "junction_table": "./data/raw/music/new_ids/artist_area.csv"},
                 # ,
                 # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
                 # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
                 ],
-            block_key_func=create_block_key_name,
+            block_key_func=create_block_key_artist,
             drop_list=['cluster_id', 'block_key']
         ),
         "area": EntityConfig(
             name="area",
             id_col="area",
-            path_basics="./data/raw/music/10/area.csv",
-            path_dups="./data/raw/music/10/area.csv",
-            path_out_dir="./data/processed/music/area",
+            path_basics="./data/raw/music/new_ids/area.csv",
+            path_dups="./data/raw/music/new_ids/area_dups.csv",
+            path_out_dir="./data/processed/music/area/",
             rels = [
-                {"rel_name": "artist_area", "junction_table": "./data/raw/music/artist_area.csv"}
+                {"rel_name": "artist", "junction_table": "./data/raw/music/new_ids/artist_area.csv"}
                 # ,
                 # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
                 # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
                 ],
-            block_key_func=create_block_key_name,
+            block_key_func=create_block_key_area,
             drop_list=['cluster_id', 'block_key']
         )
         # ,
