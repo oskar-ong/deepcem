@@ -22,7 +22,7 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id):
-
+    f1_scores = {}
     for entity in config.values():
         cp_input_fp = f"{entity.name}_{iter_num}_input_cp.jsonl" # Update Scores
         conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl" # Track f1 convergenc
@@ -41,6 +41,7 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
         conv_output_fp = f"ditto_out/{entity.name}_{iter_num}_conv.jsonl"
         metrics = evaluate(entity.model, conv_input_fp, conv_output_fp, log, entity.true_test_fp)
         metrics_conv = {"accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
+        f1_scores[entity] = metrics[3]
         sql_log.log_metrics(run_id, iter_num, entity.name, metrics_conv)
 
     # Update Scores Map
@@ -48,7 +49,7 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
     for entity in config.values():
         scores[entity.name] = extract_scores(f"ditto_out/{entity.name}_{iter_num}_cp.jsonl", scores[entity.name], entity.id_col)
 
-    return scores, metrics_conv
+    return scores, f1_scores 
 
 def extract_scores(fp, dependency_scores, id_attribute, is_damp=False):
     with open(fp, 'r', encoding='utf-8') as f:
@@ -170,12 +171,17 @@ def main():
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(r.junction_table, entity.id_col, r.fk)
 
     for i in range(0, max_iters):
-        scores, metrics = run_iteration(i, config, scores, relation_maps, sql_log, run_id)
+        scores, f1_scores = run_iteration(i, config, scores, relation_maps, sql_log, run_id)
+        old_f1_scores = defaultdict(int)
+        converged = True
+        for k in f1_scores.keys:
 
-        if metrics["f1_score"] == prev_f1:
+            if f1_scores[k] != old_f1_scores[k]:
+                converged = False
+                
+        if converged == True:
             break
-        
-        prev_f1 = metrics["f1_score"]
+        old_f1_scores = f1_scores
 
 if __name__=="__main__":
     main()
