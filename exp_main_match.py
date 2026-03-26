@@ -136,6 +136,8 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
         for dep_left in dependencies_left:
             c_max = 0.0 # current max score for this dependency
             for dep_right in dependencies_right:
+
+                # TODO: If dep_left == dep_right: score = 1
                 score = dependency_scores.get(tuple(sorted((dep_left, dep_right))), 0.5)
 
                 if score > c_max:
