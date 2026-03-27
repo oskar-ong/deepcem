@@ -211,3 +211,6 @@ __marimo__/
 
 # data
 /data/processed/
+
+#slurm
+/slurm_logs/
