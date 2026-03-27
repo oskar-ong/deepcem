@@ -8,7 +8,7 @@ from ditto_wrapper import evaluate
 from experiment_config import REGISTRY, EntityConfig
 from logging_setup import ExperimentLogger, setup_logger
 
-log = setup_logger("exp_baseline_iterative_imdb_hard-matching")
+log = setup_logger("exp_main_exp-matching")
 log.info("Start Experiment: Iterative Matching - IMDB HARD - matching")
 
 def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
@@ -174,7 +174,7 @@ def main():
     for i in range(0, max_iters):
         scores, f1_scores = run_iteration(i, config, scores, relation_maps, sql_log, run_id)
         converged = True
-        for k in f1_scores.keys:
+        for k in f1_scores.keys():
 
             if f1_scores[k] != old_f1_scores[k]:
                 converged = False

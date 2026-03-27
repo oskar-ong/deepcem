@@ -148,6 +148,6 @@ def evaluate(task, input_path, output_path, log, true_fp:str) -> Tuple[float, fl
     acc, prec, rec, f1 = round(acc,3), round(prec,3), round(rec,3), round(f1,3) 
     log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
     log.info(f"{task} METRICS: {acc}, {prec}, {rec}, {f1}")
-    print(f"{task} METRICS BASELINE 1", acc, prec, rec, f1)
+    print(f"{task} {input_path} {output_path} METRICS", acc, prec, rec, f1)
     return acc, prec, rec, f1
 
