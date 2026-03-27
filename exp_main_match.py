@@ -41,7 +41,7 @@ def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_ma
         conv_output_fp = f"ditto_out/{entity.name}_{iter_num}_conv.jsonl"
         metrics = evaluate(entity.model, conv_input_fp, conv_output_fp, log, entity.true_test_fp)
         metrics_conv = {"accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
-        f1_scores[entity] = metrics[3]
+        f1_scores[entity.name] = metrics[3]
         sql_log.log_metrics(run_id, iter_num, entity.name, metrics_conv)
 
     # Update Scores Map
