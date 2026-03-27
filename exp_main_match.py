@@ -170,15 +170,15 @@ def main():
         for r in entity.relations:
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(r.junction_table, entity.id_col, r.fk)
 
+    old_f1_scores = defaultdict(int)
     for i in range(0, max_iters):
         scores, f1_scores = run_iteration(i, config, scores, relation_maps, sql_log, run_id)
-        old_f1_scores = defaultdict(int)
         converged = True
         for k in f1_scores.keys:
 
             if f1_scores[k] != old_f1_scores[k]:
                 converged = False
-                
+
         if converged == True:
             break
         old_f1_scores = f1_scores
