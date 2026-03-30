@@ -565,6 +565,12 @@ def main():
         pickle.dump(global_rel_map, f, pickle.HIGHEST_PROTOCOL)
 
     # ==========================================
+    # Pollution
+    # ==========================================
+
+
+
+    # ==========================================
     # Generic Prep & Pair Generation
     # ==========================================
     processed_entities: Dict[str, processedEntity] = {}
