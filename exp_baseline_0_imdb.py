@@ -4,8 +4,8 @@ from pathlib import Path
 import shutil
 import subprocess
 
-from evaluate import calc_metrics
-from logging_setup import setup_logger
+from src.evaluate import calc_metrics
+from src.logging_setup import setup_logger
 
 log = setup_logger("exp_baseline_0_imdb")
 log.info("Start Experiment: Baseline 0 - No Relational Scores")
@@ -39,7 +39,7 @@ def finetune(configs_path, task, dataset_dir):
 
         with Path(configs_path).open("w", encoding="utf-8") as f:
             json.dump(file_data, f, indent=4)
-        
+
         log.info(f"Config for '{task}' has been updated/added.")
         print(f"Config for '{task}' has been updated/added.")
 
@@ -63,10 +63,11 @@ def finetune(configs_path, task, dataset_dir):
     ]
 
     env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
+    # env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
     log.info(f"Finished Finetuning for task: {task}")
     print(f"Finished Finetuning for task: {task}")
+
 
 def evaluate(task, input_path, output_path, dataset_dir):
 
@@ -76,20 +77,20 @@ def evaluate(task, input_path, output_path, dataset_dir):
     log.info(f"Input Path: {input_path} ")
 
     cmd = [
-            "python",
-            f"./models/ditto/matcher.py",
-            "--task", task,
-            "--input_path", input_path,
-            "--output_path", output_path,
-            "--lm", "roberta",
-            "--max_len", "128",
-            "--use_gpu",
-            "--fp16",
-            "--checkpoint_path", "./models/ditto/checkpoints/",
-        ]
+        "python",
+        f"./models/ditto/matcher.py",
+        "--task", task,
+        "--input_path", input_path,
+        "--output_path", output_path,
+        "--lm", "roberta",
+        "--max_len", "128",
+        "--use_gpu",
+        "--fp16",
+        "--checkpoint_path", "./models/ditto/checkpoints/",
+    ]
 
     env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
+    # env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
 
     log.info(f"Finished Predicting")
@@ -97,8 +98,10 @@ def evaluate(task, input_path, output_path, dataset_dir):
     true_fp = f"{dataset_dir}/test.txt"
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
     log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
-    log.info(f"{task} METRICS: {round(acc,3)}, {round(prec,3)}, {round(rec,3)}, {round(f1,3)}")
+    log.info(
+        f"{task} METRICS: {round(acc,3)}, {round(prec,3)}, {round(rec,3)}, {round(f1,3)}")
     print(f"{task} METRICS BASELINE 0", acc, prec, rec, f1)
+
 
 def main():
     dataset = "imdb_hard"
@@ -122,7 +125,8 @@ def main():
     # ================================================================================
     entity = "name"
     task_name = f"{dataset}_{entity}_baseline_0"
-    dataset_dir = f"./data/{dataset}/{entity}/baseline0" # TODO: Should build like this: dataset_dir -> task_dir -> entity type
+    # TODO: Should build like this: dataset_dir -> task_dir -> entity type
+    dataset_dir = f"./data/{dataset}/{entity}/baseline0"
 
     finetune(configs_path, task_name, dataset_dir)
 
@@ -130,5 +134,6 @@ def main():
     output_path = f"./ditto_out/{entity}_baseline_0.jsonl"
     evaluate(task_name, input_path, output_path, dataset_dir)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     main()

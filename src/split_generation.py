@@ -2,7 +2,6 @@ from __future__ import annotations
 import json
 import argparse
 import csv
-from dataclasses import dataclass
 import itertools
 import pickle
 import random

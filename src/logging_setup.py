@@ -3,6 +3,7 @@ import logging
 import os
 import sqlite3
 
+
 def setup_logger(base_name="CollectiveER"):
     # Generate timestamp: e.g., 20260306_1012
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -14,17 +15,19 @@ def setup_logger(base_name="CollectiveER"):
 
     # Create file handler
     file_handler = logging.FileHandler(log_filename)
-    
+
     # Create format for the logs
     # Format: Time - Name - Level - Message
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     file_handler.setFormatter(formatter)
 
     # Add handler to the logger
     if not logger.handlers:
         logger.addHandler(file_handler)
-    
+
     return logger
+
 
 class ExperimentLogger:
     def __init__(self, db_path="experiments.db"):
@@ -75,10 +78,10 @@ class ExperimentLogger:
         with sqlite3.connect(self.db_path, timeout=30) as conn:
             query = "INSERT INTO metrics (run_id, epoch, entity, precision, recall, f1_score) VALUES (?, ?, ?, ?, ?, ?)"
             conn.execute(query, (
-                run_id, 
-                epoch, 
+                run_id,
+                epoch,
                 entity,
-                metrics_dict['precision'], 
-                metrics_dict['recall'], 
+                metrics_dict['precision'],
+                metrics_dict['recall'],
                 metrics_dict['f1_score']
             ))

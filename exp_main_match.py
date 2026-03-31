@@ -5,11 +5,8 @@ import json
 from typing import Dict, List, Set
 
 from ditto_wrapper import evaluate
-from experiment_config import REGISTRY, EntityConfig
-from logging_setup import ExperimentLogger, setup_logger
-
-log = setup_logger("exp_main_exp-matching")
-log.info("Start Experiment: Iterative Matching - IMDB HARD - matching")
+from src.experiment_config import REGISTRY, EntityConfig
+from src.logging_setup import ExperimentLogger, setup_logger
 
 
 def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
@@ -175,14 +172,16 @@ def main():
     parser.add_argument("dataset", type=str)
     args = parser.parse_args()
     sql_log = ExperimentLogger("entity_resolution_results.db")
+    log = setup_logger("exp_main_exp-matching")
+    log.info(f"Start Collective Entity Matching: Dataset: {args.dataset}")
     run_params = {'model': 'Ditto', 'lr': 3e-5, 'batch_size': 16}
     run_id = sql_log.log_run(run_params)
-    prev_f1 = 0.0
     max_iters = 4
 
     config = REGISTRY[args.dataset]
     scores = {}
     relation_maps = {}
+    log.info(f"Initialize Scores for each pair...")
     for entity in config.values():
         # Pairs are for Score Generation -> CP
         pairs = extract_pairs(entity.template_cp)
@@ -190,9 +189,12 @@ def main():
         for r in entity.relations:
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(
                 r.junction_table, entity.id_col, r.fk)
+    log.info(f"Score Initialization Done!")
 
     old_f1_scores = defaultdict(int)
+    log.info(f"Start iterative matching")
     for i in range(0, max_iters):
+        log.info(f"Start iteration {i}")
         scores, f1_scores = run_iteration(
             i, config, scores, relation_maps, sql_log, run_id)
         converged = True
@@ -204,6 +206,8 @@ def main():
         if converged == True:
             break
         old_f1_scores = f1_scores
+        log.info(f"Finished iteration {i}")
+        log.info(f"-------------------------")
 
 
 if __name__ == "__main__":

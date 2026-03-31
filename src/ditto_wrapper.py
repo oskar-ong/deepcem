@@ -7,6 +7,7 @@ from typing import Tuple
 
 from evaluate import calc_metrics
 
+
 def finetune(configs_path, task, dataset_dir, log, epochs=5):
 
     # ================================================================================
@@ -35,7 +36,7 @@ def finetune(configs_path, task, dataset_dir, log, epochs=5):
 
         with Path(configs_path).open("w", encoding="utf-8") as f:
             json.dump(file_data, f, indent=4)
-        
+
         log.info(f"Config for '{task}' has been updated/added.")
 
     # ================================================================================
@@ -58,9 +59,10 @@ def finetune(configs_path, task, dataset_dir, log, epochs=5):
     ]
 
     env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
+    # env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
     log.info(f"Finished Finetuning for task: {task}")
+
 
 def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
 
@@ -90,7 +92,7 @@ def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
 
         with Path(configs_path).open("w", encoding="utf-8") as f:
             json.dump(file_data, f, indent=4)
-        
+
         log.info(f"Config for '{task}' has been updated/added.")
 
     # ================================================================================
@@ -114,11 +116,12 @@ def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
     ]
 
     env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
+    # env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
     log.info(f"Finished Finetuning for task: {task}")
 
-def evaluate(task, input_path, output_path, log, true_fp:str) -> Tuple[float, float, float, float]:
+
+def evaluate(task, input_path, output_path, log, true_fp: str) -> Tuple[float, float, float, float]:
 
     log.info("Start Predicting: ")
     log.info(f"Task: {task} ")
@@ -126,28 +129,28 @@ def evaluate(task, input_path, output_path, log, true_fp:str) -> Tuple[float, fl
     log.info(f"Input Path: {input_path} ")
 
     cmd = [
-            "python",
-            f"./models/ditto/matcher.py",
-            "--task", task,
-            "--input_path", input_path,
-            "--output_path", output_path,
-            "--lm", "roberta",
-            "--max_len", "128",
-            "--use_gpu",
-            "--fp16",
-            "--checkpoint_path", "./models/ditto/checkpoints/",
-        ]
+        "python",
+        f"./models/ditto/matcher.py",
+        "--task", task,
+        "--input_path", input_path,
+        "--output_path", output_path,
+        "--lm", "roberta",
+        "--max_len", "128",
+        "--use_gpu",
+        "--fp16",
+        "--checkpoint_path", "./models/ditto/checkpoints/",
+    ]
 
     env = os.environ.copy()
-    #env["CUDA_VISIBLE_DEVICES"] = "0"
+    # env["CUDA_VISIBLE_DEVICES"] = "0"
     subprocess.run(cmd, env=env)
 
     log.info(f"Finished Predicting")
 
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
-    acc, prec, rec, f1 = round(acc,3), round(prec,3), round(rec,3), round(f1,3) 
+    acc, prec, rec, f1 = round(acc, 3), round(
+        prec, 3), round(rec, 3), round(f1, 3)
     log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
     log.info(f"{task} METRICS: {acc}, {prec}, {rec}, {f1}")
     print(f"{task} {input_path} {output_path} METRICS", acc, prec, rec, f1)
     return acc, prec, rec, f1
-
