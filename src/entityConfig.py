@@ -117,7 +117,7 @@ REGISTRY = {
                 # {"rel_name": "species", "junction_table": "./data/raw/pokemon/50/poke_species.csv"},
             ],
             block_key_func=create_block_key_pokemon,
-            drop_list=['cluster_id', 'block_key'],
+            drop_list=[],
         ),
         "ability": EntityConfig(
             name="ability",
@@ -128,7 +128,7 @@ REGISTRY = {
             rels=[
                 {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_ability.csv"}],
             block_key_func=create_block_key_ability,
-            drop_list=['cluster_id', 'block_key'],
+            drop_list=[],
         ),
         "item": EntityConfig(
             name="item",
@@ -141,7 +141,7 @@ REGISTRY = {
                     "junction_table": "./data/raw/pokemon/new_ids/poke_item.csv"}
             ],
             block_key_func=create_block_key_item,
-            drop_list=['cluster_id', 'block_key'],
+            drop_list=[],
         ),
         "move": EntityConfig(
             name="move",
@@ -154,7 +154,7 @@ REGISTRY = {
                     "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
             ],
             block_key_func=create_block_key_move,
-            drop_list=['cluster_id', 'block_key']
+            drop_list=[]
         )
     },
 
@@ -171,7 +171,7 @@ REGISTRY = {
                     "junction_table": "./data/raw/music/new_ids/track_artist.csv"}
             ],
             block_key_func=create_block_key_track,
-            drop_list=['cluster_id', 'block_key']
+            drop_list=[]
         ),
         "artist": EntityConfig(
             name="artist",
@@ -189,7 +189,7 @@ REGISTRY = {
                 # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
             ],
             block_key_func=create_block_key_artist,
-            drop_list=['cluster_id', 'block_key']
+            drop_list=[]
         ),
         "area": EntityConfig(
             name="area",
@@ -205,7 +205,7 @@ REGISTRY = {
                 # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
             ],
             block_key_func=create_block_key_area,
-            drop_list=['cluster_id', 'block_key']
+            drop_list=[]
         )
         # ,
         # "area": EntityConfig(

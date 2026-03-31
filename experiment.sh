@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Request one Task (unless using mpi4py)
-#SBATCH --job-name=imdb-movie-base
-#SBATCH --partition=epyc-gpu
-#SBATCH --time=1-0
-
+#SBATCH --job-name=cem-imdb-e2e
+#SBATCH --partition=epyc-gpu-test
+#SBATCH --time=02:00:00
+#SBATCH --output=./slurm_logs/e2e-imdb-%j.out
 # Request memory per CPU
 #SBATCH --mem-per-cpu=32G
 # Request n CPUs for your task.
@@ -36,5 +36,5 @@ export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
 # No need to pass number of tasks to srun
-#srun python run_latefusion.py
-srun python imdb.py
+srun python imdb-finetune.py
+srun python exp_main_match.py imdb_hard
