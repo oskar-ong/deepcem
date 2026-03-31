@@ -7,7 +7,7 @@ from typing import Dict, List, Tuple
 
 import pandas as pd
 
-from entityConfig import EntityConfig
+from entity_config import EntityConfig
 from data_structures import processedEntity
 DROPOUT_PROB = 0.15
 
@@ -93,7 +93,7 @@ def serialize(pairs: List[Tuple[dict, dict, int]], cfg: EntityConfig) -> List[st
     return lines, amt_pos, amt_neg
 
 
-def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], relation_maps, level):
+def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, processedEntity], relation_maps, level):
 
     attributes = processed_entities[cfg.name].dfs_by_pollution[level].to_dict(
         "index")
@@ -114,11 +114,16 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
 
         if split in ["train", "valid", "test"]:
             # --- Baseline A: attributes only ---
+
             pairs_baselineA = copy.deepcopy(pairs)
             lines, amt_pos, amt_neg = serialize(pairs_baselineA, cfg)
-            baseA_dir = f"{cfg.path_out_dir}baseA/{level}/"
+
+            exp_name = "baseA"
+            baseA_dir = Path(
+                f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
+
             Path(baseA_dir).mkdir(parents=True, exist_ok=True)
-            with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
+            with open(f"{baseA_dir}/{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
             print(
                 f"Wrote {len(lines)} lines for BaselineA {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
@@ -189,9 +194,11 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
                 right.update(flattened)
 
             lines, amt_pos, amt_neg = serialize(pairs_baselineB, cfg)
-            baseB_dir = f"{cfg.path_out_dir}baseB/{level}/"
+            exp_name = "baseB"
+            baseB_dir = Path(
+                f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
             Path(baseB_dir).mkdir(parents=True, exist_ok=True)
-            with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
+            with open(f"{baseB_dir}/{split}.txt", 'w', encoding='utf-8') as f:
                 f.write("\n".join(lines) + "\n")
             print(
                 f"Wrote {len(lines)} lines for BaselineB {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
@@ -206,9 +213,11 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
                 right[f"{rel_name}_score"] = ""
 
         lines, amt_pos, amt_neg = serialize(pairs_empty_scores, cfg)
-        empty_scores_dir = f"{cfg.path_out_dir}emptyScores/{level}/"
+        exp_name = "emptyScores"
+        empty_scores_dir = Path(
+            f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
         Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
-        with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
+        with open(f"{empty_scores_dir}/{split}.txt", 'w', encoding='utf-8') as f:
             f.write("\n".join(lines) + "\n")
         print(
             f"Wrote {len(lines)} lines for empty scores {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
@@ -217,20 +226,21 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
             total_pairs = 0
             amt_pos = 0
             amt_neg = 0
-            with open(f"{empty_scores_dir}test_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
-                    open(f"{empty_scores_dir}test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
+            exp_name = "inference"
+            inference_dir = Path(
+                f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
+            Path(inference_dir).mkdir(parents=True, exist_ok=True)
+
+            with open(f"{inference_dir}/test_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
+                    open(f"{inference_dir}/test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
 
                 for left, right, label in pairs_empty_scores:
                     # 1. Update scores within the entities
 
-                    filtered_left = {
-                        k: v for k, v in left.items() if k not in cfg.drop_list}
-                    filtered_right = {
-                        k: v for k, v in right.items() if k not in cfg.drop_list}
                     for rel in cfg.rels:
                         rel_name = rel["rel_name"]
-                        filtered_left[f"{rel_name}_score"] = ""
-                        filtered_right[f"{rel_name}_score"] = ""
+                        left[f"{rel_name}_score"] = ""
+                        right[f"{rel_name}_score"] = ""
 
                     # 2. Track label counts (for the print statement)
                     if label == 1 or str(label).lower() == 'true':
@@ -239,12 +249,12 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
                         amt_neg += 1
 
                     # 4. Create the labeled and unlabeled objects
-                    pair_list = [filtered_left, filtered_right]
+                    pair_list = [left, right]
                     f_unlab.write(json.dumps(
                         pair_list, ensure_ascii=False) + "\n")
 
                     # 5. Write each as a single line in their respective files
-                    labeled_list = [filtered_left, filtered_right, label]
+                    labeled_list = [left, right, label]
                     f_lab.write(json.dumps(
                         labeled_list, ensure_ascii=False) + "\n")
 
@@ -270,9 +280,11 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
                 right[f"{rel_name}_score"] = score
 
         lines, amt_pos, amt_neg = serialize(pairs_injected_scores, cfg)
-        injected_scores_dir = f"{cfg.path_out_dir}injectedScores/{level}/"
+        exp_name = "injectedScores"
+        injected_scores_dir = Path(
+            f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
         Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
-        with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
+        with open(f"{injected_scores_dir}/{split}.txt", 'w', encoding='utf-8') as f:
             f.write("\n".join(lines) + "\n")
         print(
             f"Wrote {len(lines)} lines for injected scores {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
@@ -290,25 +302,23 @@ def write_splits(cfg, CONFIGS, processed_entities: Dict[str, processedEntity], r
         if record1 and record2:
             pairs.append((record1, record2, label))
     # Define directory and ensure it exists
-    cp_dir = f"{cfg.path_out_dir}emptyScores/{level}/"
+    exp_name = "inference"
+    cp_dir = Path(
+        f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
     Path(cp_dir).mkdir(parents=True, exist_ok=True)
     amt_pos = 0
     amt_neg = 0
     total_pairs = 0
 
-    with open(f"{cp_dir}cp_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
-            open(f"{cp_dir}cp_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
+    with open(f"{cp_dir}/cp_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
+            open(f"{cp_dir}/cp_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
 
         for left, right, label in pairs:
 
-            # filtered_left = {k: v for k,
-            #                  v in left.items() if k not in cfg.drop_list}
-            # filtered_right = {k: v for k,
-            #                   v in right.items() if k not in cfg.drop_list}
             for rel in cfg.rels:
                 rel_name = rel["rel_name"]
-                filtered_left[f"{rel_name}_score"] = ""
-                filtered_right[f"{rel_name}_score"] = ""
+                left[f"{rel_name}_score"] = ""
+                right[f"{rel_name}_score"] = ""
 
             if label == 1 or str(label).lower() == 'true':
                 amt_pos += 1

@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import List
 
 
@@ -22,6 +22,17 @@ class EntityConfig:
     true_cp_fp: str
     true_test_fp: str
 
+    def resolve_paths(self, dataset: str, pollution: str):
+        base_dir = f"./data/{dataset}/{pollution}/inference/{self.name}"
+
+        return replace(
+            self,
+            template_cp=f"{base_dir}/{self.template_cp}",
+            template_conv=f"{base_dir}/{self.template_conv}",
+            true_cp_fp=f"{base_dir}/{self.true_cp_fp}",
+            true_test_fp=f"{base_dir}/{self.true_test_fp}"
+        )
+
 
 imdb_entities = {
 
@@ -30,24 +41,24 @@ imdb_entities = {
         model="imdb_movies_rel_score",
         model_base="imdb_movies",
         id_col="tconst",
-        template_cp="./data/imdb_hard/movie/emptyScores/cp_unlabeled.jsonl",
-        template_conv="./data/imdb_hard/movie/emptyScores/test_unlabeled.jsonl",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="names", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="nconst", score_col="name_score")],
-        true_cp_fp=f"./data/imdb_hard/movie/emptyScores/cp_labeled.jsonl",
-        true_test_fp=f"./data/imdb_hard/movie/emptyScores/test.txt"
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl"
     ),
     "names": EntityConfig(
         name="names",
         model="imdb_names_rel_score",
         model_base="imdb_names",
         id_col="nconst",
-        template_cp="./data/imdb_hard/name/emptyScores/cp_unlabeled.jsonl",
-        template_conv="./data/imdb_hard/name/emptyScores/test_unlabeled.jsonl",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="movies", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="tconst", score_col="movie_score")],
-        true_cp_fp=f"./data/imdb_hard/name/emptyScores/cp_labeled.jsonl",
-        true_test_fp=f"./data/imdb_hard/name/emptyScores/test.txt"
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl"
     )
 }
 

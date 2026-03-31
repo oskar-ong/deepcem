@@ -20,10 +20,11 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id):
+def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id, log):
     f1_scores = {}
     for entity in config.values():
         # Update Scores
+        # TODO: write to output directory: out/dataset/pollution/entity/iteration
         cp_input_fp = f"{entity.name}_{iter_num}_input_cp.jsonl"
         # Track f1 convergenc
         conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl"
@@ -170,6 +171,7 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
+    parser.add_argument("--pollution", type=str)
     args = parser.parse_args()
     sql_log = ExperimentLogger("entity_resolution_results.db")
     log = setup_logger("exp_main_exp-matching")
@@ -178,14 +180,19 @@ def main():
     run_id = sql_log.log_run(run_params)
     max_iters = 4
 
-    config = REGISTRY[args.dataset]
-    scores = {}
+    raw_config = REGISTRY[args.dataset]
+    config = {
+        name: entity.resolve_paths(
+            args.dataset, args.pollution)
+        for name, entity in raw_config.items()
+    }
+    scores_init = {}
     relation_maps = {}
     log.info(f"Initialize Scores for each pair...")
     for entity in config.values():
         # Pairs are for Score Generation -> CP
         pairs = extract_pairs(entity.template_cp)
-        scores[entity.name] = {tuple(sorted(pair)): 0.5 for pair in pairs}
+        scores_init[entity.name] = {tuple(sorted(pair)): 0.5 for pair in pairs}
         for r in entity.relations:
             relation_maps[f"{entity.name}{r.name}"] = build_relation_map(
                 r.junction_table, entity.id_col, r.fk)
@@ -193,10 +200,11 @@ def main():
 
     old_f1_scores = defaultdict(int)
     log.info(f"Start iterative matching")
+    scores = scores_init
     for i in range(0, max_iters):
         log.info(f"Start iteration {i}")
         scores, f1_scores = run_iteration(
-            i, config, scores, relation_maps, sql_log, run_id)
+            i, config, scores, relation_maps, sql_log, run_id, log)
         converged = True
         for k in f1_scores.keys():
 

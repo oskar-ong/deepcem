@@ -14,7 +14,7 @@ import networkx as nx
 
 from data_structures import UnionFind, processedEntity
 from serializer import write_splits
-from entityConfig import REGISTRY, EntityConfig
+from entity_config import REGISTRY, EntityConfig
 from pollution import pollute
 
 # --- Parameters ---
@@ -25,7 +25,7 @@ BLOCK_LIMIT = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
 
-def print_overlap_table(CONFIGS: Dict[str, EntityConfig], processed_entities: Dict[str, processedEntity]):
+def print_overlap_table(processed_entities: Dict[str, processedEntity]):
     rows = []
     for ent_name, proc in processed_entities.items():
         train_ids = set([p[0]
@@ -689,7 +689,7 @@ def main():
     validate_splits(splits, global_rel_map, entity_ufs)
     metadata_fp = f"{args.dataset}_metadata.json"
     generate_metadata(args, components, processed_entities, metadata_fp)
-    print_overlap_table(CONFIGS, processed_entities)
+    print_overlap_table(processed_entities)
 
 
 if __name__ == "__main__":

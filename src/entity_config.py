@@ -81,7 +81,7 @@ REGISTRY = {
             id_col="tconst",
             path_basics="./data/raw/imdb_hard/title_basics.csv",
             path_dups="./data/raw/imdb_hard/title_basics_dups.csv",
-            path_out_dir="./data/processed/imdb_hard/movie/",
+            path_out_dir="./data/processed/imdb_hard",
             rels=[{"rel_name": "name",
                    "junction_table": "./data/raw/imdb_hard/title_principals.csv"}],
             block_key_func=create_block_key_movie,
@@ -92,7 +92,7 @@ REGISTRY = {
             id_col="nconst",
             path_basics="./data/raw/imdb_hard/name_basics.csv",
             path_dups="./data/raw/imdb_hard/name_basics_dups.csv",
-            path_out_dir="./data/processed/imdb_hard/name/",
+            path_out_dir="./data/processed/imdb_hard",
             rels=[{"rel_name": "movie",
                    "junction_table": "./data/raw/imdb_hard/title_principals.csv"}],
             block_key_func=create_block_key_name,
@@ -165,7 +165,7 @@ REGISTRY = {
             id_col="track",
             path_basics="./data/raw/music/new_ids/track.csv",
             path_dups="./data/raw/music/new_ids/track_dups.csv",
-            path_out_dir="./data/processed/music/track/",
+            path_out_dir="./data/processed/music",
             rels=[
                 {"rel_name": "artist",
                     "junction_table": "./data/raw/music/new_ids/track_artist.csv"}
@@ -178,7 +178,7 @@ REGISTRY = {
             id_col="artist",
             path_basics="./data/raw/music/new_ids/artist.csv",
             path_dups="./data/raw/music/new_ids/artist_dups.csv",
-            path_out_dir="./data/processed/music/artist/",
+            path_out_dir="./data/processed/music",
             rels=[
                 {"rel_name": "track",
                     "junction_table": "./data/raw/music/new_ids/track_artist.csv"},
@@ -196,7 +196,7 @@ REGISTRY = {
             id_col="area",
             path_basics="./data/raw/music/new_ids/area.csv",
             path_dups="./data/raw/music/new_ids/area_dups.csv",
-            path_out_dir="./data/processed/music/area/",
+            path_out_dir="./data/processed/music",
             rels=[
                 {"rel_name": "artist",
                     "junction_table": "./data/raw/music/new_ids/artist_area.csv"}
