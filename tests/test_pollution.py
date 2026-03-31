@@ -8,7 +8,7 @@ row = pd.Series({"name": "Apple iPhone 13",
 
 def test_length():
 
-    dfs = pollute(fp, "tconst")
+    dfs = pollute(fp, "tconst", [])
 
     for name, df in dfs.items():
         df.to_csv(f"tests/out/imdb_title_polluted_{name}.csv")

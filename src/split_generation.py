@@ -1,11 +1,9 @@
 from __future__ import annotations
 import json
 import argparse
-import copy
 import csv
 from dataclasses import dataclass
 import itertools
-from pathlib import Path
 import pickle
 import random
 from collections import defaultdict
@@ -15,6 +13,7 @@ from typing import Dict, List, Literal, Set, Tuple
 import pandas as pd
 import networkx as nx
 
+from data_structures import UnionFind, processedEntity
 from serializer import write_splits
 from entityConfig import REGISTRY, EntityConfig
 from pollution import pollute
@@ -27,12 +26,12 @@ BLOCK_LIMIT = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
 
 
-def print_overlap_table(CONFIGS, processed_entities):
+def print_overlap_table(CONFIGS: Dict[str, EntityConfig], processed_entities: Dict[str, processedEntity]):
     rows = []
     for ent_name, proc in processed_entities.items():
-        train_ids = set([p[0][CONFIGS[ent_name].id_col]
+        train_ids = set([p[0]
                         for p in proc.pairs['train']])
-        test_ids = set([p[0][CONFIGS[ent_name].id_col]
+        test_ids = set([p[0]
                        for p in proc.pairs['test']])
 
         overlap = train_ids.intersection(test_ids)
@@ -259,37 +258,6 @@ def assign_components_to_splits(
     raise ValueError(f"Unknown mode={mode}")
 
 
-class UnionFind:
-    def __init__(self) -> None:
-        self.parent: Dict[str, str] = {}
-        self.rank: Dict[str, int] = {}
-
-    def add(self, x: str) -> None:
-        if x not in self.parent:
-            self.parent[x], self.rank[x] = x, 0
-
-    def find(self, x: str) -> str:
-        root = x
-        while self.parent[root] != root:
-            root = self.parent[root]
-        while x != root:
-            p = self.parent[x]
-            self.parent[x], x = root, p
-        return root
-
-    def union(self, a: str, b: str) -> None:
-        self.add(a)
-        self.add(b)
-        ra, rb = self.find(a), self.find(b)
-        if ra == rb:
-            return
-        if self.rank[ra] < self.rank[rb]:
-            ra, rb = rb, ra
-        self.parent[rb] = ra
-        if self.rank[ra] == self.rank[rb]:
-            self.rank[ra] += 1
-
-
 def build_unionfind_with_singletons(
     basics_csv: str, dupes_csv: str, id_col: str,
     delimiter: str = ",", has_header: bool = True
@@ -314,50 +282,58 @@ def build_unionfind_with_singletons(
     return uf
 
 
-def generate_hard_negatives(df: pd.DataFrame, count: int) -> List[Tuple[dict, dict, int]]:
-    neg_pairs = []
+def generate_hard_negatives(df: pd.DataFrame, count: int) -> List[Tuple[str, str, int]]:
+    neg_pairs: List[str, str, int] = []
     block_groups = df.groupby("block_key")
+
     for _, group in block_groups:
         if len(neg_pairs) >= count:
             break
-        records = group.to_dict('records')
-        if len(records) > BLOCK_LIMIT:
-            random.shuffle(records)
-            records = records[:BLOCK_LIMIT]
-        for e1, e2 in itertools.combinations(records, 2):
-            if e1["cluster_id"] != e2["cluster_id"]:
-                neg_pairs.append((e1, e2, 0))
+        ids = group.index.tolist()
+        cluster_ids = group["cluster_id"].to_dict()  # {id: cluster_id}
+
+        if len(ids) > BLOCK_LIMIT:
+            random.shuffle(ids)
+            ids = ids[:BLOCK_LIMIT]
+
+        for id1, id2 in itertools.combinations(ids, 2):
+            if cluster_ids[id1] != cluster_ids[id2]:
+                neg_pairs.append((id1, id2, 0))
                 if len(neg_pairs) >= count:
                     break
 
     while len(neg_pairs) < count:
-        s1, s2 = df.sample(2).to_dict('records')
-        if s1["cluster_id"] != s2["cluster_id"]:
-            neg_pairs.append((s1, s2, 0))
+        samples = df.sample(2)
+        id1, id2 = samples.index
+        c1, c2 = samples["cluster_id"]
+
+        if c1 != c2:
+            neg_pairs.append((id1, id2, 0))
     return neg_pairs[:count]
 
 
-def generate_pairs_for_subset(subset_df: pd.DataFrame, neg_ratio: int = NEG_RATIO) -> List[Tuple[dict, dict, int]]:
+def generate_pairs_for_subset(subset_df: pd.DataFrame, neg_ratio: int = NEG_RATIO) -> List[Tuple[str, str, int]]:
     pos_pairs = []
     groups = subset_df.groupby("cluster_id")
     for _, group in groups:
         if len(group) > 1:
-            for e1, e2 in itertools.combinations(group.to_dict('records'), 2):
-                pos_pairs.append((e1, e2, 1))
+            # get ids grouped by index
+            ids = group.index.tolist()
+            for id1, id2 in itertools.combinations(ids, 2):
+                pos_pairs.append((id1, id2, 1))
     neg_pairs = generate_hard_negatives(subset_df, len(pos_pairs) * neg_ratio)
     return pos_pairs + neg_pairs
 
 
 def propagate_dependency_pairs(
-    parent_pairs: List[Tuple[dict, dict, int]],
-    dependency_map: Dict[str, Set[str],],
-    id_col: str
+    parent_pairs: List[Tuple[str, str, int]],
+    dependency_map: Dict[str, Set[str],]
 ) -> List[Tuple[str, str, int]]:
 
     required_name_pairs = set()
 
-    for p1_dict, p2_dict, _label in parent_pairs:
-        id1, id2 = p1_dict[id_col], p2_dict[id_col]
+    for p1, p2, _label in parent_pairs:
+        id1, id2 = p1, p2
 
         # Get related actors for both movies
         deps1 = dependency_map.get(id1, set())
@@ -383,9 +359,17 @@ def add_labels(pairs, uf, df, id_col):
 
     for n1, n2 in pairs:
         if n1 in name_lookup and n2 in name_lookup:
-            label = 1 if uf.find(n1) == uf.find(n2) else 0
-            labeled_pairs.append((name_lookup[n1], name_lookup[n2], label))
+            if uf.find(n1) == uf.find(n2):
+                label = 1
+            else:
+                label = 0
+            labeled_pairs.append((n1, n2, label))
     return labeled_pairs
+    # for n1, n2 in pairs:
+    #     if n1 in name_lookup and n2 in name_lookup:
+    #         label = 1 if uf.find(n1) == uf.find(n2) else 0
+    #         labeled_pairs.append((name_lookup[n1], name_lookup[n2], label))
+    #
 
 
 def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
@@ -510,15 +494,6 @@ def get_high_degree_nodes(junction_csv: str, id_col: str, threshold: int = 500):
     return set(high_degree_nodes)
 
 
-@dataclass
-class processedEntity:
-    uf: UnionFind
-    df: pd.DataFrame
-    pairs: Dict[str, List[Tuple[dict, dict, int]]]
-    cp: List
-    dfs_by_pollution: Dict[str, pd.DataFrame]
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
@@ -637,6 +612,7 @@ def main():
             df = df_basics[df_basics[cfg.id_col].isin(ids)].copy()
             df['cluster_id'] = df[cfg.id_col].map(mapping)
             df['block_key'] = df.apply(cfg.block_key_func, axis=1)
+            df = df.set_index(cfg.id_col)
             return df
 
         train_df, valid_df, test_df = map(
@@ -663,10 +639,8 @@ def main():
     # NOT REALLY BEST PERFORMANCE BUT SPLIT FOR READABILITY / UNDERSTANDING
     # ==========================================
 
-    # ==========================================
-    # MAIN EXPERIMENT:
-    # Cartesian Product for each entity to be matched
-    # ==========================================
+    # --- Pairs for Inference ---
+    # Create cartesian product for all related entries
     for cfg_name, cfg in CONFIGS.items():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
         for rel in cfg.rels:
@@ -676,7 +650,7 @@ def main():
 
             # Create cartesian product pairs
             p_inference = propagate_dependency_pairs(
-                main_test_pairs, m_to_d_map, cfg.id_col)
+                main_test_pairs, m_to_d_map)
 
             # Label them
             labeled_inference = add_labels(
@@ -693,7 +667,6 @@ def main():
                 print("Key Error!")
                 processed_entities[rel_name].cp = labeled_inference
 
-    DROPOUT_PROB = 0.15
     # --- Pollution ---
     for cfg_name, cfg in CONFIGS.items():
 
@@ -709,273 +682,6 @@ def main():
             write_splits(cfg, CONFIGS, processed_entities,
                          relation_maps, level)
 
-        # pairs_dict = processed_entities[cfg.name].pairs
-
-        # def serialize(pairs: List[Tuple[dict, dict, int]]) -> List[str]:
-        #     lines = []
-        #     amt_pos = 0
-        #     amt_neg = 0
-        #     for pair in pairs:
-        #         left = pair[0]
-        #         right = pair[1]
-        #         label = pair[2]
-        #         if label == 1:
-        #             amt_pos += 1
-        #         if label == 0:
-        #             amt_neg += 1
-
-        #         l_part: str = ""
-        #         r_part: str = ""
-
-        #         # Helper to format one side into COL VAL strings
-        #         def fmt(pair_part: Dict, drop_list):
-        #             return " ".join([f"COL {k} VAL {v}" for k, v in pair_part.items() if pd.notna(v) and k not in drop_list])
-
-        #         l_part = fmt(left, cfg.drop_list)
-        #         r_part = fmt(right, cfg.drop_list)
-
-        #         line = f"{l_part}\t{r_part}\t{label}"
-        #         lines.append(line)
-        #     return lines, amt_pos, amt_neg
-
-        # for split, pairs in pairs_dict.items():
-
-        #     if split in ["train", "valid", "test"]:
-        #         # ========================================================================================================================================================================
-        #         # BASELINE A:
-        #         # ========================================================================================================================================================================
-        #         pairs_baselineA = copy.deepcopy(pairs)
-        #         lines, amt_pos, amt_neg = serialize(pairs_baselineA)
-        #         baseA_dir = f"{cfg.path_out_dir}baseA/"
-        #         Path(baseA_dir).mkdir(parents=True, exist_ok=True)
-        #         with open(f"{baseA_dir}{split}.txt", 'w', encoding='utf-8') as f:
-        #             f.write("\n".join(lines) + "\n")
-        #         print(
-        #             f"Wrote {len(lines)} lines for BaselineA {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        #         # ========================================================================================================================================================================
-        #         # BASELINE B:
-        #         # ========================================================================================================================================================================
-
-        #         # TODO: Add Relation Columns to all entries, even the ones with null values
-
-        #         pairs_baselineB = copy.deepcopy(pairs)
-
-        #         # get all unique ids in pairs
-        #         ids = set([d[cfg.id_col]
-        #                   for d1, d2, _ in pairs for d in (d1, d2)])
-        #         flat: Dict[str, Dict[str, Dict[str, List[str]]]] = defaultdict(lambda: defaultdict(
-        #             dict))  # maincfg -> relation -> relation_attributes -> List of attribute values
-
-        #         # preload all related dfs and set id as index
-        #         indexed_dfs = {
-        #             rel["rel_name"]: processed_entities[rel["rel_name"]
-        #                                                 ].df.set_index(CONFIGS[rel["rel_name"]].id_col)
-        #             for rel in cfg.rels
-        #         }
-
-        #         for m_id in ids:
-        #             for rel in cfg.rels:
-        #                 rel_name = rel["rel_name"]
-        #                 rel_map = relation_maps[cfg_name+rel_name]
-        #                 related_entries = rel_map.get(m_id, [])
-
-        #                 df = indexed_dfs[rel_name]
-        #                 relation_attributes = defaultdict(list)
-
-        #                 for entry in related_entries:
-        #                     try:
-        #                         row = df.loc[entry]
-
-        #                         if isinstance(row, pd.DataFrame):
-        #                             raise LookupError(
-        #                                 f"More than 1 entry for ID {entry}")
-
-        #                         for col_name, value in row.items():
-        #                             relation_attributes[col_name].append(value)
-
-        #                     except KeyError:
-        #                         continue
-
-        #                     for col_name, value in row.items():
-        #                         relation_attributes[col_name].append(value)
-
-        #                 flat[m_id][rel_name] = dict(relation_attributes)
-        #         for left, right, label in pairs_baselineB:
-        #             l_id = left.get(cfg.id_col)
-        #             extra_data = flat.get(l_id, {})
-
-        #             # The transformation
-        #             flattened = {
-        #                 f"{rel}_{attr}": " ".join(str(v) for v in values)
-        #                 for rel, attributes in extra_data.items()
-        #                 for attr, values in attributes.items()
-        #             }
-
-        #             left.update(flattened)
-
-        #             r_id = right.get(cfg.id_col)
-        #             extra_data = flat.get(r_id, {})
-        #             flattened = {
-        #                 f"{rel}_{attr}": " ".join(str(v) for v in values)
-        #                 for rel, attributes in extra_data.items()
-        #                 for attr, values in attributes.items()
-        #             }
-        #             right.update(flattened)
-
-        #         lines, amt_pos, amt_neg = serialize(pairs_baselineB)
-        #         baseB_dir = f"{cfg.path_out_dir}baseB/"
-        #         Path(baseB_dir).mkdir(parents=True, exist_ok=True)
-        #         with open(f"{baseB_dir}{split}.txt", 'w', encoding='utf-8') as f:
-        #             f.write("\n".join(lines) + "\n")
-        #         print(
-        #             f"Wrote {len(lines)} lines for BaselineB {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        #     # ========================================================================================================================================================================
-        #     # SCORES EMPTY:
-        #     # ========================================================================================================================================================================
-        #     pairs_empty_scores = copy.deepcopy(pairs)
-
-        #     for rel in cfg.rels:
-        #         rel_name = rel["rel_name"]
-        #         for left, right, label in pairs_empty_scores:
-        #             left[f"{rel_name}_score"] = ""
-        #             right[f"{rel_name}_score"] = ""
-
-        #     lines, amt_pos, amt_neg = serialize(pairs_empty_scores)
-        #     empty_scores_dir = f"{cfg.path_out_dir}emptyScores/"
-        #     Path(empty_scores_dir).mkdir(parents=True, exist_ok=True)
-        #     with open(f"{empty_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
-        #         f.write("\n".join(lines) + "\n")
-        #     print(
-        #         f"Wrote {len(lines)} lines for empty scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        #     if split == "test":
-        #         total_pairs = 0
-        #         amt_pos = 0
-        #         amt_neg = 0
-        #         with open(f"{empty_scores_dir}test_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
-        #                 open(f"{empty_scores_dir}test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
-
-        #             for left, right, label in pairs_empty_scores:
-        #                 # 1. Update scores within the entities
-
-        #                 filtered_left = {
-        #                     k: v for k, v in left.items() if k not in cfg.drop_list}
-        #                 filtered_right = {
-        #                     k: v for k, v in right.items() if k not in cfg.drop_list}
-        #                 for rel in cfg.rels:
-        #                     rel_name = rel["rel_name"]
-        #                     filtered_left[f"{rel_name}_score"] = ""
-        #                     filtered_right[f"{rel_name}_score"] = ""
-
-        #                 # 2. Track label counts (for the print statement)
-        #                 if label == 1 or str(label).lower() == 'true':
-        #                     amt_pos += 1
-        #                 else:
-        #                     amt_neg += 1
-
-        #                 # 4. Create the labeled and unlabeled objects
-        #                 pair_list = [filtered_left, filtered_right]
-        #                 f_unlab.write(json.dumps(
-        #                     pair_list, ensure_ascii=False) + "\n")
-
-        #                 # 5. Write each as a single line in their respective files
-        #                 labeled_list = [filtered_left, filtered_right, label]
-        #                 f_lab.write(json.dumps(
-        #                     labeled_list, ensure_ascii=False) + "\n")
-
-        #                 total_pairs += 1
-
-        #             print(
-        #                 f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        #     # ========================================================================================================================================================================
-        #     # SCORES INJECTED:
-        #     # ========================================================================================================================================================================
-        #     pairs_injected_scores = copy.deepcopy(pairs_empty_scores)
-
-        #     for rel in cfg.rels:
-        #         rel_name = rel["rel_name"]
-        #         for left, right, label in pairs_injected_scores:
-        #             score = calculate_relationship_scores(
-        #                 left[cfg.id_col],
-        #                 right[cfg.id_col],
-        #                 relation_maps[cfg_name+rel_name],
-        #                 processed_entities[rel_name].uf,
-        #                 DROPOUT_PROB,
-        #                 False)
-        #             left[f"{rel_name}_score"] = score
-        #             right[f"{rel_name}_score"] = score
-
-        #     lines, amt_pos, amt_neg = serialize(pairs_injected_scores)
-        #     injected_scores_dir = f"{cfg.path_out_dir}injectedScores/"
-        #     Path(injected_scores_dir).mkdir(parents=True, exist_ok=True)
-        #     with open(f"{injected_scores_dir}{split}.txt", 'w', encoding='utf-8') as f:
-        #         f.write("\n".join(lines) + "\n")
-        #     print(
-        #         f"Wrote {len(lines)} lines for injected scores {cfg_name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        # # ========================================================================================================================================================================
-        # # CARTESIAN PRODUCT (SCORES MAPPING)
-        # # ========================================================================================================================================================================
-        # # pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
-
-        # # for rel in cfg.rels:
-        # #     rel_name = rel["rel_name"]
-        # #     for left, right, label in pairs_cp:
-        # #         left[f"{rel_name}_score"] = ""
-        # #         right[f"{rel_name}_score"] = ""
-
-        # # lines, amt_pos, amt_neg = serialize(pairs_cp)
-        # # cp_dir = f"{cfg.path_out_dir}emptyScores/"
-        # # Path(cp_dir).mkdir(parents=True, exist_ok=True)
-        # # with open(f"{cp_dir}cp.txt", 'w', encoding='utf-8') as f:
-        # #     f.write("\n".join(lines) + "\n")
-        # # print(f"Wrote {len(lines)} lines for cp {cfg_name}. Pos: {amt_pos}, Neg: {amt_neg}")
-
-        # pairs_cp = copy.deepcopy(processed_entities[cfg.name].cp)
-        # # Define directory and ensure it exists
-        # cp_dir = f"{cfg.path_out_dir}emptyScores/"
-        # Path(cp_dir).mkdir(parents=True, exist_ok=True)
-        # amt_pos = 0
-        # amt_neg = 0
-        # total_pairs = 0
-
-        # with open(f"{cp_dir}cp_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
-        #         open(f"{cp_dir}cp_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
-
-        #     for left, right, label in pairs_cp:
-        #         # 1. Update scores within the entities
-
-        #         filtered_left = {k: v for k,
-        #                          v in left.items() if k not in cfg.drop_list}
-        #         filtered_right = {k: v for k,
-        #                           v in right.items() if k not in cfg.drop_list}
-        #         for rel in cfg.rels:
-        #             rel_name = rel["rel_name"]
-        #             filtered_left[f"{rel_name}_score"] = ""
-        #             filtered_right[f"{rel_name}_score"] = ""
-
-        #         # 2. Track label counts (for the print statement)
-        #         if label == 1 or str(label).lower() == 'true':
-        #             amt_pos += 1
-        #         else:
-        #             amt_neg += 1
-
-        #         # 4. Create the labeled and unlabeled objects
-        #         pair_list = [filtered_left, filtered_right]
-        #         f_unlab.write(json.dumps(pair_list, ensure_ascii=False) + "\n")
-
-        #         # 5. Write each as a single line in their respective files
-        #         labeled_list = [filtered_left, filtered_right, label]
-        #         f_lab.write(json.dumps(
-        #             labeled_list, ensure_ascii=False) + "\n")
-
-        #         total_pairs += 1
-
-        # print(
-        #     f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
     # ========================================================================================================================================================================
     # Check requirements:
     # No leakage

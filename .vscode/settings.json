@@ -3,5 +3,6 @@
     "python-envs.defaultPackageManager": "ms-python.python:conda",
     "python.analysis.extraPaths": [
         "./models/ditto"
-    ]
+    ],
+    "python.defaultInterpreterPath": "/opt/anaconda3/envs/deepcem311/bin/python"
 }
