@@ -40,7 +40,7 @@ def main():
         input_path = f"{entity.empty_scores_dir}/test.txt"
 
         out_path = Path(
-            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase1_eval.jsonl"
         evaluate(entity.model_base, input_path, output_fp, log, input_path)
@@ -51,9 +51,6 @@ def main():
 
         input_path = f"{entity.injected_scores_dir}/test.txt"
 
-        out_path = Path(
-            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
-        Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase2_eval.jsonl"
         evaluate(entity.model, input_path, output_fp, log, input_path)
 

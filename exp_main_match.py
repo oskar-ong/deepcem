@@ -2,7 +2,9 @@ import argparse
 from collections import defaultdict
 import csv
 import json
-from typing import Dict, List, Set
+import math
+from pathlib import Path
+from typing import Dict, List, Set, Tuple
 
 from ditto_wrapper import evaluate
 from src.experiment_config import REGISTRY, ExperimentConfig
@@ -20,23 +22,29 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id, log):
+def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, run_id, log, dataset, pollution, is_bin, is_damp):
     f1_scores = {}
+    out_path = Path(
+        f"./ditto_out/{dataset}/{pollution}/inference/{run_id}")
+    Path(out_path).mkdir(parents=True, exist_ok=True)
+    new_scores = {name: entity_dict.copy()
+                  for name, entity_dict in scores.items()}
+
     for entity in config.values():
         # Update Scores
-        # TODO: write to output directory: out/dataset/pollution/entity/iteration
-        cp_input_fp = f"{entity.name}_{iter_num}_input_cp.jsonl"
+        cp_input_fp = out_path / f"{entity.name}_{iter_num}_input_cp.jsonl"
         # Track f1 convergenc
-        conv_input_fp = f"{entity.name}_{iter_num}_input_conv.jsonl"
+        conv_input_fp = out_path / f"{entity.name}_{iter_num}_input_conv.jsonl"
 
         # A cleaner and more performant solution would be to update both in one go, possible TODO
         update_input_files(entity.template_cp, cp_input_fp,
-                           entity, relation_maps, scores, is_bin=False)
+                           entity, relation_maps, scores, is_bin)
         update_input_files(entity.template_conv, conv_input_fp,
-                           entity, relation_maps, scores, is_bin=False)
+                           entity, relation_maps, scores, is_bin)
 
         # Generate new Scores
-        cp_output_fp = f"ditto_out/{entity.name}_{iter_num}_cp.jsonl"
+        cp_output_fp = out_path / \
+            f"{entity.name}_{iter_num}_cp_results.jsonl"
         metrics = evaluate(entity.model, cp_input_fp,
                            cp_output_fp, log, entity.true_cp_fp)
         metrics_cp = {"accuracy": metrics[0], "precision": metrics[1],
@@ -44,7 +52,8 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores, relatio
         sql_log.log_metrics(run_id, iter_num, entity.name, metrics_cp)
 
         # Track convergence
-        conv_output_fp = f"ditto_out/{entity.name}_{iter_num}_conv.jsonl"
+        conv_output_fp = out_path / \
+            f"{entity.name}_{iter_num}_conv_results.jsonl"
         metrics = evaluate(entity.model, conv_input_fp,
                            conv_output_fp, log, entity.true_test_fp)
         metrics_conv = {
@@ -52,22 +61,20 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores, relatio
         f1_scores[entity.name] = metrics[3]
         sql_log.log_metrics(run_id, iter_num, entity.name, metrics_conv)
 
-    # Update Scores Map
-    # Start new Loop -> Synchronous Update
-    for entity in config.values():
-        scores[entity.name] = extract_scores(
-            f"ditto_out/{entity.name}_{iter_num}_cp.jsonl", scores[entity.name], entity.id_col)
+        # Update Scores Map
+        new_scores[entity.name] = extract_scores(
+            cp_output_fp, new_scores[entity.name], is_damp)
 
-    return scores, f1_scores
+    return new_scores, f1_scores
 
 
-def extract_scores(fp, dependency_scores, id_attribute, is_damp=False):
+def extract_scores(fp, dependency_scores, is_damp=False):
     with open(fp, 'r', encoding='utf-8') as f:
         for line in f:
             data = json.loads(line)
 
-            left_id = data['left'][id_attribute]
-            right_id = data['right'][id_attribute]
+            left_id = data['left']['id']
+            right_id = data['right']['id']
             key = tuple(sorted((left_id, right_id)))
             match = int(data['match'])
             confidence = data['match_confidence']
@@ -102,13 +109,13 @@ def extract_pairs(fp):
 
 def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relationship_maps, all_scores, is_bin=False):
     threshold = 0.15
-    with open(template_fp, 'r') as infile, open(out_fp, 'w') as outfile:
+    with open(template_fp, 'r', encoding='utf-8') as infile, open(out_fp, 'w', encoding='utf-8') as outfile:
         for line in infile:
             record_pair = json.loads(line.strip())
 
             if len(record_pair) >= 2:
-                left_id = record_pair[0].get(entity_cfg.id_col)
-                right_id = record_pair[1].get(entity_cfg.id_col)
+                left_id = record_pair[0].get('id')
+                right_id = record_pair[1].get('id')
 
                 for r in entity_cfg.relations:
                     relation_map = relationship_maps[f"{entity_cfg.name}{r.name}"]
@@ -133,8 +140,7 @@ def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relati
                     record_pair[0][r.score_col] = score
                     record_pair[1][r.score_col] = score
 
-            json.dump(record_pair, outfile)
-            outfile.write('\n')
+            outfile.write(json.dumps(record_pair) + '\n')
 
 
 def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], dependency_scores):
@@ -152,9 +158,12 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
     if dependencies_left and dependencies_right:
         for dep_left in dependencies_left:
             c_max = 0.0  # current max score for this dependency
-            for dep_right in dependencies_right:
 
-                # TODO: If dep_left == dep_right: score = 1
+            # If one of the left dependencies is same key as right, then max score = 1
+            if dep_left in dependencies_right:
+                scores.append(1.0)
+                continue
+            for dep_right in dependencies_right:
                 score = dependency_scores.get(
                     tuple(sorted((dep_left, dep_right))), 0.5)
 
@@ -169,24 +178,34 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
 
 
 def main():
+    # --- arguments
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", type=str)
     parser.add_argument("--pollution", type=str)
+    parser.add_argument("--binning", action="store_true")
+    parser.add_argument("--dampening", action="store_true")
     args = parser.parse_args()
+
+    # --- logs ---
     sql_log = ExperimentLogger("entity_resolution_results.db")
     log = setup_logger("exp_main_exp-matching")
     log.info(f"Start Collective Entity Matching: Dataset: {args.dataset}")
     run_params = {'model': 'Ditto', 'lr': 3e-5, 'batch_size': 16}
     run_id = sql_log.log_run(run_params)
+
+    # stop after max iterations
     max_iters = 4
 
+    # --- read and resolve configs ---
     raw_config = REGISTRY[args.dataset]
     config = {
         name: entity.resolve_paths(
             args.dataset, args.pollution)
         for name, entity in raw_config.items()
     }
-    scores_init = {}
+
+    # --- initialize scores ---
+    scores_init: Dict[str, Dict[Tuple[str, str], float]] = {}
     relation_maps = {}
     log.info(f"Initialize Scores for each pair...")
     for entity in config.values():
@@ -198,17 +217,19 @@ def main():
                 r.junction_table, entity.id_col, r.fk)
     log.info(f"Score Initialization Done!")
 
+    # --- Start Matching ---
     old_f1_scores = defaultdict(int)
     log.info(f"Start iterative matching")
     scores = scores_init
     for i in range(0, max_iters):
         log.info(f"Start iteration {i}")
         scores, f1_scores = run_iteration(
-            i, config, scores, relation_maps, sql_log, run_id, log)
+            i, config, scores, relation_maps, sql_log, run_id, log, args.dataset, args.pollution, args.binning, args.dampening)
         converged = True
         for k in f1_scores.keys():
 
-            if f1_scores[k] != old_f1_scores[k]:
+            # compare floats with math module
+            if not math.isclose(f1_scores[k], old_f1_scores[k], rel_tol=1e-5):
                 converged = False
 
         if converged == True:
