@@ -3,10 +3,12 @@ import json
 import argparse
 import csv
 import itertools
+from pathlib import Path
 import pickle
 import random
 from collections import defaultdict
 from queue import Queue
+import shutil
 from typing import Dict, List, Literal, Set, Tuple
 
 import pandas as pd
@@ -696,6 +698,18 @@ def main():
     metadata_fp = f"{args.dataset}_metadata.json"
     generate_metadata(args, components, processed_entities, metadata_fp)
     print_overlap_table(processed_entities)
+
+    copied = set()
+    for cfg in CONFIGS.values():
+        for relation in cfg.rels:
+            # Copy junction table to new dir
+            if not cfg.path_out_dir in copied:
+
+                file_name = Path(relation['junction_table']).name
+
+                shutil.copyfile(
+                    relation["junction_table"], f"{cfg.path_out_dir}/{file_name}")
+            copied.add(cfg.path_out_dir)
 
 
 if __name__ == "__main__":
