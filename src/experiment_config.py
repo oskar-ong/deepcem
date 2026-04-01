@@ -11,7 +11,7 @@ class Relation:
 
 
 @dataclass
-class EntityConfig:
+class ExperimentConfig:
     name: str                  # e.g., "movie", "name", "studio"
     model: str
     model_base: str
@@ -21,22 +21,28 @@ class EntityConfig:
     relations: List[Relation]
     true_cp_fp: str
     true_test_fp: str
+    empty_scores_dir: str
+    injected_scores_dir: str
 
     def resolve_paths(self, dataset: str, pollution: str):
         base_dir = f"./data/{dataset}/{pollution}/inference/{self.name}"
 
         return replace(
             self,
+            model=f"{self.model}_{pollution}",
+            model_base=f"{self.model_base}_{pollution}",
             template_cp=f"{base_dir}/{self.template_cp}",
             template_conv=f"{base_dir}/{self.template_conv}",
             true_cp_fp=f"{base_dir}/{self.true_cp_fp}",
-            true_test_fp=f"{base_dir}/{self.true_test_fp}"
+            true_test_fp=f"{base_dir}/{self.true_test_fp}",
+            empty_scores_dir=f"./data/{dataset}/{pollution}/emtpyScores/{self.name}",
+            injected_scores_dir=f"./data/{dataset}/{pollution}/injectedScores/{self.name}"
         )
 
 
 imdb_entities = {
 
-    "movies": EntityConfig(
+    "movies": ExperimentConfig(
         name="movies",
         model="imdb_movies_rel_score",
         model_base="imdb_movies",
@@ -48,7 +54,7 @@ imdb_entities = {
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl"
     ),
-    "names": EntityConfig(
+    "names": ExperimentConfig(
         name="names",
         model="imdb_names_rel_score",
         model_base="imdb_names",

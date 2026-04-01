@@ -50,7 +50,6 @@ def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dro
         monge_elkan = 0.5
 
     # Signal Dropout logic
-    # final_score = 0.5 if random.random() < dropout_prob else max_pool_score
     final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
 
     # BINNING
@@ -93,7 +92,7 @@ def serialize(pairs: List[Tuple[dict, dict, int]], cfg: EntityConfig) -> List[st
     return lines, amt_pos, amt_neg
 
 
-def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, processedEntity], relation_maps, level):
+def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, processedEntity], relation_maps, level, is_bin=False):
 
     attributes = processed_entities[cfg.name].dfs_by_pollution[level].to_dict(
         "index")
@@ -275,7 +274,7 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     relation_maps[cfg.name+rel_name],
                     processed_entities[rel_name].uf,
                     DROPOUT_PROB,
-                    False)
+                    is_bin)
                 left[f"{rel_name}_score"] = score
                 right[f"{rel_name}_score"] = score
 

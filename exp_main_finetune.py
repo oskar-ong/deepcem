@@ -1,81 +1,61 @@
-from src.ditto_wrapper import evaluate, finetune, refinetune
-from src.logging_setup import setup_logger
+import argparse
+from pathlib import Path
 
-log = setup_logger("exp_baseline_iterative_imdb_hard")
-log.info("Start Experiment: Iterative Matching - IMDB HARD")
+from experiment_config import REGISTRY, ExperimentConfig
+from src.ditto_wrapper import evaluate, finetune, refinetune
+from src.logging_setup import ExperimentLogger, setup_logger
 
 
 def main():
+    # --- parse arguments ---
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset", type=str)
+    parser.add_argument("--pollution", type=str)
+    args = parser.parse_args()
+    dataset = args.dataset
 
-    # ================================================================================
-    # GLOBAL CONFIG
-    # ================================================================================
+    # --- logging ---
+    log = setup_logger("finetune")
+    sql_log = ExperimentLogger("entity_resolution_results.db")
+    log = setup_logger("exp_main_exp-matching")
+    log.info(f"Start Finetuning: Dataset: {args.dataset}")
+    run_params = {'model': 'Ditto', 'lr': 3e-5,
+                  'batch_size': 16}  # Read from experiment config?
+    run_id = sql_log.log_run(run_params)
 
-    dataset = "imdb_hard"
+    # --- load config ---
+    raw_config = REGISTRY[dataset]
+    config: dict[str, ExperimentConfig] = {
+        name: entity.resolve_paths(
+            args.dataset, args.pollution)
+        for name, entity in raw_config.items()
+    }
+
     configs_path = f"./models/ditto/configs.json"
 
-    # ================================================================================
-    # PHASE 1: BASE FINETUNE
-    # ================================================================================
+    for entity in config.values():
+        # --- Phase 1: Initial Finetune, only attribute values ---
+        finetune(configs_path, entity.model_base, entity.empty_scores_dir, log)
 
-    # ================================================================================
-    # MOVIES
-    # ================================================================================
-    entity = "movie"
-    task_movie = f"{dataset}_{entity}_iterative"
-    dataset_dir_movie = f"./data/{dataset}/{entity}"
+        input_path = f"{entity.empty_scores_dir}/test.txt"
 
-    finetune(configs_path, task_movie, dataset_dir_movie, log)
+        out_path = Path(
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
+        Path(out_path).mkdir(parents=True, exist_ok=True)
+        output_fp = f"{out_path}/phase1_eval.jsonl"
+        evaluate(entity.model_base, input_path, output_fp, log, input_path)
 
-    input_path = f"{dataset_dir_movie}/test.txt"
-    output_path = f"./ditto_out/{entity}_iterative.jsonl"
-    evaluate(task_movie, input_path, output_path, dataset_dir_movie, log)
+        # --- Phase 2: Re-finetune, include relaitonal scores ---
+        refinetune(configs_path, entity.model,
+                   entity.injected_scores_dir, entity.model_base, log)
 
-    # ================================================================================
-    # NAMES
-    # ================================================================================
+        input_path = f"{entity.injected_scores_dir}/test.txt"
 
-    entity = "name"
-    task_name = f"{dataset}_{entity}_iterative"
-    dataset_dir_name = f"./data/{dataset}/{entity}"
-
-    finetune(configs_path, task_name, dataset_dir_name, log)
-
-    input_path = f"{dataset_dir_movie}/test.txt"
-    output_path = f"./ditto_out/{entity}_iterative.jsonl"
-    evaluate(task_movie, input_path, output_path, dataset_dir_movie, log)
-
-    # ================================================================================
-    # PHASE 2: RE-TUNE - INCLUDE RELATIONAL SCORES
-    # ================================================================================
-
-    # ================================================================================
-    # MOVIE REL SCORE
-    # ================================================================================
-    entity = "movie"
-    task_movie_relscore = f"{dataset}_{entity}_iterative_relscore"
-
-    refinetune(configs_path, task_movie_relscore,
-               dataset_dir_movie, task_movie, log)
-
-    input_path = f"{dataset_dir_movie}/test_rel_score.txt"
-    output_path = f"./ditto_out/{entity}_iterative_rel_score.jsonl"
-    evaluate(task_movie_relscore, input_path,
-             output_path, dataset_dir_movie, log)
-
-    # ================================================================================
-    # NAME REL SCORE
-    # ================================================================================
-    entity = "name"
-    task_name_relscore = f"{dataset}_{entity}_iterative_relscore"
-
-    refinetune(configs_path, task_name_relscore,
-               dataset_dir_name, task_name, log)
-
-    input_path = f"{dataset_dir_name}/test_rel_score.txt"
-    output_path = f"./ditto_out/{entity}_iterative_rel_score.jsonl"
-    evaluate(task_movie_relscore, input_path,
-             output_path, dataset_dir_name, log)
+        out_path = Path(
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
+        Path(out_path).mkdir(parents=True, exist_ok=True)
+        output_fp = f"{out_path}/phase2_eval.jsonl"
+        evaluate(entity.model, input_path, output_fp, log, input_path)
 
 
 if __name__ == "__main__":

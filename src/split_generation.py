@@ -632,6 +632,9 @@ def main():
         roots = {entity_ufs[cfg_name].find(
             i) for i in ids if i in entity_ufs[cfg_name].parent}
         print(f"{name} unique roots: {len(roots)}")
+
+    with open(f"pickles/{args.dataset}_processed_entities", 'wb') as f:
+        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
     # ==========================================
     # SPLITS AND PAIRS ARE NOW LOCKED!
     # CONTINUE WITH INDIVIDUAL EXPERIMENT
@@ -673,6 +676,9 @@ def main():
             cfg.path_basics, cfg.id_col, cfg.drop_list)
 
         processed_entities[cfg.name].dfs_by_pollution = dfs_by_pollution
+
+    with open(f"pickles/{args.dataset}_processed_entities", 'wb') as f:
+        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
 
     # --- Write Splits to Disk ---
     for cfg_name, cfg in CONFIGS.items():

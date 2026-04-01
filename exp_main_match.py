@@ -5,7 +5,7 @@ import json
 from typing import Dict, List, Set
 
 from ditto_wrapper import evaluate
-from src.experiment_config import REGISTRY, EntityConfig
+from src.experiment_config import REGISTRY, ExperimentConfig
 from src.logging_setup import ExperimentLogger, setup_logger
 
 
@@ -20,7 +20,7 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, EntityConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id, log):
+def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores, relation_maps, sql_log: ExperimentLogger, run_id, log):
     f1_scores = {}
     for entity in config.values():
         # Update Scores
@@ -100,7 +100,7 @@ def extract_pairs(fp):
     return pairs
 
 
-def update_input_files(template_fp, out_fp, entity_cfg: EntityConfig, relationship_maps, all_scores, is_bin=False):
+def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relationship_maps, all_scores, is_bin=False):
     threshold = 0.15
     with open(template_fp, 'r') as infile, open(out_fp, 'w') as outfile:
         for line in infile:
@@ -170,7 +170,7 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("dataset", type=str)
+    parser.add_argument("--dataset", type=str)
     parser.add_argument("--pollution", type=str)
     args = parser.parse_args()
     sql_log = ExperimentLogger("entity_resolution_results.db")
