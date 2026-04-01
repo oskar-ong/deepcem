@@ -1,9 +1,9 @@
 import argparse
 from pathlib import Path
 
-from experiment_config import REGISTRY, ExperimentConfig
-from src.ditto_wrapper import evaluate, finetune, refinetune
-from src.logging_setup import ExperimentLogger, setup_logger
+from experiment_config import DITTO_CONFIG, REGISTRY, ExperimentConfig
+from ditto_wrapper import evaluate, finetune, refinetune
+from logging_setup import ExperimentLogger, setup_logger
 
 
 def main():
@@ -16,12 +16,9 @@ def main():
 
     # --- logging ---
     log = setup_logger("finetune")
-    sql_log = ExperimentLogger("entity_resolution_results.db")
-    log = setup_logger("exp_main_exp-matching")
     log.info(f"Start Finetuning: Dataset: {args.dataset}")
-    run_params = {'model': 'Ditto', 'lr': 3e-5,
-                  'batch_size': 16}  # Read from experiment config?
-    run_id = sql_log.log_run(run_params)
+
+    sql_log = ExperimentLogger("cem_results.db")
 
     # --- load config ---
     raw_config = REGISTRY[dataset]
@@ -44,6 +41,17 @@ def main():
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase1_eval.jsonl"
         evaluate(entity.model_base, input_path, output_fp, log, input_path)
+
+        sql_log.log_run(
+            dataset=dataset,
+            model_type="base",
+            batch_size=DITTO_CONFIG['batch_size'],
+            max_len=DITTO_CONFIG['max_len'],
+            learning_rate=DITTO_CONFIG['learning_rate'],
+            epochs=DITTO_CONFIG['epochs'],
+            lm=DITTO_CONFIG['lm'],
+            neg_ratio=0,  # TODO
+            seed=0)  # TODO
 
         # --- Phase 2: Re-finetune, include relaitonal scores ---
         refinetune(configs_path, entity.model,

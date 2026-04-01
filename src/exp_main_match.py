@@ -1,14 +1,15 @@
 import argparse
 from collections import defaultdict
 import csv
+import time
 import json
 import math
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 
 from ditto_wrapper import evaluate
-from src.experiment_config import REGISTRY, ExperimentConfig
-from src.logging_setup import ExperimentLogger, setup_logger
+from experiment_config import REGISTRY, ExperimentConfig
+from logging_setup import ExperimentLogger, get_experiment_metadata, setup_logger
 
 
 def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
@@ -22,8 +23,10 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, run_id, log, dataset, pollution, is_bin, is_damp):
+def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp):
+    start_time = time.perf_counter()
     f1_scores = {}
+    run_id, _ = get_experiment_metadata()
     out_path = Path(
         f"./ditto_out/{dataset}/{pollution}/inference/{run_id}")
     Path(out_path).mkdir(parents=True, exist_ok=True)
@@ -49,7 +52,16 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
                            cp_output_fp, log, entity.true_cp_fp)
         metrics_cp = {"accuracy": metrics[0], "precision": metrics[1],
                       "recall": metrics[2], "f1_score": metrics[3]}
-        sql_log.log_metrics(run_id, iter_num, entity.name, metrics_cp)
+        end_cp = time.perf_counter()
+        runtime_cp = end_cp - start_time
+        sql_log.log_metrics(
+            pollution=pollution,
+            iteration=iter_num,
+            entity=entity.name,
+            testset_type="cp",
+            metrics_dict=metrics_cp,
+            num_pairs=0,  # TODO Read from experiment config
+            runtime=runtime_cp)
 
         # Track convergence
         conv_output_fp = out_path / \
@@ -59,7 +71,16 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         metrics_conv = {
             "accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
         f1_scores[entity.name] = metrics[3]
-        sql_log.log_metrics(run_id, iter_num, entity.name, metrics_conv)
+        end_conv = time.perf_counter()
+        runtime_conv = end_conv - start_time
+        sql_log.log_metrics(
+            pollution=pollution,
+            iteration=iter_num,
+            entity=entity.name,
+            testset_type="conv",
+            metrics_dict=metrics_conv,
+            num_pairs=0,  # TODO
+            runtime=runtime_conv)
 
         # Update Scores Map
         new_scores[entity.name] = extract_scores(
@@ -187,11 +208,9 @@ def main():
     args = parser.parse_args()
 
     # --- logs ---
-    sql_log = ExperimentLogger("entity_resolution_results.db")
-    log = setup_logger("exp_main_exp-matching")
+    log = setup_logger("matching")
     log.info(f"Start Collective Entity Matching: Dataset: {args.dataset}")
-    run_params = {'model': 'Ditto', 'lr': 3e-5, 'batch_size': 16}
-    run_id = sql_log.log_run(run_params)
+    sql_log = ExperimentLogger("cem_results.db")
 
     # stop after max iterations
     max_iters = 4
@@ -224,7 +243,7 @@ def main():
     for i in range(0, max_iters):
         log.info(f"Start iteration {i}")
         scores, f1_scores = run_iteration(
-            i, config, scores, relation_maps, sql_log, run_id, log, args.dataset, args.pollution, args.binning, args.dampening)
+            i, config, scores, relation_maps, sql_log, log, args.dataset, args.pollution, args.binning, args.dampening)
         converged = True
         for k in f1_scores.keys():
 

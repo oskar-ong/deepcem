@@ -52,7 +52,9 @@ imdb_entities = {
         relations=[Relation(name="names", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="nconst", score_col="name_score")],
         true_cp_fp=f"cp_labeled.jsonl",
-        true_test_fp=f"test_labeled.jsonl"
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
     ),
     "names": ExperimentConfig(
         name="names",
@@ -64,10 +66,20 @@ imdb_entities = {
         relations=[Relation(name="movies", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="tconst", score_col="movie_score")],
         true_cp_fp=f"cp_labeled.jsonl",
-        true_test_fp=f"test_labeled.jsonl"
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
     )
 }
 
 REGISTRY = {
     "imdb_hard": imdb_entities
+}
+
+DITTO_CONFIG = {
+    "batch_size": 32,
+    "max_len": 128,
+    "learning_rate": 3e-5,
+    "epochs": 5,
+    "lm": "roberta"
 }

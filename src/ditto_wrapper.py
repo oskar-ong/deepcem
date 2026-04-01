@@ -6,12 +6,13 @@ import subprocess
 from typing import Tuple
 
 from evaluate import calc_metrics
+from experiment_config import DITTO_CONFIG
 
 
-def finetune(configs_path, task, dataset_dir, log, epochs=5):
+def finetune(configs_path, task, dataset_dir, log):
 
     # ================================================================================
-    # Update ditto/configs.json with datasets
+    # --- Update ditto/configs.json with datasets ---
     # ================================================================================
     train_fp = f"{dataset_dir}/train.txt"
     valid_fp = f"{dataset_dir}/valid.txt"
@@ -40,19 +41,19 @@ def finetune(configs_path, task, dataset_dir, log, epochs=5):
         log.info(f"Config for '{task}' has been updated/added.")
 
     # ================================================================================
-    # Finetune
+    # --- Finetune ---
     # ================================================================================
     shutil.copyfile(configs_path, 'configs.json')
     cmd = [
         "python",
         f"./models/ditto/train_ditto.py",
         "--task", task,
-        "--batch_size", "32",
-        "--max_len", "128",
-        "--lr", "3e-5",
-        "--n_epochs", f"{epochs}",
+        "--batch_size", f"{DITTO_CONFIG['batch_size']}",
+        "--max_len", f"{DITTO_CONFIG['max_len']}",
+        "--lr", f"{DITTO_CONFIG['learning_rate']}",
+        "--n_epochs", f"{DITTO_CONFIG['epochs']}",
         "--finetuning",
-        "--lm", "roberta",
+        "--lm", f"{DITTO_CONFIG['lm']}",
         "--fp16",
         "--save_model",
         "--logdir", "./models/ditto/checkpoints/",
@@ -64,10 +65,10 @@ def finetune(configs_path, task, dataset_dir, log, epochs=5):
     log.info(f"Finished Finetuning for task: {task}")
 
 
-def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
+def refinetune(configs_path, task, dataset_dir, base, log):
 
     # ================================================================================
-    # Update ditto/configs.json with datasets
+    # --- Update ditto/configs.json with datasets ---
     # ================================================================================
     train_fp = f"{dataset_dir}/train.txt"
     valid_fp = f"{dataset_dir}/valid.txt"
@@ -96,19 +97,19 @@ def refinetune(configs_path, task, dataset_dir, base, log, epochs=5):
         log.info(f"Config for '{task}' has been updated/added.")
 
     # ================================================================================
-    # Finetune
+    # --- Finetune ---
     # ================================================================================
     shutil.copyfile(configs_path, 'configs.json')
     cmd = [
         "python",
         f"./models/ditto/train_ditto.py",
         "--task", task,
-        "--batch_size", "32",
-        "--max_len", "128",
-        "--lr", "3e-5",
-        "--n_epochs", f"{epochs}",
+        "--batch_size", f"{DITTO_CONFIG['batch_size']}",
+        "--max_len", f"{DITTO_CONFIG['max_len']}",
+        "--lr", f"{DITTO_CONFIG['learning_rate']}",
+        "--n_epochs", f"{DITTO_CONFIG['epochs']}",
         "--finetuning",
-        "--lm", "roberta",
+        "--lm", f"{DITTO_CONFIG['lm']}",
         "--checkpoint_path", f"./models/ditto/checkpoints/{base}/model.pt",
         "--fp16",
         "--save_model",
@@ -134,8 +135,8 @@ def evaluate(task, input_path, output_path, log, true_fp: str) -> Tuple[float, f
         "--task", task,
         "--input_path", input_path,
         "--output_path", output_path,
-        "--lm", "roberta",
-        "--max_len", "128",
+        "--lm", f"{DITTO_CONFIG['lm']}",
+        "--max_len", f"{DITTO_CONFIG['max_len']}",
         "--use_gpu",
         "--fp16",
         "--checkpoint_path", "./models/ditto/checkpoints/",
