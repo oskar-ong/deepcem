@@ -49,6 +49,6 @@ P=${POLLUTION_LEVELS[$SLURM_ARRAY_TASK_ID]}
 echo "Running full pipeline for dataset / pollution level: $DATASET - $P"
 
 # No need to pass number of tasks to srun
-srun python exp_main_finetune.py --dataset "$DATASET" --pollution "$P"
-srun python exp_main_match.py --dataset "$DATASET" --pollution "$P"
+srun python src/exp_main_finetune.py --dataset "$DATASET" --pollution "$P"
+srun python src/exp_main_match.py --dataset "$DATASET" --pollution "$P"
 echo "Completed full pipeline for dataset / pollution level: $DATASET - $P"
