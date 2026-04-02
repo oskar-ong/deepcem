@@ -336,7 +336,7 @@ def propagate_dependency_pairs(
     for p1, p2, _label in parent_pairs:
         id1, id2 = p1, p2
 
-        # Get related actors for both movies
+        # Get related ids for each id
         deps1 = dependency_map.get(id1, set())
         deps2 = dependency_map.get(id2, set())
 

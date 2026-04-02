@@ -42,28 +42,28 @@ class ExperimentConfig:
 
 imdb_entities = {
 
-    "movies": ExperimentConfig(
-        name="movies",
-        model="imdb_movies_rel_score",
-        model_base="imdb_movies",
+    "movie": ExperimentConfig(
+        name="movie",
+        model="imdb_movie_rel_score",
+        model_base="imdb_movie",
         id_col="tconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
-        relations=[Relation(name="names", junction_table="./data/imdb_hard/title_principals.csv",
+        relations=[Relation(name="name", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="nconst", score_col="name_score")],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
         empty_scores_dir="",
         injected_scores_dir=""
     ),
-    "names": ExperimentConfig(
-        name="names",
-        model="imdb_names_rel_score",
-        model_base="imdb_names",
+    "name": ExperimentConfig(
+        name="name",
+        model="imdb_name_rel_score",
+        model_base="imdb_name",
         id_col="nconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
-        relations=[Relation(name="movies", junction_table="./data/imdb_hard/title_principals.csv",
+        relations=[Relation(name="movie", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="tconst", score_col="movie_score")],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
