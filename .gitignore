@@ -223,3 +223,6 @@ __marimo__/
 
 configs.json
 
+cem_results.db
+
+/out

@@ -7,8 +7,8 @@ import os
 
 # Configuration
 DB_PATH = "cem_results.db"
-OUTPUT_PLOT = "er_performance_iterations.png"
-BACKUP_FILENAME = f"experiment_results_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+OUTPUT_PLOT = "out/er_performance_iterations.png"
+BACKUP_FILENAME = f"out/experiment_results_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
 
 
 def save_to_csv(df, output_path):
@@ -68,6 +68,49 @@ def print_markdown_report(df):
         print("\n(Tip: Install 'tabulate' to get pretty markdown tables next time)")
 
 
+def plot_pollution_degradation(db_path):
+    conn = sqlite3.connect(db_path)
+    query = """
+    SELECT pollution, entity, f1_score, iteration 
+    FROM metrics
+    WHERE (pollution, entity, iteration) IN (
+    SELECT pollution, entity, MAX(iteration)
+    FROM metrics
+    GROUP BY pollution, entity
+    )
+    """
+    df = pd.read_sql_query(query, conn)
+    conn.close()
+
+    pollution_order = ["source", "low", "medium", "high"]
+    df['pollution'] = pd.Categorical(
+        df['pollution'], categories=pollution_order, ordered=True)
+    df = df.sort_values('pollution')
+
+    plt.figure(figsize=(10, 6))
+    sns.set_theme(style="ticks")
+
+    sns.lineplot(
+        data=df,
+        x="pollution",
+        y="f1_score",
+        hue="entity",
+        marker="o",
+        markersize=8,
+        linewidth=2
+    )
+
+    plt.title("F1 Score vs Pollution Level", fontsize=14, pad=15)
+    plt.ylabel("Final F1-Score", fontsize=12)
+    plt.xlabel("Pollution Level", fontsize=12)
+    plt.ylim(0, 1.05)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.legend(title="Entity Type", frameon=True)
+
+    plt.tight_layout()
+    plt.savefig("out/pollution_degradation_plot.png", dpi=300)
+
+
 def plot_performance_trends(df):
     """Generates a line plot showing F1-Score progress over iterations."""
     sns.set_theme(style="whitegrid")
@@ -101,7 +144,7 @@ def plot_performance_trends(df):
 
 if __name__ == "__main__":
     results_df = fetch_experiment_data(DB_PATH)
-
+    plot_pollution_degradation(DB_PATH)
     if results_df is not None:
         print_markdown_report(results_df)
         plot_performance_trends(results_df)
