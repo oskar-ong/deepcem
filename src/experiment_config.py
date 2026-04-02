@@ -35,7 +35,7 @@ class ExperimentConfig:
             template_conv=f"{base_dir}/{self.template_conv}",
             true_cp_fp=f"{base_dir}/{self.true_cp_fp}",
             true_test_fp=f"{base_dir}/{self.true_test_fp}",
-            empty_scores_dir=f"./data/{dataset}/{pollution}/emtpyScores/{self.name}",
+            empty_scores_dir=f"./data/{dataset}/{pollution}/emptyScores/{self.name}",
             injected_scores_dir=f"./data/{dataset}/{pollution}/injectedScores/{self.name}"
         )
 
