@@ -366,11 +366,6 @@ def add_labels(pairs, uf, df, id_col):
                 label = 0
             labeled_pairs.append((n1, n2, label))
     return labeled_pairs
-    # for n1, n2 in pairs:
-    #     if n1 in name_lookup and n2 in name_lookup:
-    #         label = 1 if uf.find(n1) == uf.find(n2) else 0
-    #         labeled_pairs.append((name_lookup[n1], name_lookup[n2], label))
-    #
 
 
 def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
@@ -554,10 +549,7 @@ def main():
 
     components = find_connected_components(global_rel_map)
 
-    # ==========================================
-    # ANALYSIS
-    # ==========================================
-
+    # --- Analysis ---
     # Identify the largest component
     largest_comp_size = max(len(c["all_nodes"]) for c in components)
     print(f"Largest component size: {largest_comp_size}")
@@ -573,10 +565,7 @@ def main():
     with open(f"pickles/{args.dataset}_stats.pickle", 'wb') as f:
         pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
 
-    # ==========================================
-    # END ANALYSIS
-    # ==========================================
-
+    # --- Assign Components to Splits. Creates subsets for all splits for entities
     splits = assign_components_to_splits(components)
 
     # pickling to evaluate created components and splits in different file
@@ -587,9 +576,7 @@ def main():
     with open(f"pickles/{args.dataset}_relmap.pickle", 'wb') as f:
         pickle.dump(global_rel_map, f, pickle.HIGHEST_PROTOCOL)
 
-    # ==========================================
-    # Generic Prep & Pair Generation
-    # ==========================================
+    # --- Pair Generation ---
     processed_entities: Dict[str, processedEntity] = {}
 
     for cfg_name, cfg in CONFIGS.items():
@@ -634,14 +621,6 @@ def main():
         roots = {entity_ufs[cfg_name].find(
             i) for i in ids if i in entity_ufs[cfg_name].parent}
         print(f"{name} unique roots: {len(roots)}")
-
-    with open(f"pickles/{args.dataset}_processed_entities", 'wb') as f:
-        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
-    # ==========================================
-    # SPLITS AND PAIRS ARE NOW LOCKED!
-    # CONTINUE WITH INDIVIDUAL EXPERIMENT
-    # NOT REALLY BEST PERFORMANCE BUT SPLIT FOR READABILITY / UNDERSTANDING
-    # ==========================================
 
     # --- Pairs for Inference ---
     # Create cartesian product for all related entries
@@ -689,11 +668,9 @@ def main():
             write_splits(cfg, CONFIGS, processed_entities,
                          relation_maps, level)
 
-    # ========================================================================================================================================================================
-    # Check requirements:
+    # --- Check requirements ---
     # No leakage
     # Relational Evidence remains
-    # ========================================================================================================================================================================
     validate_splits(splits, global_rel_map, entity_ufs)
     metadata_fp = f"{args.dataset}_metadata.json"
     generate_metadata(args, components, processed_entities, metadata_fp)
