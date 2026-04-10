@@ -83,3 +83,7 @@ DITTO_CONFIG = {
     "epochs": 5,
     "lm": "roberta"
 }
+
+TOKENS = {
+    "imdb": ["[NAME_SCORE]", "[MOVIE_SCORE]"]
+}

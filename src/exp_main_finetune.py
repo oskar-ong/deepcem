@@ -31,8 +31,14 @@ def main():
     configs_path = f"./models/ditto/configs.json"
 
     for entity in config.values():
+        # get special tokens
+        special_tokens = []
+        for r in entity.relations:
+            special_tokens.append(r.score_col)
+
         # --- Phase 1: Initial Finetune, only attribute values ---
-        finetune(configs_path, entity.model_base, entity.empty_scores_dir, log)
+        finetune(configs_path, entity.model_base,
+                 entity.empty_scores_dir, log, special_tokens)
 
         input_path = f"{entity.empty_scores_dir}/test.txt"
 
@@ -55,7 +61,7 @@ def main():
 
         # --- Phase 2: Re-finetune, include relaitonal scores ---
         refinetune(configs_path, entity.model,
-                   entity.injected_scores_dir, entity.model_base, log)
+                   entity.injected_scores_dir, entity.model_base, log, special_tokens)
 
         input_path = f"{entity.injected_scores_dir}/test.txt"
 

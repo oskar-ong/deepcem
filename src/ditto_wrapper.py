@@ -6,10 +6,10 @@ import subprocess
 from typing import Tuple
 
 from evaluate import calc_metrics
-from experiment_config import DITTO_CONFIG
+from experiment_config import DITTO_CONFIG, TOKENS
 
 
-def finetune(configs_path, task, dataset_dir, log):
+def finetune(configs_path, task, dataset_dir, log, special_tokens):
 
     # ================================================================================
     # --- Update ditto/configs.json with datasets ---
@@ -28,7 +28,8 @@ def finetune(configs_path, task, dataset_dir, log):
             "vocab": ["0", "1"],
             "trainset": train_fp,
             "validset": valid_fp,
-            "testset": test_fp
+            "testset": test_fp,
+            "tokens": special_tokens
         }
 
         file_data = [entry for entry in file_data if entry.get("name") != task]
@@ -65,7 +66,7 @@ def finetune(configs_path, task, dataset_dir, log):
     log.info(f"Finished Finetuning for task: {task}")
 
 
-def refinetune(configs_path, task, dataset_dir, base, log):
+def refinetune(configs_path, task, dataset_dir, base, log, special_tokens):
 
     # ================================================================================
     # --- Update ditto/configs.json with datasets ---
@@ -84,7 +85,8 @@ def refinetune(configs_path, task, dataset_dir, base, log):
             "vocab": ["0", "1"],
             "trainset": train_fp,
             "validset": valid_fp,
-            "testset": test_fp
+            "testset": test_fp,
+            "tokens": special_tokens
         }
 
         file_data = [entry for entry in file_data if entry.get("name") != task]
