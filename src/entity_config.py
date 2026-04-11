@@ -74,6 +74,31 @@ def create_block_key_area(row: pd.Series) -> str:
 
 REGISTRY = {
 
+    "imdb":
+    {
+        "movie": EntityConfig(
+            name="movie",
+            id_col="tconst",
+            path_basics="./data/raw/imdb/title_basics.csv",
+            path_dups="./data/raw/imdb/title_basics_dups.csv",
+            path_out_dir="./data/processed/imdb",
+            rels=[{"rel_name": "name",
+                   "junction_table": "./data/raw/imdb/title_principals.csv"}],
+            block_key_func=create_block_key_movie,
+            drop_list=['originalTitle'],
+        ),
+        "name": EntityConfig(
+            name="name",
+            id_col="nconst",
+            path_basics="./data/raw/imdb/name_basics.csv",
+            path_dups="./data/raw/imdb/name_basics_dups.csv",
+            path_out_dir="./data/processed/imdb",
+            rels=[{"rel_name": "movie",
+                   "junction_table": "./data/raw/imdb/title_principals.csv"}],
+            block_key_func=create_block_key_name,
+            drop_list=[]
+        )
+    },
     "imdb_hard":
     {
         "movie": EntityConfig(
