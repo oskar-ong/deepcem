@@ -49,7 +49,7 @@ imdb_entities = {
         id_col="tconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
-        relations=[Relation(name="name", junction_table="./data/imdb_hard/title_principals.csv",
+        relations=[Relation(name="name", junction_table="./data/imdb/title_principals.csv",
                             fk="nconst", score_col="name_score")],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -63,6 +63,37 @@ imdb_entities = {
         id_col="nconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
+        relations=[Relation(name="movie", junction_table="./data/imdb/title_principals.csv",
+                            fk="tconst", score_col="movie_score")],
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
+    )
+}
+imdb_hard_entities = {
+
+    "movie": ExperimentConfig(
+        name="movie",
+        model="imdb_hard_movie_rel_score",
+        model_base="imdb_hard_movie",
+        id_col="tconst",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
+        relations=[Relation(name="name", junction_table="./data/imdb_hard/title_principals.csv",
+                            fk="nconst", score_col="name_score")],
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
+    ),
+    "name": ExperimentConfig(
+        name="name",
+        model="imdb_hard_name_rel_score",
+        model_base="imdb_hard_name",
+        id_col="nconst",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="movie", junction_table="./data/imdb_hard/title_principals.csv",
                             fk="tconst", score_col="movie_score")],
         true_cp_fp=f"cp_labeled.jsonl",
@@ -73,7 +104,8 @@ imdb_entities = {
 }
 
 REGISTRY = {
-    "imdb_hard": imdb_entities
+    "imdb": imdb_entities,
+    "imdb_hard": imdb_hard_entities
 }
 
 DITTO_CONFIG = {
@@ -82,8 +114,4 @@ DITTO_CONFIG = {
     "learning_rate": 3e-5,
     "epochs": 5,
     "lm": "roberta"
-}
-
-TOKENS = {
-    "imdb": ["[NAME_SCORE]", "[MOVIE_SCORE]"]
 }
