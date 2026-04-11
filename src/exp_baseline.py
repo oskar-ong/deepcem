@@ -2,8 +2,9 @@ import argparse
 from pathlib import Path
 import time
 
-from experiment_config import DITTO_CONFIG, REGISTRY, ExperimentConfig
-from ditto_wrapper import evaluate, finetune, refinetune
+from baseline_config import REGISTRY, BaselineConfig
+from experiment_config import DITTO_CONFIG
+from ditto_wrapper import evaluate, finetune
 from logging_setup import ExperimentLogger, setup_logger
 
 
@@ -16,14 +17,15 @@ def main():
     dataset = args.dataset
 
     # --- logging ---
-    log = setup_logger("finetune")
+    log = setup_logger("baseline_finetune")
+    log.info(f"BASELINE EXPERIMENT")
     log.info(f"Start Finetuning: Dataset: {args.dataset}")
 
     sql_log = ExperimentLogger("cem_results.db")
 
     # --- load config ---
     raw_config = REGISTRY[dataset]
-    config: dict[str, ExperimentConfig] = {
+    config: dict[str, BaselineConfig] = {
         name: entity.resolve_paths(
             args.dataset, args.pollution)
         for name, entity in raw_config.items()
@@ -33,26 +35,23 @@ def main():
 
     for entity in config.values():
         start_time = time.perf_counter()
-        # get special tokens
-        special_tokens = []
-        for r in entity.relations:
-            special_tokens.append(r.score_col)
 
         # --- Phase 1: Initial Finetune, only attribute values ---
-        finetune(configs_path, entity.model_base,
-                 entity.empty_scores_dir, log, special_tokens)
+        finetune(configs_path, entity.model,
+                 entity.dir_path, log, None)
 
-        input_path = f"{entity}/test.txt"
+        input_path = f"{entity.dir_path}/test.txt"  # TODO
 
         out_path = Path(
-            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune")
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
-        output_fp = f"{out_path}/phase1_eval.jsonl"
-        evaluate(entity.model_base, input_path, output_fp, log, input_path)
+        output_fp = f"{out_path}/baseline.jsonl"
+        metrics = evaluate(entity.model_base, input_path,
+                           output_fp, log, input_path)
 
         sql_log.log_run(
             dataset=dataset,
-            model_type="1",
+            model_type="baseline",
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],
             learning_rate=DITTO_CONFIG['learning_rate'],
@@ -62,18 +61,15 @@ def main():
             seed=0)  # TODO
 
         end_time = time.perf_counter()
-        runtime_phase1 = end_time - start_time
-
-        # --- Phase 2: Re-finetune, include relaitonal scores ---
-        refinetune(configs_path, entity.model,
-                   entity.injected_scores_dir, entity.model_base, log, special_tokens)
-
-        input_path = f"{entity.injected_scores_dir}/test.txt"
-
-        output_fp = f"{out_path}/phase2_eval.jsonl"
-        evaluate(entity.model, input_path, output_fp, log, input_path)
-        end_time = time.perf_counter()
-        runtime_phase2 = end_time - start_time
+        runtime = end_time - start_time
+        sql_log.log_metrics(
+            pollution=args.pollution,
+            iteration=0,
+            entity=entity.name,
+            testset_type="baseline",
+            metrics_dict=metrics,
+            num_pairs=0,  # TODO Read from experiment config
+            runtime=runtime)
 
 
 if __name__ == "__main__":
