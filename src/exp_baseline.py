@@ -46,8 +46,11 @@ def main():
             f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/baseline.jsonl"
-        metrics = evaluate(entity.model, input_path,
-                           output_fp, log, input_path)
+        metrics_tuple = evaluate(entity.model, input_path,
+                                 output_fp, log, input_path)
+
+        metrics = {"accuracy": metrics_tuple[0], "precision": metrics_tuple[1],
+                   "recall": metrics_tuple[2], "f1_score": metrics_tuple[3]}
         end_time = time.perf_counter()
         runtime = end_time - start_time
 
