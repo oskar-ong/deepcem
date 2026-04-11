@@ -6,7 +6,7 @@ import subprocess
 from typing import Tuple
 
 from evaluate import calc_metrics
-from experiment_config import DITTO_CONFIG, TOKENS
+from experiment_config import DITTO_CONFIG
 
 
 def finetune(configs_path, task, dataset_dir, log, special_tokens):
