@@ -21,23 +21,16 @@ imdb_entities = {
 
     "movie": BaselineConfig(
         name="movie",
-        model="imdb_movie_baseline"
-
+        model="imdb_movie_baseline",
+        dir_path=""
     ),
     "name": BaselineConfig(
         name="name",
         model="imdb_name_baseline",
+        dir_path=""
     )
 }
 
 REGISTRY = {
     "imdb": imdb_entities
-}
-
-DITTO_CONFIG = {
-    "batch_size": 32,
-    "max_len": 128,
-    "learning_rate": 3e-5,
-    "epochs": 5,
-    "lm": "roberta"
 }
