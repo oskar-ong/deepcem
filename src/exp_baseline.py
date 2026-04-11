@@ -36,18 +36,20 @@ def main():
     for entity in config.values():
         start_time = time.perf_counter()
 
-        # --- Phase 1: Initial Finetune, only attribute values ---
+        # --- Finetune baseline model ---
         finetune(configs_path, entity.model,
                  entity.dir_path, log, None)
 
-        input_path = f"{entity.dir_path}/test.txt"  # TODO
+        input_path = f"{entity.dir_path}/test.txt"
 
         out_path = Path(
             f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/baseline.jsonl"
-        metrics = evaluate(entity.model_base, input_path,
+        metrics = evaluate(entity.model, input_path,
                            output_fp, log, input_path)
+        end_time = time.perf_counter()
+        runtime = end_time - start_time
 
         sql_log.log_run(
             dataset=dataset,
@@ -60,8 +62,7 @@ def main():
             neg_ratio=0,  # TODO
             seed=0)  # TODO
 
-        end_time = time.perf_counter()
-        runtime = end_time - start_time
+        # --- Log metrics ---
         sql_log.log_metrics(
             pollution=args.pollution,
             iteration=0,
