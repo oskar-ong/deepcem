@@ -42,7 +42,7 @@ def main():
         finetune(configs_path, entity.model_base,
                  entity.empty_scores_dir, log, special_tokens)
 
-        input_path = f"{entity}/test.txt"
+        input_path = f"{entity.empty_scores_dir}/test.txt"
 
         out_path = Path(
             f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune")
