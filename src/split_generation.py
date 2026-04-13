@@ -687,7 +687,7 @@ def main():
 
                 shutil.copyfile(
                     relation["junction_table"], f"{cfg.path_out_dir}/{file_name}")
-            copied.add(cfg.path_out_dir)
+            copied.add(f"{cfg.path_out_dir}/{file_name}")
 
 
 if __name__ == "__main__":
