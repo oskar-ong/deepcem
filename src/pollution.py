@@ -43,7 +43,12 @@ def swap_tokens(row: pd.Series, attr: str):
 
 def remove_attribute(row: pd.Series, attr: str):
     """Simulates missing data by setting the attribute to None."""
-    row[attr] = ""
+    non_empty_count = row.notnull().sum() - (row == "").sum()
+
+    if non_empty_count > 1:
+        row[attr] = ""
+    else:
+        row = add_typo(row, attr)
     return row
 
 

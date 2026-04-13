@@ -58,6 +58,7 @@ def finetune(configs_path, task, dataset_dir, log, special_tokens):
         "--fp16",
         "--save_model",
         "--logdir", "./models/ditto/checkpoints/",
+        "--run_id", f"{DITTO_CONFIG['seed']}",
     ]
 
     env = os.environ.copy()
@@ -116,6 +117,7 @@ def refinetune(configs_path, task, dataset_dir, base, log, special_tokens):
         "--fp16",
         "--save_model",
         "--logdir", "./models/ditto/checkpoints/",
+        "--run_id", f"{DITTO_CONFIG['seed']}",
     ]
 
     env = os.environ.copy()

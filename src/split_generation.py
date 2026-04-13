@@ -493,6 +493,7 @@ def get_high_degree_nodes(junction_csv: str, id_col: str, threshold: int = 500):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
+    parser.add_argument("--blacklist", action="store_true")
     args = parser.parse_args()
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
@@ -504,7 +505,7 @@ def main():
     splitting_blacklist = set()
 
     # Dynamic Blacklist
-    do_blacklist = False
+    do_blacklist = args.blacklist
     if do_blacklist == True:
         for cfg_name, cfg in CONFIGS.items():
             for rel_dict in cfg.rels:
@@ -555,12 +556,12 @@ def main():
     print(f"Largest component size: {largest_comp_size}")
 
     # Analyze the bottlenecks
-    df_centrality = analyze_graph_centrality(global_rel_map)
-    print("Top 10 nodes responsible for connectivity:")
-    print(df_centrality.head(10))
+    # df_centrality = analyze_graph_centrality(global_rel_map)
+    # print("Top 10 nodes responsible for connectivity:")
+    # print(df_centrality.head(10))
 
     # Export for inspection
-    df_centrality.to_csv(f"{args.dataset}_graph_bottlenecks.csv", index=False)
+    # df_centrality.to_csv(f"{args.dataset}_graph_bottlenecks.csv", index=False)
     df_stats = profile_components(components, CONFIGS, entity_ufs)
     with open(f"pickles/{args.dataset}_stats.pickle", 'wb') as f:
         pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)

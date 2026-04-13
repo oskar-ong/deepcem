@@ -60,6 +60,12 @@ def create_block_key_track(row: pd.Series) -> str:
     return re.sub(r'[^a-z0-9]', '', title)
 
 
+def create_block_key_artist_credit(row: pd.Series) -> str:
+    title = str(row.get("artist_credit", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
 def create_block_key_artist(row: pd.Series) -> str:
     title = str(row.get("artist", "")).lower()
     title = re.sub(r'^(the|a|an)\s+', '', title)
@@ -68,6 +74,42 @@ def create_block_key_artist(row: pd.Series) -> str:
 
 def create_block_key_area(row: pd.Series) -> str:
     title = str(row.get("area", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_label(row: pd.Series) -> str:
+    title = str(row.get("label", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_place(row: pd.Series) -> str:
+    title = str(row.get("label", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_recording(row: pd.Series) -> str:
+    title = str(row.get("recording", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_medium(row: pd.Series) -> str:
+    title = str(row.get("medium", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_release(row: pd.Series) -> str:
+    title = str(row.get("release", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
+def create_block_key_release_group(row: pd.Series) -> str:
+    title = str(row.get("release_group", "")).lower()
     title = re.sub(r'^(the|a|an)\s+', '', title)
     return re.sub(r'[^a-z0-9]', '', title)
 
@@ -182,36 +224,55 @@ REGISTRY = {
             drop_list=[]
         )
     },
-
     "music":
         {
         "track": EntityConfig(
             name="track",
             id_col="track",
-            path_basics="./data/raw/music/new_ids/track.csv",
-            path_dups="./data/raw/music/new_ids/track_dups.csv",
+            path_basics="./data/interim/music/track.csv",
+            path_dups="./data/interim/music/track_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "artist_credit",
+                    "junction_table": "./data/interim/music/track_artist_credit.csv"},
+                {"rel_name": "medium",
+                    "junction_table": "./data/interim/music/track_medium.csv"},
+                {"rel_name": "recording",
+                    "junction_table": "./data/interim/music/track_recording.csv"}
+            ],
+            block_key_func=create_block_key_track,
+            drop_list=[]
+        ),
+        "artist_credit": EntityConfig(
+            name="artist_credit",
+            id_col="artist_credit",
+            path_basics="./data/interim/music/artist_credit.csv",
+            path_dups="./data/interim/music/artist_credit_dups.csv",
             path_out_dir="./data/processed/music",
             rels=[
                 {"rel_name": "artist",
-                    "junction_table": "./data/raw/music/new_ids/track_artist.csv"}
+                    "junction_table": "./data/interim/music/artist_credit_name.csv"},
+                {"rel_name": "release",
+                    "junction_table": "./data/interim/music/release_artist_credit.csv"},
+                {"rel_name": "release_group",
+                    "junction_table": "./data/interim/music/release_group_artist_credit.csv"},
+                {"rel_name": "recording",
+                    "junction_table": "./data/interim/music/recording_artist_credit.csv"}
             ],
-            block_key_func=create_block_key_track,
+            block_key_func=create_block_key_artist_credit,
             drop_list=[]
         ),
         "artist": EntityConfig(
             name="artist",
             id_col="artist",
-            path_basics="./data/raw/music/new_ids/artist.csv",
-            path_dups="./data/raw/music/new_ids/artist_dups.csv",
+            path_basics="./data/interim/music/artist.csv",
+            path_dups="./data/interim/music/artist_dups.csv",
             path_out_dir="./data/processed/music",
             rels=[
-                {"rel_name": "track",
-                    "junction_table": "./data/raw/music/new_ids/track_artist.csv"},
+                {"rel_name": "artist_credit",
+                    "junction_table": "./data/interim/music/artist_credit_name.csv"},
                 {"rel_name": "area",
-                    "junction_table": "./data/raw/music/new_ids/artist_area.csv"},
-                # ,
-                # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
-                # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                    "junction_table": "./data/interim/music/artist_area.csv"}
             ],
             block_key_func=create_block_key_artist,
             drop_list=[]
@@ -219,104 +280,107 @@ REGISTRY = {
         "area": EntityConfig(
             name="area",
             id_col="area",
-            path_basics="./data/raw/music/new_ids/area.csv",
-            path_dups="./data/raw/music/new_ids/area_dups.csv",
+            path_basics="./data/interim/music/area.csv",
+            path_dups="./data/interim/music/area_dups.csv",
             path_out_dir="./data/processed/music",
             rels=[
                 {"rel_name": "artist",
-                    "junction_table": "./data/raw/music/new_ids/artist_area.csv"}
-                # ,
-                # {"rel_name": "", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
-                # {"rel_name": "artist_credit", "junction_table": "./data/interim/music/tracks_artistcredit.csv"},
+                    "junction_table": "./data/interim/music/artist_area.csv"},
+                {"rel_name": "place",
+                    "junction_table": "./data/interim/music/place_area.csv"},
+                {"rel_name": "label",
+                    "junction_table": "./data/interim/music/label_area.csv"}
             ],
             block_key_func=create_block_key_area,
             drop_list=[]
-        )
-        # ,
-        # "area": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "label": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "place": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "recording": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "label": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "label": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "label": EntityConfig(
-        #     name="move",
-        #     id_col="move",
-        #     path_basics="./data/raw/pokemon/new_ids/move.csv",
-        #     path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
-        #     path_out_dir="./data/processed/pokemon/move/",
-        #     rels = [
-        #         {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
-        #         ],
-        #     block_key_func=create_block_key_pokemon,
-        #     drop_list=['cluster_id', 'block_key']
-        # ),
-        # "place":
+        ),
+        "label": EntityConfig(
+            name="label",
+            id_col="label",
+            path_basics="./data/interim/music/label.csv",
+            path_dups="./data/interim/music/label_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "area",
+                    "junction_table": "./data/interim/music/label_area.csv"}
+            ],
+            block_key_func=create_block_key_label,
+            drop_list=[]
+        ),
+        "place": EntityConfig(
+            name="place",
+            id_col="place",
+            path_basics="./data/interim/music/place.csv",
+            path_dups="./data/interim/music/place_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "area",
+                    "junction_table": "./data/interim/music/place_area.csv"}
+            ],
+            block_key_func=create_block_key_place,
+            drop_list=[]
+        ),
+        "recording": EntityConfig(
+            name="recording",
+            id_col="recording",
+            path_basics="./data/interim/music/recording.csv",
+            path_dups="./data/interim/music/recording_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "track",
+                    "junction_table": "./data/interim/music/track_recording.csv"},
+                {"rel_name": "artist_credit",
+                    "junction_table": "./data/interim/music/recording_artist_credit.csv"}
+            ],
+            block_key_func=create_block_key_recording,
+            drop_list=[]
+        ),
+        "medium": EntityConfig(
+            name="medium",
+            id_col="medium",
+            path_basics="./data/interim/music/medium.csv",
+            path_dups="./data/interim/music/medium_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "track",
+                    "junction_table": "./data/interim/music/track_medium.csv"},
+                {"rel_name": "release",
+                    "junction_table": "./data/interim/music/medium_release.csv"}
+            ],
+            block_key_func=create_block_key_release,
+            drop_list=[]
+        ),
+        "release": EntityConfig(
+            name="release",
+            id_col="release",
+            path_basics="./data/interim/music/release.csv",
+            path_dups="./data/interim/music/release_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "medium",
+                    "junction_table": "./data/interim/music/medium_release.csv"},
+                {"rel_name": "artist_credit",
+                    "junction_table": "./data/interim/music/release_artist_credit.csv"},
+                {"rel_name": "release_group",
+                    "junction_table": "./data/interim/music/release_release_group.csv"},
+            ],
+            block_key_func=create_block_key_release,
+            drop_list=[]
+        ),
+        "release_group": EntityConfig(
+            name="release_group",
+            id_col="release_group",
+            path_basics="./data/interim/music/release_group.csv",
+            path_dups="./data/interim/music/release_group_dups.csv",
+            path_out_dir="./data/processed/music",
+            rels=[
+                {"rel_name": "release",
+                    "junction_table": "./data/interim/music/release_release_group.csv"},
+                {"rel_name": "artist_credit",
+                    "junction_table": "./data/interim/music/release_group_artist_credit.csv"}
+            ],
+            block_key_func=create_block_key_release_group,
+            drop_list=[]
+        ),
     }
 }
