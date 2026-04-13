@@ -127,6 +127,22 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
             print(
                 f"Wrote {len(lines)} lines for BaselineA {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
+            if split == "train":
+                for log_power, pair_ids_log in processed_entities[cfg.name].train_log.items():
+                    pairs_log: List[Tuple[Dict, Dict, int]] = []
+                    for id1, id2, label in pair_ids_log:
+                        record1 = attributes.get(id1)
+                        record2 = attributes.get(id2)
+
+                        if record1 and record2:
+                            pairs_log.append((record1, record2, label))
+
+                    lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
+                    with open(f"{baseA_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
+                        f.write("\n".join(lines) + "\n")
+                    print(
+                        f"Wrote {len(lines)} lines for BaselineA {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
+
             # --- Baseline B: Flattened Schema ---
             # TODO: Add Relation Columns to all entries, even the ones with null values
             pairs_baselineB = copy.deepcopy(pairs)
@@ -221,6 +237,22 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
         print(
             f"Wrote {len(lines)} lines for empty scores {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
 
+        if split == "train":
+            for log_power, pair_ids_log in processed_entities[cfg.name].train_log.items():
+                pairs_log: List[Tuple[Dict, Dict, int]] = []
+                for id1, id2, label in pair_ids_log:
+                    record1 = attributes.get(id1)
+                    record2 = attributes.get(id2)
+
+                    if record1 and record2:
+                        pairs_log.append((record1, record2, label))
+
+                lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
+                with open(f"{empty_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
+                    f.write("\n".join(lines) + "\n")
+                print(
+                    f"Wrote {len(lines)} lines for empty scores {cfg.name} {split}_{log_power}. Pos: {amt_pos}, Neg: {amt_neg}")
+
         if split == "test":
             total_pairs = 0
             amt_pos = 0
@@ -287,6 +319,22 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
             f.write("\n".join(lines) + "\n")
         print(
             f"Wrote {len(lines)} lines for injected scores {cfg.name} {split}. Pos: {amt_pos}, Neg: {amt_neg}")
+
+        if split == "train":
+            for log_power, pair_ids_log in processed_entities[cfg.name].train_log.items():
+                pairs_log: List[Tuple[Dict, Dict, int]] = []
+                for id1, id2, label in pair_ids_log:
+                    record1 = attributes.get(id1)
+                    record2 = attributes.get(id2)
+
+                    if record1 and record2:
+                        pairs_log.append((record1, record2, label))
+
+                lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
+                with open(f"{injected_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
+                    f.write("\n".join(lines) + "\n")
+                print(
+                    f"Wrote {len(lines)} lines for injected scores {cfg.name} {split}_{log_power}. Pos: {amt_pos}, Neg: {amt_neg}")
 
     # --- Prediction Jsons ---
     pairs_cp: List[str, str, int] = copy.deepcopy(

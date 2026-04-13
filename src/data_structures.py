@@ -42,3 +42,4 @@ class processedEntity:
     pairs: Dict[str, List[Tuple[str, str, int]]]
     cp: List
     dfs_by_pollution: Dict[str, pd.DataFrame]
+    train_log: Dict

@@ -23,7 +23,7 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp):
+def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp, seed, train_suffix):
     start_time = time.perf_counter()
     f1_scores = {}
     run_id, _ = get_experiment_metadata()
@@ -34,6 +34,12 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
                   for name, entity_dict in scores.items()}
 
     for entity in config.values():
+        # task
+        if train_suffix == "":
+            task = f"{entity.model_base}_{seed}_rel"
+        else:
+            task = f"{entity.model_base}_{seed}_{train_suffix}_rel"
+
         # Update Scores
         cp_input_fp = out_path / f"{entity.name}_{iter_num}_input_cp.jsonl"
         # Track f1 convergenc
@@ -48,7 +54,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         # Generate new Scores
         cp_output_fp = out_path / \
             f"{entity.name}_{iter_num}_cp_results.jsonl"
-        metrics = evaluate(entity.model, cp_input_fp,
+        metrics = evaluate(task, cp_input_fp,
                            cp_output_fp, log, entity.true_cp_fp)
         metrics_cp = {"accuracy": metrics[0], "precision": metrics[1],
                       "recall": metrics[2], "f1_score": metrics[3]}
@@ -66,7 +72,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         # Track convergence
         conv_output_fp = out_path / \
             f"{entity.name}_{iter_num}_conv_results.jsonl"
-        metrics = evaluate(entity.model, conv_input_fp,
+        metrics = evaluate(task, conv_input_fp,
                            conv_output_fp, log, entity.true_test_fp)
         metrics_conv = {
             "accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
@@ -205,6 +211,8 @@ def main():
     parser.add_argument("--pollution", type=str)
     parser.add_argument("--binning", action="store_true")
     parser.add_argument("--dampening", action="store_true")
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--train_suffix", type=str, default="")
     args = parser.parse_args()
 
     # --- logs ---
@@ -243,7 +251,7 @@ def main():
     for i in range(0, max_iters):
         log.info(f"Start iteration {i}")
         scores, f1_scores = run_iteration(
-            i, config, scores, relation_maps, sql_log, log, args.dataset, args.pollution, args.binning, args.dampening)
+            i, config, scores, relation_maps, sql_log, log, args.dataset, args.pollution, args.binning, args.dampening, args.seed, args.train_suffix)
         converged = True
         for k in f1_scores.keys():
 

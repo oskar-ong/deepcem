@@ -9,12 +9,15 @@ from evaluate import calc_metrics
 from experiment_config import DITTO_CONFIG
 
 
-def finetune(configs_path, task, dataset_dir, log, special_tokens):
+def finetune(configs_path, task, dataset_dir, log, special_tokens, train_suffix="", seed=0):
 
     # ================================================================================
     # --- Update ditto/configs.json with datasets ---
     # ================================================================================
-    train_fp = f"{dataset_dir}/train.txt"
+    if train_suffix == "":
+        train_fp = f"{dataset_dir}/train.txt"
+    else:
+        train_fp = f"{dataset_dir}/train_{train_suffix}.txt"
     valid_fp = f"{dataset_dir}/valid.txt"
     test_fp = f"{dataset_dir}/test.txt"
     configs_path = f"./models/ditto/configs.json"
@@ -58,7 +61,7 @@ def finetune(configs_path, task, dataset_dir, log, special_tokens):
         "--fp16",
         "--save_model",
         "--logdir", "./models/ditto/checkpoints/",
-        "--run_id", f"{DITTO_CONFIG['seed']}",
+        "--run_id", f"{seed}",
     ]
 
     env = os.environ.copy()
@@ -67,12 +70,15 @@ def finetune(configs_path, task, dataset_dir, log, special_tokens):
     log.info(f"Finished Finetuning for task: {task}")
 
 
-def refinetune(configs_path, task, dataset_dir, base, log, special_tokens):
+def refinetune(configs_path, task, dataset_dir, base, log, special_tokens, train_suffix="", seed=0):
 
     # ================================================================================
     # --- Update ditto/configs.json with datasets ---
     # ================================================================================
-    train_fp = f"{dataset_dir}/train.txt"
+    if train_suffix == "":
+        train_fp = f"{dataset_dir}/train.txt"
+    else:
+        train_fp = f"{dataset_dir}/train_{train_suffix}.txt"
     valid_fp = f"{dataset_dir}/valid.txt"
     test_fp = f"{dataset_dir}/test.txt"
     configs_path = f"./models/ditto/configs.json"
@@ -117,7 +123,7 @@ def refinetune(configs_path, task, dataset_dir, base, log, special_tokens):
         "--fp16",
         "--save_model",
         "--logdir", "./models/ditto/checkpoints/",
-        "--run_id", f"{DITTO_CONFIG['seed']}",
+        "--run_id", f"{seed}",
     ]
 
     env = os.environ.copy()

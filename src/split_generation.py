@@ -1,4 +1,6 @@
 from __future__ import annotations
+from sklearn.model_selection import train_test_split
+import numpy as np
 import json
 import argparse
 import csv
@@ -25,6 +27,37 @@ NEG_RATIO = 3                # Negatives per 1 Positive
 RANDOM_SEED = 0
 BLOCK_LIMIT = 10               # Max records per block to avoid N^2 growth
 SplitMode = Literal["count", "nodes"]
+
+
+def get_log_subsets(data, labels, base=10, min_pow=2, max_pow=5):
+    """
+    Generates subsets of data at sizes: base^min_pow, base^(min_pow+1)...
+    Example: 100, 1000, 10000
+    """
+    subsets = {}
+
+    # Calculate the integer sizes we want
+    # Use np.logspace for more granular control if needed
+    sizes = [base**i for i in range(min_pow, max_pow + 1)]
+
+    for size in sizes:
+        if size > len(data):
+            print(
+                f"Requested size {size} exceeds data length {len(data)}. Skipping.")
+            continue
+
+        # Stratify ensures the 0/1 distribution is identical to the original
+        subset, _ = train_test_split(
+            data,
+            train_size=size,
+            stratify=labels,
+            random_state=42,  # Crucial for fair comparison
+            shuffle=True
+        )
+        subsets[size] = subset
+        print(f"Generated subset of size {size}")
+
+    return subsets
 
 
 def print_overlap_table(processed_entities: Dict[str, processedEntity]):
@@ -616,7 +649,7 @@ def main():
 
         # Store for saving and inference later
         processed_entities[cfg.name] = processedEntity(
-            uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [], {})
+            uf, df_basics, {"train": p_train, "valid": p_valid, "test": p_test}, [], {}, {})
 
     for name, ids in [("Train", train_ids), ("Test", test_ids)]:
         roots = {entity_ufs[cfg_name].find(
@@ -651,13 +684,20 @@ def main():
                 print("Key Error!")
                 processed_entities[rel_name].cp = labeled_inference
 
-    # --- Pollution ---
+    # --- Pollution & Smaller Train Sets ---
     for cfg_name, cfg in CONFIGS.items():
 
         dfs_by_pollution: Dict = pollute(
             cfg.path_basics, cfg.id_col, cfg.drop_list)
 
         processed_entities[cfg.name].dfs_by_pollution = dfs_by_pollution
+
+        pairs_full = processed_entities[cfg.name].pairs["train"]
+        labels = [p[2] for p in pairs_full]
+
+        train_log = get_log_subsets(pairs_full, labels, 5, 3, 6)
+
+        processed_entities[cfg.name].train_log = train_log
 
     with open(f"pickles/{args.dataset}_processed_entities", 'wb') as f:
         pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)

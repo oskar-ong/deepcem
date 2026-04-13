@@ -13,6 +13,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset", type=str)
     parser.add_argument("--pollution", type=str)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--train_suffix", type=str, default="")
     args = parser.parse_args()
     dataset = args.dataset
 
@@ -38,7 +40,7 @@ def main():
 
         # --- Finetune baseline model ---
         finetune(configs_path, entity.model,
-                 entity.dir_path, log, None)
+                 entity.dir_path, log, None, args.train_suffix, args.seed)
 
         input_path = f"{entity.dir_path}/test.txt"
 
