@@ -30,7 +30,60 @@ imdb_entities = {
         dir_path=""
     )
 }
+music_entities = {
+    "track": BaselineConfig(
+        name="track",
+        model="music_track_baseline",
+        dir_path=""
+    ),
+    "artist_credit": BaselineConfig(
+        name="artist_credit",
+        model="music_artist_credit_baseline",
+        dir_path=""
+    ),
+    "artist": BaselineConfig(
+        name="artist",
+        model="music_artist_baseline",
+        dir_path=""
+    ),
+    "area": BaselineConfig(
+        name="area",
+        model="music_area_baseline",
+        dir_path=""
+    ),
+    "label": BaselineConfig(
+        name="label",
+        model="music_label_baseline",
+        dir_path=""
+    ),
+    "place": BaselineConfig(
+        name="place",
+        model="music_place_baseline",
+        dir_path=""
+    ),
+    "recording": BaselineConfig(
+        name="recording",
+        model="music_recording_baseline",
+        dir_path=""
+    ),
+    "medium": BaselineConfig(
+        name="medium",
+        model="music_medium_baseline",
+        dir_path=""
+    ),
+    "release": BaselineConfig(
+        name="release",
+        model="music_release_baseline",
+        dir_path=""
+    ),
+    "release_group": BaselineConfig(
+        name="release_group",
+        model="music_release_group_baseline",
+        dir_path=""
+    )
+}
 
 REGISTRY = {
-    "imdb": imdb_entities
+    "imdb": imdb_entities,
+    "music": music_entities
 }
