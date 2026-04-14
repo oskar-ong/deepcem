@@ -56,9 +56,22 @@ def main():
         end_time = time.perf_counter()
         runtime = end_time - start_time
 
+        # train_size
+        try:
+            if args.train_suffix == "":
+                train_size = 1.0
+            else:
+                # Converts "_125" -> 125 -> 0.125 (assuming base is 1000)
+                # Or adjust logic based on your specific naming convention
+                train_size = round(
+                    float(args.train_suffix.strip("_")) / 1000.0, 3)
+        except ValueError:
+            train_size = 1.0
+
         run_id = sql_log.log_run(
             dataset=dataset,
             entity=entity.name,
+            train_size=train_size,
             model_type="baseline",
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],
