@@ -74,7 +74,7 @@ fi
 if [ "$T" == "1" ]; then
     SUFFIX=""
 else
-    SUFFIX="_$T"
+    SUFFIX="$T"
 fi
 
 echo "--- STARTING JOB $SLURM_ARRAY_TASK_ID ---"
