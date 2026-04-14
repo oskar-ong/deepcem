@@ -97,7 +97,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
             pollution=pollution,
             iteration=iter_num,
             is_final=False,
-            testset_type="conv",
+            testset="conv",
             metrics_dict=metrics_conv,
             num_pairs=0,  # TODO
             runtime=runtime_conv)
