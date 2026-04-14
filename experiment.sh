@@ -81,7 +81,7 @@ else
 fi
 
 echo "--- STARTING JOB $SLURM_ARRAY_TASK_ID ---"
-echo "--- BASELINE ---"
+echo "--- EXPERIMENT ---"
 echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T"
 
 # No need to pass number of tasks to srun

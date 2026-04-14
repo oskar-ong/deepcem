@@ -40,6 +40,11 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         else:
             task = f"{entity.model_base}_{seed}_{train_suffix}_rel"
 
+        # special tokens
+        special_tokens = []
+        for r in entity.relations:
+            special_tokens.append(r.score_col)
+
         # Update Scores
         cp_input_fp = out_path / f"{entity.name}_{iter_num}_input_cp.jsonl"
         # Track f1 convergenc
@@ -55,7 +60,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         cp_output_fp = out_path / \
             f"{entity.name}_{iter_num}_cp_results.jsonl"
         metrics = evaluate(task, cp_input_fp,
-                           cp_output_fp, log, entity.true_cp_fp)
+                           cp_output_fp, log, entity.true_cp_fp, entity.injected_scores_dir, special_tokens)
         metrics_cp = {"accuracy": metrics[0], "precision": metrics[1],
                       "recall": metrics[2], "f1_score": metrics[3]}
         end_cp = time.perf_counter()
@@ -73,7 +78,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         conv_output_fp = out_path / \
             f"{entity.name}_{iter_num}_conv_results.jsonl"
         metrics = evaluate(task, conv_input_fp,
-                           conv_output_fp, log, entity.true_test_fp)
+                           conv_output_fp, log, entity.true_test_fp, entity.injected_scores_dir, special_tokens)
         metrics_conv = {
             "accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
         f1_scores[entity.name] = metrics[3]

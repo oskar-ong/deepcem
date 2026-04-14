@@ -39,7 +39,7 @@ def main():
         start_time = time.perf_counter()
 
         # --- Finetune baseline model ---
-        finetune(configs_path, entity.model,
+        finetune(entity.model,
                  entity.dir_path, log, None, args.train_suffix, args.seed)
 
         input_path = f"{entity.dir_path}/test.txt"
@@ -49,7 +49,7 @@ def main():
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/baseline.jsonl"
         metrics_tuple = evaluate(entity.model, input_path,
-                                 output_fp, log, input_path)
+                                 output_fp, log, input_path, entity.dir_path, [])
 
         metrics = {"accuracy": metrics_tuple[0], "precision": metrics_tuple[1],
                    "recall": metrics_tuple[2], "f1_score": metrics_tuple[3]}
@@ -65,7 +65,7 @@ def main():
             epochs=DITTO_CONFIG['epochs'],
             lm=DITTO_CONFIG['lm'],
             neg_ratio=0,  # TODO
-            seed=0)  # TODO
+            seed=args.seed)  # TODO
 
         # --- Log metrics ---
         sql_log.log_metrics(
