@@ -124,14 +124,14 @@ def extract_scores(fp, dependency_scores, is_damp=False):
                 if is_damp == True:
                     confidence = (
                         0.2 * dependency_scores[key]) + (0.8 * confidence)
-                else:
-                    dependency_scores[key] = confidence
+
+                dependency_scores[key] = confidence
             elif match == 0:
                 if is_damp == True:
                     confidence = (
                         0.2 * dependency_scores[key]) + (0.8 * (1-confidence))
-                else:
-                    dependency_scores[key] = (1 - confidence)
+
+                dependency_scores[key] = (1 - confidence)
     return dependency_scores
 
 
