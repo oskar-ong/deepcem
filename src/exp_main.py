@@ -149,7 +149,7 @@ def extract_pairs(fp):
 
 
 def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relationship_maps, all_scores, is_bin=False):
-    threshold = 0.15
+    threshold = 0.01
     with open(template_fp, 'r', encoding='utf-8') as infile, open(out_fp, 'w', encoding='utf-8') as outfile:
         for line in infile:
             record_pair = json.loads(line.strip())
