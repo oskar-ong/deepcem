@@ -110,11 +110,11 @@ music_entities = {
         model_base="music_track",
         id_col="track",
         relations=[Relation(name="artist_credit", junction_table="./data/music/track_artist_credit.csv",
-                            fk="nconst", score_col="[TRACK_CREDIT_SCORE]"),
+                            fk="artist_credit", score_col="[TRACK_CREDIT_SCORE]"),
                    Relation(name="medium", junction_table="./data/music/track_medium.csv",
-                            fk="nconst", score_col="[TRACK_MEDIUM_SCORE]"),
+                            fk="medium", score_col="[TRACK_MEDIUM_SCORE]"),
                    Relation(name="recording", junction_table="./data/music/track_recording.csv",
-                            fk="nconst", score_col="[TRACK_RECORDING_SCORE]"),],
+                            fk="recording", score_col="[TRACK_RECORDING_SCORE]"),],
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         true_cp_fp=f"cp_labeled.jsonl",
@@ -131,13 +131,13 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="artist", junction_table="./data/music/artist_credit_name.csv",
-                     fk="nconst", score_col="[ARTIST_CREDIT_ARTIST_SCORE]"),
+                     fk="artist", score_col="[ARTIST_CREDIT_ARTIST_SCORE]"),
             Relation(name="release", junction_table="./data/music/release_artist_credit.csv",
-                     fk="nconst", score_col="[ARTIST_CREDIT_RELEASE_SCORE]"),
+                     fk="release", score_col="[ARTIST_CREDIT_RELEASE_SCORE]"),
             Relation(name="release_group", junction_table="./data/music/release_group_artist_credit.csv",
-                     fk="nconst", score_col="[ARTIST_CREDIT_RELEASE_GROUP_SCORE]"),
+                     fk="release_group", score_col="[ARTIST_CREDIT_RELEASE_GROUP_SCORE]"),
             Relation(name="recording", junction_table="./data/music/recording_artist_credit.csv",
-                     fk="nconst", score_col="[ARTIST_CREDIT_RECORDING_SCORE]")
+                     fk="recording", score_col="[ARTIST_CREDIT_RECORDING_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -152,9 +152,9 @@ music_entities = {
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="artist_credit", junction_table="./data/music/artist_credit_name.csv",
-                            fk="nconst", score_col="[ARTIST_ARTIST_CREDIT_SCORE]"),
+                            fk="artist_credit", score_col="[ARTIST_ARTIST_CREDIT_SCORE]"),
                    Relation(name="area", junction_table="./data/music/area.csv",
-                            fk="nconst", score_col="[ARTIST_AREA_SCORE]")
+                            fk="area", score_col="[ARTIST_AREA_SCORE]")
                    ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -170,11 +170,11 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="artist", junction_table="./data/music/artist_area.csv",
-                     fk="nconst", score_col="[AREA_ARTIST_SCORE]"),
+                     fk="artist", score_col="[AREA_ARTIST_SCORE]"),
             Relation(name="place", junction_table="./data/music/place_area.csv",
-                     fk="nconst", score_col="[AREA_PLACE_SCORE]"),
+                     fk="place", score_col="[AREA_PLACE_SCORE]"),
             Relation(name="label", junction_table="./data/music/label_area.csv",
-                     fk="nconst", score_col="[AREA_LABEL_SCORE]")
+                     fk="label", score_col="[AREA_LABEL_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -189,7 +189,7 @@ music_entities = {
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="area", junction_table="./data/music/label_area.csv",
-                            fk="nconst", score_col="[LABEL_AREA_SCORE]")],
+                            fk="area", score_col="[LABEL_AREA_SCORE]")],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
         empty_scores_dir="",
@@ -203,7 +203,7 @@ music_entities = {
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="area", junction_table="./data/music/place_area.csv",
-                            fk="nconst", score_col="[PLACE_AREA_SCORE]")],
+                            fk="area", score_col="[PLACE_AREA_SCORE]")],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
         empty_scores_dir="",
@@ -218,9 +218,9 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="track", junction_table="./data/music/track_recording.csv",
-                     fk="nconst", score_col="[RECORDING_TRACK_SCORE]"),
+                     fk="track", score_col="[RECORDING_TRACK_SCORE]"),
             Relation(name="artist_credit", junction_table="./data/music/recording_artist_credit.csv",
-                     fk="nconst", score_col="[RECORDING_ARTIST_CREDIT_SCORE]")
+                     fk="artist_credit", score_col="[RECORDING_ARTIST_CREDIT_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -236,9 +236,9 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="track", junction_table="./data/music/track_medium.csv",
-                     fk="nconst", score_col="[MEDIUM_TRACK_SCORE]"),
+                     fk="track", score_col="[MEDIUM_TRACK_SCORE]"),
             Relation(name="release", junction_table="./data/music/medium_release.csv",
-                     fk="nconst", score_col="[MEDIUM_RELEASE_SCORE]")
+                     fk="release", score_col="[MEDIUM_RELEASE_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -254,11 +254,11 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="medium", junction_table="./data/music/medium_release.csv",
-                     fk="nconst", score_col="[RELEASE_MEDIUM_SCORE]"),
+                     fk="medium", score_col="[RELEASE_MEDIUM_SCORE]"),
             Relation(name="artist_credit", junction_table="./data/music/release_artist_credit.csv",
-                     fk="nconst", score_col="[RELEASE_CREDIT_SCORE]"),
+                     fk="artist_credit", score_col="[RELEASE_CREDIT_SCORE]"),
             Relation(name="release_group", junction_table="./data/music/release_release_group.csv",
-                     fk="nconst", score_col="[RELEASE_RGROUP_SCORE]")
+                     fk="release_group", score_col="[RELEASE_RGROUP_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
@@ -274,9 +274,9 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[
             Relation(name="release", junction_table="./data/music/release_release_group.csv",
-                     fk="tconst", score_col="[RGROUP_RELEASE_SCORE]"),
+                     fk="release", score_col="[RGROUP_RELEASE_SCORE]"),
             Relation(name="artist_credit", junction_table="./data/music/release_group_artist_credit.csv",
-                     fk="tconst", score_col="[RGROUP_CREDIT_SCORE]")
+                     fk="artist_credit", score_col="[RGROUP_CREDIT_SCORE]")
         ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
