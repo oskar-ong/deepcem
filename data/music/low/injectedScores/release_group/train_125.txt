@@ -1,125 +1,125 @@
-COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1079	COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1836	1
-COL name VAL Koomurri Dreaming COL type VAL 1.0 COL id VAL rg1848	COL name VAL Over The Rainbow COL type VAL 1.0 COL id VAL rg4173	0
-COL name VAL 20130309 A State of Trance 600 Beirut Lebanon Part 5 Armin van Buuren Beirut Lebanon COL type VAL 12.0 COL id VAL rg4003	COL name VAL Rockin the Joint COL type VAL 1.0 COL id VAL rg3782	0
-COL name VAL Palm Grea5e COL type VAL 1.0 COL id VAL rg3765	COL name VAL Spark 2 Young Wonens Band Project COL type VAL 1.0 COL id VAL rg3159	0
-COL name VAL Cruei Fight COL type VAL 1.0 COL id VAL rg809	COL name VAL Bitd Nest on the Ground COL type VAL 1.0 COL id VAL rg1207	0
-COL name VAL Traditional Songs of Scotland COL type VAL 1.0 COL id VAL rg2012	COL name VAL Desperate Living COL type VAL 1.0 COL id VAL rg1211	0
-COL name VAL Oboe Concertos of the Classical Era COL type VAL 1.0 COL id VAL rg1300	COL name VAL Mehr Jazx sagten die Frauen COL type VAL 1.0 COL id VAL rg3216	0
-COL name VAL Raus mit der Sprache COL type VAL 1.0 COL id VAL rg1998	COL name VAL Raus mit der Spracge COL type VAL 1.0 COL id VAL rg2445	1
-COL name VAL Piano Sonatas D 960  D 958 COL type VAL 1.0 COL id VAL rg605	COL name VAL Best of the Blues COL type VAL 1.0 COL id VAL rg2290	0
-COL name VAL How Fecund the Void COL id VAL rg1693	COL name VAL Screaming Again COL type VAL 3.0 COL id VAL rg655	0
-COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3246	COL name VAL 19981008 Minneapolis MN USA COL type VAL 1.0 COL id VAL rg2048	0
-COL name VAL Warning Bell COL type VAL 1.0 COL id VAL rg4225	COL name VAL King of New Orleans Rock n Roll COL type VAL 1.0 COL id VAL rg4453	0
-COL name VAL Chaos COL type VAL 3.0 COL id VAL rg3445	COL name VAL Eine Scheinwelt namens Realität COL type VAL  COL id VAL rg4388	0
-COL name VAL Voices in Love  Love Lost COL type VAL 1.0 COL id VAL rg2996	COL name VAL Keyboarcl Sonatas COL type VAL 1.0 COL id VAL rg2291	0
-COL name VAL Awakening COL type VAL 1.0 COL id VAL rg1187	COL name VAL NEW DANGANRONPA V2 OST WHITE COL type VAL 1.0 COL id VAL rg2495	0
-COL name VAL Tačno u pre podne COL type VAL 1.0 COL id VAL rg3763	COL name VAL Skitarv COL type VAL 1.0 COL id VAL rg40	0
-COL name VAL 20080614 Downioad Festival 2008 Donington Park UK COL type VAL 1.0 COL id VAL rg262	COL name VAL K COL type VAL 1.0 COL id VAL rg264	0
-COL name VAL Vibes Fron the Tribe COL type VAL 1.0 COL id VAL rg99	COL name VAL Vibes From the Tribe COL type VAL 1.0 COL id VAL rg1792	1
-COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg1062	COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg2132	1
-COL name VAL Junica COL type VAL 1.0 COL id VAL rg4109	COL name VAL Canciones 8496 COL type VAL 1.0 COL id VAL rg4339	0
-COL name VAL Stoned COL type VAL 1.0 COL id VAL rg779	COL name VAL HipHop Chopshop Volume 3 COL type VAL 11.0 COL id VAL rg4353	0
-COL name VAL Bil Boquet COL type VAL 1.0 COL id VAL rg1321	COL name VAL Bil Boqvet COL type VAL 1.0 COL id VAL rg4083	1
-COL name VAL The Collection COL type VAL 1.0 COL id VAL rg565	COL name VAL Cello Concerto in minor B Rondo Silent Woods COL type VAL 1.0 COL id VAL rg296	0
-COL name VAL 24hr5 COL type VAL 3.0 COL id VAL rg3286	COL name VAL Rien à perdre COL type VAL 1.0 COL id VAL rg1807	0
-COL name VAL Planetary Dvst COL type VAL 1.0 COL id VAL rg518	COL name VAL Planetary Dust COL type VAL 1.0 COL id VAL rg3320	1
-COL name VAL Strutn Get Up Funky Fat Slices of Groove Cut from Blue Note COL type VAL 1.0 COL id VAL rg1743	COL name VAL Seriously Trippin COL type VAL 3.0 COL id VAL rg1460	0
-COL name VAL You Know My Steez COL type VAL 2.0 COL id VAL rg1553	COL name VAL You Knovv My Steez COL type VAL 2.0 COL id VAL rg1554	1
-COL name VAL Live in Europe COL type VAL 1.0 COL id VAL rg701	COL name VAL Life COL type VAL 1.0 COL id VAL rg2269	0
-COL name VAL Mystiv Bud COL type VAL 1.0 COL id VAL rg3007	COL name VAL Mystic Bud COL type VAL .10 COL id VAL rg3008	1
-COL name VAL The Christmas Collection Volume 4 COL type VAL 11.0 COL id VAL rg687	COL name VAL The Christmas C0llection Volume 4 COL type VAL 11.0 COL id VAL rg693	1
-COL name VAL Algo entre nosotros COL type VAL 1.0 COL id VAL rg3224	COL name VAL The Art of Not Blending In COL type VAL 1.0 COL id VAL rg1150	0
-COL name VAL Its Sw'lng Time COL type VAL 1.0 COL id VAL rg1132	COL name VAL Its Swibg Time COL type VAL 1.0 COL id VAL rg2288	1
-COL name VAL The Hands of Lofe COL type VAL 1.0 COL id VAL rg2058	COL name VAL Thanlcyou Very Much COL type VAL 1.0 COL id VAL rg3135	0
-COL name VAL Our Blue Rainbow COL type VAL 1.0 COL id VAL rg1067	COL name VAL Our Blue Rsinbow COL type VAL 1.0 COL id VAL rg2854	1
-COL name VAL Lulu COL type VAL 1.0 COL id VAL rg1464	COL name VAL Lulu COL type VAL 1.0 COL id VAL rg3783	1
-COL name VAL Mad Weight COL type VAL 1.0 COL id VAL rg2900	COL name VAL Mad Weignt COL type VAL 1.0 COL id VAL rg3980	1
-COL name VAL Tonefiom COL type VAL 1.0 COL id VAL rg282	COL name VAL Tonefilm COL type VAL 1.0 COL id VAL rg3406	1
-COL name VAL Modroblue5 COL type VAL 1.0 COL id VAL rg3100	COL name VAL Comme Tintin Petit Papa Noël La Chèvre de M Seguin COL type VAL 1.0 COL id VAL rg2735	0
-COL name VAL Blue Thunder COL type VAL 1.0 COL id VAL rg1965	COL name VAL Greatest Hits COL type VAL 1.0 COL id VAL rg873	0
-COL name VAL Evolution The New Breed of Electronic P0p COL type VAL 1.0 COL id VAL rg1646	COL name VAL Neki rabm da te ne pozabm COL type VAL 1.0 COL id VAL rg581	0
-COL name VAL Motown Legends Cruisin  Being With You COL type VAL 1.0 COL id VAL rg2254	COL name VAL The End All of Worthless COL type VAL 1.0 COL id VAL rg705	0
-COL name VAL Mometnum COL type VAL 1.0 COL id VAL rg2807	COL name VAL Kissing and Dancing COL type VAL 1.0 COL id VAL rg311	0
-COL name VAL Culture Shock COL type VAL 1.0 COL id VAL rg1989	COL name VAL Cultur4 Shock COL type VAL 1.0 COL id VAL rg2516	1
-COL name VAL VA COL type VAL 1.0 COL id VAL rg1390	COL name VAL Кто сказал что мы плохо жили COL type VAL 1.0 COL id VAL rg2703	0
-COL name VAL Selectecl Works 2000 2006 COL type VAL 1.0 COL id VAL rg2400	COL name VAL Thanky0u Very Much COL type VAL 1.0 COL id VAL rg2488	0
-COL name VAL Charade  Experiment in Terror COL type VAL  COL id VAL rg1672	COL name VAL Pied orange COL type VAL 1.0 COL id VAL rg3956	0
-COL name VAL ElectroReAnimation3 COL type VAL 1.0 COL id VAL rg532	COL name VAL Wolfs Lair Abyss COL type VAL 3.0 COL id VAL rg3264	0
-COL name VAL Everyone Has Changecl Place COL type VAL 1.0 COL id VAL rg1713	COL name VAL April Moon COL type VAL 1.0 COL id VAL rg1827	0
-COL name VAL  COL type VAL 1.0 COL id VAL rg1426	COL name VAL Empty Rooiiis COL type VAL 3.0 COL id VAL rg2684	0
-COL name VAL Good News for Modern Man COL type VAL 1.0 COL id VAL rg4170	COL name VAL Golden Revolver COL type VAL 3.0 COL id VAL rg3331	0
-COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg1492	COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg3236	1
-COL name VAL Fcking Hardcore 5 COL type VAL 1.0 COL id VAL rg280	COL name VAL Fcking Hardclre 5 COL type VAL 1.0 COL id VAL rg1977	1
-COL name VAL Two Thousand Miles From Here COL type VAL 3.0 COL id VAL rg1156	COL name VAL Two Thousand Miles Fr0m Here COL type VAL 3.0 COL id VAL rg2890	1
-COL name VAL Divjded by Lightning COL type VAL  COL id VAL rg4178	COL name VAL The Best of Reparata  The Delrons COL type VAL  COL id VAL rg4126	0
-COL name VAL Marcp Antonio Solís COL type VAL 1.0 COL id VAL rg1180	COL name VAL The Trigger Effect COL type VAL 1.0 COL id VAL rg967	0
-COL name VAL From Paris With Love COL type VAL 1.0 COL id VAL rg478	COL name VAL De Lyckliga Kompisarna COL type VAL 1.0 COL id VAL rg1724	0
-COL name VAL The Complete Capitol Studio Recordings of Stan Kenton 194347 COL type VAL 1.0 COL id VAL rg3360	COL name VAL No Punches Pulled COL type VAL 1.0 COL id VAL rg4280	0
-COL name VAL Dem0nstration COL type VAL 1.0 COL id VAL rg2406	COL name VAL LEau le le Feu la Terre COL type VAL 11.0 COL id VAL rg721	0
-COL name VAL Strike Up the Band COL type VAL 1.0 COL id VAL rg4443	COL name VAL The Moon  Antarctica COL type VAL 1.0 COL id VAL rg907	0
-COL name VAL Colorblind COL type VAL 1.0 COL id VAL rg2281	COL name VAL Phylogenesis COL type VAL 1.0 COL id VAL rg4427	0
-COL name VAL Complete Organ Works COL type VAL 1.0 COL id VAL rg3669	COL name VAL Last to Sprak COL type VAL 1.0 COL id VAL rg374	0
-COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg1767	COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg3074	1
-COL name VAL Cello Stories  Une histoire du violoncelle aux XVIIe  XVIIIe siècles COL type VAL 1.0 COL id VAL rg1910	COL name VAL Lounge Buddha 2 COL type VAL 1.0 COL id VAL rg3093	0
-COL name VAL Päeval<era COL type VAL 1.0 COL id VAL rg3611	COL name VAL In Living Black ajd White COL type VAL 1.0 COL id VAL rg1388	0
-COL name VAL twelve message COL type VAL 1.0 COL id VAL rg29	COL name VAL Broadcast Collection Promo Rock COL type VAL 11.0 COL id VAL rg2022	0
-COL name VAL Twin Cities Electropunk Volume 5 COL type VAL 1.0 COL id VAL rg3336	COL name VAL A Celebration Live COL type VAL 1.0 COL id VAL rg2946	0
-COL name VAL All the Hits and More The Definitive Collection COL type VAL 1.0 COL id VAL rg3271	COL name VAL Sally Bat des Aioes  Premier Album COL type VAL 1.0 COL id VAL rg2867	0
-COL name VAL Where Angels Fear to Tread COL type VAL 1.0 COL id VAL rg1904	COL name VAL Stomp 442 COL type VAL 1.0 COL id VAL rg1530	0
-COL name VAL Filtered Through Friends COL type VAL 1.0 COL id VAL rg174	COL name VAL Dreamtower COL type VAL 1.0 COL id VAL rg1899	0
-COL name VAL Supremacy COL type VAL 1.0 COL id VAL rg1002	COL name VAL De Falla  Gimenez  T0ldra  Vives  Turina COL type VAL 1.0 COL id VAL rg933	0
-COL name VAL IT 80 Ital:ans Do It Better COL type VAL 1.0 COL id VAL rg1611	COL name VAL IT 80 Italians Do It Better COL type VAL 1.0 COL id VAL rg1638	1
-COL name VAL Poovizhi Vasalile COL type VAL 1.0 COL id VAL rg3992	COL name VAL 渡辺貞夫 COL type VAL 1.0 COL id VAL rg450	0
-COL name VAL Immer schlimmer COL type VAL 1.0 COL id VAL rg808	COL name VAL Immer schlummer COL type VAL 1.0 COL id VAL rg1717	1
-COL name VAL Hooked on Swing COL id VAL rg2286	COL name VAL Thanky0u Very Much COL type VAL 1.0 COL id VAL rg2488	0
-COL name VAL Never Never Love COL type VAL 1.0 COL id VAL rg3530	COL name VAL The Indispensable Coleman Hawkins Body and Soul 1927–1956 COL type VAL 1.0 COL id VAL rg550	0
-COL name VAL Put to Sleep COL type VAL 3.0 COL id VAL rg2165	COL name VAL Stravinsky Conducts  The Fireb9rd Suite  Petrushka Ballet Suite COL type VAL  COL id VAL rg457	0
-COL name VAL Tsukubai COL type VAL 1.0 COL id VAL rg883	COL name VAL The Show of Our Lives COL type VAL 1.0 COL id VAL rg2191	0
-COL name VAL The Best of the Anti Novvhere League  Live Animals COL type VAL 1.0 COL id VAL rg2736	COL name VAL Only Human COL type VAL 1.0 COL id VAL rg2114	0
-COL name VAL Peaktlme Television COL type VAL 11.0 COL id VAL rg2670	COL name VAL Päevakera COL type VAL 1.0 COL id VAL rg1114	0
-COL name VAL Allting förändras COL type VAL 1.0 COL id VAL rg2759	COL name VAL Oboe Concertos of the Classical Era COL type VAL 1.0 COL id VAL rg1300	0
-COL name VAL Live Archive COL type VAL 1.0 COL id VAL rg531	COL name VAL Aweb COL type VAL 1.0 COL id VAL rg4418	0
-COL name VAL My5tic Places COL type VAL 1.0 COL id VAL rg1893	COL name VAL New Age Music Vol 4 COL type VAL 1.0 COL id VAL rg2443	0
-COL name VAL Immer schlimmer COL type VAL 1.0 COL id VAL rg808	COL name VAL Ashes go Ashes COL type VAL 1.0 COL id VAL rg3619	0
-COL name VAL Sexuaisong COL type VAL 1.0 COL id VAL rg2396	COL name VAL Sexuals0ng COL type VAL 1.0 COL id VAL rg2397	1
-COL name VAL Back Among the Old Folks Once Again COL type VAL 2.0 COL id VAL rg1133	COL name VAL Cafe Soito COL type VAL 1.0 COL id VAL rg2639	0
-COL name VAL King Biscuit Flower Hour Greg Lake COL type VAL 1.0 COL id VAL rg4241	COL name VAL Luciano Huck  Jóia 2 COL type VAL 1.0 COL id VAL rg2349	0
-COL name VAL The Sgones of Wisdom COL type VAL 1.0 COL id VAL rg2775	COL name VAL Things Just Aint the Same COL type VAL 2.0 COL id VAL rg1596	0
-COL name VAL El iniciado COL type VAL 1.0 COL id VAL rg766	COL name VAL Avertis tes chums COL type VAL 1.0 COL id VAL rg2545	0
-COL name VAL I Can Tell COL type VAL 1.0 COL id VAL rg3859	COL name VAL Action COL type VAL 1.0 COL id VAL rg648	0
-COL name VAL Wielka Daka COL type VAL 1.0 COL id VAL rg1968	COL name VAL Red Road COL type VAL 3.0 COL id VAL rg3407	0
-COL name VAL Dr Sin COL type VAL 1.0 COL id VAL rg2427	COL name VAL You Are All I See COL type VAL 1.0 COL id VAL rg2571	0
-COL name VAL EP1 COL type VAL 3.0 COL id VAL rg2732	COL name VAL Salvaged COL type VAL 1.0 COL id VAL rg3907	0
-COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg462	COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg1078	1
-COL name VAL Diamonds Are Forever COL type VAL 2.0 COL id VAL rg3238	COL name VAL The Chinchees COL type VAL 1.0 COL id VAL rg3393	0
-COL name VAL Blue Thunder COL type VAL 1.0 COL id VAL rg1965	COL name VAL Memento Mori COL type VAL 1.0 COL id VAL rg3656	0
-COL name VAL Smashes▲Trashes COL type VAL 1.0 COL id VAL rg192	COL name VAL Smashes▲Trashes COL type VAL 1.0 COL id VAL rg3837	1
-COL name VAL Θα είμαι εδώ COL type VAL 1.0 COL id VAL rg352	COL name VAL Θα είμαι εδώ COL type VAL .10 COL id VAL rg1146	1
-COL name VAL Carácter Latino 2004 COL type VAL 1.0 COL id VAL rg1959	COL name VAL Mehr Jazz sagteri die Frauen COL type VAL 1.0 COL id VAL rg3217	0
-COL name VAL Promo Only Mainstream Club July 2008 COL type VAL 1.0 COL id VAL rg1288	COL name VAL Inferno COL type VAL 1.0 COL id VAL rg1889	0
-COL name VAL Angeo Eyes COL type VAL 2.0 COL id VAL rg1328	COL name VAL Angel Eyes COL type VAL 2.0 COL id VAL rg2788	1
-COL name VAL Life Bl0od COL type VAL 1.0 COL id VAL rg1974	COL name VAL Hereafrer COL type VAL 1.0 COL id VAL rg3077	0
-COL name VAL Totus tuus COL type VAL 1.0 COL id VAL rg1851	COL name VAL The Trigger Effect COL type VAL 1.0 COL id VAL rg967	0
-COL name VAL En la brevedad de los días COL type VAL 1.0 COL id VAL rg1466	COL name VAL The Complete Capitol Studio Recordings od Stan Kenton 194347 COL type VAL 1.0 COL id VAL rg2783	0
-COL name VAL Urban Kiss 2003 COL type VAL 1.0 COL id VAL rg4040	COL name VAL Snakebite COL type VAL 1.0 COL id VAL rg3316	0
-COL name VAL Emergency Emergency COL type VAL 1.0 COL id VAL rg603	COL name VAL High Society COL type VAL 1.0 COL id VAL rg359	0
-COL name VAL  COL type VAL 1.0 COL id VAL rg51	COL name VAL Stravinsky Conducts  The Firebird Suite  Petrushma Ballet Suite COL type VAL 1.0 COL id VAL rg3798	0
-COL name VAL SONOIO Blur Demos COL type VAL 11.0 COL id VAL rg2658	COL name VAL Demo Tape 9z93 COL type VAL 3.0 COL id VAL rg3013	0
-COL name VAL Cartolas Band 2003 COL type VAL 1.0 COL id VAL rg83	COL name VAL The Collection COL type VAL 1.0 COL id VAL rg565	0
-COL name VAL Lil Bit of Gold COL type VAL 3.0 COL id VAL rg2581	COL name VAL Indo Rock COL type VAL 1.0 COL id VAL rg3053	0
-COL name VAL Serious Beat5 Vol 4 COL type VAL 1.0 COL id VAL rg3522	COL name VAL Serious Beats Vol 4 COL type VAL 1.0 COL id VAL rg3523	1
-COL name VAL Radio Lupo solitario COL type VAL 1.0 COL id VAL rg121	COL name VAL IndieRock Playlist June 2011 COL type VAL 11.0 COL id VAL rg3645	0
-COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg2328	COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg3567	1
-COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg2997	COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg3585	1
-COL name VAL Passport tp India COL type VAL 11.0 COL id VAL rg3469	COL name VAL 71 COL type VAL 1.0 COL id VAL rg3735	0
-COL name VAL Gute Zeiten COL type VAL 1.0 COL id VAL rg4404	COL name VAL WFO COL type VAL 1.0 COL id VAL rg3478	0
-COL name VAL Last Corruptive Smile COL type VAL 1.0 COL id VAL rg2128	COL name VAL Gold Collection 28 Great Reggae Hits Volume 3 COL type VAL 1.0 COL id VAL rg4045	0
-COL name VAL Gewoon Jannes COL type VAL 1.0 COL id VAL rg1652	COL name VAL Mystic Bud COL type VAL 1.0 COL id VAL rg934	0
-COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3761	COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3998	1
-COL name VAL Reflect on This COL type VAL 1.0 COL id VAL rg1874	COL name VAL Palm Grea5e COL type VAL 1.0 COL id VAL rg3765	0
-COL name VAL Vibes Fron the Tribe COL type VAL 1.0 COL id VAL rg99	COL name VAL Matrika An Anikated Alphabet COL id VAL rg4043	0
-COL name VAL Personalidaed COL type VAL 1.0 COL id VAL rg2345	COL name VAL Unspoken Tal3s COL type VAL 1.0 COL id VAL rg633	0
-COL name VAL FV 2000 COL type VAL 1.0 COL id VAL rg3389	COL name VAL Room to Move COL id VAL rg4038	0
-COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3246	COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3675	1
-COL name VAL Dress to Klll COL type VAL 11.0 COL id VAL rg3328	COL name VAL Statememt COL type VAL 1.0 COL id VAL rg259	0
-COL name VAL Two Thousand Miles Frorn Here COL type VAL 3.0 COL id VAL rg2889	COL name VAL 3 COL type VAL 1.0 COL id VAL rg3651	0
+COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1079 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1836 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Das magische Ba8mhaus Folge 51 Der König der Mayas COL type VAL 11.0 COL id VAL rg2851 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Cultur4 Shock COL type VAL 1.0 COL id VAL rg2516 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Pictures at an Exhibition Bilder einer Ausstellung COL type VAL 1.0 COL id VAL rg2841 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL ジルデコ4 jgly beauty COL type VAL 1.0 COL id VAL rg3827 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Southern Winds COL type VAL 1.0 COL id VAL rg47 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Servant COL type VAL 1.0 COL id VAL rg904 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Now Hear This March q011 COL type VAL 1.0 COL id VAL rg1583 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL 幽遊白書 ミュージックバトル編 COL type VAL 1.0 COL id VAL rg3781 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Shaking the Pumpkin COL type VAL 1.0 COL id VAL rg3287 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL As England Slips Away COL type VAL 3.0 COL id VAL rg3009 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Down To Memory Lane COL type VAL 1.0 COL id VAL rg2892 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Vlaanderen klinkt Radio 1 COL type VAL  COL id VAL rg468 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Raus mit der Sprache COL type VAL 1.0 COL id VAL rg1998 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Raus mit der Spracge COL type VAL 1.0 COL id VAL rg2445 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Für alle Zeiyen COL type VAL 1.0 COL id VAL rg3563 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Collection COL type VAL 1.0 COL id VAL rg351 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL April Moon COL type VAL 1.0 COL id VAL rg1827 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Cello Concerto in minor B Rondo Silent Woods COL type VAL 1.0 COL id VAL rg296 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL A Catch In The Voice COL type VAL 1.0 COL id VAL rg2583 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL 雨季 COL type VAL 1.0 COL id VAL rg508 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL At Welding Bridge COL type VAL 1.0 COL id VAL rg348 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Bootleg Vinyl Archive Volume 1 COL type VAL 1.0 COL id VAL rg3434 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Ruined in Repetition COL type VAL 3.0 COL id VAL rg331 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL System COL type VAL 3.0 COL id VAL rg1261 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Liberation Blues COL type VAL 1.0 COL id VAL rg1430 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Bijna Boven 9 COL type VAL 1.0 COL id VAL rg169 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Storyteller 1 COL type VAL 1.0 COL id VAL rg638 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL On Tour COL type VAL 1.0 COL id VAL rg458 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Two Year Winter COL type VAL 1.0 COL id VAL rg3599 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL The Complete Music for Solo Piano Volume 38 Les Préludes  Concert Études  Episodes from Lenaus Faust COL type VAL 1.0 COL id VAL rg1419 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Planet X COL type VAL 1.0 COL id VAL rg1587 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Prism COL type VAL 1.0 COL id VAL rg2654 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Vibes Fron the Tribe COL type VAL 1.0 COL id VAL rg99 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Vibes From the Tribe COL type VAL 1.0 COL id VAL rg1792 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg1062 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg2132 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL The Ultimate Skitzmix Collectors Edition COL type VAL 1.0 COL id VAL rg2833 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Douchs Eyes COL type VAL 1.0 COL id VAL rg2993 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Urban COL type VAL 11.0 COL id VAL rg2713 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Man Who Lives for Love COL type VAL 1.0 COL id VAL rg549 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Bil Boquet COL type VAL 1.0 COL id VAL rg1321 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Bil Boqvet COL type VAL 1.0 COL id VAL rg4083 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Sometimes Sounds Collapse COL type VAL 3.0 COL id VAL rg2417 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL  Radio  Solo Exitos COL id VAL rg1004 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Southern Winds COL type VAL  COL id VAL rg1741 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Você Ev E COL type VAL 1.0 COL id VAL rg1158 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Planetary Dvst COL type VAL 1.0 COL id VAL rg518 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Planetary Dust COL type VAL 1.0 COL id VAL rg3320 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL The Days Last Of Chez Nous COL id VAL rg2312 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Więcej żagli COL type VAL 1.0 COL id VAL rg1172 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL You Know My Steez COL type VAL 2.0 COL id VAL rg1553 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL You Knovv My Steez COL type VAL 2.0 COL id VAL rg1554 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg462 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Pherom0ne COL type VAL 1.0 COL id VAL rg330 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Mystiv Bud COL type VAL 1.0 COL id VAL rg3007 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Mystic Bud COL type VAL .10 COL id VAL rg3008 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL The Christmas Collection Volume 4 COL type VAL 11.0 COL id VAL rg687 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Christmas C0llection Volume 4 COL type VAL 11.0 COL id VAL rg693 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Reggae COL type VAL 11.0 COL id VAL rg4365 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Camino a la Luz COL id VAL rg1173 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Its Sw'lng Time COL type VAL 1.0 COL id VAL rg1132 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Its Swibg Time COL type VAL 1.0 COL id VAL rg2288 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL ライブFimal Attack at Budokan COL type VAL 1.0 COL id VAL rg4438 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL and Girls Boys COL type VAL 1.0 COL id VAL rg17 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Our Blue Rainbow COL type VAL 1.0 COL id VAL rg1067 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Our Blue Rsinbow COL type VAL 1.0 COL id VAL rg2854 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Lulu COL type VAL 1.0 COL id VAL rg1464 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Lulu COL type VAL 1.0 COL id VAL rg3783 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Mad Weight COL type VAL 1.0 COL id VAL rg2900 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Mad Weignt COL type VAL 1.0 COL id VAL rg3980 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Tonefiom COL type VAL 1.0 COL id VAL rg282 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Tonefilm COL type VAL 1.0 COL id VAL rg3406 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Lumina COL type VAL 1.0 COL id VAL rg4153 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Time COL type VAL 1.0 COL id VAL rg2424 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Survival Mus'lc 4 COL type VAL 3.0 COL id VAL rg1195 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL From Battersea To Broadway COL type VAL 1.0 COL id VAL rg3944 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Brasil Lounge Ambirnt Essentials for a Groovy Night COL type VAL 1.0 COL id VAL rg3568 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Lady Godiva  De profunclis  Toman and the Wood Nymph COL type VAL 1.0 COL id VAL rg1702 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Automatic Writjng By the Moon COL type VAL 1.0 COL id VAL rg3923 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Feast of the Blooe Monsters COL type VAL 1.0 COL id VAL rg4235 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Then is the New Now COL type VAL 1.0 COL id VAL rg1232 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Convenience 2000 original cast COL type VAL 1.0 COL id VAL rg3685 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Culture Shock COL type VAL 1.0 COL id VAL rg1989 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Cultur4 Shock COL type VAL 1.0 COL id VAL rg2516 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL E Pluribus MOTO COL type VAL 1.0 COL id VAL rg3538 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Ornate Culmination COL type VAL 10. COL id VAL rg1052 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Curse of the Drinkin Class COL type VAL 3.0 COL id VAL rg3674 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL The Complete Music for Solo Piano Volume 38 Les Préludes  Concert Études  Episodes from Lenaus Faust COL type VAL 1.0 COL id VAL rg1419 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL of Dreans and Magic COL type VAL 1.0 COL id VAL rg949 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Bird Flies High COL id VAL rg1934 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL The Many Moods of COL type VAL 1.0 COL id VAL rg15 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Midnight Candy COL type VAL 1.0 COL id VAL rg1414 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Antiquated Love COL type VAL 1.0 COL id VAL rg1374 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Take Me Down COL type VAL 2.0 COL id VAL rg2497 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL The Versatile Martin Denny COL type VAL 1.0 COL id VAL rg4039 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Redwork COL type VAL 1.0 COL id VAL rg3924 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Peaktime Television COL type VAL 0 COL id VAL rg530 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL E Pluribus MOTO COL type VAL 1.0 COL id VAL rg3866 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg1492 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg3236 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Fcking Hardcore 5 COL type VAL 1.0 COL id VAL rg280 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Fcking Hardclre 5 COL type VAL 1.0 COL id VAL rg1977 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Two Thousand Miles From Here COL type VAL 3.0 COL id VAL rg1156 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Two Thousand Miles Fr0m Here COL type VAL 3.0 COL id VAL rg2890 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL String Quartets op 9 op 19 op posth COL type VAL 1.0 COL id VAL rg2500 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Living Room COL type VAL 1.0 COL id VAL rg3283 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL One Fine Morning COL type VAL 1.0 COL id VAL rg1333 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Ligo Akoma COL type VAL 1.0 COL id VAL rg1545 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Funk COL type VAL 11.0 COL id VAL rg2509 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Premium Shortcuts 7 COL type VAL 11.0 COL id VAL rg3757 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL The Lesley Garrett Gift Collection COL type VAL 1.0 COL id VAL rg867 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Les Pièces de Clavecin COL id VAL rg736 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Violent Nun COL type VAL 3.0 COL id VAL rg912 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL We Are Giants COL type VAL 1.0 COL id VAL rg2372 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Last t0 Speak COL type VAL 1.0 COL id VAL rg307 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Mudlarking COL type VAL 1.0 COL id VAL rg3993 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Deep House 1 The Sound of the UK Underground COL type VAL 1.0 COL id VAL rg173 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Finally Free COL type VAL 1.0 COL id VAL rg3753 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Perseverance COL type VAL 1.0 COL id VAL rg4004 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Summit COL type VAL 1.0 COL id VAL rg3904 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg1767 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg3074 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Spark 2 Womens Young Band Project COL type VAL 1.0 COL id VAL rg3801 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Unforgettable Melodies COL type VAL 1.0 COL id VAL rg1090 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Greensleeves Rhythm Album 55 Blue Steel COL type VAL 1.0 COL id VAL rg2378 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL  COL type VAL 1.0 COL id VAL rg3158 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Unspoken Tales COL type VAL 1.0 COL id VAL rg3816 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL El iniciado COL type VAL 1.0 COL id VAL rg3720 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Occupied COL type VAL 1.0 COL id VAL rg144 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Ω μου έαρ COL type VAL 1.0 COL id VAL rg1106 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Die Spreu vom Weizen COL type VAL 1.0 COL id VAL rg1061 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Descendo o Morro nº 3 e nº 4 COL type VAL 1.0 COL id VAL rg1640 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Hands UP 06 COL type VAL 1.0 COL id VAL rg2334 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL ジルデコ4 ugly beauty COL type VAL 1.0 COL id VAL rg1871 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL In Bluegate Fields Live at Wiltons Music Hall COL type VAL 1.0 COL id VAL rg3073 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL 19810315 Reseda Country Club Reseda CA USA COL type VAL 1.0 COL id VAL rg3808 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Feeet COL type VAL 1.0 COL id VAL rg1236 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Chura COL type VAL 1.0 COL id VAL rg1798 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL IT 80 Ital:ans Do It Better COL type VAL 1.0 COL id VAL rg1611 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL IT 80 Italians Do It Better COL type VAL 1.0 COL id VAL rg1638 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL The Best of Yesteryears COL type VAL 1.0 COL id VAL rg3826 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Cello Concerto in B minor  Rondo  Silent Woods COL type VAL 1.0 COL id VAL rg1506 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Immer schlimmer COL type VAL 1.0 COL id VAL rg808 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Immer schlummer COL type VAL 1.0 COL id VAL rg1717 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Another Story COL type VAL 3.0 COL id VAL rg2390 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Terrestrial Broadcast v2 COL id VAL rg3091 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Wenn der weißr Flieder wieder blüht COL type VAL 1.0 COL id VAL rg4094 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Machine Part5 4 COL type VAL 3.0 COL id VAL rg441 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL MMCD COL type VAL 1.0 COL id VAL rg4409 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Best Of Boh Berg On Denon COL type VAL 1.0 COL id VAL rg293 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Visionary Milieux COL type VAL 1.0 COL id VAL rg1906 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL 24hrs COL type VAL 3.0 COL id VAL rg718 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Such Unlikely Covers COL type VAL 1.0 COL id VAL rg2730 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Suburban Li9ht COL type VAL 1.0 COL id VAL rg4456 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Modern Dance Drum n Bass Ambient COL type VAL 11.0 COL id VAL rg979 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Kissing and Dancing COL type VAL 1.0 COL id VAL rg311 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL alle Zeiten COL type VAL 1.0 COL id VAL rg1221 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Lightning Bolt COL type VAL 1.0 COL id VAL rg3547 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Empty the Ocean the music of Calvary Fellowship COL type VAL 1.0 COL id VAL rg3652 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Absolutes COL type VAL 1.0 COL id VAL rg1839 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Den Tapre Landsoldat  I kri9 og kærlighed COL type VAL  COL id VAL rg1490 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Just to Get a Rep COL type VAL 3.0 COL id VAL rg3689 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL 3 Original CDs COL type VAL 1.0 COL id VAL rg135 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Step Off COL type VAL 1.0 COL id VAL rg528 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Sexuaisong COL type VAL 1.0 COL id VAL rg2396 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Sexuals0ng COL type VAL 1.0 COL id VAL rg2397 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL 20th Century Rocks 60s Rock N Roll Tossin  Turnin COL type VAL 1.0 COL id VAL rg1056 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Low Down Blues COL type VAL 1.0 COL id VAL rg2009 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Plunge Into COL type VAL 1.0 COL id VAL rg415 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Predator COL type VAL 1.0 COL id VAL rg4441 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL 聖闘士星矢 音楽集Ⅴ 真紅の少年伝説 COL type VAL 1.0 COL id VAL rg437 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Conjunction COL type VAL 1.0 COL id VAL rg1130 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Greensleeves Rhythm Album 55 Blue Steel COL type VAL 1.0 COL id VAL rg4176 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Päeyakera COL type VAL 1.0 COL id VAL rg34 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL E•MO•TION COL type VAL 1.0 COL id VAL rg1368 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Banecul Skies COL type VAL 1.0 COL id VAL rg2702 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Live at Namba Bears COL type VAL 1.0 COL id VAL rg2106 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Between the Pavement and the Sky COL type VAL 1.0 COL id VAL rg2913 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Sender COL type VAL 1.0 COL id VAL rg3396 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Raven God Amongst Us COL type VAL 1.0 COL id VAL rg1886 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Walk Talk Airplane COL type VAL 1.0 COL id VAL rg2220 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL untitjed COL type VAL 3.0 COL id VAL rg2644 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg462 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg1078 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL The Ultimate Latin Album 6 COL type VAL 1.0 COL id VAL rg3813 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Greatest Hits Volume 2 COL type VAL 1.0 COL id VAL rg798 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL scattrred harvest ep COL type VAL 3.0 COL id VAL rg2649 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Storybook Ending COL id VAL rg2403 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Smashes▲Trashes COL type VAL 1.0 COL id VAL rg192 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Smashes▲Trashes COL type VAL 1.0 COL id VAL rg3837 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Θα είμαι εδώ COL type VAL 1.0 COL id VAL rg352 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Θα είμαι εδώ COL type VAL .10 COL id VAL rg1146 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL CD Animal COL id VAL rg3770 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Sometimes Sounds Collapse COL type VAL 3.0 COL id VAL rg1986 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Fujiyama Mama COL type VAL 1.0 COL id VAL rg3371 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Schlagerhit5 COL id VAL rg3965 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Angeo Eyes COL type VAL 2.0 COL id VAL rg1328 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Angel Eyes COL type VAL 2.0 COL id VAL rg2788 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Balls of Fury COL type VAL 1.0 COL id VAL rg266 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Beats Rhymes and Life COL type VAL .10 COL id VAL rg2208 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL String Quartets op 9 0p 10 op posth COL type VAL 10. COL id VAL rg2499 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Mort aux vaches Being Nice Is Funny COL type VAL 1.0 COL id VAL rg4049 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Complete Piano Works • 1 COL type VAL 1.0 COL id VAL rg2754 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Birth of Tragedy COL type VAL 1.0 COL id VAL rg3052 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Hudba z televiznÃ­ch seriÃ¡lÅ¯ Filmmusik zweier fernsehreihen NÃ¡vÅ¡tÄvnÃ­ci  LÃ©tajÃ­cÃ­ ÄestmÃ­r COL type VAL 1.0 COL id VAL rg3790 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Klapp  Lek COL type VAL 1.0 COL id VAL rg2846 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL An Ennio Morricone Quintet COL type VAL 1.0 COL id VAL rg3716 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL The Perfect Christmas Holiday Music 2006 COL type VAL 1.0 COL id VAL rg4271 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Acı Gerçekler COL type VAL 1.0 COL id VAL rg1634 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Byron Get One Free COL type VAL 1.0 COL id VAL rg3178 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Gloria COL type VAL 1.0 COL id VAL rg1239 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL So What COL type VAL 1.0 COL id VAL rg225 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL King Biscuit Flower Hour Greg Lake COL type VAL 1.0 COL id VAL rg943 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Fort'les Guys  Dolls COL type VAL 1.0 COL id VAL rg2302 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Günebakan  Dünyanın Kapıları COL type VAL 1.0 COL id VAL rg67 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Contrahand COL type VAL 1.0 COL id VAL rg1276 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Serious Beat5 Vol 4 COL type VAL 1.0 COL id VAL rg3522 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Serious Beats Vol 4 COL type VAL 1.0 COL id VAL rg3523 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL Θα είμαι εδώ COL type VAL 1.0 COL id VAL rg352 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL In the Wake of Pestilence COL type VAL 1.0 COL id VAL rg4446 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg2328 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg3567 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg2997 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg3585 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	1
+COL name VAL BLKBMBR Baby Thats No Hero COL type VAL 1.0 COL id VAL rg3467 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Mes vacances à Rio COL type VAL 2.0 COL id VAL rg3033 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Angel Eyes COL type VAL 2.0 COL id VAL rg2788 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Fort'les Guys  Dolls COL type VAL 1.0 COL id VAL rg2302 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Les Ttiomphes du jazz COL type VAL 1.0 COL id VAL rg1825 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Lineman Wichita COL type VAL 1.0 COL id VAL rg4359 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Then is the New Now COL type VAL 1.0 COL id VAL rg1232 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL The Omen COL type VAL 1.0 COL id VAL rg2180 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3761 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3998 COL [RELEASE_SCORE] VAL 1.0 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Sabuha COL type VAL 1.0 COL id VAL rg1560 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Eşik COL type VAL 1.0 COL id VAL rg1667 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL  COL type VAL 1.0 COL id VAL rg4375 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL mucho Quiéreme COL type VAL 1.0 COL id VAL rg1961 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Automatic Writjng By the Moon COL type VAL 1.0 COL id VAL rg3923 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Rare Surf Volums 2 South Bay Bands COL type VAL 1.0 COL id VAL rg403 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Mestre COL type VAL 1.0 COL id VAL rg1681 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL Morfiend COL type VAL 1.0 COL id VAL rg2362 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0
+COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3246 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3675 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 1.0	1
+COL name VAL Ararat COL type VAL 3.0 COL id VAL rg2234 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	COL name VAL Enfants de la lune COL type VAL 1.0 COL id VAL rg556 COL [RELEASE_SCORE] VAL 0.0 COL [ARTIST_CREDIT_SCORE] VAL 0.5	0
+COL name VAL Life Blold COL type VAL 1.0 COL id VAL rg1975 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	COL name VAL So What COL type VAL 1.0 COL id VAL rg225 COL [RELEASE_SCORE] VAL 0.5 COL [ARTIST_CREDIT_SCORE] VAL 0.0	0

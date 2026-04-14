@@ -1,232 +1,232 @@
-COL position VAL 1 COL format VAL 7.0 COL track_count VAL 2 COL id VAL m3721	COL position VAL  COL format VAL  COL track_count VAL  COL id VAL m2989	0
-COL position VAL 1 COL track_count VAL 16 COL id VAL m2301	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m3389	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL  COL format VAL 10. COL track_count VAL  COL id VAL m2069	0
+COL position VAL 1 COL track_count VAL 2 COL id VAL m3307	COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m2891	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
 COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m1315	COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m2297	1
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 5 COL id VAL m2171	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m2536	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 21 COL id VAL m2248	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2189	0
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL track_count VAL 11 COL id VAL m1730	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m2536	0
-COL position VAL  COL format VAL  COL track_count VAL 7 COL id VAL m2433	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 13 COL id VAL m3468	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m373	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3320	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2009	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m271	COL position VAL 1 COL track_count VAL 20 COL id VAL m799	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m2951	COL position VAL 1 COL format VAL 120. COL track_count VAL 4 COL id VAL m688	0
+COL position VAL 1 COL track_count VAL 12 COL id VAL m2114	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2959	0
+COL position VAL 1 COL format VAL 31.0 COL track_count VAL 5 COL id VAL m920	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m3111	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m3437	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m2686	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m749	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 22 COL id VAL m1190	0
 COL position VAL  COL format VAL 12.0 COL track_count VAL 13 COL id VAL m2020	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 13 COL id VAL m3468	1
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m1863	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3683	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m271	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
-COL position VAL 1 COL track_count VAL 6 COL id VAL m1981	COL position VAL 1 COL track_count VAL 3 COL id VAL m3369	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL track_count VAL 35 COL id VAL m1313	0
+COL position VAL 1 COL format VAL .10 COL track_count VAL 13 COL id VAL m3535	COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m2297	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2115	COL position VAL  COL track_count VAL  COL id VAL m1175	0
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m749	COL position VAL 1 COL format VAL  COL track_count VAL 12 COL id VAL m2561	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m3437	COL position VAL 1 COL format VAL  COL track_count VAL 11 COL id VAL m3200	0
 COL position VAL  COL format VAL  COL track_count VAL 21 COL id VAL m2298	COL position VAL 11 COL format VAL 1.0 COL track_count VAL 21 COL id VAL m2315	1
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 30 COL id VAL m3869	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m795	0
+COL position VAL 1 COL track_count VAL 17 COL id VAL m2418	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3723	0
 COL position VAL 1 COL track_count VAL 14 COL id VAL m671	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m379	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3505	0
+COL position VAL  COL track_count VAL 12 COL id VAL m3142	COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m2669	0
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
-COL position VAL 1 COL format VAL  COL track_count VAL 90 COL id VAL m2447	COL position VAL 1 COL track_count VAL  COL id VAL m3834	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 99 COL id VAL m339	COL position VAL 2 COL format VAL  COL track_count VAL 21 COL id VAL m1765	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1066	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m1696	COL position VAL 1 COL track_count VAL 12 COL id VAL m2114	0
-COL position VAL 3 COL format VAL 0 COL track_count VAL 86 COL id VAL m707	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2778	COL position VAL  COL format VAL 12.0 COL track_count VAL 12 COL id VAL m2193	0
+COL position VAL 1 COL track_count VAL 10 COL id VAL m585	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m424	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 22 COL id VAL m1190	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
+COL position VAL 1 COL track_count VAL  COL id VAL m1092	COL position VAL  COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2511	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m898	COL position VAL 1 COL track_count VAL 51 COL id VAL m1223	0
+COL position VAL 1 COL track_count VAL 3 COL id VAL m3369	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 33 COL id VAL m1750	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3038	COL position VAL 2 COL format VAL  COL track_count VAL  COL id VAL m3291	0
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3038	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3404	1
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m2262	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3162	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m1218	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 63 COL id VAL m2855	0
-COL position VAL 1 COL format VAL  COL track_count VAL 01 COL id VAL m3213	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m287	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	COL position VAL 1 COL track_count VAL  COL id VAL m1092	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2713	COL position VAL 9 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m1672	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m2794	COL position VAL  COL format VAL 1.0 COL track_count VAL 3 COL id VAL m2626	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 1008 COL id VAL m694	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1719	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m1863	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m2951	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 23 COL id VAL m1243	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 23 COL id VAL m1383	1
 COL position VAL 1 COL track_count VAL 22 COL id VAL m247	COL position VAL 1 COL track_count VAL 22 COL id VAL m3856	1
-COL position VAL 1 COL track_count VAL 10 COL id VAL m2771	COL position VAL 1 COL track_count VAL 6 COL id VAL m2967	0
-COL position VAL 3 COL format VAL 0 COL track_count VAL 86 COL id VAL m707	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m3699	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1187	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m2699	0
-COL position VAL 1 COL format VAL 7.0 COL track_count VAL 20 COL id VAL m2818	COL position VAL 3 COL format VAL 63.0 COL track_count VAL 11 COL id VAL m1172	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m88	COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1075	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m639	COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m1783	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3404	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m312	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 9 COL id VAL m2421	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m293	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2909	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m3438	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 27 COL id VAL m1734	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 51 COL id VAL m2300	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 15 COL id VAL m2342	1
-COL position VAL 1 COL format VAL 33.0 COL track_count VAL 10 COL id VAL m1229	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m1884	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m307	COL position VAL 1 COL track_count VAL 7 COL id VAL m2590	0
 COL position VAL 1 COL format VAL 10. COL track_count VAL 20 COL id VAL m2050	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m2166	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m2891	1
 COL position VAL 1 COL format VAL 1.20 COL track_count VAL  COL id VAL m432	COL position VAL  COL format VAL  COL track_count VAL 6 COL id VAL m2415	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL format VAL 61.0 COL track_count VAL 20 COL id VAL m2474	COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m898	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 14 COL id VAL m1328	COL position VAL 1 COL format VAL  COL track_count VAL 32 COL id VAL m2226	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 18 COL id VAL m1862	COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m632	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2349	1
-COL position VAL 2 COL format VAL 19.0 COL track_count VAL 26 COL id VAL m2194	COL position VAL  COL track_count VAL 4 COL id VAL m3429	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m2794	COL position VAL 1 COL format VAL 0 COL track_count VAL  COL id VAL m2895	0
+COL position VAL  COL format VAL 10. COL track_count VAL 12 COL id VAL m2811	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3802	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 92 COL id VAL m2939	COL position VAL 1 COL track_count VAL 5 COL id VAL m1618	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2448	COL position VAL  COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2797	1
-COL position VAL 1 COL track_count VAL 7 COL id VAL m2590	COL position VAL 3 COL format VAL 0 COL track_count VAL 86 COL id VAL m707	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m1696	COL position VAL  COL track_count VAL  COL id VAL m2006	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m2361	1
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 23 COL id VAL m1383	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m3094	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 2 COL id VAL m3148	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m3820	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m639	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 21 COL id VAL m1727	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 76 COL id VAL m2896	COL position VAL 1 COL format VAL  COL track_count VAL 27 COL id VAL m621	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2000	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m3588	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m108	COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m2384	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m108	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 5 COL id VAL m2171	0
+COL position VAL 1 COL format VAL 31.0 COL track_count VAL 12 COL id VAL m1994	COL position VAL 1 COL format VAL 36.0 COL track_count VAL 17 COL id VAL m2638	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	COL position VAL 1 COL track_count VAL 14 COL id VAL m269	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 13 COL id VAL m3468	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m632	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m632	COL position VAL 1 COL track_count VAL 11 COL id VAL m657	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m894	COL position VAL 3 COL format VAL 12.0 COL track_count VAL 15 COL id VAL m18	0
 COL position VAL  COL track_count VAL  COL id VAL m645	COL position VAL  COL track_count VAL 11 COL id VAL m3330	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m293	COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1075	1
 COL position VAL 1 COL track_count VAL 11 COL id VAL m657	COL position VAL 1 COL track_count VAL  COL id VAL m1546	1
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 14 COL id VAL m1328	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m2438	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2713	COL position VAL 1 COL track_count VAL  COL id VAL m1992	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m639	COL position VAL 1 COL format VAL  COL track_count VAL 15 COL id VAL m3223	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m379	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m2706	1
-COL position VAL 1 COL track_count VAL 3 COL id VAL m3369	COL position VAL 3 COL format VAL 12.0 COL track_count VAL 15 COL id VAL m18	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m1696	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m3820	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m133	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m1814	0
+COL position VAL  COL format VAL .10 COL track_count VAL 23 COL id VAL m2169	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m1217	0
+COL position VAL  COL track_count VAL 17 COL id VAL m1831	COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m2384	0
+COL position VAL  COL format VAL .10 COL track_count VAL 23 COL id VAL m2169	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 9 COL id VAL m61	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m428	COL position VAL 1 COL format VAL 1.20 COL track_count VAL  COL id VAL m432	0
+COL position VAL 1 COL format VAL 19.0 COL track_count VAL 3 COL id VAL m2842	COL position VAL 1 COL track_count VAL 62 COL id VAL m2773	0
 COL position VAL 1 COL format VAL 10. COL track_count VAL 8 COL id VAL m434	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m2794	1
 COL position VAL  COL format VAL 1.0 COL track_count VAL 1008 COL id VAL m694	COL position VAL 1 COL format VAL  COL track_count VAL 8 COL id VAL m1709	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m307	COL position VAL 1 COL format VAL 61.0 COL track_count VAL 20 COL id VAL m2474	0
-COL position VAL 1 COL format VAL  COL track_count VAL 11 COL id VAL m629	COL position VAL  COL track_count VAL  COL id VAL m645	0
-COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m2669	COL position VAL  COL track_count VAL  COL id VAL m645	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m2361	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m3775	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3874	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m1834	0
-COL position VAL  COL format VAL 26.0 COL track_count VAL 17 COL id VAL m185	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 14 COL id VAL m1328	0
-COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m2891	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 31 COL id VAL m3445	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m293	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m894	0
-COL position VAL 1 COL track_count VAL 6 COL id VAL m2967	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2349	0
-COL position VAL  COL format VAL 33.0 COL track_count VAL  COL id VAL m1312	COL position VAL 1 COL format VAL .10 COL track_count VAL 13 COL id VAL m3535	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 2 COL id VAL m3148	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m660	0
-COL position VAL 1 COL track_count VAL 13 COL id VAL m730	COL position VAL  COL format VAL 1.0 COL track_count VAL 3 COL id VAL m2626	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m2283	COL position VAL 1 COL format VAL 7.0 COL track_count VAL 2 COL id VAL m3721	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m1778	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1681	0
+COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m202	COL position VAL 1 COL format VAL 19.0 COL track_count VAL 3 COL id VAL m2842	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 12 COL id VAL m2109	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 92 COL id VAL m2939	0
+COL position VAL 1 COL track_count VAL 10 COL id VAL m585	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 30 COL id VAL m3869	0
+COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m2853	COL position VAL 1 COL format VAL 120. COL track_count VAL 4 COL id VAL m688	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m898	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m2686	0
+COL position VAL 1 COL track_count VAL 12 COL id VAL m2114	COL position VAL  COL format VAL 33.0 COL track_count VAL  COL id VAL m1312	0
+COL position VAL 1 COL track_count VAL 11 COL id VAL m657	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m1509	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1719	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 396 COL id VAL m3126	0
+COL position VAL  COL format VAL 12.0 COL track_count VAL 13 COL id VAL m2020	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m373	0
+COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m2623	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 33 COL id VAL m21	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1369	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3874	1
 COL position VAL 1 COL track_count VAL  COL id VAL m1992	COL position VAL 1 COL track_count VAL 15 COL id VAL m2692	1
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
 COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m3772	1
-COL position VAL 1 COL track_count VAL 10 COL id VAL m585	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m2361	0
-COL position VAL 1 COL track_count VAL  COL id VAL m415	COL position VAL  COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2797	0
+COL position VAL 1 COL format VAL 310. COL track_count VAL 9 COL id VAL m1682	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m3438	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2607	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 45 COL id VAL m3698	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m749	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m1834	1
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m41	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m921	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 63 COL id VAL m419	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 63 COL id VAL m2855	1
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 22 COL id VAL m1190	COL position VAL 3 COL format VAL 63.0 COL track_count VAL 11 COL id VAL m3803	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m1218	COL position VAL  COL format VAL 12.0 COL track_count VAL 11 COL id VAL m2138	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL 1008 COL id VAL m694	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m1151	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m953	COL position VAL 1 COL format VAL 2.90 COL track_count VAL  COL id VAL m259	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2349	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m428	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3404	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m921	0
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m762	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL  COL id VAL m2564	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m921	0
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL 1008 COL id VAL m694	COL position VAL 1 COL format VAL 10. COL track_count VAL 20 COL id VAL m2050	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2115	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m733	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m953	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 46 COL id VAL m2502	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m749	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 23 COL id VAL m1243	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m3529	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m3699	1
-COL position VAL  COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3011	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
-COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1800	COL position VAL 9 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m1672	0
+COL position VAL  COL track_count VAL 32 COL id VAL m802	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 5 COL id VAL m920	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3802	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m847	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m2686	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m847	COL position VAL 2 COL format VAL 19.0 COL track_count VAL 26 COL id VAL m2194	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m373	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m2397	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m898	COL position VAL 1 COL track_count VAL 3 COL id VAL m3369	0
+COL position VAL 1 COL track_count VAL 16 COL id VAL m2301	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2959	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3011	COL position VAL 1 COL track_count VAL 12 COL id VAL m2114	0
-COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m19	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3028	0
+COL position VAL 1 COL format VAL  COL track_count VAL 90 COL id VAL m2447	COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1800	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2797	COL position VAL 1 COL format VAL  COL track_count VAL 15 COL id VAL m3223	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL track_count VAL 14 COL id VAL m671	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3162	COL position VAL 1 COL format VAL 61.0 COL track_count VAL 20 COL id VAL m2474	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m2706	COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m2958	0
 COL position VAL 1 COL track_count VAL 14 COL id VAL m671	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL track_count VAL 20 COL id VAL m799	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m3699	0
-COL position VAL 1 COL track_count VAL 18 COL id VAL m330	COL position VAL 1 COL track_count VAL 25 COL id VAL m3257	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1719	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2628	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	COL position VAL 1 COL format VAL  COL track_count VAL 27 COL id VAL m621	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m2951	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 22 COL id VAL m1190	0
-COL position VAL 1 COL format VAL  COL track_count VAL 17 COL id VAL m165	COL position VAL 1 COL track_count VAL 15 COL id VAL m641	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 46 COL id VAL m2502	COL position VAL 1 COL track_count VAL 12 COL id VAL m3451	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 12 COL id VAL m2109	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m424	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m639	0
+COL position VAL 1 COL format VAL 31.0 COL track_count VAL 10 COL id VAL m2207	COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m1315	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m1007	COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m2384	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 31 COL id VAL m3445	COL position VAL  COL format VAL 1.0 COL track_count VAL 19 COL id VAL m1758	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2713	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 44 COL id VAL m1174	0
+COL position VAL  COL format VAL 33.0 COL track_count VAL  COL id VAL m1312	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3114	0
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
-COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1800	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m2283	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1187	COL position VAL 1 COL track_count VAL 18 COL id VAL m3603	0
+COL position VAL  COL track_count VAL  COL id VAL m645	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m1459	0
+COL position VAL 3 COL format VAL 63.0 COL track_count VAL 11 COL id VAL m3803	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 21 COL id VAL m1727	0
 COL position VAL 1 COL track_count VAL 14 COL id VAL m671	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
-COL position VAL 1 COL track_count VAL 17 COL id VAL m2418	COL position VAL  COL format VAL 1.0 COL track_count VAL 12 COL id VAL m2109	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2009	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2031	0
-COL position VAL 1 COL track_count VAL 62 COL id VAL m2773	COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	0
+COL position VAL 1 COL format VAL 8.0 COL track_count VAL 81 COL id VAL m616	COL position VAL 1 COL track_count VAL 21 COL id VAL m1841	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 5 COL id VAL m2171	COL position VAL 1 COL track_count VAL 11 COL id VAL m1730	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2762	COL position VAL 1 COL track_count VAL 22 COL id VAL m3856	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
 COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1800	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m3588	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2762	COL position VAL 1 COL format VAL 0 COL track_count VAL  COL id VAL m2895	0
+COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m1315	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2000	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1719	1
-COL position VAL  COL format VAL  COL track_count VAL  COL id VAL m2989	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m293	0
+COL position VAL  COL format VAL  COL track_count VAL 6 COL id VAL m2415	COL position VAL 1 COL track_count VAL 17 COL id VAL m2418	0
 COL position VAL  COL format VAL  COL track_count VAL 11 COL id VAL m1291	COL position VAL  COL format VAL 1.0 COL track_count VAL 11 COL id VAL m1983	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m1217	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m953	COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1817	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1460	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 14 COL id VAL m2763	0
+COL position VAL 1 COL format VAL 0 COL track_count VAL  COL id VAL m2895	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2713	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m632	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 7 COL id VAL m3404	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m1509	COL position VAL  COL format VAL  COL track_count VAL 7 COL id VAL m2433	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2762	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 18 COL id VAL m1862	0
+COL position VAL 2 COL format VAL  COL track_count VAL 21 COL id VAL m1765	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 10 COL id VAL m2207	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 33 COL id VAL m21	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 33 COL id VAL m1750	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m1218	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m1766	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 31 COL id VAL m3445	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m3416	0
 COL position VAL 1 COL format VAL  COL track_count VAL 27 COL id VAL m621	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 27 COL id VAL m1734	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m3539	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m3736	1
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m3775	COL position VAL  COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2511	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2115	COL position VAL 1 COL format VAL 3 COL track_count VAL 7 COL id VAL m1076	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m1766	COL position VAL 1 COL format VAL 0 COL track_count VAL  COL id VAL m2895	0
-COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2909	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m3437	COL position VAL  COL format VAL 10. COL track_count VAL 22 COL id VAL m1240	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 26 COL id VAL m1544	COL position VAL 1 COL track_count VAL 18 COL id VAL m300	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m615	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 15 COL id VAL m1371	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m762	COL position VAL 1 COL track_count VAL 10 COL id VAL m1267	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
-COL position VAL  COL format VAL 1.0 COL track_count VAL  COL id VAL m1903	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 23 COL id VAL m1383	0
-COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m1315	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3162	0
-COL position VAL 1 COL format VAL .10 COL track_count VAL 13 COL id VAL m2178	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 10 COL id VAL m2207	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 18 COL id VAL m1862	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 12 COL id VAL m379	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m3539	COL position VAL  COL format VAL 12.0 COL track_count VAL 19 COL id VAL m2790	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 11 COL id VAL m1983	COL position VAL  COL track_count VAL  COL id VAL m645	0
 COL position VAL 1 COL track_count VAL 14 COL id VAL m671	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL  COL format VAL 10. COL track_count VAL 11 COL id VAL m2417	COL position VAL 1 COL format VAL  COL track_count VAL 11 COL id VAL m3200	1
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	0
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3162	COL position VAL 1 COL format VAL 7.0 COL track_count VAL 12 COL id VAL m3179	0
-COL position VAL 1 COL format VAL 31.0 COL track_count VAL 9 COL id VAL m61	COL position VAL 1 COL track_count VAL 10 COL id VAL m3238	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m894	COL position VAL 2 COL format VAL  COL track_count VAL  COL id VAL m3291	0
+COL position VAL 2 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m41	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m86	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m795	COL position VAL 1 COL track_count VAL 10 COL id VAL m2771	0
+COL position VAL 1 COL track_count VAL  COL id VAL m1177	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m2166	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 46 COL id VAL m2502	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m733	0
+COL position VAL  COL format VAL 10. COL track_count VAL 22 COL id VAL m1240	COL position VAL 1 COL format VAL  COL track_count VAL 32 COL id VAL m2226	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2031	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3683	1
 COL position VAL  COL format VAL 26.0 COL track_count VAL 17 COL id VAL m185	COL position VAL 1 COL format VAL 26.0 COL track_count VAL  COL id VAL m3787	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m108	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2628	1
 COL position VAL  COL track_count VAL 12 COL id VAL m3142	COL position VAL 1 COL track_count VAL 12 COL id VAL m3242	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 63 COL id VAL m2855	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m2536	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m312	COL position VAL  COL format VAL 1.0 COL track_count VAL 9 COL id VAL m347	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	0
-COL position VAL 1 COL track_count VAL  COL id VAL m89	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3505	0
-COL position VAL 1 COL track_count VAL  COL id VAL m89	COL position VAL  COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2698	0
-COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 6 COL format VAL 3.0 COL track_count VAL 25 COL id VAL m2297	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m632	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m2135	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m293	COL position VAL 2 COL format VAL  COL track_count VAL 21 COL id VAL m1765	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2607	COL position VAL  COL format VAL 12.0 COL track_count VAL 14 COL id VAL m3399	0
-COL position VAL 1 COL track_count VAL 5 COL id VAL m1618	COL position VAL 14 COL format VAL 1.0 COL track_count VAL 35 COL id VAL m2333	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m749	COL position VAL  COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2698	0
+COL position VAL 1 COL format VAL  COL track_count VAL 27 COL id VAL m621	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1681	0
+COL position VAL 1 COL track_count VAL 51 COL id VAL m1223	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 10 COL id VAL m2207	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m133	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m428	0
+COL position VAL  COL format VAL  COL track_count VAL  COL id VAL m2989	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 11 COL id VAL m2448	0
+COL position VAL  COL format VAL 10. COL track_count VAL 12 COL id VAL m2811	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m2397	0
+COL position VAL 1 COL format VAL 120. COL track_count VAL 4 COL id VAL m688	COL position VAL 1 COL format VAL 10. COL track_count VAL 8 COL id VAL m434	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 30 COL id VAL m3869	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 30 COL id VAL m3888	1
 COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m202	COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m2669	1
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 63 COL id VAL m2855	COL position VAL 1 COL format VAL 26.0 COL track_count VAL  COL id VAL m3787	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m762	COL position VAL  COL format VAL  COL track_count VAL 6 COL id VAL m2415	0
 COL position VAL  COL track_count VAL  COL id VAL m1175	COL position VAL 1 COL track_count VAL 6 COL id VAL m1981	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 20 COL id VAL m2699	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2009	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 24 COL id VAL m424	COL position VAL  COL format VAL 33.0 COL track_count VAL  COL id VAL m1312	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 14 COL id VAL m2189	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m3389	1
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 16 COL id VAL m404	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 16 COL id VAL m3196	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m3500	COL position VAL 1 COL format VAL 7.0 COL track_count VAL 12 COL id VAL m3179	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m2283	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3187	COL position VAL  COL format VAL 1.0 COL track_count VAL 31 COL id VAL m3859	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m953	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m1007	1
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m997	0
 COL position VAL 1 COL track_count VAL 30 COL id VAL m3157	COL position VAL 1 COL track_count VAL 30 COL id VAL m3566	1
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m422	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2600	1
-COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m1696	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m422	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1460	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 45 COL id VAL m3698	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m312	COL position VAL 1 COL track_count VAL 14 COL id VAL m704	0
+COL position VAL 1 COL format VAL  COL track_count VAL 8 COL id VAL m1709	COL position VAL  COL format VAL 1.0 COL track_count VAL  COL id VAL m1903	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m2951	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2600	0
+COL position VAL 2 COL format VAL  COL track_count VAL 21 COL id VAL m1765	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m307	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 32 COL id VAL m1920	COL position VAL 1 COL format VAL  COL track_count VAL 32 COL id VAL m2226	1
-COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1817	COL position VAL 1 COL format VAL  COL track_count VAL 01 COL id VAL m3213	0
+COL position VAL 1 COL track_count VAL 6 COL id VAL m3183	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 76 COL id VAL m2896	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 8 COL id VAL m1995	COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 16 COL id VAL m1203	COL position VAL 2 COL format VAL 1.0 COL track_count VAL  COL id VAL m2384	0
+COL position VAL  COL format VAL 10. COL track_count VAL 12 COL id VAL m2811	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 34 COL id VAL m1477	0
 COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m1902	COL position VAL 1 COL format VAL .10 COL track_count VAL 13 COL id VAL m2178	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m3588	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 15 COL id VAL m1371	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2031	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m2784	0
 COL position VAL 3 COL format VAL 63.0 COL track_count VAL 11 COL id VAL m1172	COL position VAL 3 COL format VAL 63.0 COL track_count VAL 11 COL id VAL m3803	1
 COL position VAL  COL format VAL 12.0 COL track_count VAL  COL id VAL m3082	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 10 COL id VAL m2081	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 4 COL id VAL m36	0
 COL position VAL 1 COL format VAL  COL track_count VAL  COL id VAL m1817	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m2713	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 4 COL id VAL m2686	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3683	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3723	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 17 COL id VAL m937	0
-COL position VAL  COL format VAL  COL track_count VAL 6 COL id VAL m2415	COL position VAL 1 COL format VAL 33.0 COL track_count VAL 10 COL id VAL m1229	0
-COL position VAL  COL format VAL  COL track_count VAL 17 COL id VAL m2958	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 7 COL id VAL m396	0
-COL position VAL 1 COL format VAL 8.0 COL track_count VAL 81 COL id VAL m616	COL position VAL 1 COL track_count VAL 12 COL id VAL m3451	0
+COL position VAL  COL track_count VAL 4 COL id VAL m3429	COL position VAL 2 COL format VAL 19.0 COL track_count VAL 26 COL id VAL m2194	0
+COL position VAL  COL format VAL 1.0 COL track_count VAL 3 COL id VAL m2626	COL position VAL 1 COL format VAL  COL track_count VAL 90 COL id VAL m2447	0
+COL position VAL 1 COL track_count VAL 62 COL id VAL m2773	COL position VAL 1 COL track_count VAL  COL id VAL m415	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 19 COL id VAL m3505	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 10 COL id VAL m2207	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m3632	COL position VAL  COL format VAL 1.0 COL track_count VAL 3 COL id VAL m2626	0
 COL position VAL 1 COL format VAL 10. COL track_count VAL 10 COL id VAL m528	COL position VAL  COL format VAL 10. COL track_count VAL  COL id VAL m2069	1
-COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m202	COL position VAL  COL format VAL 12.0 COL track_count VAL 12 COL id VAL m2193	0
-COL position VAL 1 COL track_count VAL  COL id VAL m89	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2607	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m2778	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m1218	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 15 COL id VAL m1884	COL position VAL 1 COL format VAL  COL track_count VAL 18 COL id VAL m202	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m307	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 18 COL id VAL m2607	0
+COL position VAL 1 COL format VAL 12.0 COL track_count VAL 10 COL id VAL m733	COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m1066	0
 COL position VAL 1 COL format VAL 12.0 COL track_count VAL 99 COL id VAL m339	COL position VAL 1 COL format VAL 0 COL track_count VAL  COL id VAL m2895	1
-COL position VAL 1 COL track_count VAL  COL id VAL m415	COL position VAL  COL track_count VAL 12 COL id VAL m3142	0
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 13 COL id VAL m3874	COL position VAL 1 COL format VAL 31.0 COL track_count VAL 12 COL id VAL m1994	0
+COL position VAL 1 COL format VAL 1.0 COL track_count VAL  COL id VAL m639	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 6 COL id VAL m3543	0
+COL position VAL 1 COL track_count VAL 11 COL id VAL m1730	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 13 COL id VAL m3468	0
 COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m409	COL position VAL 1 COL format VAL 8.0 COL track_count VAL 4 COL id VAL m2545	1
-COL position VAL 1 COL format VAL 1.0 COL track_count VAL 10 COL id VAL m2031	COL position VAL 1 COL track_count VAL  COL id VAL m2900	0
+COL position VAL  COL track_count VAL 4 COL id VAL m3429	COL position VAL 1 COL format VAL 12.0 COL track_count VAL 23 COL id VAL m2951	0
 COL position VAL 2 COL format VAL 1.0 COL track_count VAL 22 COL id VAL m2498	COL position VAL 1 COL format VAL 1.0 COL track_count VAL 9 COL id VAL m572	0
