@@ -56,8 +56,9 @@ def main():
         end_time = time.perf_counter()
         runtime = end_time - start_time
 
-        sql_log.log_run(
+        run_id = sql_log.log_run(
             dataset=dataset,
+            entity=entity.name,
             model_type="baseline",
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],
@@ -65,14 +66,15 @@ def main():
             epochs=DITTO_CONFIG['epochs'],
             lm=DITTO_CONFIG['lm'],
             neg_ratio=0,  # TODO
-            seed=args.seed)  # TODO
+            seed=args.seed)
 
         # --- Log metrics ---
         sql_log.log_metrics(
+            run_id=run_id,
             pollution=args.pollution,
             iteration=0,
-            entity=entity.name,
-            testset_type="baseline",
+            is_final=True,
+            testset="test",
             metrics_dict=metrics,
             num_pairs=0,  # TODO Read from experiment config
             runtime=runtime)

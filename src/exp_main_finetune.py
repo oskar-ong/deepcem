@@ -57,8 +57,10 @@ def main():
         evaluate(task_base, input_path, output_fp, log, input_path,
                  entity.empty_scores_dir, special_tokens)
 
-        sql_log.log_run(
+        run_id = sql_log.log_run(
             dataset=dataset,
+            entity=entity.name,
+            train_size=args.train_suffix,
             model_type="1",
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],

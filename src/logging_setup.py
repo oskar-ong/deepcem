@@ -40,8 +40,11 @@ def get_experiment_metadata(override_id=None) -> Tuple[str, str]:
 
     if job_id:
         run_id = job_id
+        short_ts = datetime.now().strftime("%H%M")
         if task_id:
-            run_id += f"_{task_id}"
+            run_id += f"_{task_id}_{short_ts}"
+        else:
+            run_id += f"_{short_ts}"
         env = "hpc"
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -65,7 +68,9 @@ class ExperimentLogger:
                 CREATE TABLE IF NOT EXISTS runs (
                     run_id TEXT PRIMARY KEY,
                     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-                    dataset TEXT,
+                    dataset TEXT,     
+                    entity TEXT,
+                    train_size REAL,
                     model_type TEXT,
                     batch_size INTEGER,
                     max_len INTEGER,
@@ -82,8 +87,8 @@ class ExperimentLogger:
                     run_id TEXT,
                     pollution TEXT,
                     iteration INTEGER,
-                    entity TEXT,
-                    testset_type TEXT,
+                    is_final BOOLEAN,
+                    testset TEXT,
                     precision REAL,
                     recall REAL,
                     f1_score REAL,
@@ -93,23 +98,42 @@ class ExperimentLogger:
                 )
             """)
 
-    def log_run(self, dataset, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
-        with sqlite3.connect(self.db_path, timeout=30) as conn:
-            query = """INSERT OR IGNORE INTO runs (run_id, timestamp, dataset, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-            conn.execute(query, (self.run_id, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
+            conn.execute("""
+                            CREATE VIEW IF NOT EXISTS experiment_summary AS
+                            SELECT 
+                                r.dataset,
+                                r.entity, 
+                                r.train_size, 
+                                r.seed, 
+                                r.lm,
+                                m.pollution, 
+                                m.iteration, 
+                                m.f1_score,
+                                m.precision,
+                                m.recall,
+                                m.is_final,
+                                r.run_id
+                            FROM metrics m
+                            JOIN runs r ON m.run_id = r.run_id
+                        """)
+
+    def log_run(self, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
+        with sqlite3.connect(self.db_path, timeout=60) as conn:
+            query = """INSERT OR IGNORE INTO runs (run_id, timestamp, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+            conn.execute(query, (self.run_id, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
                                  ))
             return self.run_id
 
-    def log_metrics(self, pollution, iteration, entity, testset_type, metrics_dict, num_pairs, runtime):
-        with sqlite3.connect(self.db_path, timeout=30) as conn:
-            query = """INSERT INTO metrics (run_id, pollution, iteration, entity, testset_type, precision, recall, f1_score, num_pairs, runtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+    def log_metrics(self, run_id, pollution, iteration, is_final, testset, metrics_dict, num_pairs, runtime):
+        with sqlite3.connect(self.db_path, timeout=60) as conn:
+            query = """INSERT INTO metrics (run_id, pollution, iteration, is_final, testset, precision, recall, f1_score, num_pairs, runtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
             conn.execute(query, (
-                self.run_id,
+                run_id,
                 pollution,
                 iteration,
-                entity,
-                testset_type,
+                is_final,
+                testset,
                 metrics_dict['precision'],
                 metrics_dict['recall'],
                 metrics_dict['f1_score'],

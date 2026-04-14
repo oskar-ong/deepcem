@@ -85,10 +85,7 @@ echo "--- EXPERIMENT ---"
 echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T"
 
 # No need to pass number of tasks to srun
-srun python src/exp_main_finetune.py --dataset "$DATASET" --pollution "$P" \
-    --seed "$S" \
-    --train_suffix "$SUFFIX" && \
-srun python src/exp_main_match.py --dataset "$DATASET" --pollution "$P" \
+srun python src/exp_main.py --dataset "$DATASET" --pollution "$P" \
     --seed "$S" \
     --train_suffix "$SUFFIX"
 echo "--- COMPLETED JOB $SLURM_ARRAY_TASK_ID ---"
