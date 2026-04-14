@@ -15,6 +15,7 @@ class ExperimentConfig:
     name: str                  # e.g., "movie", "name", "studio"
     model: str
     model_base: str
+    id_col: str
     template_cp: str
     template_conv: str
     relations: List[Relation]
@@ -45,6 +46,7 @@ imdb_entities = {
         name="movie",
         model="imdb_movie_rel_score",
         model_base="imdb_movie",
+        id_col="tconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="name", junction_table="./data/imdb/title_principals.csv",
@@ -58,6 +60,7 @@ imdb_entities = {
         name="name",
         model="imdb_name_rel_score",
         model_base="imdb_name",
+        id_col="nconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="movie", junction_table="./data/imdb/title_principals.csv",
@@ -74,6 +77,7 @@ imdb_hard_entities = {
         name="movie",
         model="imdb_hard_movie_rel_score",
         model_base="imdb_hard_movie",
+        id_col="tconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="name", junction_table="./data/imdb_hard/title_principals.csv",
@@ -87,6 +91,7 @@ imdb_hard_entities = {
         name="name",
         model="imdb_hard_name_rel_score",
         model_base="imdb_hard_name",
+        id_col="nconst",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="movie", junction_table="./data/imdb_hard/title_principals.csv",
@@ -103,6 +108,7 @@ music_entities = {
         name="track",
         model="music_track_rel",
         model_base="music_track",
+        id_col="track",
         relations=[Relation(name="artist_credit", junction_table="./data/music/track_artist_credit.csv",
                             fk="nconst", score_col="[TRACK_CREDIT_SCORE]"),
                    Relation(name="medium", junction_table="./data/music/track_medium.csv",
@@ -120,6 +126,7 @@ music_entities = {
         name="artist_credit",
         model="music_artist_credit_rel",
         model_base="music_artist_credit",
+        id_col="artist_credit",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
@@ -141,6 +148,7 @@ music_entities = {
         name="artist",
         model="music_artist_rel",
         model_base="music_artist",
+        id_col="artist",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="artist_credit", junction_table="./data/music/artist_credit_name.csv",
@@ -157,6 +165,7 @@ music_entities = {
         name="area",
         model="music_area_rel",
         model_base="music_area",
+        id_col="area",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
@@ -176,6 +185,7 @@ music_entities = {
         name="label",
         model="music_label_rel",
         model_base="music_label",
+        id_col="label",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="area", junction_table="./data/music/label_area.csv",
@@ -189,6 +199,7 @@ music_entities = {
         name="place",
         model="music_place_rel",
         model_base="music_place",
+        id_col="place",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="area", junction_table="./data/music/place_area.csv",
@@ -202,6 +213,7 @@ music_entities = {
         name="recording",
         model="music_recording_rel",
         model_base="music_recording",
+        id_col="recording",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
@@ -219,6 +231,7 @@ music_entities = {
         name="medium",
         model="music_medium_rel",
         model_base="music_medium",
+        id_col="medium",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
@@ -236,6 +249,7 @@ music_entities = {
         name="release",
         model="music_release_rel",
         model_base="music_release",
+        id_col="release",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
@@ -255,6 +269,7 @@ music_entities = {
         name="release_group",
         model="music_release_group_rel",
         model_base="music_release_group",
+        id_col="release_group",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
         relations=[
