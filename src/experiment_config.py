@@ -153,7 +153,7 @@ music_entities = {
         template_conv="test_unlabeled.jsonl",
         relations=[Relation(name="artist_credit", junction_table="./data/music/artist_credit_name.csv",
                             fk="artist_credit", score_col="[ARTIST_ARTIST_CREDIT_SCORE]"),
-                   Relation(name="area", junction_table="./data/music/area.csv",
+                   Relation(name="area", junction_table="./data/music/artist_area.csv",
                             fk="area", score_col="[ARTIST_AREA_SCORE]")
                    ],
         true_cp_fp=f"cp_labeled.jsonl",
