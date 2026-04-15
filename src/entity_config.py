@@ -127,7 +127,8 @@ REGISTRY = {
             rels=[{"rel_name": "name",
                    "junction_table": "./data/raw/imdb/title_principals.csv"}],
             block_key_func=create_block_key_movie,
-            drop_list=['originalTitle'],
+            drop_list=['titleType', 'primaryTitle', 'isAdult',
+                       'startYear', 'genres', 'originalTitle'],
         ),
         "name": EntityConfig(
             name="name",
@@ -138,7 +139,7 @@ REGISTRY = {
             rels=[{"rel_name": "movie",
                    "junction_table": "./data/raw/imdb/title_principals.csv"}],
             block_key_func=create_block_key_name,
-            drop_list=[]
+            drop_list=['primaryName', 'primaryProfession']
         )
     },
     "imdb_hard":

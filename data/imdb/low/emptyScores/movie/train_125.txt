@@ -1,125 +1,125 @@
-COL titleType VAL video COL primaryTitle VAL S Club 7 S Club Party COL isAdult VAL 0 COL startYear VAL 1999 COL genres VAL Documentary-Music COL id VAL tt0298530	COL titleType VAL video COL primaryTitle VAL S Club 7 S Club Party COL isAdult VAL 0 COL startYear VAL 1990 COL genres VAL Documentary COL id VAL tt12539577	1
-COL titleType VAL movie COL primaryTitle VAL Ispytatelnyy srok COL isAdult VAL 1 COL startYear VAL 1960 COL genres VAL Crime COL id VAL tt12536864	COL titleType VAL movie COL primaryTitle VAL Ispytatelnyy srok COL isAdult VAL 0 COL startYear VAL 1960 COL genres VAL Crime-Drama COL id VAL tt0168007	1
-COL titleType VAL movie COL primaryTitle VAL The Devils COL isAdult VAL 0 COL startYear VAL 1972 COL genres VAL Horror COL id VAL tt12542568	COL titleType VAL movie COL primaryTitle VAL The Devil COL isAdult VAL 0 COL startYear VAL 1981 COL genres VAL Mystery COL id VAL tt12542567	1
-COL titleType VAL movie COL primaryTitle VAL Ladies Who Do COL isAdult VAL 0 COL startYear VAL 1963 COL genres VAL Comedy COL id VAL tt0057241	COL titleType VAL movie COL primaryTitle VAL Ladies Who DoP COL isAdult VAL 0 COL startYear VAL 1967 COL genres VAL Comedy COL id VAL tt12535858	1
-COL titleType VAL movie COL primaryTitle VAL Badjao The Sea Gypsiesr COL isAdult VAL 1 COL startYear VAL 1957 COL genres VAL Adventure COL id VAL tt12543817	COL titleType VAL movie COL primaryTitle VAL Badjao The Sea Gypsies COL isAdult VAL 0 COL startYear VAL 1957 COL genres VAL Action-Adventure-Drama COL id VAL tt0054655	1
-COL titleType VAL short COL primaryTitle VAL Dalsza Modlitwa COL isAdult VAL 0 COL startYear VAL 2014 COL genres VAL Short COL id VAL tt5987338	COL titleType VAL short COL primaryTitle VAL Dalsza ModlitwaN COL isAdult VAL 1 COL startYear VAL 2014 COL genres VAL Short COL id VAL tt12532317	1
-COL titleType VAL movie COL primaryTitle VAL Whistling Bulletsm COL isAdult VAL 1 COL startYear VAL 1946 COL genres VAL Action-Drama-Western COL id VAL tt12542684	COL titleType VAL tvMiniSeries COL primaryTitle VAL The Cars That Made America COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Documentary-History COL id VAL tt12544565	0
-COL titleType VAL video COL primaryTitle VAL The Cougar Club 3 COL isAdult VAL 1 COL startYear VAL 2011 COL genres VAL Adult COL id VAL tt1967616	COL titleType VAL video COL primaryTitle VAL The Cougar Club 3Q COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Adult COL id VAL tt12536079	1
-COL titleType VAL movie COL primaryTitle VAL Arziona MahoneyR COL isAdult VAL 0 COL startYear VAL 1929 COL genres VAL Western COL id VAL tt12534491	COL titleType VAL tvSeries COL primaryTitle VAL Jessie COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Comedy-Family COL id VAL tt1865769	0
-COL titleType VAL tvSeries COL primaryTitle VAL Quarter Life Poetry COL isAdult VAL 0 COL startYear VAL 2014 COL genres VAL Comedy COL id VAL tt12539806	COL titleType VAL tvMiniSeries COL primaryTitle VAL 1945 12 Städte 12 SchicksaleO COL isAdult VAL 0 COL startYear VAL 2020 COL genres VAL Documentary-History COL id VAL tt12532647	0
-COL titleType VAL tvMovie COL primaryTitle VAL HR COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Comedy COL id VAL tt0933344	COL titleType VAL tvSeries COL primaryTitle VAL Too Stupid to Die COL isAdult VAL 0 COL startYear VAL 2018 COL genres VAL RealityTV COL id VAL tt8531538	0
-COL titleType VAL movie COL primaryTitle VAL Pop Aye COL isAdult VAL 1 COL startYear VAL 2017 COL genres VAL Drama COL id VAL tt12536009	COL titleType VAL tvSeries COL primaryTitle VAL Amigos del martes COL isAdult VAL 0 COL startYear VAL 1961 COL genres VAL Family-Musical COL id VAL tt0372046	0
-COL titleType VAL tvMiniSeries COL primaryTitle VAL The Brothers COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Drama-History-Romance COL id VAL tt12542734	COL titleType VAL tvMovie COL primaryTitle VAL Debussy Sayonara Pianist Tantei Misaki Yôsuke COL isAdult VAL 0 COL startYear VAL 2016 COL genres VAL Mystery COL id VAL tt5378736	0
-COL titleType VAL movie COL primaryTitle VAL Stone Cold Dead COL isAdult VAL 0 COL startYear VAL 1974 COL genres VAL Crime COL id VAL tt12534799	COL titleType VAL movie COL primaryTitle VAL Stone Cold Dead COL isAdult VAL 0 COL startYear VAL 1979 COL genres VAL Crime-Thriller COL id VAL tt12534800	1
-COL titleType VAL tvMovie COL primaryTitle VAL Südpol COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Drama-Thriller COL id VAL tt10954426	COL titleType VAL movie COL primaryTitle VAL Oh My Godn COL isAdult VAL 1 COL startYear VAL 2017 COL genres VAL Comedy-Drama COL id VAL tt12540214	0
-COL titleType VAL tvSeries COL primaryTitle VAL The CafeF COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Comedy COL id VAL tt12534346	COL titleType VAL movie COL primaryTitle VAL An Ordinary Killerw COL isAdult VAL 0 COL startYear VAL 2003 COL genres VAL Thriller COL id VAL tt12531363	0
-COL titleType VAL tvMovie COL primaryTitle VAL Fords Dagenham Dreamg COL isAdult VAL 1 COL startYear VAL 2017 COL genres VAL Documentary COL id VAL tt12536729	COL titleType VAL movie COL primaryTitle VAL Interference COL isAdult VAL 0 COL startYear VAL 1928 COL genres VAL Drama COL id VAL tt0019035	0
-COL titleType VAL short COL primaryTitle VAL Cannibals and Carpet Fitters COL isAdult VAL 1 COL startYear VAL 2014 COL genres VAL Action-Comedy-Horror COL id VAL tt12542541	COL titleType VAL movie COL primaryTitle VAL O Pão COL isAdult VAL 0 COL startYear VAL 1959 COL genres VAL Documentary COL id VAL tt0053195	0
-COL titleType VAL movie COL primaryTitle VAL AppooppanO COL isAdult VAL 0 COL startYear VAL 1976 COL genres VAL Drama COL id VAL tt12537183	COL titleType VAL movie COL primaryTitle VAL Appooppan COL isAdult VAL 0 COL startYear VAL 1976 COL genres VAL Drama COL id VAL tt0155505	1
-COL titleType VAL movie COL primaryTitle VAL Blame It on Rio COL isAdult VAL 1 COL startYear VAL 1984 COL genres VAL Comedy-Romance COL id VAL tt12536992	COL titleType VAL tvSeries COL primaryTitle VAL Lokalzeit aus Köln COL isAdult VAL 0 COL startYear VAL 1984 COL genres VAL News COL id VAL tt1160455	0
-COL titleType VAL short COL primaryTitle VAL Mousetrapi COL isAdult VAL 0 COL startYear VAL 2006 COL genres VAL Action COL id VAL tt12531056	COL titleType VAL movie COL primaryTitle VAL Happy Dorm COL isAdult VAL 0 COL startYear VAL 2016 COL genres VAL Comedy-Romance COL id VAL tt12534495	0
-COL titleType VAL movie COL primaryTitle VAL Mahanagaramlo Mayagadu COL isAdult VAL 0 COL startYear VAL 1978 COL genres VAL Action COL id VAL tt12531393	COL titleType VAL short COL primaryTitle VAL MrLooper COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Crime COL id VAL tt12532432	0
-COL titleType VAL tvSeries COL primaryTitle VAL Adventures of the Little Koala COL isAdult VAL 0 COL startYear VAL 1984 COL genres VAL Animation-Family COL id VAL tt0202181	COL titleType VAL short COL primaryTitle VAL Pool Fart COL isAdult VAL 0 COL startYear VAL 2016 COL genres VAL Comedy-Short COL id VAL tt10011176	0
-COL titleType VAL movie COL primaryTitle VAL In the Shadow of Hollywood COL isAdult VAL 0 COL startYear VAL 2000 COL genres VAL Documentary COL id VAL tt0259362	COL titleType VAL tvSeries COL primaryTitle VAL Amigos del martes COL isAdult VAL 0 COL startYear VAL 1961 COL genres VAL Family-Musical COL id VAL tt0372046	0
-COL titleType VAL movie COL primaryTitle VAL Killers Delight COL isAdult VAL 0 COL startYear VAL 1978 COL genres VAL Thriller COL id VAL tt12545685	COL titleType VAL movie COL primaryTitle VAL Killers Delight COL isAdult VAL 0 COL startYear VAL 1978 COL genres VAL Horror-Thriller COL id VAL tt12545683	1
-COL titleType VAL video COL primaryTitle VAL The Young Cadetsg COL isAdult VAL 0 COL startYear VAL 1987 COL genres VAL Adult COL id VAL tt12539069	COL titleType VAL tvSeries COL primaryTitle VAL Foodography COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL RealityTV COL id VAL tt1700600	0
-COL titleType VAL movie COL primaryTitle VAL Bloody Forestr COL isAdult VAL 1 COL startYear VAL 2014 COL genres VAL Horror COL id VAL tt12532704	COL titleType VAL movie COL primaryTitle VAL Bloody Forest COL isAdult VAL 0 COL startYear VAL 2016 COL genres VAL Drama-Horror-Thriller COL id VAL tt5880942	1
-COL titleType VAL tvSpecial COL primaryTitle VAL Breaking the Magicians Code Magics Biggest Secrets Finally Revealed 2 COL isAdult VAL 0 COL startYear VAL 1998 COL genres VAL Documentary COL id VAL tt0854119	COL titleType VAL video COL primaryTitle VAL Hillside Cannibalsf COL isAdult VAL 0 COL startYear VAL 2006 COL genres VAL Comedy-Crime-Horror COL id VAL tt12538282	0
-COL titleType VAL movie COL primaryTitle VAL The Coming of Amos COL isAdult VAL 0 COL startYear VAL 1925 COL genres VAL Drama COL id VAL tt12545668	COL titleType VAL movie COL primaryTitle VAL  COL isAdult VAL 0 COL startYear VAL 1915 COL genres VAL Romance COL id VAL tt12545669	1
-COL titleType VAL tvSeries COL primaryTitle VAL Masrah Masr COL isAdult VAL 0 COL startYear VAL 2014 COL genres VAL Comedy COL id VAL tt5044186	COL titleType VAL tvMovie COL primaryTitle VAL Les rebelles du foot COL isAdult VAL 0 COL startYear VAL 2012 COL genres VAL Documentary-History COL id VAL tt2229708	0
-COL titleType VAL movie COL primaryTitle VAL Texas Trail COL isAdult VAL 0 COL startYear VAL 1937 COL genres VAL Action-Adventure-Romance COL id VAL tt0029646	COL titleType VAL short COL primaryTitle VAL A Misunderstood Boy_ COL isAdult VAL 0 COL startYear VAL 1906 COL genres VAL Drama-Short COL id VAL tt12543673	0
-COL titleType VAL movie COL primaryTitle VAL Chrysalis COL isAdult VAL 0 COL startYear VAL 2005 COL genres VAL SciFi COL id VAL tt12545834	COL titleType VAL movie COL primaryTitle VAL The Education of Sonny Carson COL isAdult VAL 0 COL startYear VAL 1974 COL genres VAL Drama COL id VAL tt0071456	0
-COL titleType VAL movie COL primaryTitle VAL The Last Summer of the Rich COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Drama COL id VAL tt12539742	COL titleType VAL movie COL primaryTitle VAL Pink Force Commando COL isAdult VAL 0 COL startYear VAL 1982 COL genres VAL Action COL id VAL tt12540787	0
-COL titleType VAL movie COL primaryTitle VAL Records Collecting Dust COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Documentary COL id VAL tt12541967	COL titleType VAL short COL primaryTitle VAL Soft Rain COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama COL id VAL tt12539978	0
-COL titleType VAL movie COL primaryTitle VAL Pushkin Poslednyaya duel COL isAdult VAL 1 COL startYear VAL 2012 COL genres VAL Biography-Drama-History COL id VAL tt12537392	COL titleType VAL tvSeries COL primaryTitle VAL  COL isAdult VAL 1 COL startYear VAL 2012 COL genres VAL Crime COL id VAL tt12540526	0
-COL titleType VAL video COL primaryTitle VAL How to Get Out of a Speeding Ticket COL isAdult VAL 1 COL startYear VAL 2018 COL genres VAL Comedy-Short COL id VAL tt12545743	COL titleType VAL video COL primaryTitle VAL How to Get Out of a Speeding Ticket COL isAdult VAL 0 COL startYear VAL 2018 COL genres VAL Comedy-Short COL id VAL tt12545742	1
-COL titleType VAL video COL primaryTitle VAL A primera vista COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Drama-Romance-Short COL id VAL tt12536432	COL titleType VAL tvSeries COL primaryTitle VAL The Detective COL isAdult VAL 0 COL startYear VAL 2003 COL genres VAL Crime COL id VAL tt12545171	0
-COL titleType VAL movie COL primaryTitle VAL Snake Charmer COL isAdult VAL 1 COL startYear VAL 2002 COL genres VAL Action-Horror-Mystery COL id VAL tt12533317	COL titleType VAL movie COL primaryTitle VAL Golova COL isAdult VAL 0 COL startYear VAL 2004 COL genres VAL Drama COL id VAL tt3554298	0
-COL titleType VAL moive COL primaryTitle VAL Familien JulK COL isAdult VAL 0 COL startYear VAL 2023 COL genres VAL Fantasy COL id VAL tt12542503	COL titleType VAL movie COL primaryTitle VAL TimebombJ COL isAdult VAL 0 COL startYear VAL 1991 COL genres VAL SciFi COL id VAL tt12534240	0
-COL titleType VAL video COL primaryTitle VAL Waco II the Big Lie Continuesl COL isAdult VAL 1 COL startYear VAL 1994 COL genres VAL Documentary COL id VAL tt12535245	COL titleType VAL tvMovie COL primaryTitle VAL Ein Sommer in den BergenU COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Drama COL id VAL tt12545362	0
-COL titleType VAL movie COL primaryTitle VAL Sevenler ölmez COL isAdult VAL 1 COL startYear VAL 1970 COL genres VAL Drama COL id VAL tt12536019	COL titleType VAL movie COL primaryTitle VAL Sevenler ölmezQ COL isAdult VAL 1 COL startYear VAL 1964 COL genres VAL Drama COL id VAL tt12536018	1
-COL titleType VAL short COL primaryTitle VAL Coven COL isAdult VAL 1 COL startYear VAL 2006 COL genres VAL Short COL id VAL tt12532525	COL titleType VAL short COL primaryTitle VAL Cannibals and Carpet Fitters COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Action-Comedy-Horror COL id VAL tt12542539	0
-COL titleType VAL tvSeries COL primaryTitle VAL Agua y aceite COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Crime-Drama-Romance COL id VAL tt0303418	COL titleType VAL tvSeries COL primaryTitle VAL Agua y aceite COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Crime-Drama-Romance COL id VAL tt12538176	1
-COL titleType VAL tvMovie COL primaryTitle VAL The Remarkable 20th Century COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL Documentary COL id VAL tt12543361	COL titleType VAL tvMovie COL primaryTitle VAL Remember Sunday COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama-Romance COL id VAL tt12538236	0
-COL titleType VAL tvMiniSeries COL primaryTitle VAL 1945 12 Städte 12 SchicksaleO COL isAdult VAL 0 COL startYear VAL 2020 COL genres VAL Documentary-History COL id VAL tt12532647	COL titleType VAL movie COL primaryTitle VAL Hot Rods to Hell COL isAdult VAL 0 COL startYear VAL 1967 COL genres VAL Thriller COL id VAL tt12539505	0
-COL titleType VAL short COL primaryTitle VAL Le czar en France  défilé des troupes COL isAdult VAL 1 COL startYear VAL 1888 COL genres VAL Documentary COL id VAL tt12540574	COL titleType VAL short COL primaryTitle VAL Pavle COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL Drama-Short COL id VAL tt2148964	0
-COL titleType VAL movie COL primaryTitle VAL Husbands HolidayA COL isAdult VAL 0 COL startYear VAL 1924 COL genres VAL Drama COL id VAL tt12545803	COL titleType VAL video COL primaryTitle VAL Backdoor Bonanza 9 COL isAdult VAL 1 COL startYear VAL 1984 COL genres VAL Adult COL id VAL tt12540780	0
-COL titleType VAL movie COL primaryTitle VAL Matrimonio al Sud COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Comedy COL id VAL tt12539805	COL titleType VAL ie COL primaryTitle VAL Matrimonio al Sudv COL isAdult VAL 0 COL startYear VAL 2006 COL genres VAL Comedy COL id VAL tt12539804	1
-COL titleType VAL video COL primaryTitle VAL Brothers in Arms The Making of a Modern Western COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL Documentary-Short COL id VAL tt12532726	COL titleType VAL short COL primaryTitle VAL BEARDS Noah  AnyaJ COL isAdult VAL 1 COL startYear VAL 2018 COL genres VAL Drama COL id VAL tt12545770	0
-COL titleType VAL movie COL primaryTitle VAL Doramundo COL isAdult VAL 0 COL startYear VAL 1978 COL genres VAL Crime COL id VAL tt12536509	COL titleType VAL movie COL primaryTitle VAL The Photograph COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Drama COL id VAL tt1067224	0
-COL titleType VAL short COL primaryTitle VAL Soft Rain COL isAdult VAL 1 COL startYear VAL 2014 COL genres VAL Drama-Short COL id VAL tt12539977	COL titleType VAL short COL primaryTitle VAL Soft Rain COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama-Short COL id VAL tt2907124	1
-COL titleType VAL tvMovie COL primaryTitle VAL Prep COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Comedy COL id VAL tt12540485	COL titleType VAL tvSpecial COL primaryTitle VAL Superstunt II COL isAdult VAL 1 COL startYear VAL 1979 COL genres VAL Documentary COL id VAL tt12533928	0
-COL titleType VAL movie COL primaryTitle VAL Lolitas Clubf COL isAdult VAL 0 COL startYear VAL 2009 COL genres VAL Drama COL id VAL tt12533439	COL titleType VAL video COL primaryTitle VAL How to Get Out of a Speeding Ticket COL isAdult VAL 0 COL startYear VAL 2018 COL genres VAL Comedy-Short COL id VAL tt12545742	0
-COL titleType VAL short COL primaryTitle VAL Superhero COL isAdult VAL 0 COL startYear VAL 2009 COL genres VAL Drama-Short COL id VAL tt1458786	COL titleType VAL movie COL primaryTitle VAL Stone Cold Dead COL isAdult VAL 0 COL startYear VAL 1979 COL genres VAL Crime-Thriller COL id VAL tt12534800	0
-COL titleType VAL tvSeries COL primaryTitle VAL Bez svideteleyv COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Drama COL id VAL tt12536747	COL titleType VAL video COL primaryTitle VAL Kolera  Seni SeviyorsunR COL isAdult VAL 1 COL startYear VAL 2021 COL genres VAL Music-Short COL id VAL tt12545911	0
-COL titleType VAL movie COL primaryTitle VAL CiprianoJ COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL Drama COL id VAL tt12542937	COL titleType VAL video COL primaryTitle VAL Star 85 COL isAdult VAL 0 COL startYear VAL 1985 COL genres VAL Adult COL id VAL tt12543979	0
-COL titleType VAL short COL primaryTitle VAL Coven COL isAdult VAL 0 COL startYear VAL 2006 COL genres VAL Fantasy COL id VAL tt12532526	COL titleType VAL short COL primaryTitle VAL CovenK COL isAdult VAL 0 COL startYear VAL 2005 COL genres VAL Short COL id VAL tt12532524	1
-COL titleType VAL tvMiniSeries COL primaryTitle VAL Brødrene Dal og spektralsteinene COL isAdult VAL 0 COL startYear VAL 1982 COL genres VAL Drama COL id VAL tt12544636	COL titleType VAL tvMiniSeries COL primaryTitle VAL Brødrene Dal og spektralsteineneD COL isAdult VAL 1 COL startYear VAL 1982 COL genres VAL Adventure-Comedy-Drama COL id VAL tt12544635	1
-COL titleType VAL movie COL primaryTitle VAL The SpartansM 300 COL isAdult VAL 0 COL startYear VAL 1964 COL genres VAL Adventure COL id VAL tt12534574	COL titleType VAL video COL primaryTitle VAL Impulse COL isAdult VAL 1 COL startYear VAL 2008 COL genres VAL Thriller COL id VAL tt12538865	0
-COL titleType VAL video COL primaryTitle VAL Extreme Schoolgirls 4 COL isAdult VAL 1 COL startYear VAL 2003 COL genres VAL Adult COL id VAL tt0391140	COL titleType VAL video COL primaryTitle VAL TheExtreme Schoolgirls 4 COL isAdult VAL 1 COL startYear VAL 1995 COL genres VAL Adult COL id VAL tt12544011	1
-COL titleType VAL video COL primaryTitle VAL Bollywood Queens Vol 2 COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Music COL id VAL tt12533476	COL titleType VAL short COL primaryTitle VAL The Van JobR COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Ce COL id VAL tt12531574	0
-COL titleType VAL tvSeries COL primaryTitle VAL  COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Comedy COL id VAL tt12539807	COL titleType VAL short COL primaryTitle VAL Det Glade Postbud COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Comedy-Short COL id VAL tt7144150	0
-COL titleType VAL movie COL primaryTitle VAL The Common Man COL isAdult VAL 0 COL startYear VAL 1983 COL genres VAL Drama COL id VAL tt12535534	COL titleType VAL short COL primaryTitle VAL The Last Honey Hunter COL isAdult VAL 0 COL startYear VAL 2027 COL genres VAL Documentary COL id VAL tt12537279	0
-COL titleType VAL mo COL primaryTitle VAL Beyaz mendil COL isAdult VAL 0 COL startYear VAL 1957 COL genres VAL Drama COL id VAL tt12542981	COL titleType VAL tvMovie COL primaryTitle VAL The Armstrong Tapes COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Documentary COL id VAL tt12538572	0
-COL titleType VAL movie COL primaryTitle VAL Valentine DayZ COL isAdult VAL 1 COL startYear VAL 2018 COL genres VAL Horror COL id VAL tt12542377	COL titleType VAL short COL primaryTitle VAL Balcony COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Drama-Mystery-Short COL id VAL tt12542272	0
-COL titleType VAL video COL primaryTitle VAL Abuse of Power COL isAdult VAL 0 COL startYear VAL 1997 COL genres VAL Adult COL id VAL tt12540340	COL titleType VAL short COL primaryTitle VAL BotchL COL isAdult VAL 0 COL startYear VAL 2003 COL genres VAL Drama COL id VAL tt12535772	0
-COL titleType VAL video COL primaryTitle VAL Tim Vine LiveH COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Comedy-Documentary COL id VAL tt12543414	COL titleType VAL video COL primaryTitle VAL Superior Firepower The Making of Aliensc COL isAdult VAL 0 COL startYear VAL 2003 COL genres VAL Documentary-SciFi COL id VAL tt12544410	0
-COL titleType VAL tvSeries COL primaryTitle VAL MasterChef TurkeyF COL isAdult VAL 0 COL startYear VAL 2014 COL genres VAL RealityTV COL id VAL tt12537199	COL titleType VAL movie COL primaryTitle VAL Astronauter og filmstjerner COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Comedy COL id VAL tt12537287	0
-COL titleType VAL tvMovie COL primaryTitle VAL Alien Siege COL isAdult VAL 0 COL startYear VAL 2005 COL genres VAL Action-Adventure-Drama COL id VAL tt0437803	COL titleType VAL short COL primaryTitle VAL Dawn BloomL COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Action-Drama-SciFi COL id VAL tt12540499	0
-COL titleType VAL movie COL primaryTitle VAL Ispytatelnyy srok COL isAdult VAL 0 COL startYear VAL 1961 COL genres VAL Crime-Drama COL id VAL tt12536863	COL titleType VAL short COL primaryTitle VAL Juice COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama COL id VAL tt12534776	0
-COL titleType VAL short COL primaryTitle VAL Upside Down COL isAdult VAL 0 COL startYear VAL 1968 COL genres VAL Short COL id VAL tt12541031	COL titleType VAL movie COL primaryTitle VAL Bandits of the WestU COL isAdult VAL 0 COL startYear VAL 1946 COL genres VAL Action COL id VAL tt12543877	0
-COL titleType VAL short COL primaryTitle VAL Upside Downv COL isAdult VAL 0 COL startYear VAL 1974 COL genres VAL Animation COL id VAL tt12541033	COL titleType VAL movie COL primaryTitle VAL State of Dogs COL isAdult VAL 0 COL startYear VAL 1998 COL genres VAL Documery COL id VAL tt0169268	0
-COL titleType VAL movie COL primaryTitle VAL Ladies Who Do COL isAdult VAL 0 COL startYear VAL 1963 COL genres VAL Comedy COL id VAL tt12535856	COL titleType VAL movie COL primaryTitle VAL Suyamvaram COL isAdult VAL 0 COL startYear VAL 1999 COL genres VAL Comedy COL id VAL tt0354946	0
-COL titleType VAL short COL primaryTitle VAL Juice COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama COL id VAL tt12534776	COL titleType VAL short COL primaryTitle VAL Bad Owl and the Fox Boy COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Fantasy-Short COL id VAL tt1781772	0
-COL titleType VAL movie COL primaryTitle VAL The Island of Dr Moreau COL isAdult VAL 0 COL startYear VAL 1977 COL genres VAL Adventure-Fantasy-Horror COL id VAL tt0076210	COL titleType VAL movie COL primaryTitle VAL Three Girls from Rome COL isAdult VAL 0 COL startYear VAL 1958 COL genres VAL Romance COL id VAL tt12536340	0
-COL titleType VAL short COL primaryTitle VAL Long Distance Information COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Drama-Family-Short COL id VAL tt12545340	COL titleType VAL tvMovie COL primaryTitle VAL Frank Skinner on George Formbye COL isAdult VAL 1 COL startYear VAL 2012 COL genres VAL Documentary COL id VAL tt12541427	0
-COL titleType VAL video COL primaryTitle VAL The Formula COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Action-Comedy-SciFi COL id VAL tt0386470	COL titleType VAL video COL primaryTitle VAL The Formula COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL SciFi COL id VAL tt12536431	1
-COL titleType VAL movie COL primaryTitle VAL Doutores Palhaços COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Documentary COL id VAL tt7633954	COL titleType VAL video COL primaryTitle VAL Ass Worship 7w COL isAdult VAL 1 COL startYear VAL 2005 COL genres VAL Adult COL id VAL tt12532319	0
-COL titleType VAL movie COL primaryTitle VAL Appooppan COL isAdult VAL  COL startYear VAL 1975 COL genres VAL Drama COL id VAL tt12537182	COL titleType VAL video COL primaryTitle VAL Bone ThugsnHarmony Feat Mariah Carey  Bow Wow Lil LOVE COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Music-Short COL id VAL tt12531262	0
-COL titleType VAL video COL primaryTitle VAL The Young Cadetsv COL isAdult VAL 1 COL startYear VAL 1991 COL genres VAL Adult COL id VAL tt12539070	COL titleType VAL movie COL primaryTitle VAL The Old Barn Dance COL isAdult VAL 0 COL startYear VAL 1938 COL genres VAL Action-Comedy-Music COL id VAL tt12535208	0
-COL titleType VAL movie COL primaryTitle VAL Appooppan COL isAdult VAL 0 COL startYear VAL 1976 COL genres VAL Drama COL id VAL tt0155505	COL titleType VAL movie COL primaryTitle VAL Agi Murad il diavolo biancoX COL isAdult VAL 0 COL startYear VAL 1965 COL genres VAL Adventure COL id VAL tt12537650	0
-COL titleType VAL tvSeries COL primaryTitle VAL Ramayan COL isAdult VAL 1 COL startYear VAL 2002 COL genres VAL Fantasy COL id VAL tt12531173	COL titleType VAL video COL primaryTitle VAL Brothers in Arms The Making of a Modern Western COL isAdult VAL 0 COL startYear VAL 2001 COL genres VAL Documentary-Short COL id VAL tt12532726	0
-COL titleType VAL video COL primaryTitle VAL The House That Freddy BuiltD COL isAdult VAL 0 COL startYear VAL 2008 COL genres VAL Documentary COL id VAL tt12536370	COL titleType VAL mo COL primaryTitle VAL The 1000 Eyes of Dr Maddin COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Documentary COL id VAL tt5014322	0
-COL titleType VAL tvShort COL primaryTitle VAL Bodyslam COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Action-Drama-Short COL id VAL tt2789248	COL titleType VAL tvShort COL primaryTitle VAL Bodyslam COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Action-Drama-Short COL id VAL tt12535459	1
-COL titleType VAL tvMovie COL primaryTitle VAL Prep COL isAdult VAL 0 COL startYear VAL 2002 COL genres VAL Comedy COL id VAL tt12540485	COL titleType VAL tvMovie COL primaryTitle VAL Prep COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Comedy COL id VAL tt12540484	1
-COL titleType VAL short COL primaryTitle VAL Philoctetes An Outsiders MythP COL isAdult VAL 0 COL startYear VAL 2008 COL genres VAL Documentary-Short COL id VAL tt12545168	COL titleType VAL movie COL primaryTitle VAL Behçet CezayirdeV COL isAdult VAL 0 COL startYear VAL 1972 COL genres VAL Action-Adventure-Crime COL id VAL tt12533504	0
-COL titleType VAL tvSpecial COL primaryTitle VAL Superstunt II COL isAdult VAL 0 COL startYear VAL 1979 COL genres VAL Documentary COL id VAL tt12533929	COL titleType VAL movie COL primaryTitle VAL The Green Butchers COL isAdult VAL 1 COL startYear VAL 2003 COL genres VAL Comedy-Drama COL id VAL tt12534908	0
-COL titleType VAL video COL primaryTitle VAL Bone ThugsnHarmony Feat Mariah Carey  Bow Wow Lil LOVE COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Music-Short COL id VAL tt12531262	COL titleType VAL video COL primaryTitle VAL Bone ThugsnHarmony Feat Mariah Carey  Bow Wow Lil LOVE COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Music-Short COL id VAL tt7349906	1
-COL titleType VAL movie COL primaryTitle VAL Ispytatelnyy srok COL isAdult VAL 1 COL startYear VAL 1960 COL genres VAL Crime COL id VAL tt12536864	COL titleType VAL tvSeries COL primaryTitle VAL Nepobedivo srce COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Drama-History-Romance COL id VAL tt1733412	0
-COL titleType VAL movie COL primaryTitle VAL Suyamvaramq COL isAdult VAL 0 COL startYear VAL 1999 COL genres VAL Comedy COL id VAL tt12539758	COL titleType VAL tvMovie COL primaryTitle VAL The Making of Rudyard Kiplings The Jungle Bookb COL isAdult VAL 0 COL startYear VAL 1994 COL genres VAL Documentary COL id VAL tt12543976	0
-COL titleType VAL short COL primaryTitle VAL Det Glade Postbud COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Comedy-Short COL id VAL tt7144150	COL titleType VAL short COL primaryTitle VAL Heavy Metal COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Short COL id VAL tt12539666	0
-COL titleType VAL video COL primaryTitle VAL Genesis History or MythE COL isAdult VAL 0 COL startYear VAL 1999 COL genres VAL TalkShow COL id VAL tt12535275	COL titleType VAL movie COL primaryTitle VAL Keine Angst vor Liebe COL isAdult VAL 0 COL startYear VAL 1933 COL genres VAL Comedy COL id VAL tt12536102	0
-COL titleType VAL movie COL primaryTitle VAL Death Smiles on a Murderer COL isAdult VAL 0 COL startYear VAL 1973 COL genres VAL Horror COL id VAL tt12540135	COL titleType VAL tvSeries COL primaryTitle VAL Jimeoind COL isAdult VAL 0 COL startYear VAL 1994 COL genres VAL Comedy COL id VAL tt12540342	0
-COL titleType VAL tvMovie COL primaryTitle VAL HR COL isAdult VAL 0 COL startYear VAL 2006 COL genres VAL Comedy COL id VAL tt12545224	COL titleType VAL movie COL primaryTitle VAL Liz and the Blue BirdP COL isAdult VAL 0 COL startYear VAL 2018 COL genres VAL Animation-Drama-Fantasy COL id VAL tt12544095	0
-COL titleType VAL movie COL primaryTitle VAL The Rider of Death Valley COL isAdult VAL 0 COL startYear VAL 1932 COL genres VAL Western COL id VAL tt12532254	COL titleType VAL short COL primaryTitle VAL Pool Fart COL isAdult VAL 0 COL startYear VAL 2014 COL genres VAL Comedy-Short COL id VAL tt12531849	0
-COL titleType VAL tvSeries COL primaryTitle VAL Busted Babysitters COL isAdult VAL 1 COL startYear VAL 2015 COL genres VAL Adult COL id VAL tt12539412	COL titleType VAL movie COL primaryTitle VAL Paul Krüger COL isAdult VAL 0 COL startYear VAL 1956 COL genres VAL Biography-Drama-War COL id VAL tt2035595	0
-COL titleType VAL video COL primaryTitle VAL Its a Mommy Thing 2 COL isAdult VAL 1 COL startYear VAL 2013 COL genres VAL Adult COL id VAL tt12534413	COL titleType VAL movie COL primaryTitle VAL Hidden Flaws COL isAdult VAL 0 COL startYear VAL 2012 COL genres VAL Drama COL id VAL tt12542253	0
-COL titleType VAL video COL primaryTitle VAL Bad Girls 6 COL isAdult VAL 1 COL startYear VAL 2011 COL genres VAL Adult COL id VAL tt2083932	COL titleType VAL movie COL primaryTitle VAL The Autistic Me One Year Onv COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Documentary COL id VAL tt12542380	0
-COL titleType VAL movie COL primaryTitle VAL Street Fighter The New Challengers COL isAdult VAL 1 COL startYear VAL 2007 COL genres VAL Animation COL id VAL tt12533045	COL titleType VAL movie COL primaryTitle VAL 68 Kill COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Comedy-Crime-Romance COL id VAL tt5189894	0
-COL titleType VAL movie COL primaryTitle VAL Zero Charismar COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama COL id VAL tt12537090	COL titleType VAL tvMovie COL primaryTitle VAL Frank Skinner on George Formby COL isAdult VAL 1 COL startYear VAL 2004 COL genres VAL Documentary COL id VAL tt12541426	0
-COL titleType VAL movie COL primaryTitle VAL Killers Delight COL isAdult VAL 0 COL startYear VAL 1978 COL genres VAL Horror-Thriller COL id VAL tt12545683	COL titleType VAL tvSeries COL primaryTitle VAL The Heights COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Drama COL id VAL tt12543171	0
-COL titleType VAL tvSeries COL primaryTitle VAL Peter Punk COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Comedy-Family-Music COL id VAL tt12537954	COL titleType VAL tvSpecial COL primaryTitle VAL UFC 132 Cruz vs FaberA COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Sport COL id VAL tt12541168	0
-COL titleType VAL video COL primaryTitle VAL The Marketing of Madness Are We All Insane COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Documentary COL id VAL tt2180561	COL titleType VAL sh COL primaryTitle VAL Backyards COL isAdult VAL 1 COL startYear VAL 2008 COL genres VAL Short COL id VAL tt12542352	0
-COL titleType VAL short COL primaryTitle VAL Kranke Schwestern COL isAdult VAL 1 COL startYear VAL 1995 COL genres VAL Comedy-Short COL id VAL tt12533178	COL titleType VAL movie COL primaryTitle VAL Al rojo vivo COL isAdult VAL 0 COL startYear VAL  COL genres VAL Drama COL id VAL tt0062646	0
-COL titleType VAL tvMovie COL primaryTitle VAL ReMastered The Miami Showband MassacreN COL isAdult VAL 0 COL startYear VAL 2019 COL genres VAL Crime-Documentary-Music COL id VAL tt12541637	COL titleType VAL tvShort COL primaryTitle VAL The Marshall of Trail CityR COL isAdult VAL 0 COL startYear VAL 1942 COL genres VAL Short-Western COL id VAL tt12536353	0
-COL titleType VAL tvSeries COL primaryTitle VAL DaisukiW COL isAdult VAL 0 COL startYear VAL 2008 COL genres VAL Drama COL id VAL tt12535013	COL titleType VAL movie COL primaryTitle VAL AirpocalypseF COL isAdult VAL 1 COL startYear VAL 2019 COL genres VAL Comedy COL id VAL tt12532349	0
-COL titleType VAL movie COL primaryTitle VAL Fourteens Good Eighteens Better COL isAdult VAL 1 COL startYear VAL 1990 COL genres VAL Documentary COL id VAL tt12533616	COL titleType VAL movie COL primaryTitle VAL Hidden Flaws COL isAdult VAL 1 COL startYear VAL 2001 COL genres VAL Drama COL id VAL tt12542254	0
-COL titleType VAL movie COL primaryTitle VAL Pet Shop COL isAdult VAL 0 COL startYear VAL 1994 COL genres VAL Family COL id VAL tt12542968	COL titleType VAL movie COL primaryTitle VAL The Coach YearOld 40 Figure Skaterf COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Biography-Drama-Sport COL id VAL tt12535746	0
-COL titleType VAL tvMovie COL primaryTitle VAL El pallasso i el Führer COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Drama COL id VAL tt0862799	COL titleType VAL tvMovie COL primaryTitle VAL El pallasso i el Führer COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Drama COL id VAL tt12533903	1
-COL titleType VAL tvMovie COL primaryTitle VAL El pallasso i el Führerh COL isAdult VAL 1 COL startYear VAL 2012 COL genres VAL Drama COL id VAL tt12533904	COL titleType VAL video COL primaryTitle VAL Hillside Cannibalsj COL isAdult VAL 1 COL startYear VAL 1999 COL genres VAL Comedy-Crime-Horror COL id VAL tt12538283	0
-COL titleType VAL video COL primaryTitle VAL The Mystery of the Shemitah Unlocked COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Documentary COL id VAL tt12541212	COL titleType VAL movie COL primaryTitle VAL Sinbad and the Caliph of Baghdad COL isAdult VAL 0 COL startYear VAL 1970 COL genres VAL Adventure COL id VAL tt12542027	0
-COL titleType VAL video COL primaryTitle VAL Its a Mommy Thing 2f COL isAdult VAL 1 COL startYear VAL 2007 COL genres VAL Adult COL id VAL tt12534412	COL titleType VAL video COL primaryTitle VAL Its a Mommy Thing 2 COL isAdult VAL 1 COL startYear VAL 2001 COL genres VAL Adult COL id VAL tt12534414	1
-COL titleType VAL short COL primaryTitle VAL Heavy Metal COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Short COL id VAL tt12539666	COL titleType VAL short COL primaryTitle VAL Heavy MetalK COL isAdult VAL 0 COL startYear VAL 2013 COL genres VAL Drama COL id VAL tt12539665	1
-COL titleType VAL video COL primaryTitle VAL This Is Hamlet COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Comedy-Documentary-Drama COL id VAL tt1715726	COL titleType VAL video COL primaryTitle VAL This Is Hamlett COL isAdult VAL  COL startYear VAL 2010 COL genres VAL Comedy-Documentary-Drama COL id VAL tt12542067	1
-COL titleType VAL short COL primaryTitle VAL Ta migC COL isAdult VAL 1 COL startYear VAL 2010 COL genres VAL Comedy-Short COL id VAL tt12538729	COL titleType VAL short COL primaryTitle VAL Ta mig COL isAdult VAL 0 COL startYear VAL 2010 COL genres VAL Comedy-Short COL id VAL tt1754567	1
-COL titleType VAL short COL primaryTitle VAL Crash Goes the Hash COL isAdult VAL 0 COL startYear VAL 1944 COL genres VAL Comedy-Short COL id VAL tt12543570	COL titleType VAL video COL primaryTitle VAL Californication Marcys Cougar Party COL isAdult VAL 0 COL startYear VAL 2009 COL genres VAL Short COL id VAL tt12544581	0
-COL titleType VAL video COL primaryTitle VAL Emma Smetana  Jordan Haj Lost and FoundK COL isAdult VAL 0 COL startYear VAL 2018 COL genres VAL Music-SciFi-Short COL id VAL tt12541085	COL titleType VAL short COL primaryTitle VAL Alone Together COL isAdult VAL 0 COL startYear VAL 2017 COL genres VAL Drama-Short COL id VAL tt6964378	0
-COL titleType VAL movie COL primaryTitle VAL The House by the LakeW COL isAdult VAL 0 COL startYear VAL 1976 COL genres VAL Horror-Thriller COL id VAL tt12533380	COL titleType VAL movie COL primaryTitle VAL The House by the Lakec COL isAdult VAL 0 COL startYear VAL 1976 COL genres VAL Thriller COL id VAL tt12533379	1
-COL titleType VAL tvSeries COL primaryTitle VAL Ali AlZibaqH COL isAdult VAL 1 COL startYear VAL 1988 COL genres VAL History COL id VAL tt12543390	COL titleType VAL tvSeries COL primaryTitle VAL Ali AlZibaqF COL isAdult VAL 1 COL startYear VAL 1989 COL genres VAL History COL id VAL tt12543389	1
-COL titleType VAL short COL primaryTitle VAL Think It Overd COL isAdult VAL 1 COL startYear VAL 1929 COL genres VAL Short COL id VAL tt12545330	COL titleType VAL movie COL primaryTitle VAL No Job for a Woman The Women Who Fought to Report WWII COL isAdult VAL 0 COL startYear VAL 2011 COL genres VAL Documentary COL id VAL tt12533822	0
-COL titleType VAL movie COL primaryTitle VAL Swift Sword COL isAdult VAL 0 COL startYear VAL 1980 COL genres VAL Action COL id VAL tt12534424	COL titleType VAL movie COL primaryTitle VAL Sevenler ölmezQ COL isAdult VAL 1 COL startYear VAL 1964 COL genres VAL Drama COL id VAL tt12536018	0
-COL titleType VAL video COL primaryTitle VAL Waco II the Big Lie Continues COL isAdult VAL 1 COL startYear VAL 2003 COL genres VAL Documentary COL id VAL tt12535244	COL titleType VAL movie COL primaryTitle VAL CockHammerm COL isAdult VAL 0 COL startYear VAL 2008 COL genres VAL Horror COL id VAL tt12542235	0
-COL titleType VAL tvMovie COL primaryTitle VAL Sayonara Debussy Pianist Tantei Misaki YôsukeJ COL isAdult VAL 1 COL startYear VAL 2016 COL genres VAL Mystery COL id VAL tt12541526	COL titleType VAL movie COL primaryTitle VAL The Photograph COL isAdult VAL 0 COL startYear VAL 2007 COL genres VAL Drama COL id VAL tt1067224	0
-COL titleType VAL movie COL primaryTitle VAL 3801 Lancaster American Tragedy COL isAdult VAL 0 COL startYear VAL 2015 COL genres VAL Crime-Documentary-Drama COL id VAL tt3727460	COL titleType VAL short COL primaryTitle VAL Waiting for the Timeb COL isAdult VAL 0 COL startYear VAL  COL genres VAL Short COL id VAL tt12534373	0
-COL titleType VAL movie COL primaryTitle VAL 68 Killj COL isAdult VAL 0 COL startYear VAL 2012 COL genres VAL Comedy-Crime-Romance COL id VAL tt12536310	COL titleType VAL movie COL primaryTitle VAL Muse Absolution Tour COL isAdult VAL  COL startYear VAL 2005 COL genres VAL Music COL id VAL tt12538867	0
+COL id VAL tt0298530	COL id VAL tt12539577	1
+COL id VAL tt12536864	COL id VAL tt0168007	1
+COL id VAL tt12542568	COL id VAL tt12542567	1
+COL id VAL tt0057241	COL id VAL tt12535858	1
+COL id VAL tt12543817	COL id VAL tt0054655	1
+COL id VAL tt5987338	COL id VAL tt12532317	1
+COL id VAL tt12540135	COL id VAL tt12541182	0
+COL id VAL tt1967616	COL id VAL tt12536079	1
+COL id VAL tt0354946	COL id VAL tt12533439	0
+COL id VAL tt12536308	COL id VAL tt12540396	0
+COL id VAL tt12539779	COL id VAL tt12539069	0
+COL id VAL tt12534414	COL id VAL tt12536621	0
+COL id VAL tt12545667	COL id VAL tt12541360	0
+COL id VAL tt12534799	COL id VAL tt12534800	1
+COL id VAL tt1787747	COL id VAL tt1874719	0
+COL id VAL tt12534576	COL id VAL tt12532316	0
+COL id VAL tt12540402	COL id VAL tt0307940	0
+COL id VAL tt12543760	COL id VAL tt12534252	0
+COL id VAL tt12537183	COL id VAL tt0155505	1
+COL id VAL tt12538729	COL id VAL tt2014365	0
+COL id VAL tt12540774	COL id VAL tt12541134	0
+COL id VAL tt12538281	COL id VAL tt1613875	0
+COL id VAL tt0055719	COL id VAL tt0467771	0
+COL id VAL tt12538608	COL id VAL tt12541125	0
+COL id VAL tt12545685	COL id VAL tt12545683	1
+COL id VAL tt12544010	COL id VAL tt12532524	0
+COL id VAL tt12532704	COL id VAL tt5880942	1
+COL id VAL tt12538547	COL id VAL tt12538792	0
+COL id VAL tt12545668	COL id VAL tt12545669	1
+COL id VAL tt12543116	COL id VAL tt12541425	0
+COL id VAL tt12537589	COL id VAL tt9747450	0
+COL id VAL tt12541069	COL id VAL tt12533525	0
+COL id VAL tt12539807	COL id VAL tt12535746	0
+COL id VAL tt12542002	COL id VAL tt12536102	0
+COL id VAL tt7905602	COL id VAL tt3114132	0
+COL id VAL tt12545743	COL id VAL tt12545742	1
+COL id VAL tt0077668	COL id VAL tt0387937	0
+COL id VAL tt12541801	COL id VAL tt12545584	0
+COL id VAL tt12534926	COL id VAL tt4575154	0
+COL id VAL tt12533403	COL id VAL tt12545160	0
+COL id VAL tt12536019	COL id VAL tt12536018	1
+COL id VAL tt2099698	COL id VAL tt1255975	0
+COL id VAL tt0303418	COL id VAL tt12538176	1
+COL id VAL tt7350062	COL id VAL tt12544707	0
+COL id VAL tt12545336	COL id VAL tt12543062	0
+COL id VAL tt12543467	COL id VAL tt0949506	0
+COL id VAL tt0271435	COL id VAL tt12538450	0
+COL id VAL tt12539805	COL id VAL tt12539804	1
+COL id VAL tt0350037	COL id VAL tt12540786	0
+COL id VAL tt12532165	COL id VAL tt12537777	0
+COL id VAL tt12539977	COL id VAL tt2907124	1
+COL id VAL tt12544325	COL id VAL tt12545261	0
+COL id VAL tt12541733	COL id VAL tt6620638	0
+COL id VAL tt1164089	COL id VAL tt12536025	0
+COL id VAL tt12541325	COL id VAL tt12532321	0
+COL id VAL tt12541734	COL id VAL tt12541305	0
+COL id VAL tt12532526	COL id VAL tt12532524	1
+COL id VAL tt12544636	COL id VAL tt12544635	1
+COL id VAL tt12539966	COL id VAL tt12542541	0
+COL id VAL tt0391140	COL id VAL tt12544011	1
+COL id VAL tt12534640	COL id VAL tt6988208	0
+COL id VAL tt12545225	COL id VAL tt12535580	0
+COL id VAL tt12542733	COL id VAL tt12543978	0
+COL id VAL tt12536797	COL id VAL tt12536434	0
+COL id VAL tt12541931	COL id VAL tt12542235	0
+COL id VAL tt12543484	COL id VAL tt12542104	0
+COL id VAL tt12542382	COL id VAL tt12541213	0
+COL id VAL tt12534502	COL id VAL tt12536928	0
+COL id VAL tt0175904	COL id VAL tt12542970	0
+COL id VAL tt0386470	COL id VAL tt12540484	0
+COL id VAL tt12540215	COL id VAL tt12535196	0
+COL id VAL tt1781772	COL id VAL tt12541033	0
+COL id VAL tt12543412	COL id VAL tt12532321	0
+COL id VAL tt12545091	COL id VAL tt12543042	0
+COL id VAL tt12532474	COL id VAL tt12539457	0
+COL id VAL tt2180561	COL id VAL tt1339463	0
+COL id VAL tt0386470	COL id VAL tt12536431	1
+COL id VAL tt12532884	COL id VAL tt12534801	0
+COL id VAL tt0351173	COL id VAL tt12545572	0
+COL id VAL tt12539411	COL id VAL tt0452323	0
+COL id VAL tt12533316	COL id VAL tt12534575	0
+COL id VAL tt12534012	COL id VAL tt12541436	0
+COL id VAL tt12543103	COL id VAL tt12533953	0
+COL id VAL tt2789248	COL id VAL tt12535459	1
+COL id VAL tt12540485	COL id VAL tt12540484	1
+COL id VAL tt12535853	COL id VAL tt12533818	0
+COL id VAL tt12544760	COL id VAL tt12543101	0
+COL id VAL tt12531262	COL id VAL tt7349906	1
+COL id VAL tt1978512	COL id VAL tt12536237	0
+COL id VAL tt7089878	COL id VAL tt12532776	0
+COL id VAL tt2513610	COL id VAL tt12545168	0
+COL id VAL tt12542568	COL id VAL tt12545653	0
+COL id VAL tt0250341	COL id VAL tt1325031	0
+COL id VAL tt12543980	COL id VAL tt12531057	0
+COL id VAL tt0091604	COL id VAL tt7905602	0
+COL id VAL tt12542968	COL id VAL tt12541274	0
+COL id VAL tt12543819	COL id VAL tt0809917	0
+COL id VAL tt0050282	COL id VAL tt12535195	0
+COL id VAL tt12539576	COL id VAL tt12531609	0
+COL id VAL tt12535161	COL id VAL tt12545311	0
+COL id VAL tt0062646	COL id VAL tt12539290	0
+COL id VAL tt12541832	COL id VAL tt7507362	0
+COL id VAL tt12540459	COL id VAL tt12543171	0
+COL id VAL tt0105597	COL id VAL tt12537037	0
+COL id VAL tt12533929	COL id VAL tt0431579	0
+COL id VAL tt0167812	COL id VAL tt12545572	0
+COL id VAL tt12538459	COL id VAL tt0250784	0
+COL id VAL tt12532007	COL id VAL tt12542566	0
+COL id VAL tt0862799	COL id VAL tt12533903	1
+COL id VAL tt12540412	COL id VAL tt12536340	0
+COL id VAL tt12543171	COL id VAL tt12544078	0
+COL id VAL tt12534412	COL id VAL tt12534414	1
+COL id VAL tt12539666	COL id VAL tt12539665	1
+COL id VAL tt1715726	COL id VAL tt12542067	1
+COL id VAL tt12538729	COL id VAL tt1754567	1
+COL id VAL tt9426804	COL id VAL tt12542790	0
+COL id VAL tt12542899	COL id VAL tt12542406	0
+COL id VAL tt12533380	COL id VAL tt12533379	1
+COL id VAL tt12543390	COL id VAL tt12543389	1
+COL id VAL tt12545835	COL id VAL tt12532624	0
+COL id VAL tt12543703	COL id VAL tt6083652	0
+COL id VAL tt12542684	COL id VAL tt12542910	0
+COL id VAL tt12543362	COL id VAL tt12536725	0
+COL id VAL tt4492840	COL id VAL tt12544879	0
+COL id VAL tt0395779	COL id VAL tt0031799	0

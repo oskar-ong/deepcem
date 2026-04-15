@@ -1,596 +1,596 @@
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	COL primaryName VAL Marty McIntosh COL id VAL nm2006841	0
-COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm21959608	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm5479763	1
-COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm1541933	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm21968101	0
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm21963146	1
-COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	0
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	0
-COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm21964169	COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	0
-COL primaryName VAL Martín Farina\\ COL primaryProfession VAL writer-director-producer COL id VAL nm21968199	COL primaryName VAL Caio Marcio dos Santos COL primaryProfession VAL  COL id VAL nm5714828	0
-COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm1887521	COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm21959643	0
-COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm1561355	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm4337198	0
-COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	COL primaryName VAL Adam FinkenJ COL primaryProfession VAL writer-composer COL id VAL nm21959553	0
-COL primaryName VAL John Bunny COL primaryProfession VAL actor COL id VAL nm0120544	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	0
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	COL primaryName VAL Mark Badgerx COL primaryProfession VAL writer COL id VAL nm21968408	0
-COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm1309825	COL primaryName VAL Kal Penn COL primaryProfession VAL actor-miscellaneous-producer COL id VAL nm0671980	0
-COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm0238669	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm21963146	0
-COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	1
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	0
-COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor COL id VAL nm1745269	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm0238669	0
-COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director COL id VAL nm3192494	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director COL id VAL nm21963206	0
-COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm21959567	COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm21968407	0
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL MeiLing ChaoE COL primaryProfession VAL actress COL id VAL nm21966244	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	0
-COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm1309825	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm21966552	1
-COL primaryName VAL Martin Parrisi COL primaryProfession VAL production_department-miscellaneous COL id VAL nm21961671	COL primaryName VAL Martin Parris COL primaryProfession VAL actor-miscaneous COL id VAL nm2684703	1
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	0
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm21955339	COL primaryName VAL Jade Cheng COL primaryProfession VAL actress COL id VAL nm8345715	0
-COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	0
-COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm21967262	COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955151	0
-COL primaryName VAL Robert W Paul COL primaryProfession VAL producer-cinematographer-director COL id VAL nm0666972	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm21966552	0
-COL primaryName VAL Yorgos Avgeropoulos COL primaryProfession VAL director-writer-producer COL id VAL nm21957663	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	0
-COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	0
-COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm21966317	COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm0587459	1
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964035	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm3164594	0
-COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm1407334	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	0
-COL primaryName VAL Ghalia BenaliC COL primaryProfession VAL actress COL id VAL nm21957109	COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	0
-COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer COL id VAL nm21960613	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm0305380	0
-COL primaryName VAL Eddison von Ottenfeld COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm0902783	COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	0
-COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department COL id VAL nm4341871	COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm21955150	0
-COL primaryName VAL Vikram Rajani COL primaryProfession VAL producer-miscellaneous COL id VAL nm2236337	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	0
-COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm21965509	COL primaryName VAL Andrey OsipovV COL primaryProfession VAL director-actor-writer COL id VAL nm21965508	1
-COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm21965509	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	1
-COL primaryName VAL Jade ChengK COL primaryProfession VAL actress COL id VAL nm21963955	COL primaryName VAL Jade Cheng COL primaryProfession VAL actress COL id VAL nm8345715	1
-COL primaryName VAL Alan Weisenbergers COL primaryProfession VAL location_management-cinematographer COL id VAL nm21966577	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	0
-COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director COL id VAL nm21962985	COL primaryName VAL Davide Cirri COL id VAL nm21959207	0
-COL primaryName VAL Mead Wrik COL primaryProfession VAL director-writer-cinematographer COL id VAL nm0574934	COL primaryName VAL Avinesh RekhiC COL primaryProfession VAL  COL id VAL nm21967902	0
-COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	COL primaryName VAL Wrik Meadu COL primaryProfession VAL art_director-writer-cinematographer COL id VAL nm21959996	0
-COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm21966552	0
-COL primaryName VAL Lev Milchin COL primaryProfession VAL director-art_director-production_designer COL id VAL nm21961949	COL primaryName VAL Lev Milcihn COL primaryProfession VAL director-art_director-production_designer COL id VAL nm0586975	1
-COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	0
-COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955152	COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0878031	1
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	COL primaryName VAL Olga VasilenkoR COL primaryProfession VAL editor COL id VAL nm21961948	1
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	COL primaryName VAL Sharat Rajuk COL primaryProfession VAL  COL id VAL nm21965561	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956563	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	1
-COL primaryName VAL Olga VasilenkoR COL primaryProfession VAL editor COL id VAL nm21961948	COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	1
-COL primaryName VAL Christoph Hildebrandt COL id VAL nm3157695	COL primaryName VAL Will B Hardq COL primaryProfession VAL animation_department COL id VAL nm21959642	0
-COL primaryName VAL Rogelio Guerra COL primaryProfession VAL actor COL id VAL nm0346080	COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1531103	0
-COL primaryName VAL Lauren Collins COL primaryProfession VAL actress-producer-writer COL id VAL nm21956450	COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress COL id VAL nm21960795	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm21955480	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	0
-COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	0
-COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm0233215	0
-COL primaryName VAL Yorgos Avgeropoulos COL primaryProfession VAL director-writer-producer COL id VAL nm2513694	COL primaryName VAL Yorgos Avgeropoulos COL primaryProfession VAL director-writer-producer COL id VAL nm21957663	1
-COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm21960796	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	1
-COL primaryName VAL John Glennb COL primaryProfession VAL writer COL id VAL nm21966578	COL primaryName VAL The Jazz Girls COL primaryProfession VAL actress COL id VAL nm1011374	0
-COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor COL id VAL nm1745269	COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	1
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	1
-COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21959208	1
-COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Rahul COL primaryProfession VAL actor COL id VAL nm0222144	COL primaryName VAL Michaela Furney COL primaryProfession VAL miscellaneous COL id VAL nm1748441	0
-COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	COL primaryName VAL Dave Pattenu COL primaryProfession VAL animation_department-writer-editor COL id VAL nm21959295	0
-COL primaryName VAL Salvador Pineda COL primaryProfession VAL actor COL id VAL nm0684044	COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm21955150	0
-COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm0742759	1
-COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm0233215	COL primaryName VAL Jade Cheng COL primaryProfession VAL actress COL id VAL nm8345715	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	0
-COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm1561355	COL primaryName VAL Lev Milchin COL primaryProfession VAL director-art_director-production_designer COL id VAL nm21961949	0
-COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	COL primaryName VAL Alan Weisenberger COL primaryProfession VAL camera_department-cinematographer COL id VAL nm4136197	0
-COL primaryName VAL Anaïs BarbeauLavalette COL primaryProfession VAL director-writer-cinematographer COL id VAL nm1932706	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm0305380	0
-COL primaryName VAL Finch Nissen COL primaryProfession VAL actor-writer-director COL id VAL nm2192516	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	0
-COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm4384917	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm21967262	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	0
-COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	0
-COL primaryName VAL The Jazz Girls COL primaryProfession VAL actress COL id VAL nm1011374	COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	1
-COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department COL id VAL nm4341871	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	0
-COL primaryName VAL Evo Moralesd COL primaryProfession VAL art_director COL id VAL nm21957664	COL primaryName VAL Evo Morales COL id VAL nm2133486	1
-COL primaryName VAL Emil GalstyanJ COL primaryProfession VAL art_director COL id VAL nm21966798	COL primaryName VAL Emil Galstyan COL primaryProfession VAL actor COL id VAL nm7105651	1
-COL primaryName VAL Jade ChengK COL primaryProfession VAL actress COL id VAL nm21963955	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	0
-COL primaryName VAL Marlen Diazk COL primaryProfession VAL actress COL id VAL nm21959294	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm21959567	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm1561355	0
-COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm1541933	0
-COL primaryName VAL Wayne Uptown Johnson COL primaryProfession VAL cinematographer-actor-editor COL id VAL nm7031415	COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	1
-COL primaryName VAL Martín Farina COL primaryProfession VAL cinematographer-director-producer COL id VAL nm3551347	COL primaryName VAL Martín Farina\\ COL primaryProfession VAL writer-director-producer COL id VAL nm21968199	1
-COL primaryName VAL Marilyn Manson COL primaryProfession VAL soundtrack-composer-actor COL id VAL nm21968176	COL primaryName VAL Marilyn Manson COL primaryProfession VAL soundtrack-composer-actor COL id VAL nm0001504	1
-COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	COL primaryName VAL Marilyn Manson COL primaryProfession VAL soundtrack-composer-actor COL id VAL nm0001504	0
-COL primaryName VAL Yu Baie COL primaryProfession VAL actor COL id VAL nm21963954	COL primaryName VAL Denys Colomb de Daunant_ COL primaryProfession VAL assistant-writer-actor COL id VAL nm21962502	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm0742759	0
-COL primaryName VAL Jade ChengK COL primaryProfession VAL actress COL id VAL nm21963955	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	0
-COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm0587459	COL primaryName VAL Michaela FurneyO COL primaryProfession VAL miscellaneous COL id VAL nm21955325	0
-COL primaryName VAL Davide Cirri COL id VAL nm7669443	COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm21968249	0
-COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	COL primaryName VAL Matthew LevinE COL primaryProfession VAL composer-director-editor COL id VAL nm21962763	0
-COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm0742759	COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	1
-COL primaryName VAL Jade ChengK COL primaryProfession VAL actress COL id VAL nm21963955	COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm21968102	0
-COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm0657162	0
-COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	COL primaryName VAL Marty McIntosh COL id VAL nm2006841	0
-COL primaryName VAL Jess Weiss COL primaryProfession VAL misceleous-producer-director COL id VAL nm4457467	COL primaryName VAL Jess Weissm COL primaryProfession VAL music_department-producer-director COL id VAL nm21958966	1
-COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	COL primaryName VAL Lev Milcihn COL primaryProfession VAL director-art_director-production_designer COL id VAL nm0586975	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Yu Baie COL primaryProfession VAL actor COL id VAL nm21963954	0
-COL primaryName VAL Clayton S Taylor COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm3139442	COL primaryName VAL Amy Adamst COL primaryProfession VAL  COL id VAL nm21969201	0
-COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	COL primaryName VAL Avinesh Rekhi COL primaryProfession VAL actor COL id VAL nm3978505	0
-COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	COL primaryName VAL Evo Morales COL id VAL nm2133486	0
-COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm4384917	COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	0
-COL primaryName VAL Eddison von Ottenfeld COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm0902783	COL primaryName VAL Henry Cavill COL primaryProfession VAL actor COL id VAL nm0147147	0
-COL primaryName VAL Kristin Booth COL primaryProfession VAL actress-writer-producer COL id VAL nm0095746	COL primaryName VAL Finch Nissent COL primaryProfession VAL actor-writer-director COL id VAL nm21961111	0
-COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	COL primaryName VAL Henry Short COL primaryProfession VAL cinematographer-director-editor COL id VAL nm0795060	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm21955480	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm3164594	0
-COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm0682408	COL primaryName VAL Mead Wrik COL primaryProfession VAL director-writer-cinematographer COL id VAL nm0574934	0
-COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director COL id VAL nm3192494	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor COL id VAL nm0957595	0
-COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer COL id VAL nm21958422	COL primaryName VAL John Bunny COL primaryProfession VAL actor COL id VAL nm0120544	0
-COL primaryName VAL Bill Bixbyx COL primaryProfession VAL actor-director-producer COL id VAL nm21966722	COL primaryName VAL Bill Bixby COL primaryProfession VAL actor-director-producer COL id VAL nm0084642	1
-COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	COL primaryName VAL Yan Frenkel COL primaryProfession VAL composer-actor-soundtrack COL id VAL nm0294279	0
-COL primaryName VAL Marty McIntosh COL id VAL nm2006841	COL primaryName VAL Alan Weisenbergers COL primaryProfession VAL location_management-cinematographer COL id VAL nm21966577	0
-COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm21965152	COL primaryName VAL Adams COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0010736	0
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	0
-COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer COL id VAL nm21960612	0
-COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	0
-COL primaryName VAL Bill Bixbyx COL primaryProfession VAL actor-director-producer COL id VAL nm21966722	COL primaryName VAL Rudolf van den Berg COL primaryProfession VAL director-writer-actor COL id VAL nm0073888	0
-COL primaryName VAL Avinesh RekhiC COL primaryProfession VAL  COL id VAL nm21967902	COL primaryName VAL Will B Hard COL primaryProfession VAL cinematographer COL id VAL nm0362027	0
-COL primaryName VAL Martín Farina\\ COL primaryProfession VAL writer-director-producer COL id VAL nm21968199	COL primaryName VAL Marlen Diaz COL primaryProfession VAL actress COL id VAL nm5970991	0
-COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm1541933	COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm21961597	1
-COL primaryName VAL Jens Johansson COL primaryProfession VAL actor-soundtrack COL id VAL nm1725970	COL primaryName VAL Jens JohanssonT COL primaryProfession VAL actor-soundtrack COL id VAL nm21968112	1
-COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	COL primaryName VAL Adams COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0010736	0
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	0
-COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor COL id VAL nm1745269	COL primaryName VAL Martin Waetzold COL id VAL nm3157936	0
-COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm21968111	0
-COL primaryName VAL Gerhard Heinz COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm0374569	COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm21955480	0
-COL primaryName VAL Jess Weiss COL primaryProfession VAL misceleous-producer-director COL id VAL nm4457467	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm21968111	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department COL id VAL nm21958188	0
-COL primaryName VAL Jay Wasley COL primaryProfession VAL sound_department-cinematographer-camera_department COL id VAL nm21959293	COL primaryName VAL Jay Wasley COL primaryProfession VAL sound_department-cinematographer-camera_department COL id VAL nm2769456	1
-COL primaryName VAL Martin Waetzold COL id VAL nm3157936	COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	1
-COL primaryName VAL Amy Adamst COL primaryProfession VAL  COL id VAL nm21969201	COL primaryName VAL Adams COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0010736	1
-COL primaryName VAL Finch Nissent COL primaryProfession VAL actor-writer-director COL id VAL nm21961111	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm21959608	0
-COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	0
-COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	COL primaryName VAL Kal PennJ COL primaryProfession VAL assistant_director-miscellaneous-producer COL id VAL nm21965562	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	COL primaryName VAL Yan Frenkel COL primaryProfession VAL composer-actor-soundtrack COL id VAL nm0294279	0
-COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	0
-COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer COL id VAL nm21960612	COL primaryName VAL Evo Morales COL id VAL nm2133486	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956563	COL primaryName VAL Kal PennJ COL primaryProfession VAL assistant_director-miscellaneous-producer COL id VAL nm21965562	0
-COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm1887521	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm21964169	1
-COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	COL primaryName VAL Rogelio Guerra COL primaryProfession VAL actor COL id VAL nm0346080	0
-COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor COL id VAL nm5374866	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	0
-COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	0
-COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955152	COL primaryName VAL Julian Józef Antonisz COL primaryProfession VAL director-writer-composer COL id VAL nm2355394	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	0
-COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	0
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	0
-COL primaryName VAL Rogelio Guerrao COL primaryProfession VAL actor COL id VAL nm21964032	COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	0
-COL primaryName VAL Jens JohanssonT COL primaryProfession VAL actor-soundtrack COL id VAL nm21968112	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	0
-COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	COL primaryName VAL Martin Parris COL primaryProfession VAL actor-miscaneous COL id VAL nm2684703	0
-COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor COL id VAL nm5374866	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor COL id VAL nm21962818	1
-COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm21955150	COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm21967352	0
-COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm0456562	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	1
-COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department COL id VAL nm21958188	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	0
-COL primaryName VAL Denys Colomb de Daunant_ COL primaryProfession VAL assistant-writer-actor COL id VAL nm21962502	COL primaryName VAL Denys Colomb de Daunanti COL primaryProfession VAL composer-writer-actor COL id VAL nm21962501	1
-COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm1407334	COL primaryName VAL Gerhard Heinz COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm0374569	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm21960796	0
-COL primaryName VAL Mead Wrik COL primaryProfession VAL director-writer-cinematographer COL id VAL nm0574934	COL primaryName VAL Wrik Meadu COL primaryProfession VAL art_director-writer-cinematographer COL id VAL nm21959996	1
-COL primaryName VAL Anaïs BarbeauLavalette COL primaryProfession VAL director-writer-cinematographer COL id VAL nm1932706	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Adam FinkenJ COL primaryProfession VAL writer-composer COL id VAL nm21959553	COL primaryName VAL Adam Finken COL primaryProfession VAL soundtrack-composer COL id VAL nm5039492	1
-COL primaryName VAL Sharat Rajuk COL primaryProfession VAL  COL id VAL nm21965561	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm0961594	1
-COL primaryName VAL Caio Marcio dos Santos COL primaryProfession VAL  COL id VAL nm5714828	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	0
-COL primaryName VAL Maksim Bramatkin COL primaryProfession VAL actor COL id VAL nm2809173	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21959208	0
-COL primaryName VAL Kristin Booth COL primaryProfession VAL actress-writer-producer COL id VAL nm0095746	COL primaryName VAL Wyclef Jean COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm0419889	0
-COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director COL id VAL nm21962985	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	0
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	0
-COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm21959643	COL primaryName VAL Adam FinkenJ COL primaryProfession VAL writer-composer COL id VAL nm21959553	0
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm0657162	COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress COL id VAL nm21958597	0
-COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm21961046	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	0
-COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm0456562	0
-COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm0238669	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	1
-COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	0
-COL primaryName VAL Wrik Meadu COL primaryProfession VAL art_director-writer-cinematographer COL id VAL nm21959996	COL primaryName VAL Martin Parris COL primaryProfession VAL actor-miscaneous COL id VAL nm2684703	0
-COL primaryName VAL Combat COL primaryProfession VAL actor COL id VAL nm21955478	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL O Jochen Schmidt COL primaryProfession VAL production_desig-art_director-art_department COL id VAL nm21969452	COL primaryName VAL Will B Hard COL primaryProfession VAL cinematographer COL id VAL nm0362027	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm7440261	COL primaryName VAL Marty McIntosh COL id VAL nm2006841	0
-COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	COL primaryName VAL John Glennb COL primaryProfession VAL writer COL id VAL nm21966578	0
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm21969111	COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm0127758	1
-COL primaryName VAL Scott Appleby COL primaryProfession VAL producer COL id VAL nm21959609	COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	0
-COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955152	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	0
-COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm0233215	COL primaryName VAL Caio Marcio dos SantosT COL primaryProfession VAL composer COL id VAL nm21958967	0
-COL primaryName VAL Alan Weisenberger COL primaryProfession VAL camera_department-cinematographer COL id VAL nm4136197	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	COL primaryName VAL Yu Baie COL primaryProfession VAL actor COL id VAL nm21963954	1
-COL primaryName VAL Bill Bixbyx COL primaryProfession VAL actor-director-producer COL id VAL nm21966722	COL primaryName VAL Arturo Smiths COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm21962198	0
-COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress COL id VAL nm21958597	COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	1
-COL primaryName VAL Henry Short COL primaryProfession VAL cinematographer-director-editor COL id VAL nm0795060	COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	0
-COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	0
-COL primaryName VAL Rogelio Guerrao COL primaryProfession VAL actor COL id VAL nm21964032	COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm2113577	0
-COL primaryName VAL Clayton S Taylorg COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm21961112	COL primaryName VAL Clayton S Taylor COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm3139442	1
-COL primaryName VAL Maksim Bramatkin COL primaryProfession VAL actor COL id VAL nm2809173	COL primaryName VAL Maksim BramatkinW COL primaryProfession VAL special_effects COL id VAL nm21957344	1
-COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	COL primaryName VAL Henry Cavill COL primaryProfession VAL actor COL id VAL nm0147147	0
-COL primaryName VAL Clayton S Taylor COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm3139442	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	0
-COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	COL primaryName VAL Steffen SchmidtX COL primaryProfession VAL costume_designer-music_department COL id VAL nm21969038	1
-COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress COL id VAL nm21960795	COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	1
-COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm21959567	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	0
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	COL primaryName VAL Mead Wrik COL primaryProfession VAL director-writer-cinematographer COL id VAL nm0574934	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1531103	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	0
-COL primaryName VAL Combat COL primaryProfession VAL actor COL id VAL nm21955478	COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	0
-COL primaryName VAL John Glenn COL primaryProfession VAL actor COL id VAL nm0322625	COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer COL id VAL nm21958422	0
-COL primaryName VAL O Jochen Schmidt COL primaryProfession VAL production_desig-art_director-art_department COL id VAL nm21969452	COL primaryName VAL O Jochen Schmidt COL primaryProfession VAL production_designer-art_director-art_department COL id VAL nm0773137	1
-COL primaryName VAL Robert W Paul COL primaryProfession VAL producer-cinematographer-director COL id VAL nm0666972	COL primaryName VAL Dave Pattenu COL primaryProfession VAL animation_department-writer-editor COL id VAL nm21959295	0
-COL primaryName VAL ChenNan Tsai COL primaryProfession VAL actor-soundtrack COL id VAL nm0128757	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	0
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm21955339	1
-COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director COL id VAL nm5404297	0
-COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm21965509	COL primaryName VAL Will B Hardq COL primaryProfession VAL animation_department COL id VAL nm21959642	0
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964034	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	1
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm2832339	0
-COL primaryName VAL Amy Adamst COL primaryProfession VAL  COL id VAL nm21969201	COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	0
-COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer COL id VAL nm21960612	1
-COL primaryName VAL Vasiliy Livanov COL primaryProfession VAL actor-writer-director COL id VAL nm0515106	COL primaryName VAL Clayton S Taylor COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm3139442	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Marilyn Manson COL primaryProfession VAL soundtrack-composer-actor COL id VAL nm21968176	0
-COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	0
-COL primaryName VAL Vikram Rajani COL primaryProfession VAL producer-miscellaneous COL id VAL nm2236337	COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	1
-COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	0
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm0127758	COL primaryName VAL Will B Hard COL primaryProfession VAL cinematographer COL id VAL nm0362027	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	COL primaryName VAL  COL primaryProfession VAL actor-director-writer COL id VAL nm3376469	0
-COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	0
-COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer COL id VAL nm21958422	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	0
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	COL primaryName VAL O Jochen Schmidt COL primaryProfession VAL production_desig-art_director-art_department COL id VAL nm21969452	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm7440261	COL primaryName VAL iXnxuan Liu COL primaryProfession VAL actress COL id VAL nm21969160	1
-COL primaryName VAL Matthew Levin COL primaryProfession VAL producer-director-editor COL id VAL nm1920037	COL primaryName VAL Matthew LevinE COL primaryProfession VAL composer-director-editor COL id VAL nm21962763	1
-COL primaryName VAL Neville Raschid\\ COL primaryProfession VAL manager-director-actor COL id VAL nm21968376	COL primaryName VAL Ana Blanco de Córdovax COL primaryProfession VAL actress COL id VAL nm21958597	0
-COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	0
-COL primaryName VAL Marlen Diaz COL primaryProfession VAL actress COL id VAL nm5970991	COL primaryName VAL Marlen Diazk COL primaryProfession VAL actress COL id VAL nm21959294	1
-COL primaryName VAL Lauren Collins COL primaryProfession VAL actress-producer-writer COL id VAL nm21956450	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm21961046	0
-COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	COL primaryName VAL Alan Weisenbergers COL primaryProfession VAL location_management-cinematographer COL id VAL nm21966577	0
-COL primaryName VAL Wyclef Jean COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm0419889	COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department COL id VAL nm21962986	0
-COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm21957345	0
-COL primaryName VAL Nemanja Mosurvoic COL primaryProfession VAL composer-music_department COL id VAL nm0609252	COL primaryName VAL Julian Józef Antonisz COL primaryProfession VAL director-writer-composer COL id VAL nm2355394	0
-COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer COL id VAL nm21960613	COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer COL id VAL nm4678220	1
-COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer COL id VAL nm21960612	COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Jon Dunham COL primaryProfession VAL cinematographer-editor-camera_department COL id VAL nm21966552	0
-COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	COL primaryName VAL Jay Wasley COL primaryProfession VAL sound_department-cinematographer-camera_department COL id VAL nm21959293	0
-COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm0305380	0
-COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor COL id VAL nm21962818	COL primaryName VAL Hubert Frank COL primaryProfession VAL director-writer-actor COL id VAL nm21968658	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	COL primaryName VAL Caio Marcio dos Santos COL primaryProfession VAL  COL id VAL nm5714828	0
-COL primaryName VAL Lorenzo Levrini COL primaryProfession VAL cinematographer-camera_department COL id VAL nm4341871	COL primaryName VAL Kristin Booth COL primaryProfession VAL actress-writer-producer COL id VAL nm0095746	0
-COL primaryName VAL Rudolf van den BergN COL primaryProfession VAL director-writer-actor COL id VAL nm21955840	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	0
-COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor COL id VAL nm21966318	COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	0
-COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm3264655	COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm21955902	1
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1531103	COL primaryName VAL Bill Bixbyx COL primaryProfession VAL actor-director-producer COL id VAL nm21966722	0
-COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm21959467	COL primaryName VAL Eddison von Ottenfeld COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm0902783	0
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm0495790	0
-COL primaryName VAL Andrey OsipovV COL primaryProfession VAL director-actor-writer COL id VAL nm21965508	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	1
-COL primaryName VAL Wyclef Jean COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm0419889	COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress COL id VAL nm21960795	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956563	1
-COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	COL primaryName VAL Rosie Dayv COL primaryProfession VAL producer-director-writer COL id VAL nm21958421	0
-COL primaryName VAL Denys Colomb de Daunanti COL primaryProfession VAL composer-writer-actor COL id VAL nm21962501	COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm21965152	0
-COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	COL primaryName VAL Kal PennJ COL primaryProfession VAL assistant_director-miscellaneous-producer COL id VAL nm21965562	0
-COL primaryName VAL ChenNan Tsai COL primaryProfession VAL actor-soundtrack COL id VAL nm0128757	COL primaryName VAL Andrey OsipovV COL primaryProfession VAL director-actor-writer COL id VAL nm21965508	0
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	1
-COL primaryName VAL Marlen Diazk COL primaryProfession VAL actress COL id VAL nm21959294	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	0
-COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	COL primaryName VAL Avinesh Rekhi COL primaryProfession VAL actor COL id VAL nm3978505	0
-COL primaryName VAL Jess Weissm COL primaryProfession VAL music_department-producer-director COL id VAL nm21958966	COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm21965691	0
-COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm21968249	COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	0
-COL primaryName VAL Lauren Collins COL primaryProfession VAL actress-producer-writer COL id VAL nm21956450	COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	1
-COL primaryName VAL Emil GalstyanJ COL primaryProfession VAL art_director COL id VAL nm21966798	COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm21967352	0
-COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	0
-COL primaryName VAL Rosie Day COL primaryProfession VAL actress-director-writer COL id VAL nm1133857	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm21959608	0
-COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm0890485	0
-COL primaryName VAL Yu Baie COL primaryProfession VAL actor COL id VAL nm21963954	COL primaryName VAL Mark Badgerx COL primaryProfession VAL writer COL id VAL nm21968408	0
-COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm21957345	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm3589032	0
-COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	0
-COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	COL primaryName VAL Olga VasilenkoR COL primaryProfession VAL editor COL id VAL nm21961948	0
-COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0878031	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	0
-COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm21965691	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	0
-COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm21963146	1
-COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm2832339	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	0
-COL primaryName VAL Gerhard Heinz COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm0374569	COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	0
-COL primaryName VAL John Glenn COL primaryProfession VAL actor COL id VAL nm0322625	COL primaryName VAL Salvador Pineda COL primaryProfession VAL actor COL id VAL nm0684044	0
-COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer COL id VAL nm21958422	COL primaryName VAL James Webber COL primaryProfession VAL producer-director-writer COL id VAL nm3662284	1
-COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm21961597	COL primaryName VAL Finch Nissen COL primaryProfession VAL actor-writer-director COL id VAL nm2192516	0
-COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor COL id VAL nm21962818	0
-COL primaryName VAL Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm21962987	COL primaryName VAL Vladimir Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm1587303	1
-COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	0
-COL primaryName VAL Davide Cirri COL id VAL nm7669443	COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	0
-COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	COL primaryName VAL Maksim Bramatkin COL primaryProfession VAL actor COL id VAL nm2809173	0
-COL primaryName VAL Martin Waetzold COL id VAL nm3157936	COL primaryName VAL iXnxuan Liu COL primaryProfession VAL actress COL id VAL nm21969160	0
-COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer COL id VAL nm21960613	COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	0
-COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm0305380	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm21967262	1
-COL primaryName VAL Rogelio Guerra COL primaryProfession VAL actor COL id VAL nm0346080	COL primaryName VAL John Bunny COL primaryProfession VAL actor COL id VAL nm0120544	0
-COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	COL primaryName VAL Lauren Collins COL primaryProfession VAL actress-producer-writer COL id VAL nm21956450	0
-COL primaryName VAL Dave Patten COL primaryProfession VAL director-writer-editor COL id VAL nm3875284	COL primaryName VAL Dave Pattenu COL primaryProfession VAL animation_department-writer-editor COL id VAL nm21959295	1
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm0890485	COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	1
-COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director COL id VAL nm21963206	COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	0
-COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm2113577	COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm21961597	0
-COL primaryName VAL Yan Frenkel COL primaryProfession VAL composer-actor-soundtrack COL id VAL nm0294279	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	COL primaryName VAL Lev Milcihn COL primaryProfession VAL director-art_director-production_designer COL id VAL nm0586975	0
-COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm21968111	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956563	0
-COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department COL id VAL nm21962986	COL primaryName VAL Davide Cirri COL id VAL nm7669443	0
-COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Chris Scarafile COL primaryProfession VAL camera_department-cinematographer-actor COL id VAL nm0769044	0
-COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955151	COL primaryName VAL André Turpinx COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955152	1
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm21955339	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm21964169	0
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	COL primaryName VAL Evo Morales COL id VAL nm2133486	0
-COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm3589032	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm21959567	1
-COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm21955150	COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm0495790	1
-COL primaryName VAL  COL primaryProfession VAL actor-director-writer COL id VAL nm3376469	COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	0
-COL primaryName VAL MeiLing ChaoE COL primaryProfession VAL actress COL id VAL nm21966244	COL primaryName VAL MeiLing Chao COL primaryProfession VAL actress COL id VAL nm0955309	1
-COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm3589032	COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	0
-COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	0
-COL primaryName VAL Marty McIntosh COL id VAL nm21958637	COL primaryName VAL Marty McIntosh COL id VAL nm2006841	1
-COL primaryName VAL Yu Baie COL primaryProfession VAL actor COL id VAL nm21963954	COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	1
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964035	COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm21955902	0
-COL primaryName VAL Marie McLaughlin COL primaryProfession VAL actress-soundtrack COL id VAL nm0572383	COL primaryName VAL Vasiliy Livanov COL primaryProfession VAL actor-writer-director COL id VAL nm0515106	0
-COL primaryName VAL Dave Patten COL primaryProfession VAL director-writer-editor COL id VAL nm3875284	COL primaryName VAL John Bunny COL primaryProfession VAL actor COL id VAL nm0120544	0
-COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	COL primaryName VAL Arturo Smiths COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm21962198	1
-COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	0
-COL primaryName VAL Steffen SchmidtX COL primaryProfession VAL costume_designer-music_department COL id VAL nm21969038	COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor COL id VAL nm21962818	0
-COL primaryName VAL Harry Dawson COL primaryProfession VAL cinematographer-camera_department-director COL id VAL nm0206142	COL primaryName VAL  COL primaryProfession VAL actor-director-writer COL id VAL nm3376469	0
-COL primaryName VAL Finch Nissen COL primaryProfession VAL actor-writer-director COL id VAL nm2192516	COL primaryName VAL Finch Nissent COL primaryProfession VAL actor-writer-director COL id VAL nm21961111	1
-COL primaryName VAL Rogelio Guerrao COL primaryProfession VAL actor COL id VAL nm21964032	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	0
-COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	1
-COL primaryName VAL Alan Weisenbergers COL primaryProfession VAL location_management-cinematographer COL id VAL nm21966577	COL primaryName VAL Alan Weisenberger COL primaryProfession VAL camera_department-cinematographer COL id VAL nm4136197	1
-COL primaryName VAL Marty McIntosh COL id VAL nm21958637	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm21969111	COL primaryName VAL Megan Jones COL primaryProfession VAL actress COL id VAL nm3120206	0
-COL primaryName VAL Caio Marcio dos SantosT COL primaryProfession VAL composer COL id VAL nm21958967	COL primaryName VAL Dave Pattenu COL primaryProfession VAL animation_department-writer-editor COL id VAL nm21959295	0
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm21961046	0
-COL primaryName VAL Robert W Paul COL primaryProfession VAL producer-cinematographer-director COL id VAL nm0666972	COL primaryName VAL Jens JohanssonT COL primaryProfession VAL actor-soundtrack COL id VAL nm21968112	0
-COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm21965509	COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	0
-COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm21966317	COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	0
-COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	COL primaryName VAL Ibinabo Jack COL primaryProfession VAL actress COL id VAL nm9522896	1
-COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm4337198	COL primaryName VAL Emil GalstyanJ COL primaryProfession VAL art_director COL id VAL nm21966798	0
-COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0878031	COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	0
-COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm3164594	COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955151	0
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm0657162	COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	1
-COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	0
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	COL primaryName VAL Emil GalstyanJ COL primaryProfession VAL art_director COL id VAL nm21966798	0
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm0127758	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm1887521	0
-COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm1511631	COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor COL id VAL nm21959465	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm7440261	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	1
-COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	0
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm0657162	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm7440261	0
-COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm21966317	COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	0
-COL primaryName VAL iXnxuan Liu COL primaryProfession VAL actress COL id VAL nm21969160	COL primaryName VAL Martín Farina\\ COL primaryProfession VAL writer-director-producer COL id VAL nm21968199	0
-COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm21968407	COL primaryName VAL Yorgos Avgeropoulos COL primaryProfession VAL director-writer-producer COL id VAL nm21957663	0
-COL primaryName VAL Vikram Rajani COL primaryProfession VAL producer-miscellaneous COL id VAL nm2236337	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	0
-COL primaryName VAL Davide Cirri COL id VAL nm21959207	COL primaryName VAL Davide Cirri COL id VAL nm7669443	1
-COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm5479763	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	0
-COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director COL id VAL nm1937112	0
-COL primaryName VAL Lev Milchin COL primaryProfession VAL director-art_director-production_designer COL id VAL nm21961949	COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	1
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	0
-COL primaryName VAL Wayne Uptown Johnson COL primaryProfession VAL cinematographer-actor-editor COL id VAL nm7031415	COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1531103	0
-COL primaryName VAL Kenneth Mars COL primaryProfession VAL actor-soundtrack COL id VAL nm0550318	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	1
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	0
-COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	0
-COL primaryName VAL Finch Nissen COL primaryProfession VAL actor-writer-director COL id VAL nm2192516	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	0
-COL primaryName VAL Kenneth Mars COL primaryProfession VAL actor-soundtrack COL id VAL nm0550318	COL primaryName VAL Rudolf van den Berg COL primaryProfession VAL director-writer-actor COL id VAL nm0073888	0
-COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director COL id VAL nm3192494	0
-COL primaryName VAL Avinesh Rekhi COL primaryProfession VAL actor COL id VAL nm3978505	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	0
-COL primaryName VAL Nathan Ruhlandy COL primaryProfession VAL director-writer-producer COL id VAL nm21960612	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm0238669	0
-COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor COL id VAL nm1745269	COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	0
-COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	COL primaryName VAL Martin Parris COL primaryProfession VAL actor-miscaneous COL id VAL nm2684703	0
-COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	COL primaryName VAL Megan Jonesr COL primaryProfession VAL actress COL id VAL nm21960795	0
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Finch Nissent COL primaryProfession VAL actor-writer-director COL id VAL nm21961111	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	0
-COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	COL primaryName VAL Mark Badgerx COL primaryProfession VAL writer COL id VAL nm21968408	1
-COL primaryName VAL Marty McIntosh COL id VAL nm2006841	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm5479763	0
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	0
-COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm21968249	COL primaryName VAL Hubert Frank COL primaryProfession VAL director-writer-actor COL id VAL nm0290956	0
-COL primaryName VAL Harry Dawson COL primaryProfession VAL cinematographer-camera_department-director COL id VAL nm0206142	COL primaryName VAL Jens Johansson COL primaryProfession VAL actor-soundtrack COL id VAL nm1725970	0
-COL primaryName VAL Henry Short COL primaryProfession VAL cinematographer-director-editor COL id VAL nm0795060	COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm21959643	0
-COL primaryName VAL Henry Short COL primaryProfession VAL cinematographer-director-editor COL id VAL nm0795060	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	0
-COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	COL primaryName VAL Clayton S Taylor COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm3139442	0
-COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm1066781	0
-COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	0
-COL primaryName VAL Davide Cirri COL id VAL nm21959207	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	0
-COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm21966317	0
-COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department COL id VAL nm0767298	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	0
-COL primaryName VAL Henry Cavill COL primaryProfession VAL actor COL id VAL nm0147147	COL primaryName VAL Marlen Diazk COL primaryProfession VAL actress COL id VAL nm21959294	0
-COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm21967352	0
-COL primaryName VAL Garret SavageG COL primaryProfession VAL executive-producer-editorial_department COL id VAL nm21958188	COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department COL id VAL nm0767298	1
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964035	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964034	1
-COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	COL primaryName VAL Lev Milchin COL primaryProfession VAL director-art_director-production_designer COL id VAL nm21961949	0
-COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department COL id VAL nm0767298	COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	0
-COL primaryName VAL Steffen SchmidtX COL primaryProfession VAL costume_designer-music_department COL id VAL nm21969038	COL primaryName VAL Adams COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0010736	0
-COL primaryName VAL Rogelio Guerrao COL primaryProfession VAL actor COL id VAL nm21964032	COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	0
-COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	COL primaryName VAL Avinesh RekhiC COL primaryProfession VAL  COL id VAL nm21967902	0
-COL primaryName VAL Ghalia BenaliC COL primaryProfession VAL actress COL id VAL nm21957109	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress COL id VAL nm0070174	1
-COL primaryName VAL Combat COL primaryProfession VAL actor COL id VAL nm21955478	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	0
-COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	1
-COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	COL primaryName VAL The Jazz Girls COL primaryProfession VAL actress COL id VAL nm1011374	0
-COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	COL primaryName VAL Marty McIntosh COL id VAL nm21958637	0
-COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	0
-COL primaryName VAL Jess Weiss COL primaryProfession VAL misceleous-producer-director COL id VAL nm4457467	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm0238669	0
-COL primaryName VAL Mead Wrik COL primaryProfession VAL director-writer-cinematographer COL id VAL nm0574934	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm21966183	0
-COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm0587459	0
-COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	0
-COL primaryName VAL Robert W Paul COL primaryProfession VAL producer-cinematographer-director COL id VAL nm0666972	COL primaryName VAL Clayton S Taylorg COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm21961112	0
-COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	COL primaryName VAL Arturo Smith COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm0807375	0
-COL primaryName VAL Wayne Uptown Johnson COL primaryProfession VAL cinematographer-actor-editor COL id VAL nm7031415	COL primaryName VAL Marie McLaughlin COL primaryProfession VAL actress-soundtrack COL id VAL nm0572383	0
-COL primaryName VAL Martin Waetzold COL id VAL nm3157936	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	0
-COL primaryName VAL iXnxuan Liu COL primaryProfession VAL actress COL id VAL nm21969160	COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	1
-COL primaryName VAL Garret Savage COL primaryProfession VAL editor-producer-editorial_department COL id VAL nm0767298	COL primaryName VAL Marlen Diaz COL primaryProfession VAL actress COL id VAL nm5970991	0
-COL primaryName VAL Avinesh RekhiC COL primaryProfession VAL  COL id VAL nm21967902	COL primaryName VAL Avinesh Rekhi COL primaryProfession VAL actor COL id VAL nm3978505	1
-COL primaryName VAL Branko Radakovic COL primaryProfession VAL director-writer-editor COL id VAL nm5374866	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	0
-COL primaryName VAL James WebberZ COL primaryProfession VAL actor-director-writer COL id VAL nm21958422	COL primaryName VAL Kristin Booth COL primaryProfession VAL actress-writer-producer COL id VAL nm0095746	0
-COL primaryName VAL Hubert Frank COL primaryProfession VAL director-writer-actor COL id VAL nm0290956	COL primaryName VAL Hubert Frank COL primaryProfession VAL director-writer-actor COL id VAL nm21968658	1
-COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	1
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm0774223	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964034	0
-COL primaryName VAL Scott Appleby COL primaryProfession VAL producer COL id VAL nm21959609	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm5479763	1
-COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm21955150	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm0961594	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm21955480	COL primaryName VAL Attila Hörbiger COL primaryProfession VAL actor-soundtrack COL id VAL nm0405973	0
-COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm21955903	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm0038896	0
-COL primaryName VAL Tom Lodewyck COL primaryProfession VAL actor-producer-assistant_director COL id VAL nm1937112	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	0
-COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm21968249	0
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963120	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	1
-COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor COL id VAL nm21959465	1
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL Neville Raschid\\ COL primaryProfession VAL manager-director-actor COL id VAL nm21968376	0
-COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm21955480	COL primaryName VAL Benzino COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1531103	1
-COL primaryName VAL Daniele Anzellottiq COL primaryProfession VAL editor-cinematographer-producer COL id VAL nm21963205	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm0305380	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	0
-COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm2832339	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm21968111	0
-COL primaryName VAL Arturo Smiths COL primaryProfession VAL cinematographer-camera_department-actor COL id VAL nm21962198	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm1887521	0
-COL primaryName VAL Clayton S Taylorg COL primaryProfession VAL actor-producer-cinematographer COL id VAL nm21961112	COL primaryName VAL Vikram Rajani COL primaryProfession VAL producer-miscellaneous COL id VAL nm2236337	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm21968101	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	0
-COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm21957345	1
-COL primaryName VAL Martín Farina COL primaryProfession VAL cinematographer-director-producer COL id VAL nm3551347	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor COL id VAL nm0957595	0
-COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm4337198	COL primaryName VAL Subotic COL primaryProfession VAL cinematographer-camera_department-producer COL id VAL nm21962987	0
-COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm1407334	0
-COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm4337198	COL primaryName VAL Combat COL primaryProfession VAL actor COL id VAL nm21955478	1
-COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm21968249	COL primaryName VAL Enes Vejzovic COL primaryProfession VAL actor COL id VAL nm1066781	1
-COL primaryName VAL Kal PennJ COL primaryProfession VAL assistant_director-miscellaneous-producer COL id VAL nm21965562	COL primaryName VAL Kal Penn COL primaryProfession VAL actor-miscellaneous-producer COL id VAL nm0671980	1
-COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm0233215	COL primaryName VAL Shaun Dooley COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm21965152	1
-COL primaryName VAL The Jazz Girls COL primaryProfession VAL actress COL id VAL nm1011374	COL primaryName VAL Dave Patten COL primaryProfession VAL director-writer-editor COL id VAL nm3875284	0
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm0127758	COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor COL id VAL nm21959465	0
-COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	COL primaryName VAL Vasiliy Livanov COL primaryProfession VAL actor-writer-director COL id VAL nm0515106	0
-COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm21961046	1
-COL primaryName VAL Kristin Booth COL primaryProfession VAL actress-writer-producer COL id VAL nm0095746	COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	0
-COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	1
-COL primaryName VAL Finch Nissen COL primaryProfession VAL actor-writer-director COL id VAL nm2192516	COL primaryName VAL Marilyn Manson COL primaryProfession VAL soundtrack-composer-actor COL id VAL nm0001504	0
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	1
-COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0878031	0
-COL primaryName VAL Will B Hardq COL primaryProfession VAL animation_department COL id VAL nm21959642	COL primaryName VAL Matthew LevinE COL primaryProfession VAL composer-director-editor COL id VAL nm21962763	0
-COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm21968407	COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm2113577	1
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm0890485	COL primaryName VAL Olga VasilenkoR COL primaryProfession VAL editor COL id VAL nm21961948	1
-COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm4384917	COL primaryName VAL Evo Moralesd COL primaryProfession VAL art_director COL id VAL nm21957664	0
-COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	COL primaryName VAL Yan Frenkel COL primaryProfession VAL composer-actor-soundtrack COL id VAL nm0294279	0
-COL primaryName VAL Neville Raschid COL primaryProfession VAL producer-director-actor COL id VAL nm1889547	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm21966183	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	0
-COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm2113577	COL primaryName VAL Lev Milcihn COL primaryProfession VAL director-art_director-production_designer COL id VAL nm0586975	0
-COL primaryName VAL  COL primaryProfession VAL actor-director-writer COL id VAL nm3376469	COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	1
-COL primaryName VAL Sharat Rajuk COL primaryProfession VAL  COL id VAL nm21965561	COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	0
-COL primaryName VAL Matthew LevinE COL primaryProfession VAL composer-director-editor COL id VAL nm21962763	COL primaryName VAL Hubert Frank COL primaryProfession VAL director-writer-actor COL id VAL nm21968658	0
-COL primaryName VAL Nathan Ruhland COL primaryProfession VAL director-writer-producer COL id VAL nm3291308	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm4337198	0
-COL primaryName VAL Christos Andreouv COL primaryProfession VAL composer-music_department COL id VAL nm21962986	COL primaryName VAL Christos Andreou COL primaryProfession VAL composer-music_department COL id VAL nm3609484	1
-COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm21966183	COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	0
-COL primaryName VAL  COL primaryProfession VAL art_department COL id VAL nm21962984	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	0
-COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955151	COL primaryName VAL Jade ChengK COL primaryProfession VAL actress COL id VAL nm21963955	0
-COL primaryName VAL Bill Bixby COL primaryProfession VAL actor-director-producer COL id VAL nm0084642	COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	0
-COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	0
-COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm21959643	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm1887521	0
-COL primaryName VAL Matthew LevinE COL primaryProfession VAL composer-director-editor COL id VAL nm21962763	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm3589032	0
-COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm21965691	COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm1561355	1
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	COL primaryName VAL Adams COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0010736	0
-COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	0
-COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	COL primaryName VAL Bill Bixbyx COL primaryProfession VAL actor-director-producer COL id VAL nm21966722	0
-COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm21959467	COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm1227180	1
-COL primaryName VAL Ubirajara Quaranta Cabral COL primaryProfession VAL composer COL id VAL nm21969111	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	0
-COL primaryName VAL Marie McLaughlinA COL primaryProfession VAL casting_department-soundtrack COL id VAL nm21963961	COL primaryName VAL Marie McLaughlin COL primaryProfession VAL actress-soundtrack COL id VAL nm0572383	1
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL  COL id VAL nm1253181	0
-COL primaryName VAL Stylianos Constantinoua COL primaryProfession VAL editor-producer-director COL id VAL nm21962985	COL primaryName VAL Stylianos Constantinou COL primaryProfession VAL editor-producer-director COL id VAL nm3192494	1
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm7440261	COL primaryName VAL Dave Pattenu COL primaryProfession VAL animation_department-writer-editor COL id VAL nm21959295	0
-COL primaryName VAL Finch Nissent COL primaryProfession VAL actor-writer-director COL id VAL nm21961111	COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	0
-COL primaryName VAL Steffen Schmidt COL primaryProfession VAL composer-music_department COL id VAL nm5601091	COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	0
-COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm21955902	COL primaryName VAL Martín Farina COL primaryProfession VAL cinematographer-director-producer COL id VAL nm3551347	0
-COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm2832339	COL primaryName VAL Eddison von Ottenfeld COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm0902783	0
-COL primaryName VAL Evo Moralesd COL primaryProfession VAL art_director COL id VAL nm21957664	COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	0
-COL primaryName VAL Steffen SchmidtX COL primaryProfession VAL costume_designer-music_department COL id VAL nm21969038	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	0
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm0890485	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Antonis Katsaris COL primaryProfession VAL actor COL id VAL nm1745269	COL primaryName VAL Sharat Rajuk COL primaryProfession VAL  COL id VAL nm21965561	0
-COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm3295266	COL primaryName VAL Benjamin Ruhland COL primaryProfession VAL producer COL id VAL nm4678220	0
-COL primaryName VAL Harry Dawsond COL primaryProfession VAL electrical_department-camera_department-director COL id VAL nm21965385	COL primaryName VAL Harry Dawson COL primaryProfession VAL cinematographer-camera_department-director COL id VAL nm0206142	1
-COL primaryName VAL Evo Morales COL id VAL nm2133486	COL primaryName VAL Ana Blanco de Córdova COL primaryProfession VAL actress COL id VAL nm5639158	0
-COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm21967262	COL primaryName VAL Christoph Hildebrandt COL id VAL nm3157695	0
-COL primaryName VAL Denys Colomb de Daunanti COL primaryProfession VAL composer-writer-actor COL id VAL nm21962501	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	1
-COL primaryName VAL John Glennb COL primaryProfession VAL writer COL id VAL nm21966578	COL primaryName VAL John Glenn COL primaryProfession VAL actor COL id VAL nm0322625	1
-COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm0961594	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	1
-COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	COL primaryName VAL Hans Rosenthaly COL primaryProfession VAL writer-director-actor COL id VAL nm21961944	0
-COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	1
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm21964035	COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	1
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	COL primaryName VAL Michaela FurneyO COL primaryProfession VAL miscellaneous COL id VAL nm21955325	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm0961594	0
-COL primaryName VAL Neville Raschid\\ COL primaryProfession VAL manager-director-actor COL id VAL nm21968376	COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	0
-COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	COL primaryName VAL Alison Jackson COL primaryProfession VAL director-writer-producer COL id VAL nm21964169	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	COL primaryName VAL Nemanja Mosurvoic COL primaryProfession VAL composer-music_department COL id VAL nm0609252	0
-COL primaryName VAL Ghalia BenaliC COL primaryProfession VAL actress COL id VAL nm21957109	COL primaryName VAL Martín Farina COL primaryProfession VAL cinematographer-director-producer COL id VAL nm3551347	0
-COL primaryName VAL Vasiliy Livanov COL primaryProfession VAL actor-writer-director COL id VAL nm0515106	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	0
-COL primaryName VAL Chris Scarafile COL primaryProfession VAL camera_department-cinematographer-actor COL id VAL nm0769044	COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm1511631	0
-COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm0394679	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956564	1
-COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	1
-COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm21960796	COL primaryName VAL Trevor Yuilef COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm21957390	0
-COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm21955902	COL primaryName VAL Rodney Ascher COL primaryProfession VAL director-editor-producer COL id VAL nm21968643	0
-COL primaryName VAL Branko RadakovicU COL primaryProfession VAL assistant_director-writer-editor COL id VAL nm21962818	COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm1227180	0
-COL primaryName VAL Caio Marcio dos SantosT COL primaryProfession VAL composer COL id VAL nm21958967	COL primaryName VAL Caio Marcio dos Santos COL primaryProfession VAL  COL id VAL nm5714828	1
-COL primaryName VAL MeiLing ChaoE COL primaryProfession VAL actress COL id VAL nm21966244	COL primaryName VAL Paulo Vespúcio COL primaryProfession VAL actor-director-writer COL id VAL nm21967262	0
-COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor COL id VAL nm21966318	COL primaryName VAL Bojan Zogovic COL primaryProfession VAL actor COL id VAL nm0957595	1
-COL primaryName VAL Martin Parrisi COL primaryProfession VAL production_department-miscellaneous COL id VAL nm21961671	COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm1742016	0
-COL primaryName VAL Olga Vasilenko COL primaryProfession VAL editor COL id VAL nm21961946	COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm1071765	0
-COL primaryName VAL Lauren Collins COL primaryProfession VAL actress-producer-writer COL id VAL nm21956450	COL primaryName VAL Kenneth Mars COL primaryProfession VAL actor-soundtrack COL id VAL nm0550318	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL Kenneth Mars COL primaryProfession VAL actor-soundtrack COL id VAL nm0550318	0
-COL primaryName VAL Evo Morales COL id VAL nm2133486	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm0651995	0
-COL primaryName VAL Yu Bai COL primaryProfession VAL or COL id VAL nm7889237	COL primaryName VAL Yu Bai COL primaryProfession VAL actor COL id VAL nm21963956	1
-COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	COL primaryName VAL Yui Horie COL primaryProfession VAL actress-soundtrack-music_department COL id VAL nm21956563	0
-COL primaryName VAL Scott Appleby COL primaryProfession VAL producer COL id VAL nm21959609	COL primaryName VAL Scott Appleby COL primaryProfession VAL composer COL id VAL nm21959608	1
-COL primaryName VAL Jens Johansson COL primaryProfession VAL actor-soundtrack COL id VAL nm1725970	COL primaryName VAL Andrey Osipov COL primaryProfession VAL director-actor-writer COL id VAL nm21965509	0
-COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm21968111	COL primaryName VAL Dio COL primaryProfession VAL soundtrack-actor-composer COL id VAL nm3164594	1
-COL primaryName VAL Rosie Day COL primaryProfession VAL actress-director-writer COL id VAL nm1133857	COL primaryName VAL Rosie Dayv COL primaryProfession VAL producer-director-writer COL id VAL nm21958421	1
-COL primaryName VAL Dave Patten COL primaryProfession VAL director-writer-editor COL id VAL nm3875284	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	0
-COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm21968102	COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm1407334	1
-COL primaryName VAL Davide Cirri COL id VAL nm7669443	COL primaryName VAL Mikhail Druyan COL primaryProfession VAL cinematographer-camera_department-animation_department COL id VAL nm21961947	0
-COL primaryName VAL Jay Wasley COL primaryProfession VAL sound_department-cinematographer-camera_department COL id VAL nm2769456	COL primaryName VAL Michael C Alvarez COL primaryProfession VAL actor COL id VAL nm3264655	0
-COL primaryName VAL Sharat Rajuk COL primaryProfession VAL  COL id VAL nm21965561	COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm21965564	1
-COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	COL primaryName VAL iXnxuan Liu COL primaryProfession VAL actress COL id VAL nm21969160	0
-COL primaryName VAL Rogelio Guerrao COL primaryProfession VAL actor COL id VAL nm21964032	COL primaryName VAL Rogelio Guerra COL primaryProfession VAL actor COL id VAL nm0346080	1
-COL primaryName VAL André Turpind COL primaryProfession VAL cinematographer-director-writer COL id VAL nm21955151	COL primaryName VAL André Turpin COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0878031	1
-COL primaryName VAL Sharat Raju COL primaryProfession VAL director-casting_department-writer COL id VAL nm0961594	COL primaryName VAL Nate Mosher COL primaryProfession VAL actor COL id VAL nm21956569	0
-COL primaryName VAL Amy Adamst COL primaryProfession VAL  COL id VAL nm21969201	COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm0924502	0
-COL primaryName VAL Daniele Ciprì COL primaryProfession VAL cinematographer-director-writer COL id VAL nm0162668	COL primaryName VAL Jess Weiss COL primaryProfession VAL misceleous-producer-director COL id VAL nm4457467	0
-COL primaryName VAL Sophie Leblond COL primaryProfession VAL editor-writer-editorial_department COL id VAL nm0495790	COL primaryName VAL Ibinabo Jackd COL primaryProfession VAL production_department COL id VAL nm21962444	0
-COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm21965153	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	1
-COL primaryName VAL Rahul COL primaryProfession VAL actor COL id VAL nm0222144	COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm21959467	0
-COL primaryName VAL Martin Waetzoldb COL primaryProfession VAL soundtrack COL id VAL nm21959386	COL primaryName VAL Emer OSullivan COL primaryProfession VAL art_director-production_designer-art_department COL id VAL nm1190528	0
-COL primaryName VAL Neville Raschid\\ COL primaryProfession VAL manager-director-actor COL id VAL nm21968376	COL primaryName VAL Alan Weisenberger COL primaryProfession VAL camera_department-cinematographer COL id VAL nm4136197	0
-COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm4384917	COL primaryName VAL James Weaver COL primaryProfession VAL producer-miscellaneous-director COL id VAL nm21966183	1
-COL primaryName VAL Jon Osborn COL primaryProfession VAL producer-miscellaneous COL id VAL nm2113577	COL primaryName VAL Tim Kirk COL primaryProfession VAL producer-actor-writer COL id VAL nm21968642	0
-COL primaryName VAL Denys Colomb de Daunanti COL primaryProfession VAL composer-writer-actor COL id VAL nm21962501	COL primaryName VAL Heinrich Schnitzler COL primaryProfession VAL director-writer COL id VAL nm21963121	0
-COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm21969110	COL primaryName VAL Lucile Terrin COL primaryProfession VAL writer-assistant_director COL id VAL nm0855892	1
-COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	COL primaryName VAL O Jochen Schmidt COL primaryProfession VAL production_designer-art_director-art_department COL id VAL nm0773137	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm21968101	1
-COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm21955903	COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm2832339	1
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	COL primaryName VAL Mark Badgerx COL primaryProfession VAL writer COL id VAL nm21968408	0
-COL primaryName VAL Michael Wilkinson COL primaryProfession VAL costume_designer-costume_department COL id VAL nm0929452	COL primaryName VAL Michael Wilkinsonf COL primaryProfession VAL costume_designer-costume_department COL id VAL nm21969202	1
-COL primaryName VAL Kenneth Mars COL primaryProfession VAL actor-soundtrack COL id VAL nm0550318	COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm5025293	0
-COL primaryName VAL Michaela FurneyO COL primaryProfession VAL miscellaneous COL id VAL nm21955325	COL primaryName VAL Michaela Furney COL primaryProfession VAL miscellaneous COL id VAL nm1748441	1
-COL primaryName VAL Neville Raschid\\ COL primaryProfession VAL manager-director-actor COL id VAL nm21968376	COL primaryName VAL Neville Raschid COL primaryProfession VAL producer-director-actor COL id VAL nm1889547	1
-COL primaryName VAL Rudolf van den BergN COL primaryProfession VAL director-writer-actor COL id VAL nm21955840	COL primaryName VAL Rudolf van den Berg COL primaryProfession VAL director-writer-actor COL id VAL nm0073888	1
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm21955339	COL primaryName VAL Minh Chieu COL primaryProfession VAL director-writer-camera_department COL id VAL nm21959467	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	COL primaryName VAL The Romantics COL primaryProfession VAL soundtrack-actor COL id VAL nm3169905	0
-COL primaryName VAL Jay Baby COL primaryProfession VAL actor-writer COL id VAL nm2025887	COL primaryName VAL Camilla Tress COL primaryProfession VAL editorial_department-editor COL id VAL nm1561355	0
-COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director COL id VAL nm5404297	COL primaryName VAL Salvo Bonaffini COL primaryProfession VAL director COL id VAL nm21963206	1
-COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm21967352	COL primaryName VAL Leighton Pierce COL primaryProfession VAL director-sound_department-producer COL id VAL nm0682408	1
-COL primaryName VAL Jordan Canning COL primaryProfession VAL director-script_department-writer COL id VAL nm0134112	COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	0
-COL primaryName VAL George Pal COL primaryProfession VAL director-producer-cinematographer COL id VAL nm21966855	COL primaryName VAL Will B Hard COL primaryProfession VAL cinematographer COL id VAL nm0362027	0
-COL primaryName VAL Bernard White COL primaryProfession VAL actor-writer-director COL id VAL nm21965563	COL primaryName VAL Vikram Rajaniy COL primaryProfession VAL producer-miscellaneous COL id VAL nm21955328	0
-COL primaryName VAL Wayne Uptown JohnsonP COL primaryProfession VAL casting_department-actor-editor COL id VAL nm21955479	COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	0
-COL primaryName VAL Frank Ditto COL primaryProfession VAL actor-director-writer COL id VAL nm21957796	COL primaryName VAL Neville Raschid COL primaryProfession VAL producer-director-actor COL id VAL nm1889547	0
-COL primaryName VAL Xinxuan Liu COL primaryProfession VAL actress COL id VAL nm21969159	COL primaryName VAL Jade Cheng COL primaryProfession VAL actress COL id VAL nm8345715	0
-COL primaryName VAL Mikako Takahashi COL primaryProfession VAL actress-soundtrack COL id VAL nm21955339	COL primaryName VAL Laure nCollins COL primaryProfession VAL actress-producer-writer COL id VAL nm0172472	0
-COL primaryName VAL Yorgos Avgeropoulos COL primaryProfession VAL director-writer-producer COL id VAL nm21957663	COL primaryName VAL Ghalia Benali COL primaryProfession VAL actress COL id VAL nm0070174	0
-COL primaryName VAL Marlen Diaz COL primaryProfession VAL actress COL id VAL nm5970991	COL primaryName VAL Kenneth Marsf COL primaryProfession VAL actor-soundtrack COL id VAL nm21957444	0
-COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	COL primaryName VAL Benedetto Lo Monaco COL primaryProfession VAL actor COL id VAL nm21963204	0
-COL primaryName VAL Will B Hard COL primaryProfession VAL cinematographer COL id VAL nm0362027	COL primaryName VAL Will B Hardq COL primaryProfession VAL animation_department COL id VAL nm21959642	1
-COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm3589032	0
-COL primaryName VAL Martin Parrisi COL primaryProfession VAL production_department-miscellaneous COL id VAL nm21961671	COL primaryName VAL Daniele Anzellotti COL primaryProfession VAL camera_department-cinematographer-producer COL id VAL nm2047752	0
-COL primaryName VAL Andrew Waruszewski COL primaryProfession VAL camera_department-cinematographer-editorial_department COL id VAL nm1541933	COL primaryName VAL Rufus COL primaryProfession VAL actor COL id VAL nm21963145	0
-COL primaryName VAL Rufus Graham COL primaryProfession VAL actor COL id VAL nm21963146	COL primaryName VAL Mark Badger COL primaryProfession VAL writer COL id VAL nm2584204	0
-COL primaryName VAL Yancy Mendia COL primaryProfession VAL actress COL id VAL nm1407334	COL primaryName VAL Vikram Rajani COL primaryProfession VAL producer-miscellaneous COL id VAL nm2236337	0
-COL primaryName VAL Matthew Levin COL primaryProfession VAL producer-director-editor COL id VAL nm1920037	COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	0
-COL primaryName VAL Trevor Yuile COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm2238751	COL primaryName VAL Ukachi Arinzehh COL primaryProfession VAL transportation_department-producer-actor COL id VAL nm21959466	0
-COL primaryName VAL Emil Galstyan COL primaryProfession VAL actor COL id VAL nm7105651	COL primaryName VAL Martin Parrisi COL primaryProfession VAL production_department-miscellaneous COL id VAL nm21961671	0
-COL primaryName VAL Salvador Pineda COL primaryProfession VAL actor COL id VAL nm0684044	COL primaryName VAL Pineda COL primaryProfession VAL actor COL id VAL nm21964033	1
-COL primaryName VAL Christoph Hildebrandt COL id VAL nm3157695	COL primaryName VAL Christoph Hildebrandt COL id VAL nm21959385	1
-COL primaryName VAL Ukachi Arinzeh COL primaryProfession VAL art_department-producer-actor COL id VAL nm1338361	COL primaryName VAL Ukachi ArinzehB COL primaryProfession VAL art_department-producer-actor COL id VAL nm21959465	1
-COL primaryName VAL Peter Riva COL primaryProfession VAL producer-writer-production_manager COL id VAL nm21959567	COL primaryName VAL Hans Rosenthal COL primaryProfession VAL writer-director-actor COL id VAL nm21961945	0
-COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm21959643	COL primaryName VAL A Wise Guy COL primaryProfession VAL director COL id VAL nm1511631	1
-COL primaryName VAL Sérgio Bezerra COL primaryProfession VAL actor-producer COL id VAL nm21967261	COL primaryName VAL The Jazz GirlsU COL primaryProfession VAL actress COL id VAL nm21959641	0
-COL primaryName VAL Lina Santos COL primaryProfession VAL actress COL id VAL nm0764168	COL primaryName VAL Jay Lee COL primaryProfession VAL cinematographer-editor-director COL id VAL nm21955903	0
-COL primaryName VAL Denys Colomb de Daunant_ COL primaryProfession VAL assistant-writer-actor COL id VAL nm21962502	COL primaryName VAL Denys Colomb de Daunant COL primaryProfession VAL director-writer-actor COL id VAL nm0172969	1
-COL primaryName VAL Srboljub Milin COL primaryProfession VAL actor COL id VAL nm21966317	COL primaryName VAL Jess Weissm COL primaryProfession VAL music_department-producer-director COL id VAL nm21958966	0
-COL primaryName VAL Maksim BramatkinW COL primaryProfession VAL special_effects COL id VAL nm21957344	COL primaryName VAL Anton Kuznetsov COL primaryProfession VAL actor COL id VAL nm3899141	0
+COL id VAL nm21968643	COL id VAL nm21964033	0
+COL id VAL nm21959608	COL id VAL nm5479763	1
+COL id VAL nm0769044	COL id VAL nm21962986	0
+COL id VAL nm1742016	COL id VAL nm21963146	1
+COL id VAL nm1748441	COL id VAL nm1932706	0
+COL id VAL nm4678220	COL id VAL nm0374569	0
+COL id VAL nm1887521	COL id VAL nm21955150	0
+COL id VAL nm21967902	COL id VAL nm21968376	0
+COL id VAL nm21963204	COL id VAL nm21955478	0
+COL id VAL nm21959467	COL id VAL nm0795060	0
+COL id VAL nm2236337	COL id VAL nm3264655	0
+COL id VAL nm3376469	COL id VAL nm21955152	0
+COL id VAL nm21968658	COL id VAL nm0742759	0
+COL id VAL nm21963205	COL id VAL nm1407334	0
+COL id VAL nm2133486	COL id VAL nm5639158	0
+COL id VAL nm0038896	COL id VAL nm21968643	1
+COL id VAL nm5639158	COL id VAL nm21962984	0
+COL id VAL nm21963206	COL id VAL nm0322625	0
+COL id VAL nm1133857	COL id VAL nm21961111	0
+COL id VAL nm21965563	COL id VAL nm21969038	0
+COL id VAL nm2025887	COL id VAL nm21963146	0
+COL id VAL nm3875284	COL id VAL nm1725970	0
+COL id VAL nm0671980	COL id VAL nm21963955	0
+COL id VAL nm1309825	COL id VAL nm21966552	1
+COL id VAL nm21961671	COL id VAL nm2684703	1
+COL id VAL nm0961594	COL id VAL nm21956564	0
+COL id VAL nm21959208	COL id VAL nm0134112	0
+COL id VAL nm2236337	COL id VAL nm0128757	0
+COL id VAL nm0294279	COL id VAL nm21962985	0
+COL id VAL nm21961111	COL id VAL nm1561355	0
+COL id VAL nm21956564	COL id VAL nm0769044	0
+COL id VAL nm21959294	COL id VAL nm21957444	0
+COL id VAL nm21966317	COL id VAL nm0587459	1
+COL id VAL nm0038896	COL id VAL nm21967262	0
+COL id VAL nm7889237	COL id VAL nm21963955	0
+COL id VAL nm0574934	COL id VAL nm21962198	0
+COL id VAL nm3291308	COL id VAL nm21957109	0
+COL id VAL nm21968112	COL id VAL nm0095746	0
+COL id VAL nm21957444	COL id VAL nm21962985	0
+COL id VAL nm0294279	COL id VAL nm21955339	0
+COL id VAL nm7105651	COL id VAL nm1561355	0
+COL id VAL nm21968199	COL id VAL nm21957109	0
+COL id VAL nm21965509	COL id VAL nm21965508	1
+COL id VAL nm21965509	COL id VAL nm0651995	1
+COL id VAL nm21963955	COL id VAL nm8345715	1
+COL id VAL nm0147147	COL id VAL nm0405973	0
+COL id VAL nm21962501	COL id VAL nm21955903	0
+COL id VAL nm7440261	COL id VAL nm0073888	0
+COL id VAL nm5601091	COL id VAL nm5639158	0
+COL id VAL nm1407334	COL id VAL nm21964035	0
+COL id VAL nm21961949	COL id VAL nm0586975	1
+COL id VAL nm21961946	COL id VAL nm21969452	0
+COL id VAL nm21955152	COL id VAL nm0878031	1
+COL id VAL nm21961946	COL id VAL nm21961948	1
+COL id VAL nm21968642	COL id VAL nm0222144	0
+COL id VAL nm21956563	COL id VAL nm21956564	1
+COL id VAL nm21961947	COL id VAL nm0957595	0
+COL id VAL nm0924502	COL id VAL nm21965563	1
+COL id VAL nm0222144	COL id VAL nm21957796	0
+COL id VAL nm21969110	COL id VAL nm2236337	0
+COL id VAL nm21965509	COL id VAL nm21969201	0
+COL id VAL nm21955151	COL id VAL nm1889547	0
+COL id VAL nm2684703	COL id VAL nm7031415	0
+COL id VAL nm21961671	COL id VAL nm21966552	0
+COL id VAL nm21959642	COL id VAL nm0657162	0
+COL id VAL nm2513694	COL id VAL nm21957663	1
+COL id VAL nm21960796	COL id VAL nm0134112	1
+COL id VAL nm0290956	COL id VAL nm21959385	0
+COL id VAL nm1745269	COL id VAL nm21962984	1
+COL id VAL nm0774223	COL id VAL nm21963121	1
+COL id VAL nm0162668	COL id VAL nm21959208	1
+COL id VAL nm21966244	COL id VAL nm0394679	0
+COL id VAL nm2769456	COL id VAL nm0609252	0
+COL id VAL nm21963955	COL id VAL nm1745269	0
+COL id VAL nm21963120	COL id VAL nm0073888	0
+COL id VAL nm21959466	COL id VAL nm0222144	0
+COL id VAL nm21961945	COL id VAL nm0742759	1
+COL id VAL nm21967261	COL id VAL nm0572383	0
+COL id VAL nm21962444	COL id VAL nm0362027	0
+COL id VAL nm21969111	COL id VAL nm1748441	0
+COL id VAL nm0346080	COL id VAL nm3120206	0
+COL id VAL nm21968642	COL id VAL nm2355394	0
+COL id VAL nm21959294	COL id VAL nm21955339	0
+COL id VAL nm21968101	COL id VAL nm1742016	0
+COL id VAL nm5479763	COL id VAL nm21956564	0
+COL id VAL nm0419889	COL id VAL nm1932706	0
+COL id VAL nm1011374	COL id VAL nm21959641	1
+COL id VAL nm3192494	COL id VAL nm1920037	0
+COL id VAL nm21957664	COL id VAL nm2133486	1
+COL id VAL nm21966798	COL id VAL nm7105651	1
+COL id VAL nm0515106	COL id VAL nm1932706	0
+COL id VAL nm21966318	COL id VAL nm21958421	0
+COL id VAL nm1742016	COL id VAL nm21955339	0
+COL id VAL nm21963954	COL id VAL nm21963204	0
+COL id VAL nm7031415	COL id VAL nm21955479	1
+COL id VAL nm3551347	COL id VAL nm21968199	1
+COL id VAL nm21968176	COL id VAL nm0001504	1
+COL id VAL nm7669443	COL id VAL nm0774223	0
+COL id VAL nm21959996	COL id VAL nm0128757	0
+COL id VAL nm21967261	COL id VAL nm21955840	0
+COL id VAL nm21969160	COL id VAL nm1071765	0
+COL id VAL nm21965509	COL id VAL nm21962818	0
+COL id VAL nm9522896	COL id VAL nm21968112	0
+COL id VAL nm0924502	COL id VAL nm1511631	0
+COL id VAL nm0742759	COL id VAL nm21961944	1
+COL id VAL nm1133857	COL id VAL nm7031415	0
+COL id VAL nm0128757	COL id VAL nm21966244	0
+COL id VAL nm21959466	COL id VAL nm21968376	0
+COL id VAL nm4457467	COL id VAL nm21958966	1
+COL id VAL nm0238669	COL id VAL nm3192494	0
+COL id VAL nm21962198	COL id VAL nm1725970	0
+COL id VAL nm0682408	COL id VAL nm21963121	0
+COL id VAL nm5404297	COL id VAL nm21958966	0
+COL id VAL nm7440261	COL id VAL nm21962985	0
+COL id VAL nm5025293	COL id VAL nm21961946	0
+COL id VAL nm21956450	COL id VAL nm3899141	0
+COL id VAL nm21959386	COL id VAL nm0238669	0
+COL id VAL nm21956564	COL id VAL nm3192494	0
+COL id VAL nm21955480	COL id VAL nm2832339	0
+COL id VAL nm5479763	COL id VAL nm0671980	0
+COL id VAL nm1587303	COL id VAL nm0929452	0
+COL id VAL nm0550318	COL id VAL nm21963146	0
+COL id VAL nm0666972	COL id VAL nm21959609	0
+COL id VAL nm21966722	COL id VAL nm0084642	1
+COL id VAL nm21959642	COL id VAL nm21965153	0
+COL id VAL nm21968102	COL id VAL nm21959207	0
+COL id VAL nm21959294	COL id VAL nm21961046	0
+COL id VAL nm21957444	COL id VAL nm5404297	0
+COL id VAL nm21958597	COL id VAL nm0767298	0
+COL id VAL nm21955150	COL id VAL nm21966722	0
+COL id VAL nm5404297	COL id VAL nm0172472	0
+COL id VAL nm21965152	COL id VAL nm0495790	0
+COL id VAL nm2684703	COL id VAL nm21962501	0
+COL id VAL nm1541933	COL id VAL nm21961597	1
+COL id VAL nm1725970	COL id VAL nm21968112	1
+COL id VAL nm2113577	COL id VAL nm0957595	0
+COL id VAL nm21958597	COL id VAL nm21959466	0
+COL id VAL nm7889237	COL id VAL nm3157936	0
+COL id VAL nm5404297	COL id VAL nm0120544	0
+COL id VAL nm3120206	COL id VAL nm3295266	0
+COL id VAL nm21969111	COL id VAL nm21965509	0
+COL id VAL nm21959386	COL id VAL nm0419889	0
+COL id VAL nm21959293	COL id VAL nm2769456	1
+COL id VAL nm3157936	COL id VAL nm21959386	1
+COL id VAL nm21969201	COL id VAL nm0010736	1
+COL id VAL nm21962501	COL id VAL nm21962763	0
+COL id VAL nm21962444	COL id VAL nm1253181	0
+COL id VAL nm21957664	COL id VAL nm2025887	0
+COL id VAL nm21958637	COL id VAL nm21959385	0
+COL id VAL nm21969110	COL id VAL nm0001504	0
+COL id VAL nm3139442	COL id VAL nm0957595	0
+COL id VAL nm21967902	COL id VAL nm2513694	0
+COL id VAL nm1887521	COL id VAL nm21964169	1
+COL id VAL nm0890485	COL id VAL nm21959295	0
+COL id VAL nm21968199	COL id VAL nm0574934	0
+COL id VAL nm3609484	COL id VAL nm21959641	0
+COL id VAL nm2769456	COL id VAL nm7669443	0
+COL id VAL nm0095746	COL id VAL nm21955478	0
+COL id VAL nm21961945	COL id VAL nm21962198	0
+COL id VAL nm0346080	COL id VAL nm0233215	0
+COL id VAL nm0924502	COL id VAL nm1745269	0
+COL id VAL nm3589032	COL id VAL nm0890485	0
+COL id VAL nm21961946	COL id VAL nm21963204	0
+COL id VAL nm21957390	COL id VAL nm5025293	0
+COL id VAL nm5374866	COL id VAL nm21962818	1
+COL id VAL nm21961949	COL id VAL nm0961594	0
+COL id VAL nm0456562	COL id VAL nm21968642	1
+COL id VAL nm0773137	COL id VAL nm0550318	0
+COL id VAL nm21962502	COL id VAL nm21962501	1
+COL id VAL nm1920037	COL id VAL nm5601091	0
+COL id VAL nm2238751	COL id VAL nm21959466	0
+COL id VAL nm0574934	COL id VAL nm21959996	1
+COL id VAL nm21959608	COL id VAL nm2006841	0
+COL id VAL nm21959553	COL id VAL nm5039492	1
+COL id VAL nm21965561	COL id VAL nm0961594	1
+COL id VAL nm8345715	COL id VAL nm21967902	0
+COL id VAL nm21961947	COL id VAL nm21956569	0
+COL id VAL nm21963954	COL id VAL nm21959466	0
+COL id VAL nm21961946	COL id VAL nm2809173	0
+COL id VAL nm21968249	COL id VAL nm21963955	0
+COL id VAL nm1561355	COL id VAL nm0374569	0
+COL id VAL nm0456562	COL id VAL nm4678220	0
+COL id VAL nm21967261	COL id VAL nm21969111	0
+COL id VAL nm1920037	COL id VAL nm21962985	0
+COL id VAL nm0238669	COL id VAL nm21961947	1
+COL id VAL nm21965562	COL id VAL nm21962987	0
+COL id VAL nm21961944	COL id VAL nm2684703	0
+COL id VAL nm21959641	COL id VAL nm9522896	0
+COL id VAL nm0764168	COL id VAL nm21962818	0
+COL id VAL nm21969111	COL id VAL nm21967262	0
+COL id VAL nm21959294	COL id VAL nm0682408	0
+COL id VAL nm21969111	COL id VAL nm0127758	1
+COL id VAL nm3551347	COL id VAL nm21959294	0
+COL id VAL nm0651995	COL id VAL nm21962987	0
+COL id VAL nm0609252	COL id VAL nm21965153	0
+COL id VAL nm21958421	COL id VAL nm21961946	0
+COL id VAL nm7889237	COL id VAL nm21963954	1
+COL id VAL nm2684703	COL id VAL nm21959553	0
+COL id VAL nm21958597	COL id VAL nm5639158	1
+COL id VAL nm2355394	COL id VAL nm21963205	0
+COL id VAL nm21963961	COL id VAL nm21957390	0
+COL id VAL nm21964169	COL id VAL nm21962818	0
+COL id VAL nm21961112	COL id VAL nm3139442	1
+COL id VAL nm2809173	COL id VAL nm21957344	1
+COL id VAL nm1920037	COL id VAL nm1066781	0
+COL id VAL nm21961945	COL id VAL nm7440261	0
+COL id VAL nm21958637	COL id VAL nm0073888	0
+COL id VAL nm5601091	COL id VAL nm21969038	1
+COL id VAL nm21960795	COL id VAL nm3120206	1
+COL id VAL nm21959608	COL id VAL nm3169905	0
+COL id VAL nm3978505	COL id VAL nm3662284	0
+COL id VAL nm21965562	COL id VAL nm1253181	0
+COL id VAL nm21960613	COL id VAL nm21966317	0
+COL id VAL nm1541933	COL id VAL nm0128757	0
+COL id VAL nm0172969	COL id VAL nm7440261	0
+COL id VAL nm21959466	COL id VAL nm3139442	0
+COL id VAL nm21969452	COL id VAL nm0773137	1
+COL id VAL nm1561355	COL id VAL nm21962763	0
+COL id VAL nm9522896	COL id VAL nm0095746	0
+COL id VAL nm1071765	COL id VAL nm21955339	1
+COL id VAL nm0362027	COL id VAL nm1071765	0
+COL id VAL nm2025887	COL id VAL nm21958421	0
+COL id VAL nm21964034	COL id VAL nm0764168	1
+COL id VAL nm3157695	COL id VAL nm21965691	0
+COL id VAL nm0127758	COL id VAL nm3169905	0
+COL id VAL nm3291308	COL id VAL nm21960612	1
+COL id VAL nm8345715	COL id VAL nm5970991	0
+COL id VAL nm1066781	COL id VAL nm21961944	0
+COL id VAL nm21969160	COL id VAL nm1920037	0
+COL id VAL nm2236337	COL id VAL nm21955328	1
+COL id VAL nm21965508	COL id VAL nm3376469	0
+COL id VAL nm21968376	COL id VAL nm1742016	0
+COL id VAL nm21962986	COL id VAL nm1511631	0
+COL id VAL nm21967261	COL id VAL nm0162668	0
+COL id VAL nm1531103	COL id VAL nm0586975	0
+COL id VAL nm3157695	COL id VAL nm21967262	0
+COL id VAL nm7440261	COL id VAL nm21969160	1
+COL id VAL nm1920037	COL id VAL nm21962763	1
+COL id VAL nm0878031	COL id VAL nm0172969	0
+COL id VAL nm4136197	COL id VAL nm21957444	0
+COL id VAL nm5970991	COL id VAL nm21959294	1
+COL id VAL nm21968102	COL id VAL nm0657162	0
+COL id VAL nm0671980	COL id VAL nm21969038	0
+COL id VAL nm21966318	COL id VAL nm0001504	0
+COL id VAL nm0651995	COL id VAL nm3875284	0
+COL id VAL nm21959567	COL id VAL nm1725970	0
+COL id VAL nm21960613	COL id VAL nm4678220	1
+COL id VAL nm0902783	COL id VAL nm21961949	0
+COL id VAL nm0586975	COL id VAL nm3899141	0
+COL id VAL nm0609252	COL id VAL nm0769044	0
+COL id VAL nm21968408	COL id VAL nm21959386	0
+COL id VAL nm21965564	COL id VAL nm21963146	0
+COL id VAL nm1887521	COL id VAL nm21966798	0
+COL id VAL nm21956450	COL id VAL nm3264655	0
+COL id VAL nm0419889	COL id VAL nm21963206	0
+COL id VAL nm21966722	COL id VAL nm1887521	0
+COL id VAL nm3264655	COL id VAL nm21955902	1
+COL id VAL nm21959207	COL id VAL nm0374569	0
+COL id VAL nm2133486	COL id VAL nm21958421	0
+COL id VAL nm0878031	COL id VAL nm0060607	0
+COL id VAL nm2006841	COL id VAL nm3164594	0
+COL id VAL nm21965508	COL id VAL nm0651995	1
+COL id VAL nm7889237	COL id VAL nm1937112	0
+COL id VAL nm0394679	COL id VAL nm21956563	1
+COL id VAL nm21957344	COL id VAL nm21962818	0
+COL id VAL nm4457467	COL id VAL nm3899141	0
+COL id VAL nm21959385	COL id VAL nm2684703	0
+COL id VAL nm21959385	COL id VAL nm1932706	0
+COL id VAL nm0774223	COL id VAL nm21963120	1
+COL id VAL nm2809173	COL id VAL nm21957663	0
+COL id VAL nm0362027	COL id VAL nm21963955	0
+COL id VAL nm1511631	COL id VAL nm0671980	0
+COL id VAL nm21963961	COL id VAL nm21955339	0
+COL id VAL nm21956450	COL id VAL nm0172472	1
+COL id VAL nm0855892	COL id VAL nm21959386	0
+COL id VAL nm21957344	COL id VAL nm21962818	0
+COL id VAL nm21959208	COL id VAL nm21964033	0
+COL id VAL nm21959642	COL id VAL nm21958637	0
+COL id VAL nm9522896	COL id VAL nm21963961	0
+COL id VAL nm0127758	COL id VAL nm3662284	0
+COL id VAL nm21957796	COL id VAL nm1748441	0
+COL id VAL nm0769044	COL id VAL nm1227180	0
+COL id VAL nm1338361	COL id VAL nm21968176	0
+COL id VAL nm21961945	COL id VAL nm21955328	0
+COL id VAL nm21963145	COL id VAL nm21963146	1
+COL id VAL nm1887521	COL id VAL nm0574934	0
+COL id VAL nm3157695	COL id VAL nm2584204	0
+COL id VAL nm21957390	COL id VAL nm21959608	0
+COL id VAL nm21958422	COL id VAL nm3662284	1
+COL id VAL nm0586975	COL id VAL nm0419889	0
+COL id VAL nm21960795	COL id VAL nm0073888	0
+COL id VAL nm21962987	COL id VAL nm1587303	1
+COL id VAL nm21961671	COL id VAL nm3609484	0
+COL id VAL nm21963120	COL id VAL nm0233215	0
+COL id VAL nm0767298	COL id VAL nm21965508	0
+COL id VAL nm21962984	COL id VAL nm4341871	0
+COL id VAL nm0769044	COL id VAL nm4341871	0
+COL id VAL nm0305380	COL id VAL nm21967262	1
+COL id VAL nm21963145	COL id VAL nm1338361	0
+COL id VAL nm21969160	COL id VAL nm0878031	0
+COL id VAL nm3875284	COL id VAL nm21959295	1
+COL id VAL nm0890485	COL id VAL nm21961946	1
+COL id VAL nm0060607	COL id VAL nm0666972	0
+COL id VAL nm21957664	COL id VAL nm5639158	0
+COL id VAL nm0419889	COL id VAL nm21968658	0
+COL id VAL nm3875284	COL id VAL nm21968101	0
+COL id VAL nm21958966	COL id VAL nm7889237	0
+COL id VAL nm3120206	COL id VAL nm21955151	0
+COL id VAL nm21969202	COL id VAL nm2238751	0
+COL id VAL nm21962986	COL id VAL nm0134112	0
+COL id VAL nm21955151	COL id VAL nm21955152	1
+COL id VAL nm0290956	COL id VAL nm0961594	0
+COL id VAL nm21963961	COL id VAL nm21959467	0
+COL id VAL nm3589032	COL id VAL nm21959567	1
+COL id VAL nm21955150	COL id VAL nm0495790	1
+COL id VAL nm2025887	COL id VAL nm21967262	0
+COL id VAL nm21966244	COL id VAL nm0955309	1
+COL id VAL nm21966244	COL id VAL nm21968249	0
+COL id VAL nm3139442	COL id VAL nm21966722	0
+COL id VAL nm21958637	COL id VAL nm2006841	1
+COL id VAL nm21963954	COL id VAL nm21963956	1
+COL id VAL nm21955479	COL id VAL nm21966183	0
+COL id VAL nm0128757	COL id VAL nm21962198	0
+COL id VAL nm21962501	COL id VAL nm0515106	0
+COL id VAL nm0807375	COL id VAL nm21962198	1
+COL id VAL nm21961946	COL id VAL nm21968642	0
+COL id VAL nm21957444	COL id VAL nm21955903	0
+COL id VAL nm21965691	COL id VAL nm7105651	0
+COL id VAL nm2192516	COL id VAL nm21961111	1
+COL id VAL nm4384917	COL id VAL nm0305380	0
+COL id VAL nm2047752	COL id VAL nm21963205	1
+COL id VAL nm21966577	COL id VAL nm4136197	1
+COL id VAL nm2832339	COL id VAL nm21965562	0
+COL id VAL nm21956569	COL id VAL nm21955325	0
+COL id VAL nm3295266	COL id VAL nm5039492	0
+COL id VAL nm1227180	COL id VAL nm21966798	0
+COL id VAL nm0120544	COL id VAL nm21969160	0
+COL id VAL nm21968249	COL id VAL nm0346080	0
+COL id VAL nm21966722	COL id VAL nm21964032	0
+COL id VAL nm21962444	COL id VAL nm9522896	1
+COL id VAL nm0070174	COL id VAL nm4457467	0
+COL id VAL nm21968199	COL id VAL nm3157936	0
+COL id VAL nm0961594	COL id VAL nm21966552	0
+COL id VAL nm21964034	COL id VAL nm3291308	0
+COL id VAL nm0657162	COL id VAL nm21966855	1
+COL id VAL nm0120544	COL id VAL nm0162668	0
+COL id VAL nm1407334	COL id VAL nm4136197	0
+COL id VAL nm2684703	COL id VAL nm21966722	0
+COL id VAL nm3875284	COL id VAL nm5025293	0
+COL id VAL nm7440261	COL id VAL nm21969159	1
+COL id VAL nm21965691	COL id VAL nm0238669	0
+COL id VAL nm0764168	COL id VAL nm21961947	0
+COL id VAL nm2238751	COL id VAL nm21963120	0
+COL id VAL nm21963955	COL id VAL nm21958597	0
+COL id VAL nm0127758	COL id VAL nm21961111	0
+COL id VAL nm1887521	COL id VAL nm0374569	0
+COL id VAL nm21959207	COL id VAL nm7669443	1
+COL id VAL nm21959608	COL id VAL nm1561355	0
+COL id VAL nm0651995	COL id VAL nm1511631	0
+COL id VAL nm3192494	COL id VAL nm0890485	0
+COL id VAL nm21956569	COL id VAL nm3295266	1
+COL id VAL nm0222144	COL id VAL nm21958421	0
+COL id VAL nm4457467	COL id VAL nm2192516	0
+COL id VAL nm0550318	COL id VAL nm21957444	1
+COL id VAL nm0362027	COL id VAL nm2192516	0
+COL id VAL nm21969160	COL id VAL nm2133486	0
+COL id VAL nm21957796	COL id VAL nm21961948	0
+COL id VAL nm21957390	COL id VAL nm21961597	0
+COL id VAL nm2006841	COL id VAL nm0419889	0
+COL id VAL nm21966317	COL id VAL nm21965691	0
+COL id VAL nm21969110	COL id VAL nm0405973	0
+COL id VAL nm21957796	COL id VAL nm21957109	0
+COL id VAL nm21957663	COL id VAL nm1748441	0
+COL id VAL nm21957345	COL id VAL nm1066781	0
+COL id VAL nm0572383	COL id VAL nm2684703	0
+COL id VAL nm0878031	COL id VAL nm21965508	0
+COL id VAL nm21968376	COL id VAL nm1932706	0
+COL id VAL nm2584204	COL id VAL nm21968408	1
+COL id VAL nm21968199	COL id VAL nm2236337	0
+COL id VAL nm21965691	COL id VAL nm2769456	0
+COL id VAL nm1748441	COL id VAL nm21959208	0
+COL id VAL nm21955480	COL id VAL nm21960612	0
+COL id VAL nm21963121	COL id VAL nm21960613	0
+COL id VAL nm3157695	COL id VAL nm21966552	0
+COL id VAL nm21964033	COL id VAL nm0961594	0
+COL id VAL nm0961594	COL id VAL nm0587459	0
+COL id VAL nm0222144	COL id VAL nm3551347	0
+COL id VAL nm0609252	COL id VAL nm2809173	0
+COL id VAL nm21969111	COL id VAL nm21959386	0
+COL id VAL nm1889547	COL id VAL nm21961046	0
+COL id VAL nm4136197	COL id VAL nm3609484	0
+COL id VAL nm0795060	COL id VAL nm3899141	0
+COL id VAL nm21961949	COL id VAL nm0362027	0
+COL id VAL nm21958188	COL id VAL nm0767298	1
+COL id VAL nm21964035	COL id VAL nm21964034	1
+COL id VAL nm21967261	COL id VAL nm21958967	0
+COL id VAL nm0120544	COL id VAL nm3609484	0
+COL id VAL nm0586975	COL id VAL nm5025293	0
+COL id VAL nm21959293	COL id VAL nm1742016	0
+COL id VAL nm0419889	COL id VAL nm21965152	0
+COL id VAL nm21961597	COL id VAL nm21966244	0
+COL id VAL nm21957109	COL id VAL nm0070174	1
+COL id VAL nm0095746	COL id VAL nm21959567	0
+COL id VAL nm21963204	COL id VAL nm5025293	1
+COL id VAL nm21963120	COL id VAL nm5039492	0
+COL id VAL nm21968407	COL id VAL nm21965152	0
+COL id VAL nm3120206	COL id VAL nm0070174	0
+COL id VAL nm1887521	COL id VAL nm21959294	0
+COL id VAL nm21965509	COL id VAL nm21957344	0
+COL id VAL nm21957664	COL id VAL nm21956563	0
+COL id VAL nm21966722	COL id VAL nm1071765	0
+COL id VAL nm21964035	COL id VAL nm0657162	0
+COL id VAL nm21966318	COL id VAL nm2236337	0
+COL id VAL nm21955339	COL id VAL nm21963206	0
+COL id VAL nm21955479	COL id VAL nm0955309	0
+COL id VAL nm21969160	COL id VAL nm21969159	1
+COL id VAL nm21969038	COL id VAL nm0890485	0
+COL id VAL nm21967902	COL id VAL nm3978505	1
+COL id VAL nm5970991	COL id VAL nm21961112	0
+COL id VAL nm0290956	COL id VAL nm0769044	0
+COL id VAL nm0290956	COL id VAL nm21968658	1
+COL id VAL nm21961945	COL id VAL nm21961944	1
+COL id VAL nm0010736	COL id VAL nm0070174	0
+COL id VAL nm21959609	COL id VAL nm5479763	1
+COL id VAL nm21966855	COL id VAL nm2684703	0
+COL id VAL nm21963146	COL id VAL nm21959609	0
+COL id VAL nm1011374	COL id VAL nm21961948	0
+COL id VAL nm21959207	COL id VAL nm21968658	0
+COL id VAL nm21966552	COL id VAL nm21966722	0
+COL id VAL nm21963120	COL id VAL nm21963121	1
+COL id VAL nm21959466	COL id VAL nm21959465	1
+COL id VAL nm21957444	COL id VAL nm0890485	0
+COL id VAL nm21955480	COL id VAL nm1531103	1
+COL id VAL nm21962763	COL id VAL nm1011374	0
+COL id VAL nm21959293	COL id VAL nm0305380	0
+COL id VAL nm21959208	COL id VAL nm1338361	0
+COL id VAL nm21957796	COL id VAL nm21959642	0
+COL id VAL nm1725970	COL id VAL nm2006841	0
+COL id VAL nm3291308	COL id VAL nm21956569	0
+COL id VAL nm3899141	COL id VAL nm21957345	1
+COL id VAL nm21959466	COL id VAL nm7031415	0
+COL id VAL nm3264655	COL id VAL nm0084642	0
+COL id VAL nm3264655	COL id VAL nm21961111	0
+COL id VAL nm4337198	COL id VAL nm21955478	1
+COL id VAL nm21968249	COL id VAL nm1066781	1
+COL id VAL nm21965562	COL id VAL nm0671980	1
+COL id VAL nm0233215	COL id VAL nm21965152	1
+COL id VAL nm1253181	COL id VAL nm3139442	0
+COL id VAL nm2192516	COL id VAL nm21955902	0
+COL id VAL nm2113577	COL id VAL nm0172969	0
+COL id VAL nm3169905	COL id VAL nm21961046	1
+COL id VAL nm1587303	COL id VAL nm21959642	0
+COL id VAL nm21957390	COL id VAL nm2238751	1
+COL id VAL nm1937112	COL id VAL nm21962198	0
+COL id VAL nm1253181	COL id VAL nm21967261	1
+COL id VAL nm21962986	COL id VAL nm0147147	0
+COL id VAL nm2047752	COL id VAL nm2355394	0
+COL id VAL nm21968407	COL id VAL nm2113577	1
+COL id VAL nm0890485	COL id VAL nm21961948	1
+COL id VAL nm1920037	COL id VAL nm4678220	0
+COL id VAL nm21956563	COL id VAL nm1190528	0
+COL id VAL nm0651995	COL id VAL nm5479763	0
+COL id VAL nm3192494	COL id VAL nm21968111	0
+COL id VAL nm0609252	COL id VAL nm4136197	0
+COL id VAL nm21968199	COL id VAL nm21965561	0
+COL id VAL nm3376469	COL id VAL nm21957796	1
+COL id VAL nm21959643	COL id VAL nm1742016	0
+COL id VAL nm21958637	COL id VAL nm21965561	0
+COL id VAL nm4337198	COL id VAL nm21966183	0
+COL id VAL nm21962986	COL id VAL nm3609484	1
+COL id VAL nm0084642	COL id VAL nm3139442	0
+COL id VAL nm0657162	COL id VAL nm21967261	0
+COL id VAL nm21966552	COL id VAL nm0961594	0
+COL id VAL nm1531103	COL id VAL nm2236337	0
+COL id VAL nm0671980	COL id VAL nm21957345	0
+COL id VAL nm21965563	COL id VAL nm0495790	0
+COL id VAL nm21957444	COL id VAL nm4341871	0
+COL id VAL nm21965691	COL id VAL nm1561355	1
+COL id VAL nm0238669	COL id VAL nm21963956	0
+COL id VAL nm2025887	COL id VAL nm0773137	0
+COL id VAL nm21968407	COL id VAL nm21962763	0
+COL id VAL nm21959467	COL id VAL nm1227180	1
+COL id VAL nm21957390	COL id VAL nm0120544	0
+COL id VAL nm21963961	COL id VAL nm0572383	1
+COL id VAL nm0456562	COL id VAL nm21964169	0
+COL id VAL nm21962985	COL id VAL nm3192494	1
+COL id VAL nm21961112	COL id VAL nm0322625	0
+COL id VAL nm21958421	COL id VAL nm21961046	0
+COL id VAL nm4341871	COL id VAL nm21969452	0
+COL id VAL nm2832339	COL id VAL nm1725970	0
+COL id VAL nm21959207	COL id VAL nm21959295	0
+COL id VAL nm21963961	COL id VAL nm3291308	0
+COL id VAL nm3139442	COL id VAL nm21965562	0
+COL id VAL nm21958597	COL id VAL nm21956569	0
+COL id VAL nm1190528	COL id VAL nm21959293	0
+COL id VAL nm21969202	COL id VAL nm0238669	0
+COL id VAL nm3376469	COL id VAL nm5025293	0
+COL id VAL nm21965385	COL id VAL nm0206142	1
+COL id VAL nm5025293	COL id VAL nm21963961	0
+COL id VAL nm21961046	COL id VAL nm9522896	0
+COL id VAL nm21962501	COL id VAL nm0172969	1
+COL id VAL nm21966578	COL id VAL nm0322625	1
+COL id VAL nm0961594	COL id VAL nm21965564	1
+COL id VAL nm21957664	COL id VAL nm21955325	0
+COL id VAL nm21959466	COL id VAL nm1338361	1
+COL id VAL nm21964035	COL id VAL nm0764168	1
+COL id VAL nm21957444	COL id VAL nm21963961	0
+COL id VAL nm0127758	COL id VAL nm0961594	0
+COL id VAL nm1227180	COL id VAL nm0550318	0
+COL id VAL nm21965152	COL id VAL nm0394679	0
+COL id VAL nm21969202	COL id VAL nm7889237	0
+COL id VAL nm0878031	COL id VAL nm21961948	0
+COL id VAL nm0957595	COL id VAL nm5374866	0
+COL id VAL nm21963954	COL id VAL nm21959207	0
+COL id VAL nm0394679	COL id VAL nm21956564	1
+COL id VAL nm21963145	COL id VAL nm1742016	1
+COL id VAL nm21967902	COL id VAL nm21961112	0
+COL id VAL nm21959642	COL id VAL nm5374866	0
+COL id VAL nm21963955	COL id VAL nm21956564	0
+COL id VAL nm21958967	COL id VAL nm5714828	1
+COL id VAL nm2025887	COL id VAL nm0162668	0
+COL id VAL nm21966318	COL id VAL nm0957595	1
+COL id VAL nm1887521	COL id VAL nm21958422	0
+COL id VAL nm3264655	COL id VAL nm0961594	0
+COL id VAL nm21963146	COL id VAL nm21968176	0
+COL id VAL nm1338361	COL id VAL nm0346080	0
+COL id VAL nm21967262	COL id VAL nm0394679	0
+COL id VAL nm7889237	COL id VAL nm21963956	1
+COL id VAL nm5601091	COL id VAL nm0855892	0
+COL id VAL nm21959609	COL id VAL nm21959608	1
+COL id VAL nm0651995	COL id VAL nm21969110	0
+COL id VAL nm21968111	COL id VAL nm3164594	1
+COL id VAL nm1133857	COL id VAL nm21958421	1
+COL id VAL nm3120206	COL id VAL nm0795060	0
+COL id VAL nm21968102	COL id VAL nm1407334	1
+COL id VAL nm21968407	COL id VAL nm1133857	0
+COL id VAL nm0172472	COL id VAL nm7031415	0
+COL id VAL nm21965561	COL id VAL nm21965564	1
+COL id VAL nm21955150	COL id VAL nm3157936	0
+COL id VAL nm21964032	COL id VAL nm0346080	1
+COL id VAL nm21955151	COL id VAL nm0878031	1
+COL id VAL nm0038896	COL id VAL nm3192494	0
+COL id VAL nm0206142	COL id VAL nm3609484	0
+COL id VAL nm21955480	COL id VAL nm21961947	0
+COL id VAL nm0127758	COL id VAL nm2006841	0
+COL id VAL nm21965153	COL id VAL nm1190528	1
+COL id VAL nm3609484	COL id VAL nm1066781	0
+COL id VAL nm21960613	COL id VAL nm1725970	0
+COL id VAL nm3376469	COL id VAL nm1011374	0
+COL id VAL nm4384917	COL id VAL nm21966183	1
+COL id VAL nm3157695	COL id VAL nm21962986	0
+COL id VAL nm5601091	COL id VAL nm5479763	0
+COL id VAL nm21969110	COL id VAL nm0855892	1
+COL id VAL nm21962501	COL id VAL nm5714828	0
+COL id VAL nm2025887	COL id VAL nm21968101	1
+COL id VAL nm21955903	COL id VAL nm2832339	1
+COL id VAL nm21959996	COL id VAL nm5404297	0
+COL id VAL nm0929452	COL id VAL nm21969202	1
+COL id VAL nm1227180	COL id VAL nm21965562	0
+COL id VAL nm21955325	COL id VAL nm1748441	1
+COL id VAL nm21968376	COL id VAL nm1889547	1
+COL id VAL nm21955840	COL id VAL nm0073888	1
+COL id VAL nm3295266	COL id VAL nm21967902	0
+COL id VAL nm21961671	COL id VAL nm0651995	0
+COL id VAL nm7031415	COL id VAL nm0572383	0
+COL id VAL nm5404297	COL id VAL nm21963206	1
+COL id VAL nm21967352	COL id VAL nm0682408	1
+COL id VAL nm21963205	COL id VAL nm0957595	0
+COL id VAL nm1066781	COL id VAL nm21964035	0
+COL id VAL nm5601091	COL id VAL nm0305380	0
+COL id VAL nm0767298	COL id VAL nm3157936	0
+COL id VAL nm0495790	COL id VAL nm21959553	0
+COL id VAL nm7889237	COL id VAL nm21961945	0
+COL id VAL nm21964033	COL id VAL nm0955309	0
+COL id VAL nm21957109	COL id VAL nm3291308	0
+COL id VAL nm9522896	COL id VAL nm0666972	0
+COL id VAL nm21964169	COL id VAL nm21960612	0
+COL id VAL nm0362027	COL id VAL nm21959642	1
+COL id VAL nm21957796	COL id VAL nm0128757	0
+COL id VAL nm21959385	COL id VAL nm0902783	0
+COL id VAL nm21961112	COL id VAL nm21964033	0
+COL id VAL nm21968658	COL id VAL nm0238669	0
+COL id VAL nm3192494	COL id VAL nm21955480	0
+COL id VAL nm3120206	COL id VAL nm21957109	0
+COL id VAL nm1190528	COL id VAL nm1541933	0
+COL id VAL nm1066781	COL id VAL nm21961671	0
+COL id VAL nm0684044	COL id VAL nm21964033	1
+COL id VAL nm3157695	COL id VAL nm21959385	1
+COL id VAL nm1338361	COL id VAL nm21959465	1
+COL id VAL nm3662284	COL id VAL nm21959553	0
+COL id VAL nm21959643	COL id VAL nm1511631	1
+COL id VAL nm2513694	COL id VAL nm21955902	0
+COL id VAL nm21959609	COL id VAL nm21962985	0
+COL id VAL nm21962502	COL id VAL nm0172969	1
+COL id VAL nm21966244	COL id VAL nm0961594	0
+COL id VAL nm21963120	COL id VAL nm2684703	0

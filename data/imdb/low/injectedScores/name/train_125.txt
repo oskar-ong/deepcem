@@ -1,125 +1,125 @@
-COL name_movie_similarity VAL uncertain COL primaryName VAL Johannes de Bruyn COL primaryProfession VAL actor COL id VAL nm21966446	COL primaryName VAL BuuliZaanoz COL primaryProfession VAL script_department COL id VAL nm21956791	0
-COL name_movie_similarity VAL low COL primaryName VAL Douglas Koch COL primaryProfession VAL cinematographer-camera_department COL id VAL nm0462288	COL primaryName VAL Eugen Kelemen COL primaryProfession VAL editor-editorial_department-producer COL id VAL nm21956333	0
-COL name_movie_similarity VAL low COL primaryName VAL Max Pross COL primaryProfession VAL producer-writer-miscellaneosu COL id VAL nm0698795	COL primaryName VAL William KyleZ COL primaryProfession VAL actor COL id VAL nm21965999	0
-COL name_movie_similarity VAL low COL primaryName VAL Angela Potrikus COL primaryProfession VAL actress COL id VAL nm6952365	COL primaryName VAL Holly Hunter COL primaryProfession VAL actress-producer-soundtrack COL id VAL nm0000456	0
-COL name_movie_similarity VAL low COL primaryName VAL Anne Dunev COL id VAL nm4851430	COL primaryName VAL Michael Knupffer COL primaryProfession VAL producer-sound_department COL id VAL nm21962020	0
-COL name_movie_similarity VAL low COL primaryName VAL Chris Cook COL primaryProfession VAL actor COL id VAL nm21955375	COL primaryName VAL Steve Cochran COL primaryProfession VAL actor-director-writer COL id VAL nm0168215	0
-COL name_movie_similarity VAL high COL primaryName VAL Harry Kurnitz COL primaryProfession VAL writer-producer-costume_designer COL id VAL nm21956135	COL primaryName VAL Harry Kurnitz COL primaryProfession VAL writer-producer-costume_designer COL id VAL nm0475823	1
-COL name_movie_similarity VAL uncertain COL primaryName VAL Jake Roberts COL primaryProfession VAL actor-writer COL id VAL nm0731195	COL primaryName VAL Jess Harnell COL primaryProfession VAL actor-music_department-soundtrack COL id VAL nm0363641	0
-COL name_movie_similarity VAL low COL primaryName VAL Atsushi Shimizu COL primaryProfession VAL director-writer-producer COL id VAL nm21956910	COL name_movie_similarity VAL low COL primaryName VAL Gene KauerN COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm21959280	0
-COL name_movie_similarity VAL low COL primaryName VAL Scott Jeffress COL primaryProfession VAL producer-editorial_department-editor COL id VAL nm0420277	COL primaryName VAL Tito Mora COL primaryProfession VAL actor-soundtrack COL id VAL nm0602351	0
-COL name_movie_similarity VAL low COL primaryName VAL Ashley White COL primaryProfession VAL actr COL id VAL nm21968514	COL primaryName VAL Drew Vaupen COL primaryProfession VAL producer-writer-miscellaneous COL id VAL nm0891291	0
-COL name_movie_similarity VAL low COL primaryName VAL Don Smith COL primaryProfession VAL actor COL id VAL nm2942977	COL primaryName VAL Joe KingS COL primaryProfession VAL composer-director-writer COL id VAL nm21965998	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Hilary Linstead COL primaryProfession VAL producer-casting_director-wer COL id VAL nm0513182	COL primaryName VAL Jagdeepv COL primaryProfession VAL actor-music_department-soundtrack COL id VAL nm21956815	0
-COL name_movie_similarity VAL low COL primaryName VAL Ali Azads COL primaryProfession VAL actor COL id VAL nm21961481	COL primaryName VAL Fausto Tozzi COL primaryProfession VAL actor-writer-assistant_director COL id VAL nm0870362	0
-COL name_movie_similarity VAL low COL primaryName VAL Claire Windsor COL primaryProfession VAL actress COL id VAL nm0934780	COL primaryName VAL Leelee Sobieski COL primaryProfession VAL actress-producer COL id VAL nm0005447	0
-COL name_movie_similarity VAL low COL primaryName VAL Warren Foster COL primaryProfession VAL writer-soundtrack-art_department COL id VAL nm21965633	COL primaryName VAL Saray Pavon COL primaryProfession VAL actress COL id VAL nm21955408	0
-COL name_movie_similarity VAL low COL primaryName VAL  COL primaryProfession VAL actor COL id VAL nm1795309	COL primaryName VAL Emily Brooks COL primaryProfession VAL actress-writer COL id VAL nm21963672	0
-COL name_movie_similarity VAL low COL primaryName VAL Steve Bevilacqua COL primaryProfession VAL writer-producer-director COL id VAL nm1569073	COL primaryName VAL Johanna Teichmann COL primaryProfession VAL producer-ter COL id VAL nm2281887	0
-COL name_movie_similarity VAL low COL primaryName VAL Fadi Kazmuz COL primaryProfession VAL producer COL id VAL nm21969571	COL primaryName VAL Maureen Oxley COL primaryProfession VAL writer-producer COL id VAL nm8311414	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Christopher Lennertz COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm0501999	COL primaryName VAL Jimmy Pawlak COL primaryProfession VAL actor COL id VAL nm21965950	0
-COL name_movie_similarity VAL high COL primaryName VAL Michael Wetherburn COL primaryProfession VAL composer COL id VAL nm21968498	COL primaryName VAL Michael Wetherburn COL primaryProfession VAL composer COL id VAL nm4325325	1
-COL name_movie_similarity VAL high COL primaryName VAL Yan Hsiao COL primaryProfession VAL actor COL id VAL nm7039361	COL primaryName VAL Yan Hsiao COL primaryProfession VAL actor COL id VAL nm21964658	1
-COL name_movie_similarity VAL low COL primaryName VAL Manmohan Singh COL primaryProfession VAL cinematographer-producer-director COL id VAL nm21964299	COL primaryName VAL Mac Kenny COL primaryProfession VAL cinematographer-camera_department-director COL id VAL nm21968218	0
-COL name_movie_similarity VAL low COL primaryName VAL Eric Gurney COL primaryProfession VAL writer-animation_department COL id VAL nm21956249	COL primaryName VAL Andrew Gothard COL primaryProfession VAL actor COL id VAL nm8693727	0
-COL name_movie_similarity VAL low COL primaryName VAL Prabhu Deva COL primaryProfession VAL actor-miscellaneous-director COL id VAL nm0222150	COL primaryName VAL Tom Shannon COL primaryProfession VAL animation_department-art_department-production_designer COL id VAL nm1623165	0
-COL name_movie_similarity VAL low COL primaryName VAL Marc Outbreak COL primaryProfession VAL stunts-actor-cinematographer COL id VAL nm5263629	COL primaryName VAL Kelly Stables COL primaryProfession VAL actress-miscellaneous-stunts COL id VAL nm1261587	0
-COL name_movie_similarity VAL low COL primaryName VAL Isaac C Singleton Jr COL primaryProfession VAL actor-writer-producer COL id VAL nm0802280	COL primaryName VAL Afa Anoai COL primaryProfession VAL actor-producer-miscellaneous COL id VAL nm0962102	0
-COL name_movie_similarity VAL high COL primaryName VAL Bill McLaughlin COL primaryProfession VAL actor COL id VAL nm21968321	COL primaryName VAL Bill McLaughlin COL primaryProfession VAL actor COL id VAL nm0572279	1
-COL name_movie_similarity VAL uncertain COL primaryName VAL Terry Jernigan COL primaryProfession VAL actor-producer-writer COL id VAL nm21964357	COL primaryName VAL Joe E Brown COL primaryProfession VAL actor-soundtrack COL id VAL nm0113873	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Kathryn FarrX COL primaryProfession VAL actor COL id VAL nm21955655	COL primaryName VAL Patrick Alparone COL primaryProfession VAL actor COL id VAL nm21965945	0
-COL name_movie_similarity VAL high COL primaryName VAL Felix Adler COL primaryProfession VAL writer-miscellaneous-actor COL id VAL nm0012148	COL primaryName VAL Felix Adler COL primaryProfession VAL writer-miscellaneous-actor COL id VAL nm21967403	1
-COL name_movie_similarity VAL high COL primaryName VAL Delphine Chanéac COL primaryProfession VAL actress COL id VAL nm0152035	COL primaryName VAL Delphine Chanéac COL primaryProfession VAL actress COL id VAL nm21968932	1
-COL name_movie_similarity VAL low COL primaryName VAL Yoshiko Asaia COL primaryProfession VAL actress COL id VAL nm21962452	COL primaryName VAL Antonio Spadavekkia COL primaryProfession VAL composer COL id VAL nm21960729	0
-COL name_movie_similarity VAL high COL primaryName VAL Max Klevent COL primaryProfession VAL stunts-actor-assistant_director COL id VAL nm21957751	COL primaryName VAL Max Kleven COL primaryProfession VAL stunts-actor-assistant_director COL id VAL nm0459369	1
-COL name_movie_similarity VAL low COL primaryName VAL Christopher C Dewey COL primaryProfession VAL producer-miscellaneous COL id VAL nm0223119	COL primaryName VAL Panagiotis KonstadinouC COL primaryProfession VAL legal-writer-actor COL id VAL nm21961812	0
-COL name_movie_similarity VAL high COL primaryName VAL Jerry Watson COL primaryProfession VAL camera_department-cinematographer-miscellaneous COL id VAL nm21961191	COL primaryName VAL Jerry Watson COL primaryProfession VAL camera_department-cinematographer-miscellaneous COL id VAL nm0914697	1
-COL name_movie_similarity VAL high COL primaryName VAL Marilu Henner COL primaryProfession VAL actress-miscellaneous-producer COL id VAL nm0000447	COL primaryName VAL Marilu Henner COL primaryProfession VAL actress-miscellaneous-producer COL id VAL nm21964717	1
-COL name_movie_similarity VAL low COL primaryName VAL José Luis ColinaI COL primaryProfession VAL writer-director-soundtrack COL id VAL nm21962887	COL primaryName VAL Molly Rome COL primaryProfession VAL actress COL id VAL nm1007991	0
-COL name_movie_similarity VAL low COL primaryName VAL Joseph ODonnell COL primaryProfession VAL writer-miscellaneous-script_department COL id VAL nm0640784	COL primaryName VAL James P Hogan COL primaryProfession VAL director-writer-assistant_director COL id VAL nm21958305	0
-COL name_movie_similarity VAL low COL primaryName VAL Daniel CraigH COL primaryProfession VAL cinematographer-producer-soundtrack COL id VAL nm21959213	COL primaryName VAL Paolo Villaggio COL primaryProfession VAL actor-writer-soundtrack COL id VAL nm0897715	0
-COL name_movie_similarity VAL low COL primaryName VAL SumalaX COL primaryProfession VAL sound_department COL id VAL nm21964235	COL primaryName VAL Axel Milberg COL primaryProfession VAL actor COL id VAL nm0586923	0
-COL name_movie_similarity VAL high COL primaryName VAL Corey Landis COL primaryProfession VAL actor-soundtrack-writer COL id VAL nm1813063	COL primaryName VAL Corey LandisE COL primaryProfession VAL sound_department-soundtrack-writer COL id VAL nm21969644	1
-COL name_movie_similarity VAL low COL primaryName VAL Harvey Korman COL primaryProfession VAL actor-director-soundtrack COL id VAL nm0466327	COL primaryName VAL Rajan P Dev COL primaryProfession VAL actor-director COL id VAL nm21969057	0
-COL name_movie_similarity VAL low COL primaryName VAL Albert Bandg COL primaryProfession VAL producer-director-actor COL id VAL nm21967499	COL primaryName VAL Diana Chihade COL primaryProfession VAL actress COL id VAL nm21964851	0
-COL name_movie_similarity VAL high COL primaryName VAL Chuck Dukowski COL primaryProfession VAL soundtrack-actor-producer COL id VAL nm21965851	COL primaryName VAL Chuck Dukowski COL primaryProfession VAL soundck-actor-producer COL id VAL nm1584863	1
-COL name_movie_similarity VAL low COL primaryName VAL Gabriele Cirilli COL primaryProfession VAL actor-writer COL id VAL nm0162737	COL primaryName VAL Linda J Cowgill COL primaryProfession VAL writer-script_department COL id VAL nm0184749	0
-COL name_movie_similarity VAL low COL primaryName VAL Eddie Wang COL primaryProfession VAL composer-music_department-script_department COL id VAL nm0910881	COL primaryName VAL Julinaa Montañés COL primaryProfession VAL editor COL id VAL nm4022526	0
-COL name_movie_similarity VAL low COL primaryName VAL Sherif Mounir COL primaryProfession VAL actor COL id VAL nm21968269	COL primaryName VAL Dylan Williams COL primaryProfession VAL producer-director-editor COL id VAL nm3981582	0
-COL name_movie_similarity VAL low COL primaryName VAL Jordison Joey COL primaryProfession VAL actor-soundtrack-composer COL id VAL nm0430259	COL primaryName VAL Francis Lai COL primaryProfession VAL composer-soundtrack-music_department COL id VAL nm0006162	0
-COL name_movie_similarity VAL low COL primaryName VAL Gerald Geraghty COL primaryProfession VAL writer-miscellaneous COL id VAL nm21967695	COL primaryName VAL Ivan Burlyaev COL primaryProfession VAL composer-actor-music_department COL id VAL nm21961274	0
-COL name_movie_similarity VAL low COL primaryName VAL José María Pemán COL primaryProfession VAL writer-soundtrack COL id VAL nm0671522	COL name_movie_similarity VAL low COL primaryName VAL Garth Knox COL primaryProfession VAL composer-soundtrack COL id VAL nm5669193	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Ali Mansuri COL primaryProfession VAL producer-miscellaneous-camera_department COL id VAL nm21966152	COL primaryName VAL Ali Mansuri COL primaryProfession VAL producer-miscellaneous-camera_department COL id VAL nm3292686	1
-COL name_movie_similarity VAL low COL primaryName VAL Todd Cahoon COL primaryProfession VAL actor-art_department-camera_department COL id VAL nm0128737	COL primaryName VAL Gülden Avsaroglu COL primaryProfession VAL actress-casting_director COL id VAL nm21958207	0
-COL name_movie_similarity VAL high COL primaryName VAL Greg Pruss COL primaryProfession VAL writer-actor-art_department COL id VAL nm21958076	COL primaryName VAL Greg Pruss COL primaryProfession VAL writer-actor-art_department COL id VAL nm0699294	1
-COL name_movie_similarity VAL uncertain COL primaryName VAL Paul Sloane COL primaryProfession VAL writer-director-producer COL id VAL nm0806061	COL primaryName VAL Julia von Frihling COL primaryProfession VAL editor COL id VAL nm0902267	0
-COL name_movie_similarity VAL low COL primaryName VAL Joe LiTrenta COL primaryProfession VAL director-writer-editor COL id VAL nm2163723	COL primaryName VAL Kanchan COL primaryProfession VAL actress COL id VAL nm0437146	0
-COL name_movie_similarity VAL high COL primaryName VAL Catherine Stepien COL primaryProfession VAL production_designer-costume_department-actress COL id VAL nm21955058	COL primaryName VAL Catherine Stepien COL primaryProfession VAL production_designer-costume_department-actress COL id VAL nm6772561	1
-COL name_movie_similarity VAL low COL primaryName VAL Joey Travolta COL primaryProfession VAL actor-producer-director COL id VAL nm21965882	COL primaryName VAL Vladimir Gerasimov COL primaryProfession VAL director-assistant_director-producer COL id VAL nm7624726	0
-COL name_movie_similarity VAL low COL primaryName VAL Shelley Buchbinder COL primaryProfession VAL actress-sound_department-miscellaneous COL id VAL nm5378681	COL primaryName VAL Tim Lever COL primaryProfession VAL soundtrack-miscellaneous-composer COL id VAL nm1048012	0
-COL name_movie_similarity VAL low COL primaryName VAL Bernard Hill COL primaryProfession VAL actor-miscellaneous-soundtrack COL id VAL nm21968497	COL primaryName VAL Nick London COL primaryProfession VAL director-producer-cinematographer COL id VAL nm4123264	0
-COL name_movie_similarity VAL high COL primaryName VAL Anna Rizzo COL primaryProfession VAL actress-composer COL id VAL nm5042825	COL primaryName VAL Anna Rizzo COL primaryProfession VAL actress-composer COL id VAL nm21962305	1
-COL name_movie_similarity VAL low COL primaryName VAL Kyle Stone COL primaryProfession VAL actor-miscellaneous COL id VAL nm0831996	COL primaryName VAL Helder Fariaz COL primaryProfession VAL editor-director-writer COL id VAL nm21961129	0
-COL name_movie_similarity VAL low COL primaryName VAL Richard Carterp COL primaryProfession VAL camera_department COL id VAL nm21960114	COL primaryName VAL Pascal Elso COL primaryProfession VAL actor COL id VAL nm0255693	0
-COL name_movie_similarity VAL high COL primaryName VAL Paul Cattermole COL primaryProfession VAL actor-soundtrack COL id VAL nm0146366	COL primaryName VAL Paul Cattermoler COL primaryProfession VAL casting_department-soundtrack COL id VAL nm21963487	1
-COL name_movie_similarity VAL high COL primaryName VAL Edward Faulkner COL primaryProfession VAL actor-director-art_director COL id VAL nm0269067	COL primaryName VAL Edward Faulkner COL primaryProfession VAL actor-director-art_director COL id VAL nm21960806	1
-COL name_movie_similarity VAL low COL primaryName VAL Jaromir Kacer COL primaryProfession VAL cinematographer-writer COL id VAL nm0434141	COL primaryName VAL Raj Kumar SA COL primaryProfession VAL composer COL id VAL nm0754180	0
-COL name_movie_similarity VAL low COL primaryName VAL Gene KauerN COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm21959280	COL primaryName VAL Joey Leverd COL primaryProfession VAL assistant-director-writer COL id VAL nm21965794	0
-COL name_movie_similarity VAL high COL primaryName VAL Mat Powell COL primaryProfession VAL producer-actor COL id VAL nm6449795	COL primaryName VAL Mat Powell COL primaryProfession VAL producer-actor COL id VAL nm21964947	1
-COL name_movie_similarity VAL low COL primaryName VAL Fernando Arze Echalar COL primaryProfession VAL actor-casting_director-writer COL id VAL nm1782399	COL primaryName VAL George Coulouris COL primaryProfession VAL actor-miscellaneous COL id VAL nm0183459	0
-COL name_movie_similarity VAL low COL primaryName VAL Mick Blue COL primaryProfession VAL actor-director-camera_department COL id VAL nm1120190	COL primaryName VAL Bettina Kupfer COL primaryProfession VAL actress-writer-producer COL id VAL nm0475460	0
-COL name_movie_similarity VAL low COL primaryName VAL Carlo Rota COL primaryProfession VAL actor-miscellaneous-producer COL id VAL nm0744690	COL primaryName VAL Aaron K Carter COL primaryProfession VAL director-actor-writer COL id VAL nm5078817	0
-COL name_movie_similarity VAL low COL primaryName VAL Julie COL primaryProfession VAL actress COL id VAL nm4468741	COL primaryName VAL Ivo Uukkivi COL primaryProfession VAL actor-producer COL id VAL nm0882616	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Glenn Montgomery COL primaryProfession VAL writer-costume_department COL id VAL nm21960473	COL primaryName VAL Mel Lewis COL primaryProfession VAL composer-music_department-sound_department COL id VAL nm0507542	0
-COL name_movie_similarity VAL low COL primaryName VAL Mike Deisinger COL primaryProfession VAL editorial_department-editor-director COL id VAL nm1093078	COL primaryName VAL Sara Derzawyx COL primaryProfession VAL publicist COL id VAL nm21969781	0
-COL name_movie_similarity VAL low COL primaryName VAL Roscoe Ails COL primaryProfession VAL actor COL id VAL nm21956208	COL primaryName VAL Bud Jamison COL primaryProfession VAL actor-soundtrack-director COL id VAL nm21967402	0
-COL name_movie_similarity VAL high COL primaryName VAL Terry Prewitt_ COL primaryProfession VAL sound_department COL id VAL nm21959111	COL primaryName VAL Terry Prewitt COL id VAL nm6577319	1
-COL name_movie_similarity VAL low COL primaryName VAL Aicha McKenzie COL primaryProfession VAL actress-miscellaneous COL id VAL nm1161302	COL primaryName VAL Janez Bricelj COL primaryProfession VAL editor-sound_department-actor COL id VAL nm0108530	0
-COL name_movie_similarity VAL low COL primaryName VAL Yassin Ismail Yassin COL primaryProfession VAL director-writer-actor COL id VAL nm21968331	COL primaryName VAL Byamba Sakhya COL primaryProfession VAL director-cinematographer-editor COL id VAL nm21957340	0
-COL name_movie_similarity VAL high COL primaryName VAL Jeremiah Bitsui COL primaryProfession VAL actor-producer-casting_department COL id VAL nm0084497	COL primaryName VAL Jeremiah BitsuiV COL primaryProfession VAL actor-producer-casting_department COL id VAL nm21956799	1
-COL name_movie_similarity VAL low COL primaryName VAL Lester Orlebeck COL primaryProfession VAL editor-director COL id VAL nm0650046	COL primaryName VAL Roy Mackr COL primaryProfession VAL special_effects-writer-miscellaneous COL id VAL nm21956212	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Martin Pepler COL primaryProfession VAL producer COL id VAL nm21958610	COL primaryName VAL Jacques Penot COL primaryProfession VAL actor-writer COL id VAL nm21960768	0
-COL name_movie_similarity VAL low COL primaryName VAL Andreas Zisimatosf COL primaryProfession VAL actor COL id VAL nm21961811	COL primaryName VAL Joel Casanueva COL primaryProfession VAL actor COL id VAL nm4714948	0
-COL name_movie_similarity VAL low COL primaryName VAL Tom Mix COL primaryProfession VAL actor-director-writer COL id VAL nm21956057	COL primaryName VAL Walaa Faridg COL primaryProfession VAL actress COL id VAL nm21968335	0
-COL name_movie_similarity VAL low COL primaryName VAL Natalia Tenam COL primaryProfession VAL actress-writer-soundtrack COL id VAL nm21957236	COL primaryName VAL Emily Brooks COL primaryProfession VAL actress-writer COL id VAL nm3999828	0
-COL name_movie_similarity VAL low COL primaryName VAL Martin Maheuxm COL primaryProfession VAL manager COL id VAL nm21964644	COL primaryName VAL Harry Manfredini COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm0006185	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Valley Keene COL primaryProfession VAL actress COL id VAL nm0444742	COL primaryName VAL Valley KeeneR COL primaryProfession VAL animation_department COL id VAL nm21960201	1
-COL name_movie_similarity VAL low COL primaryName VAL Ugo Liberatore COL primaryProfession VAL writer-director-actor COL id VAL nm21958406	COL primaryName VAL Miomir Denic COL primaryProfession VAL production_designer-art_director COL id VAL nm0219089	0
-COL name_movie_similarity VAL low COL primaryName VAL Enrique Jarlego COL primaryProfession VAL editor-director-actor COL id VAL nm21967640	COL name_movie_similarity VAL high COL primaryName VAL Felix Adler COL primaryProfession VAL writer-miscellaneous-actor COL id VAL nm0012148	0
-COL name_movie_similarity VAL low COL primaryName VAL Joe Cook COL primaryProfession VAL actor-writer-soundtrack COL id VAL nm21958302	COL name_movie_similarity VAL uncertain COL primaryName VAL Hilary Linstead COL primaryProfession VAL producer-casting_director-wer COL id VAL nm0513182	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Zdenek Hadjova COL primaryProfession VAL cinematographer COL id VAL nm21963684	COL primaryName VAL Byamba Sakhya COL primaryProfession VAL director-cinematographer-editor COL id VAL nm21957340	0
-COL name_movie_similarity VAL high COL primaryName VAL John Dennis COL primaryProfession VAL actor COL id VAL nm21961304	COL primaryName VAL John Dennis COL primaryProfession VAL actor COL id VAL nm0112392	1
-COL name_movie_similarity VAL low COL primaryName VAL David Gustave Dawood COL id VAL nm2571574	COL primaryName VAL Dragana Micalovic COL primaryProfession VAL actress COL id VAL nm3825386	0
-COL name_movie_similarity VAL low COL primaryName VAL Valérie Lemerciert COL primaryProfession VAL actress-director-writer COL id VAL nm21955226	COL primaryName VAL Rachid Mekhloufi COL id VAL nm21956886	0
-COL name_movie_similarity VAL low COL primaryName VAL Gordy Haab COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm1571576	COL primaryName VAL Marcius Barbieri COL primaryProfession VAL editor-director-actor COL id VAL nm21962614	0
-COL name_movie_similarity VAL low COL primaryName VAL Sebastian Zentilomo COL primaryProfession VAL cinematographer-editor COL id VAL nm7839145	COL primaryName VAL K Balaji COL primaryProfession VAL  COL id VAL nm1163202	0
-COL name_movie_similarity VAL low COL primaryName VAL Patrick Le Bon COL primaryProfession VAL director-writer-actor COL id VAL nm0495811	COL primaryName VAL Nigel Davenportd COL primaryProfession VAL actor-assistant_director-soundtrack COL id VAL nm21961488	0
-COL name_movie_similarity VAL high COL primaryName VAL Ivo Uukkivi COL primaryProfession VAL actor-producer COL id VAL nm21962872	COL primaryName VAL Ivo Uukkivi COL primaryProfession VAL actor-producer COL id VAL nm0882616	1
-COL name_movie_similarity VAL high COL primaryName VAL Kitarô Muro COL primaryProfession VAL producer-writer-director COL id VAL nm3496977	COL primaryName VAL Kitarô Muro COL primaryProfession VAL producer-writer-director COL id VAL nm21959575	1
-COL name_movie_similarity VAL uncertain COL primaryName VAL Ali B COL primaryProfession VAL actor-writer-soundtrack COL id VAL nm21964157	COL primaryName VAL Elmano Sancho COL primaryProfession VAL actor COL id VAL nm2504650	0
-COL name_movie_similarity VAL low COL primaryName VAL Gea MartireZ COL primaryProfession VAL actress-writer COL id VAL nm21965603	COL primaryName VAL A Jerk COL primaryProfession VAL editor COL id VAL nm9531104	0
-COL name_movie_similarity VAL low COL primaryName VAL Kleer MaibaumS COL primaryProfession VAL actress COL id VAL nm21962870	COL primaryName VAL Oskar Franzen COL primaryProfession VAL editor-editorial_department-camera_department COL id VAL nm1122329	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL Irving Pichel COL primaryProfession VAL actor-director-producer COL id VAL nm0681635	COL primaryName VAL Rosi CamposI COL primaryProfession VAL actress-soundtrack-miscellaneous COL id VAL nm21959639	0
-COL name_movie_similarity VAL high COL primaryName VAL Sebastián Schjaerr COL primaryProfession VAL editor-director-writer COL id VAL nm21963857	COL primaryName VAL Sebastián Schjaer COL primaryProfession VAL editor-director-writer COL id VAL nm4398028	1
-COL name_movie_similarity VAL high COL primaryName VAL Gordy Haab COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm21969632	COL name_movie_similarity VAL low COL primaryName VAL Gordy Haab COL primaryProfession VAL composer-music_department-soundtrack COL id VAL nm1571576	1
-COL name_movie_similarity VAL low COL primaryName VAL Guy Maddin COL primaryProfession VAL director-writer-cinematographer COL id VAL nm21958107	COL primaryName VAL Guy Maddinn COL primaryProfession VAL director-writer-cinematographer COL id VAL nm21955271	1
-COL name_movie_similarity VAL low COL primaryName VAL Bhushan Kumar COL primaryProfession VAL producer-writer-miscellaneous COL id VAL nm1024685	COL primaryName VAL Mary Ann Jackson COL primaryProfession VAL actress-stunts-soundtrack COL id VAL nm0413843	0
-COL name_movie_similarity VAL high COL primaryName VAL Giulia Gualano_ COL primaryProfession VAL stunts COL id VAL nm21964084	COL primaryName VAL Giulia Gualano COL primaryProfession VAL actress COL id VAL nm5816469	1
-COL name_movie_similarity VAL low COL primaryName VAL Harry GregsonWilliamsA COL primaryProfession VAL miscellaneous-music_department-soundtrack COL id VAL nm21968947	COL primaryName VAL Jacob Kalich COL primaryProfession VAL actor-art_department-art_director COL id VAL nm0435748	0
-COL name_movie_similarity VAL low COL primaryName VAL Nikolaus LeytnerH COL primaryProfession VAL director-writer-assistant_director COL id VAL nm21966408	COL primaryName VAL Bernard McConville COL primaryProfession VAL writer-script_department COL id VAL nm21959053	0
-COL name_movie_similarity VAL low COL primaryName VAL SL Puram SadanandanW COL primaryProfession VAL writer-director COL id VAL nm21961093	COL primaryName VAL Eric F Adams COL primaryProfession VAL actor-stunts-director COL id VAL nm2353879	0
-COL name_movie_similarity VAL uncertain COL primaryName VAL  COL primaryProfession VAL editor COL id VAL nm0377473	COL primaryName VAL Tianna Taylor COL primaryProfession VAL actress COL id VAL nm0853259	0
-COL name_movie_similarity VAL high COL primaryName VAL Simon BeaufilsS COL primaryProfession VAL editorial_department-camera_department COL id VAL nm21963981	COL primaryName VAL Simon Beaufils COL primaryProfession VAL cinematographer-camera_department COL id VAL nm21963983	1
-COL name_movie_similarity VAL uncertain COL primaryName VAL TinaB arrettO COL primaryProfession VAL art_department-soundtrack-writer COL id VAL nm21963484	COL primaryName VAL Matthew Gray GublerS COL primaryProfession VAL music_department-director-producer COL id VAL nm21960145	0
-COL name_movie_similarity VAL low COL primaryName VAL Grey GriffinO COL primaryProfession VAL stunts-music_department-soundtrack COL id VAL nm21965900	COL primaryName VAL Gregor Clark COL primaryProfession VAL director-writer-asisstant_director COL id VAL nm21957149	0
-COL name_movie_similarity VAL high COL primaryName VAL Carol Castro COL primaryProfession VAL actress COL id VAL nm21959640	COL primaryName VAL Carol Castro COL primaryProfession VAL actress COL id VAL nm1365217	1
-COL name_movie_similarity VAL low COL primaryName VAL Suavi Tedü COL primaryProfession VAL actor-director-writer COL id VAL nm21955035	COL primaryName VAL Gerard CorderoR COL primaryProfession VAL transportation_department-stunts-writer COL id VAL nm21956797	0
-COL name_movie_similarity VAL low COL primaryName VAL Ryan Perez COL primaryProfession VAL writer-actor-director COL id VAL nm21967183	COL primaryName VAL Angus Macfadyen COL primaryProfession VAL actor-writer-director COL id VAL nm21962779	0
-COL name_movie_similarity VAL high COL primaryName VAL Ege Aydan COL primaryProfession VAL actor COL id VAL nm21961182	COL primaryName VAL Ege Aydan COL primaryProfession VAL actor COL id VAL nm0043709	1
-COL name_movie_similarity VAL low COL primaryName VAL Martín Mainoli COL primaryProfession VAL editor-director-writer COL id VAL nm0969637	COL primaryName VAL Gabriel Senanes COL primaryProfession VAL composer-music_department COL id VAL nm0784086	0
-COL name_movie_similarity VAL low COL primaryName VAL Mike WattB COL primaryProfession VAL actor-soundtrack-composer COL id VAL nm21965848	COL primaryName VAL Roy Pomeroyk COL primaryProfession VAL camera_department-director-miscellaneous COL id VAL nm21955924	0
-COL name_movie_similarity VAL low COL primaryName VAL Faye Marsay COL primaryProfession VAL aess COL id VAL nm3849670	COL primaryName VAL Naama Amitr COL primaryProfession VAL actress COL id VAL nm21958292	0
-COL name_movie_similarity VAL low COL primaryName VAL Iain Stewart COL primaryProfession VAL actor-miscellaneous COL id VAL nm1581681	COL primaryName VAL Jefferson Moffitt COL primaryProfession VAL writer-director COL id VAL nm21968887	0
-COL name_movie_similarity VAL low COL primaryName VAL Garth Knox COL primaryProfession VAL composer-soundtrack COL id VAL nm5669193	COL primaryName VAL Roy Roberts COL primaryProfession VAL producer COL id VAL nm0731548	0
-COL name_movie_similarity VAL low COL primaryName VAL Jude Harris COL primaryProfession VAL producer-sound_department-writer COL id VAL nm2543488	COL primaryName VAL Chris Kropp COL primaryProfession VAL production_manager-producer-director COL id VAL nm1771361	0
-COL name_movie_similarity VAL low COL primaryName VAL Petr Skoumal COL primaryProfession VAL composer-soundtrack-actor COL id VAL nm21963683	COL primaryName VAL Jamil Caballerot COL primaryProfession VAL assistant-visual_effects-camera_department COL id VAL nm21964758	0
+COL name_movie_similarity VAL low COL id VAL nm0003546	COL id VAL nm21956443	0
+COL name_movie_similarity VAL low COL id VAL nm21968569	COL id VAL nm21960218	0
+COL name_movie_similarity VAL low COL id VAL nm1261587	COL id VAL nm21962189	0
+COL name_movie_similarity VAL low COL id VAL nm0184749	COL id VAL nm0619309	0
+COL name_movie_similarity VAL low COL id VAL nm21967487	COL id VAL nm6391700	0
+COL name_movie_similarity VAL low COL id VAL nm1870199	COL id VAL nm0454870	0
+COL name_movie_similarity VAL high COL id VAL nm21956135	COL id VAL nm0475823	1
+COL name_movie_similarity VAL low COL id VAL nm0477975	COL id VAL nm0564533	0
+COL name_movie_similarity VAL low COL id VAL nm0154142	COL id VAL nm21968420	0
+COL name_movie_similarity VAL uncertain COL id VAL nm5178457	COL id VAL nm21955560	0
+COL name_movie_similarity VAL low COL id VAL nm21967806	COL id VAL nm1037986	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963699	COL id VAL nm21966638	0
+COL name_movie_similarity VAL low COL id VAL nm0363641	COL id VAL nm21964348	0
+COL name_movie_similarity VAL low COL id VAL nm21964122	COL id VAL nm21960668	0
+COL name_movie_similarity VAL low COL id VAL nm21955074	COL id VAL nm0479133	0
+COL name_movie_similarity VAL uncertain COL id VAL nm1198470	COL id VAL nm1553967	0
+COL name_movie_similarity VAL low COL id VAL nm2611725	COL id VAL nm21968143	0
+COL name_movie_similarity VAL low COL id VAL nm1311794	COL id VAL nm21956114	0
+COL name_movie_similarity VAL low COL id VAL nm0209615	COL id VAL nm1759861	0
+COL name_movie_similarity VAL low COL id VAL nm0629363	COL id VAL nm0432213	0
+COL name_movie_similarity VAL high COL id VAL nm21968498	COL id VAL nm4325325	1
+COL name_movie_similarity VAL high COL id VAL nm7039361	COL id VAL nm21964658	1
+COL name_movie_similarity VAL uncertain COL id VAL nm0270559	COL id VAL nm21969569	0
+COL name_movie_similarity VAL low COL id VAL nm21960289	COL id VAL nm2281887	0
+COL name_movie_similarity VAL low COL id VAL nm21960611	COL id VAL nm6391700	0
+COL name_movie_similarity VAL low COL id VAL nm21968668	COL id VAL nm0853944	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963904	COL id VAL nm1990825	0
+COL name_movie_similarity VAL high COL id VAL nm21968321	COL id VAL nm0572279	1
+COL name_movie_similarity VAL low COL id VAL nm21958591	COL id VAL nm21964942	0
+COL name_movie_similarity VAL low COL id VAL nm0584221	COL id VAL nm0244418	0
+COL name_movie_similarity VAL high COL id VAL nm0012148	COL id VAL nm21967403	1
+COL name_movie_similarity VAL high COL id VAL nm0152035	COL name_movie_similarity VAL low COL id VAL nm21968932	1
+COL name_movie_similarity VAL low COL id VAL nm21961866	COL id VAL nm21968023	0
+COL name_movie_similarity VAL high COL id VAL nm21957751	COL id VAL nm0459369	1
+COL name_movie_similarity VAL low COL id VAL nm21955406	COL id VAL nm21967260	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21961191	COL id VAL nm0914697	1
+COL name_movie_similarity VAL high COL id VAL nm0000447	COL id VAL nm21964717	1
+COL name_movie_similarity VAL low COL id VAL nm21958903	COL id VAL nm0000193	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21961850	COL id VAL nm1237397	0
+COL name_movie_similarity VAL low COL id VAL nm0639780	COL name_movie_similarity VAL low COL id VAL nm1261587	0
+COL name_movie_similarity VAL low COL id VAL nm0605923	COL id VAL nm3531871	0
+COL name_movie_similarity VAL high COL id VAL nm1813063	COL id VAL nm21969644	1
+COL name_movie_similarity VAL low COL id VAL nm0004755	COL id VAL nm0816532	0
+COL name_movie_similarity VAL low COL id VAL nm0049766	COL id VAL nm21964909	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21965851	COL id VAL nm1584863	1
+COL name_movie_similarity VAL low COL id VAL nm0912450	COL id VAL nm1124343	0
+COL name_movie_similarity VAL low COL id VAL nm1559844	COL id VAL nm21957235	0
+COL name_movie_similarity VAL low COL id VAL nm21965243	COL id VAL nm21964348	0
+COL name_movie_similarity VAL low COL id VAL nm21966406	COL id VAL nm1863658	0
+COL name_movie_similarity VAL low COL id VAL nm0527668	COL id VAL nm2362566	0
+COL name_movie_similarity VAL low COL id VAL nm0762660	COL id VAL nm0000428	0
+COL name_movie_similarity VAL high COL id VAL nm21966152	COL id VAL nm3292686	1
+COL name_movie_similarity VAL low COL id VAL nm21968147	COL id VAL nm21956908	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21958076	COL id VAL nm0699294	1
+COL name_movie_similarity VAL low COL id VAL nm7237905	COL id VAL nm0497763	0
+COL name_movie_similarity VAL low COL id VAL nm21956284	COL id VAL nm21962780	0
+COL name_movie_similarity VAL high COL id VAL nm21955058	COL id VAL nm6772561	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21960876	COL id VAL nm1070640	0
+COL name_movie_similarity VAL low COL id VAL nm0637161	COL id VAL nm21962614	0
+COL name_movie_similarity VAL low COL id VAL nm21964938	COL id VAL nm21966752	0
+COL name_movie_similarity VAL high COL id VAL nm5042825	COL id VAL nm21962305	1
+COL name_movie_similarity VAL low COL id VAL nm21965410	COL id VAL nm21960222	0
+COL name_movie_similarity VAL low COL id VAL nm9716242	COL id VAL nm21967498	0
+COL name_movie_similarity VAL high COL id VAL nm0146366	COL id VAL nm21963487	1
+COL name_movie_similarity VAL uncertain COL id VAL nm0269067	COL id VAL nm21960806	1
+COL name_movie_similarity VAL low COL id VAL nm21960142	COL id VAL nm0018145	0
+COL name_movie_similarity VAL low COL id VAL nm21961808	COL name_movie_similarity VAL low COL id VAL nm0006982	0
+COL name_movie_similarity VAL high COL id VAL nm6449795	COL id VAL nm21964947	1
+COL name_movie_similarity VAL low COL id VAL nm0865440	COL id VAL nm7468748	0
+COL name_movie_similarity VAL low COL id VAL nm0749600	COL id VAL nm21967301	0
+COL name_movie_similarity VAL low COL id VAL nm5131283	COL name_movie_similarity VAL low COL id VAL nm0184749	0
+COL name_movie_similarity VAL low COL id VAL nm21957781	COL id VAL nm0372192	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0000456	COL name_movie_similarity VAL low COL id VAL nm21957278	0
+COL name_movie_similarity VAL low COL id VAL nm21959549	COL id VAL nm0699670	0
+COL name_movie_similarity VAL low COL id VAL nm0223316	COL name_movie_similarity VAL low COL id VAL nm0762660	0
+COL name_movie_similarity VAL high COL id VAL nm21959111	COL id VAL nm6577319	1
+COL name_movie_similarity VAL low COL id VAL nm21964355	COL id VAL nm0000832	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21956791	COL id VAL nm21958092	0
+COL name_movie_similarity VAL high COL id VAL nm0084497	COL id VAL nm21956799	1
+COL name_movie_similarity VAL low COL id VAL nm1724323	COL id VAL nm0729473	0
+COL name_movie_similarity VAL low COL id VAL nm21955376	COL id VAL nm0618303	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0239816	COL id VAL nm21960767	0
+COL name_movie_similarity VAL low COL id VAL nm21962051	COL id VAL nm21955063	0
+COL name_movie_similarity VAL low COL id VAL nm21963682	COL id VAL nm0133320	0
+COL name_movie_similarity VAL low COL id VAL nm2857655	COL id VAL nm21960135	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0444742	COL id VAL nm21960201	1
+COL name_movie_similarity VAL low COL id VAL nm0444807	COL id VAL nm21969568	0
+COL name_movie_similarity VAL low COL id VAL nm21960729	COL id VAL nm2256081	0
+COL name_movie_similarity VAL low COL id VAL nm21963090	COL name_movie_similarity VAL low COL id VAL nm1559844	0
+COL name_movie_similarity VAL low COL id VAL nm21957784	COL id VAL nm21963485	0
+COL name_movie_similarity VAL high COL id VAL nm21961304	COL id VAL nm0112392	1
+COL name_movie_similarity VAL low COL id VAL nm0222345	COL id VAL nm9628751	0
+COL name_movie_similarity VAL low COL id VAL nm0006982	COL id VAL nm9758432	0
+COL name_movie_similarity VAL low COL id VAL nm3025116	COL id VAL nm21963306	0
+COL name_movie_similarity VAL low COL id VAL nm21966234	COL id VAL nm21956866	0
+COL name_movie_similarity VAL low COL id VAL nm0529159	COL id VAL nm21958208	0
+COL name_movie_similarity VAL high COL id VAL nm21962872	COL id VAL nm0882616	1
+COL name_movie_similarity VAL high COL id VAL nm3496977	COL id VAL nm21959575	1
+COL name_movie_similarity VAL uncertain COL id VAL nm1571576	COL id VAL nm0452831	0
+COL name_movie_similarity VAL low COL id VAL nm21959194	COL id VAL nm0346436	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21955811	COL id VAL nm9227686	0
+COL name_movie_similarity VAL low COL id VAL nm21962153	COL id VAL nm1664453	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963857	COL id VAL nm4398028	1
+COL name_movie_similarity VAL high COL id VAL nm21969632	COL name_movie_similarity VAL uncertain COL id VAL nm1571576	1
+COL name_movie_similarity VAL low COL id VAL nm21958107	COL id VAL nm21955271	1
+COL name_movie_similarity VAL low COL id VAL nm0008127	COL id VAL nm21967695	0
+COL name_movie_similarity VAL high COL id VAL nm21964084	COL id VAL nm5816469	1
+COL name_movie_similarity VAL low COL id VAL nm21965791	COL name_movie_similarity VAL low COL id VAL nm21967806	0
+COL name_movie_similarity VAL uncertain COL id VAL nm5425452	COL id VAL nm0595929	0
+COL name_movie_similarity VAL low COL id VAL nm21965041	COL id VAL nm21959007	0
+COL name_movie_similarity VAL low COL id VAL nm21964388	COL id VAL nm21956219	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963981	COL id VAL nm21963983	1
+COL name_movie_similarity VAL low COL id VAL nm21957278	COL id VAL nm9111139	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21968513	COL id VAL nm21965028	0
+COL name_movie_similarity VAL high COL id VAL nm21959640	COL id VAL nm1365217	1
+COL name_movie_similarity VAL low COL id VAL nm21968932	COL id VAL nm21956920	0
+COL name_movie_similarity VAL low COL id VAL nm21958106	COL id VAL nm9628751	0
+COL name_movie_similarity VAL high COL id VAL nm21961182	COL id VAL nm0043709	1
+COL name_movie_similarity VAL low COL id VAL nm5177423	COL id VAL nm21956150	0
+COL name_movie_similarity VAL low COL id VAL nm21958905	COL id VAL nm6952365	0
+COL name_movie_similarity VAL low COL id VAL nm21956706	COL id VAL nm0000458	0
+COL name_movie_similarity VAL low COL id VAL nm0159026	COL id VAL nm0347453	0
+COL name_movie_similarity VAL low COL id VAL nm0089456	COL id VAL nm0633947	0
+COL name_movie_similarity VAL low COL id VAL nm0088121	COL id VAL nm21956340	0
+COL name_movie_similarity VAL low COL id VAL nm21955226	COL id VAL nm1502218	0

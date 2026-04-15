@@ -156,9 +156,9 @@ def pollute(fp: str, id_col: str, drop_list: List[str]) -> Dict[str, pd.DataFram
     # additional percentage to add: how many new rows are needed? Pollution depends on previous pollution.
     # Example medium: If total pollution target is 30% and previous pollution was 10%, then 10% old rows will be re-polluted and 20% new rows need to be polluted
     stages = [
-        ("low", 0.1),
-        ("medium", 0.2),
-        ("high", 0.2)
+        ("low", 0.2),
+        ("medium", 0.3),
+        ("high", 0.5)
     ]
 
     current_df = df.copy()
