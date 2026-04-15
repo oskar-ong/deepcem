@@ -1,3 +1,5 @@
+import uuid
+
 import pandas as pd
 import os
 
@@ -22,6 +24,25 @@ JUNCTION_SCHEMA = {
 
 INPUT_DIR = "./data/raw/music/50/"
 OUTPUT_DIR = "./data/interim/music/"
+
+
+ENTITY_SCHEMA_IMDB = {
+    "title_basics":         {"pk": "tconst", "prefix": "m", "fks": []},
+    "name_basics":     {"pk": "nconst", "prefix": "n", "fks": []}
+}
+
+JUNCTION_SCHEMA_IMDB = {
+    "title_principals": [
+        ("tconst", "title_basics"),
+        ("nconst", "name_basics")
+    ]
+}
+
+INPUT_DIR = "./data/raw/music/50/"
+OUTPUT_DIR = "./data/interim/music/"
+
+INPUT_DIR_IMDB = "./data/raw/imdb/"
+OUTPUT_DIR_IMDB = "./data/interim/imdb/"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -40,7 +61,9 @@ class SchemaTransformer:
             # Generate new IDs using the prefix and row index
             unique_ids = df[info['pk']].astype(str).unique()
             self.id_maps[table] = {
-                old: f"{info['prefix']}{i}" for i, old in enumerate(unique_ids)}
+                old: f"{info['prefix']}_{uuid.uuid4().hex[:8]}"
+                for old in unique_ids
+            }
 
     def transform_entities(self):
         print("\n--- Phase 2: Transforming Entities & Creating New Junctions ---")
@@ -79,13 +102,13 @@ class SchemaTransformer:
                     self.output_dir, f"{table}_dups.csv"), [('1', table), ('2', table)])
 
     def transform_existing_junctions(self):
+
         print("\n--- Phase 3: Updating Existing Junction Tables ---")
-        for table_name, columns in self.junctions.items():
+        for table_name, mappings in self.junctions.items():
             in_path = os.path.join(self.input_dir, f"{table_name}.csv")
             if os.path.exists(in_path):
                 print(f"Updating junction: {table_name}")
-                # For pre-existing junctions, we map the columns back to the entities of the same name
-                mappings = [(col, col) for col in columns]
+                # 'mappings' is now expected to be a list of (column, entity) tuples
                 self._map_file(in_path, os.path.join(
                     self.output_dir, f"{table_name}.csv"), mappings)
 
@@ -101,7 +124,7 @@ class SchemaTransformer:
 
 # Run
 transformer = SchemaTransformer(
-    ENTITY_SCHEMA, JUNCTION_SCHEMA, INPUT_DIR, OUTPUT_DIR)
+    ENTITY_SCHEMA_IMDB, JUNCTION_SCHEMA_IMDB, INPUT_DIR_IMDB, OUTPUT_DIR_IMDB)
 transformer.generate_mappings()
 transformer.transform_entities()
 transformer.transform_existing_junctions()
