@@ -160,7 +160,10 @@ def evaluate(task, input_path, output_path, log, true_fp: str, dataset_dir, spec
     acc, prec, rec, f1 = calc_metrics(output_path, true_fp)
     acc, prec, rec, f1 = round(acc, 3), round(
         prec, 3), round(rec, 3), round(f1, 3)
-    log.info(f"{task} METRICS: Accuracy, Prediction, Recall, F1")
-    log.info(f"{task} METRICS: {acc}, {prec}, {rec}, {f1}")
-    print(f"{task} {input_path} {output_path} METRICS", acc, prec, rec, f1)
+    log.info("-----------------------------------------")
+    log.info(f"Task: {task}")
+    log.info(f"Input Path: {input_path}")
+    log.info(f"Output Path: {output_path}")
+    log.info(f"METRICS: {acc}, {prec}, {rec}, {f1}")
+    log.info("-----------------------------------------")
     return acc, prec, rec, f1
