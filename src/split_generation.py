@@ -607,7 +607,7 @@ def main():
         pickle.dump(components, f, pickle.HIGHEST_PROTOCOL)
     with open(f"pickles/{args.dataset}_splits.pickle", 'wb') as f:
         pickle.dump(splits, f, pickle.HIGHEST_PROTOCOL)
-    with open(f"pickles/{args.dataset}_relmap.pickle", 'wb') as f:
+    with open(f"pickles/{args.dataset}_global_relmap.pickle", 'wb') as f:
         pickle.dump(global_rel_map, f, pickle.HIGHEST_PROTOCOL)
 
     # --- Pair Generation ---
@@ -699,8 +699,11 @@ def main():
 
         processed_entities[cfg.name].train_log = train_log
 
-    with open(f"pickles/{args.dataset}_processed_entities", 'wb') as f:
-        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
+    with open(f"pickles/{args.dataset}_processed_entities.pickle", 'wb') as f:
+        pickle.dump(processed_entities, f, pickle.HIGHEST_PROTOCOL)
+
+    with open(f"pickles/{args.dataset}_relation_maps.pickle", 'wb') as f:
+        pickle.dump(relation_maps, f, pickle.HIGHEST_PROTOCOL)
 
     # --- Write Splits to Disk ---
     for cfg_name, cfg in CONFIGS.items():

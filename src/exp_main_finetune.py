@@ -14,6 +14,7 @@ def main():
     parser.add_argument("--pollution", type=str)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--train_suffix", type=str, default="")
+    parser.add_argument("--bin", action="store_true")
     args = parser.parse_args()
     dataset = args.dataset
 
@@ -27,7 +28,7 @@ def main():
     raw_config = REGISTRY[dataset]
     config: dict[str, ExperimentConfig] = {
         name: entity.resolve_paths(
-            args.dataset, args.pollution)
+            args.dataset, args.pollution, args.bin)
         for name, entity in raw_config.items()
     }
 

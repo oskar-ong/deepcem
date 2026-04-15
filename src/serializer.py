@@ -54,11 +54,11 @@ def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dro
 
     # BINNING
     if is_bin == True:
-        if final_score >= 0.85:
+        if final_score >= 0.67:
             final_score = "HIGH"
-        if final_score <= 0.15:
+        elif final_score <= 0.33:
             final_score = "LOW"
-        if 0.15 < final_score < 0.85:
+        elif 0.33 < final_score < 0.67:
             final_score = "UNC"  # uncertain
 
     return final_score

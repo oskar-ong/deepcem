@@ -167,11 +167,11 @@ def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relati
 
                     # BINNING
                     if is_bin == True:
-                        if score >= 0.85:
+                        if score >= 0.67:
                             score = "HIGH"
-                        if score <= 0.15:
+                        if score <= 0.33:
                             score = "LOW"
-                        if 0.15 < score < 0.85:
+                        if 0.33 < score < 0.67:
                             score = "UNC"  # uncertain
                     else:
                         # is score meaningful enough? If too fuzzy, ignore
@@ -241,7 +241,7 @@ def main():
     raw_config = REGISTRY[dataset]
     config: dict[str, ExperimentConfig] = {
         name: entity.resolve_paths(
-            args.dataset, args.pollution)
+            args.dataset, args.pollution, args.binning)
         for name, entity in raw_config.items()
     }
 
@@ -315,13 +315,13 @@ def main():
     # stop after max iterations
     max_iters = 4
 
-    # --- read and resolve configs ---
-    raw_config = REGISTRY[args.dataset]
-    config = {
-        name: entity.resolve_paths(
-            args.dataset, args.pollution)
-        for name, entity in raw_config.items()
-    }
+    # # --- read and resolve configs ---
+    # raw_config = REGISTRY[args.dataset]
+    # config = {
+    #     name: entity.resolve_paths(
+    #         args.dataset, args.pollution, args.binn)
+    #     for name, entity in raw_config.items()
+    # }
 
     # --- initialize scores ---
     scores_init: Dict[str, Dict[Tuple[str, str], float]] = {}

@@ -7,7 +7,7 @@
 # Request memory per CPU
 #SBATCH --mem-per-cpu=32G
 # Request n CPUs for your task.
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=4
 # Request GPU Ressources (model:number)
 #SBATCH --gpus=a100:1
 #SBATCH --mail-type=all
@@ -69,10 +69,34 @@ export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
-DATASET=$1
+# DATASET=$1
+# if [ -z "$DATASET" ]; then
+#     echo "Error: No dataset provided. Position 1"
+#     exit 1
+# fi
+
+
+DATASET=""
+BINNING=false
+
+# 2. Parse arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -b|--binning) BINNING=true; shift ;;
+        *) DATASET="$1"; shift ;; 
+    esac
+done
+
+# 3. Validation logic
 if [ -z "$DATASET" ]; then
-    echo "Error: No dataset provided. Position 1"
+    echo "Error: No dataset provided."
+    echo "Usage: ./script.sh [DATASET] [--binning]"
     exit 1
+fi
+
+BIN_ARG=""
+if [ "$BINNING" = true ]; then
+    BIN_ARG="--binning"
 fi
 
 if [ "$T" == "1" ]; then
@@ -83,10 +107,10 @@ fi
 
 echo "--- STARTING JOB $SLURM_ARRAY_TASK_ID ---"
 echo "--- EXPERIMENT ---"
-echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T"
+echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T | Binning: $BINNING"
 
 # No need to pass number of tasks to srun
 srun python src/exp_main.py --dataset "$DATASET" --pollution "$P" \
     --seed "$S" \
-    --train_suffix "$SUFFIX"
+    --train_suffix "$SUFFIX" $BIN_ARG
 echo "--- COMPLETED JOB $SLURM_ARRAY_TASK_ID ---"
