@@ -363,7 +363,7 @@ def main():
             conn.execute("""
                 UPDATE metrics 
                 SET is_final = 1 
-                WHERE run_id = ? AND iteration = ?
+                WHERE run_id = ? AND iteration = ? AND testset = 'conv'
             """, (run_id, last_iter))
 
 

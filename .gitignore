@@ -226,3 +226,6 @@ configs.json
 cem_results.db
 
 /out
+
+cem_results.db-shm
+cem_results.db-wal

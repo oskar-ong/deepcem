@@ -40,7 +40,7 @@ def get_experiment_metadata(override_id=None) -> Tuple[str, str]:
 
     if job_id:
         run_id = job_id
-        short_ts = datetime.now().strftime("%H%M")
+        short_ts = datetime.now().strftime("%H%M%S")
         if task_id:
             run_id += f"_{task_id}_{short_ts}"
         else:
@@ -58,7 +58,6 @@ class ExperimentLogger:
     def __init__(self, db_path="experiments.db"):
         self.db_path = db_path
         self._setup_db()
-        self.run_id, self.env_type = get_experiment_metadata()
 
     def _setup_db(self):
         with sqlite3.connect(self.db_path) as conn:
@@ -119,11 +118,13 @@ class ExperimentLogger:
 
     def log_run(self, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
+            run_id, self.env_type = get_experiment_metadata()
+            run_id = f"{run_id}_{entity}"
             query = """INSERT OR IGNORE INTO runs (run_id, timestamp, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-            conn.execute(query, (self.run_id, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
+            conn.execute(query, (run_id, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
                                  ))
-            return self.run_id
+            return run_id
 
     def log_metrics(self, run_id, pollution, iteration, is_final, testset, metrics_dict, num_pairs, runtime):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
