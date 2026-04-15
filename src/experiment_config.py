@@ -24,9 +24,8 @@ class ExperimentConfig:
     empty_scores_dir: str
     injected_scores_dir: str
 
-    def resolve_paths(self, dataset: str, pollution: str, is_bin=False):
-        if is_bin == True:
-            dataset = f"{dataset}_binning"
+    def resolve_paths(self, dataset: str, pollution: str):
+
         base_dir = f"./data/{dataset}/{pollution}/inference/{self.name}"
 
         return replace(

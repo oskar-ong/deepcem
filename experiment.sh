@@ -112,5 +112,5 @@ echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T | Binning: $BINNIN
 # No need to pass number of tasks to srun
 srun python src/exp_main.py --dataset "$DATASET" --pollution "$P" \
     --seed "$S" \
-    --train_suffix "$SUFFIX" $BIN_ARG
+    --train_suffix "$SUFFIX"
 echo "--- COMPLETED JOB $SLURM_ARRAY_TASK_ID ---"

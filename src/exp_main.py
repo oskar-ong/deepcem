@@ -227,7 +227,7 @@ def main():
     parser.add_argument("--pollution", type=str)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--train_suffix", type=str, default="")
-    parser.add_argument("--binning", action="store_true")
+    parser.add_argument("--binning", action="store_false")
     parser.add_argument("--dampening", action="store_true")
     args = parser.parse_args()
     dataset = args.dataset
