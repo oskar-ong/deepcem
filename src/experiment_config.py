@@ -26,7 +26,7 @@ class ExperimentConfig:
 
     def resolve_paths(self, dataset: str, pollution: str, is_bin=False):
         if is_bin == True:
-            dataset = f"{dataset}_binned"
+            dataset = f"{dataset}_binning"
         base_dir = f"./data/{dataset}/{pollution}/inference/{self.name}"
 
         return replace(
