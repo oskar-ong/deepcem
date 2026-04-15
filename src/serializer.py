@@ -224,8 +224,8 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
         for rel in cfg.rels:
             rel_name = rel["rel_name"]
             for left, right, label in pairs_empty_scores:
-                left[f"[{rel_name.upper()}_SCORE]"] = ""
-                right[f"[{rel_name.upper()}_SCORE]"] = ""
+                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
 
         lines, amt_pos, amt_neg = serialize(pairs_empty_scores, cfg)
         exp_name = "emptyScores"
@@ -270,8 +270,8 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
 
                     for rel in cfg.rels:
                         rel_name = rel["rel_name"]
-                        left[f"[{rel_name.upper()}_SCORE]"] = ""
-                        right[f"[{rel_name.upper()}_SCORE]"] = ""
+                        left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+                        right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
 
                     # 2. Track label counts (for the print statement)
                     if label == 1 or str(label).lower() == 'true':
@@ -307,8 +307,8 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     processed_entities[rel_name].uf,
                     DROPOUT_PROB,
                     is_bin)
-                left[f"[{rel_name.upper()}_SCORE]"] = score
-                right[f"[{rel_name.upper()}_SCORE]"] = score
+                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
+                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
 
         lines, amt_pos, amt_neg = serialize(pairs_injected_scores, cfg)
         exp_name = "injectedScores"
@@ -339,8 +339,8 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                             processed_entities[rel_name].uf,
                             DROPOUT_PROB,
                             is_bin)
-                        left[f"[{rel_name.upper()}_SCORE]"] = score
-                        right[f"[{rel_name.upper()}_SCORE]"] = score
+                        left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
+                        right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
 
                 lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
                 with open(f"{injected_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
@@ -376,8 +376,8 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
 
             for rel in cfg.rels:
                 rel_name = rel["rel_name"]
-                left[f"[{rel_name.upper()}_SCORE]"] = ""
-                right[f"[{rel_name.upper()}_SCORE]"] = ""
+                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
 
             if label == 1 or str(label).lower() == 'true':
                 amt_pos += 1
