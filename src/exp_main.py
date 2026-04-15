@@ -105,6 +105,8 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
             runtime=runtime_conv)
 
         # Update Scores Map
+        if iter_num == 0:
+            is_damp = False
         new_scores[entity.name] = extract_scores(
             cp_output_fp, new_scores[entity.name], is_damp)
 
