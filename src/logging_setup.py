@@ -8,7 +8,7 @@ from typing import Tuple
 
 def setup_logger(base_name="CollectiveER"):
     # Generate timestamp: e.g., 20260306_1012
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp = datetime.now().strftime("%m-%d-%H:%M")
     log_filename = f"logs/{base_name}_{timestamp}.log"
 
     # Create logger

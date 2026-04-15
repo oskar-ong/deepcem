@@ -231,7 +231,8 @@ def main():
     dataset = args.dataset
 
     # --- logging ---
-    log = setup_logger("finetune")
+    log = setup_logger(
+        f"experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
     log.info(f"Start Finetuning: Dataset: {args.dataset}")
 
     sql_log = ExperimentLogger("cem_results.db")
