@@ -11,6 +11,7 @@
 # Request GPU Ressources (model:number)
 #SBATCH --gpus=a100:1
 #SBATCH --mail-type=all
+#SBATCH --mail-user=ongoskar@proton.me
 
 # --- How long will it take per task? 
 # lets say 1 model takes 15 min to train (5 epochs) -> 10 models = 2h30min
