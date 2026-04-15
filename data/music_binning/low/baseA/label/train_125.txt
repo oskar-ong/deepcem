@@ -1,0 +1,125 @@
+COL name VAL Humildad Y Honestidad COL ended VAL f COL id VAL l464	COL name VAL Class Kasetçilik COL ended VAL f COL id VAL l294	0
+COL name VAL Insidiovs COL label_type VAL Imprint COL ended VAL f COL id VAL l224	COL name VAL Di9ital Dialect COL ended VAL f COL id VAL l1251	0
+COL name VAL Kujaku Ciub COL ended VAL f COL id VAL l1070	COL name VAL Kujaku Club COL ended VAL f COL id VAL l1116	1
+COL name VAL Sendana Filmproduktion GmbH COL label_type VAL Production COL ended VAL f COL id VAL l1284	COL name VAL TBA Records COL label_type VAL Production COL ended VAL f COL id VAL l1005	0
+COL name VAL Nice R4cords COL label_type VAL Original Production COL ended VAL f COL id VAL l679	COL name VAL Spinbup COL ended VAL f COL id VAL l769	0
+COL name VAL Roton COL label_type VAL Production COL ended VAL f COL id VAL l636	COL name VAL Golden Triangle Records COL ended VAL f COL id VAL l875	0
+COL name VAL Mad Magazine COL label_type VAL Publisher COL ended VAL  COL id VAL l983	COL name VAL 101 South Records COL ended VAL f COL id VAL l48	0
+COL name VAL Alternative Radio COL label_type VAL Original Production COL ended VAL f COL id VAL l1050	COL name VAL Maximum Sound COL label_type VAL Original Production COL ended VAL f COL id VAL l1384	0
+COL name VAL Abstrac tDance COL label_type VAL Original Production COL ended VAL f COL id VAL l344	COL name VAL Abstrwct Dance COL label_type VAL Original Production COL ended VAL f COL id VAL l410	1
+COL name VAL Metro Soynd COL ended VAL f COL id VAL l1467	COL name VAL Di9ital Dialect COL ended VAL f COL id VAL l1251	0
+COL name VAL Riot Squas COL ended VAL f COL id VAL l22	COL name VAL Dirty Water Rdcords COL ended VAL  COL id VAL l712	0
+COL name VAL Power House Records COL ended VAL f COL id VAL l563	COL name VAL Fresco Records Spain COL ended VAL f COL id VAL l613	0
+COL name VAL Diskues Apache COL label_type VAL Original Production COL ended VAL f COL id VAL l993	COL name VAL Colectivo Casa Amsrela COL ended VAL f COL id VAL l245	0
+COL name VAL  COL label_type VAL Publisher COL ended VAL f COL id VAL l1362	COL name VAL Dirty Water Records COL ended VAL f COL id VAL l140	0
+COL name VAL UK Bubblers COL label_type VAL Original Production COL ended VAL f COL id VAL l1413	COL name VAL Sheer Africa COL ended VAL f COL id VAL l323	0
+COL name VAL Hate Prod COL ended VAL f COL id VAL l454	COL name VAL Apparel Tronic COL label_type VAL Imprint COL ended VAL f COL id VAL l838	0
+COL name VAL Salnts and Sinners COL ended VAL f COL id VAL l960	COL name VAL Saints and Sinners COL ended VAL f COL id VAL l964	1
+COL name VAL Riot Squat COL ended VAL f COL id VAL l21	COL name VAL Blue Box Publishing Promotion Karin Wirthmann COL label_type VAL Publisher COL ended VAL f COL id VAL l459	0
+COL name VAL Digital Dialect COL ended VAL f COL id VAL l86	COL name VAL MIKE Pysh Studio COL ended VAL f COL id VAL l581	0
+COL name VAL Hot Tub Records COL label_type VAL Distributor COL ended VAL f COL id VAL l848	COL name VAL Afenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l507	0
+COL name VAL 800 Wild COL ended VAL f COL id VAL l747	COL name VAL Salnts and Sinners COL ended VAL f COL id VAL l960	0
+COL name VAL Nuclear Waste Records COL ended VAL f COL id VAL l25	COL name VAL BlackFoxMusic COL label_type VAL Original Production COL ended VAL f COL id VAL l1000	0
+COL name VAL Lost in Ohio COL ended VAL f COL id VAL l709	COL name VAL Eva Magical Mus9c Sounds COL label_type VAL Distributor COL ended VAL f COL id VAL l1318	0
+COL name VAL Count Zero Records COL label_type VAL Holding COL ended VAL f COL id VAL l800	COL name VAL AB Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1290	0
+COL name VAL Furio7s Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1420	COL name VAL Amg MusicCâmara Municipai de AlmadaBLITZ COL ended VAL f COL id VAL l1090	0
+COL name VAL Generation of the Pop punm COL ended VAL f COL id VAL l741	COL name VAL Generation of the P0p punk COL ended VAL f COL id VAL l889	1
+COL name VAL Doxolog6 Records COL ended VAL f COL id VAL l1189	COL name VAL Spinriup COL ended VAL f COL id VAL l770	0
+COL name VAL Dirty Water Records COL ended VAL f COL id VAL l140	COL name VAL Dirty Water Recorcls COL ended VAL f COL id VAL l711	1
+COL name VAL Importe|2 Records COL label_type VAL Original Production COL ended VAL f COL id VAL l950	COL name VAL Importe12 Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1469	1
+COL name VAL BugInMyEwrMusic Productions COL ended VAL f COL id VAL l208	COL name VAL May Sun Punlishing COL label_type VAL Publisher COL ended VAL f COL id VAL l71	0
+COL name VAL New Ruins COL ended VAL f COL id VAL l244	COL name VAL Environment Recorts COL label_type VAL Publisher COL ended VAL f COL id VAL l1452	0
+COL name VAL Spelling Venturez Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1393	COL name VAL Spelling Ventvres Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1394	1
+COL name VAL Woodpecker Records COL label_type VAL Production COL ended VAL f COL id VAL l1060	COL name VAL Woodpecker Recordj COL label_type VAL Production COL ended VAL f COL id VAL l1461	1
+COL name VAL Quatermass Music Ltd COL label_type VAL Publisher COL ended VAL f COL id VAL l601	COL name VAL subskillz records COL ended VAL f COL id VAL l718	0
+COL name VAL Cavalier COL ended VAL f COL id VAL l1335	COL name VAL MoneyHouse LLC COL label_type VAL Publisher COL ended VAL f COL id VAL l1085	0
+COL name VAL Ladin Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1343	COL name VAL Pelex COL ended VAL f COL id VAL l961	0
+COL name VAL UK Bubblerx COL label_type VAL Original Production COL ended VAL f COL id VAL l685	COL name VAL UK Bubblers COL label_type VAL Original Production COL ended VAL f COL id VAL l1413	1
+COL name VAL Massife Sox COL label_type VAL Publisher COL ended VAL f COL id VAL l784	COL name VAL Schama Prosuction COL ended VAL f COL id VAL l943	0
+COL name VAL Baboon Records COL ended VAL f COL id VAL l174	COL name VAL Baboori Records COL ended VAL f COL id VAL l414	1
+COL name VAL Nice Rscords COL label_type VAL Original Production COL ended VAL f COL id VAL l680	COL name VAL Eva Magical Mus9c Sounds COL label_type VAL Distributor COL ended VAL f COL id VAL l1318	0
+COL name VAL Soul Ciahcle Music COL ended VAL f COL id VAL l615	COL name VAL Soul Circle Mujic COL ended VAL f COL id VAL l726	1
+COL name VAL Dream Entertainment Group SRL COL label_type VAL Publisher COL ended VAL f COL id VAL l818	COL name VAL Hess Street Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l157	0
+COL name VAL Local Genius and Wizard COL ended VAL f COL id VAL l181	COL name VAL Firsd Celtic Masters COL ended VAL f COL id VAL l1261	0
+COL name VAL Mad Mzgazine COL label_type VAL Publisher COL ended VAL f COL id VAL l542	COL name VAL Abstrac tDance COL label_type VAL Original Production COL ended VAL f COL id VAL l344	0
+COL name VAL Beyond Rekords COL ended VAL f COL id VAL l502	COL name VAL Spider Invzsion COL ended VAL f COL id VAL l872	0
+COL name VAL Fosfor Creation COL ended VAL f COL id VAL l1380	COL name VAL Teeto Recorcls COL ended VAL  COL id VAL l423	0
+COL name VAL 3 on the B Records COL ended VAL f COL id VAL l535	COL name VAL 3 on the B Records COL ended VAL f COL id VAL l1481	1
+COL name VAL The Arto Company COL ended VAL t COL id VAL l132	COL name VAL Nuclear Wa5te Records COL ended VAL f COL id VAL l1338	0
+COL name VAL Wambo Productions COL label_type VAL Production COL ended VAL f COL id VAL l161	COL name VAL Generations Global COL ended VAL f COL id VAL l1423	0
+COL name VAL Delerecords COL label_type VAL Original Production COL ended VAL f COL id VAL l694	COL name VAL House of Gaga Publishing LCC COL label_type VAL Publisher COL ended VAL f COL id VAL l999	0
+COL name VAL FIRE ON MUSIC CO LTD COL label_type VAL Holding COL ended VAL f COL id VAL l1020	COL name VAL Gateway Records COL ended VAL f COL id VAL l397	0
+COL name VAL Fosfor Creatioh COL ended VAL f COL id VAL l947	COL name VAL Fosfor Creadion COL ended VAL f COL id VAL l948	1
+COL name VAL Beyond Records COL ended VAL f COL id VAL l574	COL name VAL ABT Budapest COL ended VAL f COL id VAL l1365	0
+COL name VAL Trans Continental Records COL label_type VAL Imprint COL ended VAL f COL id VAL l551	COL name VAL MIKE Push Studio COL ended VAL f COL id VAL l1006	0
+COL name VAL King of Patio Records COL label_type VAL Production COL ended VAL f COL id VAL l374	COL name VAL Namtaru Records COL ended VAL f COL id VAL l99	0
+COL name VAL Mr Manatti Music COL label_type VAL Publisher COL ended VAL f COL id VAL l156	COL name VAL TJM Records COL label_type VAL Original Production COL ended VAL f COL id VAL l783	0
+COL name VAL Preachja COL label_type VAL Production COL ended VAL f COL id VAL l171	COL name VAL engine records COL label_type VAL Publisher COL ended VAL f COL id VAL l1492	0
+COL name VAL Chukka Prom0 Records COL label_type VAL Publisher COL ended VAL f COL id VAL l657	COL name VAL Family Gro0ves COL ended VAL  COL id VAL l426	0
+COL name VAL Sound  Vision COL label_type VAL Distributor COL ended VAL f COL id VAL l1239	COL name VAL Full Circle Eritertainment COL ended VAL f COL id VAL l836	0
+COL name VAL che COL ended VAL f COL id VAL l184	COL name VAL xe COL ended VAL f COL id VAL l1185	1
+COL name VAL BlackFoxMusic COL label_type VAL Original Production COL ended VAL f COL id VAL l1000	COL name VAL Tænia Solium COL label_type VAL Original Production COL ended VAL f COL id VAL l906	0
+COL name VAL Sentana Filmproduktion GmbH COL label_type VAL Production COL ended VAL f COL id VAL l1153	COL name VAL Sentana Filmproduktion GrnbH COL label_type VAL Production COL ended VAL f COL id VAL l1285	1
+COL name VAL KAIWARECORD COL ended VAL f COL id VAL l684	COL name VAL Wizzard in Vinyl COL label_type VAL Original Production COL ended VAL f COL id VAL l465	0
+COL name VAL Spinriup COL ended VAL f COL id VAL l770	COL name VAL The Arto Company COL ended VAL t COL id VAL l132	0
+COL name VAL Uncle J0shs Song Emporium COL label_type VAL Publisher COL ended VAL f COL id VAL l515	COL name VAL Lanzoni R3cords COL ended VAL f COL id VAL l371	0
+COL name VAL Kujaku Ciub COL ended VAL f COL id VAL l1070	COL name VAL giraffe boy COL ended VAL f COL id VAL l9	0
+COL name VAL Gama Island COL label_type VAL Publisher COL ended VAL f COL id VAL l496	COL name VAL Gamma Isiand COL label_type VAL Publisher COL ended VAL f COL id VAL l1250	1
+COL name VAL MIKE Pysh Studio COL ended VAL f COL id VAL l581	COL name VAL Big Dumb Music COL ended VAL f COL id VAL l363	0
+COL name VAL Avenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1347	COL name VAL Jenyer Production COL ended VAL f COL id VAL l1326	0
+COL name VAL Spelling Venturez Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1393	COL name VAL WolfvOffice COL ended VAL f COL id VAL l455	0
+COL name VAL Lighteri Up COL ended VAL f COL id VAL l580	COL name VAL Lighten Up COL ended VAL f COL id VAL l776	1
+COL name VAL NoBreaks COL ended VAL t COL id VAL l1082	COL name VAL Bando Records COL ended VAL f COL id VAL l1200	0
+COL name VAL Dynamic Revlection COL ended VAL f COL id VAL l511	COL name VAL Dynamic Reflection COL ended VAL f COL id VAL l963	1
+COL name VAL Lanzohi Records COL ended VAL f COL id VAL l372	COL name VAL Limited Run Gajes COL label_type VAL Distributor COL ended VAL f COL id VAL l812	0
+COL name VAL Spider Invasion COL ended VAL f COL id VAL l1451	COL name VAL Colectivo Casa Amsrela COL ended VAL f COL id VAL l245	0
+COL name VAL Chukka Prom0 Records COL label_type VAL Publisher COL ended VAL f COL id VAL l657	COL name VAL The Konspiracy Group COL ended VAL f COL id VAL l501	0
+COL name VAL NEBLINA COL label_type VAL Original Production COL ended VAL f COL id VAL l913	COL name VAL Generation of the Pop punm COL ended VAL f COL id VAL l741	0
+COL name VAL Mark A Mancina Music COL label_type VAL Publisher COL ended VAL f COL id VAL l87	COL name VAL Mark A Manc:na Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1012	1
+COL name VAL Out of Orbit Recordings COL label_type VAL Original Production COL ended VAL f COL id VAL l1422	COL name VAL Musica Divina COL label_type VAL Production COL ended VAL f COL id VAL l877	0
+COL name VAL Plavahs Paradise Entertainment LLC COL ended VAL f COL id VAL l509	COL name VAL Playahs Pa4adise Entertainment LLC COL ended VAL f COL id VAL l510	1
+COL name VAL Lat:n Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1342	COL name VAL GSI Musique COL label_type VAL Original Production COL ended VAL f COL id VAL l267	0
+COL name VAL Uncle Joshs Song Emponum COL label_type VAL Publisher COL ended VAL f COL id VAL l514	COL name VAL MIS Records COL label_type VAL Original Production COL ended VAL f COL id VAL l64	0
+COL name VAL Impul5e COL ended VAL f COL id VAL l376	COL name VAL Wallys Groove Worlcl COL label_type VAL Original Production COL ended VAL f COL id VAL l350	0
+COL name VAL Spelling Ventvres Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1394	COL name VAL May Sun Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l488	0
+COL name VAL Riot Squat COL ended VAL f COL id VAL l21	COL name VAL Riot Squas COL ended VAL f COL id VAL l22	1
+COL name VAL Insidiovs COL label_type VAL Imprint COL ended VAL f COL id VAL l224	COL name VAL Trans Contimental Records COL label_type VAL Imprint COL ended VAL f COL id VAL l806	0
+COL name VAL Wallys Groove World COL label_type VAL Original Production COL ended VAL f COL id VAL l148	COL name VAL Wallys Geoove World COL label_type VAL Original Production COL ended VAL f COL id VAL l349	1
+COL name VAL Afenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l507	COL name VAL Avenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1347	1
+COL name VAL Pelex COL ended VAL f COL id VAL l961	COL name VAL UK Bubblerst COL label_type VAL Original Production COL ended VAL f COL id VAL l686	0
+COL name VAL House of Gaga Publishing LCC COL label_type VAL Publisher COL ended VAL f COL id VAL l999	COL name VAL KTM COL label_type VAL Original Production COL ended VAL f COL id VAL l728	0
+COL name VAL Quatermass Music Ltd COL label_type VAL Publisher COL ended VAL f COL id VAL l601	COL name VAL Afterlife COL ended VAL f COL id VAL l928	0
+COL name VAL Howlinkhorse Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1152	COL name VAL Gamma Island COL label_type VAL Publisher COL ended VAL f COL id VAL l855	0
+COL name VAL Cakra COL label_type VAL Production COL ended VAL f COL id VAL l677	COL name VAL Golf Channel Recordings COL ended VAL f COL id VAL l1487	0
+COL name VAL Amg MusicCâmara Municipal de AlmadaBLITZ COL ended VAL f COL id VAL l1403	COL name VAL エヌ・イー・ティー音楽出版 COL label_type VAL Publisher COL ended VAL t COL id VAL l143	0
+COL name VAL Ste‐4 Musique COL label_type VAL Imprint COL ended VAL f COL id VAL l1313	COL name VAL T0y Soldier Records COL label_type VAL Original Production COL ended VAL f COL id VAL l540	0
+COL name VAL Dynamic Reflectiln COL ended VAL f COL id VAL l512	COL name VAL Ladin Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1343	0
+COL name VAL Schama Prosuction COL ended VAL f COL id VAL l943	COL name VAL Lighten Up COL ended VAL f COL id VAL l776	0
+COL name VAL Spinnup COL ended VAL f COL id VAL l192	COL name VAL Spinbup COL ended VAL f COL id VAL l769	1
+COL name VAL Jenyer Production COL ended VAL f COL id VAL l1326	COL name VAL Quatermass Music Ltd COL label_type VAL Publisher COL ended VAL f COL id VAL l601	0
+COL name VAL Lanzoni R3cords COL ended VAL f COL id VAL l371	COL name VAL Vulkania COL ended VAL f COL id VAL l1279	0
+COL name VAL Jeremy Bradford Music COL label_type VAL Imprint COL ended VAL f COL id VAL l1425	COL name VAL 101 South Records COL ended VAL f COL id VAL l48	0
+COL name VAL Howlinghorsr Music COL label_type VAL Publisher COL ended VAL f COL id VAL l968	COL name VAL Howlinkhorse Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1152	1
+COL name VAL Rocks Rekords COL ended VAL f COL id VAL l547	COL name VAL TBA Rec0rds COL label_type VAL Production COL ended VAL f COL id VAL l103	0
+COL name VAL Dynamic Reflection COL ended VAL f COL id VAL l963	COL name VAL NoBreaks COL ended VAL t COL id VAL l1082	0
+COL name VAL Poison Arrow Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1439	COL name VAL Trans Continental Records COL label_type VAL Imprint COL ended VAL f COL id VAL l551	0
+COL name VAL 101 South Records COL ended VAL f COL id VAL l48	COL name VAL 101 Sout Records COL ended VAL f COL id VAL l887	1
+COL name VAL Digital Dialect COL ended VAL f COL id VAL l86	COL name VAL Di9ital Dialect COL ended VAL f COL id VAL l1251	1
+COL name VAL Poison Arrow Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1439	COL name VAL NSR COL label_type VAL Distributor COL ended VAL f COL id VAL l1259	0
+COL name VAL May Syn Publishing COL label_type VAL lisher COL ended VAL f COL id VAL l70	COL name VAL Wallys Groove World COL label_type VAL Original Production COL ended VAL f COL id VAL l148	0
+COL name VAL Hot Trackst COL label_type VAL Original Production COL ended VAL t COL id VAL l386	COL name VAL Roots and Wings Music COL label_type VAL Original Production COL ended VAL f COL id VAL l356	0
+COL name VAL Nice R4cords COL label_type VAL Original Production COL ended VAL f COL id VAL l679	COL name VAL Nice Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1440	1
+COL name VAL Sountmalfunction Recordings COL ended VAL f COL id VAL l767	COL name VAL Cronemeyer Edition COL label_type VAL Publisher COL ended VAL f COL id VAL l655	0
+COL name VAL Full Ciahcle Entertainment COL ended VAL f COL id VAL l614	COL name VAL Full Circle Eritertainment COL ended VAL f COL id VAL l836	1
+COL name VAL Baboon Records COL ended VAL f COL id VAL l174	COL name VAL Riot Squas COL ended VAL f COL id VAL l22	0
+COL name VAL Lat:n Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1342	COL name VAL Ladin Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1343	1
+COL name VAL Gak Attack Refords COL ended VAL f COL id VAL l58	COL name VAL Out of Orloit Recordings COL label_type VAL Original Production COL ended VAL f COL id VAL l539	0
+COL name VAL Sometin Lite COL label_type VAL Original Production COL ended VAL f COL id VAL l1053	COL name VAL Heas Street Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l207	0
+COL name VAL Delerecords COL label_type VAL Original Production COL ended VAL f COL id VAL l694	COL name VAL Mushroom Runnwr Records COL label_type VAL Production COL ended VAL  COL id VAL l628	0
+COL name VAL Local Genius and Wizard COL ended VAL f COL id VAL l181	COL name VAL Impulse COL ended VAL f COL id VAL l664	0
+COL name VAL Alternative Radio COL label_type VAL Original Production COL ended VAL f COL id VAL l1050	COL name VAL Schama Production COL ended VAL f COL id VAL l521	0
+COL name VAL Greajy Vinyl COL ended VAL f COL id VAL l202	COL name VAL Spider Invzsion COL ended VAL f COL id VAL l872	0
+COL name VAL Furious Recoeds COL label_type VAL Original Production COL ended VAL f COL id VAL l1419	COL name VAL Chuckka Promo Records COL label_type VAL Publisher COL ended VAL f COL id VAL l658	0
+COL name VAL Lanzoni R3cords COL ended VAL f COL id VAL l371	COL name VAL Lanzohi Records COL ended VAL f COL id VAL l372	1
+COL name VAL Furious Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1057	COL name VAL New Ruins COL ended VAL f COL id VAL l244	0
+COL name VAL Last Resort Rec9rds COL ended VAL f COL id VAL l592	COL name VAL Colectivo Casa Amsrela COL ended VAL f COL id VAL l245	0

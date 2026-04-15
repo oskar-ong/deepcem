@@ -45,9 +45,9 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
             task = f"{entity.model_base}_{seed}_{train_suffix}_rel"
 
         # special tokens
-        special_tokens = []
-        for r in entity.relations:
-            special_tokens.append(r.score_col)
+        # special_tokens = []
+        # for r in entity.relations:
+        #     special_tokens.append(r.score_col)
 
         # Update Scores
         cp_input_fp = out_path / f"{entity.name}_{iter_num}_input_cp.jsonl"
@@ -64,7 +64,8 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         cp_output_fp = out_path / \
             f"{entity.name}_{iter_num}_cp_results.jsonl"
         metrics = evaluate(task, cp_input_fp,
-                           cp_output_fp, log, entity.true_cp_fp, entity.injected_scores_dir, special_tokens)
+                           cp_output_fp, log, entity.true_cp_fp, entity.injected_scores_dir)
+        #    , special_tokens)
         metrics_cp = {"accuracy": metrics[0], "precision": metrics[1],
                       "recall": metrics[2], "f1_score": metrics[3]}
         end_cp = time.perf_counter()
@@ -86,7 +87,8 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         conv_output_fp = out_path / \
             f"{entity.name}_{iter_num}_conv_results.jsonl"
         metrics = evaluate(task, conv_input_fp,
-                           conv_output_fp, log, entity.true_test_fp, entity.injected_scores_dir, special_tokens)
+                           conv_output_fp, log, entity.true_test_fp, entity.injected_scores_dir)
+        #    , special_tokens)
         metrics_conv = {
             "accuracy": metrics[0], "precision": metrics[1], "recall": metrics[2], "f1_score": metrics[3]}
         f1_scores[entity.name] = metrics[3]
@@ -168,18 +170,18 @@ def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relati
                     # BINNING
                     if is_bin == True:
                         if score >= 0.67:
-                            score = "HIGH"
+                            score = "high"
                         elif score <= 0.33:
-                            score = "LOW"
+                            score = "low"
                         elif 0.33 < score < 0.67:
-                            score = "UNC"  # uncertain
+                            score = "uncertain"  # uncertain
                     else:
                         # is score meaningful enough? If too fuzzy, ignore
                         if abs(score - 0.5) < threshold:
                             score = 0.5
 
                     record_pair[0][r.score_col] = score
-                    record_pair[1][r.score_col] = score
+                    # record_pair[1][r.score_col] = score
 
             outfile.write(json.dumps(record_pair) + '\n')
 
@@ -260,9 +262,10 @@ def main():
     for entity in config.values():
         start_time = time.perf_counter()
         # get special tokens
-        special_tokens = []
-        for r in entity.relations:
-            special_tokens.append(r.score_col)
+        # special_tokens = []
+        # for r in entity.relations:
+        #     special_tokens.append(r.score_col)
+        special_tokens = None
 
         if args.train_suffix == "":
             task_base = f"{entity.model_base}_{args.seed}"

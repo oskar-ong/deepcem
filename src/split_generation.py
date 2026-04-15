@@ -527,6 +527,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
     parser.add_argument("--blacklist", action="store_true")
+    parser.add_argument("--binning", action="store_true")
     args = parser.parse_args()
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
@@ -710,7 +711,7 @@ def main():
         # Write splits for each pollution level
         for level, df in processed_entities[cfg.name].dfs_by_pollution.items():
             write_splits(cfg, CONFIGS, processed_entities,
-                         relation_maps, level)
+                         relation_maps, level, args.binning)
 
     # --- Check requirements ---
     # No leakage

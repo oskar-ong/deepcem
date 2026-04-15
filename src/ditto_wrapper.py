@@ -10,8 +10,9 @@ from evaluate import calc_metrics
 from experiment_config import DITTO_CONFIG
 
 
-def get_unique_config(task, train_suffix, dataset_dir, special_tokens):
-
+def get_unique_config(task, train_suffix, dataset_dir, special_tokens=None):
+    if special_tokens is None:
+        special_tokens = []
     if train_suffix == "":
         train_fp = f"{dataset_dir}/train.txt"
     else:
@@ -42,7 +43,7 @@ def get_unique_config(task, train_suffix, dataset_dir, special_tokens):
     return temp_config_path
 
 
-def finetune(task, dataset_dir, log, special_tokens, train_suffix="", seed=0):
+def finetune(task, dataset_dir, log, special_tokens=None, train_suffix="", seed=0):
 
     config_path = get_unique_config(
         task, train_suffix, dataset_dir, special_tokens)
@@ -80,7 +81,7 @@ def finetune(task, dataset_dir, log, special_tokens, train_suffix="", seed=0):
     log.info(f"Finished Finetuning for task: {task}")
 
 
-def refinetune(task, dataset_dir, base, log, special_tokens, train_suffix="", seed=0):
+def refinetune(task, dataset_dir, base, log, special_tokens=None, train_suffix="", seed=0):
 
     configs_path = get_unique_config(
         task, train_suffix, dataset_dir, special_tokens)
@@ -125,9 +126,6 @@ def evaluate(task, input_path, output_path, log, true_fp: str, dataset_dir, spec
     log.info(f"Task: {task} ")
     log.info(f"Output Path: {output_path} ")
     log.info(f"Input Path: {input_path} ")
-
-    if special_tokens is None:
-        special_tokens = []
 
     config_path = get_unique_config(
         task, "", dataset_dir, special_tokens)

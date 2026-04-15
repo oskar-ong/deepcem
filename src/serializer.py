@@ -55,11 +55,11 @@ def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dro
     # BINNING
     if is_bin == True:
         if final_score >= 0.67:
-            final_score = "HIGH"
+            final_score = "high"
         elif final_score <= 0.33:
-            final_score = "LOW"
+            final_score = "low"
         elif 0.33 < final_score < 0.67:
-            final_score = "UNC"  # uncertain
+            final_score = "uncertain"
 
     return final_score
 
@@ -221,11 +221,18 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
         # --- Scores Empty ---
         pairs_empty_scores = copy.deepcopy(pairs)
 
-        for rel in cfg.rels:
-            rel_name = rel["rel_name"]
-            for left, right, label in pairs_empty_scores:
-                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
-                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+        for left, right, label in pairs_empty_scores:
+            current_pair_scores = {}
+            for rel in cfg.rels:
+                rel_name = rel["rel_name"]
+                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
+                current_pair_scores[rel_neighborhood_key] = ""
+
+            # position of scores in first
+            original_left = copy.deepcopy(left)
+            left.clear()
+            left.update(current_pair_scores)
+            left.update(original_left)
 
         lines, amt_pos, amt_neg = serialize(pairs_empty_scores, cfg)
         exp_name = "emptyScores"
@@ -266,14 +273,18 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     open(f"{inference_dir}/test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
 
                 for left, right, label in pairs_empty_scores:
-                    # 1. Update scores within the entities
 
                     for rel in cfg.rels:
                         rel_name = rel["rel_name"]
-                        left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
-                        right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+                        rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
+                        current_pair_scores[rel_neighborhood_key] = ""
 
-                    # 2. Track label counts (for the print statement)
+                    # position of scores in first
+                    original_left = copy.deepcopy(left)
+                    left.clear()
+                    left.update(current_pair_scores)
+                    left.update(original_left)
+
                     if label == 1 or str(label).lower() == 'true':
                         amt_pos += 1
                     else:
@@ -297,9 +308,10 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
         # --- Scores Injected ---
         pairs_injected_scores = copy.deepcopy(pairs_empty_scores)
 
-        for rel in cfg.rels:
-            rel_name = rel["rel_name"]
-            for left, right, label in pairs_injected_scores:
+        for left, right, label in pairs_injected_scores:
+            current_pair_scores = {}
+            for rel in cfg.rels:
+                rel_name = rel["rel_name"]
                 score = calculate_relationship_scores(
                     left['id'],
                     right['id'],
@@ -307,8 +319,9 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     processed_entities[rel_name].uf,
                     DROPOUT_PROB,
                     is_bin)
-                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
-                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
+
+                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
+                left[rel_neighborhood_key] = score
 
         lines, amt_pos, amt_neg = serialize(pairs_injected_scores, cfg)
         exp_name = "injectedScores"
@@ -329,9 +342,10 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
 
                     if record1 and record2:
                         pairs_log.append((record1, record2, label))
-                for rel in cfg.rels:
-                    rel_name = rel["rel_name"]
-                    for left, right, label in pairs_log:
+                for left, right, label in pairs_log:
+                    for rel in cfg.rels:
+                        rel_name = rel["rel_name"]
+
                         score = calculate_relationship_scores(
                             left['id'],
                             right['id'],
@@ -339,8 +353,15 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                             processed_entities[rel_name].uf,
                             DROPOUT_PROB,
                             is_bin)
-                        left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
-                        right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = score
+
+                        rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
+                        current_pair_scores[rel_neighborhood_key] = score
+
+                    # position of scores in first
+                    original_left = copy.deepcopy(left)
+                    left.clear()
+                    left.update(current_pair_scores)
+                    left.update(original_left)
 
                 lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
                 with open(f"{injected_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
@@ -376,8 +397,15 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
 
             for rel in cfg.rels:
                 rel_name = rel["rel_name"]
-                left[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
-                right[f"[{cfg.name.upper()}_{rel_name.upper()}_SCORE]"] = ""
+
+                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
+                current_pair_scores[rel_neighborhood_key] = ""
+
+            # position of scores in first
+            original_left = copy.deepcopy(left)
+            left.clear()
+            left.update(current_pair_scores)
+            left.update(original_left)
 
             if label == 1 or str(label).lower() == 'true':
                 amt_pos += 1
