@@ -169,9 +169,9 @@ def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relati
                     if is_bin == True:
                         if score >= 0.67:
                             score = "HIGH"
-                        if score <= 0.33:
+                        elif score <= 0.33:
                             score = "LOW"
-                        if 0.33 < score < 0.67:
+                        elif 0.33 < score < 0.67:
                             score = "UNC"  # uncertain
                     else:
                         # is score meaningful enough? If too fuzzy, ignore
