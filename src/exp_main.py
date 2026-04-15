@@ -272,6 +272,8 @@ def main():
         else:
             task_base = f"{entity.model_base}_{args.seed}_{args.train_suffix}"
         # --- Phase 1: Initial Finetune, only attribute values ---
+        log.info(" ")
+        log.info("--- Start Finetune Phase 1: ---")
         finetune(task_base,
                  entity.empty_scores_dir, log, special_tokens, args.train_suffix, args.seed)
 
@@ -302,6 +304,8 @@ def main():
 
         task_rel = f"{task_base}_rel"
         # --- Phase 2: Re-finetune, include relaitonal scores ---
+        log.info(" ")
+        log.info("--- Start Finetune Phase 2: ---")
         refinetune(task_rel,
                    entity.injected_scores_dir, task_base, log, special_tokens, args.train_suffix, args.seed)
 
@@ -326,6 +330,10 @@ def main():
     #     for name, entity in raw_config.items()
     # }
 
+    log.info(" ")
+    log.info("--- Finetune Phase Completed ---")
+    log.info(" ")
+    log.info("--- Start Collective Matching Phase ---")
     # --- initialize scores ---
     scores_init: Dict[str, Dict[Tuple[str, str], float]] = {}
     relation_maps = {}
@@ -345,6 +353,7 @@ def main():
     scores = scores_init
     last_iter = 0
     for i in range(0, max_iters):
+        log.info(" ")
         log.info(f"Start iteration {i}")
         last_iter = i
         scores, f1_scores = run_iteration(

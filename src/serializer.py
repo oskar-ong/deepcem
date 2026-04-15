@@ -221,20 +221,27 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
         # --- Scores Empty ---
         pairs_empty_scores = copy.deepcopy(pairs)
 
-        for left, right, label in pairs_empty_scores:
-            current_pair_scores = {}
-            for rel in cfg.rels:
-                rel_name = rel["rel_name"]
-                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
-                current_pair_scores[rel_neighborhood_key] = ""
+        sim_keys = {
+            f"{cfg.name}_{rel['rel_name']}_similarity": "" for rel in cfg.rels}
 
-            # position of scores in first
-            original_left = copy.deepcopy(left)
-            left.clear()
-            left.update(current_pair_scores)
-            left.update(original_left)
+        processed_empty = []
+        for left, right, label in pairs:  # Use the original 'pairs'
+            # 2. Create fresh, independent copies for THIS pair only
+            new_left = copy.deepcopy(left)
+            new_right = copy.deepcopy(right)
 
-        lines, amt_pos, amt_neg = serialize(pairs_empty_scores, cfg)
+            # 3. Build a NEW dict for left (scores first, then original data)
+            # This is non-destructive and won't affect other pairs
+            prefix_left = {**sim_keys, **new_left}
+
+            # 4. Ensure right is clean of any similarity keys
+            for k in list(new_right.keys()):
+                if "similarity" in k:
+                    del new_right[k]
+
+            processed_empty.append((prefix_left, new_right, label))
+
+        lines, amt_pos, amt_neg = serialize(processed_empty, cfg)
         exp_name = "emptyScores"
         empty_scores_dir = Path(
             f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
@@ -285,6 +292,18 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     left.update(current_pair_scores)
                     left.update(original_left)
 
+                    tmp_left = copy.deepcopy(left)
+                    tmp_right = copy.deepcopy(right)
+
+                    left.clear()
+                    right.clear()
+                    for k, v in tmp_left.items():
+                        if k not in cfg.drop_list:
+                            left[k] = v
+                    for k, v in tmp_right.items():
+                        if k not in cfg.drop_list:
+                            right[k] = v
+
                     if label == 1 or str(label).lower() == 'true':
                         amt_pos += 1
                     else:
@@ -306,6 +325,7 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
 
         # --- Scores Injected ---
+        # TODO:
         pairs_injected_scores = copy.deepcopy(pairs_empty_scores)
 
         for left, right, label in pairs_injected_scores:
@@ -406,6 +426,18 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
             left.clear()
             left.update(current_pair_scores)
             left.update(original_left)
+
+            tmp_left = copy.deepcopy(left)
+            tmp_right = copy.deepcopy(right)
+
+            left.clear()
+            right.clear()
+            for k, v in tmp_left.items():
+                if k not in cfg.drop_list:
+                    left[k] = v
+            for k, v in tmp_right.items():
+                if k not in cfg.drop_list:
+                    right[k] = v
 
             if label == 1 or str(label).lower() == 'true':
                 amt_pos += 1
