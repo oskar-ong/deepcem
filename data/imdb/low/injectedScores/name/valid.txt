@@ -1,596 +1,596 @@
-COL name_movie_similarity VAL low COL id VAL nm21968643	COL name_movie_similarity VAL low COL id VAL nm21964033	0
-COL name_movie_similarity VAL low COL id VAL nm21959608	COL name_movie_similarity VAL low COL id VAL nm5479763	1
-COL name_movie_similarity VAL low COL id VAL nm0769044	COL name_movie_similarity VAL high COL id VAL nm21962986	0
-COL name_movie_similarity VAL low COL id VAL nm1742016	COL name_movie_similarity VAL low COL id VAL nm21963146	1
+COL name_movie_similarity VAL low COL id VAL nm21968643	COL id VAL nm21964033	0
+COL name_movie_similarity VAL high COL id VAL nm21959608	COL id VAL nm5479763	1
+COL name_movie_similarity VAL uncertain COL id VAL nm0769044	COL id VAL nm21962986	0
+COL name_movie_similarity VAL high COL id VAL nm1742016	COL id VAL nm21963146	1
 COL name_movie_similarity VAL low COL id VAL nm1748441	COL id VAL nm1932706	0
-COL name_movie_similarity VAL low COL id VAL nm4678220	COL id VAL nm0374569	0
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL uncertain COL id VAL nm21955150	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21967902	COL name_movie_similarity VAL high COL id VAL nm21968376	0
-COL name_movie_similarity VAL high COL id VAL nm21963204	COL id VAL nm21955478	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21959467	COL name_movie_similarity VAL low COL id VAL nm0795060	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2236337	COL name_movie_similarity VAL low COL id VAL nm3264655	0
-COL name_movie_similarity VAL low COL id VAL nm3376469	COL name_movie_similarity VAL high COL id VAL nm21955152	0
-COL name_movie_similarity VAL low COL id VAL nm21968658	COL name_movie_similarity VAL high COL id VAL nm0742759	0
-COL name_movie_similarity VAL low COL id VAL nm21963205	COL name_movie_similarity VAL low COL id VAL nm1407334	0
-COL name_movie_similarity VAL low COL id VAL nm2133486	COL name_movie_similarity VAL low COL id VAL nm5639158	0
-COL name_movie_similarity VAL low COL id VAL nm0038896	COL name_movie_similarity VAL low COL id VAL nm21968643	1
-COL name_movie_similarity VAL low COL id VAL nm5639158	COL name_movie_similarity VAL low COL id VAL nm21962984	0
+COL name_movie_similarity VAL uncertain COL id VAL nm4678220	COL id VAL nm0374569	0
+COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm21955150	0
+COL name_movie_similarity VAL low COL id VAL nm21967902	COL id VAL nm21968376	0
+COL name_movie_similarity VAL low COL id VAL nm21963204	COL id VAL nm21955478	0
+COL name_movie_similarity VAL low COL id VAL nm21959467	COL id VAL nm0795060	0
+COL name_movie_similarity VAL low COL id VAL nm2236337	COL id VAL nm3264655	0
+COL name_movie_similarity VAL low COL id VAL nm3376469	COL id VAL nm21955152	0
+COL name_movie_similarity VAL low COL id VAL nm21968658	COL id VAL nm0742759	0
+COL name_movie_similarity VAL low COL id VAL nm21963205	COL id VAL nm1407334	0
+COL name_movie_similarity VAL uncertain COL id VAL nm2133486	COL id VAL nm5639158	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0038896	COL id VAL nm21968643	1
+COL name_movie_similarity VAL low COL id VAL nm5639158	COL id VAL nm21962984	0
 COL name_movie_similarity VAL low COL id VAL nm21963206	COL id VAL nm0322625	0
-COL name_movie_similarity VAL high COL id VAL nm1133857	COL name_movie_similarity VAL low COL id VAL nm21961111	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21965563	COL name_movie_similarity VAL low COL id VAL nm21969038	0
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL low COL id VAL nm21963146	0
-COL name_movie_similarity VAL low COL id VAL nm3875284	COL name_movie_similarity VAL low COL id VAL nm1725970	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0671980	COL name_movie_similarity VAL low COL id VAL nm21963955	0
-COL name_movie_similarity VAL high COL id VAL nm1309825	COL name_movie_similarity VAL low COL id VAL nm21966552	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21961671	COL name_movie_similarity VAL low COL id VAL nm2684703	1
-COL name_movie_similarity VAL high COL id VAL nm0961594	COL name_movie_similarity VAL low COL id VAL nm21956564	0
+COL name_movie_similarity VAL low COL id VAL nm1133857	COL id VAL nm21961111	0
+COL name_movie_similarity VAL low COL id VAL nm21965563	COL id VAL nm21969038	0
+COL name_movie_similarity VAL low COL id VAL nm2025887	COL id VAL nm21963146	0
+COL name_movie_similarity VAL low COL id VAL nm3875284	COL id VAL nm1725970	0
+COL name_movie_similarity VAL low COL id VAL nm0671980	COL id VAL nm21963955	0
+COL name_movie_similarity VAL high COL id VAL nm1309825	COL id VAL nm21966552	1
+COL name_movie_similarity VAL high COL id VAL nm21961671	COL id VAL nm2684703	1
+COL name_movie_similarity VAL low COL id VAL nm0961594	COL id VAL nm21956564	0
 COL name_movie_similarity VAL low COL id VAL nm21959208	COL id VAL nm0134112	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2236337	COL name_movie_similarity VAL low COL id VAL nm0128757	0
-COL name_movie_similarity VAL low COL id VAL nm0294279	COL name_movie_similarity VAL uncertain COL id VAL nm21962985	0
-COL name_movie_similarity VAL low COL id VAL nm21961111	COL name_movie_similarity VAL low COL id VAL nm1561355	0
-COL name_movie_similarity VAL low COL id VAL nm21956564	COL name_movie_similarity VAL low COL id VAL nm0769044	0
-COL name_movie_similarity VAL low COL id VAL nm21959294	COL name_movie_similarity VAL low COL id VAL nm21957444	0
-COL name_movie_similarity VAL low COL id VAL nm21966317	COL id VAL nm0587459	1
-COL name_movie_similarity VAL low COL id VAL nm0038896	COL name_movie_similarity VAL low COL id VAL nm21967262	0
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL name_movie_similarity VAL low COL id VAL nm21963955	0
-COL name_movie_similarity VAL high COL id VAL nm0574934	COL name_movie_similarity VAL low COL id VAL nm21962198	0
-COL name_movie_similarity VAL uncertain COL id VAL nm3291308	COL name_movie_similarity VAL low COL id VAL nm21957109	0
-COL name_movie_similarity VAL low COL id VAL nm21968112	COL name_movie_similarity VAL low COL id VAL nm0095746	0
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL uncertain COL id VAL nm21962985	0
-COL name_movie_similarity VAL low COL id VAL nm0294279	COL name_movie_similarity VAL low COL id VAL nm21955339	0
-COL name_movie_similarity VAL low COL id VAL nm7105651	COL name_movie_similarity VAL low COL id VAL nm1561355	0
-COL name_movie_similarity VAL low COL id VAL nm21968199	COL name_movie_similarity VAL low COL id VAL nm21957109	0
-COL name_movie_similarity VAL low COL id VAL nm21965509	COL name_movie_similarity VAL high COL id VAL nm21965508	1
-COL name_movie_similarity VAL low COL id VAL nm21965509	COL name_movie_similarity VAL low COL id VAL nm0651995	1
-COL name_movie_similarity VAL low COL id VAL nm21963955	COL name_movie_similarity VAL low COL id VAL nm8345715	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0147147	COL id VAL nm0405973	0
-COL name_movie_similarity VAL low COL id VAL nm21962501	COL name_movie_similarity VAL high COL id VAL nm21955903	0
-COL name_movie_similarity VAL high COL id VAL nm7440261	COL id VAL nm0073888	0
-COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL name_movie_similarity VAL low COL id VAL nm5639158	0
-COL name_movie_similarity VAL low COL id VAL nm1407334	COL name_movie_similarity VAL uncertain COL id VAL nm21964035	0
-COL name_movie_similarity VAL low COL id VAL nm21961949	COL name_movie_similarity VAL uncertain COL id VAL nm0586975	1
-COL name_movie_similarity VAL low COL id VAL nm21961946	COL name_movie_similarity VAL high COL id VAL nm21969452	0
-COL name_movie_similarity VAL high COL id VAL nm21955152	COL name_movie_similarity VAL low COL id VAL nm0878031	1
-COL name_movie_similarity VAL low COL id VAL nm21961946	COL id VAL nm21961948	1
-COL name_movie_similarity VAL low COL id VAL nm21968642	COL name_movie_similarity VAL low COL id VAL nm0222144	0
-COL name_movie_similarity VAL low COL id VAL nm21956563	COL name_movie_similarity VAL low COL id VAL nm21956564	1
-COL name_movie_similarity VAL low COL id VAL nm21961947	COL name_movie_similarity VAL low COL id VAL nm0957595	0
-COL name_movie_similarity VAL low COL id VAL nm0924502	COL name_movie_similarity VAL uncertain COL id VAL nm21965563	1
-COL name_movie_similarity VAL low COL id VAL nm0222144	COL name_movie_similarity VAL low COL id VAL nm21957796	0
-COL name_movie_similarity VAL high COL id VAL nm21969110	COL name_movie_similarity VAL uncertain COL id VAL nm2236337	0
-COL name_movie_similarity VAL low COL id VAL nm21965509	COL name_movie_similarity VAL high COL id VAL nm21969201	0
-COL name_movie_similarity VAL high COL id VAL nm21955151	COL name_movie_similarity VAL uncertain COL id VAL nm1889547	0
-COL name_movie_similarity VAL low COL id VAL nm2684703	COL name_movie_similarity VAL low COL id VAL nm7031415	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21961671	COL name_movie_similarity VAL low COL id VAL nm21966552	0
-COL name_movie_similarity VAL low COL id VAL nm21959642	COL name_movie_similarity VAL low COL id VAL nm0657162	0
-COL name_movie_similarity VAL low COL id VAL nm2513694	COL name_movie_similarity VAL low COL id VAL nm21957663	1
+COL name_movie_similarity VAL low COL id VAL nm2236337	COL id VAL nm0128757	0
+COL name_movie_similarity VAL low COL id VAL nm0294279	COL id VAL nm21962985	0
+COL name_movie_similarity VAL low COL id VAL nm21961111	COL id VAL nm1561355	0
+COL name_movie_similarity VAL low COL id VAL nm21956564	COL id VAL nm0769044	0
+COL name_movie_similarity VAL low COL id VAL nm21959294	COL id VAL nm21957444	0
+COL name_movie_similarity VAL high COL id VAL nm21966317	COL id VAL nm0587459	1
+COL name_movie_similarity VAL low COL id VAL nm0038896	COL id VAL nm21967262	0
+COL name_movie_similarity VAL high COL id VAL nm7889237	COL id VAL nm21963955	0
+COL name_movie_similarity VAL low COL id VAL nm0574934	COL id VAL nm21962198	0
+COL name_movie_similarity VAL low COL id VAL nm3291308	COL id VAL nm21957109	0
+COL name_movie_similarity VAL low COL id VAL nm21968112	COL id VAL nm0095746	0
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm21962985	0
+COL name_movie_similarity VAL low COL id VAL nm0294279	COL id VAL nm21955339	0
+COL name_movie_similarity VAL low COL id VAL nm7105651	COL id VAL nm1561355	0
+COL name_movie_similarity VAL low COL id VAL nm21968199	COL id VAL nm21957109	0
+COL name_movie_similarity VAL high COL id VAL nm21965509	COL id VAL nm21965508	1
+COL name_movie_similarity VAL high COL id VAL nm21965509	COL id VAL nm0651995	1
+COL name_movie_similarity VAL high COL id VAL nm21963955	COL id VAL nm8345715	1
+COL name_movie_similarity VAL low COL id VAL nm0147147	COL id VAL nm0405973	0
+COL name_movie_similarity VAL low COL id VAL nm21962501	COL id VAL nm21955903	0
+COL name_movie_similarity VAL uncertain COL id VAL nm7440261	COL id VAL nm0073888	0
+COL name_movie_similarity VAL low COL id VAL nm5601091	COL id VAL nm5639158	0
+COL name_movie_similarity VAL uncertain COL id VAL nm1407334	COL id VAL nm21964035	0
+COL name_movie_similarity VAL high COL id VAL nm21961949	COL id VAL nm0586975	1
+COL name_movie_similarity VAL low COL id VAL nm21961946	COL id VAL nm21969452	0
+COL name_movie_similarity VAL high COL id VAL nm21955152	COL id VAL nm0878031	1
+COL name_movie_similarity VAL high COL id VAL nm21961946	COL id VAL nm21961948	1
+COL name_movie_similarity VAL low COL id VAL nm21968642	COL id VAL nm0222144	0
+COL name_movie_similarity VAL high COL id VAL nm21956563	COL id VAL nm21956564	1
+COL name_movie_similarity VAL low COL id VAL nm21961947	COL id VAL nm0957595	0
+COL name_movie_similarity VAL high COL id VAL nm0924502	COL id VAL nm21965563	1
+COL name_movie_similarity VAL low COL id VAL nm0222144	COL id VAL nm21957796	0
+COL name_movie_similarity VAL low COL id VAL nm21969110	COL id VAL nm2236337	0
+COL name_movie_similarity VAL low COL id VAL nm21965509	COL id VAL nm21969201	0
+COL name_movie_similarity VAL low COL id VAL nm21955151	COL id VAL nm1889547	0
+COL name_movie_similarity VAL low COL id VAL nm2684703	COL id VAL nm7031415	0
+COL name_movie_similarity VAL low COL id VAL nm21961671	COL id VAL nm21966552	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959642	COL id VAL nm0657162	0
+COL name_movie_similarity VAL high COL id VAL nm2513694	COL id VAL nm21957663	1
 COL name_movie_similarity VAL high COL id VAL nm21960796	COL id VAL nm0134112	1
-COL name_movie_similarity VAL high COL id VAL nm0290956	COL name_movie_similarity VAL low COL id VAL nm21959385	0
-COL name_movie_similarity VAL high COL id VAL nm1745269	COL name_movie_similarity VAL low COL id VAL nm21962984	1
-COL name_movie_similarity VAL high COL id VAL nm0774223	COL name_movie_similarity VAL low COL id VAL nm21963121	1
-COL name_movie_similarity VAL high COL id VAL nm0162668	COL name_movie_similarity VAL low COL id VAL nm21959208	1
-COL name_movie_similarity VAL low COL id VAL nm21966244	COL name_movie_similarity VAL high COL id VAL nm0394679	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2769456	COL name_movie_similarity VAL low COL id VAL nm0609252	0
-COL name_movie_similarity VAL low COL id VAL nm21963955	COL name_movie_similarity VAL high COL id VAL nm1745269	0
+COL name_movie_similarity VAL low COL id VAL nm0290956	COL id VAL nm21959385	0
+COL name_movie_similarity VAL high COL id VAL nm1745269	COL id VAL nm21962984	1
+COL name_movie_similarity VAL high COL id VAL nm0774223	COL id VAL nm21963121	1
+COL name_movie_similarity VAL high COL id VAL nm0162668	COL id VAL nm21959208	1
+COL name_movie_similarity VAL low COL id VAL nm21966244	COL id VAL nm0394679	0
+COL name_movie_similarity VAL low COL id VAL nm2769456	COL id VAL nm0609252	0
+COL name_movie_similarity VAL low COL id VAL nm21963955	COL id VAL nm1745269	0
 COL name_movie_similarity VAL low COL id VAL nm21963120	COL id VAL nm0073888	0
-COL name_movie_similarity VAL high COL id VAL nm21959466	COL name_movie_similarity VAL low COL id VAL nm0222144	0
-COL name_movie_similarity VAL high COL id VAL nm21961945	COL name_movie_similarity VAL high COL id VAL nm0742759	1
-COL name_movie_similarity VAL low COL id VAL nm21967261	COL name_movie_similarity VAL low COL id VAL nm0572383	0
-COL name_movie_similarity VAL high COL id VAL nm21962444	COL name_movie_similarity VAL high COL id VAL nm0362027	0
-COL name_movie_similarity VAL low COL id VAL nm21969111	COL name_movie_similarity VAL low COL id VAL nm1748441	0
-COL name_movie_similarity VAL low COL id VAL nm0346080	COL name_movie_similarity VAL low COL id VAL nm3120206	0
-COL name_movie_similarity VAL low COL id VAL nm21968642	COL name_movie_similarity VAL low COL id VAL nm2355394	0
-COL name_movie_similarity VAL low COL id VAL nm21959294	COL name_movie_similarity VAL low COL id VAL nm21955339	0
-COL name_movie_similarity VAL low COL id VAL nm21968101	COL name_movie_similarity VAL low COL id VAL nm1742016	0
-COL name_movie_similarity VAL low COL id VAL nm5479763	COL name_movie_similarity VAL low COL id VAL nm21956564	0
+COL name_movie_similarity VAL low COL id VAL nm21959466	COL id VAL nm0222144	0
+COL name_movie_similarity VAL high COL id VAL nm21961945	COL id VAL nm0742759	1
+COL name_movie_similarity VAL low COL id VAL nm21967261	COL id VAL nm0572383	0
+COL name_movie_similarity VAL low COL id VAL nm21962444	COL id VAL nm0362027	0
+COL name_movie_similarity VAL low COL id VAL nm21969111	COL id VAL nm1748441	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0346080	COL id VAL nm3120206	0
+COL name_movie_similarity VAL low COL id VAL nm21968642	COL id VAL nm2355394	0
+COL name_movie_similarity VAL low COL id VAL nm21959294	COL id VAL nm21955339	0
+COL name_movie_similarity VAL low COL id VAL nm21968101	COL id VAL nm1742016	0
+COL name_movie_similarity VAL low COL id VAL nm5479763	COL id VAL nm21956564	0
 COL name_movie_similarity VAL low COL id VAL nm0419889	COL id VAL nm1932706	0
-COL name_movie_similarity VAL uncertain COL id VAL nm1011374	COL name_movie_similarity VAL low COL id VAL nm21959641	1
-COL name_movie_similarity VAL low COL id VAL nm3192494	COL name_movie_similarity VAL low COL id VAL nm1920037	0
-COL name_movie_similarity VAL low COL id VAL nm21957664	COL name_movie_similarity VAL low COL id VAL nm2133486	1
-COL name_movie_similarity VAL high COL id VAL nm21966798	COL name_movie_similarity VAL low COL id VAL nm7105651	1
+COL name_movie_similarity VAL high COL id VAL nm1011374	COL id VAL nm21959641	1
+COL name_movie_similarity VAL low COL id VAL nm3192494	COL id VAL nm1920037	0
+COL name_movie_similarity VAL high COL id VAL nm21957664	COL id VAL nm2133486	1
+COL name_movie_similarity VAL high COL id VAL nm21966798	COL id VAL nm7105651	1
 COL name_movie_similarity VAL low COL id VAL nm0515106	COL id VAL nm1932706	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21966318	COL name_movie_similarity VAL low COL id VAL nm21958421	0
-COL name_movie_similarity VAL low COL id VAL nm1742016	COL name_movie_similarity VAL low COL id VAL nm21955339	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL name_movie_similarity VAL high COL id VAL nm21963204	0
-COL name_movie_similarity VAL low COL id VAL nm7031415	COL name_movie_similarity VAL low COL id VAL nm21955479	1
-COL name_movie_similarity VAL uncertain COL id VAL nm3551347	COL name_movie_similarity VAL low COL id VAL nm21968199	1
+COL name_movie_similarity VAL low COL id VAL nm21966318	COL id VAL nm21958421	0
+COL name_movie_similarity VAL low COL id VAL nm1742016	COL id VAL nm21955339	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL id VAL nm21963204	0
+COL name_movie_similarity VAL high COL id VAL nm7031415	COL id VAL nm21955479	1
+COL name_movie_similarity VAL high COL id VAL nm3551347	COL id VAL nm21968199	1
 COL name_movie_similarity VAL high COL id VAL nm21968176	COL id VAL nm0001504	1
-COL name_movie_similarity VAL low COL id VAL nm7669443	COL name_movie_similarity VAL high COL id VAL nm0774223	0
-COL name_movie_similarity VAL low COL id VAL nm21959996	COL name_movie_similarity VAL low COL id VAL nm0128757	0
-COL name_movie_similarity VAL low COL id VAL nm21967261	COL name_movie_similarity VAL high COL id VAL nm21955840	0
-COL name_movie_similarity VAL high COL id VAL nm21969160	COL name_movie_similarity VAL high COL id VAL nm1071765	0
+COL name_movie_similarity VAL low COL id VAL nm7669443	COL id VAL nm0774223	0
+COL name_movie_similarity VAL low COL id VAL nm21959996	COL id VAL nm0128757	0
+COL name_movie_similarity VAL low COL id VAL nm21967261	COL id VAL nm21955840	0
+COL name_movie_similarity VAL low COL id VAL nm21969160	COL id VAL nm1071765	0
 COL name_movie_similarity VAL low COL id VAL nm21965509	COL id VAL nm21962818	0
-COL name_movie_similarity VAL low COL id VAL nm9522896	COL name_movie_similarity VAL low COL id VAL nm21968112	0
-COL name_movie_similarity VAL low COL id VAL nm0924502	COL name_movie_similarity VAL low COL id VAL nm1511631	0
-COL name_movie_similarity VAL high COL id VAL nm0742759	COL name_movie_similarity VAL low COL id VAL nm21961944	1
-COL name_movie_similarity VAL high COL id VAL nm1133857	COL name_movie_similarity VAL low COL id VAL nm7031415	0
-COL name_movie_similarity VAL low COL id VAL nm0128757	COL name_movie_similarity VAL low COL id VAL nm21966244	0
-COL name_movie_similarity VAL high COL id VAL nm21959466	COL name_movie_similarity VAL high COL id VAL nm21968376	0
-COL name_movie_similarity VAL low COL id VAL nm4457467	COL name_movie_similarity VAL low COL id VAL nm21958966	1
-COL name_movie_similarity VAL low COL id VAL nm0238669	COL name_movie_similarity VAL low COL id VAL nm3192494	0
-COL name_movie_similarity VAL low COL id VAL nm21962198	COL name_movie_similarity VAL low COL id VAL nm1725970	0
-COL name_movie_similarity VAL low COL id VAL nm0682408	COL name_movie_similarity VAL low COL id VAL nm21963121	0
-COL name_movie_similarity VAL high COL id VAL nm5404297	COL name_movie_similarity VAL low COL id VAL nm21958966	0
-COL name_movie_similarity VAL high COL id VAL nm7440261	COL name_movie_similarity VAL uncertain COL id VAL nm21962985	0
-COL name_movie_similarity VAL uncertain COL id VAL nm5025293	COL name_movie_similarity VAL low COL id VAL nm21961946	0
-COL name_movie_similarity VAL high COL id VAL nm21956450	COL name_movie_similarity VAL high COL id VAL nm3899141	0
-COL name_movie_similarity VAL low COL id VAL nm21959386	COL name_movie_similarity VAL low COL id VAL nm0238669	0
-COL name_movie_similarity VAL low COL id VAL nm21956564	COL name_movie_similarity VAL low COL id VAL nm3192494	0
-COL name_movie_similarity VAL low COL id VAL nm21955480	COL name_movie_similarity VAL low COL id VAL nm2832339	0
-COL name_movie_similarity VAL low COL id VAL nm5479763	COL name_movie_similarity VAL uncertain COL id VAL nm0671980	0
-COL name_movie_similarity VAL low COL id VAL nm1587303	COL name_movie_similarity VAL uncertain COL id VAL nm0929452	0
-COL name_movie_similarity VAL high COL id VAL nm0550318	COL name_movie_similarity VAL low COL id VAL nm21963146	0
-COL name_movie_similarity VAL low COL id VAL nm0666972	COL name_movie_similarity VAL low COL id VAL nm21959609	0
-COL name_movie_similarity VAL low COL id VAL nm21966722	COL name_movie_similarity VAL low COL id VAL nm0084642	1
-COL name_movie_similarity VAL low COL id VAL nm21959642	COL name_movie_similarity VAL high COL id VAL nm21965153	0
-COL name_movie_similarity VAL high COL id VAL nm21968102	COL name_movie_similarity VAL uncertain COL id VAL nm21959207	0
-COL name_movie_similarity VAL low COL id VAL nm21959294	COL name_movie_similarity VAL uncertain COL id VAL nm21961046	0
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL high COL id VAL nm5404297	0
-COL name_movie_similarity VAL low COL id VAL nm21958597	COL name_movie_similarity VAL low COL id VAL nm0767298	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21955150	COL name_movie_similarity VAL low COL id VAL nm21966722	0
-COL name_movie_similarity VAL high COL id VAL nm5404297	COL name_movie_similarity VAL low COL id VAL nm0172472	0
-COL name_movie_similarity VAL low COL id VAL nm21965152	COL name_movie_similarity VAL low COL id VAL nm0495790	0
-COL name_movie_similarity VAL low COL id VAL nm2684703	COL name_movie_similarity VAL low COL id VAL nm21962501	0
-COL name_movie_similarity VAL low COL id VAL nm1541933	COL name_movie_similarity VAL low COL id VAL nm21961597	1
-COL name_movie_similarity VAL low COL id VAL nm1725970	COL name_movie_similarity VAL low COL id VAL nm21968112	1
-COL name_movie_similarity VAL low COL id VAL nm2113577	COL name_movie_similarity VAL low COL id VAL nm0957595	0
-COL name_movie_similarity VAL low COL id VAL nm21958597	COL name_movie_similarity VAL high COL id VAL nm21959466	0
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL name_movie_similarity VAL high COL id VAL nm3157936	0
-COL name_movie_similarity VAL high COL id VAL nm5404297	COL name_movie_similarity VAL low COL id VAL nm0120544	0
-COL name_movie_similarity VAL low COL id VAL nm3120206	COL name_movie_similarity VAL low COL id VAL nm3295266	0
-COL name_movie_similarity VAL low COL id VAL nm21969111	COL name_movie_similarity VAL low COL id VAL nm21965509	0
-COL name_movie_similarity VAL low COL id VAL nm21959386	COL name_movie_similarity VAL low COL id VAL nm0419889	0
-COL name_movie_similarity VAL low COL id VAL nm21959293	COL name_movie_similarity VAL uncertain COL id VAL nm2769456	1
-COL name_movie_similarity VAL high COL id VAL nm3157936	COL name_movie_similarity VAL low COL id VAL nm21959386	1
-COL name_movie_similarity VAL high COL id VAL nm21969201	COL name_movie_similarity VAL low COL id VAL nm0010736	1
-COL name_movie_similarity VAL low COL id VAL nm21962501	COL name_movie_similarity VAL low COL id VAL nm21962763	0
-COL name_movie_similarity VAL high COL id VAL nm21962444	COL name_movie_similarity VAL high COL id VAL nm1253181	0
-COL name_movie_similarity VAL low COL id VAL nm21957664	COL name_movie_similarity VAL high COL id VAL nm2025887	0
-COL name_movie_similarity VAL low COL id VAL nm21958637	COL name_movie_similarity VAL low COL id VAL nm21959385	0
-COL name_movie_similarity VAL high COL id VAL nm21969110	COL id VAL nm0001504	0
-COL name_movie_similarity VAL low COL id VAL nm3139442	COL name_movie_similarity VAL low COL id VAL nm0957595	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21967902	COL name_movie_similarity VAL low COL id VAL nm2513694	0
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL low COL id VAL nm21964169	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0890485	COL id VAL nm21959295	0
-COL name_movie_similarity VAL low COL id VAL nm21968199	COL name_movie_similarity VAL high COL id VAL nm0574934	0
-COL name_movie_similarity VAL low COL id VAL nm3609484	COL name_movie_similarity VAL low COL id VAL nm21959641	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2769456	COL name_movie_similarity VAL low COL id VAL nm7669443	0
-COL name_movie_similarity VAL low COL id VAL nm0095746	COL id VAL nm21955478	0
-COL name_movie_similarity VAL high COL id VAL nm21961945	COL name_movie_similarity VAL low COL id VAL nm21962198	0
-COL name_movie_similarity VAL low COL id VAL nm0346080	COL name_movie_similarity VAL high COL id VAL nm0233215	0
-COL name_movie_similarity VAL low COL id VAL nm0924502	COL name_movie_similarity VAL high COL id VAL nm1745269	0
-COL name_movie_similarity VAL uncertain COL id VAL nm3589032	COL name_movie_similarity VAL uncertain COL id VAL nm0890485	0
-COL name_movie_similarity VAL low COL id VAL nm21961946	COL name_movie_similarity VAL high COL id VAL nm21963204	0
-COL name_movie_similarity VAL low COL id VAL nm21957390	COL name_movie_similarity VAL uncertain COL id VAL nm5025293	0
+COL name_movie_similarity VAL low COL id VAL nm9522896	COL id VAL nm21968112	0
+COL name_movie_similarity VAL low COL id VAL nm0924502	COL id VAL nm1511631	0
+COL name_movie_similarity VAL high COL id VAL nm0742759	COL id VAL nm21961944	1
+COL name_movie_similarity VAL low COL id VAL nm1133857	COL id VAL nm7031415	0
+COL name_movie_similarity VAL high COL id VAL nm0128757	COL id VAL nm21966244	0
+COL name_movie_similarity VAL low COL id VAL nm21959466	COL id VAL nm21968376	0
+COL name_movie_similarity VAL uncertain COL id VAL nm4457467	COL id VAL nm21958966	1
+COL name_movie_similarity VAL low COL id VAL nm0238669	COL id VAL nm3192494	0
+COL name_movie_similarity VAL low COL id VAL nm21962198	COL id VAL nm1725970	0
+COL name_movie_similarity VAL low COL id VAL nm0682408	COL id VAL nm21963121	0
+COL name_movie_similarity VAL low COL id VAL nm5404297	COL id VAL nm21958966	0
+COL name_movie_similarity VAL low COL id VAL nm7440261	COL id VAL nm21962985	0
+COL name_movie_similarity VAL low COL id VAL nm5025293	COL id VAL nm21961946	0
+COL name_movie_similarity VAL low COL id VAL nm21956450	COL id VAL nm3899141	0
+COL name_movie_similarity VAL low COL id VAL nm21959386	COL id VAL nm0238669	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21956564	COL id VAL nm3192494	0
+COL name_movie_similarity VAL low COL id VAL nm21955480	COL id VAL nm2832339	0
+COL name_movie_similarity VAL low COL id VAL nm5479763	COL id VAL nm0671980	0
+COL name_movie_similarity VAL low COL id VAL nm1587303	COL id VAL nm0929452	0
+COL name_movie_similarity VAL low COL id VAL nm0550318	COL id VAL nm21963146	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0666972	COL id VAL nm21959609	0
+COL name_movie_similarity VAL high COL id VAL nm21966722	COL id VAL nm0084642	1
+COL name_movie_similarity VAL low COL id VAL nm21959642	COL id VAL nm21965153	0
+COL name_movie_similarity VAL low COL id VAL nm21968102	COL id VAL nm21959207	0
+COL name_movie_similarity VAL low COL id VAL nm21959294	COL id VAL nm21961046	0
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm5404297	0
+COL name_movie_similarity VAL low COL id VAL nm21958597	COL id VAL nm0767298	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21955150	COL id VAL nm21966722	0
+COL name_movie_similarity VAL uncertain COL id VAL nm5404297	COL id VAL nm0172472	0
+COL name_movie_similarity VAL low COL id VAL nm21965152	COL id VAL nm0495790	0
+COL name_movie_similarity VAL low COL id VAL nm2684703	COL id VAL nm21962501	0
+COL name_movie_similarity VAL high COL id VAL nm1541933	COL id VAL nm21961597	1
+COL name_movie_similarity VAL high COL id VAL nm1725970	COL id VAL nm21968112	1
+COL name_movie_similarity VAL low COL id VAL nm2113577	COL id VAL nm0957595	0
+COL name_movie_similarity VAL low COL id VAL nm21958597	COL id VAL nm21959466	0
+COL name_movie_similarity VAL low COL id VAL nm7889237	COL id VAL nm3157936	0
+COL name_movie_similarity VAL low COL id VAL nm5404297	COL id VAL nm0120544	0
+COL name_movie_similarity VAL low COL id VAL nm3120206	COL id VAL nm3295266	0
+COL name_movie_similarity VAL low COL id VAL nm21969111	COL id VAL nm21965509	0
+COL name_movie_similarity VAL low COL id VAL nm21959386	COL id VAL nm0419889	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959293	COL id VAL nm2769456	1
+COL name_movie_similarity VAL high COL id VAL nm3157936	COL id VAL nm21959386	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21969201	COL id VAL nm0010736	1
+COL name_movie_similarity VAL low COL id VAL nm21962501	COL id VAL nm21962763	0
+COL name_movie_similarity VAL low COL id VAL nm21962444	COL id VAL nm1253181	0
+COL name_movie_similarity VAL low COL id VAL nm21957664	COL id VAL nm2025887	0
+COL name_movie_similarity VAL low COL id VAL nm21958637	COL id VAL nm21959385	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21969110	COL id VAL nm0001504	0
+COL name_movie_similarity VAL low COL id VAL nm3139442	COL id VAL nm0957595	0
+COL name_movie_similarity VAL low COL id VAL nm21967902	COL id VAL nm2513694	0
+COL name_movie_similarity VAL high COL id VAL nm1887521	COL id VAL nm21964169	1
+COL name_movie_similarity VAL low COL id VAL nm0890485	COL id VAL nm21959295	0
+COL name_movie_similarity VAL low COL id VAL nm21968199	COL id VAL nm0574934	0
+COL name_movie_similarity VAL low COL id VAL nm3609484	COL id VAL nm21959641	0
+COL name_movie_similarity VAL uncertain COL id VAL nm2769456	COL id VAL nm7669443	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0095746	COL id VAL nm21955478	0
+COL name_movie_similarity VAL low COL id VAL nm21961945	COL id VAL nm21962198	0
+COL name_movie_similarity VAL low COL id VAL nm0346080	COL id VAL nm0233215	0
+COL name_movie_similarity VAL low COL id VAL nm0924502	COL id VAL nm1745269	0
+COL name_movie_similarity VAL uncertain COL id VAL nm3589032	COL id VAL nm0890485	0
+COL name_movie_similarity VAL low COL id VAL nm21961946	COL id VAL nm21963204	0
+COL name_movie_similarity VAL low COL id VAL nm21957390	COL id VAL nm5025293	0
 COL name_movie_similarity VAL high COL id VAL nm5374866	COL id VAL nm21962818	1
-COL name_movie_similarity VAL low COL id VAL nm21961949	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL low COL id VAL nm0456562	COL name_movie_similarity VAL low COL id VAL nm21968642	1
-COL name_movie_similarity VAL low COL id VAL nm0773137	COL name_movie_similarity VAL high COL id VAL nm0550318	0
-COL name_movie_similarity VAL high COL id VAL nm21962502	COL name_movie_similarity VAL low COL id VAL nm21962501	1
-COL name_movie_similarity VAL low COL id VAL nm1920037	COL name_movie_similarity VAL uncertain COL id VAL nm5601091	0
-COL name_movie_similarity VAL low COL id VAL nm2238751	COL name_movie_similarity VAL high COL id VAL nm21959466	0
-COL name_movie_similarity VAL high COL id VAL nm0574934	COL name_movie_similarity VAL low COL id VAL nm21959996	1
-COL name_movie_similarity VAL low COL id VAL nm21959608	COL name_movie_similarity VAL low COL id VAL nm2006841	0
-COL name_movie_similarity VAL high COL id VAL nm21959553	COL id VAL nm5039492	1
-COL name_movie_similarity VAL high COL id VAL nm21965561	COL name_movie_similarity VAL high COL id VAL nm0961594	1
-COL name_movie_similarity VAL low COL id VAL nm8345715	COL name_movie_similarity VAL uncertain COL id VAL nm21967902	0
-COL name_movie_similarity VAL low COL id VAL nm21961947	COL name_movie_similarity VAL high COL id VAL nm21956569	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL name_movie_similarity VAL high COL id VAL nm21959466	0
-COL name_movie_similarity VAL low COL id VAL nm21961946	COL name_movie_similarity VAL low COL id VAL nm2809173	0
-COL name_movie_similarity VAL high COL id VAL nm21968249	COL name_movie_similarity VAL low COL id VAL nm21963955	0
+COL name_movie_similarity VAL low COL id VAL nm21961949	COL id VAL nm0961594	0
+COL name_movie_similarity VAL high COL id VAL nm0456562	COL id VAL nm21968642	1
+COL name_movie_similarity VAL low COL id VAL nm0773137	COL id VAL nm0550318	0
+COL name_movie_similarity VAL high COL id VAL nm21962502	COL id VAL nm21962501	1
+COL name_movie_similarity VAL low COL id VAL nm1920037	COL id VAL nm5601091	0
+COL name_movie_similarity VAL low COL id VAL nm2238751	COL id VAL nm21959466	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0574934	COL id VAL nm21959996	1
+COL name_movie_similarity VAL low COL id VAL nm21959608	COL id VAL nm2006841	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959553	COL id VAL nm5039492	1
+COL name_movie_similarity VAL high COL id VAL nm21965561	COL id VAL nm0961594	1
+COL name_movie_similarity VAL low COL id VAL nm8345715	COL id VAL nm21967902	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21961947	COL id VAL nm21956569	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL id VAL nm21959466	0
+COL name_movie_similarity VAL low COL id VAL nm21961946	COL id VAL nm2809173	0
+COL name_movie_similarity VAL low COL id VAL nm21968249	COL id VAL nm21963955	0
 COL name_movie_similarity VAL low COL id VAL nm1561355	COL id VAL nm0374569	0
-COL name_movie_similarity VAL low COL id VAL nm0456562	COL name_movie_similarity VAL low COL id VAL nm4678220	0
-COL name_movie_similarity VAL low COL id VAL nm21967261	COL name_movie_similarity VAL low COL id VAL nm21969111	0
-COL name_movie_similarity VAL low COL id VAL nm1920037	COL name_movie_similarity VAL uncertain COL id VAL nm21962985	0
-COL name_movie_similarity VAL low COL id VAL nm0238669	COL name_movie_similarity VAL low COL id VAL nm21961947	1
-COL name_movie_similarity VAL high COL id VAL nm21965562	COL name_movie_similarity VAL high COL id VAL nm21962987	0
-COL name_movie_similarity VAL low COL id VAL nm21961944	COL name_movie_similarity VAL low COL id VAL nm2684703	0
-COL name_movie_similarity VAL low COL id VAL nm21959641	COL name_movie_similarity VAL low COL id VAL nm9522896	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0764168	COL id VAL nm21962818	0
-COL name_movie_similarity VAL low COL id VAL nm21969111	COL name_movie_similarity VAL low COL id VAL nm21967262	0
-COL name_movie_similarity VAL low COL id VAL nm21959294	COL name_movie_similarity VAL low COL id VAL nm0682408	0
-COL name_movie_similarity VAL low COL id VAL nm21969111	COL name_movie_similarity VAL low COL id VAL nm0127758	1
-COL name_movie_similarity VAL uncertain COL id VAL nm3551347	COL name_movie_similarity VAL low COL id VAL nm21959294	0
-COL name_movie_similarity VAL low COL id VAL nm0651995	COL name_movie_similarity VAL high COL id VAL nm21962987	0
-COL name_movie_similarity VAL low COL id VAL nm0609252	COL name_movie_similarity VAL high COL id VAL nm21965153	0
-COL name_movie_similarity VAL low COL id VAL nm21958421	COL name_movie_similarity VAL low COL id VAL nm21961946	0
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL name_movie_similarity VAL uncertain COL id VAL nm21963954	1
-COL name_movie_similarity VAL low COL id VAL nm2684703	COL name_movie_similarity VAL high COL id VAL nm21959553	0
-COL name_movie_similarity VAL low COL id VAL nm21958597	COL name_movie_similarity VAL low COL id VAL nm5639158	1
-COL name_movie_similarity VAL low COL id VAL nm2355394	COL name_movie_similarity VAL low COL id VAL nm21963205	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL name_movie_similarity VAL low COL id VAL nm21957390	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0456562	COL id VAL nm4678220	0
+COL name_movie_similarity VAL low COL id VAL nm21967261	COL id VAL nm21969111	0
+COL name_movie_similarity VAL low COL id VAL nm1920037	COL id VAL nm21962985	0
+COL name_movie_similarity VAL high COL id VAL nm0238669	COL id VAL nm21961947	1
+COL name_movie_similarity VAL low COL id VAL nm21965562	COL id VAL nm21962987	0
+COL name_movie_similarity VAL low COL id VAL nm21961944	COL id VAL nm2684703	0
+COL name_movie_similarity VAL low COL id VAL nm21959641	COL id VAL nm9522896	0
+COL name_movie_similarity VAL low COL id VAL nm0764168	COL id VAL nm21962818	0
+COL name_movie_similarity VAL low COL id VAL nm21969111	COL id VAL nm21967262	0
+COL name_movie_similarity VAL low COL id VAL nm21959294	COL id VAL nm0682408	0
+COL name_movie_similarity VAL high COL id VAL nm21969111	COL id VAL nm0127758	1
+COL name_movie_similarity VAL low COL id VAL nm3551347	COL id VAL nm21959294	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0651995	COL id VAL nm21962987	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0609252	COL id VAL nm21965153	0
+COL name_movie_similarity VAL low COL id VAL nm21958421	COL id VAL nm21961946	0
+COL name_movie_similarity VAL high COL id VAL nm7889237	COL id VAL nm21963954	1
+COL name_movie_similarity VAL low COL id VAL nm2684703	COL id VAL nm21959553	0
+COL name_movie_similarity VAL high COL id VAL nm21958597	COL id VAL nm5639158	1
+COL name_movie_similarity VAL uncertain COL id VAL nm2355394	COL id VAL nm21963205	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL id VAL nm21957390	0
 COL name_movie_similarity VAL low COL id VAL nm21964169	COL id VAL nm21962818	0
-COL name_movie_similarity VAL low COL id VAL nm21961112	COL name_movie_similarity VAL low COL id VAL nm3139442	1
-COL name_movie_similarity VAL low COL id VAL nm2809173	COL name_movie_similarity VAL low COL id VAL nm21957344	1
-COL name_movie_similarity VAL low COL id VAL nm1920037	COL name_movie_similarity VAL low COL id VAL nm1066781	0
-COL name_movie_similarity VAL high COL id VAL nm21961945	COL name_movie_similarity VAL high COL id VAL nm7440261	0
+COL name_movie_similarity VAL high COL id VAL nm21961112	COL id VAL nm3139442	1
+COL name_movie_similarity VAL high COL id VAL nm2809173	COL id VAL nm21957344	1
+COL name_movie_similarity VAL low COL id VAL nm1920037	COL id VAL nm1066781	0
+COL name_movie_similarity VAL low COL id VAL nm21961945	COL id VAL nm7440261	0
 COL name_movie_similarity VAL low COL id VAL nm21958637	COL id VAL nm0073888	0
-COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL name_movie_similarity VAL low COL id VAL nm21969038	1
-COL name_movie_similarity VAL low COL id VAL nm21960795	COL name_movie_similarity VAL low COL id VAL nm3120206	1
-COL name_movie_similarity VAL low COL id VAL nm21959608	COL name_movie_similarity VAL high COL id VAL nm3169905	0
-COL name_movie_similarity VAL low COL id VAL nm3978505	COL name_movie_similarity VAL low COL id VAL nm3662284	0
-COL name_movie_similarity VAL high COL id VAL nm21965562	COL name_movie_similarity VAL high COL id VAL nm1253181	0
-COL name_movie_similarity VAL low COL id VAL nm21960613	COL name_movie_similarity VAL low COL id VAL nm21966317	0
-COL name_movie_similarity VAL low COL id VAL nm1541933	COL name_movie_similarity VAL low COL id VAL nm0128757	0
-COL name_movie_similarity VAL low COL id VAL nm0172969	COL name_movie_similarity VAL high COL id VAL nm7440261	0
-COL name_movie_similarity VAL high COL id VAL nm21959466	COL name_movie_similarity VAL low COL id VAL nm3139442	0
-COL name_movie_similarity VAL high COL id VAL nm21969452	COL name_movie_similarity VAL low COL id VAL nm0773137	1
-COL name_movie_similarity VAL low COL id VAL nm1561355	COL name_movie_similarity VAL low COL id VAL nm21962763	0
-COL name_movie_similarity VAL low COL id VAL nm9522896	COL name_movie_similarity VAL low COL id VAL nm0095746	0
-COL name_movie_similarity VAL high COL id VAL nm1071765	COL name_movie_similarity VAL low COL id VAL nm21955339	1
-COL name_movie_similarity VAL high COL id VAL nm0362027	COL name_movie_similarity VAL high COL id VAL nm1071765	0
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL low COL id VAL nm21958421	0
-COL name_movie_similarity VAL low COL id VAL nm21964034	COL name_movie_similarity VAL uncertain COL id VAL nm0764168	1
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL high COL id VAL nm21965691	0
-COL name_movie_similarity VAL low COL id VAL nm0127758	COL name_movie_similarity VAL high COL id VAL nm3169905	0
-COL name_movie_similarity VAL uncertain COL id VAL nm3291308	COL id VAL nm21960612	1
-COL name_movie_similarity VAL low COL id VAL nm8345715	COL name_movie_similarity VAL low COL id VAL nm5970991	0
-COL name_movie_similarity VAL low COL id VAL nm1066781	COL name_movie_similarity VAL low COL id VAL nm21961944	0
-COL name_movie_similarity VAL high COL id VAL nm21969160	COL name_movie_similarity VAL low COL id VAL nm1920037	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2236337	COL id VAL nm21955328	1
-COL name_movie_similarity VAL high COL id VAL nm21965508	COL name_movie_similarity VAL low COL id VAL nm3376469	0
-COL name_movie_similarity VAL high COL id VAL nm21968376	COL name_movie_similarity VAL low COL id VAL nm1742016	0
-COL name_movie_similarity VAL high COL id VAL nm21962986	COL name_movie_similarity VAL low COL id VAL nm1511631	0
-COL name_movie_similarity VAL low COL id VAL nm21967261	COL name_movie_similarity VAL high COL id VAL nm0162668	0
-COL name_movie_similarity VAL low COL id VAL nm1531103	COL name_movie_similarity VAL uncertain COL id VAL nm0586975	0
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL low COL id VAL nm21967262	0
-COL name_movie_similarity VAL high COL id VAL nm7440261	COL name_movie_similarity VAL high COL id VAL nm21969160	1
-COL name_movie_similarity VAL low COL id VAL nm1920037	COL name_movie_similarity VAL low COL id VAL nm21962763	1
-COL name_movie_similarity VAL low COL id VAL nm0878031	COL name_movie_similarity VAL low COL id VAL nm0172969	0
-COL name_movie_similarity VAL uncertain COL id VAL nm4136197	COL name_movie_similarity VAL low COL id VAL nm21957444	0
-COL name_movie_similarity VAL low COL id VAL nm5970991	COL name_movie_similarity VAL low COL id VAL nm21959294	1
-COL name_movie_similarity VAL high COL id VAL nm21968102	COL name_movie_similarity VAL low COL id VAL nm0657162	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0671980	COL name_movie_similarity VAL low COL id VAL nm21969038	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21966318	COL id VAL nm0001504	0
-COL name_movie_similarity VAL low COL id VAL nm0651995	COL name_movie_similarity VAL low COL id VAL nm3875284	0
-COL name_movie_similarity VAL low COL id VAL nm21959567	COL name_movie_similarity VAL low COL id VAL nm1725970	0
-COL name_movie_similarity VAL low COL id VAL nm21960613	COL name_movie_similarity VAL low COL id VAL nm4678220	1
-COL name_movie_similarity VAL low COL id VAL nm0902783	COL name_movie_similarity VAL low COL id VAL nm21961949	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0586975	COL name_movie_similarity VAL high COL id VAL nm3899141	0
-COL name_movie_similarity VAL low COL id VAL nm0609252	COL name_movie_similarity VAL low COL id VAL nm0769044	0
-COL name_movie_similarity VAL low COL id VAL nm21968408	COL name_movie_similarity VAL low COL id VAL nm21959386	0
-COL name_movie_similarity VAL low COL id VAL nm21965564	COL name_movie_similarity VAL low COL id VAL nm21963146	0
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL high COL id VAL nm21966798	0
-COL name_movie_similarity VAL high COL id VAL nm21956450	COL name_movie_similarity VAL low COL id VAL nm3264655	0
-COL name_movie_similarity VAL low COL id VAL nm0419889	COL name_movie_similarity VAL low COL id VAL nm21963206	0
-COL name_movie_similarity VAL low COL id VAL nm21966722	COL name_movie_similarity VAL low COL id VAL nm1887521	0
-COL name_movie_similarity VAL low COL id VAL nm3264655	COL id VAL nm21955902	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21959207	COL id VAL nm0374569	0
-COL name_movie_similarity VAL low COL id VAL nm2133486	COL name_movie_similarity VAL low COL id VAL nm21958421	0
-COL name_movie_similarity VAL low COL id VAL nm0878031	COL name_movie_similarity VAL low COL id VAL nm0060607	0
+COL name_movie_similarity VAL high COL id VAL nm5601091	COL id VAL nm21969038	1
+COL name_movie_similarity VAL high COL id VAL nm21960795	COL id VAL nm3120206	1
+COL name_movie_similarity VAL low COL id VAL nm21959608	COL id VAL nm3169905	0
+COL name_movie_similarity VAL low COL id VAL nm3978505	COL id VAL nm3662284	0
+COL name_movie_similarity VAL low COL id VAL nm21965562	COL id VAL nm1253181	0
+COL name_movie_similarity VAL low COL id VAL nm21960613	COL id VAL nm21966317	0
+COL name_movie_similarity VAL low COL id VAL nm1541933	COL id VAL nm0128757	0
+COL name_movie_similarity VAL low COL id VAL nm0172969	COL id VAL nm7440261	0
+COL name_movie_similarity VAL low COL id VAL nm21959466	COL id VAL nm3139442	0
+COL name_movie_similarity VAL high COL id VAL nm21969452	COL id VAL nm0773137	1
+COL name_movie_similarity VAL low COL id VAL nm1561355	COL id VAL nm21962763	0
+COL name_movie_similarity VAL low COL id VAL nm9522896	COL id VAL nm0095746	0
+COL name_movie_similarity VAL high COL id VAL nm1071765	COL id VAL nm21955339	1
+COL name_movie_similarity VAL low COL id VAL nm0362027	COL id VAL nm1071765	0
+COL name_movie_similarity VAL low COL id VAL nm2025887	COL id VAL nm21958421	0
+COL name_movie_similarity VAL high COL id VAL nm21964034	COL id VAL nm0764168	1
+COL name_movie_similarity VAL uncertain COL id VAL nm3157695	COL id VAL nm21965691	0
+COL name_movie_similarity VAL low COL id VAL nm0127758	COL id VAL nm3169905	0
+COL name_movie_similarity VAL high COL id VAL nm3291308	COL id VAL nm21960612	1
+COL name_movie_similarity VAL uncertain COL id VAL nm8345715	COL id VAL nm5970991	0
+COL name_movie_similarity VAL low COL id VAL nm1066781	COL id VAL nm21961944	0
+COL name_movie_similarity VAL low COL id VAL nm21969160	COL id VAL nm1920037	0
+COL name_movie_similarity VAL high COL id VAL nm2236337	COL id VAL nm21955328	1
+COL name_movie_similarity VAL low COL id VAL nm21965508	COL id VAL nm3376469	0
+COL name_movie_similarity VAL low COL id VAL nm21968376	COL id VAL nm1742016	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21962986	COL id VAL nm1511631	0
+COL name_movie_similarity VAL low COL id VAL nm21967261	COL id VAL nm0162668	0
+COL name_movie_similarity VAL low COL id VAL nm1531103	COL id VAL nm0586975	0
+COL name_movie_similarity VAL low COL id VAL nm3157695	COL id VAL nm21967262	0
+COL name_movie_similarity VAL high COL id VAL nm7440261	COL id VAL nm21969160	1
+COL name_movie_similarity VAL high COL id VAL nm1920037	COL id VAL nm21962763	1
+COL name_movie_similarity VAL low COL id VAL nm0878031	COL id VAL nm0172969	0
+COL name_movie_similarity VAL low COL id VAL nm4136197	COL id VAL nm21957444	0
+COL name_movie_similarity VAL high COL id VAL nm5970991	COL id VAL nm21959294	1
+COL name_movie_similarity VAL low COL id VAL nm21968102	COL id VAL nm0657162	0
+COL name_movie_similarity VAL low COL id VAL nm0671980	COL id VAL nm21969038	0
+COL name_movie_similarity VAL low COL id VAL nm21966318	COL id VAL nm0001504	0
+COL name_movie_similarity VAL low COL id VAL nm0651995	COL id VAL nm3875284	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959567	COL id VAL nm1725970	0
+COL name_movie_similarity VAL high COL id VAL nm21960613	COL id VAL nm4678220	1
+COL name_movie_similarity VAL low COL id VAL nm0902783	COL id VAL nm21961949	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0586975	COL id VAL nm3899141	0
+COL name_movie_similarity VAL low COL id VAL nm0609252	COL id VAL nm0769044	0
+COL name_movie_similarity VAL low COL id VAL nm21968408	COL id VAL nm21959386	0
+COL name_movie_similarity VAL low COL id VAL nm21965564	COL id VAL nm21963146	0
+COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm21966798	0
+COL name_movie_similarity VAL low COL id VAL nm21956450	COL id VAL nm3264655	0
+COL name_movie_similarity VAL low COL id VAL nm0419889	COL id VAL nm21963206	0
+COL name_movie_similarity VAL low COL id VAL nm21966722	COL id VAL nm1887521	0
+COL name_movie_similarity VAL high COL id VAL nm3264655	COL id VAL nm21955902	1
+COL name_movie_similarity VAL low COL id VAL nm21959207	COL id VAL nm0374569	0
+COL name_movie_similarity VAL low COL id VAL nm2133486	COL id VAL nm21958421	0
+COL name_movie_similarity VAL low COL id VAL nm0878031	COL id VAL nm0060607	0
 COL name_movie_similarity VAL low COL id VAL nm2006841	COL id VAL nm3164594	0
-COL name_movie_similarity VAL high COL id VAL nm21965508	COL name_movie_similarity VAL low COL id VAL nm0651995	1
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL name_movie_similarity VAL low COL id VAL nm1937112	0
-COL name_movie_similarity VAL high COL id VAL nm0394679	COL name_movie_similarity VAL low COL id VAL nm21956563	1
-COL name_movie_similarity VAL low COL id VAL nm21957344	COL id VAL nm21962818	0
-COL name_movie_similarity VAL low COL id VAL nm4457467	COL name_movie_similarity VAL high COL id VAL nm3899141	0
-COL name_movie_similarity VAL low COL id VAL nm21959385	COL name_movie_similarity VAL low COL id VAL nm2684703	0
+COL name_movie_similarity VAL high COL id VAL nm21965508	COL id VAL nm0651995	1
+COL name_movie_similarity VAL low COL id VAL nm7889237	COL id VAL nm1937112	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0394679	COL id VAL nm21956563	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21957344	COL id VAL nm21962818	0
+COL name_movie_similarity VAL low COL id VAL nm4457467	COL id VAL nm3899141	0
+COL name_movie_similarity VAL low COL id VAL nm21959385	COL id VAL nm2684703	0
 COL name_movie_similarity VAL low COL id VAL nm21959385	COL id VAL nm1932706	0
-COL name_movie_similarity VAL high COL id VAL nm0774223	COL name_movie_similarity VAL low COL id VAL nm21963120	1
-COL name_movie_similarity VAL low COL id VAL nm2809173	COL name_movie_similarity VAL low COL id VAL nm21957663	0
-COL name_movie_similarity VAL high COL id VAL nm0362027	COL name_movie_similarity VAL low COL id VAL nm21963955	0
-COL name_movie_similarity VAL low COL id VAL nm1511631	COL name_movie_similarity VAL uncertain COL id VAL nm0671980	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL name_movie_similarity VAL low COL id VAL nm21955339	0
-COL name_movie_similarity VAL high COL id VAL nm21956450	COL name_movie_similarity VAL low COL id VAL nm0172472	1
-COL name_movie_similarity VAL low COL id VAL nm0855892	COL name_movie_similarity VAL low COL id VAL nm21959386	0
+COL name_movie_similarity VAL high COL id VAL nm0774223	COL id VAL nm21963120	1
+COL name_movie_similarity VAL low COL id VAL nm2809173	COL id VAL nm21957663	0
+COL name_movie_similarity VAL low COL id VAL nm0362027	COL id VAL nm21963955	0
+COL name_movie_similarity VAL low COL id VAL nm1511631	COL id VAL nm0671980	0
+COL name_movie_similarity VAL low COL id VAL nm21963961	COL id VAL nm21955339	0
+COL name_movie_similarity VAL high COL id VAL nm21956450	COL id VAL nm0172472	1
+COL name_movie_similarity VAL low COL id VAL nm0855892	COL id VAL nm21959386	0
 COL name_movie_similarity VAL low COL id VAL nm21957344	COL id VAL nm21962818	0
-COL name_movie_similarity VAL low COL id VAL nm21959208	COL name_movie_similarity VAL low COL id VAL nm21964033	0
-COL name_movie_similarity VAL low COL id VAL nm21959642	COL name_movie_similarity VAL low COL id VAL nm21958637	0
-COL name_movie_similarity VAL low COL id VAL nm9522896	COL name_movie_similarity VAL uncertain COL id VAL nm21963961	0
-COL name_movie_similarity VAL low COL id VAL nm0127758	COL name_movie_similarity VAL low COL id VAL nm3662284	0
-COL name_movie_similarity VAL low COL id VAL nm21957796	COL name_movie_similarity VAL low COL id VAL nm1748441	0
-COL name_movie_similarity VAL low COL id VAL nm0769044	COL name_movie_similarity VAL low COL id VAL nm1227180	0
-COL name_movie_similarity VAL high COL id VAL nm1338361	COL name_movie_similarity VAL high COL id VAL nm21968176	0
-COL name_movie_similarity VAL high COL id VAL nm21961945	COL id VAL nm21955328	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963145	COL name_movie_similarity VAL low COL id VAL nm21963146	1
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL high COL id VAL nm0574934	0
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL high COL id VAL nm2584204	0
-COL name_movie_similarity VAL low COL id VAL nm21957390	COL name_movie_similarity VAL low COL id VAL nm21959608	0
-COL name_movie_similarity VAL high COL id VAL nm21958422	COL name_movie_similarity VAL low COL id VAL nm3662284	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0586975	COL name_movie_similarity VAL low COL id VAL nm0419889	0
+COL name_movie_similarity VAL low COL id VAL nm21959208	COL id VAL nm21964033	0
+COL name_movie_similarity VAL low COL id VAL nm21959642	COL id VAL nm21958637	0
+COL name_movie_similarity VAL low COL id VAL nm9522896	COL id VAL nm21963961	0
+COL name_movie_similarity VAL low COL id VAL nm0127758	COL id VAL nm3662284	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21957796	COL id VAL nm1748441	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0769044	COL id VAL nm1227180	0
+COL name_movie_similarity VAL low COL id VAL nm1338361	COL id VAL nm21968176	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21961945	COL id VAL nm21955328	0
+COL name_movie_similarity VAL high COL id VAL nm21963145	COL id VAL nm21963146	1
+COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm0574934	0
+COL name_movie_similarity VAL low COL id VAL nm3157695	COL id VAL nm2584204	0
+COL name_movie_similarity VAL low COL id VAL nm21957390	COL id VAL nm21959608	0
+COL name_movie_similarity VAL high COL id VAL nm21958422	COL id VAL nm3662284	1
+COL name_movie_similarity VAL low COL id VAL nm0586975	COL id VAL nm0419889	0
 COL name_movie_similarity VAL low COL id VAL nm21960795	COL id VAL nm0073888	0
-COL name_movie_similarity VAL high COL id VAL nm21962987	COL name_movie_similarity VAL low COL id VAL nm1587303	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21961671	COL name_movie_similarity VAL low COL id VAL nm3609484	0
-COL name_movie_similarity VAL low COL id VAL nm21963120	COL name_movie_similarity VAL high COL id VAL nm0233215	0
-COL name_movie_similarity VAL low COL id VAL nm0767298	COL name_movie_similarity VAL high COL id VAL nm21965508	0
-COL name_movie_similarity VAL low COL id VAL nm21962984	COL name_movie_similarity VAL low COL id VAL nm4341871	0
-COL name_movie_similarity VAL low COL id VAL nm0769044	COL name_movie_similarity VAL low COL id VAL nm4341871	0
-COL name_movie_similarity VAL high COL id VAL nm0305380	COL name_movie_similarity VAL low COL id VAL nm21967262	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21963145	COL name_movie_similarity VAL high COL id VAL nm1338361	0
-COL name_movie_similarity VAL high COL id VAL nm21969160	COL name_movie_similarity VAL low COL id VAL nm0878031	0
-COL name_movie_similarity VAL low COL id VAL nm3875284	COL id VAL nm21959295	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0890485	COL name_movie_similarity VAL low COL id VAL nm21961946	1
-COL name_movie_similarity VAL low COL id VAL nm0060607	COL name_movie_similarity VAL low COL id VAL nm0666972	0
-COL name_movie_similarity VAL low COL id VAL nm21957664	COL name_movie_similarity VAL low COL id VAL nm5639158	0
-COL name_movie_similarity VAL low COL id VAL nm0419889	COL name_movie_similarity VAL low COL id VAL nm21968658	0
-COL name_movie_similarity VAL low COL id VAL nm3875284	COL name_movie_similarity VAL low COL id VAL nm21968101	0
-COL name_movie_similarity VAL low COL id VAL nm21958966	COL name_movie_similarity VAL low COL id VAL nm7889237	0
-COL name_movie_similarity VAL low COL id VAL nm3120206	COL name_movie_similarity VAL high COL id VAL nm21955151	0
-COL name_movie_similarity VAL low COL id VAL nm21969202	COL name_movie_similarity VAL low COL id VAL nm2238751	0
-COL name_movie_similarity VAL high COL id VAL nm21962986	COL id VAL nm0134112	0
-COL name_movie_similarity VAL high COL id VAL nm21955151	COL name_movie_similarity VAL high COL id VAL nm21955152	1
-COL name_movie_similarity VAL high COL id VAL nm0290956	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL name_movie_similarity VAL uncertain COL id VAL nm21959467	0
-COL name_movie_similarity VAL uncertain COL id VAL nm3589032	COL name_movie_similarity VAL low COL id VAL nm21959567	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21955150	COL name_movie_similarity VAL low COL id VAL nm0495790	1
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL low COL id VAL nm21967262	0
-COL name_movie_similarity VAL low COL id VAL nm21966244	COL id VAL nm0955309	1
-COL name_movie_similarity VAL low COL id VAL nm21966244	COL name_movie_similarity VAL high COL id VAL nm21968249	0
-COL name_movie_similarity VAL low COL id VAL nm3139442	COL name_movie_similarity VAL low COL id VAL nm21966722	0
-COL name_movie_similarity VAL low COL id VAL nm21958637	COL name_movie_similarity VAL low COL id VAL nm2006841	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL id VAL nm21963956	1
+COL name_movie_similarity VAL high COL id VAL nm21962987	COL id VAL nm1587303	1
+COL name_movie_similarity VAL low COL id VAL nm21961671	COL id VAL nm3609484	0
+COL name_movie_similarity VAL low COL id VAL nm21963120	COL id VAL nm0233215	0
+COL name_movie_similarity VAL low COL id VAL nm0767298	COL id VAL nm21965508	0
+COL name_movie_similarity VAL low COL id VAL nm21962984	COL id VAL nm4341871	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0769044	COL id VAL nm4341871	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0305380	COL id VAL nm21967262	1
+COL name_movie_similarity VAL low COL id VAL nm21963145	COL id VAL nm1338361	0
+COL name_movie_similarity VAL low COL id VAL nm21969160	COL id VAL nm0878031	0
+COL name_movie_similarity VAL uncertain COL id VAL nm3875284	COL id VAL nm21959295	1
+COL name_movie_similarity VAL high COL id VAL nm0890485	COL id VAL nm21961946	1
+COL name_movie_similarity VAL low COL id VAL nm0060607	COL id VAL nm0666972	0
+COL name_movie_similarity VAL low COL id VAL nm21957664	COL id VAL nm5639158	0
+COL name_movie_similarity VAL low COL id VAL nm0419889	COL id VAL nm21968658	0
+COL name_movie_similarity VAL low COL id VAL nm3875284	COL id VAL nm21968101	0
+COL name_movie_similarity VAL low COL id VAL nm21958966	COL id VAL nm7889237	0
+COL name_movie_similarity VAL low COL id VAL nm3120206	COL id VAL nm21955151	0
+COL name_movie_similarity VAL low COL id VAL nm21969202	COL id VAL nm2238751	0
+COL name_movie_similarity VAL low COL id VAL nm21962986	COL id VAL nm0134112	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21955151	COL id VAL nm21955152	1
+COL name_movie_similarity VAL low COL id VAL nm0290956	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm21963961	COL id VAL nm21959467	0
+COL name_movie_similarity VAL uncertain COL id VAL nm3589032	COL id VAL nm21959567	1
+COL name_movie_similarity VAL high COL id VAL nm21955150	COL id VAL nm0495790	1
+COL name_movie_similarity VAL low COL id VAL nm2025887	COL id VAL nm21967262	0
+COL name_movie_similarity VAL high COL id VAL nm21966244	COL id VAL nm0955309	1
+COL name_movie_similarity VAL low COL id VAL nm21966244	COL id VAL nm21968249	0
+COL name_movie_similarity VAL low COL id VAL nm3139442	COL id VAL nm21966722	0
+COL name_movie_similarity VAL high COL id VAL nm21958637	COL id VAL nm2006841	1
+COL name_movie_similarity VAL high COL id VAL nm21963954	COL id VAL nm21963956	1
 COL name_movie_similarity VAL low COL id VAL nm21955479	COL id VAL nm21966183	0
-COL name_movie_similarity VAL low COL id VAL nm0128757	COL name_movie_similarity VAL low COL id VAL nm21962198	0
-COL name_movie_similarity VAL low COL id VAL nm21962501	COL name_movie_similarity VAL low COL id VAL nm0515106	0
-COL name_movie_similarity VAL high COL id VAL nm0807375	COL name_movie_similarity VAL low COL id VAL nm21962198	1
-COL name_movie_similarity VAL low COL id VAL nm21961946	COL name_movie_similarity VAL low COL id VAL nm21968642	0
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL high COL id VAL nm21955903	0
-COL name_movie_similarity VAL high COL id VAL nm21965691	COL name_movie_similarity VAL low COL id VAL nm7105651	0
-COL name_movie_similarity VAL low COL id VAL nm2192516	COL name_movie_similarity VAL low COL id VAL nm21961111	1
-COL name_movie_similarity VAL high COL id VAL nm4384917	COL name_movie_similarity VAL high COL id VAL nm0305380	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2047752	COL name_movie_similarity VAL low COL id VAL nm21963205	1
-COL name_movie_similarity VAL high COL id VAL nm21966577	COL name_movie_similarity VAL uncertain COL id VAL nm4136197	1
-COL name_movie_similarity VAL low COL id VAL nm2832339	COL name_movie_similarity VAL high COL id VAL nm21965562	0
-COL name_movie_similarity VAL high COL id VAL nm21956569	COL name_movie_similarity VAL high COL id VAL nm21955325	0
+COL name_movie_similarity VAL low COL id VAL nm0128757	COL id VAL nm21962198	0
+COL name_movie_similarity VAL low COL id VAL nm21962501	COL id VAL nm0515106	0
+COL name_movie_similarity VAL high COL id VAL nm0807375	COL id VAL nm21962198	1
+COL name_movie_similarity VAL low COL id VAL nm21961946	COL id VAL nm21968642	0
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm21955903	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21965691	COL id VAL nm7105651	0
+COL name_movie_similarity VAL high COL id VAL nm2192516	COL id VAL nm21961111	1
+COL name_movie_similarity VAL low COL id VAL nm4384917	COL id VAL nm0305380	0
+COL name_movie_similarity VAL high COL id VAL nm2047752	COL id VAL nm21963205	1
+COL name_movie_similarity VAL high COL id VAL nm21966577	COL id VAL nm4136197	1
+COL name_movie_similarity VAL low COL id VAL nm2832339	COL id VAL nm21965562	0
+COL name_movie_similarity VAL low COL id VAL nm21956569	COL id VAL nm21955325	0
 COL name_movie_similarity VAL low COL id VAL nm3295266	COL id VAL nm5039492	0
-COL name_movie_similarity VAL low COL id VAL nm1227180	COL name_movie_similarity VAL high COL id VAL nm21966798	0
-COL name_movie_similarity VAL low COL id VAL nm0120544	COL name_movie_similarity VAL high COL id VAL nm21969160	0
-COL name_movie_similarity VAL high COL id VAL nm21968249	COL name_movie_similarity VAL low COL id VAL nm0346080	0
-COL name_movie_similarity VAL low COL id VAL nm21966722	COL name_movie_similarity VAL high COL id VAL nm21964032	0
-COL name_movie_similarity VAL high COL id VAL nm21962444	COL name_movie_similarity VAL low COL id VAL nm9522896	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0070174	COL name_movie_similarity VAL low COL id VAL nm4457467	0
-COL name_movie_similarity VAL low COL id VAL nm21968199	COL name_movie_similarity VAL high COL id VAL nm3157936	0
-COL name_movie_similarity VAL high COL id VAL nm0961594	COL name_movie_similarity VAL low COL id VAL nm21966552	0
-COL name_movie_similarity VAL low COL id VAL nm21964034	COL name_movie_similarity VAL uncertain COL id VAL nm3291308	0
-COL name_movie_similarity VAL low COL id VAL nm0657162	COL name_movie_similarity VAL uncertain COL id VAL nm21966855	1
-COL name_movie_similarity VAL low COL id VAL nm0120544	COL name_movie_similarity VAL high COL id VAL nm0162668	0
-COL name_movie_similarity VAL low COL id VAL nm1407334	COL name_movie_similarity VAL uncertain COL id VAL nm4136197	0
-COL name_movie_similarity VAL low COL id VAL nm2684703	COL name_movie_similarity VAL low COL id VAL nm21966722	0
-COL name_movie_similarity VAL low COL id VAL nm3875284	COL name_movie_similarity VAL uncertain COL id VAL nm5025293	0
+COL name_movie_similarity VAL low COL id VAL nm1227180	COL id VAL nm21966798	0
+COL name_movie_similarity VAL low COL id VAL nm0120544	COL id VAL nm21969160	0
+COL name_movie_similarity VAL low COL id VAL nm21968249	COL id VAL nm0346080	0
+COL name_movie_similarity VAL low COL id VAL nm21966722	COL id VAL nm21964032	0
+COL name_movie_similarity VAL high COL id VAL nm21962444	COL id VAL nm9522896	1
+COL name_movie_similarity VAL low COL id VAL nm0070174	COL id VAL nm4457467	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21968199	COL id VAL nm3157936	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0961594	COL id VAL nm21966552	0
+COL name_movie_similarity VAL low COL id VAL nm21964034	COL id VAL nm3291308	0
+COL name_movie_similarity VAL high COL id VAL nm0657162	COL id VAL nm21966855	1
+COL name_movie_similarity VAL uncertain COL id VAL nm0120544	COL id VAL nm0162668	0
+COL name_movie_similarity VAL low COL id VAL nm1407334	COL id VAL nm4136197	0
+COL name_movie_similarity VAL low COL id VAL nm2684703	COL id VAL nm21966722	0
+COL name_movie_similarity VAL low COL id VAL nm3875284	COL id VAL nm5025293	0
 COL name_movie_similarity VAL high COL id VAL nm7440261	COL id VAL nm21969159	1
-COL name_movie_similarity VAL high COL id VAL nm21965691	COL name_movie_similarity VAL low COL id VAL nm0238669	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0764168	COL name_movie_similarity VAL low COL id VAL nm21961947	0
-COL name_movie_similarity VAL low COL id VAL nm2238751	COL name_movie_similarity VAL low COL id VAL nm21963120	0
-COL name_movie_similarity VAL low COL id VAL nm21963955	COL name_movie_similarity VAL low COL id VAL nm21958597	0
-COL name_movie_similarity VAL low COL id VAL nm0127758	COL name_movie_similarity VAL low COL id VAL nm21961111	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21965691	COL id VAL nm0238669	0
+COL name_movie_similarity VAL low COL id VAL nm0764168	COL id VAL nm21961947	0
+COL name_movie_similarity VAL low COL id VAL nm2238751	COL id VAL nm21963120	0
+COL name_movie_similarity VAL low COL id VAL nm21963955	COL id VAL nm21958597	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0127758	COL id VAL nm21961111	0
 COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm0374569	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21959207	COL name_movie_similarity VAL low COL id VAL nm7669443	1
-COL name_movie_similarity VAL low COL id VAL nm21959608	COL name_movie_similarity VAL low COL id VAL nm1561355	0
-COL name_movie_similarity VAL low COL id VAL nm0651995	COL name_movie_similarity VAL low COL id VAL nm1511631	0
-COL name_movie_similarity VAL low COL id VAL nm3192494	COL name_movie_similarity VAL uncertain COL id VAL nm0890485	0
-COL name_movie_similarity VAL high COL id VAL nm21956569	COL name_movie_similarity VAL low COL id VAL nm3295266	1
-COL name_movie_similarity VAL low COL id VAL nm0222144	COL name_movie_similarity VAL low COL id VAL nm21958421	0
-COL name_movie_similarity VAL low COL id VAL nm4457467	COL name_movie_similarity VAL low COL id VAL nm2192516	0
-COL name_movie_similarity VAL high COL id VAL nm0550318	COL name_movie_similarity VAL low COL id VAL nm21957444	1
-COL name_movie_similarity VAL high COL id VAL nm0362027	COL name_movie_similarity VAL low COL id VAL nm2192516	0
-COL name_movie_similarity VAL high COL id VAL nm21969160	COL name_movie_similarity VAL low COL id VAL nm2133486	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959207	COL id VAL nm7669443	1
+COL name_movie_similarity VAL low COL id VAL nm21959608	COL id VAL nm1561355	0
+COL name_movie_similarity VAL low COL id VAL nm0651995	COL id VAL nm1511631	0
+COL name_movie_similarity VAL uncertain COL id VAL nm3192494	COL id VAL nm0890485	0
+COL name_movie_similarity VAL high COL id VAL nm21956569	COL id VAL nm3295266	1
+COL name_movie_similarity VAL low COL id VAL nm0222144	COL id VAL nm21958421	0
+COL name_movie_similarity VAL low COL id VAL nm4457467	COL id VAL nm2192516	0
+COL name_movie_similarity VAL high COL id VAL nm0550318	COL id VAL nm21957444	1
+COL name_movie_similarity VAL low COL id VAL nm0362027	COL id VAL nm2192516	0
+COL name_movie_similarity VAL low COL id VAL nm21969160	COL id VAL nm2133486	0
 COL name_movie_similarity VAL low COL id VAL nm21957796	COL id VAL nm21961948	0
-COL name_movie_similarity VAL low COL id VAL nm21957390	COL name_movie_similarity VAL low COL id VAL nm21961597	0
-COL name_movie_similarity VAL low COL id VAL nm2006841	COL name_movie_similarity VAL low COL id VAL nm0419889	0
-COL name_movie_similarity VAL low COL id VAL nm21966317	COL name_movie_similarity VAL high COL id VAL nm21965691	0
-COL name_movie_similarity VAL high COL id VAL nm21969110	COL id VAL nm0405973	0
-COL name_movie_similarity VAL low COL id VAL nm21957796	COL name_movie_similarity VAL low COL id VAL nm21957109	0
-COL name_movie_similarity VAL low COL id VAL nm21957663	COL name_movie_similarity VAL low COL id VAL nm1748441	0
-COL name_movie_similarity VAL low COL id VAL nm21957345	COL name_movie_similarity VAL low COL id VAL nm1066781	0
-COL name_movie_similarity VAL low COL id VAL nm0572383	COL name_movie_similarity VAL low COL id VAL nm2684703	0
-COL name_movie_similarity VAL low COL id VAL nm0878031	COL name_movie_similarity VAL high COL id VAL nm21965508	0
-COL name_movie_similarity VAL high COL id VAL nm21968376	COL id VAL nm1932706	0
-COL name_movie_similarity VAL high COL id VAL nm2584204	COL name_movie_similarity VAL low COL id VAL nm21968408	1
-COL name_movie_similarity VAL low COL id VAL nm21968199	COL name_movie_similarity VAL uncertain COL id VAL nm2236337	0
-COL name_movie_similarity VAL high COL id VAL nm21965691	COL name_movie_similarity VAL uncertain COL id VAL nm2769456	0
-COL name_movie_similarity VAL low COL id VAL nm1748441	COL name_movie_similarity VAL low COL id VAL nm21959208	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21957390	COL id VAL nm21961597	0
+COL name_movie_similarity VAL low COL id VAL nm2006841	COL id VAL nm0419889	0
+COL name_movie_similarity VAL low COL id VAL nm21966317	COL id VAL nm21965691	0
+COL name_movie_similarity VAL low COL id VAL nm21969110	COL id VAL nm0405973	0
+COL name_movie_similarity VAL low COL id VAL nm21957796	COL id VAL nm21957109	0
+COL name_movie_similarity VAL low COL id VAL nm21957663	COL id VAL nm1748441	0
+COL name_movie_similarity VAL low COL id VAL nm21957345	COL id VAL nm1066781	0
+COL name_movie_similarity VAL low COL id VAL nm0572383	COL id VAL nm2684703	0
+COL name_movie_similarity VAL low COL id VAL nm0878031	COL id VAL nm21965508	0
+COL name_movie_similarity VAL low COL id VAL nm21968376	COL id VAL nm1932706	0
+COL name_movie_similarity VAL high COL id VAL nm2584204	COL id VAL nm21968408	1
+COL name_movie_similarity VAL low COL id VAL nm21968199	COL id VAL nm2236337	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21965691	COL id VAL nm2769456	0
+COL name_movie_similarity VAL low COL id VAL nm1748441	COL id VAL nm21959208	0
 COL name_movie_similarity VAL low COL id VAL nm21955480	COL id VAL nm21960612	0
-COL name_movie_similarity VAL low COL id VAL nm21963121	COL name_movie_similarity VAL low COL id VAL nm21960613	0
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL low COL id VAL nm21966552	0
-COL name_movie_similarity VAL low COL id VAL nm21964033	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL high COL id VAL nm0961594	COL id VAL nm0587459	0
-COL name_movie_similarity VAL low COL id VAL nm0222144	COL name_movie_similarity VAL uncertain COL id VAL nm3551347	0
-COL name_movie_similarity VAL low COL id VAL nm0609252	COL name_movie_similarity VAL low COL id VAL nm2809173	0
-COL name_movie_similarity VAL low COL id VAL nm21969111	COL name_movie_similarity VAL low COL id VAL nm21959386	0
-COL name_movie_similarity VAL uncertain COL id VAL nm1889547	COL name_movie_similarity VAL uncertain COL id VAL nm21961046	0
-COL name_movie_similarity VAL uncertain COL id VAL nm4136197	COL name_movie_similarity VAL low COL id VAL nm3609484	0
-COL name_movie_similarity VAL low COL id VAL nm0795060	COL name_movie_similarity VAL high COL id VAL nm3899141	0
-COL name_movie_similarity VAL low COL id VAL nm21961949	COL name_movie_similarity VAL high COL id VAL nm0362027	0
-COL name_movie_similarity VAL high COL id VAL nm21958188	COL name_movie_similarity VAL low COL id VAL nm0767298	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21964035	COL name_movie_similarity VAL low COL id VAL nm21964034	1
-COL name_movie_similarity VAL low COL id VAL nm21967261	COL name_movie_similarity VAL high COL id VAL nm21958967	0
-COL name_movie_similarity VAL low COL id VAL nm0120544	COL name_movie_similarity VAL low COL id VAL nm3609484	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0586975	COL name_movie_similarity VAL uncertain COL id VAL nm5025293	0
-COL name_movie_similarity VAL low COL id VAL nm21959293	COL name_movie_similarity VAL low COL id VAL nm1742016	0
-COL name_movie_similarity VAL low COL id VAL nm0419889	COL name_movie_similarity VAL low COL id VAL nm21965152	0
-COL name_movie_similarity VAL low COL id VAL nm21961597	COL name_movie_similarity VAL low COL id VAL nm21966244	0
-COL name_movie_similarity VAL low COL id VAL nm21957109	COL name_movie_similarity VAL uncertain COL id VAL nm0070174	1
-COL name_movie_similarity VAL low COL id VAL nm0095746	COL name_movie_similarity VAL low COL id VAL nm21959567	0
-COL name_movie_similarity VAL high COL id VAL nm21963204	COL name_movie_similarity VAL uncertain COL id VAL nm5025293	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21963121	COL id VAL nm21960613	0
+COL name_movie_similarity VAL low COL id VAL nm3157695	COL id VAL nm21966552	0
+COL name_movie_similarity VAL low COL id VAL nm21964033	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm0961594	COL id VAL nm0587459	0
+COL name_movie_similarity VAL low COL id VAL nm0222144	COL id VAL nm3551347	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0609252	COL id VAL nm2809173	0
+COL name_movie_similarity VAL low COL id VAL nm21969111	COL id VAL nm21959386	0
+COL name_movie_similarity VAL low COL id VAL nm1889547	COL id VAL nm21961046	0
+COL name_movie_similarity VAL low COL id VAL nm4136197	COL id VAL nm3609484	0
+COL name_movie_similarity VAL low COL id VAL nm0795060	COL id VAL nm3899141	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21961949	COL id VAL nm0362027	0
+COL name_movie_similarity VAL high COL id VAL nm21958188	COL id VAL nm0767298	1
+COL name_movie_similarity VAL high COL id VAL nm21964035	COL id VAL nm21964034	1
+COL name_movie_similarity VAL low COL id VAL nm21967261	COL id VAL nm21958967	0
+COL name_movie_similarity VAL low COL id VAL nm0120544	COL id VAL nm3609484	0
+COL name_movie_similarity VAL low COL id VAL nm0586975	COL id VAL nm5025293	0
+COL name_movie_similarity VAL low COL id VAL nm21959293	COL id VAL nm1742016	0
+COL name_movie_similarity VAL low COL id VAL nm0419889	COL id VAL nm21965152	0
+COL name_movie_similarity VAL low COL id VAL nm21961597	COL id VAL nm21966244	0
+COL name_movie_similarity VAL high COL id VAL nm21957109	COL id VAL nm0070174	1
+COL name_movie_similarity VAL low COL id VAL nm0095746	COL id VAL nm21959567	0
+COL name_movie_similarity VAL high COL id VAL nm21963204	COL id VAL nm5025293	1
 COL name_movie_similarity VAL low COL id VAL nm21963120	COL id VAL nm5039492	0
-COL name_movie_similarity VAL low COL id VAL nm21968407	COL name_movie_similarity VAL low COL id VAL nm21965152	0
-COL name_movie_similarity VAL low COL id VAL nm3120206	COL name_movie_similarity VAL uncertain COL id VAL nm0070174	0
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL low COL id VAL nm21959294	0
-COL name_movie_similarity VAL low COL id VAL nm21965509	COL name_movie_similarity VAL low COL id VAL nm21957344	0
-COL name_movie_similarity VAL low COL id VAL nm21957664	COL name_movie_similarity VAL low COL id VAL nm21956563	0
-COL name_movie_similarity VAL low COL id VAL nm21966722	COL name_movie_similarity VAL high COL id VAL nm1071765	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21964035	COL name_movie_similarity VAL low COL id VAL nm0657162	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21966318	COL name_movie_similarity VAL uncertain COL id VAL nm2236337	0
-COL name_movie_similarity VAL low COL id VAL nm21955339	COL name_movie_similarity VAL low COL id VAL nm21963206	0
+COL name_movie_similarity VAL low COL id VAL nm21968407	COL id VAL nm21965152	0
+COL name_movie_similarity VAL low COL id VAL nm3120206	COL id VAL nm0070174	0
+COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm21959294	0
+COL name_movie_similarity VAL low COL id VAL nm21965509	COL id VAL nm21957344	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21957664	COL id VAL nm21956563	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21966722	COL id VAL nm1071765	0
+COL name_movie_similarity VAL low COL id VAL nm21964035	COL id VAL nm0657162	0
+COL name_movie_similarity VAL low COL id VAL nm21966318	COL id VAL nm2236337	0
+COL name_movie_similarity VAL low COL id VAL nm21955339	COL id VAL nm21963206	0
 COL name_movie_similarity VAL low COL id VAL nm21955479	COL id VAL nm0955309	0
 COL name_movie_similarity VAL high COL id VAL nm21969160	COL id VAL nm21969159	1
-COL name_movie_similarity VAL low COL id VAL nm21969038	COL name_movie_similarity VAL uncertain COL id VAL nm0890485	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21967902	COL name_movie_similarity VAL low COL id VAL nm3978505	1
-COL name_movie_similarity VAL low COL id VAL nm5970991	COL name_movie_similarity VAL low COL id VAL nm21961112	0
-COL name_movie_similarity VAL high COL id VAL nm0290956	COL name_movie_similarity VAL low COL id VAL nm0769044	0
-COL name_movie_similarity VAL high COL id VAL nm0290956	COL name_movie_similarity VAL low COL id VAL nm21968658	1
-COL name_movie_similarity VAL high COL id VAL nm21961945	COL name_movie_similarity VAL low COL id VAL nm21961944	1
-COL name_movie_similarity VAL low COL id VAL nm0010736	COL name_movie_similarity VAL uncertain COL id VAL nm0070174	0
-COL name_movie_similarity VAL low COL id VAL nm21959609	COL name_movie_similarity VAL low COL id VAL nm5479763	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21966855	COL name_movie_similarity VAL low COL id VAL nm2684703	0
-COL name_movie_similarity VAL low COL id VAL nm21963146	COL name_movie_similarity VAL low COL id VAL nm21959609	0
-COL name_movie_similarity VAL uncertain COL id VAL nm1011374	COL id VAL nm21961948	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21959207	COL name_movie_similarity VAL low COL id VAL nm21968658	0
-COL name_movie_similarity VAL low COL id VAL nm21966552	COL name_movie_similarity VAL low COL id VAL nm21966722	0
-COL name_movie_similarity VAL low COL id VAL nm21963120	COL name_movie_similarity VAL low COL id VAL nm21963121	1
+COL name_movie_similarity VAL low COL id VAL nm21969038	COL id VAL nm0890485	0
+COL name_movie_similarity VAL high COL id VAL nm21967902	COL id VAL nm3978505	1
+COL name_movie_similarity VAL low COL id VAL nm5970991	COL id VAL nm21961112	0
+COL name_movie_similarity VAL low COL id VAL nm0290956	COL id VAL nm0769044	0
+COL name_movie_similarity VAL high COL id VAL nm0290956	COL id VAL nm21968658	1
+COL name_movie_similarity VAL high COL id VAL nm21961945	COL id VAL nm21961944	1
+COL name_movie_similarity VAL low COL id VAL nm0010736	COL id VAL nm0070174	0
+COL name_movie_similarity VAL high COL id VAL nm21959609	COL id VAL nm5479763	1
+COL name_movie_similarity VAL low COL id VAL nm21966855	COL id VAL nm2684703	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963146	COL id VAL nm21959609	0
+COL name_movie_similarity VAL low COL id VAL nm1011374	COL id VAL nm21961948	0
+COL name_movie_similarity VAL low COL id VAL nm21959207	COL id VAL nm21968658	0
+COL name_movie_similarity VAL low COL id VAL nm21966552	COL id VAL nm21966722	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963120	COL id VAL nm21963121	1
 COL name_movie_similarity VAL high COL id VAL nm21959466	COL id VAL nm21959465	1
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL uncertain COL id VAL nm0890485	0
-COL name_movie_similarity VAL low COL id VAL nm21955480	COL name_movie_similarity VAL low COL id VAL nm1531103	1
-COL name_movie_similarity VAL low COL id VAL nm21962763	COL name_movie_similarity VAL uncertain COL id VAL nm1011374	0
-COL name_movie_similarity VAL low COL id VAL nm21959293	COL name_movie_similarity VAL high COL id VAL nm0305380	0
-COL name_movie_similarity VAL low COL id VAL nm21959208	COL name_movie_similarity VAL high COL id VAL nm1338361	0
-COL name_movie_similarity VAL low COL id VAL nm21957796	COL name_movie_similarity VAL low COL id VAL nm21959642	0
-COL name_movie_similarity VAL low COL id VAL nm1725970	COL name_movie_similarity VAL low COL id VAL nm2006841	0
-COL name_movie_similarity VAL uncertain COL id VAL nm3291308	COL name_movie_similarity VAL high COL id VAL nm21956569	0
-COL name_movie_similarity VAL high COL id VAL nm3899141	COL name_movie_similarity VAL low COL id VAL nm21957345	1
-COL name_movie_similarity VAL high COL id VAL nm21959466	COL name_movie_similarity VAL low COL id VAL nm7031415	0
-COL name_movie_similarity VAL low COL id VAL nm3264655	COL name_movie_similarity VAL low COL id VAL nm0084642	0
-COL name_movie_similarity VAL low COL id VAL nm3264655	COL name_movie_similarity VAL low COL id VAL nm21961111	0
-COL name_movie_similarity VAL low COL id VAL nm4337198	COL id VAL nm21955478	1
-COL name_movie_similarity VAL high COL id VAL nm21968249	COL name_movie_similarity VAL low COL id VAL nm1066781	1
-COL name_movie_similarity VAL high COL id VAL nm21965562	COL name_movie_similarity VAL uncertain COL id VAL nm0671980	1
-COL name_movie_similarity VAL high COL id VAL nm0233215	COL name_movie_similarity VAL low COL id VAL nm21965152	1
-COL name_movie_similarity VAL high COL id VAL nm1253181	COL name_movie_similarity VAL low COL id VAL nm3139442	0
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm0890485	0
+COL name_movie_similarity VAL high COL id VAL nm21955480	COL id VAL nm1531103	1
+COL name_movie_similarity VAL low COL id VAL nm21962763	COL id VAL nm1011374	0
+COL name_movie_similarity VAL low COL id VAL nm21959293	COL id VAL nm0305380	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959208	COL id VAL nm1338361	0
+COL name_movie_similarity VAL low COL id VAL nm21957796	COL id VAL nm21959642	0
+COL name_movie_similarity VAL low COL id VAL nm1725970	COL id VAL nm2006841	0
+COL name_movie_similarity VAL low COL id VAL nm3291308	COL id VAL nm21956569	0
+COL name_movie_similarity VAL high COL id VAL nm3899141	COL id VAL nm21957345	1
+COL name_movie_similarity VAL low COL id VAL nm21959466	COL id VAL nm7031415	0
+COL name_movie_similarity VAL low COL id VAL nm3264655	COL id VAL nm0084642	0
+COL name_movie_similarity VAL low COL id VAL nm3264655	COL id VAL nm21961111	0
+COL name_movie_similarity VAL high COL id VAL nm4337198	COL id VAL nm21955478	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21968249	COL id VAL nm1066781	1
+COL name_movie_similarity VAL high COL id VAL nm21965562	COL id VAL nm0671980	1
+COL name_movie_similarity VAL high COL id VAL nm0233215	COL id VAL nm21965152	1
+COL name_movie_similarity VAL uncertain COL id VAL nm1253181	COL id VAL nm3139442	0
 COL name_movie_similarity VAL low COL id VAL nm2192516	COL id VAL nm21955902	0
-COL name_movie_similarity VAL low COL id VAL nm2113577	COL name_movie_similarity VAL low COL id VAL nm0172969	0
-COL name_movie_similarity VAL high COL id VAL nm3169905	COL name_movie_similarity VAL uncertain COL id VAL nm21961046	1
-COL name_movie_similarity VAL low COL id VAL nm1587303	COL name_movie_similarity VAL low COL id VAL nm21959642	0
-COL name_movie_similarity VAL low COL id VAL nm21957390	COL name_movie_similarity VAL low COL id VAL nm2238751	1
-COL name_movie_similarity VAL low COL id VAL nm1937112	COL name_movie_similarity VAL low COL id VAL nm21962198	0
-COL name_movie_similarity VAL high COL id VAL nm1253181	COL name_movie_similarity VAL low COL id VAL nm21967261	1
-COL name_movie_similarity VAL high COL id VAL nm21962986	COL name_movie_similarity VAL uncertain COL id VAL nm0147147	0
-COL name_movie_similarity VAL uncertain COL id VAL nm2047752	COL name_movie_similarity VAL low COL id VAL nm2355394	0
-COL name_movie_similarity VAL low COL id VAL nm21968407	COL name_movie_similarity VAL low COL id VAL nm2113577	1
-COL name_movie_similarity VAL uncertain COL id VAL nm0890485	COL id VAL nm21961948	1
-COL name_movie_similarity VAL low COL id VAL nm1920037	COL name_movie_similarity VAL low COL id VAL nm4678220	0
-COL name_movie_similarity VAL low COL id VAL nm21956563	COL name_movie_similarity VAL uncertain COL id VAL nm1190528	0
-COL name_movie_similarity VAL low COL id VAL nm0651995	COL name_movie_similarity VAL low COL id VAL nm5479763	0
-COL name_movie_similarity VAL low COL id VAL nm3192494	COL name_movie_similarity VAL high COL id VAL nm21968111	0
-COL name_movie_similarity VAL low COL id VAL nm0609252	COL name_movie_similarity VAL uncertain COL id VAL nm4136197	0
-COL name_movie_similarity VAL low COL id VAL nm21968199	COL name_movie_similarity VAL high COL id VAL nm21965561	0
-COL name_movie_similarity VAL low COL id VAL nm3376469	COL name_movie_similarity VAL low COL id VAL nm21957796	1
-COL name_movie_similarity VAL high COL id VAL nm21959643	COL name_movie_similarity VAL low COL id VAL nm1742016	0
-COL name_movie_similarity VAL low COL id VAL nm21958637	COL name_movie_similarity VAL high COL id VAL nm21965561	0
+COL name_movie_similarity VAL low COL id VAL nm2113577	COL id VAL nm0172969	0
+COL name_movie_similarity VAL high COL id VAL nm3169905	COL id VAL nm21961046	1
+COL name_movie_similarity VAL low COL id VAL nm1587303	COL id VAL nm21959642	0
+COL name_movie_similarity VAL high COL id VAL nm21957390	COL id VAL nm2238751	1
+COL name_movie_similarity VAL low COL id VAL nm1937112	COL id VAL nm21962198	0
+COL name_movie_similarity VAL high COL id VAL nm1253181	COL id VAL nm21967261	1
+COL name_movie_similarity VAL low COL id VAL nm21962986	COL id VAL nm0147147	0
+COL name_movie_similarity VAL low COL id VAL nm2047752	COL id VAL nm2355394	0
+COL name_movie_similarity VAL high COL id VAL nm21968407	COL id VAL nm2113577	1
+COL name_movie_similarity VAL high COL id VAL nm0890485	COL id VAL nm21961948	1
+COL name_movie_similarity VAL low COL id VAL nm1920037	COL id VAL nm4678220	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21956563	COL id VAL nm1190528	0
+COL name_movie_similarity VAL low COL id VAL nm0651995	COL id VAL nm5479763	0
+COL name_movie_similarity VAL low COL id VAL nm3192494	COL id VAL nm21968111	0
+COL name_movie_similarity VAL low COL id VAL nm0609252	COL id VAL nm4136197	0
+COL name_movie_similarity VAL low COL id VAL nm21968199	COL id VAL nm21965561	0
+COL name_movie_similarity VAL high COL id VAL nm3376469	COL id VAL nm21957796	1
+COL name_movie_similarity VAL low COL id VAL nm21959643	COL id VAL nm1742016	0
+COL name_movie_similarity VAL low COL id VAL nm21958637	COL id VAL nm21965561	0
 COL name_movie_similarity VAL low COL id VAL nm4337198	COL id VAL nm21966183	0
-COL name_movie_similarity VAL high COL id VAL nm21962986	COL name_movie_similarity VAL low COL id VAL nm3609484	1
-COL name_movie_similarity VAL low COL id VAL nm0084642	COL name_movie_similarity VAL low COL id VAL nm3139442	0
-COL name_movie_similarity VAL low COL id VAL nm0657162	COL name_movie_similarity VAL low COL id VAL nm21967261	0
-COL name_movie_similarity VAL low COL id VAL nm21966552	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL low COL id VAL nm1531103	COL name_movie_similarity VAL uncertain COL id VAL nm2236337	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0671980	COL name_movie_similarity VAL low COL id VAL nm21957345	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21965563	COL name_movie_similarity VAL low COL id VAL nm0495790	0
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL low COL id VAL nm4341871	0
-COL name_movie_similarity VAL high COL id VAL nm21965691	COL name_movie_similarity VAL low COL id VAL nm1561355	1
+COL name_movie_similarity VAL high COL id VAL nm21962986	COL id VAL nm3609484	1
+COL name_movie_similarity VAL uncertain COL id VAL nm0084642	COL id VAL nm3139442	0
+COL name_movie_similarity VAL low COL id VAL nm0657162	COL id VAL nm21967261	0
+COL name_movie_similarity VAL low COL id VAL nm21966552	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm1531103	COL id VAL nm2236337	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0671980	COL id VAL nm21957345	0
+COL name_movie_similarity VAL low COL id VAL nm21965563	COL id VAL nm0495790	0
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm4341871	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21965691	COL id VAL nm1561355	1
 COL name_movie_similarity VAL low COL id VAL nm0238669	COL id VAL nm21963956	0
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL low COL id VAL nm0773137	0
-COL name_movie_similarity VAL low COL id VAL nm21968407	COL name_movie_similarity VAL low COL id VAL nm21962763	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21959467	COL name_movie_similarity VAL low COL id VAL nm1227180	1
-COL name_movie_similarity VAL low COL id VAL nm21957390	COL name_movie_similarity VAL low COL id VAL nm0120544	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL name_movie_similarity VAL low COL id VAL nm0572383	1
-COL name_movie_similarity VAL low COL id VAL nm0456562	COL name_movie_similarity VAL low COL id VAL nm21964169	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21962985	COL name_movie_similarity VAL low COL id VAL nm3192494	1
+COL name_movie_similarity VAL uncertain COL id VAL nm2025887	COL id VAL nm0773137	0
+COL name_movie_similarity VAL low COL id VAL nm21968407	COL id VAL nm21962763	0
+COL name_movie_similarity VAL high COL id VAL nm21959467	COL id VAL nm1227180	1
+COL name_movie_similarity VAL low COL id VAL nm21957390	COL id VAL nm0120544	0
+COL name_movie_similarity VAL high COL id VAL nm21963961	COL id VAL nm0572383	1
+COL name_movie_similarity VAL low COL id VAL nm0456562	COL id VAL nm21964169	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21962985	COL id VAL nm3192494	1
 COL name_movie_similarity VAL low COL id VAL nm21961112	COL id VAL nm0322625	0
-COL name_movie_similarity VAL low COL id VAL nm21958421	COL name_movie_similarity VAL uncertain COL id VAL nm21961046	0
-COL name_movie_similarity VAL low COL id VAL nm4341871	COL name_movie_similarity VAL high COL id VAL nm21969452	0
-COL name_movie_similarity VAL low COL id VAL nm2832339	COL name_movie_similarity VAL low COL id VAL nm1725970	0
+COL name_movie_similarity VAL low COL id VAL nm21958421	COL id VAL nm21961046	0
+COL name_movie_similarity VAL low COL id VAL nm4341871	COL id VAL nm21969452	0
+COL name_movie_similarity VAL low COL id VAL nm2832339	COL id VAL nm1725970	0
 COL name_movie_similarity VAL uncertain COL id VAL nm21959207	COL id VAL nm21959295	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963961	COL name_movie_similarity VAL uncertain COL id VAL nm3291308	0
-COL name_movie_similarity VAL low COL id VAL nm3139442	COL name_movie_similarity VAL high COL id VAL nm21965562	0
-COL name_movie_similarity VAL low COL id VAL nm21958597	COL name_movie_similarity VAL high COL id VAL nm21956569	0
-COL name_movie_similarity VAL uncertain COL id VAL nm1190528	COL name_movie_similarity VAL low COL id VAL nm21959293	0
-COL name_movie_similarity VAL low COL id VAL nm21969202	COL name_movie_similarity VAL low COL id VAL nm0238669	0
-COL name_movie_similarity VAL low COL id VAL nm3376469	COL name_movie_similarity VAL uncertain COL id VAL nm5025293	0
-COL name_movie_similarity VAL high COL id VAL nm21965385	COL name_movie_similarity VAL uncertain COL id VAL nm0206142	1
-COL name_movie_similarity VAL uncertain COL id VAL nm5025293	COL name_movie_similarity VAL uncertain COL id VAL nm21963961	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21961046	COL name_movie_similarity VAL low COL id VAL nm9522896	0
-COL name_movie_similarity VAL low COL id VAL nm21962501	COL name_movie_similarity VAL low COL id VAL nm0172969	1
+COL name_movie_similarity VAL low COL id VAL nm21963961	COL id VAL nm3291308	0
+COL name_movie_similarity VAL low COL id VAL nm3139442	COL id VAL nm21965562	0
+COL name_movie_similarity VAL low COL id VAL nm21958597	COL id VAL nm21956569	0
+COL name_movie_similarity VAL low COL id VAL nm1190528	COL id VAL nm21959293	0
+COL name_movie_similarity VAL low COL id VAL nm21969202	COL id VAL nm0238669	0
+COL name_movie_similarity VAL low COL id VAL nm3376469	COL id VAL nm5025293	0
+COL name_movie_similarity VAL high COL id VAL nm21965385	COL id VAL nm0206142	1
+COL name_movie_similarity VAL low COL id VAL nm5025293	COL id VAL nm21963961	0
+COL name_movie_similarity VAL low COL id VAL nm21961046	COL id VAL nm9522896	0
+COL name_movie_similarity VAL high COL id VAL nm21962501	COL id VAL nm0172969	1
 COL name_movie_similarity VAL high COL id VAL nm21966578	COL id VAL nm0322625	1
-COL name_movie_similarity VAL high COL id VAL nm0961594	COL name_movie_similarity VAL low COL id VAL nm21965564	1
-COL name_movie_similarity VAL low COL id VAL nm21957664	COL name_movie_similarity VAL high COL id VAL nm21955325	0
-COL name_movie_similarity VAL high COL id VAL nm21959466	COL name_movie_similarity VAL high COL id VAL nm1338361	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21964035	COL name_movie_similarity VAL uncertain COL id VAL nm0764168	1
-COL name_movie_similarity VAL low COL id VAL nm21957444	COL name_movie_similarity VAL uncertain COL id VAL nm21963961	0
-COL name_movie_similarity VAL low COL id VAL nm0127758	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL low COL id VAL nm1227180	COL name_movie_similarity VAL high COL id VAL nm0550318	0
-COL name_movie_similarity VAL low COL id VAL nm21965152	COL name_movie_similarity VAL high COL id VAL nm0394679	0
-COL name_movie_similarity VAL low COL id VAL nm21969202	COL name_movie_similarity VAL low COL id VAL nm7889237	0
+COL name_movie_similarity VAL high COL id VAL nm0961594	COL id VAL nm21965564	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21957664	COL id VAL nm21955325	0
+COL name_movie_similarity VAL high COL id VAL nm21959466	COL id VAL nm1338361	1
+COL name_movie_similarity VAL high COL id VAL nm21964035	COL id VAL nm0764168	1
+COL name_movie_similarity VAL low COL id VAL nm21957444	COL id VAL nm21963961	0
+COL name_movie_similarity VAL low COL id VAL nm0127758	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm1227180	COL id VAL nm0550318	0
+COL name_movie_similarity VAL low COL id VAL nm21965152	COL id VAL nm0394679	0
+COL name_movie_similarity VAL low COL id VAL nm21969202	COL id VAL nm7889237	0
 COL name_movie_similarity VAL low COL id VAL nm0878031	COL id VAL nm21961948	0
-COL name_movie_similarity VAL low COL id VAL nm0957595	COL name_movie_similarity VAL high COL id VAL nm5374866	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL name_movie_similarity VAL uncertain COL id VAL nm21959207	0
-COL name_movie_similarity VAL high COL id VAL nm0394679	COL name_movie_similarity VAL low COL id VAL nm21956564	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21963145	COL name_movie_similarity VAL low COL id VAL nm1742016	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21967902	COL name_movie_similarity VAL low COL id VAL nm21961112	0
-COL name_movie_similarity VAL low COL id VAL nm21959642	COL name_movie_similarity VAL high COL id VAL nm5374866	0
-COL name_movie_similarity VAL low COL id VAL nm21963955	COL name_movie_similarity VAL low COL id VAL nm21956564	0
+COL name_movie_similarity VAL low COL id VAL nm0957595	COL id VAL nm5374866	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21963954	COL id VAL nm21959207	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0394679	COL id VAL nm21956564	1
+COL name_movie_similarity VAL high COL id VAL nm21963145	COL id VAL nm1742016	1
+COL name_movie_similarity VAL low COL id VAL nm21967902	COL id VAL nm21961112	0
+COL name_movie_similarity VAL low COL id VAL nm21959642	COL id VAL nm5374866	0
+COL name_movie_similarity VAL low COL id VAL nm21963955	COL id VAL nm21956564	0
 COL name_movie_similarity VAL high COL id VAL nm21958967	COL id VAL nm5714828	1
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL high COL id VAL nm0162668	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21966318	COL name_movie_similarity VAL low COL id VAL nm0957595	1
-COL name_movie_similarity VAL low COL id VAL nm1887521	COL name_movie_similarity VAL high COL id VAL nm21958422	0
-COL name_movie_similarity VAL low COL id VAL nm3264655	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL low COL id VAL nm21963146	COL name_movie_similarity VAL high COL id VAL nm21968176	0
-COL name_movie_similarity VAL high COL id VAL nm1338361	COL name_movie_similarity VAL low COL id VAL nm0346080	0
-COL name_movie_similarity VAL low COL id VAL nm21967262	COL name_movie_similarity VAL high COL id VAL nm0394679	0
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL id VAL nm21963956	1
-COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL name_movie_similarity VAL low COL id VAL nm0855892	0
-COL name_movie_similarity VAL low COL id VAL nm21959609	COL name_movie_similarity VAL low COL id VAL nm21959608	1
-COL name_movie_similarity VAL low COL id VAL nm0651995	COL name_movie_similarity VAL high COL id VAL nm21969110	0
+COL name_movie_similarity VAL low COL id VAL nm2025887	COL id VAL nm0162668	0
+COL name_movie_similarity VAL high COL id VAL nm21966318	COL id VAL nm0957595	1
+COL name_movie_similarity VAL low COL id VAL nm1887521	COL id VAL nm21958422	0
+COL name_movie_similarity VAL low COL id VAL nm3264655	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm21963146	COL id VAL nm21968176	0
+COL name_movie_similarity VAL low COL id VAL nm1338361	COL id VAL nm0346080	0
+COL name_movie_similarity VAL low COL id VAL nm21967262	COL id VAL nm0394679	0
+COL name_movie_similarity VAL high COL id VAL nm7889237	COL id VAL nm21963956	1
+COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL id VAL nm0855892	0
+COL name_movie_similarity VAL high COL id VAL nm21959609	COL id VAL nm21959608	1
+COL name_movie_similarity VAL low COL id VAL nm0651995	COL id VAL nm21969110	0
 COL name_movie_similarity VAL high COL id VAL nm21968111	COL id VAL nm3164594	1
-COL name_movie_similarity VAL high COL id VAL nm1133857	COL name_movie_similarity VAL low COL id VAL nm21958421	1
-COL name_movie_similarity VAL low COL id VAL nm3120206	COL name_movie_similarity VAL low COL id VAL nm0795060	0
-COL name_movie_similarity VAL high COL id VAL nm21968102	COL name_movie_similarity VAL low COL id VAL nm1407334	1
-COL name_movie_similarity VAL low COL id VAL nm21968407	COL name_movie_similarity VAL high COL id VAL nm1133857	0
-COL name_movie_similarity VAL low COL id VAL nm0172472	COL name_movie_similarity VAL low COL id VAL nm7031415	0
-COL name_movie_similarity VAL high COL id VAL nm21965561	COL name_movie_similarity VAL low COL id VAL nm21965564	1
-COL name_movie_similarity VAL uncertain COL id VAL nm21955150	COL name_movie_similarity VAL high COL id VAL nm3157936	0
-COL name_movie_similarity VAL high COL id VAL nm21964032	COL name_movie_similarity VAL low COL id VAL nm0346080	1
-COL name_movie_similarity VAL high COL id VAL nm21955151	COL name_movie_similarity VAL low COL id VAL nm0878031	1
-COL name_movie_similarity VAL low COL id VAL nm0038896	COL name_movie_similarity VAL low COL id VAL nm3192494	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0206142	COL name_movie_similarity VAL low COL id VAL nm3609484	0
-COL name_movie_similarity VAL low COL id VAL nm21955480	COL name_movie_similarity VAL low COL id VAL nm21961947	0
-COL name_movie_similarity VAL low COL id VAL nm0127758	COL name_movie_similarity VAL low COL id VAL nm2006841	0
-COL name_movie_similarity VAL high COL id VAL nm21965153	COL name_movie_similarity VAL uncertain COL id VAL nm1190528	1
-COL name_movie_similarity VAL low COL id VAL nm3609484	COL name_movie_similarity VAL low COL id VAL nm1066781	0
-COL name_movie_similarity VAL low COL id VAL nm21960613	COL name_movie_similarity VAL low COL id VAL nm1725970	0
-COL name_movie_similarity VAL low COL id VAL nm3376469	COL name_movie_similarity VAL uncertain COL id VAL nm1011374	0
+COL name_movie_similarity VAL high COL id VAL nm1133857	COL id VAL nm21958421	1
+COL name_movie_similarity VAL low COL id VAL nm3120206	COL id VAL nm0795060	0
+COL name_movie_similarity VAL high COL id VAL nm21968102	COL id VAL nm1407334	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21968407	COL id VAL nm1133857	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0172472	COL id VAL nm7031415	0
+COL name_movie_similarity VAL high COL id VAL nm21965561	COL id VAL nm21965564	1
+COL name_movie_similarity VAL low COL id VAL nm21955150	COL id VAL nm3157936	0
+COL name_movie_similarity VAL high COL id VAL nm21964032	COL id VAL nm0346080	1
+COL name_movie_similarity VAL high COL id VAL nm21955151	COL id VAL nm0878031	1
+COL name_movie_similarity VAL low COL id VAL nm0038896	COL id VAL nm3192494	0
+COL name_movie_similarity VAL low COL id VAL nm0206142	COL id VAL nm3609484	0
+COL name_movie_similarity VAL low COL id VAL nm21955480	COL id VAL nm21961947	0
+COL name_movie_similarity VAL low COL id VAL nm0127758	COL id VAL nm2006841	0
+COL name_movie_similarity VAL high COL id VAL nm21965153	COL id VAL nm1190528	1
+COL name_movie_similarity VAL low COL id VAL nm3609484	COL id VAL nm1066781	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21960613	COL id VAL nm1725970	0
+COL name_movie_similarity VAL low COL id VAL nm3376469	COL id VAL nm1011374	0
 COL name_movie_similarity VAL high COL id VAL nm4384917	COL id VAL nm21966183	1
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL high COL id VAL nm21962986	0
-COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL name_movie_similarity VAL low COL id VAL nm5479763	0
-COL name_movie_similarity VAL high COL id VAL nm21969110	COL name_movie_similarity VAL low COL id VAL nm0855892	1
+COL name_movie_similarity VAL low COL id VAL nm3157695	COL id VAL nm21962986	0
+COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL id VAL nm5479763	0
+COL name_movie_similarity VAL high COL id VAL nm21969110	COL id VAL nm0855892	1
 COL name_movie_similarity VAL low COL id VAL nm21962501	COL id VAL nm5714828	0
-COL name_movie_similarity VAL high COL id VAL nm2025887	COL name_movie_similarity VAL low COL id VAL nm21968101	1
-COL name_movie_similarity VAL high COL id VAL nm21955903	COL name_movie_similarity VAL low COL id VAL nm2832339	1
-COL name_movie_similarity VAL low COL id VAL nm21959996	COL name_movie_similarity VAL high COL id VAL nm5404297	0
-COL name_movie_similarity VAL uncertain COL id VAL nm0929452	COL name_movie_similarity VAL low COL id VAL nm21969202	1
-COL name_movie_similarity VAL low COL id VAL nm1227180	COL name_movie_similarity VAL high COL id VAL nm21965562	0
-COL name_movie_similarity VAL high COL id VAL nm21955325	COL name_movie_similarity VAL low COL id VAL nm1748441	1
-COL name_movie_similarity VAL high COL id VAL nm21968376	COL name_movie_similarity VAL uncertain COL id VAL nm1889547	1
+COL name_movie_similarity VAL high COL id VAL nm2025887	COL id VAL nm21968101	1
+COL name_movie_similarity VAL high COL id VAL nm21955903	COL id VAL nm2832339	1
+COL name_movie_similarity VAL low COL id VAL nm21959996	COL id VAL nm5404297	0
+COL name_movie_similarity VAL high COL id VAL nm0929452	COL id VAL nm21969202	1
+COL name_movie_similarity VAL low COL id VAL nm1227180	COL id VAL nm21965562	0
+COL name_movie_similarity VAL high COL id VAL nm21955325	COL id VAL nm1748441	1
+COL name_movie_similarity VAL high COL id VAL nm21968376	COL id VAL nm1889547	1
 COL name_movie_similarity VAL high COL id VAL nm21955840	COL id VAL nm0073888	1
-COL name_movie_similarity VAL low COL id VAL nm3295266	COL name_movie_similarity VAL uncertain COL id VAL nm21967902	0
-COL name_movie_similarity VAL uncertain COL id VAL nm21961671	COL name_movie_similarity VAL low COL id VAL nm0651995	0
-COL name_movie_similarity VAL low COL id VAL nm7031415	COL name_movie_similarity VAL low COL id VAL nm0572383	0
-COL name_movie_similarity VAL high COL id VAL nm5404297	COL name_movie_similarity VAL low COL id VAL nm21963206	1
-COL name_movie_similarity VAL high COL id VAL nm21967352	COL name_movie_similarity VAL low COL id VAL nm0682408	1
-COL name_movie_similarity VAL low COL id VAL nm21963205	COL name_movie_similarity VAL low COL id VAL nm0957595	0
-COL name_movie_similarity VAL low COL id VAL nm1066781	COL name_movie_similarity VAL uncertain COL id VAL nm21964035	0
-COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL name_movie_similarity VAL high COL id VAL nm0305380	0
-COL name_movie_similarity VAL low COL id VAL nm0767298	COL name_movie_similarity VAL high COL id VAL nm3157936	0
-COL name_movie_similarity VAL low COL id VAL nm0495790	COL name_movie_similarity VAL high COL id VAL nm21959553	0
-COL name_movie_similarity VAL low COL id VAL nm7889237	COL name_movie_similarity VAL high COL id VAL nm21961945	0
+COL name_movie_similarity VAL low COL id VAL nm3295266	COL id VAL nm21967902	0
+COL name_movie_similarity VAL low COL id VAL nm21961671	COL id VAL nm0651995	0
+COL name_movie_similarity VAL low COL id VAL nm7031415	COL id VAL nm0572383	0
+COL name_movie_similarity VAL high COL id VAL nm5404297	COL id VAL nm21963206	1
+COL name_movie_similarity VAL high COL id VAL nm21967352	COL id VAL nm0682408	1
+COL name_movie_similarity VAL low COL id VAL nm21963205	COL id VAL nm0957595	0
+COL name_movie_similarity VAL uncertain COL id VAL nm1066781	COL id VAL nm21964035	0
+COL name_movie_similarity VAL uncertain COL id VAL nm5601091	COL id VAL nm0305380	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0767298	COL id VAL nm3157936	0
+COL name_movie_similarity VAL uncertain COL id VAL nm0495790	COL id VAL nm21959553	0
+COL name_movie_similarity VAL low COL id VAL nm7889237	COL id VAL nm21961945	0
 COL name_movie_similarity VAL low COL id VAL nm21964033	COL id VAL nm0955309	0
-COL name_movie_similarity VAL low COL id VAL nm21957109	COL name_movie_similarity VAL uncertain COL id VAL nm3291308	0
-COL name_movie_similarity VAL low COL id VAL nm9522896	COL name_movie_similarity VAL low COL id VAL nm0666972	0
+COL name_movie_similarity VAL low COL id VAL nm21957109	COL id VAL nm3291308	0
+COL name_movie_similarity VAL uncertain COL id VAL nm9522896	COL id VAL nm0666972	0
 COL name_movie_similarity VAL low COL id VAL nm21964169	COL id VAL nm21960612	0
-COL name_movie_similarity VAL high COL id VAL nm0362027	COL name_movie_similarity VAL low COL id VAL nm21959642	1
-COL name_movie_similarity VAL low COL id VAL nm21957796	COL name_movie_similarity VAL low COL id VAL nm0128757	0
-COL name_movie_similarity VAL low COL id VAL nm21959385	COL name_movie_similarity VAL low COL id VAL nm0902783	0
-COL name_movie_similarity VAL low COL id VAL nm21961112	COL name_movie_similarity VAL low COL id VAL nm21964033	0
-COL name_movie_similarity VAL low COL id VAL nm21968658	COL name_movie_similarity VAL low COL id VAL nm0238669	0
-COL name_movie_similarity VAL low COL id VAL nm3192494	COL name_movie_similarity VAL low COL id VAL nm21955480	0
-COL name_movie_similarity VAL low COL id VAL nm3120206	COL name_movie_similarity VAL low COL id VAL nm21957109	0
-COL name_movie_similarity VAL uncertain COL id VAL nm1190528	COL name_movie_similarity VAL low COL id VAL nm1541933	0
-COL name_movie_similarity VAL low COL id VAL nm1066781	COL name_movie_similarity VAL uncertain COL id VAL nm21961671	0
-COL name_movie_similarity VAL high COL id VAL nm0684044	COL name_movie_similarity VAL low COL id VAL nm21964033	1
-COL name_movie_similarity VAL high COL id VAL nm3157695	COL name_movie_similarity VAL low COL id VAL nm21959385	1
+COL name_movie_similarity VAL high COL id VAL nm0362027	COL id VAL nm21959642	1
+COL name_movie_similarity VAL uncertain COL id VAL nm21957796	COL id VAL nm0128757	0
+COL name_movie_similarity VAL low COL id VAL nm21959385	COL id VAL nm0902783	0
+COL name_movie_similarity VAL low COL id VAL nm21961112	COL id VAL nm21964033	0
+COL name_movie_similarity VAL low COL id VAL nm21968658	COL id VAL nm0238669	0
+COL name_movie_similarity VAL low COL id VAL nm3192494	COL id VAL nm21955480	0
+COL name_movie_similarity VAL low COL id VAL nm3120206	COL id VAL nm21957109	0
+COL name_movie_similarity VAL low COL id VAL nm1190528	COL id VAL nm1541933	0
+COL name_movie_similarity VAL low COL id VAL nm1066781	COL id VAL nm21961671	0
+COL name_movie_similarity VAL high COL id VAL nm0684044	COL id VAL nm21964033	1
+COL name_movie_similarity VAL high COL id VAL nm3157695	COL id VAL nm21959385	1
 COL name_movie_similarity VAL high COL id VAL nm1338361	COL id VAL nm21959465	1
-COL name_movie_similarity VAL low COL id VAL nm3662284	COL name_movie_similarity VAL high COL id VAL nm21959553	0
-COL name_movie_similarity VAL high COL id VAL nm21959643	COL name_movie_similarity VAL low COL id VAL nm1511631	1
-COL name_movie_similarity VAL low COL id VAL nm2513694	COL id VAL nm21955902	0
-COL name_movie_similarity VAL low COL id VAL nm21959609	COL name_movie_similarity VAL uncertain COL id VAL nm21962985	0
-COL name_movie_similarity VAL high COL id VAL nm21962502	COL name_movie_similarity VAL low COL id VAL nm0172969	1
-COL name_movie_similarity VAL low COL id VAL nm21966244	COL name_movie_similarity VAL high COL id VAL nm0961594	0
-COL name_movie_similarity VAL low COL id VAL nm21963120	COL name_movie_similarity VAL low COL id VAL nm2684703	0
+COL name_movie_similarity VAL low COL id VAL nm3662284	COL id VAL nm21959553	0
+COL name_movie_similarity VAL high COL id VAL nm21959643	COL id VAL nm1511631	1
+COL name_movie_similarity VAL uncertain COL id VAL nm2513694	COL id VAL nm21955902	0
+COL name_movie_similarity VAL uncertain COL id VAL nm21959609	COL id VAL nm21962985	0
+COL name_movie_similarity VAL high COL id VAL nm21962502	COL id VAL nm0172969	1
+COL name_movie_similarity VAL low COL id VAL nm21966244	COL id VAL nm0961594	0
+COL name_movie_similarity VAL low COL id VAL nm21963120	COL id VAL nm2684703	0

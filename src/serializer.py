@@ -261,7 +261,28 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     if record1 and record2:
                         pairs_log.append((record1, record2, label))
 
-                lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
+                processed_train = []
+                for left, right, label in pairs_log:
+                    new_left = copy.deepcopy(left)
+                    new_right = copy.deepcopy(right)
+
+                    # 1. Calculate scores
+                    injected_scores = {}
+                    for rel in cfg.rels:
+                        rel_name = rel["rel_name"]
+                        injected_scores[f"{cfg.name}_{rel_name}_similarity"] = ""
+
+                    # 2. Build the prefixed left dictionary
+                    prefix_left = {**injected_scores, **new_left}
+
+                    # 3. Clean the right dictionary
+                    for k in list(new_right.keys()):
+                        if "similarity" in k:
+                            del new_right[k]
+
+                    processed_train.append((prefix_left, new_right, label))
+
+                lines, amt_pos, amt_neg = serialize(processed_train, cfg)
                 with open(f"{empty_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
                 print(
@@ -279,30 +300,34 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
             with open(f"{inference_dir}/test_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
                     open(f"{inference_dir}/test_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
 
+                sim_keys = {
+                    f"{cfg.name}_{rel['rel_name']}_similarity": "" for rel in cfg.rels}
+
                 for left, right, label in pairs_empty_scores:
 
-                    for rel in cfg.rels:
-                        rel_name = rel["rel_name"]
-                        rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
-                        current_pair_scores[rel_neighborhood_key] = ""
+                    new_left = copy.deepcopy(left)
+                    new_right = copy.deepcopy(right)
 
-                    # position of scores in first
-                    original_left = copy.deepcopy(left)
-                    left.clear()
-                    left.update(current_pair_scores)
-                    left.update(original_left)
+                    # 3. Build a NEW dict for left (scores first, then original data)
+                    # This is non-destructive and won't affect other pairs
+                    prefix_left = {**sim_keys, **new_left}
 
-                    tmp_left = copy.deepcopy(left)
-                    tmp_right = copy.deepcopy(right)
+                    # 4. Ensure right is clean of any similarity keys
+                    for k in list(new_right.keys()):
+                        if "similarity" in k:
+                            del new_right[k]
 
-                    left.clear()
-                    right.clear()
+                    tmp_left = copy.deepcopy(prefix_left)
+                    tmp_right = copy.deepcopy(new_right)
+
+                    prefix_left.clear()
+                    new_right.clear()
                     for k, v in tmp_left.items():
                         if k not in cfg.drop_list:
-                            left[k] = v
+                            prefix_left[k] = v
                     for k, v in tmp_right.items():
                         if k not in cfg.drop_list:
-                            right[k] = v
+                            new_right[k] = v
 
                     if label == 1 or str(label).lower() == 'true':
                         amt_pos += 1
@@ -310,12 +335,12 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                         amt_neg += 1
 
                     # 4. Create the labeled and unlabeled objects
-                    pair_list = [left, right]
+                    pair_list = [prefix_left, new_right]
                     f_unlab.write(json.dumps(
                         pair_list, ensure_ascii=False) + "\n")
 
                     # 5. Write each as a single line in their respective files
-                    labeled_list = [left, right, label]
+                    labeled_list = [prefix_left, new_right, label]
                     f_lab.write(json.dumps(
                         labeled_list, ensure_ascii=False) + "\n")
 
@@ -325,25 +350,33 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
                     f"Successfully wrote {total_pairs} lines to JSONL files. Pos: {amt_pos}, Neg: {amt_neg}")
 
         # --- Scores Injected ---
-        # TODO:
-        pairs_injected_scores = copy.deepcopy(pairs_empty_scores)
+        processed_injected = []
+        for left, right, label in pairs:  # Use original 'pairs'
+            new_left = copy.deepcopy(left)
+            new_right = copy.deepcopy(right)
 
-        for left, right, label in pairs_injected_scores:
-            current_pair_scores = {}
+            # 1. Calculate scores
+            injected_scores = {}
             for rel in cfg.rels:
                 rel_name = rel["rel_name"]
                 score = calculate_relationship_scores(
-                    left['id'],
-                    right['id'],
+                    new_left['id'], new_right['id'],
                     relation_maps[cfg.name+rel_name],
                     processed_entities[rel_name].uf,
-                    DROPOUT_PROB,
-                    is_bin)
+                    DROPOUT_PROB, is_bin)
+                injected_scores[f"{cfg.name}_{rel_name}_similarity"] = score
 
-                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
-                left[rel_neighborhood_key] = score
+            # 2. Build the prefixed left dictionary
+            prefix_left = {**injected_scores, **new_left}
 
-        lines, amt_pos, amt_neg = serialize(pairs_injected_scores, cfg)
+            # 3. Clean the right dictionary
+            for k in list(new_right.keys()):
+                if "similarity" in k:
+                    del new_right[k]
+
+            processed_injected.append((prefix_left, new_right, label))
+
+        lines, amt_pos, amt_neg = serialize(processed_injected, cfg)
         exp_name = "injectedScores"
         injected_scores_dir = Path(
             f"{cfg.path_out_dir}/{level}/{exp_name}/{cfg.name}")
@@ -362,28 +395,34 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
 
                     if record1 and record2:
                         pairs_log.append((record1, record2, label))
+
+                processed_train = []
                 for left, right, label in pairs_log:
+                    new_left = copy.deepcopy(left)
+                    new_right = copy.deepcopy(right)
+
+                    # 1. Calculate scores
+                    injected_scores = {}
                     for rel in cfg.rels:
                         rel_name = rel["rel_name"]
-
                         score = calculate_relationship_scores(
-                            left['id'],
-                            right['id'],
+                            new_left['id'], new_right['id'],
                             relation_maps[cfg.name+rel_name],
                             processed_entities[rel_name].uf,
-                            DROPOUT_PROB,
-                            is_bin)
+                            DROPOUT_PROB, is_bin)
+                        injected_scores[f"{cfg.name}_{rel_name}_similarity"] = score
 
-                        rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
-                        current_pair_scores[rel_neighborhood_key] = score
+                    # 2. Build the prefixed left dictionary
+                    prefix_left = {**injected_scores, **new_left}
 
-                    # position of scores in first
-                    original_left = copy.deepcopy(left)
-                    left.clear()
-                    left.update(current_pair_scores)
-                    left.update(original_left)
+                    # 3. Clean the right dictionary
+                    for k in list(new_right.keys()):
+                        if "similarity" in k:
+                            del new_right[k]
 
-                lines, amt_pos, amt_neg = serialize(pairs_log, cfg)
+                    processed_train.append((prefix_left, new_right, label))
+
+                lines, amt_pos, amt_neg = serialize(processed_train, cfg)
                 with open(f"{injected_scores_dir}/{split}_{log_power}.txt", 'w', encoding='utf-8') as f:
                     f.write("\n".join(lines) + "\n")
                 print(
@@ -413,41 +452,47 @@ def write_splits(cfg: EntityConfig, CONFIGS, processed_entities: Dict[str, proce
     with open(f"{cp_dir}/cp_labeled.jsonl", 'w', encoding='utf-8') as f_lab, \
             open(f"{cp_dir}/cp_unlabeled.jsonl", 'w', encoding='utf-8') as f_unlab:
 
+        sim_keys = {
+            f"{cfg.name}_{rel['rel_name']}_similarity": "" for rel in cfg.rels}
+
         for left, right, label in pairs:
 
-            for rel in cfg.rels:
-                rel_name = rel["rel_name"]
+            new_left = copy.deepcopy(left)
+            new_right = copy.deepcopy(right)
 
-                rel_neighborhood_key = f"{cfg.name}_{rel_name}_similarity"
-                current_pair_scores[rel_neighborhood_key] = ""
+            # 3. Build a NEW dict for left (scores first, then original data)
+            # This is non-destructive and won't affect other pairs
+            prefix_left = {**sim_keys, **new_left}
 
-            # position of scores in first
-            original_left = copy.deepcopy(left)
-            left.clear()
-            left.update(current_pair_scores)
-            left.update(original_left)
+            # 4. Ensure right is clean of any similarity keys
+            for k in list(new_right.keys()):
+                if "similarity" in k:
+                    del new_right[k]
 
-            tmp_left = copy.deepcopy(left)
-            tmp_right = copy.deepcopy(right)
+            tmp_left = copy.deepcopy(prefix_left)
+            tmp_right = copy.deepcopy(new_right)
 
-            left.clear()
-            right.clear()
+            prefix_left.clear()
+            new_right.clear()
             for k, v in tmp_left.items():
                 if k not in cfg.drop_list:
-                    left[k] = v
+                    prefix_left[k] = v
             for k, v in tmp_right.items():
                 if k not in cfg.drop_list:
-                    right[k] = v
+                    new_right[k] = v
 
             if label == 1 or str(label).lower() == 'true':
                 amt_pos += 1
             else:
                 amt_neg += 1
 
-            pair_list = [left, right]
-            f_unlab.write(json.dumps(pair_list, ensure_ascii=False) + "\n")
+            # 4. Create the labeled and unlabeled objects
+            pair_list = [prefix_left, new_right]
+            f_unlab.write(json.dumps(
+                pair_list, ensure_ascii=False) + "\n")
 
-            labeled_list = [left, right, label]
+            # 5. Write each as a single line in their respective files
+            labeled_list = [prefix_left, new_right, label]
             f_lab.write(json.dumps(
                 labeled_list, ensure_ascii=False) + "\n")
 
