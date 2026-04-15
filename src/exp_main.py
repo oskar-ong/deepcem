@@ -243,7 +243,7 @@ def main():
     raw_config = REGISTRY[dataset]
     config: dict[str, ExperimentConfig] = {
         name: entity.resolve_paths(
-            args.dataset, args.pollution, args.binning)
+            args.dataset, args.pollution)
         for name, entity in raw_config.items()
     }
 
