@@ -1,125 +1,125 @@
-COL name VAL Van Nuys COL area_type VAL City COL ended VAL f COL id VAL b210	COL name VAL Weimar COL area_type VAL City COL ended VAL f COL id VAL b284	0
-COL name VAL Tunisia COL area_type VAL Country COL ended VAL f COL id VAL b233	COL name VAL Quél>ec COL area_type VAL Subdivision COL ended VAL f COL id VAL b690	0
+COL name VAL Ekenäs COL area_type VAL City COL ended VAL f COL id VAL b647	COL name VAL Groningen COL area_type VAL City COL ended VAL f COL id VAL b699	0
+COL name VAL San Francisco COL area_type VAL City COL ended VAL f COL id VAL b343	COL name VAL Saratoga COL area_type VAL City COL ended VAL f COL id VAL b95	0
 COL name VAL Hoxton COL area_type VAL District COL ended VAL f COL id VAL b255	COL name VAL Hoxt0n COL area_type VAL District COL ended VAL f COL id VAL b470	1
-COL name VAL Trinidad and Tobago COL area_type VAL Country COL ended VAL f COL id VAL b234	COL name VAL Wien COL area_type VAL City COL ended VAL f COL id VAL b99	0
-COL name VAL Belarus COL area_type VAL Country COL ended VAL f COL id VAL b466	COL name VAL Portlancl COL area_type VAL City COL ended VAL f COL id VAL b405	0
-COL name VAL Colornbia COL area_type VAL Country COL ended VAL f COL id VAL b480	COL name VAL Zagreb COL area_type VAL City COL ended VAL f COL id VAL b318	0
-COL name VAL Mexiczo COL area_type VAL Country COL ended VAL f COL id VAL b340	COL name VAL Oceah County COL area_type VAL County COL ended VAL f COL id VAL b55	0
-COL name VAL Saint Paul COL area_type VAL City COL ended VAL f COL id VAL b527	COL name VAL Palazzo Pignano COL area_type VAL Municipality COL ended VAL f COL id VAL b136	0
+COL name VAL Richmond COL area_type VAL City COL ended VAL f COL id VAL b600	COL name VAL SaintÉmilion COL area_type VAL City COL ended VAL f COL id VAL b80	0
+COL name VAL Tunisia COL area_type VAL Country COL ended VAL f COL id VAL b233	COL name VAL Québec COL area_type VAL Subdivision COL ended VAL f COL id VAL b202	0
+COL name VAL Fukuoka COL area_type VAL City COL ended VAL f COL id VAL b504	COL name VAL CastropRauxel COL area_type VAL City COL ended VAL f COL id VAL b328	0
+COL name VAL Yugoslavia COL area_type VAL Country COL ended VAL t COL id VAL b537	COL name VAL Malaysia COL area_type VAL Country COL ended VAL f COL id VAL b564	0
+COL name VAL Charlotte COL area_type VAL City COL ended VAL f COL id VAL b117	COL name VAL Montréal COL area_type VAL City COL ended VAL f COL id VAL b400	0
 COL name VAL Warsavv COL area_type VAL City COL ended VAL f COL id VAL b249	COL name VAL Warsaw COL area_type VAL City COL ended VAL f COL id VAL b623	1
-COL name VAL Serbia and Montenegro COL area_type VAL Country COL ended VAL t COL id VAL b626	COL name VAL Port D0ver COL area_type VAL City COL ended VAL f COL id VAL b591	0
+COL name VAL Akron COL area_type VAL City COL ended VAL f COL id VAL b585	COL name VAL Salford COL area_type VAL City COL ended VAL f COL id VAL b61	0
 COL name VAL Hungari COL area_type VAL Country COL ended VAL f COL id VAL b409	COL name VAL Hungary COL area_type VAL Country COL ended VAL f COL id VAL b440	1
-COL name VAL Fall Creek COL area_type VAL City COL ended VAL f COL id VAL b143	COL name VAL Houston COL area_type VAL City COL ended VAL f COL id VAL b67	0
-COL name VAL Ottaqa COL area_type VAL City COL ended VAL f COL id VAL b733	COL name VAL Soudh Korea COL area_type VAL Country COL ended VAL f COL id VAL b3	0
+COL name VAL Reutlingen COL area_type VAL City COL ended VAL f COL id VAL b593	COL name VAL Kazan COL area_type VAL City COL ended VAL f COL id VAL b382	0
+COL name VAL Hampurg COL area_type VAL City COL ended VAL f COL id VAL b274	COL name VAL Argentina COL area_type VAL Country COL ended VAL f COL id VAL b248	0
 COL name VAL Coalvill COL area_type VAL City COL ended VAL f COL id VAL b292	COL name VAL Coalville COL area_type VAL City COL ended VAL f COL id VAL b721	1
-COL name VAL New York COL area_type VAL Subdivision COL ended VAL f COL id VAL b432	COL name VAL Salamanca COL area_type VAL City COL ended VAL f COL id VAL b621	0
+COL name VAL Argen6ina COL area_type VAL Country COL ended VAL f COL id VAL b231	COL name VAL Athens COL area_type VAL City COL ended VAL f COL id VAL b462	0
 COL name VAL Shibuya COL area_type VAL City COL ended VAL f COL id VAL b481	COL name VAL Sibuya COL area_type VAL City COL ended VAL f COL id VAL b605	1
-COL name VAL Hanover COL area_type VAL City COL ended VAL f COL id VAL b165	COL name VAL Philippines COL area_type VAL Country COL ended VAL f COL id VAL b38	0
-COL name VAL Hungari COL area_type VAL Country COL ended VAL f COL id VAL b409	COL name VAL Jerjey City COL area_type VAL City COL ended VAL f COL id VAL b27	0
-COL name VAL Leeds COL area_type VAL City COL ended VAL f COL id VAL b598	COL name VAL São Vicetne COL area_type VAL City COL ended VAL f COL id VAL b411	0
-COL name VAL Haye5 COL area_type VAL City COL ended VAL f COL id VAL b571	COL name VAL Ricmond COL area_type VAL City COL ended VAL f COL id VAL b57	0
-COL name VAL Cincinnati COL area_type VAL City COL ended VAL f COL id VAL b671	COL name VAL Iowa City COL area_type VAL City COL ended VAL f COL id VAL b512	0
-COL name VAL Hong Kong COL area_type VAL Subdivision COL ended VAL f COL id VAL b439	COL name VAL Sarpsborg COL area_type VAL Municipality COL ended VAL f COL id VAL b661	0
-COL name VAL Novi Sad COL area_type VAL City COL ended VAL f COL id VAL b160	COL name VAL Valence COL area_type VAL City COL ended VAL f COL id VAL b534	0
-COL name VAL Dublin COL area_type VAL City COL ended VAL f COL id VAL b693	COL name VAL Poland COL area_type VAL Country COL ended VAL f COL id VAL b441	0
-COL name VAL South Africa COL area_type VAL Country COL ended VAL f COL id VAL b239	COL name VAL Lille COL area_type VAL City COL ended VAL f COL id VAL b645	0
-COL name VAL China COL area_type VAL Country COL ended VAL f COL id VAL b12	COL name VAL Washington DC COL area_type VAL Subdivision COL ended VAL f COL id VAL b221	0
+COL name VAL Ukraine COL area_type VAL Country COL ended VAL f COL id VAL b238	COL name VAL Cincinnati COL area_type VAL City COL ended VAL f COL id VAL b671	0
+COL name VAL Ladbroke Grove COL area_type VAL District COL ended VAL f COL id VAL b307	COL name VAL Millersville COL area_type VAL Municipality COL ended VAL f COL id VAL b135	0
+COL name VAL Osalca COL area_type VAL Subdivision COL ended VAL f COL id VAL b36	COL name VAL Asturias COL area_type VAL Subdivision COL ended VAL f COL id VAL b566	0
+COL name VAL Maine COL area_type VAL Subdivision COL ended VAL f COL id VAL b206	COL name VAL Catalunya COL area_type VAL Subdivision COL ended VAL f COL id VAL b570	0
+COL name VAL Nagoya COL area_type VAL City COL ended VAL f COL id VAL b151	COL name VAL Milanp COL area_type VAL City COL ended VAL f COL id VAL b268	0
+COL name VAL Rancagua COL area_type VAL City COL ended VAL f COL id VAL b597	COL name VAL Saessolsheim COL area_type VAL City COL ended VAL f COL id VAL b341	0
+COL name VAL Port D0ver COL area_type VAL City COL ended VAL f COL id VAL b591	COL name VAL Grenoblje COL area_type VAL City COL ended VAL f COL id VAL b522	0
+COL name VAL Newcastle upon Tyne COL area_type VAL City COL ended VAL f COL id VAL b714	COL name VAL Torrance COL area_type VAL City COL ended VAL f COL id VAL b259	0
+COL name VAL Santa Barbara COL area_type VAL City COL ended VAL f COL id VAL b453	COL name VAL Mexiczo COL area_type VAL Country COL ended VAL f COL id VAL b340	0
+COL name VAL Jamaica COL area_type VAL Country COL ended VAL f COL id VAL b552	COL name VAL Helsingborg COL area_type VAL City COL ended VAL f COL id VAL b25	0
 COL name VAL Long Island Cit COL area_type VAL City COL ended VAL f COL id VAL b346	COL name VAL Long Island City COL area_type VAL City COL ended VAL f COL id VAL b455	1
-COL name VAL Novi Sad COL area_type VAL City COL ended VAL f COL id VAL b160	COL name VAL Toshkent COL area_type VAL City COL ended VAL f COL id VAL b31	0
-COL name VAL Belluno COL area_type VAL Municipality COL ended VAL f COL id VAL b404	COL name VAL Denmark COL area_type VAL Country COL ended VAL f COL id VAL b548	0
-COL name VAL Warsavv COL area_type VAL City COL ended VAL f COL id VAL b249	COL name VAL Munster COL area_type VAL City COL ended VAL f COL id VAL b302	0
-COL name VAL Ocean County COL area_type VAL County COL ended VAL f COL id VAL b688	COL name VAL Bielefeld COL area_type VAL City COL ended VAL f COL id VAL b89	0
-COL name VAL Athens COL area_type VAL City COL ended VAL f COL id VAL b290	COL name VAL Caravagg'lo COL area_type VAL Municipality COL ended VAL f COL id VAL b65	0
-COL name VAL Indonesia COL area_type VAL Country COL ended VAL f COL id VAL b568	COL name VAL Svrrey COL area_type VAL Subdivision COL ended VAL f COL id VAL b227	0
-COL name VAL Washington DC COL area_type VAL Subdivision COL ended VAL f COL id VAL b221	COL name VAL China COL area_type VAL Country COL ended VAL f COL id VAL b12	0
+COL name VAL Kabukichō COL area_type VAL District COL ended VAL f COL id VAL b692	COL name VAL Florica COL area_type VAL Subdivision COL ended VAL f COL id VAL b653	0
+COL name VAL Manchester COL area_type VAL City COL ended VAL f COL id VAL b712	COL name VAL Tucsno COL area_type VAL City COL ended VAL f COL id VAL b351	0
+COL name VAL Icekand COL area_type VAL Country COL ended VAL f COL id VAL b71	COL name VAL Salamanca COL area_type VAL City COL ended VAL f COL id VAL b621	0
+COL name VAL St Louis COL area_type VAL City COL ended VAL f COL id VAL b670	COL name VAL Slovenia COL area_type VAL Country COL ended VAL f COL id VAL b237	0
+COL name VAL Roma COL area_type VAL City COL ended VAL f COL id VAL b289	COL name VAL Vitória da Conquistta COL area_type VAL City COL ended VAL f COL id VAL b398	0
+COL name VAL Vancouver COL area_type VAL City COL ended VAL f COL id VAL b156	COL name VAL Karnadaka COL area_type VAL Subdivision COL ended VAL f COL id VAL b546	0
+COL name VAL Bolivia COL area_type VAL Country COL ended VAL f COL id VAL b468	COL name VAL Poznań COL area_type VAL City COL ended VAL f COL id VAL b19	0
 COL name VAL Québec COL area_type VAL Subdivision COL ended VAL f COL id VAL b202	COL name VAL Quél>ec COL area_type VAL Subdivision COL ended VAL f COL id VAL b690	1
 COL name VAL Iowa C'lty COL area_type VAL City COL ended VAL f COL id VAL b323	COL name VAL Iowa City COL area_type VAL City COL ended VAL f COL id VAL b512	1
-COL name VAL Wivenhoe COL area_type VAL City COL ended VAL f COL id VAL b109	COL name VAL Portugal COL area_type VAL Country COL ended VAL f COL id VAL b442	0
-COL name VAL Bolivia COL area_type VAL Country COL ended VAL f COL id VAL b468	COL name VAL Aberystwyth COL area_type VAL City COL ended VAL f COL id VAL b649	0
-COL name VAL SaindÉmilion COL area_type VAL City COL ended VAL f COL id VAL b635	COL name VAL BadenWürttemberg COL area_type VAL Subdivision COL ended VAL f COL id VAL b200	0
-COL name VAL Santa Ana COL area_type VAL City COL ended VAL f COL id VAL b52	COL name VAL Stoc1<port COL area_type VAL City COL ended VAL f COL id VAL b660	0
+COL name VAL Manila COL area_type VAL City COL ended VAL f COL id VAL b707	COL name VAL Victoria COL area_type VAL Subdivision COL ended VAL f COL id VAL b317	0
+COL name VAL Long Island City COL area_type VAL City COL ended VAL f COL id VAL b455	COL name VAL Caravagg'lo COL area_type VAL Municipality COL ended VAL f COL id VAL b65	0
+COL name VAL Québec City COL area_type VAL City COL ended VAL f COL id VAL b169	COL name VAL Radnor Township COL area_type VAL Municipality COL ended VAL f COL id VAL b187	0
+COL name VAL Salford COL area_type VAL City COL ended VAL f COL id VAL b61	COL name VAL Benson COL area_type VAL City COL ended VAL f COL id VAL b367	0
 COL name VAL Karnataka COL area_type VAL Subdivision COL ended VAL f COL id VAL b422	COL name VAL Karnadaka COL area_type VAL Subdivision COL ended VAL f COL id VAL b546	1
-COL name VAL New Zealand COL area_type VAL Country COL ended VAL f COL id VAL b128	COL name VAL Bremen COL area_type VAL City COL ended VAL f COL id VAL b243	0
-COL name VAL Zaragoza COL area_type VAL City COL ended VAL f COL id VAL b84	COL name VAL Ciudad de Méxixo COL area_type VAL City COL ended VAL f COL id VAL b461	0
-COL name VAL Miam'l COL area_type VAL City COL ended VAL f COL id VAL b60	COL name VAL Tampa COL area_type VAL City COL ended VAL f COL id VAL b617	0
-COL name VAL Visby COL area_type VAL City COL ended VAL f COL id VAL b555	COL name VAL Akron COL area_type VAL City COL ended VAL f COL id VAL b585	0
-COL name VAL Trinidad and Tobago COL area_type VAL Country COL ended VAL f COL id VAL b234	COL name VAL Englewood COL area_type VAL City COL ended VAL f COL id VAL b265	0
-COL name VAL Liechtenstein COL area_type VAL Country COL ended VAL f COL id VAL b256	COL name VAL Croatia COL area_type VAL Country COL ended VAL f COL id VAL b353	0
-COL name VAL Saessolsheim COL area_type VAL City COL ended VAL f COL id VAL b341	COL name VAL Hungari COL area_type VAL Country COL ended VAL f COL id VAL b409	0
-COL name VAL Iceland COL area_type VAL Country COL ended VAL f COL id VAL b305	COL name VAL Oakville COL area_type VAL City COL ended VAL f COL id VAL b6	0
-COL name VAL Kazan COL area_type VAL City COL ended VAL f COL id VAL b382	COL name VAL Zakreb COL area_type VAL City COL ended VAL f COL id VAL b685	0
-COL name VAL Visby COL area_type VAL City COL ended VAL f COL id VAL b555	COL name VAL Van Nuys COL area_type VAL City COL ended VAL f COL id VAL b210	0
-COL name VAL Irelanc COL area_type VAL Country COL ended VAL f COL id VAL b30	COL name VAL Northampton COL area_type VAL City COL ended VAL f COL id VAL b132	0
-COL name VAL Athens COL area_type VAL City COL ended VAL f COL id VAL b462	COL name VAL Visby COL area_type VAL City COL ended VAL f COL id VAL b555	0
+COL name VAL Wolfsburg COL area_type VAL City COL ended VAL f COL id VAL b595	COL name VAL São Vicetne COL area_type VAL City COL ended VAL f COL id VAL b411	0
+COL name VAL Long Beach COL area_type VAL City COL ended VAL f COL id VAL b68	COL name VAL Algeria COL area_type VAL Country COL ended VAL f COL id VAL b11	0
+COL name VAL Ciudad de México COL area_type VAL City COL ended VAL f COL id VAL b473	COL name VAL Nashville COL area_type VAL City COL ended VAL f COL id VAL b155	0
+COL name VAL Hong Kobg COL area_type VAL Subdivision COL ended VAL f COL id VAL b266	COL name VAL Sibuya COL area_type VAL City COL ended VAL f COL id VAL b605	0
+COL name VAL Soviet Union COL area_type VAL Country COL ended VAL t COL id VAL b627	COL name VAL Cuba COL area_type VAL Country COL ended VAL f COL id VAL b551	0
+COL name VAL China COL area_type VAL Country COL ended VAL f COL id VAL b12	COL name VAL Rötha COL area_type VAL City COL ended VAL f COL id VAL b418	0
+COL name VAL Southaven COL area_type VAL City COL ended VAL f COL id VAL b149	COL name VAL Dublin COL area_type VAL City COL ended VAL f COL id VAL b693	0
+COL name VAL Shibuya COL area_type VAL City COL ended VAL f COL id VAL b481	COL name VAL Millersville COL area_type VAL Municipality COL ended VAL f COL id VAL b135	0
+COL name VAL Les Laurentides Regional County Municipality COL area_type VAL County COL ended VAL f COL id VAL b695	COL name VAL South Korea COL area_type VAL Country COL ended VAL f COL id VAL b1	0
+COL name VAL Southaven COL area_type VAL City COL ended VAL f COL id VAL b149	COL name VAL Asbury Park COL area_type VAL City COL ended VAL f COL id VAL b475	0
+COL name VAL Mexiczo COL area_type VAL Country COL ended VAL f COL id VAL b340	COL name VAL Rötha COL area_type VAL City COL ended VAL f COL id VAL b418	0
+COL name VAL Asury Park COL area_type VAL City COL ended VAL f COL id VAL b689	COL name VAL Åland Islands COL area_type VAL Country COL ended VAL f COL id VAL b94	0
 COL name VAL Salsmanca COL area_type VAL City COL ended VAL f COL id VAL b582	COL name VAL Salamanca COL area_type VAL City COL ended VAL f COL id VAL b621	1
-COL name VAL Ottaqa COL area_type VAL City COL ended VAL f COL id VAL b733	COL name VAL Vancouver COL area_type VAL City COL ended VAL f COL id VAL b156	0
-COL name VAL Coalville COL area_type VAL City COL ended VAL f COL id VAL b721	COL name VAL Hamilton COL area_type VAL City COL ended VAL f COL id VAL b454	0
-COL name VAL Wolfsburg COL area_type VAL City COL ended VAL f COL id VAL b595	COL name VAL Athens COL area_type VAL City COL ended VAL f COL id VAL b290	0
+COL name VAL Haye5 COL area_type VAL City COL ended VAL f COL id VAL b571	COL name VAL Waterloo COL area_type VAL City COL ended VAL f COL id VAL b241	0
+COL name VAL Catalunya COL area_type VAL Subdivision COL ended VAL f COL id VAL b570	COL name VAL Uruguay COL area_type VAL Country COL ended VAL f COL id VAL b380	0
+COL name VAL Brussels COL area_type VAL City COL ended VAL f COL id VAL b87	COL name VAL Lisbon COL area_type VAL City COL ended VAL f COL id VAL b287	0
 COL name VAL Colombia COL area_type VAL Country COL ended VAL f COL id VAL b121	COL name VAL Colornbia COL area_type VAL Country COL ended VAL f COL id VAL b480	1
-COL name VAL TrentinoAlto Adige COL area_type VAL Subdivision COL ended VAL f COL id VAL b349	COL name VAL Algerya COL area_type VAL Country COL ended VAL f COL id VAL b428	0
-COL name VAL Québec Ci5y COL area_type VAL City COL ended VAL f COL id VAL b28	COL name VAL New Port Richey COL area_type VAL City COL ended VAL f COL id VAL b637	0
-COL name VAL Ypres COL area_type VAL Municipality COL ended VAL f COL id VAL b448	COL name VAL Icekand COL area_type VAL Country COL ended VAL f COL id VAL b71	0
-COL name VAL China COL area_type VAL Country COL ended VAL f COL id VAL b12	COL name VAL Hamburg COL area_type VAL City COL ended VAL f COL id VAL b734	0
-COL name VAL Syria COL area_type VAL Country COL ended VAL f COL id VAL b13	COL name VAL Millersville COL area_type VAL Municipality COL ended VAL f COL id VAL b135	0
-COL name VAL Barcelona COL area_type VAL City COL ended VAL f COL id VAL b86	COL name VAL Santa Barpara COL area_type VAL City COL ended VAL f COL id VAL b310	0
-COL name VAL Worldwide COL ended VAL f COL id VAL b624	COL name VAL Schaerbeek  Schaarbeek COL area_type VAL Municipality COL ended VAL f COL id VAL b322	0
-COL name VAL Rötha COL area_type VAL City COL ended VAL f COL id VAL b418	COL name VAL Bonn COL area_type VAL City COL ended VAL f COL id VAL b344	0
-COL name VAL Slovakia COL area_type VAL Country COL ended VAL f COL id VAL b457	COL name VAL Syria COL area_type VAL Country COL ended VAL f COL id VAL b13	0
-COL name VAL Coalvill COL area_type VAL City COL ended VAL f COL id VAL b292	COL name VAL Tucsno COL area_type VAL City COL ended VAL f COL id VAL b351	0
+COL name VAL Risch COL area_type VAL Municipality COL ended VAL f COL id VAL b646	COL name VAL Saessolsheim COL area_type VAL City COL ended VAL f COL id VAL b341	0
+COL name VAL Rötba COL area_type VAL City COL ended VAL f COL id VAL b142	COL name VAL SaintÉmilion COL area_type VAL City COL ended VAL f COL id VAL b80	0
+COL name VAL Chevannes COL area_type VAL City COL ended VAL f COL id VAL b655	COL name VAL Torrance COL area_type VAL City COL ended VAL f COL id VAL b259	0
+COL name VAL Graz COL area_type VAL City COL ended VAL f COL id VAL b69	COL name VAL Kingdom of the Netherladns COL area_type VAL Country COL ended VAL f COL id VAL b463	0
+COL name VAL Kópavogur COL area_type VAL City COL ended VAL f COL id VAL b497	COL name VAL Rötba COL area_type VAL City COL ended VAL f COL id VAL b142	0
+COL name VAL Lvcca COL area_type VAL Municipality COL ended VAL f COL id VAL b2	COL name VAL SaintÉmilion COL area_type VAL City COL ended VAL f COL id VAL b80	0
+COL name VAL Toronto COL area_type VAL City COL ended VAL f COL id VAL b22	COL name VAL Schaerbeek  Schaarbeek COL area_type VAL Municipality COL ended VAL f COL id VAL b322	0
+COL name VAL Slovakia COL area_type VAL Country COL ended VAL f COL id VAL b457	COL name VAL Groninken COL area_type VAL City COL ended VAL f COL id VAL b116	0
+COL name VAL Acquasparta COL area_type VAL City COL ended VAL f COL id VAL b650	COL name VAL Valence COL area_type VAL City COL ended VAL f COL id VAL b534	0
+COL name VAL Puerto Rico COL area_type VAL Country COL ended VAL f COL id VAL b309	COL name VAL Sibuya COL area_type VAL City COL ended VAL f COL id VAL b605	0
 COL name VAL Florida COL area_type VAL Subdivision COL ended VAL f COL id VAL b436	COL name VAL Florica COL area_type VAL Subdivision COL ended VAL f COL id VAL b653	1
 COL name VAL Taiwan COL area_type VAL Country COL ended VAL f COL id VAL b14	COL name VAL Taiwbn COL area_type VAL Country COL ended VAL f COL id VAL b687	1
 COL name VAL Deriver COL area_type VAL City COL ended VAL f COL id VAL b102	COL name VAL Denver COL area_type VAL City COL ended VAL f COL id VAL b171	1
-COL name VAL Montréal COL area_type VAL City COL ended VAL f COL id VAL b400	COL name VAL Amherjt COL area_type VAL City COL ended VAL f COL id VAL b140	0
-COL name VAL CastropRauxel COL area_type VAL City COL ended VAL f COL id VAL b328	COL name VAL Toulouse COL area_type VAL City COL ended VAL f COL id VAL b26	0
+COL name VAL Lucca COL area_type VAL Municipality COL ended VAL f COL id VAL b33	COL name VAL Argentina COL area_type VAL Country COL ended VAL f COL id VAL b248	0
+COL name VAL Serbia and Montenetro COL area_type VAL Country COL ended VAL t COL id VAL b710	COL name VAL Osalca COL area_type VAL Subdivision COL ended VAL f COL id VAL b36	0
 COL name VAL Hampurg COL area_type VAL City COL ended VAL f COL id VAL b274	COL name VAL Hamburg COL area_type VAL City COL ended VAL f COL id VAL b734	1
-COL name VAL São Vicente COL area_type VAL City COL ended VAL f COL id VAL b110	COL name VAL Higashi COL area_type VAL District COL ended VAL f COL id VAL b159	0
-COL name VAL Taiwbn COL area_type VAL Country COL ended VAL f COL id VAL b687	COL name VAL Serbia and Montenegro COL area_type VAL Country COL ended VAL t COL id VAL b626	0
+COL name VAL Chapel Hill COL area_type VAL City COL ended VAL f COL id VAL b325	COL name VAL Nancy COL area_type VAL City COL ended VAL f COL id VAL b331	0
+COL name VAL Southaven COL area_type VAL City COL ended VAL f COL id VAL b149	COL name VAL Yugoslavia COL area_type VAL Country COL ended VAL t COL id VAL b537	0
 COL name VAL Amherjt COL area_type VAL City COL ended VAL f COL id VAL b140	COL name VAL Amherst COL area_type VAL City COL ended VAL f COL id VAL b311	1
-COL name VAL Gjerstad COL area_type VAL Municipality COL ended VAL f COL id VAL b485	COL name VAL South Korea COL area_type VAL Country COL ended VAL f COL id VAL b1	0
-COL name VAL Argentina COL area_type VAL Country COL ended VAL f COL id VAL b248	COL name VAL Hoxt0n COL area_type VAL District COL ended VAL f COL id VAL b470	0
+COL name VAL Ottawa COL area_type VAL City COL ended VAL f COL id VAL b138	COL name VAL Leeds COL area_type VAL City COL ended VAL f COL id VAL b598	0
+COL name VAL Millersville COL area_type VAL Municipality COL ended VAL f COL id VAL b135	COL name VAL Brazil COL area_type VAL Country COL ended VAL f COL id VAL b658	0
 COL name VAL BadenWürtemberg COL area_type VAL Subdivision COL ended VAL f COL id VAL b190	COL name VAL BadenWürttemberg COL area_type VAL Subdivision COL ended VAL f COL id VAL b200	1
 COL name VAL Hanover COL area_type VAL City COL ended VAL f COL id VAL b165	COL name VAL Hanouer COL area_type VAL City COL ended VAL f COL id VAL b260	1
-COL name VAL Belgium COL area_type VAL Country COL ended VAL f COL id VAL b465	COL name VAL Greece COL area_type VAL Country COL ended VAL f COL id VAL b216	0
+COL name VAL Commack COL area_type VAL City COL ended VAL f COL id VAL b118	COL name VAL Irelanc COL area_type VAL Country COL ended VAL f COL id VAL b30	0
 COL name VAL Northampton COL area_type VAL City COL ended VAL f COL id VAL b132	COL name VAL Northamoton COL area_type VAL City COL ended VAL f COL id VAL b420	1
 COL name VAL Long Beach COL area_type VAL City COL ended VAL f COL id VAL b68	COL name VAL Long Beah COL area_type VAL City COL ended VAL f COL id VAL b384	1
-COL name VAL Irelanc COL area_type VAL Country COL ended VAL f COL id VAL b30	COL name VAL Zagreb COL area_type VAL City COL ended VAL f COL id VAL b318	0
+COL name VAL England COL area_type VAL Subdivision COL ended VAL f COL id VAL b177	COL name VAL Boston COL area_type VAL City COL ended VAL f COL id VAL b158	0
 COL name VAL Les Laurentides Regiona1 County Municipality COL area_type VAL County COL ended VAL f COL id VAL b501	COL name VAL Les Laurentides Regional County Municipality COL area_type VAL County COL ended VAL f COL id VAL b695	1
-COL name VAL Neubau COL area_type VAL District COL ended VAL f COL id VAL b499	COL name VAL Brisbane COL area_type VAL City COL ended VAL f COL id VAL b297	0
-COL name VAL Bolivia COL area_type VAL Country COL ended VAL f COL id VAL b468	COL name VAL Soviet Union COL area_type VAL Country COL ended VAL t COL id VAL b627	0
-COL name VAL Syriw COL area_type VAL Country COL ended VAL f COL id VAL b426	COL name VAL Lausanne COL area_type VAL City COL ended VAL f COL id VAL b253	0
-COL name VAL Milano COL area_type VAL City COL ended VAL f COL id VAL b401	COL name VAL Manchester COL area_type VAL City COL ended VAL f COL id VAL b712	0
-COL name VAL Saratga COL area_type VAL City COL ended VAL f COL id VAL b725	COL name VAL Stockport COL area_type VAL City COL ended VAL f COL id VAL b235	0
+COL name VAL Warsavv COL area_type VAL City COL ended VAL f COL id VAL b249	COL name VAL Minnesota COL area_type VAL Subdivision COL ended VAL f COL id VAL b204	0
+COL name VAL Commack COL area_type VAL City COL ended VAL f COL id VAL b118	COL name VAL Landshut COL area_type VAL City COL ended VAL f COL id VAL b588	0
+COL name VAL Atlanta COL area_type VAL City COL ended VAL f COL id VAL b252	COL name VAL Romania COL area_type VAL Country COL ended VAL f COL id VAL b326	0
+COL name VAL Bremen COL area_type VAL City COL ended VAL f COL id VAL b243	COL name VAL Porto COL area_type VAL City COL ended VAL f COL id VAL b299	0
+COL name VAL Belin COL area_type VAL City COL ended VAL f COL id VAL b373	COL name VAL Saratoga COL area_type VAL City COL ended VAL f COL id VAL b95	0
 COL name VAL Amstredam COL area_type VAL City COL ended VAL f COL id VAL b337	COL name VAL Amsterdam COL area_type VAL City COL ended VAL f COL id VAL b702	1
-COL name VAL Rockingham County COL area_type VAL County COL ended VAL f COL id VAL b423	COL name VAL Wolfspurg COL area_type VAL City COL ended VAL f COL id VAL b477	0
-COL name VAL Toronto COL area_type VAL City COL ended VAL f COL id VAL b22	COL name VAL Commack COL area_type VAL City COL ended VAL f COL id VAL b118	0
-COL name VAL TrentinoAlto Adige COL area_type VAL Subdivision COL ended VAL f COL id VAL b349	COL name VAL Oakland COL area_type VAL City COL ended VAL f COL id VAL b674	0
-COL name VAL Argen6ina COL area_type VAL Country COL ended VAL f COL id VAL b231	COL name VAL Serbia and Montenegro COL area_type VAL Country COL ended VAL t COL id VAL b626	0
-COL name VAL Russia COL area_type VAL Country COL ended VAL f COL id VAL b443	COL name VAL Santa Barbara COL area_type VAL City COL ended VAL f COL id VAL b453	0
-COL name VAL Groningen COL area_type VAL City COL ended VAL f COL id VAL b699	COL name VAL Jersey City COL area_type VAL City COL ended VAL f COL id VAL b525	0
+COL name VAL Santa Ana COL area_type VAL City COL ended VAL f COL id VAL b52	COL name VAL Shibuya COL area_type VAL City COL ended VAL f COL id VAL b481	0
+COL name VAL San Francisco COL area_type VAL City COL ended VAL f COL id VAL b343	COL name VAL Abbeville COL area_type VAL City COL ended VAL f COL id VAL b612	0
+COL name VAL Praha COL area_type VAL City COL ended VAL f COL id VAL b7	COL name VAL Nancy COL area_type VAL City COL ended VAL f COL id VAL b331	0
+COL name VAL Zakreb COL area_type VAL City COL ended VAL f COL id VAL b685	COL name VAL Hong Kong COL area_type VAL Subdivision COL ended VAL f COL id VAL b439	0
+COL name VAL Taiwan COL area_type VAL Country COL ended VAL f COL id VAL b14	COL name VAL Ciudad de México COL area_type VAL City COL ended VAL f COL id VAL b473	0
+COL name VAL Atlanta COL area_type VAL City COL ended VAL f COL id VAL b252	COL name VAL Oakland COL area_type VAL City COL ended VAL f COL id VAL b674	0
 COL name VAL Wolfspurg COL area_type VAL City COL ended VAL f COL id VAL b477	COL name VAL Wolfsburg COL area_type VAL City COL ended VAL f COL id VAL b595	1
-COL name VAL California COL area_type VAL Subdivision COL ended VAL f COL id VAL b211	COL name VAL Zakreb COL area_type VAL City COL ended VAL f COL id VAL b685	0
-COL name VAL Higashi COL area_type VAL District COL ended VAL f COL id VAL b159	COL name VAL Zagreb COL area_type VAL City COL ended VAL f COL id VAL b318	0
-COL name VAL Portugal COL area_type VAL Country COL ended VAL f COL id VAL b442	COL name VAL Torrance COL area_type VAL City COL ended VAL f COL id VAL b259	0
+COL name VAL Karnadaka COL area_type VAL Subdivision COL ended VAL f COL id VAL b546	COL name VAL Vajence COL area_type VAL City COL ended VAL f COL id VAL b133	0
+COL name VAL Colombia COL area_type VAL Country COL ended VAL f COL id VAL b121	COL name VAL Ahtens COL area_type VAL City COL ended VAL f COL id VAL b569	0
+COL name VAL Malibu COL area_type VAL City COL ended VAL f COL id VAL b386	COL name VAL Richmond COL area_type VAL City COL ended VAL f COL id VAL b600	0
 COL name VAL Pho4nix COL area_type VAL City COL ended VAL f COL id VAL b493	COL name VAL Phoenix COL area_type VAL City COL ended VAL f COL id VAL b523	1
 COL name VAL Croatia COL area_type VAL Country COL ended VAL f COL id VAL b353	COL name VAL Croadia COL area_type VAL Country COL ended VAL f COL id VAL b397	1
-COL name VAL Chile COL area_type VAL Country COL ended VAL f COL id VAL b119	COL name VAL Tucsno COL area_type VAL City COL ended VAL f COL id VAL b351	0
-COL name VAL Long Beach COL area_type VAL City COL ended VAL f COL id VAL b68	COL name VAL Houston COL area_type VAL City COL ended VAL f COL id VAL b67	0
+COL name VAL Ottawa COL area_type VAL City COL ended VAL f COL id VAL b138	COL name VAL Brazil COL area_type VAL Country COL ended VAL f COL id VAL b658	0
+COL name VAL BadenWürtemberg COL area_type VAL Subdivision COL ended VAL f COL id VAL b190	COL name VAL Surrey COL area_type VAL Subdivision COL ended VAL f COL id VAL b228	0
 COL name VAL Lyno COL area_type VAL City COL ended VAL f COL id VAL b263	COL name VAL Lyon COL area_type VAL City COL ended VAL f COL id VAL b296	1
-COL name VAL Cincinnati COL area_type VAL City COL ended VAL f COL id VAL b671	COL name VAL Besançon COL area_type VAL City COL ended VAL f COL id VAL b583	0
+COL name VAL Sarpssorg COL area_type VAL Municipality COL ended VAL f COL id VAL b277	COL name VAL Leipzig COL area_type VAL City COL ended VAL f COL id VAL b675	0
 COL name VAL Lansink COL area_type VAL City COL ended VAL f COL id VAL b198	COL name VAL Lansing COL area_type VAL City COL ended VAL f COL id VAL b517	1
 COL name VAL McCrory COL area_type VAL City COL ended VAL f COL id VAL b9	COL name VAL MkCrory COL area_type VAL City COL ended VAL f COL id VAL b542	1
-COL name VAL Hamilton COL area_type VAL City COL ended VAL f COL id VAL b271	COL name VAL Kazan COL area_type VAL City COL ended VAL f COL id VAL b382	0
-COL name VAL New Port Ricey COL area_type VAL City COL ended VAL f COL id VAL b464	COL name VAL Egypt COL area_type VAL Country COL ended VAL f COL id VAL b558	0
-COL name VAL Mexiczo COL area_type VAL Country COL ended VAL f COL id VAL b340	COL name VAL Santa Barbara COL area_type VAL City COL ended VAL f COL id VAL b453	0
-COL name VAL BadenWürtemberg COL area_type VAL Subdivision COL ended VAL f COL id VAL b190	COL name VAL Long Beach COL area_type VAL City COL ended VAL f COL id VAL b68	0
-COL name VAL Croadia COL area_type VAL Country COL ended VAL f COL id VAL b397	COL name VAL Yugoslavia COL area_type VAL Country COL ended VAL t COL id VAL b537	0
+COL name VAL Hoxt0n COL area_type VAL District COL ended VAL f COL id VAL b470	COL name VAL Iowa City COL area_type VAL City COL ended VAL f COL id VAL b512	0
+COL name VAL England COL area_type VAL Subdivision COL ended VAL f COL id VAL b177	COL name VAL Auckland COL area_type VAL City COL ended VAL f COL id VAL b209	0
+COL name VAL Amsterdam COL area_type VAL City COL ended VAL f COL id VAL b702	COL name VAL Landshut COL area_type VAL City COL ended VAL f COL id VAL b588	0
+COL name VAL Karnataka COL area_type VAL Subdivision COL ended VAL f COL id VAL b422	COL name VAL Greece COL area_type VAL Country COL ended VAL f COL id VAL b216	0
+COL name VAL Los Angeles COL area_type VAL City COL ended VAL f COL id VAL b704	COL name VAL Stoc1<port COL area_type VAL City COL ended VAL f COL id VAL b660	0
 COL name VAL Mexiczo COL area_type VAL Country COL ended VAL f COL id VAL b340	COL name VAL Mexico COL area_type VAL Country COL ended VAL f COL id VAL b348	1
 COL name VAL São Vicente COL area_type VAL City COL ended VAL f COL id VAL b110	COL name VAL São Vicetne COL area_type VAL City COL ended VAL f COL id VAL b411	1
-COL name VAL Ciudad de Méxixo COL area_type VAL City COL ended VAL f COL id VAL b461	COL name VAL Lille COL area_type VAL City COL ended VAL f COL id VAL b645	0
-COL name VAL Amsterdam COL area_type VAL City COL ended VAL f COL id VAL b702	COL name VAL Hamilton COL area_type VAL City COL ended VAL f COL id VAL b271	0
-COL name VAL Munster COL area_type VAL City COL ended VAL f COL id VAL b302	COL name VAL Berlin COL area_type VAL City COL ended VAL f COL id VAL b201	0
-COL name VAL Estomia COL area_type VAL Country COL ended VAL f COL id VAL b97	COL name VAL Indka COL area_type VAL Country COL ended VAL f COL id VAL b575	0
-COL name VAL Jerjey City COL area_type VAL City COL ended VAL f COL id VAL b27	COL name VAL Estonia COL area_type VAL Country COL ended VAL f COL id VAL b556	0
-COL name VAL Jonesbcoro COL area_type VAL City COL ended VAL f COL id VAL b563	COL name VAL Istanbul COL area_type VAL City COL ended VAL f COL id VAL b286	0
+COL name VAL Taiwbn COL area_type VAL Country COL ended VAL f COL id VAL b687	COL name VAL Benson COL area_type VAL City COL ended VAL f COL id VAL b367	0
+COL name VAL Yugoslavia COL area_type VAL Country COL ended VAL t COL id VAL b537	COL name VAL Visby COL area_type VAL City COL ended VAL f COL id VAL b555	0
+COL name VAL Estomia COL area_type VAL Country COL ended VAL f COL id VAL b97	COL name VAL Richmond COL area_type VAL City COL ended VAL f COL id VAL b600	0
+COL name VAL Philippines COL area_type VAL Country COL ended VAL f COL id VAL b38	COL name VAL Warsavv COL area_type VAL City COL ended VAL f COL id VAL b249	0
+COL name VAL Sarpssorg COL area_type VAL Municipality COL ended VAL f COL id VAL b277	COL name VAL Montréai COL area_type VAL City COL ended VAL f COL id VAL b414	0
+COL name VAL Kingdom of the Netherladns COL area_type VAL Country COL ended VAL f COL id VAL b463	COL name VAL Weimaf COL area_type VAL City COL ended VAL f COL id VAL b584	0
 COL name VAL Montréal COL area_type VAL City COL ended VAL f COL id VAL b400	COL name VAL Montréai COL area_type VAL City COL ended VAL f COL id VAL b414	1
-COL name VAL Slovakia COL area_type VAL Country COL ended VAL f COL id VAL b457	COL name VAL Milano COL area_type VAL City COL ended VAL f COL id VAL b401	0
+COL name VAL Wales COL area_type VAL Subdivision COL ended VAL f COL id VAL b178	COL name VAL Arboga Municipality COL area_type VAL Municipality COL ended VAL f COL id VAL b507	0
