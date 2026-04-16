@@ -1,738 +1,738 @@
 area,name,area_type,ended
-b0,Finland,Country,f
-b1,South Korea,Country,f
-b2,Lvcca,Municipality,f
-b3,Soudh Korea,Country,f
-b4,Latvia,Country,f
-b5,Lebanon,Country,f
-b6,Oakville,City,f
-b7,Praha,City,f
-b8,France,Country,f
-b9,McCrory,City,f
-b10,Ridgewood,District,f
-b11,Algeria,Country,f
-b12,China,Country,f
-b13,Syria,Country,f
-b14,Taiwan,Country,f
-b15,Sweden,Country,f
-b16,Switzerland,Country,f
-b17,Heh|en,Municipality,f
-b18,Newbury,City,f
-b19,Poznań,City,f
-b20,Qveensbridge,District,f
-b21,Stockwell,District,f
-b22,Toronto,City,f
-b23,Fredensgorg Municipality,Municipality,f
-b24,Bahia,Subdivision,f
-b25,Helsingborg,City,f
-b26,Toulouse,City,f
-b27,Jerjey City,City,f
-b28,Québec Ci5y,City,f
-b29,Livorno,City,f
-b30,Irelanc,Country,f
-b31,Toshkent,City,f
-b32,Hehlen,Municipality,f
-b33,Lucca,Municipality,f
-b34,CornwallonHudson,District,f
-b35,San Juan,City,f
-b36,Osalca,Subdivision,f
-b37,Dominican Republic,Country,f
-b38,Philippines,Country,f
-b39,Las Vegas,City,f
-b40,Munlch,City,f
-b41,Basel,City,f
-b42,Burbank,City,f
-b43,Beirut,City,f
-b44,Nottingham,City,f
-b45,Marblehead,City,f
-b46,Bakersfield,City,f
-b47,at ssa,,f
-b48,Huntington Beach,City,f
-b49,Alascka,Subdivision,f
-b50,Derbvshire,Subdivision,f
-b51,Coventry,Subdivision,f
-b52,Santa Ana,City,f
-b53,Schio,Municipality,f
-b54,Detroit,City,f
-b55,Oceah County,County,f
-b56,Bristoo,City,f
-b57,Ricmond,City,f
-b58,Gold Coast,City,f
-b59,Seattle,City,f
-b60,Miam'l,City,f
-b61,Salford,City,f
-b62,Correggio,Municipality,f
-b63,Halland,Subdivision,f
-b64,Aben5berg,City,f
-b65,Caravagg'lo,Municipality,f
-b66,San Jose,City,f
-b67,Houston,City,f
-b68,Long Beach,City,f
-b69,Graz,City,f
-b70,Yekaterinburg,City,f
-b71,Icekand,Country,f
-b72,Montreal,Municipality,f
-b73,Sacramento,City,f
-b74,Louisevile,City,f
-b75,New South Wales,Subdivision,f
-b76,Valleta,Subdivision,f
-b77,București,City,f
-b78,Benjon,City,f
-b79,Southamptori,City,f
-b80,SaintÉmilion,City,f
-b81,Lancashire,Subdivision,f
-b82,Vilgnius,City,f
-b83,Howell Township,Municipality,f
-b84,Zaragoza,City,f
-b85,Shimomeguro,District,f
-b86,Barcelona,City,f
-b87,Brussels,City,f
-b88,Neubay,District,f
-b89,Bielefeld,City,f
-b90,Gelsenkirchen,City,f
-b91,Tokyo,Subdivision,f
-b92,Putnye,District,f
-b93,Serbia,Country,f
-b94,Åland Islands,Country,f
-b95,Saratoga,City,f
-b96,Peckham,City,f
-b97,Estomia,Country,f
-b98,Dallas,City,f
-b99,Wien,City,f
-b100,Tirol,Subdivision,f
-b101,Vidnoye,City,f
-b102,Deriver,City,f
-b103,Salisbvry,City,f
-b104,R9chester,City,f
-b105,Kingdom of the Netherlands,Country,f
-b106,Najhville,City,f
-b107,Grefrath,Municipality,f
-b108,Novl Sad,City,f
-b109,Wivenhoe,City,f
-b110,São Vicente,City,f
-b111,Cleveland,City,f
-b112,Pennsylvnia,Subdivision,f
-b113,Edinburgh,City,f
-b114,Euroie,,f
-b115,Taiyūjichō,District,f
-b116,Groninken,City,f
-b117,Charlotte,City,f
-b118,Commack,City,f
-b119,Chile,Country,f
-b120,Johanneshov,District,f
-b121,Colombia,Country,f
-b122,Potsdsm,City,f
-b123,OerErkenschwick,City,f
-b124,Engleood,City,f
-b125,Chiş8nău,City,f
-b126,Nigeria,Country,f
-b127,Netherlands,Country,f
-b128,New Zealand,Country,f
-b129,Münwter,City,f
-b130,Veneta,City,f
-b131,Pittsburgh,City,f
-b132,Northampton,City,f
-b133,Vajence,City,f
-b134,Kyot0,City,f
-b135,Millersville,Municipality,f
-b136,Palazzo Pignano,Municipality,f
-b137,Wrocław,City,f
-b138,Ottawa,City,f
-b139,Wan Chai,District,f
-b140,Amherjt,City,f
-b141,Sweetwater,City,f
-b142,Rötba,City,f
-b143,Fall Creek,City,f
-b144,Higasbi,District,f
-b145,Berri,City,f
-b146,Wood Green,District,f
-b147,East Sussex,Subdivision,f
-b148,Los Altos Hills,City,f
-b149,Southaven,City,f
-b150,Ibiza,Island,f
-b151,Nagoya,City,f
-b152,Kazn,City,f
-b153,Augusta,City,f
-b154,San Diego,City,f
-b155,Nashville,City,f
-b156,Vancouver,City,f
-b157,Nurmijärvi,City,f
-b158,Boston,City,f
-b159,Higashi,District,f
-b160,Novi Sad,City,f
-b161,Santa Ynez,City,f
-b162,Bridgeport,City,f
-b163,Helsinki,City,f
-b164,Munich,City,f
-b165,Hanover,City,f
-b166,Mannheim,City,f
-b167,Bochum,City,f
-b168,Essen,City,f
-b169,Québec City,City,f
-b170,Austin,City,f
-b171,Denver,City,f
-b172,Tucson,City,f
-b173,Wimbleeon,District,f
-b174,Honolulu,City,f
-b175,Bellingham,City,f
-b176,Northern Ireland,Subdivision,f
-b177,England,Subdivision,f
-b178,Wales,Subdivision,f
-b179,Scotland,Subdivision,f
-b180,Seoul,City,f
-b181,Anne Arundel County,County,f
-b182,Derbyshire,Subdivision,f
-b183,Darlington,Subdivision,f
-b184,Sheffield,City,f
-b185,Veneda,City,f
-b186,Seol,City,f
-b187,Radnor Township,Municipality,f
-b188,Badh,City,f
-b189,Modeste,City,f
-b190,BadenWürtemberg,Subdivision,f
-b191,Ewing Township,Municipality,f
-b192,Chicag0,City,f
-b193,Sinsheim,City,f
-b194,São Pajlo,City,f
-b195,Berriedale,City,f
-b196,Buenos Aires,City,f
-b197,Sankt Augustin,City,f
-b198,Lansink,City,f
-b199,Farmington Hills,City,f
-b200,BadenWürttemberg,Subdivision,f
-b201,Berlin,City,f
-b202,Québec,Subdivision,f
-b203,Mexicali,City,f
-b204,Minnesota,Subdivision,f
-b205,Ann Arpor,City,f
-b206,Maine,Subdivision,f
-b207,Lzubljana,City,f
-b208,Singaproe,Country,f
-b209,Auckland,City,f
-b210,Van Nuys,City,f
-b211,California,Subdivision,f
-b212,Wellington,City,f
-b213,Alaska,Subdivision,f
-b214,Alabama,Subdivision,f
-b215,Japan,Country,f
-b216,Greece,Country,f
-b217,Italy,Country,f
-b218,Israel,Country,f
-b219,Germany,Country,f
-b220,Iran,Country,f
-b221,Washington DC,Subdivision,f
-b222,Caravaggio,Municipality,f
-b223,Amerssam,City,f
-b224,Tomigaay,City,f
-b225,Frankfurd am Main,City,f
-b226,Kristiansand,Municipality,f
-b227,Svrrey,Subdivision,f
-b228,Surrey,Subdivision,f
-b229,Carlislqe,City,f
-b230,Richmond,City,f
-b231,Argen6ina,Country,f
-b232,Montrela,Municipality,f
-b233,Tunisia,Country,f
-b234,Trinidad and Tobago,Country,f
-b235,Stockport,City,f
-b236,Turkey,Country,f
-b237,Slovenia,Country,f
-b238,Ukraine,Country,f
-b239,South Africa,Country,f
-b240,Spain,Country,f
-b241,Waterloo,City,f
-b242,Sparks,City,f
-b243,Bremen,City,f
-b244,Radoofzell,City,f
-b245,Haringey,Subdivision,f
-b246,Austria,Country,f
-b247,Australia,Country,f
-b248,Argentina,Country,f
-b249,Warsavv,City,f
-b250,Williamsburg,District,f
-b251,North Hollywood,District,f
-b252,Atlanta,City,f
-b253,Lausanne,City,f
-b254,Bern,City,f
-b255,Hoxton,District,f
-b256,Liechtenstein,Country,f
-b257,Miami,City,f
-b258,East Orange,City,f
-b259,Torrance,City,f
-b260,Hanouer,City,f
-b261,New Orlans,City,f
-b262,Wellington,Subdivision,f
-b263,Lyno,City,f
-b264,Monroeville,City,f
-b265,Englewood,City,f
-b266,Hong Kobg,Subdivision,f
-b267,Arboga Muncipality,Municipality,f
-b268,Milanp,City,f
-b269,Copenagen,City,f
-b270,Valletta,Subdivision,f
-b271,Hamilton,City,f
-b272,Chicago,City,f
-b273,Arnhem,City,f
-b274,Hampurg,City,f
-b275,Côte sIvoire,Country,f
-b276,Copenhagen,City,f
-b277,Sarpssorg,Municipality,f
-b278,Loveland,City,f
-b279,Manhattan,District,f
-b280,Brooklyn,District,f
-b281,Pantin,City,f
-b282,Oklahoma City,City,f
-b283,Cincinnadi,City,f
-b284,Weimar,City,f
-b285,Dresden,City,f
-b286,Istanbul,City,f
-b287,Lisbon,City,f
-b288,Kyoto,City,f
-b289,Roma,City,f
-b290,Athens,City,f
-b291,Portland,City,f
-b292,Coalvill,City,f
-b293,Nigerya,Country,f
-b294,Columbus,City,f
-b295,St Gallen,Municipality,f
-b296,Lyon,City,f
-b297,Brisbane,City,f
-b298,The Hague,City,f
-b299,Porto,City,f
-b300,Tomigaya,City,f
-b301,Mosbach,City,f
-b302,Munster,City,f
-b303,Memphis,City,f
-b304,Bogotá,City,f
-b305,Iceland,Country,f
-b306,Lagos,City,f
-b307,Ladbroke Grove,District,f
-b308,Kuala Lumpur,City,f
-b309,Puerto Rico,Country,f
-b310,Santa Barpara,City,f
-b311,Amherst,City,f
-b312,Tiroo,Subdivision,f
-b313,SanktPeterburg,City,f
-b314,Venezuela,Country,f
-b315,Vietnam,Country,f
-b316,at sea,,f
-b317,Victoria,Subdivision,f
-b318,Zagreb,City,f
-b319,United States,Country,f
-b320,Denton,City,f
-b321,United Kingdom,Country,f
-b322,Schaerbeek  Schaarbeek,Municipality,f
-b323,Iowa C'lty,City,f
-b324,Dunedin,City,f
-b325,Chapel Hill,City,f
-b326,Romania,Country,f
-b327,Garbsen,City,f
-b328,CastropRauxel,City,f
-b329,Laual,City,f
-b330,Fiorentino,Subdivision,f
-b331,Nancy,City,f
-b332,Putney,District,f
-b333,Highgate,District,f
-b334,Morpet,City,f
-b335,Phnom Penh,City,f
-b336,Ishpeming,City,f
-b337,Amstredam,City,f
-b338,Firenzed,City,f
-b339,Bushwick,City,f
-b340,Mexiczo,Country,f
-b341,Saessolsheim,City,f
-b342,New York,City,f
-b343,San Francisco,City,f
-b344,Bonn,City,f
-b345,Mali,Country,f
-b346,Long Island Cit,City,f
-b347,New Market,City,f
-b348,Mexico,Country,f
-b349,TrentinoAlto Adige,Subdivision,f
-b350,Viveiro,Municipality,f
-b351,Tucsno,City,f
-b352,Côte dIvoire,Country,f
-b353,Croatia,Country,f
-b354,Chişinău,City,f
-b355,Long Branch,City,f
-b356,Czechia,Country,f
-b357,Radolfzell,City,f
-b358,Rostock,City,f
-b359,Brighton,City,f
-b360,Kópafogur,City,f
-b361,Steinkjer,Municipality,f
-b362,Devon,Subdivision,f
-b363,Nakaku,District,f
-b364,Fiorentimo,Subdivision,f
-b365,Baeel,City,f
-b366,Morpeth,City,f
-b367,Benson,City,f
-b368,Lower East Side,City,f
-b369,Moldova,Country,f
-b370,Metz,City,f
-b371,Pernambuco,Subdivision,f
-b372,Astoria,City,f
-b373,Belin,City,f
-b374,Nurmiäjrvi,City,f
-b375,Boondakl,District,f
-b376,Ljubljana,City,f
-b377,Black Mountain,City,f
-b378,Greenock,City,f
-b379,New Bedford,City,f
-b380,Uruguay,Country,f
-b381,Montrabé,City,f
-b382,Kazan,City,f
-b383,Waterforcl,City,f
-b384,Long Beah,City,f
-b385,Melboume,City,f
-b386,Malibu,City,f
-b387,Evansville,City,f
-b388,Berkeley,City,f
-b389,Vivelro,Municipality,f
-b390,Brigeport,City,f
-b391,Guadeloupe,Country,f
-b392,Evanston,City,f
-b393,Newport Beach,City,f
-b394,San Diegi,City,f
-b395,Simveropol,City,f
-b396,Bath,City,f
-b397,Croadia,Country,f
-b398,Vitória da Conquistta,City,f
-b399,Borgehrout,District,f
-b400,Montréal,City,f
-b401,Milano,City,f
-b402,Abenberg,City,f
-b403,Abensberg,City,f
-b404,Belluno,Municipality,f
-b405,Portlancl,City,f
-b406,Erfurt,City,f
-b407,Potsdam,City,f
-b408,Mainz,City,f
-b409,Hungari,Country,f
-b410,Stockholm,City,f
-b411,São Vicetne,City,f
-b412,Bristol,City,f
-b413,Gdańsk,City,f
-b414,Montréai,City,f
-b415,Atens,City,f
-b416,Springe,City,f
-b417,Bosotn,City,f
-b418,Rötha,City,f
-b419,Belo Horizonte,City,f
-b420,Northamoton,City,f
-b421,Ma:nz,City,f
-b422,Karnataka,Subdivision,f
-b423,Rockingham County,County,f
-b424,Bydgoszcz,City,f
-b425,Uelzen,City,f
-b426,Syriw,Country,f
-b427,Pennsylvania,Subdivision,f
-b428,Algerya,Country,f
-b429,New Jersey,Subdivision,f
-b430,Oslo,City,f
-b431,Oklahoma,Subdivision,f
-b432,New York,Subdivision,f
-b433,Lagosx,City,f
-b434,Bern,Subdivision,f
-b435,Espoo,City,f
-b436,Florida,Subdivision,f
-b437,Hawaii,Subdivision,f
-b438,India,Country,f
-b439,Hong Kong,Subdivision,f
-b440,Hungary,Country,f
-b441,Poland,Country,f
-b442,Portugal,Country,f
-b443,Russia,Country,f
-b444,Los Altow Hills,City,f
-b445,Kirishima,City,f
-b446,Wacken,Municipality,f
-b447,Milton Parc,District,f
-b448,Ypres,Municipality,f
-b449,Chevfeuse,City,f
-b450,Mayfair,District,f
-b451,Milwokee,City,f
-b452,Wimbledon,District,f
-b453,Santa Barbara,City,f
-b454,Hamilton,City,f
-b455,Long Island City,City,f
-b456,Dijon,City,f
-b457,Slovakia,Country,f
-b458,Singapore,Country,f
-b459,Aalborg,City,f
-b460,Inglewood,City,f
-b461,Ciudad de Méxixo,City,f
-b462,Athens,City,f
-b463,Kingdom of the Netherladns,Country,f
-b464,New Port Ricey,City,f
-b465,Belgium,Country,f
-b466,Belarus,Country,f
-b467,Bosnia and Herzegovina,Country,f
-b468,Bolivia,Country,f
-b469,Bermuda,Country,f
-b470,Hoxt0n,District,f
-b471,Boulder,City,f
-b472,W:lliamsburg,District,f
-b473,Ciudad de México,City,f
-b474,OstdrholzScharmbeck,City,f
-b475,Asbury Park,City,f
-b476,San Antonio,City,f
-b477,Wolfspurg,City,f
-b478,Hallant,Subdivision,f
-b479,Simferopol,City,f
-b480,Colornbia,Country,f
-b481,Shibuya,City,f
-b482,Louiseville,City,f
-b483,Roan0ke,City,f
-b484,Fredensborg Municipality,Municipality,f
-b485,Gjerstad,Municipality,f
-b486,Canberra,City,f
-b487,Boondall,District,f
-b488,Sydney,City,f
-b489,Melbourne,City,f
-b490,Frankfurt am Main,City,f
-b491,Chennai,City,f
-b492,Columbu5,City,f
-b493,Pho4nix,City,f
-b494,Prayteln,City,f
-b495,Novosibirsk,City,f
-b496,Dubai,City,f
-b497,Kópavogur,City,f
-b498,Madrid,City,f
-b499,Neubau,District,f
-b500,Grünwald,Municipality,f
-b501,Les Laurentides Regiona1 County Municipality,County,f
-b502,Rigewood,District,f
-b503,Perth,City,f
-b504,Fukuoka,City,f
-b505,Cape Town,City,f
-b506,Princeton,City,f
-b507,Arboga Municipality,Municipality,f
-b508,Jonesboro,City,f
-b509,New Orleans,City,f
-b510,Los Amgeles,City,f
-b511,Vilnius,City,f
-b512,Iowa City,City,f
-b513,Bixby,City,f
-b514,Minneapolis,City,f
-b515,Wivenhle,City,f
-b516,Cambridge,City,f
-b517,Lansing,City,f
-b518,Oxford,City,f
-b519,Chūōiu,District,f
-b520,Osaka,Subdivision,f
-b521,Oshkosh,City,f
-b522,Grenoblje,City,f
-b523,Phoenix,City,f
-b524,Amiens,City,f
-b525,Jersey City,City,f
-b526,Marl,City,f
-b527,Saint Paul,City,f
-b528,Moscow,City,f
-b529,Vallejo,City,f
-b530,Modesto,City,f
-b531,Birmingham,City,f
-b532,St Catharines,City,f
-b533,MontTremblant,City,f
-b534,Valence,City,f
-b535,Wale5,Subdivision,f
-b536,Mount Klsco,City,f
-b537,Yugoslavia,Country,t
-b538,Illingen,Municipality,f
-b539,Mancester,City,f
-b540,Hamilton,City,f
-b541,Chapel Hil,City,f
-b542,MkCrory,City,f
-b543,Ann Arbor,City,f
-b544,Newcastle,City,f
-b545,Amityville,City,f
-b546,Karnadaka,Subdivision,f
-b547,ClermontFerrand,City,f
-b548,Denmark,Country,f
-b549,Avilés,Municipality,f
-b550,St Catbarines,City,f
-b551,Cuba,Country,f
-b552,Jamaica,Country,f
-b553,Trie,City,f
-b554,Laval,City,f
-b555,Visby,City,f
-b556,Estonia,Country,f
-b557,Kuala Luiiipur,City,f
-b558,Egypt,Country,f
-b559,Lithuania,Country,f
-b560,Hanley,City,f
-b561,Haringev,Subdivision,f
-b562,Ireland,Country,f
-b563,Jonesbcoro,City,f
-b564,Malaysia,Country,f
-b565,Meicali,City,f
-b566,Asturias,Subdivision,f
-b567,Nackaku,District,f
-b568,Indonesia,Country,f
-b569,Ahtens,City,f
-b570,Catalunya,Subdivision,f
-b571,Haye5,City,f
-b572,Budwpest,City,f
-b573,Kingston,Subdivision,f
-b574,Guekph,City,f
-b575,Indka,Country,f
-b576,Gelsenk:rchen,City,f
-b577,Mount Kisco,City,f
-b578,BallrechtenDottingen,Municipality,f
-b579,Carlisle,City,f
-b580,Ven'lce,District,f
-b581,Darlinglon,Subdivision,f
-b582,Salsmanca,City,f
-b583,Besançon,City,f
-b584,Weimaf,City,f
-b585,Akron,City,f
-b586,Bayreuth,City,f
-b587,Bamberg,City,f
-b588,Landshut,City,f
-b589,São Paulo,City,f
-b590,Newcasdle upon Tyne,City,f
-b591,Port D0ver,City,f
-b592,Queensbridge,District,f
-b593,Reutlingen,City,f
-b594,Fitzroy,District,f
-b595,Wolfsburg,City,f
-b596,Ukrain,Country,f
-b597,Rancagua,City,f
-b598,Leeds,City,f
-b599,Rio de Janeiro,City,f
-b600,Richmond,City,f
-b601,Santa Monica,City,f
-b602,Firenze,City,f
-b603,Madison,City,f
-b604,Norfolk,Subdivision,f
-b605,Sibuya,City,f
-b606,United Kungdom,Country,f
-b607,Partille Municipality,Municipality,f
-b608,Stockwelo,District,f
-b609,Rochester,City,f
-b610,Wismar,City,f
-b611,Lancaxire,Subdivision,f
-b612,Abbeville,City,f
-b613,Glentale,City,f
-b614,Sargans,Municipality,f
-b615,Wismsr,City,f
-b616,Reims,City,f
-b617,Tampa,City,f
-b618,Wichita,City,f
-b619,Pratteln,City,f
-b620,Cardiff,City,f
-b621,Salamanca,City,f
-b622,Salisbury,City,f
-b623,Warsaw,City,f
-b624,Worldwide,,f
-b625,Europe,,f
-b626,Serbia and Montenegro,Country,t
-b627,Soviet Union,Country,t
-b628,Tribeca,District,f
-b629,Norway,Country,f
-b630,Waterford,City,f
-b631,Pakistan,Country,f
-b632,Port Dover,City,f
-b633,Peru,Country,f
-b634,Sant'lago de Compostela,City,f
-b635,SaindÉmilion,City,f
-b636,Daytona Beach,City,f
-b637,New Port Richey,City,f
-b638,Roanoke,City,f
-b639,Arvada,City,f
-b640,São Paulo,Subdivision,f
-b641,Berrydale,City,f
-b642,London,City,f
-b643,Lonqjumeau,City,f
-b644,Bergisch Gladbach,City,f
-b645,Lille,City,f
-b646,Risch,Municipality,f
-b647,Ekenäs,City,f
-b648,Guelph,City,f
-b649,Aberystwyth,City,f
-b650,Acquasparta,City,f
-b651,Halifax,City,f
-b652,Rosdorf,Municipality,f
-b653,Florica,Subdivision,f
-b654,Bulgarua,Country,f
-b655,Chevannes,City,f
-b656,Mihamaku,District,f
-b657,Canada,Country,f
-b658,Brazil,Country,f
-b659,Bulgaria,Country,f
-b660,Stoc1<port,City,f
-b661,Sarpsborg,Municipality,f
-b662,Cheltenham,City,f
-b663,OerErken5chwick,City,f
-b664,New Jetsey,Subdivision,f
-b665,T0kyo,Subdivision,f
-b666,Auburn,City,f
-b667,Cologne,City,f
-b668,Pensacola,City,f
-b669,Gjersdad,Municipality,f
-b670,St Louis,City,f
-b671,Cincinnati,City,f
-b672,Trier,City,f
-b673,Münster,City,f
-b674,Oakland,City,f
-b675,Leipzig,City,f
-b676,Hollywood,City,f
-b677,Jaroměř,City,f
-b678,Novosibjrsk,City,f
-b679,Glasgow,City,f
-b680,Bramham,District,f
-b681,Egytp,Country,f
-b682,Cleyeland,City,f
-b683,Chevreuse,City,f
-b684,Southampton,City,f
-b685,Zakreb,City,f
-b686,Vitória da Conquista,City,f
-b687,Taiwbn,Country,f
-b688,Ocean County,County,f
-b689,Asury Park,City,f
-b690,Quél>ec,Subdivision,f
-b691,Christchrch,City,f
-b692,Kabukichō,District,f
-b693,Dublin,City,f
-b694,Milwaukee,City,f
-b695,Les Laurentides Regional County Municipality,County,f
-b696,Glendale,City,f
-b697,Sendagaya,District,f
-b698,Provo,City,f
-b699,Groningen,City,f
-b700,Zurich,City,f
-b701,Philadelphia,City,f
-b702,Amsterdam,City,f
-b703,Santiago de Compostela,City,f
-b704,Los Angeles,City,f
-b705,Düsseldorf,City,f
-b706,Stuttgart,City,f
-b707,Manila,City,f
-b708,Burbanl<,City,f
-b709,Hawpii,Subdivision,f
-b710,Serbia and Montenetro,Country,t
-b711,Grenoble,City,f
-b712,Manchester,City,f
-b713,Liverpool,City,f
-b714,Newcastle upon Tyne,City,f
-b715,Amersham,City,f
-b716,Chel6enham,City,f
-b717,OsterholzScharmbeck,City,f
-b718,Hayes,City,f
-b719,Taiyūjjchō,District,f
-b720,Anne Arundeo County,County,f
-b721,Coalville,City,f
-b722,Kuwait City,City,f
-b723,Borgerhout,District,f
-b724,Christchurch,City,f
-b725,Saratga,City,f
-b726,Paris,City,f
-b727,Olympia,City,f
-b728,Budapest,City,f
-b729,Longjumeau,City,f
-b730,Eastu Orange,City,f
-b731,Chūōku,District,f
-b732,Eugene,City,f
-b733,Ottaqa,City,f
-b734,Hamburg,City,f
-b735,Venice,District,f
-b736,Orange,City,f
+b_7fe55b00,Finland,Country,f
+b_50baad02,South Korea,Country,f
+b_bbe13d56,Lvcca,Municipality,f
+b_fc313b2d,Soudh Korea,Country,f
+b_90922581,Latvia,Country,f
+b_6da183c5,Lebanon,Country,f
+b_07746f82,Oakville,City,f
+b_5838f3a9,Praha,City,f
+b_ebda7216,France,Country,f
+b_044dd5b4,McCrory,City,f
+b_298fde35,Ridgewood,District,f
+b_6323531e,Algeria,Country,f
+b_bab36351,China,Country,f
+b_1c0e1b2e,Syria,Country,f
+b_4bccae95,Taiwan,Country,f
+b_aaa29940,Sweden,Country,f
+b_25515c8c,Switzerland,Country,f
+b_79e8ec4b,Heh|en,Municipality,f
+b_0984d079,Newbury,City,f
+b_ee5065a7,Poznań,City,f
+b_08b8d931,Qveensbridge,District,f
+b_817c8e35,Stockwell,District,f
+b_c49e4eef,Toronto,City,f
+b_11037161,Fredensgorg Municipality,Municipality,f
+b_48e22f0f,Bahia,Subdivision,f
+b_04e0badd,Helsingborg,City,f
+b_e52068fb,Toulouse,City,f
+b_bd5da547,Jerjey City,City,f
+b_5039fb76,Québec Ci5y,City,f
+b_1ca3fd05,Livorno,City,f
+b_e3650dea,Irelanc,Country,f
+b_2af326fb,Toshkent,City,f
+b_c0645a43,Hehlen,Municipality,f
+b_e0a02654,Lucca,Municipality,f
+b_3a390abb,CornwallonHudson,District,f
+b_0a64852a,San Juan,City,f
+b_5e22791f,Osalca,Subdivision,f
+b_1c7fd7ee,Dominican Republic,Country,f
+b_66730f55,Philippines,Country,f
+b_7565e1dd,Las Vegas,City,f
+b_aa3619d4,Munlch,City,f
+b_1949f7b3,Basel,City,f
+b_c1940c15,Burbank,City,f
+b_494e84cb,Beirut,City,f
+b_4d912ec8,Nottingham,City,f
+b_605eddb7,Marblehead,City,f
+b_db90b305,Bakersfield,City,f
+b_61f1ca16,at ssa,,f
+b_3ac82602,Huntington Beach,City,f
+b_f231a5e5,Alascka,Subdivision,f
+b_27b749dc,Derbvshire,Subdivision,f
+b_67a4f029,Coventry,Subdivision,f
+b_a4d42ada,Santa Ana,City,f
+b_56897016,Schio,Municipality,f
+b_c2c67efb,Detroit,City,f
+b_c7a0e174,Oceah County,County,f
+b_18010b5d,Bristoo,City,f
+b_a893d9ca,Ricmond,City,f
+b_78fd7b95,Gold Coast,City,f
+b_c08775f8,Seattle,City,f
+b_39d8eeaa,Miam'l,City,f
+b_53182653,Salford,City,f
+b_665bd01d,Correggio,Municipality,f
+b_a090bb47,Halland,Subdivision,f
+b_01395a93,Aben5berg,City,f
+b_83638e6e,Caravagg'lo,Municipality,f
+b_72b0318b,San Jose,City,f
+b_8c02244c,Houston,City,f
+b_b8935081,Long Beach,City,f
+b_cb7fd38f,Graz,City,f
+b_5b1a7f4d,Yekaterinburg,City,f
+b_cc2fef63,Icekand,Country,f
+b_288e7f19,Montreal,Municipality,f
+b_ffefc2c8,Sacramento,City,f
+b_f71e1aa4,Louisevile,City,f
+b_6bc660b9,New South Wales,Subdivision,f
+b_93457dff,Valleta,Subdivision,f
+b_f9a7f6f5,București,City,f
+b_f488479b,Benjon,City,f
+b_93bff1d7,Southamptori,City,f
+b_d34b9205,SaintÉmilion,City,f
+b_55c7e1fd,Lancashire,Subdivision,f
+b_6cb7937c,Vilgnius,City,f
+b_f0d6e2a6,Howell Township,Municipality,f
+b_145b9c17,Zaragoza,City,f
+b_994b547c,Shimomeguro,District,f
+b_99bdabce,Barcelona,City,f
+b_5ea22ab0,Brussels,City,f
+b_1b7ad321,Neubay,District,f
+b_ff423a5a,Bielefeld,City,f
+b_67d12947,Gelsenkirchen,City,f
+b_c02fecf3,Tokyo,Subdivision,f
+b_36ec2b5b,Putnye,District,f
+b_ed8e45c5,Serbia,Country,f
+b_19d58bae,Åland Islands,Country,f
+b_ebfdea35,Saratoga,City,f
+b_205c0a7a,Peckham,City,f
+b_0f0dfd1a,Estomia,Country,f
+b_1be296c7,Dallas,City,f
+b_5f9ebae4,Wien,City,f
+b_07fe486d,Tirol,Subdivision,f
+b_b8bc236a,Vidnoye,City,f
+b_d8c01409,Deriver,City,f
+b_77efab88,Salisbvry,City,f
+b_7bb8d8ae,R9chester,City,f
+b_be5e57ef,Kingdom of the Netherlands,Country,f
+b_dc8fa146,Najhville,City,f
+b_303baed4,Grefrath,Municipality,f
+b_c7e789d3,Novl Sad,City,f
+b_c91998b2,Wivenhoe,City,f
+b_5231f784,São Vicente,City,f
+b_ef3eccf3,Cleveland,City,f
+b_3ea3bed0,Pennsylvnia,Subdivision,f
+b_0c379291,Edinburgh,City,f
+b_ad85613a,Euroie,,f
+b_553c675e,Taiyūjichō,District,f
+b_87bf0832,Groninken,City,f
+b_2c9c742b,Charlotte,City,f
+b_5af5c337,Commack,City,f
+b_5617d703,Chile,Country,f
+b_96b6e470,Johanneshov,District,f
+b_4a77ad07,Colombia,Country,f
+b_b432ed4c,Potsdsm,City,f
+b_674b89cd,OerErkenschwick,City,f
+b_87441a47,Engleood,City,f
+b_ab620a5f,Chiş8nău,City,f
+b_3fa20ae0,Nigeria,Country,f
+b_0eb8b008,Netherlands,Country,f
+b_b4492f03,New Zealand,Country,f
+b_1f7bcd11,Münwter,City,f
+b_ab5a55c3,Veneta,City,f
+b_56735e97,Pittsburgh,City,f
+b_4a0f8741,Northampton,City,f
+b_b964c808,Vajence,City,f
+b_746684ed,Kyot0,City,f
+b_393b94c6,Millersville,Municipality,f
+b_3de2521c,Palazzo Pignano,Municipality,f
+b_21939dca,Wrocław,City,f
+b_dcec6943,Ottawa,City,f
+b_a75b1b0f,Wan Chai,District,f
+b_c940351d,Amherjt,City,f
+b_8ac6fbe1,Sweetwater,City,f
+b_bfe7626d,Rötba,City,f
+b_30682d04,Fall Creek,City,f
+b_1e65d8b9,Higasbi,District,f
+b_5028b124,Berri,City,f
+b_edc8450e,Wood Green,District,f
+b_9c8c0ca8,East Sussex,Subdivision,f
+b_dd0c96d8,Los Altos Hills,City,f
+b_2cb63a84,Southaven,City,f
+b_70b074a6,Ibiza,Island,f
+b_cd7bec87,Nagoya,City,f
+b_a3011132,Kazn,City,f
+b_e52817e4,Augusta,City,f
+b_21ac6f70,San Diego,City,f
+b_4b62a7e2,Nashville,City,f
+b_c985b9ce,Vancouver,City,f
+b_1643e628,Nurmijärvi,City,f
+b_83a4a649,Boston,City,f
+b_55a26b93,Higashi,District,f
+b_cff86221,Novi Sad,City,f
+b_88c65c33,Santa Ynez,City,f
+b_b541e731,Bridgeport,City,f
+b_6e5ee01f,Helsinki,City,f
+b_2a3b7147,Munich,City,f
+b_77978d6e,Hanover,City,f
+b_1b929f87,Mannheim,City,f
+b_d0520ece,Bochum,City,f
+b_075a32da,Essen,City,f
+b_059fefd3,Québec City,City,f
+b_1498c8aa,Austin,City,f
+b_df121488,Denver,City,f
+b_e6df91b8,Tucson,City,f
+b_4209788b,Wimbleeon,District,f
+b_0d906d79,Honolulu,City,f
+b_40d65c76,Bellingham,City,f
+b_d7b2adfe,Northern Ireland,Subdivision,f
+b_dad0faa6,England,Subdivision,f
+b_75617576,Wales,Subdivision,f
+b_59819ac0,Scotland,Subdivision,f
+b_b2169030,Seoul,City,f
+b_967abebb,Anne Arundel County,County,f
+b_e086d3d6,Derbyshire,Subdivision,f
+b_bd90ecbd,Darlington,Subdivision,f
+b_28559b4f,Sheffield,City,f
+b_375cf840,Veneda,City,f
+b_0c1d007a,Seol,City,f
+b_df80c148,Radnor Township,Municipality,f
+b_e8eeb28e,Badh,City,f
+b_5219f717,Modeste,City,f
+b_4f55b0d3,BadenWürtemberg,Subdivision,f
+b_7ad67bc0,Ewing Township,Municipality,f
+b_f6cbdeeb,Chicag0,City,f
+b_9b2db54d,Sinsheim,City,f
+b_edd5b37f,São Pajlo,City,f
+b_8a719c86,Berriedale,City,f
+b_243ef22d,Buenos Aires,City,f
+b_0024f118,Sankt Augustin,City,f
+b_3a25d789,Lansink,City,f
+b_7c1c4189,Farmington Hills,City,f
+b_6598cfbb,BadenWürttemberg,Subdivision,f
+b_bd97d130,Berlin,City,f
+b_a881d02f,Québec,Subdivision,f
+b_b06eaef6,Mexicali,City,f
+b_4fb5ab50,Minnesota,Subdivision,f
+b_b981754b,Ann Arpor,City,f
+b_e64c894c,Maine,Subdivision,f
+b_077ebebf,Lzubljana,City,f
+b_5110465c,Singaproe,Country,f
+b_2966d810,Auckland,City,f
+b_3c5759b5,Van Nuys,City,f
+b_54260a61,California,Subdivision,f
+b_f25f8a58,Wellington,City,f
+b_8579c390,Alaska,Subdivision,f
+b_9524e1ba,Alabama,Subdivision,f
+b_1dae07b0,Japan,Country,f
+b_ce1be18d,Greece,Country,f
+b_1625598f,Italy,Country,f
+b_b644c42e,Israel,Country,f
+b_f52429f8,Germany,Country,f
+b_952a336d,Iran,Country,f
+b_510402e7,Washington DC,Subdivision,f
+b_dae495fc,Caravaggio,Municipality,f
+b_b1f6398f,Amerssam,City,f
+b_b6d4602e,Tomigaay,City,f
+b_7d64e766,Frankfurd am Main,City,f
+b_58fdd91f,Kristiansand,Municipality,f
+b_1f3ea2d8,Svrrey,Subdivision,f
+b_c5bafda6,Surrey,Subdivision,f
+b_96c57021,Carlislqe,City,f
+b_c037516c,Richmond,City,f
+b_ca737adb,Argen6ina,Country,f
+b_95108194,Montrela,Municipality,f
+b_21e39238,Tunisia,Country,f
+b_fe61e239,Trinidad and Tobago,Country,f
+b_d41eafbe,Stockport,City,f
+b_2d28a2ce,Turkey,Country,f
+b_84380dd2,Slovenia,Country,f
+b_01a6d6e7,Ukraine,Country,f
+b_f6a17cc5,South Africa,Country,f
+b_87a329b8,Spain,Country,f
+b_30969e12,Waterloo,City,f
+b_3ba23410,Sparks,City,f
+b_0ebe6023,Bremen,City,f
+b_9608c529,Radoofzell,City,f
+b_56561f04,Haringey,Subdivision,f
+b_f0532f5b,Austria,Country,f
+b_7aae3e0e,Australia,Country,f
+b_3658da94,Argentina,Country,f
+b_fbde5d16,Warsavv,City,f
+b_d0024b27,Williamsburg,District,f
+b_b0124da4,North Hollywood,District,f
+b_00813f1c,Atlanta,City,f
+b_3684e251,Lausanne,City,f
+b_d3b2f383,Bern,City,f
+b_791e4edc,Hoxton,District,f
+b_0f4c78cc,Liechtenstein,Country,f
+b_85ec0c83,Miami,City,f
+b_dae46ffd,East Orange,City,f
+b_d88ce1ad,Torrance,City,f
+b_2c85ff4a,Hanouer,City,f
+b_a9dc3206,New Orlans,City,f
+b_13f0f15f,Wellington,Subdivision,f
+b_0fa162fd,Lyno,City,f
+b_7cefd0ae,Monroeville,City,f
+b_b705aee4,Englewood,City,f
+b_049ad658,Hong Kobg,Subdivision,f
+b_b1afe752,Arboga Muncipality,Municipality,f
+b_f9d77702,Milanp,City,f
+b_c54b26cb,Copenagen,City,f
+b_d4a26c51,Valletta,Subdivision,f
+b_dd325c39,Hamilton,City,f
+b_b2abedde,Chicago,City,f
+b_1a22ef6f,Arnhem,City,f
+b_2031d1f1,Hampurg,City,f
+b_297bc6a3,Côte sIvoire,Country,f
+b_58ff60e5,Copenhagen,City,f
+b_5635a320,Sarpssorg,Municipality,f
+b_b3d9a4d7,Loveland,City,f
+b_1903eb2f,Manhattan,District,f
+b_0d4a9d57,Brooklyn,District,f
+b_8b1095e5,Pantin,City,f
+b_4f1287d9,Oklahoma City,City,f
+b_b04eba38,Cincinnadi,City,f
+b_2acd7d8d,Weimar,City,f
+b_04893935,Dresden,City,f
+b_bba611cb,Istanbul,City,f
+b_1d339971,Lisbon,City,f
+b_6b076b29,Kyoto,City,f
+b_bffe3505,Roma,City,f
+b_82b16231,Athens,City,f
+b_66e3f6d8,Portland,City,f
+b_eb4ade20,Coalvill,City,f
+b_5dec3ce8,Nigerya,Country,f
+b_4ac8f6fa,Columbus,City,f
+b_cb83bd23,St Gallen,Municipality,f
+b_942c7c0f,Lyon,City,f
+b_4db508b2,Brisbane,City,f
+b_c22a2606,The Hague,City,f
+b_ae58f84c,Porto,City,f
+b_c96b37c2,Tomigaya,City,f
+b_4be38d0e,Mosbach,City,f
+b_965755a1,Munster,City,f
+b_228b41d3,Memphis,City,f
+b_3d283e17,Bogotá,City,f
+b_e307bafa,Iceland,Country,f
+b_660d877d,Lagos,City,f
+b_cf7607ca,Ladbroke Grove,District,f
+b_fe15951e,Kuala Lumpur,City,f
+b_2b1304de,Puerto Rico,Country,f
+b_69eaca94,Santa Barpara,City,f
+b_ce4bdb16,Amherst,City,f
+b_d781ae1c,Tiroo,Subdivision,f
+b_6b5fd7a7,SanktPeterburg,City,f
+b_f870695d,Venezuela,Country,f
+b_1f5cb596,Vietnam,Country,f
+b_e7b24269,at sea,,f
+b_970abba9,Victoria,Subdivision,f
+b_c68735f0,Zagreb,City,f
+b_39848c1c,United States,Country,f
+b_be622040,Denton,City,f
+b_4074ac69,United Kingdom,Country,f
+b_bfb923fd,Schaerbeek  Schaarbeek,Municipality,f
+b_91685ac9,Iowa C'lty,City,f
+b_c3c9529d,Dunedin,City,f
+b_763c5207,Chapel Hill,City,f
+b_bd1e5c5e,Romania,Country,f
+b_ebc65e30,Garbsen,City,f
+b_34279a08,CastropRauxel,City,f
+b_1f7398e4,Laual,City,f
+b_9e506333,Fiorentino,Subdivision,f
+b_8403cf49,Nancy,City,f
+b_1a926e13,Putney,District,f
+b_46c546b3,Highgate,District,f
+b_937e358f,Morpet,City,f
+b_6afb6e10,Phnom Penh,City,f
+b_2f1ddaba,Ishpeming,City,f
+b_3409e926,Amstredam,City,f
+b_e149f9aa,Firenzed,City,f
+b_766e37a0,Bushwick,City,f
+b_78fb6262,Mexiczo,Country,f
+b_3699761e,Saessolsheim,City,f
+b_2a96a3e3,New York,City,f
+b_6a40038c,San Francisco,City,f
+b_d89c09d5,Bonn,City,f
+b_2ceac04b,Mali,Country,f
+b_68198b15,Long Island Cit,City,f
+b_3ba1c969,New Market,City,f
+b_230708b6,Mexico,Country,f
+b_d7f44559,TrentinoAlto Adige,Subdivision,f
+b_ffe47048,Viveiro,Municipality,f
+b_a273e49b,Tucsno,City,f
+b_00204a54,Côte dIvoire,Country,f
+b_ccae973d,Croatia,Country,f
+b_43ab0b03,Chişinău,City,f
+b_1a141d5f,Long Branch,City,f
+b_15235ed9,Czechia,Country,f
+b_523e3451,Radolfzell,City,f
+b_d62b1d2c,Rostock,City,f
+b_26aa9a01,Brighton,City,f
+b_5fce5d8d,Kópafogur,City,f
+b_438a0f98,Steinkjer,Municipality,f
+b_355860fa,Devon,Subdivision,f
+b_7af6295c,Nakaku,District,f
+b_3868677f,Fiorentimo,Subdivision,f
+b_5481e25a,Baeel,City,f
+b_7a0d64a8,Morpeth,City,f
+b_5e5480e0,Benson,City,f
+b_57fc5fc5,Lower East Side,City,f
+b_f3d9ff34,Moldova,Country,f
+b_cd7cfcc2,Metz,City,f
+b_18b3fa25,Pernambuco,Subdivision,f
+b_d99b65ca,Astoria,City,f
+b_b0b936af,Belin,City,f
+b_9dceb4fe,Nurmiäjrvi,City,f
+b_733290c5,Boondakl,District,f
+b_ec433ae2,Ljubljana,City,f
+b_745840d3,Black Mountain,City,f
+b_3631a795,Greenock,City,f
+b_3344711f,New Bedford,City,f
+b_225a3caf,Uruguay,Country,f
+b_649e2073,Montrabé,City,f
+b_49eb5132,Kazan,City,f
+b_37c13131,Waterforcl,City,f
+b_7e1883e7,Long Beah,City,f
+b_07ed3f6c,Melboume,City,f
+b_9c90b8aa,Malibu,City,f
+b_c8938e01,Evansville,City,f
+b_d71cf607,Berkeley,City,f
+b_c39a1b2b,Vivelro,Municipality,f
+b_05dd877b,Brigeport,City,f
+b_a182dcb9,Guadeloupe,Country,f
+b_d5af03ce,Evanston,City,f
+b_f246006f,Newport Beach,City,f
+b_fbe6645d,San Diegi,City,f
+b_28e511f5,Simveropol,City,f
+b_28ef625d,Bath,City,f
+b_939aa1a5,Croadia,Country,f
+b_6fb49fe7,Vitória da Conquistta,City,f
+b_5a98fd68,Borgehrout,District,f
+b_89589199,Montréal,City,f
+b_aca24111,Milano,City,f
+b_fa155d57,Abenberg,City,f
+b_0312f95a,Abensberg,City,f
+b_5dfc5406,Belluno,Municipality,f
+b_8774f6b7,Portlancl,City,f
+b_9691732f,Erfurt,City,f
+b_be9f8b0c,Potsdam,City,f
+b_51e84ab2,Mainz,City,f
+b_daba7741,Hungari,Country,f
+b_ce961285,Stockholm,City,f
+b_5eb7fe76,São Vicetne,City,f
+b_a0b3ef6b,Bristol,City,f
+b_e33e208b,Gdańsk,City,f
+b_0706d74e,Montréai,City,f
+b_9fe139d8,Atens,City,f
+b_d03fd0f0,Springe,City,f
+b_c3b954e4,Bosotn,City,f
+b_2bc3c595,Rötha,City,f
+b_39c6b8df,Belo Horizonte,City,f
+b_9ef94b22,Northamoton,City,f
+b_cbaad244,Ma:nz,City,f
+b_697225b0,Karnataka,Subdivision,f
+b_2657dcd1,Rockingham County,County,f
+b_f57413dc,Bydgoszcz,City,f
+b_89ba9574,Uelzen,City,f
+b_a9a01859,Syriw,Country,f
+b_2103afff,Pennsylvania,Subdivision,f
+b_52af5b18,Algerya,Country,f
+b_23553ae0,New Jersey,Subdivision,f
+b_5b2d8713,Oslo,City,f
+b_23abfdd8,Oklahoma,Subdivision,f
+b_178670f2,New York,Subdivision,f
+b_501977dd,Lagosx,City,f
+b_18c5797c,Bern,Subdivision,f
+b_3e7a200c,Espoo,City,f
+b_88ebdd2b,Florida,Subdivision,f
+b_0729a74a,Hawaii,Subdivision,f
+b_132083b8,India,Country,f
+b_27845948,Hong Kong,Subdivision,f
+b_f4bcefa2,Hungary,Country,f
+b_8529e379,Poland,Country,f
+b_151fed68,Portugal,Country,f
+b_57e0715e,Russia,Country,f
+b_305a42aa,Los Altow Hills,City,f
+b_7a01a412,Kirishima,City,f
+b_1d4b3f9f,Wacken,Municipality,f
+b_a6fb30ee,Milton Parc,District,f
+b_181ef4b2,Ypres,Municipality,f
+b_cda0462f,Chevfeuse,City,f
+b_0e5e6b79,Mayfair,District,f
+b_d54ca6aa,Milwokee,City,f
+b_092b0622,Wimbledon,District,f
+b_a58ccb82,Santa Barbara,City,f
+b_3707e3c3,Hamilton,City,f
+b_951d7295,Long Island City,City,f
+b_d5505ffa,Dijon,City,f
+b_0c521dd2,Slovakia,Country,f
+b_2bcae94a,Singapore,Country,f
+b_0aec4e1d,Aalborg,City,f
+b_a0a6cc83,Inglewood,City,f
+b_28bc57c7,Ciudad de Méxixo,City,f
+b_26b4c16b,Athens,City,f
+b_41d1da7f,Kingdom of the Netherladns,Country,f
+b_914645d9,New Port Ricey,City,f
+b_dc169a51,Belgium,Country,f
+b_e690a152,Belarus,Country,f
+b_e545c7c0,Bosnia and Herzegovina,Country,f
+b_94c7fe8f,Bolivia,Country,f
+b_f082f5ec,Bermuda,Country,f
+b_aff554ff,Hoxt0n,District,f
+b_ee3486e7,Boulder,City,f
+b_68fe73f3,W:lliamsburg,District,f
+b_598bd6e8,Ciudad de México,City,f
+b_2b1bddf3,OstdrholzScharmbeck,City,f
+b_826687af,Asbury Park,City,f
+b_33ee0520,San Antonio,City,f
+b_145f5460,Wolfspurg,City,f
+b_8783ac03,Hallant,Subdivision,f
+b_a2f3b9e4,Simferopol,City,f
+b_dff9177a,Colornbia,Country,f
+b_73a320c4,Shibuya,City,f
+b_7d78a2b3,Louiseville,City,f
+b_f23be680,Roan0ke,City,f
+b_2eacbf27,Fredensborg Municipality,Municipality,f
+b_2b9f331a,Gjerstad,Municipality,f
+b_02513148,Canberra,City,f
+b_9488642a,Boondall,District,f
+b_875c69d9,Sydney,City,f
+b_2776ed95,Melbourne,City,f
+b_972b486f,Frankfurt am Main,City,f
+b_4b470447,Chennai,City,f
+b_79c288f8,Columbu5,City,f
+b_8468c1bd,Pho4nix,City,f
+b_aa0fa6b9,Prayteln,City,f
+b_9e04069c,Novosibirsk,City,f
+b_2f7e3db5,Dubai,City,f
+b_63074b7a,Kópavogur,City,f
+b_8351f64b,Madrid,City,f
+b_7039d3dd,Neubau,District,f
+b_92402558,Grünwald,Municipality,f
+b_88b5e44f,Les Laurentides Regiona1 County Municipality,County,f
+b_c37919a0,Rigewood,District,f
+b_53e87f4f,Perth,City,f
+b_2eecdd1a,Fukuoka,City,f
+b_751497c2,Cape Town,City,f
+b_9ae71bc6,Princeton,City,f
+b_61bdcd1d,Arboga Municipality,Municipality,f
+b_bf4d8f97,Jonesboro,City,f
+b_6fcf9fb7,New Orleans,City,f
+b_f388359b,Los Amgeles,City,f
+b_7388773c,Vilnius,City,f
+b_2705f271,Iowa City,City,f
+b_35276f61,Bixby,City,f
+b_15e0e4f4,Minneapolis,City,f
+b_98d0931f,Wivenhle,City,f
+b_ae28e282,Cambridge,City,f
+b_bdba2290,Lansing,City,f
+b_137fd31c,Oxford,City,f
+b_c7ea7f33,Chūōiu,District,f
+b_930de951,Osaka,Subdivision,f
+b_20fd5602,Oshkosh,City,f
+b_9c9c2991,Grenoblje,City,f
+b_7e7ec6d2,Phoenix,City,f
+b_96261530,Amiens,City,f
+b_437f329c,Jersey City,City,f
+b_88bb9d7a,Marl,City,f
+b_e93d19c2,Saint Paul,City,f
+b_8b8f8a8a,Moscow,City,f
+b_72026f1b,Vallejo,City,f
+b_1ab24e61,Modesto,City,f
+b_f2b376c4,Birmingham,City,f
+b_96de2059,St Catharines,City,f
+b_64cf8ca1,MontTremblant,City,f
+b_4821134a,Valence,City,f
+b_bb9895b9,Wale5,Subdivision,f
+b_9aa113b2,Mount Klsco,City,f
+b_17237cd0,Yugoslavia,Country,t
+b_d03db388,Illingen,Municipality,f
+b_6fc60c9a,Mancester,City,f
+b_a188bf4a,Hamilton,City,f
+b_05698971,Chapel Hil,City,f
+b_eeba3a66,MkCrory,City,f
+b_cd1878aa,Ann Arbor,City,f
+b_fbe44465,Newcastle,City,f
+b_40723df7,Amityville,City,f
+b_6aa0a523,Karnadaka,Subdivision,f
+b_7442f031,ClermontFerrand,City,f
+b_502ef140,Denmark,Country,f
+b_a2459cca,Avilés,Municipality,f
+b_3e6a1d60,St Catbarines,City,f
+b_fa352a76,Cuba,Country,f
+b_f570f7b0,Jamaica,Country,f
+b_53c9c192,Trie,City,f
+b_63e1d94d,Laval,City,f
+b_b4e834c2,Visby,City,f
+b_dd2ab77e,Estonia,Country,f
+b_faf377b7,Kuala Luiiipur,City,f
+b_b72c1f63,Egypt,Country,f
+b_656431b5,Lithuania,Country,f
+b_a81fa827,Hanley,City,f
+b_0b4137f8,Haringev,Subdivision,f
+b_b1bdcd7b,Ireland,Country,f
+b_e34c6285,Jonesbcoro,City,f
+b_1dd452a1,Malaysia,Country,f
+b_d573674a,Meicali,City,f
+b_f39cad46,Asturias,Subdivision,f
+b_f3f90d20,Nackaku,District,f
+b_69681970,Indonesia,Country,f
+b_c8928322,Ahtens,City,f
+b_5a31b098,Catalunya,Subdivision,f
+b_5e2f4f62,Haye5,City,f
+b_24382ea9,Budwpest,City,f
+b_81293d8c,Kingston,Subdivision,f
+b_5556b4d8,Guekph,City,f
+b_8c338a28,Indka,Country,f
+b_31aa11dc,Gelsenk:rchen,City,f
+b_42ffe132,Mount Kisco,City,f
+b_5729a57a,BallrechtenDottingen,Municipality,f
+b_b91f48a0,Carlisle,City,f
+b_11e8bff1,Ven'lce,District,f
+b_8d2dcc77,Darlinglon,Subdivision,f
+b_5690deae,Salsmanca,City,f
+b_d382c699,Besançon,City,f
+b_c440f7ae,Weimaf,City,f
+b_dd4c307a,Akron,City,f
+b_a23cbda7,Bayreuth,City,f
+b_01e144cc,Bamberg,City,f
+b_2c553114,Landshut,City,f
+b_7e4e099b,São Paulo,City,f
+b_09efca38,Newcasdle upon Tyne,City,f
+b_4ba332df,Port D0ver,City,f
+b_383f3002,Queensbridge,District,f
+b_d6703d04,Reutlingen,City,f
+b_5a9b0db0,Fitzroy,District,f
+b_1df51407,Wolfsburg,City,f
+b_5a3a55f1,Ukrain,Country,f
+b_e89e2937,Rancagua,City,f
+b_4911acd4,Leeds,City,f
+b_2c58db70,Rio de Janeiro,City,f
+b_886568e5,Richmond,City,f
+b_0a000d22,Santa Monica,City,f
+b_1ae29ed9,Firenze,City,f
+b_10cd18a1,Madison,City,f
+b_bea78477,Norfolk,Subdivision,f
+b_8e73afc6,Sibuya,City,f
+b_e66f5e1c,United Kungdom,Country,f
+b_b5acfbba,Partille Municipality,Municipality,f
+b_c36fe9c5,Stockwelo,District,f
+b_dd47bd41,Rochester,City,f
+b_3d05da6f,Wismar,City,f
+b_e5518b09,Lancaxire,Subdivision,f
+b_8a4da5d3,Abbeville,City,f
+b_6e0fa89e,Glentale,City,f
+b_f7e75c38,Sargans,Municipality,f
+b_d8ae435a,Wismsr,City,f
+b_445ee220,Reims,City,f
+b_83c1063d,Tampa,City,f
+b_b481d275,Wichita,City,f
+b_431bff39,Pratteln,City,f
+b_913b91a5,Cardiff,City,f
+b_020ffb65,Salamanca,City,f
+b_22682430,Salisbury,City,f
+b_2d2b0e90,Warsaw,City,f
+b_e3591130,Worldwide,,f
+b_0c38d199,Europe,,f
+b_0ea7314d,Serbia and Montenegro,Country,t
+b_33e9f920,Soviet Union,Country,t
+b_adf6d210,Tribeca,District,f
+b_b9c7b1ca,Norway,Country,f
+b_821e3c19,Waterford,City,f
+b_52536b40,Pakistan,Country,f
+b_05c43b86,Port Dover,City,f
+b_ace1d7d1,Peru,Country,f
+b_ed8a4b60,Sant'lago de Compostela,City,f
+b_4deae57e,SaindÉmilion,City,f
+b_7660096d,Daytona Beach,City,f
+b_caa4e036,New Port Richey,City,f
+b_2eb82058,Roanoke,City,f
+b_eddb042a,Arvada,City,f
+b_113d0ae1,São Paulo,Subdivision,f
+b_d92911b9,Berrydale,City,f
+b_01704fc3,London,City,f
+b_47126b67,Lonqjumeau,City,f
+b_7eb7e912,Bergisch Gladbach,City,f
+b_b277df65,Lille,City,f
+b_79064462,Risch,Municipality,f
+b_78d98bd0,Ekenäs,City,f
+b_2c998594,Guelph,City,f
+b_d220c191,Aberystwyth,City,f
+b_00d32a26,Acquasparta,City,f
+b_9f7f9299,Halifax,City,f
+b_b2af3fd9,Rosdorf,Municipality,f
+b_a5e0a50d,Florica,Subdivision,f
+b_342fa05d,Bulgarua,Country,f
+b_a19d6e69,Chevannes,City,f
+b_ece84992,Mihamaku,District,f
+b_2d499a6c,Canada,Country,f
+b_b3b357f5,Brazil,Country,f
+b_7a45155a,Bulgaria,Country,f
+b_4e9d2e69,Stoc1<port,City,f
+b_53f654ee,Sarpsborg,Municipality,f
+b_342d5682,Cheltenham,City,f
+b_e4709d02,OerErken5chwick,City,f
+b_9245c5ae,New Jetsey,Subdivision,f
+b_4e1b9b03,T0kyo,Subdivision,f
+b_ceba47b7,Auburn,City,f
+b_11eb2b09,Cologne,City,f
+b_6833f460,Pensacola,City,f
+b_70312d35,Gjersdad,Municipality,f
+b_4134edc8,St Louis,City,f
+b_4860ecdb,Cincinnati,City,f
+b_5ee230f9,Trier,City,f
+b_575c7ec5,Münster,City,f
+b_d9302df1,Oakland,City,f
+b_149584ab,Leipzig,City,f
+b_e36d3d27,Hollywood,City,f
+b_709bef88,Jaroměř,City,f
+b_f46e2779,Novosibjrsk,City,f
+b_eeb71fa9,Glasgow,City,f
+b_22ac05fc,Bramham,District,f
+b_13be0b9b,Egytp,Country,f
+b_dd0033fb,Cleyeland,City,f
+b_46876a20,Chevreuse,City,f
+b_2e5a3263,Southampton,City,f
+b_6ffd0320,Zakreb,City,f
+b_ef331333,Vitória da Conquista,City,f
+b_935c8f3f,Taiwbn,Country,f
+b_47523ffa,Ocean County,County,f
+b_59ea2718,Asury Park,City,f
+b_2f04dd64,Quél>ec,Subdivision,f
+b_9d955a1a,Christchrch,City,f
+b_95b6d035,Kabukichō,District,f
+b_f24df493,Dublin,City,f
+b_f832316c,Milwaukee,City,f
+b_0ff49b72,Les Laurentides Regional County Municipality,County,f
+b_63e8aa86,Glendale,City,f
+b_b508b903,Sendagaya,District,f
+b_3c16a8cb,Provo,City,f
+b_98e11b7d,Groningen,City,f
+b_f6d756ee,Zurich,City,f
+b_0a8ec94a,Philadelphia,City,f
+b_9d71cffc,Amsterdam,City,f
+b_889ef263,Santiago de Compostela,City,f
+b_403d25b6,Los Angeles,City,f
+b_22833a68,Düsseldorf,City,f
+b_9c7ff26e,Stuttgart,City,f
+b_1a4c13e3,Manila,City,f
+b_360c6cab,Burbanl<,City,f
+b_31849b2f,Hawpii,Subdivision,f
+b_4d19fb4c,Serbia and Montenetro,Country,t
+b_55f1b7bc,Grenoble,City,f
+b_5672b54e,Manchester,City,f
+b_d37b07f9,Liverpool,City,f
+b_6b8f6bc9,Newcastle upon Tyne,City,f
+b_5dfed183,Amersham,City,f
+b_6653cfd8,Chel6enham,City,f
+b_a6a3abf9,OsterholzScharmbeck,City,f
+b_8ffb8187,Hayes,City,f
+b_af56b913,Taiyūjjchō,District,f
+b_6daa3418,Anne Arundeo County,County,f
+b_470930e3,Coalville,City,f
+b_2176bd96,Kuwait City,City,f
+b_57f31bae,Borgerhout,District,f
+b_8a88c51e,Christchurch,City,f
+b_5003f6f4,Saratga,City,f
+b_4f64e269,Paris,City,f
+b_1ca29f68,Olympia,City,f
+b_f85ad49f,Budapest,City,f
+b_2db20ca6,Longjumeau,City,f
+b_7b2ba21e,Eastu Orange,City,f
+b_0ed83faa,Chūōku,District,f
+b_734ae8f4,Eugene,City,f
+b_377f86b2,Ottaqa,City,f
+b_cbc661f0,Hamburg,City,f
+b_925c5431,Venice,District,f
+b_e988dad0,Orange,City,f

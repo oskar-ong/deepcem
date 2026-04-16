@@ -626,6 +626,7 @@ def main():
         train_ids, valid_ids, test_ids = map(get_ids, splits)
 
         df_basics = pd.read_csv(cfg.path_basics)
+        df_basics = df_basics.drop(columns=cfg.drop_list)
         # df_basics = df_basics.set_index(cfg.id_col)
         uf: UnionFind = entity_ufs[cfg.name]
         # map every entity to its root

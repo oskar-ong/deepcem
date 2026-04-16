@@ -19,7 +19,7 @@ ENTITY_SCHEMA = {
 }
 
 JUNCTION_SCHEMA = {
-    "artist_credit_name": ["artist_credit", "artist"]
+    "artist_credit_name": [("artist_credit", "artist_credit"), ("artist", "artist")]
 }
 
 INPUT_DIR = "./data/raw/music/50/"
@@ -124,7 +124,9 @@ class SchemaTransformer:
 
 # Run
 transformer = SchemaTransformer(
-    ENTITY_SCHEMA_IMDB, JUNCTION_SCHEMA_IMDB, INPUT_DIR_IMDB, OUTPUT_DIR_IMDB)
+    ENTITY_SCHEMA, JUNCTION_SCHEMA, INPUT_DIR, OUTPUT_DIR)
+# transformer = SchemaTransformer(
+#     ENTITY_SCHEMA_IMDB, JUNCTION_SCHEMA_IMDB, INPUT_DIR_IMDB, OUTPUT_DIR_IMDB)
 transformer.generate_mappings()
 transformer.transform_entities()
 transformer.transform_existing_junctions()
