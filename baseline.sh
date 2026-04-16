@@ -15,7 +15,7 @@
 # NEED TO ADJUST THIS EVERYTIME EXPERIMENT NUMBER CHANGES!!!
 # TOTAL EXPERIMENTS: POLLUTION * SEEDS * SIZES 
 # 2 * 1 * 2 = 4
-#SBATCH --array=0-3%4
+#SBATCH --array=0-2%3
 
 # Clear all interactively loaded modules
 module purge
@@ -28,9 +28,9 @@ conda activate deepcem2
 
 # Slurm array math to map 1D ID to 3D parameters
 # Index logic:
-NUM_POLLUTION=2
-NUM_SEEDS=1
-NUM_SIZES=2
+NUM_POLLUTION=1
+NUM_SEEDS=3
+NUM_SIZES=1
 
 # Calculate indices using integer division and modulo
 # This ensures every unique Task ID maps to a unique combination
@@ -40,11 +40,11 @@ idx_t=$((SLURM_ARRAY_TASK_ID % NUM_SIZES))
 
 # Define your parameter arrays
 #POLLUTION_LEVELS=("source" "low" "medium" "high")
-POLLUTION_LEVELS=("source" "high")
+POLLUTION_LEVELS=("high")
 #SEEDS=(0 42 1337)
-SEEDS=(42)
+SEEDS=(1 50 1337)
 #TRAIN_SIZES=(125 625 3125 1) # '1' represents 100% or full
-TRAIN_SIZES=(125 1) # '1' represents 100% or full
+TRAIN_SIZES=(1) # '1' represents 100% or full
 
 # Pick the values for this specific task
 P=${POLLUTION_LEVELS[$idx_p]}

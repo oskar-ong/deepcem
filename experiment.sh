@@ -18,8 +18,8 @@
 #SBATCH --time=04:00:00
 # NEED TO ADJUST THIS EVERYTIME EXPERIMENT NUMBER CHANGES!!!
 # TOTAL EXPERIMENTS: POLLUTION * SEEDS * SIZES 
-# 2 * 1 * 2  = 4
-#SBATCH --array=0-3%4
+# 1 * 3 * 1  = 4
+#SBATCH --array=0-2%3
 
 # Clear all interactively loaded modules
 module purge
@@ -44,11 +44,11 @@ idx_t=$((SLURM_ARRAY_TASK_ID % NUM_SIZES))
 
 # Define your parameter arrays
 #POLLUTION_LEVELS=("source" "low" "medium" "high")
-POLLUTION_LEVELS=("source" "high")
-#SEEDS=(0 42 1337)
-SEEDS=(42)
+POLLUTION_LEVELS=("high")
+SEEDS=(1 50 1337)
+# SEEDS=(42)
 #TRAIN_SIZES=(125 625 3125 1) # '1' represents 100% or full
-TRAIN_SIZES=(125 1) # '1' represents 100% or full
+TRAIN_SIZES=(1) # '1' represents 100% or full
 
 # Pick the values for this specific task
 P=${POLLUTION_LEVELS[$idx_p]}
