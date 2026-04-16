@@ -9,10 +9,10 @@ from typing import Tuple
 def setup_logger(base_name="CollectiveER"):
     # Generate timestamp: e.g., 20260306_1012
     timestamp = datetime.now().strftime("%m-%d-%H:%M")
-    log_filename = f"logs/{timestamp}_{base_name}.log"
-
+    run_id, _ = get_experiment_metadata()
+    log_filename = f"logs/{run_id}_{base_name}.log"
     # Create logger
-    logger = logging.getLogger(base_name)
+    logger = logging.getLogger(run_id)
     logger.setLevel(logging.INFO)
 
     # Create file handler
@@ -40,11 +40,8 @@ def get_experiment_metadata(override_id=None) -> Tuple[str, str]:
 
     if job_id:
         run_id = job_id
-        short_ts = datetime.now().strftime("%H%M%S")
         if task_id:
-            run_id += f"_{task_id}_{short_ts}"
-        else:
-            run_id += f"_{short_ts}"
+            run_id += f"_{task_id}"
         env = "hpc"
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

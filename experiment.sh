@@ -18,7 +18,6 @@
 #SBATCH --time=04:00:00
 # NEED TO ADJUST THIS EVERYTIME EXPERIMENT NUMBER CHANGES!!!
 # TOTAL EXPERIMENTS: POLLUTION * SEEDS * SIZES 
-# 1 * 3 * 1  = 4
 #SBATCH --array=0-2%3
 
 # Clear all interactively loaded modules
@@ -31,10 +30,18 @@ module load anaconda # or micromamba or anaconda
 conda activate deepcem2
 
 # Slurm array math to map 1D ID to 3D parameters
-# Index logic:
-NUM_POLLUTION=2
-NUM_SEEDS=1
-NUM_SIZES=2
+
+NUM_POLLUTION=1
+POLLUTION_LEVELS=("high")
+#POLLUTION_LEVELS=("source" "low" "medium" "high")
+
+NUM_SEEDS=3
+SEEDS=(10 20 30)
+# SEEDS=(42)
+
+NUM_SIZES=1
+TRAIN_SIZES=(1) # '1' represents 100% or full
+#TRAIN_SIZES=(125 625 3125 1) # '1' represents 100% or full
 
 # Calculate indices using integer division and modulo
 # This ensures every unique Task ID maps to a unique combination
@@ -42,13 +49,6 @@ idx_p=$((SLURM_ARRAY_TASK_ID / (NUM_SEEDS * NUM_SIZES) % NUM_POLLUTION))
 idx_s=$((SLURM_ARRAY_TASK_ID / NUM_SIZES % NUM_SEEDS))
 idx_t=$((SLURM_ARRAY_TASK_ID % NUM_SIZES))
 
-# Define your parameter arrays
-#POLLUTION_LEVELS=("source" "low" "medium" "high")
-POLLUTION_LEVELS=("high")
-SEEDS=(1 50 1337)
-# SEEDS=(42)
-#TRAIN_SIZES=(125 625 3125 1) # '1' represents 100% or full
-TRAIN_SIZES=(1) # '1' represents 100% or full
 
 # Pick the values for this specific task
 P=${POLLUTION_LEVELS[$idx_p]}
@@ -106,10 +106,18 @@ else
 fi
 
 echo "--- STARTING JOB $SLURM_ARRAY_TASK_ID ---"
+echo "--- BASELINE ---"
+echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T "
+
+srun python src/exp_baseline.py \
+    --dataset "$DATASET" \
+    --pollution "$P" \
+    --seed "$S" \
+    --train_suffix "$SUFFIX"
+
 echo "--- EXPERIMENT ---"
 echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T | Binning: $BINNING"
 
-# No need to pass number of tasks to srun
 srun python src/exp_main.py --dataset "$DATASET" --pollution "$P" \
     --seed "$S" \
     --train_suffix "$SUFFIX"

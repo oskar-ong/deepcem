@@ -95,28 +95,28 @@ def main():
             runtime=runtime)
 
         # --- Phase 2: Re-finetune, still only attributes ---
-        task_2 = f"{entity.model}_rel"
-        log.info(" ")
-        log.info("--- Start Finetune Phase 2: ---")
-        refinetune(task_2,
-                   entity.dir_path, entity.model, log, None, args.train_suffix, args.seed)
+        # task_2 = f"{entity.model}_rel"
+        # log.info(" ")
+        # log.info("--- Start Finetune Phase 2: ---")
+        # refinetune(task_2,
+        #            entity.dir_path, entity.model, log, None, args.train_suffix, args.seed)
 
-        output_fp = f"{out_path}/baseline2.jsonl"
+        # output_fp = f"{out_path}/baseline2.jsonl"
 
-        metrics_tuple = evaluate(task_2, input_path,
-                                 output_fp, log, input_path, entity.dir_path, [])
-        end_time = time.perf_counter()
-        runtime_phase2 = end_time - start_time
+        # metrics_tuple = evaluate(task_2, input_path,
+        #                          output_fp, log, input_path, entity.dir_path, [])
+        # end_time = time.perf_counter()
+        # runtime_phase2 = end_time - start_time
 
-        sql_log.log_metrics(
-            run_id=run_id,
-            pollution=args.pollution,
-            iteration=1,
-            is_final=True,
-            testset="test",
-            metrics_dict=metrics,
-            num_pairs=0,  # TODO Read from experiment config
-            runtime=runtime)
+        # sql_log.log_metrics(
+        #     run_id=run_id,
+        #     pollution=args.pollution,
+        #     iteration=1,
+        #     is_final=True,
+        #     testset="test",
+        #     metrics_dict=metrics,
+        #     num_pairs=0,  # TODO Read from experiment config
+        #     runtime=runtime)
 
 
 if __name__ == "__main__":
