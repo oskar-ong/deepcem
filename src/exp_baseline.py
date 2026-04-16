@@ -86,6 +86,7 @@ def main():
         # --- Log metrics ---
         sql_log.log_metrics(
             run_id=run_id,
+            entity=entity.name,
             pollution=args.pollution,
             iteration=0,
             is_final=True,

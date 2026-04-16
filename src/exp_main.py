@@ -75,6 +75,7 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
 
         sql_log.log_metrics(
             run_id=run_id,
+            entity=entity.name,
             pollution=pollution,
             iteration=iter_num,
             is_final=False,
@@ -96,10 +97,11 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         runtime_conv = end_conv - start_time
         sql_log.log_metrics(
             run_id=run_id,
+            entity=entity.name,
             pollution=pollution,
             iteration=iter_num,
             is_final=False,
-            testset="conv",
+            testset="test",
             metrics_dict=metrics_conv,
             num_pairs=0,  # TODO
             runtime=runtime_conv)
@@ -324,14 +326,6 @@ def main():
     # stop after max iterations
     max_iters = 4
 
-    # # --- read and resolve configs ---
-    # raw_config = REGISTRY[args.dataset]
-    # config = {
-    #     name: entity.resolve_paths(
-    #         args.dataset, args.pollution, args.binn)
-    #     for name, entity in raw_config.items()
-    # }
-
     log.info(" ")
     log.info("--- Finetune Phase Completed ---")
     log.info(" ")
@@ -378,8 +372,8 @@ def main():
             conn.execute("""
                 UPDATE metrics 
                 SET is_final = 1 
-                WHERE run_id = ? AND iteration = ? AND testset = 'conv'
-            """, (run_id, last_iter))
+                WHERE run_id = ? AND entity = ? AND iteration = ? AND testset = 'conv'
+            """, (run_id, entity_name, last_iter))
 
 
 if __name__ == "__main__":
