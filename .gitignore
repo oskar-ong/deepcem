@@ -224,6 +224,7 @@ __marimo__/
 configs.json
 
 cem_results.db
+cem_results_old.db
 
 /out
 

@@ -236,6 +236,7 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
 
+    run_id, _ = get_experiment_metadata()
     # --- logging ---
     log = setup_logger(
         f"experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
@@ -284,7 +285,7 @@ def main():
         input_path = f"{entity.empty_scores_dir}/test.txt"
 
         out_path = Path(
-            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune")
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune/{run_id}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase1_eval.jsonl"
         evaluate(task_base, input_path, output_fp, log, input_path,
