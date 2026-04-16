@@ -365,13 +365,13 @@ def main():
         log.info(f"Finished iteration {i}")
         log.info(f"-------------------------")
 
-    for entity_name in config.values():
+    for entity in config.values():
         with sqlite3.connect("cem_results.db", timeout=60) as conn:
             conn.execute("""
                 UPDATE metrics 
                 SET is_final = 1 
                 WHERE run_id = ? AND entity = ? AND iteration = ? AND testset = 'test'
-            """, (run_id, entity_name, last_iter))
+            """, (run_id, entity.name, last_iter))
 
 
 if __name__ == "__main__":
