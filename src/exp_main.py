@@ -304,8 +304,8 @@ def main():
         end_time = time.perf_counter()
         runtime_phase1 = end_time - start_time
 
-        task_rel = f"{task_base}_rel"
         # --- Phase 2: Re-finetune, include relaitonal scores ---
+        task_rel = f"{task_base}_rel"
         log.info(" ")
         log.info("--- Start Finetune Phase 2: ---")
         refinetune(task_rel,

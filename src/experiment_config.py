@@ -302,7 +302,7 @@ DITTO_CONFIG = {
     "batch_size": 32,
     "max_len": 128,
     "learning_rate": 3e-5,
-    "epochs": 15,
+    "epochs": 10,
     "lm": "roberta",
     "seed": 0
 }
