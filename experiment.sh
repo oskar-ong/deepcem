@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # Request one Task (unless using mpi4py)
-#SBATCH --job-name=cem-e2e-sweep
+#SBATCH --job-name=e2e-sweep-cem
 #SBATCH --partition=epyc-gpu
 #SBATCH --output=./slurm_logs/e2e-%j-%a.out
 # Request memory per CPU
 #SBATCH --mem-per-cpu=32G
 # Request n CPUs for your task.
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=1
 # Request GPU Ressources (model:number)
 #SBATCH --gpus=a100:1
 #SBATCH --mail-type=all
@@ -104,8 +104,8 @@ if [ "$T" == "1" ]; then
 else
     SUFFIX="$T"
 fi
-
-echo "--- STARTING JOB $SLURM_ARRAY_TASK_ID ---"
+echo "--- STARTING JOB ID: ${SLURM_JOB_ID}_${SLURM_ARRAY_TASK_ID} ---"
+echo "--- STARTING TASK ID $SLURM_ARRAY_TASK_ID ---"
 echo "--- BASELINE ---"
 echo "Dataset: $DATASET | Pollution: $P | Seed: $S | Size: $T "
 
