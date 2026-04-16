@@ -24,15 +24,14 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
-def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp, seed, train_suffix, run_ids):
+def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp, seed, train_suffix, run_id):
     start_time = time.perf_counter()
     f1_scores = {}
 
     # create a new folder to store scores
     # reuse log run_id
-    job_id, _ = get_experiment_metadata()
     out_path = Path(
-        f"./ditto_out/{dataset}/{pollution}/inference/{job_id}")
+        f"./ditto_out/{dataset}/{pollution}/inference/{run_id}")
     Path(out_path).mkdir(parents=True, exist_ok=True)
     new_scores = {name: entity_dict.copy()
                   for name, entity_dict in scores.items()}
@@ -70,8 +69,6 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
                       "recall": metrics[2], "f1_score": metrics[3]}
         end_cp = time.perf_counter()
         runtime_cp = end_cp - start_time
-
-        run_id = run_ids[entity.name]
 
         sql_log.log_metrics(
             run_id=run_id,
@@ -239,7 +236,7 @@ def main():
     run_id, _ = get_experiment_metadata()
     # --- logging ---
     log = setup_logger(
-        f"experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
+        f"{run_id}_experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
     log.info(f"Start Finetuning: Dataset: {args.dataset}")
 
     sql_log = ExperimentLogger("cem_results.db")
@@ -263,7 +260,6 @@ def main():
     except ValueError:
         train_size = 1.0
 
-    run_ids = {}
     for entity in config.values():
         start_time = time.perf_counter()
         # get special tokens
@@ -291,7 +287,8 @@ def main():
         evaluate(task_base, input_path, output_fp, log, input_path,
                  entity.empty_scores_dir, special_tokens)
 
-        run_ids[entity.name] = sql_log.log_run(
+        sql_log.log_run(
+            run_id=run_id,
             dataset=dataset,
             entity=entity.name,
             train_size=train_size,
@@ -354,7 +351,7 @@ def main():
         log.info(f"Start iteration {i}")
         last_iter = i
         scores, f1_scores = run_iteration(
-            i, config, scores, relation_maps, sql_log, log, args.dataset, args.pollution, args.binning, args.dampening, args.seed, args.train_suffix, run_ids)
+            i, config, scores, relation_maps, sql_log, log, args.dataset, args.pollution, args.binning, args.dampening, args.seed, args.train_suffix, run_id)
         converged = True
         for k in f1_scores.keys():
 
@@ -368,12 +365,12 @@ def main():
         log.info(f"Finished iteration {i}")
         log.info(f"-------------------------")
 
-    for entity_name, run_id in run_ids.items():
+    for entity_name in config.values():
         with sqlite3.connect("cem_results.db", timeout=60) as conn:
             conn.execute("""
                 UPDATE metrics 
                 SET is_final = 1 
-                WHERE run_id = ? AND entity = ? AND iteration = ? AND testset = 'conv'
+                WHERE run_id = ? AND entity = ? AND iteration = ? AND testset = 'test'
             """, (run_id, entity_name, last_iter))
 
 

@@ -8,11 +8,9 @@ from typing import Tuple
 
 def setup_logger(base_name="CollectiveER"):
     # Generate timestamp: e.g., 20260306_1012
-    timestamp = datetime.now().strftime("%m-%d-%H:%M")
-    run_id, _ = get_experiment_metadata()
-    log_filename = f"logs/{run_id}_{base_name}.log"
+    log_filename = f"logs/{base_name}.log"
     # Create logger
-    logger = logging.getLogger(run_id)
+    logger = logging.getLogger(base_name)
     logger.setLevel(logging.INFO)
 
     # Create file handler
@@ -115,10 +113,8 @@ class ExperimentLogger:
                             JOIN runs r ON m.run_id = r.run_id AND m.entity = r.entity
                         """)
 
-    def log_run(self, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
+    def log_run(self, run_id, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
-            run_id, self.env_type = get_experiment_metadata()
-            run_id = f"{run_id}"
             query = """INSERT OR IGNORE INTO runs (run_id, timestamp, entity, dataset, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
             conn.execute(query, (run_id, entity, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset,  train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed

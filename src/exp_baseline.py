@@ -5,7 +5,7 @@ import time
 from baseline_config import REGISTRY, BaselineConfig
 from experiment_config import DITTO_CONFIG
 from ditto_wrapper import evaluate, finetune, refinetune
-from logging_setup import ExperimentLogger, setup_logger
+from logging_setup import ExperimentLogger, get_experiment_metadata, setup_logger
 
 
 def main():
@@ -18,9 +18,10 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
 
+    run_id, _ = get_experiment_metadata()
     # --- logging ---
     log = setup_logger(
-        f"baseline_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
+        f"{run_id}_baseline_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
     log.info(f"BASELINE EXPERIMENT")
     log.info(
         f"Start Finetuning: Dataset: {args.dataset} {args.pollution}_ {args.seed}_ {args.train_suffix}")
@@ -35,8 +36,6 @@ def main():
         for name, entity in raw_config.items()
     }
 
-    configs_path = f"./models/ditto/configs.json"
-
     for entity in config.values():
         start_time = time.perf_counter()
 
@@ -47,7 +46,7 @@ def main():
         input_path = f"{entity.dir_path}/test.txt"
 
         out_path = Path(
-            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}")
+            f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/{run_id}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/baseline.jsonl"
         metrics_tuple = evaluate(entity.model, input_path,
@@ -71,6 +70,7 @@ def main():
             train_size = 1.0
 
         run_id = sql_log.log_run(
+            run_id=run_id,
             dataset=dataset,
             entity=entity.name,
             train_size=train_size,
