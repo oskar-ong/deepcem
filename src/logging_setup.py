@@ -34,12 +34,12 @@ def get_experiment_metadata(override_id=None) -> Tuple[str, str]:
         return override_id, "local"
 
     job_id = os.environ.get("SLURM_JOB_ID")
-    task_id = os.environ.get("SLURM_ARRAY_TASK_ID")
+    # task_id = os.environ.get("SLURM_ARRAY_TASK_ID")
 
     if job_id:
         run_id = job_id
-        if task_id:
-            run_id += f"_{task_id}"
+    #    if task_id:
+    #        run_id += f"_{task_id}"
         env = "hpc"
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -115,7 +115,7 @@ class ExperimentLogger:
 
     def log_run(self, run_id, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
-            query = """INSERT OR IGNORE INTO runs (run_id, timestamp, entity, dataset, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
+            query = """INSERT OR IGNORE INTO runs (run_id, entity, timestamp,  dataset, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
             conn.execute(query, (run_id, entity, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset,  train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
                                  ))

@@ -90,7 +90,7 @@ def main():
             pollution=args.pollution,
             iteration=0,
             is_final=True,
-            testset="test",
+            testset="baseline",
             metrics_dict=metrics,
             num_pairs=0,  # TODO Read from experiment config
             runtime=runtime)
