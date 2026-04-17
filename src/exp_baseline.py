@@ -6,6 +6,7 @@ from baseline_config import REGISTRY, BaselineConfig
 from experiment_config import DITTO_CONFIG
 from ditto_wrapper import evaluate, finetune, refinetune
 from logging_setup import ExperimentLogger, get_experiment_metadata, setup_logger
+from utils import resolve_train_size
 
 
 def main():
@@ -57,17 +58,7 @@ def main():
         end_time = time.perf_counter()
         runtime = end_time - start_time
 
-        # train_size
-        try:
-            if args.train_suffix == "":
-                train_size = 1.0
-            else:
-                # Converts "_125" -> 125 -> 0.125 (assuming base is 1000)
-                # Or adjust logic based on your specific naming convention
-                train_size = round(
-                    float(args.train_suffix.strip("_")) / 1000.0, 3)
-        except ValueError:
-            train_size = 1.0
+        train_size = resolve_train_size(train_suffix=args.train_suffix)
 
         sql_log.log_run(
             run_id=run_id,
@@ -117,6 +108,10 @@ def main():
         #     metrics_dict=metrics,
         #     num_pairs=0,  # TODO Read from experiment config
         #     runtime=runtime)
+
+    log.info("------------------------------------------------")
+    log.info("Baseline Done!")
+    log.info("------------------------------------------------")
 
 
 if __name__ == "__main__":

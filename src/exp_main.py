@@ -11,6 +11,7 @@ import json
 from ditto_wrapper import evaluate, finetune, refinetune
 from experiment_config import REGISTRY, ExperimentConfig, DITTO_CONFIG
 from logging_setup import ExperimentLogger, get_experiment_metadata, setup_logger
+from utils import resolve_train_size
 
 
 def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set[str]]:
@@ -37,11 +38,12 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
                   for name, entity_dict in scores.items()}
 
     for entity in config.values():
-        # task
-        if train_suffix == "":
-            task = f"{entity.model_base}_{seed}_rel"
-        else:
-            task = f"{entity.model_base}_{seed}_{train_suffix}_rel"
+
+        task = f"{resolve_base_task(entity.model_base, seed, train_suffix)}_rel"
+        # if train_suffix == "":
+        #     task = f"{entity.model_base}_{seed}_rel"
+        # else:
+        #     task = f"{entity.model_base}_{seed}_{train_suffix}_rel"
 
         # special tokens
         # special_tokens = []
@@ -231,10 +233,12 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
 
-    run_id, env = get_experiment_metadata()
+    train_size = resolve_train_size(args.train_suffix)
+
+    run_id, _ = get_experiment_metadata()
     # --- logging ---
     log = setup_logger(
-        f"{run_id}_experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
+        f"{run_id}_experiment_{dataset}_{args.pollution}_{args.seed}_{train_size}")
     log.info(f"Start Finetuning: Dataset: {args.dataset}")
 
     sql_log = ExperimentLogger("cem_results.db")
@@ -247,17 +251,6 @@ def main():
         for name, entity in raw_config.items()
     }
 
-    # train_size
-    try:
-        if args.train_suffix == "":
-            train_size = 1.0
-        else:
-            # Converts "_125" -> 125 -> 0.125 (assuming base is 1000)
-            # Or adjust logic based on your specific naming convention
-            train_size = round(float(args.train_suffix.strip("_")) / 1000.0, 3)
-    except ValueError:
-        train_size = 1.0
-
     for entity in config.values():
         start_time = time.perf_counter()
         # get special tokens
@@ -266,10 +259,8 @@ def main():
         #     special_tokens.append(r.score_col)
         special_tokens = None
 
-        if args.train_suffix == "":
-            task_base = f"{entity.model_base}_{args.seed}"
-        else:
-            task_base = f"{entity.model_base}_{args.seed}_{args.train_suffix}"
+        task_base = resolve_base_task(
+            entity.model_base, args.seed, args.train_suffix)
         # --- Phase 1: Initial Finetune, only attribute values ---
         log.info(" ")
         log.info("--- Start Finetune Phase 1: ---")
@@ -390,6 +381,13 @@ def main():
                 SET is_final = 1 
                 WHERE run_id = ? AND entity = ? AND iteration = ? AND metric_type = 'test'
             """, (run_id, entity.name, last_iter))
+
+
+def resolve_base_task(entity_model_base, seed, train_suffix):
+    if not train_suffix:
+        return f"{entity_model_base}_{seed}"
+    clean_suffix = train_suffix.lstrip("_")
+    return f"{entity_model_base}_{seed}_{clean_suffix}"
 
 
 if __name__ == "__main__":
