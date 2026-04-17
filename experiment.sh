@@ -72,14 +72,13 @@ export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1
 
-# DATASET=$1
-# if [ -z "$DATASET" ]; then
-#     echo "Error: No dataset provided. Position 1"
-#     exit 1
-# fi
+DATASET=$1
+if [ -z "$DATASET" ]; then
+    echo "Error: No dataset provided. Position 1"
+    exit 1
+fi
 
-
-DATASET=""
+# DATASET=""
 # BINNING=false
 
 # # 2. Parse arguments
@@ -90,11 +89,11 @@ DATASET=""
 #     esac
 # done
 
-if [ -z "$DATASET" ]; then
-    echo "Error: No dataset provided."
-    echo "Usage: ./script.sh [DATASET] [--binning]"
-    exit 1
-fi
+# if [ -z "$DATASET" ]; then
+#     echo "Error: No dataset provided."
+#     echo "Usage: ./script.sh [DATASET] [--binning]"
+#     exit 1
+# fi
 
 # BIN_ARG=""
 # if [ "$BINNING" = true ]; then
