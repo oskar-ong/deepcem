@@ -73,10 +73,9 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         sql_log.log_metrics(
             run_id=run_id,
             entity=entity.name,
-            pollution=pollution,
             iteration=iter_num,
             is_final=False,
-            testset="scoring",
+            metric_type="scoring",
             metrics_dict=metrics_cp,
             num_pairs=0,  # TODO Read from experiment config
             runtime=runtime_cp)
@@ -95,10 +94,9 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
         sql_log.log_metrics(
             run_id=run_id,
             entity=entity.name,
-            pollution=pollution,
             iteration=iter_num,
             is_final=False,
-            testset="test",
+            metric_type="test",
             metrics_dict=metrics_conv,
             num_pairs=0,  # TODO
             runtime=runtime_conv)
@@ -233,7 +231,7 @@ def main():
     args = parser.parse_args()
     dataset = args.dataset
 
-    run_id, _ = get_experiment_metadata()
+    run_id, env = get_experiment_metadata()
     # --- logging ---
     log = setup_logger(
         f"{run_id}_experiment_{dataset}_{args.pollution}_{args.seed}_{args.train_suffix}")
@@ -284,25 +282,35 @@ def main():
             f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune/{run_id}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase1_eval.jsonl"
-        evaluate(task_base, input_path, output_fp, log, input_path,
-                 entity.empty_scores_dir, special_tokens)
+        metrics_phase1 = evaluate(task_base, input_path, output_fp, log, input_path,
+                                  entity.empty_scores_dir, special_tokens)
 
         sql_log.log_run(
             run_id=run_id,
             dataset=dataset,
-            entity=entity.name,
             train_size=train_size,
-            model_type="1",
+            pollution=args.pollution,
+            seed=args.seed,
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],
             learning_rate=DITTO_CONFIG['learning_rate'],
             epochs=DITTO_CONFIG['epochs'],
             lm=DITTO_CONFIG['lm'],
-            neg_ratio=0,  # TODO
-            seed=args.seed)
+            neg_ratio=0  # TODO
+        )
 
         end_time = time.perf_counter()
         runtime_phase1 = end_time - start_time
+
+        sql_log.log_metrics(
+            run_id=run_id,
+            entity=entity.name,
+            iteration=0,
+            is_final=False,
+            metric_type="phase1",
+            metrics_dict=metrics_phase1,
+            num_pairs=0,  # TODO Read from experiment config
+            runtime=runtime_phase1)
 
         # --- Phase 2: Re-finetune, include relaitonal scores ---
         task_rel = f"{task_base}_rel"
@@ -314,10 +322,20 @@ def main():
         input_path = f"{entity.injected_scores_dir}/test.txt"
 
         output_fp = f"{out_path}/phase2_eval.jsonl"
-        evaluate(task_rel, input_path, output_fp, log, input_path,
-                 entity.injected_scores_dir, special_tokens)
+        metrics_phase2 = evaluate(task_rel, input_path, output_fp, log, input_path,
+                                  entity.injected_scores_dir, special_tokens)
         end_time = time.perf_counter()
         runtime_phase2 = end_time - start_time
+
+        sql_log.log_metrics(
+            run_id=run_id,
+            entity=entity.name,
+            iteration=0,
+            is_final=False,
+            metric_type="phase2",
+            metrics_dict=metrics_phase2,
+            num_pairs=0,  # TODO Read from experiment config
+            runtime=runtime_phase2)
 
     # --- start matching ---
 
@@ -370,7 +388,7 @@ def main():
             conn.execute("""
                 UPDATE metrics 
                 SET is_final = 1 
-                WHERE run_id = ? AND entity = ? AND iteration = ? AND testset = 'test'
+                WHERE run_id = ? AND entity = ? AND iteration = ? AND metric_type = 'test'
             """, (run_id, entity.name, last_iter))
 
 

@@ -69,28 +69,27 @@ def main():
         except ValueError:
             train_size = 1.0
 
-        run_id = sql_log.log_run(
+        sql_log.log_run(
             run_id=run_id,
             dataset=dataset,
-            entity=entity.name,
             train_size=train_size,
-            model_type="baseline",
+            pollution=args.pollution,
+            seed=args.seed,
             batch_size=DITTO_CONFIG['batch_size'],
             max_len=DITTO_CONFIG['max_len'],
             learning_rate=DITTO_CONFIG['learning_rate'],
             epochs=DITTO_CONFIG['epochs'],
             lm=DITTO_CONFIG['lm'],
-            neg_ratio=0,  # TODO
-            seed=args.seed)
+            neg_ratio=0  # TODO
+        )
 
         # --- Log metrics ---
         sql_log.log_metrics(
             run_id=run_id,
             entity=entity.name,
-            pollution=args.pollution,
             iteration=0,
             is_final=True,
-            testset="baseline",
+            metric_type="baseline",
             metrics_dict=metrics,
             num_pairs=0,  # TODO Read from experiment config
             runtime=runtime)

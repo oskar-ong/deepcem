@@ -34,12 +34,14 @@ def get_experiment_metadata(override_id=None) -> Tuple[str, str]:
         return override_id, "local"
 
     job_id = os.environ.get("SLURM_JOB_ID")
-    # task_id = os.environ.get("SLURM_ARRAY_TASK_ID")
+    array_job_id = os.environ.get("SLURM_ARRAY_JOB_ID")
+    task_id = os.environ.get("SLURM_ARRAY_TASK_ID")
 
-    if job_id:
+    if array_job_id and task_id:
+        run_id = f"{array_job_id}_{task_id}"
+        env = "hpc_array"
+    elif job_id:
         run_id = job_id
-    #    if task_id:
-    #        run_id += f"_{task_id}"
         env = "hpc"
     else:
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -60,20 +62,18 @@ class ExperimentLogger:
             conn.execute("PRAGMA journal_mode=WAL;")
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS runs (
-                    run_id TEXT,
-                    entity TEXT,
+                    run_id TEXT PRIMARY KEY,
                     timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-                    dataset TEXT,     
+                    dataset TEXT,
                     train_size REAL,
-                    model_type TEXT,
+                    pollution TEXT,
+                    seed INTEGER,
                     batch_size INTEGER,
                     max_len INTEGER,
                     learning_rate REAL,
                     epochs INTEGER,
                     lm TEXT,
-                    neg_ratio INTEGER, 
-                    seed INTEGER,
-                    PRIMARY KEY (run_id, entity)
+                    neg_ratio INTEGER
                 )
             """)
 
@@ -81,56 +81,69 @@ class ExperimentLogger:
                 CREATE TABLE IF NOT EXISTS metrics (
                     run_id TEXT,
                     entity TEXT,
-                    pollution TEXT,
+                    metric_type TEXT,
                     iteration INTEGER,
                     is_final BOOLEAN,
-                    testset TEXT,
                     precision REAL,
                     recall REAL,
                     f1_score REAL,
                     num_pairs INTEGER,
-                    runtime REAL,
-                    FOREIGN KEY(run_id, entity) REFERENCES runs(run_id, entity)
+                    runtime REAL
                 )
             """)
 
-            conn.execute("""
-                            CREATE VIEW IF NOT EXISTS experiment_summary AS
-                            SELECT 
-                                r.dataset,
-                                r.entity, 
-                                r.train_size, 
-                                r.seed, 
-                                r.lm,
-                                m.pollution, 
-                                m.iteration, 
-                                m.f1_score,
-                                m.precision,
-                                m.recall,
-                                m.is_final,
-                                r.run_id
-                            FROM metrics m
-                            JOIN runs r ON m.run_id = r.run_id AND m.entity = r.entity
-                        """)
-
-    def log_run(self, run_id, dataset, entity, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
+    def log_run(self, run_id, dataset, train_size, pollution, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
-            query = """INSERT OR IGNORE INTO runs (run_id, entity, timestamp,  dataset, train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed) 
-                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-            conn.execute(query, (run_id, entity, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), dataset,  train_size, model_type, batch_size, max_len, learning_rate, epochs, lm, neg_ratio, seed
+            query = """INSERT OR IGNORE INTO runs (
+            run_id, 
+            timestamp, 
+            dataset, 
+            train_size, 
+            pollution, 
+            seed, 
+            batch_size, 
+            max_len, 
+            learning_rate, 
+            epochs, 
+            lm, 
+            neg_ratio) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+            conn.execute(query, (run_id,
+                                 datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                                 dataset,
+                                 train_size,
+                                 pollution,
+                                 seed,
+                                 batch_size,
+                                 max_len,
+                                 learning_rate,
+                                 epochs,
+                                 lm,
+                                 neg_ratio,
                                  ))
             return run_id
 
-    def log_metrics(self, run_id, entity, pollution, iteration, is_final, testset, metrics_dict, num_pairs, runtime):
+    def log_metrics(self, run_id, entity, iteration, is_final, metric_type, metrics_dict, num_pairs, runtime):
         with sqlite3.connect(self.db_path, timeout=60) as conn:
-            query = """INSERT INTO metrics (run_id, entity, pollution, iteration, is_final, testset, precision, recall, f1_score, num_pairs, runtime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+            query = """INSERT INTO metrics (
+            run_id, 
+            entity, 
+            metric_type, 
+            iteration, 
+            is_final, 
+            precision, 
+            recall, 
+            f1_score, 
+            num_pairs, 
+            runtime) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+
             conn.execute(query, (
                 run_id,
                 entity,
-                pollution,
+                metric_type,
                 iteration,
                 is_final,
-                testset,
                 metrics_dict['precision'],
                 metrics_dict['recall'],
                 metrics_dict['f1_score'],
