@@ -273,8 +273,11 @@ def main():
             f"./ditto_out/{dataset}/{args.pollution}/{entity.name}/finetune/{run_id}")
         Path(out_path).mkdir(parents=True, exist_ok=True)
         output_fp = f"{out_path}/phase1_eval.jsonl"
-        metrics_phase1 = evaluate(task_base, input_path, output_fp, log, input_path,
-                                  entity.empty_scores_dir, special_tokens)
+        metrics = evaluate(task_base, input_path, output_fp, log, input_path,
+                           entity.empty_scores_dir, special_tokens)
+
+        metrics_phase1 = {"accuracy": metrics[0], "precision": metrics[1],
+                          "recall": metrics[2], "f1_score": metrics[3]}
 
         sql_log.log_run(
             run_id=run_id,
@@ -313,8 +316,12 @@ def main():
         input_path = f"{entity.injected_scores_dir}/test.txt"
 
         output_fp = f"{out_path}/phase2_eval.jsonl"
-        metrics_phase2 = evaluate(task_rel, input_path, output_fp, log, input_path,
-                                  entity.injected_scores_dir, special_tokens)
+        metrics = evaluate(task_rel, input_path, output_fp, log, input_path,
+                           entity.injected_scores_dir, special_tokens)
+
+        metrics_phase2 = {"accuracy": metrics[0], "precision": metrics[1],
+                          "recall": metrics[2], "f1_score": metrics[3]}
+
         end_time = time.perf_counter()
         runtime_phase2 = end_time - start_time
 
