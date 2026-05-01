@@ -9,7 +9,7 @@ import pandas as pd
 
 from entity_config import EntityConfig
 from data_structures import processedEntity
-DROPOUT_PROB = 0.15
+DROPOUT_PROB = 0.2
 
 
 def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):

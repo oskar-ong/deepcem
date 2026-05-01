@@ -483,7 +483,6 @@ def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str,
 
 
 def analyze_graph_centrality(global_rel_map):
-    # 1. Build the NetworkX graph
     G = nx.Graph()
     for node, neighbors in global_rel_map.items():
         for neighbor in neighbors:
@@ -492,12 +491,10 @@ def analyze_graph_centrality(global_rel_map):
     print(
         f"Graph stats: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
 
-    # 2. Find Articulation Points (Cut Vertices)
     # These are nodes that, if removed, increase the number of connected components.
     articulation_points = list(nx.articulation_points(G))
 
-    # 3. Calculate Betweenness Centrality
-    # This measures how often a node appears on the shortest path between any two other nodes.
+    # This measures how often a node appears on the shortest path between any two other nodes
     # We sample (k=...) for speed if the graph is very large.
     print("Calculating betweenness centrality (this may take a while)...")
     centrality = nx.betweenness_centrality(G, k=min(1000, len(G)//10))
@@ -660,6 +657,7 @@ def main():
 
     # --- Pairs for Inference ---
     # Create cartesian product for all related entries
+    # this should be done in serialization module?
     for cfg_name, cfg in CONFIGS.items():
         main_test_pairs = processed_entities[cfg.name].pairs["test"]
         for rel in cfg.rels:

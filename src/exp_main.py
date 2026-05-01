@@ -25,6 +25,13 @@ def build_relation_map(csv_fp: str, column1: str, column2: str) -> Dict[str, Set
     return dict(relation_map)
 
 
+def resolve_base_task(entity_model_base, seed, train_suffix):
+    if not train_suffix:
+        return f"{entity_model_base}_{seed}"
+    clean_suffix = train_suffix.lstrip("_")
+    return f"{entity_model_base}_{seed}_{clean_suffix}"
+
+
 def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[str, Dict[Tuple[str, str], float]], relation_maps, sql_log: ExperimentLogger, log, dataset, pollution, is_bin, is_damp, seed, train_suffix, run_id):
     start_time = time.perf_counter()
     f1_scores = {}
@@ -388,13 +395,6 @@ def main():
                 SET is_final = 1 
                 WHERE run_id = ? AND entity = ? AND iteration = ? AND metric_type = 'test'
             """, (run_id, entity.name, last_iter))
-
-
-def resolve_base_task(entity_model_base, seed, train_suffix):
-    if not train_suffix:
-        return f"{entity_model_base}_{seed}"
-    clean_suffix = train_suffix.lstrip("_")
-    return f"{entity_model_base}_{seed}_{clean_suffix}"
 
 
 if __name__ == "__main__":

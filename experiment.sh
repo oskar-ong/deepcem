@@ -18,7 +18,7 @@
 #SBATCH --time=04:00:00
 # NEED TO ADJUST THIS EVERYTIME EXPERIMENT NUMBER CHANGES!!!
 # TOTAL EXPERIMENTS: POLLUTION * SEEDS * SIZES 
-#SBATCH --array=0-5%4
+#SBATCH --array=0-19%4
 
 # Clear all interactively loaded modules
 module purge
@@ -32,12 +32,12 @@ conda activate deepcem2
 # Slurm array math to map 1D ID to 3D parameters
 
 #NUM_POLLUTION=1
-POLLUTION_LEVELS=("source" "high")
+POLLUTION_LEVELS=("source" "low" "medium" "high")
 #POLLUTION_LEVELS=("source" "low" "medium" "high")
 
 #NUM_SEEDS=3
-SEEDS=(40 50 60)
-# SEEDS=(42)
+# SEEDS=(40 50 60)
+SEEDS=(1 2 3 4 5)
 
 #NUM_SIZES=1
 TRAIN_SIZES=(1) # '1' represents 100% or full
