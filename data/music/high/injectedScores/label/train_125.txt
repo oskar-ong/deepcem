@@ -31,9 +31,9 @@ COL label_area_similarity VAL uncertain COL name VAL Chocolate Records COL label
 COL label_area_similarity VAL uncertain COL name VAL Full Eritertainment Cricle COL ended VAL f COL id VAL l836	COL name VAL Temder Loving Empire COL label_type VAL Protion COL ended VAL f COL id VAL l559	0
 COL label_area_similarity VAL uncertain COL name VAL Spelling Venturez Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1393	COL name VAL Spelling Music Ventvres COL label_type VAL Publisher COL ended VAL  COL id VAL l1394	1
 COL label_area_similarity VAL uncertain COL name VAL Woodpecker Records COL label_type VAL  COL ended VAL f COL id VAL l1060	COL name VAL Woodpecker Recordj COL label_type VAL Puciton COL ended VAL f COL id VAL l1461	1
-COL label_area_similarity VAL uncertain COL name VAL Delerecrods COL label_type VAL Original Production COL ended VAL f COL id VAL l694	COL name VAL AB Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1290	0
+COL label_area_similarity VAL low COL name VAL Delerecrods COL label_type VAL Original Production COL ended VAL f COL id VAL l694	COL name VAL AB Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1290	0
 COL label_area_similarity VAL uncertain COL name VAL Songs Raton COL ended VAL f COL id VAL l1204	COL name VAL 음악부 COL label_type VAL Production COL ended VAL f COL id VAL l347	0
-COL label_area_similarity VAL low COL name VAL AB Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1290	COL name VAL records subskillz COL ended VAL f COL id VAL l718	0
+COL label_area_similarity VAL uncertain COL name VAL AB Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1290	COL name VAL records subskillz COL ended VAL f COL id VAL l718	0
 COL label_area_similarity VAL uncertain COL name VAL UK Bubblerx COL label_type VAL Original Production COL ended VAL f COL id VAL l685	COL name VAL UK Bubblers COL label_type VAL  COL ended VAL f COL id VAL l1413	1
 COL label_area_similarity VAL uncertain COL name VAL Soundmalfunction COL ended VAL f COL id VAL l43	COL name VAL Sons Galiza COL label_type VAL  COL ended VAL f COL id VAL l977	0
 COL label_area_similarity VAL uncertain COL name VAL Baboon Records COL ended VAL  COL id VAL l174	COL name VAL Baboori COL ended VAL f COL id VAL l414	1

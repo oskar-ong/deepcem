@@ -66,7 +66,7 @@ COL label_area_similarity VAL uncertain COL name VAL Alternative Ratio COL label
 COL label_area_similarity VAL low COL name VAL Berk Demir Muzik Yapim COL label_type VAL Distributor COL ended VAL f COL id VAL l398	COL name VAL Media Vision COL label_type VAL Manufacturer COL ended VAL f COL id VAL l472	0
 COL label_area_similarity VAL uncertain COL name VAL Gama Island COL label_type VAL Publisher COL ended VAL f COL id VAL l496	COL name VAL Gamma Isiand COL label_type VAL Publisher COL ended VAL f COL id VAL l1250	1
 COL label_area_similarity VAL uncertain COL name VAL 800 Wilt COL ended VAL f COL id VAL l189	COL name VAL Amadeo Österreichische Schallpiatten Aktiengesellschaft COL label_type VAL Holding COL ended VAL t COL id VAL l1334	0
-COL label_area_similarity VAL low COL name VAL Warfuck Records COL label_type VAL Production COL ended VAL f COL id VAL l98	COL name VAL Kayax COL label_type VAL Original Production COL ended VAL f COL id VAL l687	0
+COL label_area_similarity VAL uncertain COL name VAL Warfuck Records COL label_type VAL Production COL ended VAL f COL id VAL l98	COL name VAL Kayax COL label_type VAL Original Production COL ended VAL f COL id VAL l687	0
 COL label_area_similarity VAL uncertain COL name VAL The Red Flwg Recording Co COL label_type VAL Original Production COL ended VAL f COL id VAL l1437	COL name VAL Dirty Water Records COL ended VAL f COL id VAL l140	0
 COL label_area_similarity VAL uncertain COL name VAL Lighteri Up COL ended VAL f COL id VAL l580	COL name VAL Lighten Up COL ended VAL f COL id VAL l776	1
 COL label_area_similarity VAL uncertain COL name VAL BugInMyEarMusic Peoductions COL ended VAL f COL id VAL l209	COL name VAL Open Circuit COL label_type VAL Original Production COL ended VAL f COL id VAL l865	0
@@ -87,13 +87,13 @@ COL label_area_similarity VAL uncertain COL name VAL The Arto Company COL ended 
 COL label_area_similarity VAL high COL name VAL Wallys Groove World COL label_type VAL Original Production COL ended VAL f COL id VAL l148	COL name VAL Wallys Geoove World COL label_type VAL Original Production COL ended VAL f COL id VAL l349	1
 COL label_area_similarity VAL uncertain COL name VAL Afenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l507	COL name VAL Avenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1347	1
 COL label_area_similarity VAL uncertain COL name VAL che COL ended VAL f COL id VAL l184	COL name VAL New Ruins COL ended VAL f COL id VAL l244	0
-COL label_area_similarity VAL low COL name VAL Sheer Africa COL ended VAL f COL id VAL l323	COL name VAL Itspop Music Ltd COL label_type VAL Holding COL ended VAL f COL id VAL l163	0
+COL label_area_similarity VAL uncertain COL name VAL Sheer Africa COL ended VAL f COL id VAL l323	COL name VAL Itspop Music Ltd COL label_type VAL Holding COL ended VAL f COL id VAL l163	0
 COL label_area_similarity VAL uncertain COL name VAL KTM COL label_type VAL Original Production COL ended VAL f COL id VAL l1229	COL name VAL LHUA Music COL ended VAL f COL id VAL l894	0
 COL label_area_similarity VAL uncertain COL name VAL Funky Chiod Records COL ended VAL f COL id VAL l1446	COL name VAL Chakra COL label_type VAL Production COL ended VAL f COL id VAL l1110	0
 COL label_area_similarity VAL uncertain COL name VAL Bassex Record5 COL label_type VAL Original Production COL ended VAL f COL id VAL l173	COL name VAL Out of Orbit Recordings COL label_type VAL Original Production COL ended VAL f COL id VAL l1422	0
 COL label_area_similarity VAL uncertain COL name VAL Funky Child Records COL ended VAL f COL id VAL l1164	COL name VAL Tender Lovinb Empire COL label_type VAL Production COL ended VAL f COL id VAL l560	0
 COL label_area_similarity VAL uncertain COL name VAL Wallys Groove World COL label_type VAL Original Production COL ended VAL f COL id VAL l148	COL name VAL Nice Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1440	0
-COL label_area_similarity VAL low COL name VAL Toy Soldier Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1117	COL name VAL Artex COL ended VAL f COL id VAL l1140	0
+COL label_area_similarity VAL uncertain COL name VAL Toy Soldier Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1117	COL name VAL Artex COL ended VAL f COL id VAL l1140	0
 COL label_area_similarity VAL low COL name VAL Tonodisc SA COL ended VAL f COL id VAL l145	COL name VAL 滾石國際音樂股份有限公司 COL label_type VAL Holding COL ended VAL f COL id VAL l187	0
 COL label_area_similarity VAL uncertain COL name VAL Spinnup COL ended VAL f COL id VAL l192	COL name VAL Spinbup COL ended VAL f COL id VAL l769	1
 COL label_area_similarity VAL uncertain COL name VAL Mad Magazine COL label_type VAL Publisher COL ended VAL f COL id VAL l983	COL name VAL Start COL label_type VAL Original Production COL ended VAL t COL id VAL l1485	0
@@ -112,7 +112,7 @@ COL label_area_similarity VAL uncertain COL name VAL Nice R4cords COL label_type
 COL label_area_similarity VAL low COL name VAL Zee Music Company COL ended VAL f COL id VAL l878	COL name VAL NoBreaks COL ended VAL t COL id VAL l1082	0
 COL label_area_similarity VAL uncertain COL name VAL Full Ciahcle Entertainment COL ended VAL f COL id VAL l614	COL name VAL Full Circle Eritertainment COL ended VAL f COL id VAL l836	1
 COL label_area_similarity VAL uncertain COL name VAL Mark A Mancina Music COL label_type VAL Publisher COL ended VAL f COL id VAL l87	COL name VAL Alternative Ratio COL label_type VAL Original Production COL ended VAL f COL id VAL l653	0
-COL label_area_similarity VAL high COL name VAL Lat:n Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1342	COL name VAL Ladin Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1343	1
+COL label_area_similarity VAL uncertain COL name VAL Lat:n Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1342	COL name VAL Ladin Dreams Music COL label_type VAL Production COL ended VAL f COL id VAL l1343	1
 COL label_area_similarity VAL uncertain COL name VAL Lanzoni Records COL ended VAL f COL id VAL l1021	COL name VAL Greasy Viriyl COL ended VAL f COL id VAL l203	0
 COL label_area_similarity VAL uncertain COL name VAL Avenue Beatz Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1347	COL name VAL The Kon5piracy Group COL ended VAL f COL id VAL l956	0
 COL label_area_similarity VAL uncertain COL name VAL Environnent Records COL label_type VAL Publisher COL ended VAL f COL id VAL l529	COL name VAL Preachja COL label_type VAL Production COL ended VAL f COL id VAL l171	0

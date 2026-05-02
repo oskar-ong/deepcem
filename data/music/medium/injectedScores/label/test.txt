@@ -1,0 +1,668 @@
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	0
+COL label_area_similarity VAL uncertain COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	0
+COL label_area_similarity VAL uncertain COL name VAL Digital Entertainment COL ended VAL f COL id VAL l1274	COL name VAL Recordings Eccentric COL ended VAL f COL id VAL l287	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	COL name VAL  COL ended VAL f COL id VAL l259	0
+COL label_area_similarity VAL uncertain COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	COL name VAL DTCM Afe COL label_type VAL Publisher COL ended VAL f COL id VAL l377	0
+COL label_area_similarity VAL uncertain COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	COL name VAL Guest Records COL ended VAL f COL id VAL l756	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	1
+COL label_area_similarity VAL uncertain COL name VAL Compact Disc Center COL ended VAL f COL id VAL l216	COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	0
+COL label_area_similarity VAL uncertain COL name VAL Bum Rap Mus8c Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1296	COL name VAL Bum Rap Music Inc COL label_type VAL  COL ended VAL  COL id VAL l1460	1
+COL label_area_similarity VAL uncertain COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1194	1
+COL label_area_similarity VAL uncertain COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	COL name VAL Wilcl Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l401	1
+COL label_area_similarity VAL uncertain COL name VAL Black Gold Recordz COL ended VAL f COL id VAL l1089	COL name VAL Snooter Refords COL label_type VAL Original Production COL ended VAL f COL id VAL l1370	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1442	COL name VAL Youn9 2K COL ended VAL f COL id VAL l1443	1
+COL label_area_similarity VAL uncertain COL name VAL LIGHT SHOXX COL ended VAL f COL id VAL l820	COL name VAL Rkeords COL ended VAL f COL id VAL l1385	0
+COL label_area_similarity VAL uncertain COL name VAL Songs 9f Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l609	COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	1
+COL label_area_similarity VAL uncertain COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	COL name VAL Yacca COL label_type VAL  COL ended VAL f COL id VAL l438	0
+COL label_area_similarity VAL uncertain COL name VAL Snooter Records COL label_type VAL Original Production COL ended VAL f COL id VAL l421	COL name VAL Snooter Refords COL label_type VAL Original Production COL ended VAL f COL id VAL l1370	1
+COL label_area_similarity VAL uncertain COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	COL name VAL Yacca COL label_type VAL  COL ended VAL f COL id VAL l438	1
+COL label_area_similarity VAL uncertain COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	COL name VAL Recordings COL ended VAL f COL id VAL l177	0
+COL label_area_similarity VAL uncertain COL name VAL Padio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l396	COL name VAL MAW Words Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l965	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM Afe COL label_type VAL Publisher COL ended VAL f COL id VAL l377	COL name VAL Kunstkopf COL label_type VAL Production COL ended VAL f COL id VAL l352	0
+COL label_area_similarity VAL high COL name VAL Trens COL label_type VAL Production COL ended VAL f COL id VAL l689	COL name VAL Trend COL label_type VAL Production COL ended VAL f COL id VAL l1396	1
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL Wilcl Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l401	0
+COL label_area_similarity VAL uncertain COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	COL name VAL Sovnd on Sound COL ended VAL f COL id VAL l5	0
+COL label_area_similarity VAL uncertain COL name VAL Black Gold Records COL ended VAL f COL id VAL l188	COL name VAL Black Gold Recordz COL ended VAL f COL id VAL l1089	1
+COL label_area_similarity VAL uncertain COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	COL name VAL Bee Jazz COL label_type VAL Original Production COL ended VAL f COL id VAL l650	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Prodvctions COL ended VAL f COL id VAL l814	COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	1
+COL label_area_similarity VAL uncertain COL name VAL Wilcl Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l401	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	COL name VAL Springalo To0nes COL label_type VAL Publisher COL ended VAL f COL id VAL l988	0
+COL label_area_similarity VAL uncertain COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	COL name VAL Young Jortan COL ended VAL f COL id VAL l179	0
+COL label_area_similarity VAL low COL name VAL Trens COL label_type VAL Production COL ended VAL f COL id VAL l689	COL name VAL Tender Collecti0n COL ended VAL f COL id VAL l93	0
+COL label_area_similarity VAL uncertain COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	COL name VAL ELASTICA COL ended VAL  COL id VAL l1402	0
+COL label_area_similarity VAL uncertain COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	COL name VAL Greeninch Sound COL ended VAL f COL id VAL l222	0
+COL label_area_similarity VAL uncertain COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	0
+COL label_area_similarity VAL low COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	COL name VAL Records Selection COL ended VAL  COL id VAL l1236	0
+COL label_area_similarity VAL high COL name VAL SPHERE RECORDS COL ended VAL  COL id VAL l123	COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	1
+COL label_area_similarity VAL uncertain COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	0
+COL label_area_similarity VAL uncertain COL name VAL Compact Disc Center COL ended VAL f COL id VAL l216	COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Records COL ended VAL f COL id VAL l766	COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	0
+COL label_area_similarity VAL uncertain COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	0
+COL label_area_similarity VAL uncertain COL name VAL Padio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l396	COL name VAL Alexist Korner COL label_type VAL Publisher COL ended VAL f COL id VAL l785	0
+COL label_area_similarity VAL uncertain COL name VAL South Americqn House COL label_type VAL Production COL ended VAL f COL id VAL l1319	COL name VAL  COL ended VAL f COL id VAL l1157	0
+COL label_area_similarity VAL uncertain COL name VAL Trend COL label_type VAL Production COL ended VAL f COL id VAL l1396	COL name VAL Spagbetti Records COL label_type VAL Original Production COL ended VAL f COL id VAL l896	0
+COL label_area_similarity VAL uncertain COL name VAL Mudant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l603	COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	0
+COL label_area_similarity VAL uncertain COL name VAL Yacca COL label_type VAL  COL ended VAL f COL id VAL l438	COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	0
+COL label_area_similarity VAL uncertain COL name VAL PHU Violetta COL ended VAL f COL id VAL l3	COL name VAL  COL ended VAL f COL id VAL l240	1
+COL label_area_similarity VAL uncertain COL name VAL Sabres of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l151	COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	1
+COL label_area_similarity VAL uncertain COL name VAL SPHERE RECORDS COL ended VAL  COL id VAL l123	COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	0
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Picture Show Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1264	0
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	0
+COL label_area_similarity VAL uncertain COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	COL name VAL  COL ended VAL f COL id VAL l659	1
+COL label_area_similarity VAL uncertain COL name VAL mIaginosis COL ended VAL f COL id VAL l339	COL name VAL records supporter COL ended VAL  COL id VAL l218	0
+COL label_area_similarity VAL uncertain COL name VAL Odher Int Universal COL ended VAL f COL id VAL l393	COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	0
+COL label_area_similarity VAL uncertain COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	COL name VAL Sound on Sound COL ended VAL f COL id VAL l1417	1
+COL label_area_similarity VAL uncertain COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	0
+COL label_area_similarity VAL uncertain COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	0
+COL label_area_similarity VAL uncertain COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	COL name VAL Century Records COL label_type VAL  COL ended VAL f COL id VAL l1078	0
+COL label_area_similarity VAL uncertain COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	COL name VAL SPHERE RECORDS COL ended VAL  COL id VAL l123	0
+COL label_area_similarity VAL uncertain COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	0
+COL label_area_similarity VAL uncertain COL name VAL Century Rec0rds COL label_type VAL Production COL ended VAL f COL id VAL l1066	COL name VAL Century Records COL label_type VAL  COL ended VAL f COL id VAL l1078	1
+COL label_area_similarity VAL uncertain COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	COL name VAL Rufus Recordinks COL ended VAL f COL id VAL l835	0
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Producti0ns COL label_type VAL Puction COL ended VAL f COL id VAL l380	COL name VAL Soulmade Productions COL label_type VAL Production COL ended VAL  COL id VAL l991	1
+COL label_area_similarity VAL uncertain COL name VAL WordS0und COL label_type VAL Original Production COL ended VAL f COL id VAL l46	COL name VAL Warfear Collect'lve COL ended VAL t COL id VAL l802	0
+COL label_area_similarity VAL uncertain COL name VAL Ameghyst COL ended VAL f COL id VAL l832	COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	COL name VAL  COL ended VAL f COL id VAL l1351	0
+COL label_area_similarity VAL uncertain COL name VAL Everything ro Everyone Records COL ended VAL f COL id VAL l986	COL name VAL Everyhting to Everyone Records COL ended VAL  COL id VAL l987	1
+COL label_area_similarity VAL uncertain COL name VAL records supporter COL ended VAL  COL id VAL l218	COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	0
+COL label_area_similarity VAL uncertain COL name VAL Toxic Shock Records COL label_type VAL Prction COL ended VAL  COL id VAL l945	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	0
+COL label_area_similarity VAL uncertain COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	COL name VAL ELASTICA COL ended VAL  COL id VAL l1402	0
+COL label_area_similarity VAL uncertain COL name VAL Digita1 Entertainment COL ended VAL f COL id VAL l920	COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	0
+COL label_area_similarity VAL low COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	COL name VAL Production Pathétik COL label_type VAL Imprint COL ended VAL f COL id VAL l1145	0
+COL label_area_similarity VAL uncertain COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	0
+COL label_area_similarity VAL uncertain COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	COL name VAL Atlantic Rjythms COL ended VAL f COL id VAL l1375	0
+COL label_area_similarity VAL uncertain COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfijh Factory Records COL ended VAL f COL id VAL l1118	COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	1
+COL label_area_similarity VAL uncertain COL name VAL Alexis Korner Music COL label_type VAL Publisher COL ended VAL f COL id VAL l749	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	0
+COL label_area_similarity VAL uncertain COL name VAL Atlantic Rhythms COL ended VAL  COL id VAL l1242	COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	0
+COL label_area_similarity VAL uncertain COL name VAL All Other COL label_type VAL Production COL ended VAL f COL id VAL l638	COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	1
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Recorss COL label_type VAL Original Production COL ended VAL f COL id VAL l1441	COL name VAL HTown Records COL ended VAL  COL id VAL l232	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL  COL id VAL l1009	COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	0
+COL label_area_similarity VAL uncertain COL name VAL Records Selection COL ended VAL  COL id VAL l1236	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	0
+COL label_area_similarity VAL uncertain COL name VAL Snooter Records COL label_type VAL Original Production COL ended VAL f COL id VAL l421	COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	COL name VAL Jellyfijh Factory Records COL ended VAL f COL id VAL l1118	1
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Producti0ns COL label_type VAL Puction COL ended VAL f COL id VAL l380	COL name VAL Serotonin Productions COL ended VAL f COL id VAL l573	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l259	COL name VAL SanCtuS Recordin9s COL ended VAL f COL id VAL l706	1
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	COL name VAL Mad King Production COL ended VAL f COL id VAL l816	0
+COL label_area_similarity VAL uncertain COL name VAL Self Recoeds COL ended VAL f COL id VAL l1329	COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l721	COL name VAL Scorpios COL ended VAL t COL id VAL l652	0
+COL label_area_similarity VAL uncertain COL name VAL Scorpios COL ended VAL t COL id VAL l652	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1194	0
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL Tender COL ended VAL f COL id VAL l1055	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	COL name VAL  COL ended VAL f COL id VAL l1442	0
+COL label_area_similarity VAL uncertain COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	COL name VAL Unknown House COL label_type VAL Distributor COL ended VAL f COL id VAL l333	0
+COL label_area_similarity VAL uncertain COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	0
+COL label_area_similarity VAL uncertain COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	COL name VAL DM SAT video production COL label_type VAL Distributor COL ended VAL f COL id VAL l858	0
+COL label_area_similarity VAL uncertain COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	0
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Inc Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l88	COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	0
+COL label_area_similarity VAL uncertain COL name VAL Self Recoeds COL ended VAL f COL id VAL l1329	COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	0
+COL label_area_similarity VAL high COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	COL name VAL Ni Endertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l1465	1
+COL label_area_similarity VAL uncertain COL name VAL Compact Disc Center COL ended VAL f COL id VAL l216	COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	0
+COL label_area_similarity VAL uncertain COL name VAL Songs 9f Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l609	COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	0
+COL label_area_similarity VAL uncertain COL name VAL Records Selection COL ended VAL  COL id VAL l1236	COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	0
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	0
+COL label_area_similarity VAL uncertain COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL All Other COL label_type VAL Production COL ended VAL f COL id VAL l638	COL name VAL Bum Rap Mus8c Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1296	0
+COL label_area_similarity VAL uncertain COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	COL name VAL Odher Int Universal COL ended VAL f COL id VAL l393	1
+COL label_area_similarity VAL uncertain COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	0
+COL label_area_similarity VAL uncertain COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	0
+COL label_area_similarity VAL uncertain COL name VAL SPHERE RECORDS COL ended VAL  COL id VAL l123	COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	0
+COL label_area_similarity VAL uncertain COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	COL name VAL Potm9ac Records COL label_type VAL Production COL ended VAL f COL id VAL l549	1
+COL label_area_similarity VAL uncertain COL name VAL Mercury Rec0rds COL label_type VAL Holding COL ended VAL f COL id VAL l297	COL name VAL Mercury Records COL label_type VAL Holding COL ended VAL f COL id VAL l1298	1
+COL label_area_similarity VAL uncertain COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	COL name VAL Young 2K COL ended VAL f COL id VAL l1277	0
+COL label_area_similarity VAL uncertain COL name VAL Self Recoeds COL ended VAL f COL id VAL l1329	COL name VAL Snooter Records COL label_type VAL Original Production COL ended VAL f COL id VAL l421	0
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	COL name VAL Tete San Ko Inc Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l88	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	1
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	COL name VAL Recordings COL ended VAL f COL id VAL l177	0
+COL label_area_similarity VAL uncertain COL name VAL Digita1 Entertainment COL ended VAL f COL id VAL l920	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	COL name VAL Eraly Learning Centre COL label_type VAL Distributor COL ended VAL f COL id VAL l1195	0
+COL label_area_similarity VAL uncertain COL name VAL Songs 9f Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l609	COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	1
+COL label_area_similarity VAL uncertain COL name VAL Unholy Conspiracy Deathwork COL label_type VAL Original Production COL ended VAL f COL id VAL l1366	COL name VAL Springalo Toones COL label_type VAL Publer COL ended VAL f COL id VAL l153	0
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL Plus 8 Music Europe COL label_type VAL Publisher COL ended VAL f COL id VAL l230	0
+COL label_area_similarity VAL uncertain COL name VAL Sabres of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l151	COL name VAL Sabrej of Paradise COL label_type VAL Production Original COL ended VAL f COL id VAL l478	1
+COL label_area_similarity VAL uncertain COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	1
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	0
+COL label_area_similarity VAL uncertain COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL Young 2K COL ended VAL f COL id VAL l1277	0
+COL label_area_similarity VAL uncertain COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	COL name VAL Kobalt Label Services America Inc COL label_type VAL Holding COL ended VAL  COL id VAL l608	0
+COL label_area_similarity VAL uncertain COL name VAL Serotonin Productions COL ended VAL f COL id VAL l573	COL name VAL Everything ro Everyone Records COL ended VAL f COL id VAL l986	0
+COL label_area_similarity VAL uncertain COL name VAL WordS0und COL label_type VAL Original Production COL ended VAL f COL id VAL l46	COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	1
+COL label_area_similarity VAL uncertain COL name VAL Production Pathétik COL label_type VAL Imprint COL ended VAL f COL id VAL l1145	COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	COL name VAL Krazt Kat COL label_type VAL Original Production COL ended VAL f COL id VAL l1297	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1192	COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	0
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Publixing Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1122	COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	0
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Everyhting to Everyone Records COL ended VAL  COL id VAL l987	0
+COL label_area_similarity VAL uncertain COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	0
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l840	COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	1
+COL label_area_similarity VAL uncertain COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	COL name VAL Youn9 2K COL ended VAL f COL id VAL l1443	0
+COL label_area_similarity VAL uncertain COL name VAL mIaginosis COL ended VAL f COL id VAL l339	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	0
+COL label_area_similarity VAL uncertain COL name VAL Mercury Recordz COL label_type VAL Holding COL ended VAL f COL id VAL l296	COL name VAL Mercury Records COL label_type VAL Holding COL ended VAL f COL id VAL l1298	1
+COL label_area_similarity VAL uncertain COL name VAL aMd King Produktion COL ended VAL f COL id VAL l1121	COL name VAL Extreme Electrinics COL ended VAL f COL id VAL l996	0
+COL label_area_similarity VAL uncertain COL name VAL Compact Disc Center COL ended VAL f COL id VAL l216	COL name VAL Koze Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l236	0
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	0
+COL label_area_similarity VAL uncertain COL name VAL Unknown House COL label_type VAL Distributor COL ended VAL f COL id VAL l333	COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	1
+COL label_area_similarity VAL uncertain COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	COL name VAL  COL ended VAL  COL id VAL l1009	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Liza Music COL ended VAL f COL id VAL l670	COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	1
+COL label_area_similarity VAL uncertain COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	0
+COL label_area_similarity VAL uncertain COL name VAL Karma Chief Records COL label_type VAL Imprint COL ended VAL f COL id VAL l681	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	0
+COL label_area_similarity VAL uncertain COL name VAL Greeninch Sound COL ended VAL f COL id VAL l222	COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	0
+COL label_area_similarity VAL uncertain COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	COL name VAL Recordings COL ended VAL f COL id VAL l177	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Prodvctions COL ended VAL f COL id VAL l814	COL name VAL Heron Pond Productions COL ended VAL f COL id VAL l815	1
+COL label_area_similarity VAL uncertain COL name VAL HTown Records COL ended VAL  COL id VAL l232	COL name VAL Plus 8 Music Europe COL label_type VAL Publisher COL ended VAL f COL id VAL l230	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	COL name VAL Young Jordan COL ended VAL f COL id VAL l1371	0
+COL label_area_similarity VAL uncertain COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l259	COL name VAL aMd King Produktion COL ended VAL f COL id VAL l1121	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l721	COL name VAL CoolN0te COL ended VAL  COL id VAL l905	1
+COL label_area_similarity VAL uncertain COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	COL name VAL Frux COL label_type VAL Original Production COL ended VAL f COL id VAL l1023	0
+COL label_area_similarity VAL uncertain COL name VAL Shinen Multimedia COL ended VAL f COL id VAL l1128	COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l721	COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	1
+COL label_area_similarity VAL high COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	1
+COL label_area_similarity VAL uncertain COL name VAL Sethnefer Music COL ended VAL f COL id VAL l537	COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	1
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	1
+COL label_area_similarity VAL uncertain COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	1
+COL label_area_similarity VAL uncertain COL name VAL Sadurn Strip COL label_type VAL Original Production COL ended VAL f COL id VAL l1332	COL name VAL MAW Words Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l965	0
+COL label_area_similarity VAL uncertain COL name VAL DM SAT video production COL label_type VAL Distributor COL ended VAL f COL id VAL l858	COL name VAL WordS0und COL label_type VAL Original Production COL ended VAL f COL id VAL l46	0
+COL label_area_similarity VAL uncertain COL name VAL Hzg Records COL ended VAL f COL id VAL l662	COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1351	COL name VAL Kunstkopf COL label_type VAL Production COL ended VAL f COL id VAL l352	0
+COL label_area_similarity VAL uncertain COL name VAL Mustic Shop COL label_type VAL Prodcution Original COL ended VAL f COL id VAL l922	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL DolnoÅlÄskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l474	COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	0
+COL label_area_similarity VAL uncertain COL name VAL Records Selection COL ended VAL  COL id VAL l1236	COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	0
+COL label_area_similarity VAL uncertain COL name VAL MAW WordsP ublising COL label_type VAL Publisher COL ended VAL  COL id VAL l15	COL name VAL MAW Words Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l965	1
+COL label_area_similarity VAL uncertain COL name VAL World of WIls COL ended VAL f COL id VAL l1257	COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	0
+COL label_area_similarity VAL uncertain COL name VAL Hzg Records COL ended VAL f COL id VAL l662	COL name VAL Extreme Electrinics COL ended VAL f COL id VAL l996	0
+COL label_area_similarity VAL uncertain COL name VAL Oranjy Moldova COL label_type VAL  COL ended VAL  COL id VAL l1398	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	1
+COL label_area_similarity VAL uncertain COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	COL name VAL HArt Records COL ended VAL t COL id VAL l558	0
+COL label_area_similarity VAL uncertain COL name VAL Glopal 29 Public COL ended VAL f COL id VAL l1226	COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	1
+COL label_area_similarity VAL uncertain COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	1
+COL label_area_similarity VAL uncertain COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	COL name VAL Imagin0sis COL ended VAL f COL id VAL l1272	1
+COL label_area_similarity VAL uncertain COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	0
+COL label_area_similarity VAL uncertain COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	0
+COL label_area_similarity VAL high COL name VAL Warfear Collect'lve COL ended VAL t COL id VAL l802	COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	1
+COL label_area_similarity VAL uncertain COL name VAL Digital Entertainment COL ended VAL f COL id VAL l1274	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	COL name VAL Frux COL label_type VAL Original Production COL ended VAL f COL id VAL l1023	0
+COL label_area_similarity VAL uncertain COL name VAL Funnyb0ne COL ended VAL f COL id VAL l433	COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	1
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1442	COL name VAL Mercury Recordz COL label_type VAL Holding COL ended VAL f COL id VAL l296	0
+COL label_area_similarity VAL uncertain COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	0
+COL label_area_similarity VAL uncertain COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	COL name VAL Warfear Collectiev COL ended VAL t COL id VAL l1107	0
+COL label_area_similarity VAL uncertain COL name VAL Snooter Records COL label_type VAL Original Production COL ended VAL f COL id VAL l421	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	0
+COL label_area_similarity VAL uncertain COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	0
+COL label_area_similarity VAL high COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	COL name VAL Warfear Collectiev COL ended VAL t COL id VAL l1107	1
+COL label_area_similarity VAL uncertain COL name VAL mIaginosis COL ended VAL f COL id VAL l339	COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	1
+COL label_area_similarity VAL uncertain COL name VAL Koze Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l236	COL name VAL Koze S0ngs COL label_type VAL Publisher COL ended VAL f COL id VAL l786	1
+COL label_area_similarity VAL uncertain COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	0
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	0
+COL label_area_similarity VAL uncertain COL name VAL Sonks COL label_type VAL Publisher COL ended VAL f COL id VAL l304	COL name VAL CBSSony Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l590	1
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	0
+COL label_area_similarity VAL uncertain COL name VAL Mercury Rec0rds COL label_type VAL Holding COL ended VAL f COL id VAL l297	COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	0
+COL label_area_similarity VAL uncertain COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	COL name VAL World of WIls COL ended VAL f COL id VAL l1257	0
+COL label_area_similarity VAL uncertain COL name VAL World ov WIls COL ended VAL f COL id VAL l498	COL name VAL Devil in the Woods COL label_type VAL Original Production COL ended VAL t COL id VAL l1015	0
+COL label_area_similarity VAL uncertain COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	COL name VAL Digita1 Entertainment COL ended VAL f COL id VAL l920	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL SanCtuS Recordin9s COL ended VAL f COL id VAL l706	0
+COL label_area_similarity VAL uncertain COL name VAL Sovnd on Sound COL ended VAL f COL id VAL l5	COL name VAL Sound on Sound COL ended VAL f COL id VAL l1417	1
+COL label_area_similarity VAL uncertain COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	COL name VAL Everyhting to Everyone Records COL ended VAL  COL id VAL l987	0
+COL label_area_similarity VAL uncertain COL name VAL Patio Mu5ic COL label_type VAL Original Production COL ended VAL f COL id VAL l395	COL name VAL Padio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l396	1
+COL label_area_similarity VAL uncertain COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	1
+COL label_area_similarity VAL uncertain COL name VAL Potomac Records COL label_type VAL Production COL ended VAL f COL id VAL l713	COL name VAL Tender COL ended VAL f COL id VAL l1055	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL f COL id VAL l815	COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	1
+COL label_area_similarity VAL uncertain COL name VAL Mustic Shop COL label_type VAL Prodcution Original COL ended VAL f COL id VAL l922	COL name VAL HArt Records COL ended VAL t COL id VAL l558	0
+COL label_area_similarity VAL uncertain COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	COL name VAL Bum Rap Music Inc COL label_type VAL  COL ended VAL  COL id VAL l1460	0
+COL label_area_similarity VAL uncertain COL name VAL Young 2K COL ended VAL f COL id VAL l1277	COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	0
+COL label_area_similarity VAL uncertain COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	COL name VAL HRB Music COL ended VAL f COL id VAL l277	0
+COL label_area_similarity VAL uncertain COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	1
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	COL name VAL Sonks COL label_type VAL Publisher COL ended VAL f COL id VAL l304	0
+COL label_area_similarity VAL uncertain COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	0
+COL label_area_similarity VAL uncertain COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	1
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	0
+COL label_area_similarity VAL uncertain COL name VAL Moldova Orange COL label_type VAL Holding COL ended VAL f COL id VAL l1220	COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	0
+COL label_area_similarity VAL uncertain COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	0
+COL label_area_similarity VAL uncertain COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	COL name VAL Cype Records COL label_type VAL Original Production COL ended VAL f COL id VAL l797	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	COL name VAL Wilcl Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l401	0
+COL label_area_similarity VAL uncertain COL name VAL Music Sh0p COL label_type VAL Original Production COL ended VAL f COL id VAL l923	COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	0
+COL label_area_similarity VAL uncertain COL name VAL Greeninch Sound COL ended VAL f COL id VAL l222	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	0
+COL label_area_similarity VAL uncertain COL name VAL Cype Records COL label_type VAL Original Production COL ended VAL f COL id VAL l797	COL name VAL Sethnefer Music COL ended VAL f COL id VAL l537	0
+COL label_area_similarity VAL uncertain COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Prodvctions COL ended VAL f COL id VAL l814	COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	0
+COL label_area_similarity VAL uncertain COL name VAL Koze S0ngs COL label_type VAL Publisher COL ended VAL f COL id VAL l786	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	0
+COL label_area_similarity VAL uncertain COL name VAL Guest Records COL ended VAL f COL id VAL l756	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	0
+COL label_area_similarity VAL uncertain COL name VAL Glopal 29 Public COL ended VAL f COL id VAL l1226	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	COL name VAL LXR Records COL ended VAL f COL id VAL l897	0
+COL label_area_similarity VAL uncertain COL name VAL Koze Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l236	COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	0
+COL label_area_similarity VAL uncertain COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	0
+COL label_area_similarity VAL uncertain COL name VAL Punk Uprisings Records COL ended VAL f COL id VAL l325	COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	0
+COL label_area_similarity VAL uncertain COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	COL name VAL Century Rec0rds COL label_type VAL Production COL ended VAL f COL id VAL l1066	0
+COL label_area_similarity VAL uncertain COL name VAL Guest Records COL ended VAL f COL id VAL l756	COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	0
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Publixing Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1122	COL name VAL Hag Records COL ended VAL f COL id VAL l766	0
+COL label_area_similarity VAL uncertain COL name VAL Koze S0ngs COL label_type VAL Publisher COL ended VAL f COL id VAL l786	COL name VAL Nomy Production COL ended VAL f COL id VAL l805	0
+COL label_area_similarity VAL uncertain COL name VAL Bee Jazz COL label_type VAL Original Production COL ended VAL f COL id VAL l650	COL name VAL Bee Jats COL label_type VAL Original Production COL ended VAL f COL id VAL l850	1
+COL label_area_similarity VAL uncertain COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	COL name VAL Rufus Recordinks COL ended VAL f COL id VAL l835	0
+COL label_area_similarity VAL low COL name VAL Cype Records COL label_type VAL Original Production COL ended VAL f COL id VAL l797	COL name VAL Oranjy Moldova COL label_type VAL  COL ended VAL  COL id VAL l1398	0
+COL label_area_similarity VAL uncertain COL name VAL PHU Violetta COL ended VAL f COL id VAL l3	COL name VAL Syndicate Sonks COL ended VAL f COL id VAL l631	0
+COL label_area_similarity VAL uncertain COL name VAL Atlantic Rhythms COL ended VAL  COL id VAL l1242	COL name VAL Atlantic Rjythms COL ended VAL f COL id VAL l1375	1
+COL label_area_similarity VAL uncertain COL name VAL PHU Violetta COL ended VAL f COL id VAL l3	COL name VAL Potm9ac Records COL label_type VAL Production COL ended VAL f COL id VAL l549	0
+COL label_area_similarity VAL uncertain COL name VAL Eraly Learning Centre COL label_type VAL Distributor COL ended VAL f COL id VAL l1195	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	0
+COL label_area_similarity VAL uncertain COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	COL name VAL Music Sh0p COL label_type VAL Original Production COL ended VAL f COL id VAL l923	1
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	0
+COL label_area_similarity VAL uncertain COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	COL name VAL Unknown House COL label_type VAL Distributor COL ended VAL f COL id VAL l333	0
+COL label_area_similarity VAL uncertain COL name VAL Compacd Disc Center COL ended VAL f COL id VAL l1087	COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	0
+COL label_area_similarity VAL uncertain COL name VAL Weather Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l562	COL name VAL Levaride Begravd Records COL ended VAL f COL id VAL l1488	0
+COL label_area_similarity VAL low COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	0
+COL label_area_similarity VAL uncertain COL name VAL Alexis Korner Music COL label_type VAL Publisher COL ended VAL f COL id VAL l749	COL name VAL Alexist Korner COL label_type VAL Publisher COL ended VAL f COL id VAL l785	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l240	COL name VAL Potm9ac Records COL label_type VAL Production COL ended VAL f COL id VAL l549	0
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1264	COL name VAL Picture Show Recorss COL label_type VAL Original Production COL ended VAL f COL id VAL l1441	1
+COL label_area_similarity VAL uncertain COL name VAL Weatner Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l1011	COL name VAL Black Gold Records COL ended VAL f COL id VAL l188	0
+COL label_area_similarity VAL uncertain COL name VAL Young Jortan COL ended VAL f COL id VAL l179	COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	0
+COL label_area_similarity VAL uncertain COL name VAL HTown Records COL ended VAL  COL id VAL l232	COL name VAL Levaride Begravd Records COL ended VAL f COL id VAL l1488	0
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL Guest Records COL ended VAL f COL id VAL l756	0
+COL label_area_similarity VAL uncertain COL name VAL Ni Endertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l1465	COL name VAL Muzica Mangini COL ended VAL  COL id VAL l829	0
+COL label_area_similarity VAL uncertain COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	1
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	COL name VAL Sethnefer Music COL ended VAL f COL id VAL l537	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	0
+COL label_area_similarity VAL uncertain COL name VAL Unholy Conspiracy Deathwork COL label_type VAL Original Production COL ended VAL f COL id VAL l1366	COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	0
+COL label_area_similarity VAL uncertain COL name VAL Oranjy Moldova COL label_type VAL  COL ended VAL  COL id VAL l1398	COL name VAL Adam  Liza Music COL ended VAL f COL id VAL l670	0
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Redd Klay COL ended VAL f COL id VAL l1151	1
+COL label_area_similarity VAL uncertain COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	COL name VAL Warfear Collect'lve COL ended VAL t COL id VAL l802	0
+COL label_area_similarity VAL uncertain COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	COL name VAL  COL ended VAL f COL id VAL l721	0
+COL label_area_similarity VAL uncertain COL name VAL Sabrej of Paradise COL label_type VAL Production Original COL ended VAL f COL id VAL l478	COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	0
+COL label_area_similarity VAL uncertain COL name VAL Digital Entertainment COL ended VAL f COL id VAL l1274	COL name VAL Adam  Li2a Music COL ended VAL f COL id VAL l1093	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	COL name VAL Unknown House COL label_type VAL Distributor COL ended VAL f COL id VAL l333	0
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL LXR Records COL ended VAL f COL id VAL l897	0
+COL label_area_similarity VAL uncertain COL name VAL Tkp Records COL ended VAL f COL id VAL l669	COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	1
+COL label_area_similarity VAL uncertain COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	0
+COL label_area_similarity VAL uncertain COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	0
+COL label_area_similarity VAL uncertain COL name VAL Black Gold Records COL ended VAL f COL id VAL l188	COL name VAL Ameghyst COL ended VAL f COL id VAL l832	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	0
+COL label_area_similarity VAL uncertain COL name VAL ELASTICA COL ended VAL  COL id VAL l345	COL name VAL ELASTICA COL ended VAL  COL id VAL l1402	1
+COL label_area_similarity VAL uncertain COL name VAL Krazt Kat COL label_type VAL Original Production COL ended VAL f COL id VAL l1297	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	0
+COL label_area_similarity VAL uncertain COL name VAL Hzg Records COL ended VAL f COL id VAL l662	COL name VAL SanCtuS Recordin9s COL ended VAL f COL id VAL l706	0
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	0
+COL label_area_similarity VAL uncertain COL name VAL Mustic Shop COL label_type VAL Prodcution Original COL ended VAL f COL id VAL l922	COL name VAL Music Sh0p COL label_type VAL Original Production COL ended VAL f COL id VAL l923	1
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	COL name VAL LIGHT SHOXX COL ended VAL f COL id VAL l334	0
+COL label_area_similarity VAL low COL name VAL Frux COL label_type VAL Original Production COL ended VAL f COL id VAL l1023	COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	0
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	0
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL  COL ended VAL f COL id VAL l1157	0
+COL label_area_similarity VAL uncertain COL name VAL Death Bevomes Me COL label_type VAL Orgiinal Production COL ended VAL f COL id VAL l1304	COL name VAL Warfear Collectiev COL ended VAL t COL id VAL l1107	0
+COL label_area_similarity VAL uncertain COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	COL name VAL Extreme Electrinics COL ended VAL f COL id VAL l996	1
+COL label_area_similarity VAL uncertain COL name VAL LXR Records COL ended VAL f COL id VAL l897	COL name VAL Rkeords COL ended VAL f COL id VAL l1385	1
+COL label_area_similarity VAL uncertain COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	COL name VAL Sound on Sound COL ended VAL f COL id VAL l1417	0
+COL label_area_similarity VAL uncertain COL name VAL Imagin0sis COL ended VAL f COL id VAL l1272	COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	0
+COL label_area_similarity VAL uncertain COL name VAL LIGHT SHOXX COL ended VAL f COL id VAL l820	COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Records COL ended VAL f COL id VAL l766	COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	0
+COL label_area_similarity VAL uncertain COL name VAL Koze Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l236	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1192	COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	0
+COL label_area_similarity VAL uncertain COL name VAL Levande Begravd Records COL ended VAL f COL id VAL l517	COL name VAL South Americqn House COL label_type VAL Production COL ended VAL f COL id VAL l1319	0
+COL label_area_similarity VAL uncertain COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	1
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	0
+COL label_area_similarity VAL uncertain COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	COL name VAL Tkp Records COL ended VAL f COL id VAL l669	1
+COL label_area_similarity VAL uncertain COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	0
+COL label_area_similarity VAL uncertain COL name VAL MAW Woahds Publishign COL label_type VAL Publisher COL ended VAL f COL id VAL l14	COL name VAL MAW WordsP ublising COL label_type VAL Publisher COL ended VAL  COL id VAL l15	1
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1264	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Productioj COL ended VAL f COL id VAL l254	COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	COL name VAL Nomy Production COL ended VAL f COL id VAL l805	1
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	COL name VAL Odher Int Universal COL ended VAL f COL id VAL l393	0
+COL label_area_similarity VAL uncertain COL name VAL Ameghyst COL ended VAL f COL id VAL l832	COL name VAL Snooter Refords COL label_type VAL Original Production COL ended VAL f COL id VAL l1370	0
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l484	COL name VAL Mudant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l603	1
+COL label_area_similarity VAL uncertain COL name VAL Music Sh0p COL label_type VAL Original Production COL ended VAL f COL id VAL l923	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l73	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	COL name VAL Picture Show Recorss COL label_type VAL Original Production COL ended VAL f COL id VAL l1441	0
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Productions COL label_type VAL Production COL ended VAL  COL id VAL l991	COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	0
+COL label_area_similarity VAL uncertain COL name VAL HTown Records COL ended VAL  COL id VAL l232	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	1
+COL label_area_similarity VAL uncertain COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	COL name VAL Mustic Shop COL label_type VAL Prodcution Original COL ended VAL f COL id VAL l922	1
+COL label_area_similarity VAL uncertain COL name VAL Guest Records COL ended VAL f COL id VAL l756	COL name VAL Kunstkopf COL label_type VAL Production COL ended VAL f COL id VAL l352	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Prodvctions COL ended VAL f COL id VAL l814	COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	0
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	COL name VAL Rkeords COL ended VAL f COL id VAL l1385	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	0
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	COL name VAL Records Selection COL ended VAL  COL id VAL l1236	0
+COL label_area_similarity VAL uncertain COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	0
+COL label_area_similarity VAL uncertain COL name VAL Century Records COL label_type VAL  COL ended VAL f COL id VAL l1078	COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1442	COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1194	0
+COL label_area_similarity VAL uncertain COL name VAL Century Records COL label_type VAL  COL ended VAL f COL id VAL l1078	COL name VAL Redd Klay COL ended VAL f COL id VAL l1151	0
+COL label_area_similarity VAL uncertain COL name VAL Snooter Refords COL label_type VAL Original Production COL ended VAL f COL id VAL l1370	COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	0
+COL label_area_similarity VAL uncertain COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	COL name VAL Everyhting to Everyone Records COL ended VAL  COL id VAL l987	1
+COL label_area_similarity VAL uncertain COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Productioj COL ended VAL f COL id VAL l254	COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	1
+COL label_area_similarity VAL uncertain COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	0
+COL label_area_similarity VAL uncertain COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	0
+COL label_area_similarity VAL uncertain COL name VAL Guest Records COL ended VAL f COL id VAL l756	COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	0
+COL label_area_similarity VAL uncertain COL name VAL Alexis Korner Music COL label_type VAL Publisher COL ended VAL f COL id VAL l749	COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	0
+COL label_area_similarity VAL uncertain COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	COL name VAL Kobalt Label Services America Inc COL label_type VAL Holding COL ended VAL  COL id VAL l608	0
+COL label_area_similarity VAL low COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	COL name VAL Serotonin Productions COL ended VAL f COL id VAL l573	0
+COL label_area_similarity VAL uncertain COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	0
+COL label_area_similarity VAL uncertain COL name VAL Unholy Conspiracy Deathwork COL label_type VAL Original Production COL ended VAL f COL id VAL l1366	COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	0
+COL label_area_similarity VAL uncertain COL name VAL Queens L8tho COL ended VAL f COL id VAL l716	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	0
+COL label_area_similarity VAL uncertain COL name VAL Kobalt Label Services America Inc COL label_type VAL Holding COL ended VAL  COL id VAL l608	COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	1
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	COL name VAL Amethyst COL ended VAL f COL id VAL l808	0
+COL label_area_similarity VAL uncertain COL name VAL Mad King Production COL ended VAL f COL id VAL l816	COL name VAL 29 Global Public COL ended VAL f COL id VAL l1232	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Music Gang COL label_type VAL Production COL ended VAL f COL id VAL l1240	COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	0
+COL label_area_similarity VAL uncertain COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	COL name VAL Toxic Shock Records COL label_type VAL Prction COL ended VAL  COL id VAL l945	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM Afe COL label_type VAL Publisher COL ended VAL f COL id VAL l377	COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	0
+COL label_area_similarity VAL uncertain COL name VAL Rufus Recordinks COL ended VAL f COL id VAL l835	COL name VAL Recordings COL ended VAL f COL id VAL l177	0
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Productions COL label_type VAL Production COL ended VAL  COL id VAL l991	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l73	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	0
+COL label_area_similarity VAL uncertain COL name VAL Levaride Begravd Records COL ended VAL f COL id VAL l1488	COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	0
+COL label_area_similarity VAL uncertain COL name VAL Dissident Street Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1034	COL name VAL Heron Pond Productions COL ended VAL f COL id VAL l815	0
+COL label_area_similarity VAL uncertain COL name VAL Cype Records COL label_type VAL Original Production COL ended VAL f COL id VAL l797	COL name VAL MAW WordsP ublising COL label_type VAL Publisher COL ended VAL  COL id VAL l15	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Records COL ended VAL f COL id VAL l766	COL name VAL Serotonin Productions COL ended VAL f COL id VAL l573	0
+COL label_area_similarity VAL uncertain COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	COL name VAL Padio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l396	1
+COL label_area_similarity VAL uncertain COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	0
+COL label_area_similarity VAL low COL name VAL Scorpios COL ended VAL t COL id VAL l652	COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	0
+COL label_area_similarity VAL uncertain COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	COL name VAL Youn9 2K COL ended VAL f COL id VAL l1443	0
+COL label_area_similarity VAL uncertain COL name VAL Extreme Electrinics COL ended VAL f COL id VAL l996	COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	0
+COL label_area_similarity VAL uncertain COL name VAL ELASTICA COL ended VAL  COL id VAL l1402	COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	0
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL Ameghyst COL ended VAL f COL id VAL l832	1
+COL label_area_similarity VAL uncertain COL name VAL DolnoÅlÄskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l474	COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	1
+COL label_area_similarity VAL uncertain COL name VAL Mercury Recordz COL label_type VAL Holding COL ended VAL f COL id VAL l296	COL name VAL Mercury Rec0rds COL label_type VAL Holding COL ended VAL f COL id VAL l297	1
+COL label_area_similarity VAL uncertain COL name VAL Young Jordan COL ended VAL f COL id VAL l1371	COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefer Music COL ended VAL f COL id VAL l537	COL name VAL Nomy Productioj COL ended VAL f COL id VAL l254	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	COL name VAL Springalo To0nes COL label_type VAL Publisher COL ended VAL f COL id VAL l988	0
+COL label_area_similarity VAL uncertain COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	0
+COL label_area_similarity VAL high COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	COL name VAL Dollar Music Gang COL label_type VAL Production COL ended VAL f COL id VAL l1240	1
+COL label_area_similarity VAL uncertain COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	0
+COL label_area_similarity VAL uncertain COL name VAL Sabrej of Paradise COL label_type VAL Production Original COL ended VAL f COL id VAL l478	COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	0
+COL label_area_similarity VAL uncertain COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	COL name VAL Sadurn Strip COL label_type VAL Original Production COL ended VAL f COL id VAL l1332	1
+COL label_area_similarity VAL uncertain COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	COL name VAL Sovnd on Sound COL ended VAL f COL id VAL l5	1
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL  COL ended VAL f COL id VAL l721	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l240	COL name VAL Mercury Records COL label_type VAL Holding COL ended VAL f COL id VAL l1298	0
+COL label_area_similarity VAL uncertain COL name VAL Mercury Rec0rds COL label_type VAL Holding COL ended VAL f COL id VAL l297	COL name VAL Scorpios COL ended VAL t COL id VAL l652	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	COL name VAL Krazy Kat COL label_type VAL Original COL ended VAL f COL id VAL l493	0
+COL label_area_similarity VAL uncertain COL name VAL Kobalt Label Services America Inc COL label_type VAL Holding COL ended VAL  COL id VAL l608	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	0
+COL label_area_similarity VAL uncertain COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	COL name VAL Glopal 29 Public COL ended VAL f COL id VAL l1226	0
+COL label_area_similarity VAL uncertain COL name VAL Snooter Refords COL label_type VAL Original Production COL ended VAL f COL id VAL l1370	COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	0
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Imagin0sis COL ended VAL f COL id VAL l1272	0
+COL label_area_similarity VAL uncertain COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	0
+COL label_area_similarity VAL uncertain COL name VAL Recordings COL ended VAL f COL id VAL l177	COL name VAL Snooter Records COL label_type VAL Original Production COL ended VAL f COL id VAL l421	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	1
+COL label_area_similarity VAL uncertain COL name VAL Atlantic Rjythms COL ended VAL f COL id VAL l1375	COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM Afe COL label_type VAL Publisher COL ended VAL f COL id VAL l377	COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	1
+COL label_area_similarity VAL uncertain COL name VAL Bum Rap Music Inc COL label_type VAL  COL ended VAL  COL id VAL l1460	COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	COL name VAL  COL ended VAL f COL id VAL l1442	0
+COL label_area_similarity VAL uncertain COL name VAL Karma Chief Records COL label_type VAL Imprint COL ended VAL f COL id VAL l681	COL name VAL Springalo To0nes COL label_type VAL Publisher COL ended VAL f COL id VAL l988	0
+COL label_area_similarity VAL uncertain COL name VAL Redd Klay COL ended VAL f COL id VAL l1151	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	0
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l840	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	1
+COL label_area_similarity VAL uncertain COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Productioj COL ended VAL f COL id VAL l254	COL name VAL Clan Alba Productions COL label_type VAL Original Production COL ended VAL f COL id VAL l1268	0
+COL label_area_similarity VAL uncertain COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	COL name VAL Compacd Disc Center COL ended VAL f COL id VAL l1087	0
+COL label_area_similarity VAL uncertain COL name VAL Queens L8tho COL ended VAL f COL id VAL l716	COL name VAL Springalo Toones COL label_type VAL Publer COL ended VAL f COL id VAL l153	0
+COL label_area_similarity VAL uncertain COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	COL name VAL Guest Records COL ended VAL f COL id VAL l756	0
+COL label_area_similarity VAL uncertain COL name VAL Records Selection COL ended VAL  COL id VAL l1236	COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	0
+COL label_area_similarity VAL uncertain COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	COL name VAL HArt Records COL ended VAL t COL id VAL l558	0
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l840	COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	0
+COL label_area_similarity VAL uncertain COL name VAL Compact Disc Center COL ended VAL f COL id VAL l216	COL name VAL Compacd Disc Center COL ended VAL f COL id VAL l1087	1
+COL label_area_similarity VAL uncertain COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	COL name VAL CBSSony Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l590	1
+COL label_area_similarity VAL uncertain COL name VAL Dissident Street Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1034	COL name VAL HRB Music COL ended VAL f COL id VAL l277	0
+COL label_area_similarity VAL uncertain COL name VAL records supporter COL ended VAL  COL id VAL l218	COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	0
+COL label_area_similarity VAL uncertain COL name VAL Rufus Recordinks COL ended VAL f COL id VAL l835	COL name VAL Rufus Recordings COL ended VAL f COL id VAL l1019	1
+COL label_area_similarity VAL uncertain COL name VAL Spaghetti Records COL label_type VAL Original Production COL ended VAL  COL id VAL l316	COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	0
+COL label_area_similarity VAL uncertain COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	COL name VAL Everything ro Everyone Records COL ended VAL f COL id VAL l986	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	0
+COL label_area_similarity VAL uncertain COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	COL name VAL Rekordz Angelian COL ended VAL f COL id VAL l1083	1
+COL label_area_similarity VAL uncertain COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	COL name VAL Greeninch Sound COL ended VAL f COL id VAL l222	0
+COL label_area_similarity VAL uncertain COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	1
+COL label_area_similarity VAL uncertain COL name VAL Compacd Disc Center COL ended VAL f COL id VAL l1087	COL name VAL Shinen Multimedia COL ended VAL f COL id VAL l1128	0
+COL label_area_similarity VAL uncertain COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	COL name VAL Greeninch Sound COL ended VAL f COL id VAL l222	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfijh Factory Records COL ended VAL f COL id VAL l1118	COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	0
+COL label_area_similarity VAL uncertain COL name VAL Moldova Orange COL label_type VAL Holding COL ended VAL f COL id VAL l1220	COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	0
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	0
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Productions COL label_type VAL Production COL ended VAL  COL id VAL l991	COL name VAL Death Bevomes Me COL label_type VAL Orgiinal Production COL ended VAL f COL id VAL l1304	0
+COL label_area_similarity VAL uncertain COL name VAL Bum Rap Music Inc COL label_type VAL  COL ended VAL  COL id VAL l1460	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	0
+COL label_area_similarity VAL uncertain COL name VAL Young 2K COL ended VAL f COL id VAL l1277	COL name VAL  COL ended VAL f COL id VAL l1442	1
+COL label_area_similarity VAL uncertain COL name VAL Adam  Liza Music COL ended VAL f COL id VAL l670	COL name VAL Warfear Collect'lve COL ended VAL t COL id VAL l802	0
+COL label_area_similarity VAL uncertain COL name VAL Saturn COL label_type VAL Origianl Production COL ended VAL f COL id VAL l237	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	COL name VAL Ameghyst COL ended VAL f COL id VAL l832	1
+COL label_area_similarity VAL uncertain COL name VAL Trend COL label_type VAL Production COL ended VAL f COL id VAL l1396	COL name VAL Nomy Production COL ended VAL f COL id VAL l805	0
+COL label_area_similarity VAL uncertain COL name VAL Mercury Records COL label_type VAL Holding COL ended VAL f COL id VAL l1298	COL name VAL  COL ended VAL f COL id VAL l1157	0
+COL label_area_similarity VAL uncertain COL name VAL Bum Rap Music Inc COL label_type VAL  COL ended VAL  COL id VAL l1460	COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l73	1
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	0
+COL label_area_similarity VAL uncertain COL name VAL Soulmade Productions COL label_type VAL Production COL ended VAL  COL id VAL l991	COL name VAL Shinen Multimedia COL ended VAL f COL id VAL l1128	0
+COL label_area_similarity VAL uncertain COL name VAL Moldova Orange COL label_type VAL Holding COL ended VAL f COL id VAL l1220	COL name VAL Oranjy Moldova COL label_type VAL  COL ended VAL  COL id VAL l1398	1
+COL label_area_similarity VAL uncertain COL name VAL DM SAT video production COL label_type VAL Distributor COL ended VAL f COL id VAL l858	COL name VAL Digita1 Entertainment COL ended VAL f COL id VAL l920	0
+COL label_area_similarity VAL uncertain COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	COL name VAL  COL ended VAL  COL id VAL l23	0
+COL label_area_similarity VAL uncertain COL name VAL Bee Jats COL label_type VAL Original Production COL ended VAL f COL id VAL l850	COL name VAL Krazt Kat COL label_type VAL Original Production COL ended VAL f COL id VAL l1297	0
+COL label_area_similarity VAL uncertain COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	0
+COL label_area_similarity VAL uncertain COL name VAL Recordings COL ended VAL f COL id VAL l177	COL name VAL Recordings Eccentric COL ended VAL f COL id VAL l287	1
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	1
+COL label_area_similarity VAL uncertain COL name VAL Songs 9f Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l609	COL name VAL Spagbetti Records COL label_type VAL Original Production COL ended VAL f COL id VAL l896	0
+COL label_area_similarity VAL high COL name VAL Warfear Collect'lve COL ended VAL t COL id VAL l802	COL name VAL Warfear Collectiev COL ended VAL t COL id VAL l1107	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1351	COL name VAL Karma Chief Records COL label_type VAL Imprint COL ended VAL f COL id VAL l681	0
+COL label_area_similarity VAL uncertain COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	0
+COL label_area_similarity VAL uncertain COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	COL name VAL Queens L8tho COL ended VAL f COL id VAL l716	0
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL  COL ended VAL f COL id VAL l1351	1
+COL label_area_similarity VAL uncertain COL name VAL Jellyfijh Factory Records COL ended VAL f COL id VAL l1118	COL name VAL Hzg Records COL ended VAL f COL id VAL l662	0
+COL label_area_similarity VAL uncertain COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	COL name VAL Sound on Sound COL ended VAL f COL id VAL l1417	0
+COL label_area_similarity VAL uncertain COL name VAL MAW Woahds Publishign COL label_type VAL Publisher COL ended VAL f COL id VAL l14	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	COL name VAL Scorpios COL ended VAL t COL id VAL l652	0
+COL label_area_similarity VAL uncertain COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	COL name VAL Young 2K COL ended VAL f COL id VAL l1277	0
+COL label_area_similarity VAL uncertain COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	0
+COL label_area_similarity VAL uncertain COL name VAL DTCM Afe COL label_type VAL Publisher COL ended VAL f COL id VAL l377	COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	0
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL Soulmade Producti0ns COL label_type VAL Puction COL ended VAL f COL id VAL l380	0
+COL label_area_similarity VAL uncertain COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	COL name VAL Dollar Music Gang COL label_type VAL Production COL ended VAL f COL id VAL l1240	0
+COL label_area_similarity VAL uncertain COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	0
+COL label_area_similarity VAL uncertain COL name VAL Dolnośląskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l1234	COL name VAL Toxic Shock Records COL label_type VAL Prction COL ended VAL  COL id VAL l945	0
+COL label_area_similarity VAL uncertain COL name VAL Jellyfish Factorh Records COL ended VAL f COL id VAL l1119	COL name VAL Makondo Etnretenimiento COL ended VAL f COL id VAL l676	0
+COL label_area_similarity VAL uncertain COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	0
+COL label_area_similarity VAL uncertain COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	0
+COL label_area_similarity VAL uncertain COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	1
+COL label_area_similarity VAL uncertain COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	COL name VAL Hzg Records COL ended VAL f COL id VAL l662	1
+COL label_area_similarity VAL uncertain COL name VAL Nomy Productioj COL ended VAL f COL id VAL l254	COL name VAL Nomy Production COL ended VAL f COL id VAL l805	1
+COL label_area_similarity VAL low COL name VAL Clan Alba Productions COL label_type VAL Original Production COL ended VAL f COL id VAL l1268	COL name VAL Trend COL label_type VAL Production COL ended VAL f COL id VAL l1396	0
+COL label_area_similarity VAL uncertain COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	COL name VAL  COL ended VAL f COL id VAL l721	0
+COL label_area_similarity VAL uncertain COL name VAL Blip COL label_type VAL Distributor COL ended VAL f COL id VAL l798	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	0
+COL label_area_similarity VAL uncertain COL name VAL mIaginosis COL ended VAL f COL id VAL l339	COL name VAL Imagin0sis COL ended VAL f COL id VAL l1272	1
+COL label_area_similarity VAL high COL name VAL Ni Endertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l1465	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	1
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	COL name VAL MAW WordsP ublising COL label_type VAL Publisher COL ended VAL  COL id VAL l15	0
+COL label_area_similarity VAL uncertain COL name VAL Adam  Liza Music COL ended VAL f COL id VAL l670	COL name VAL Adam  Llza Music COL ended VAL  COL id VAL l1092	1
+COL label_area_similarity VAL uncertain COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	COL name VAL Dollar Music Gang COL label_type VAL Production COL ended VAL f COL id VAL l1240	0
+COL label_area_similarity VAL uncertain COL name VAL ELASTICA COL ended VAL  COL id VAL l1402	COL name VAL Black Gold Records COL ended VAL f COL id VAL l188	0
+COL label_area_similarity VAL uncertain COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	COL name VAL Potomac Records COL label_type VAL Production COL ended VAL f COL id VAL l713	1
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	0
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Tete San Ko Inc Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l88	0
+COL label_area_similarity VAL uncertain COL name VAL Refukees Of Rap COL ended VAL f COL id VAL l841	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	0
+COL label_area_similarity VAL uncertain COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	COL name VAL Patio Mu5ic COL label_type VAL Original Production COL ended VAL f COL id VAL l395	1
+COL label_area_similarity VAL uncertain COL name VAL Spagbetti Records COL label_type VAL Original Production COL ended VAL f COL id VAL l896	COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	1
+COL label_area_similarity VAL uncertain COL name VAL Sonks COL label_type VAL Publisher COL ended VAL f COL id VAL l304	COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	1
+COL label_area_similarity VAL uncertain COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	0
+COL label_area_similarity VAL uncertain COL name VAL Springalo Toones COL label_type VAL Publer COL ended VAL f COL id VAL l153	COL name VAL Black Gold Recordz COL ended VAL f COL id VAL l1089	0
+COL label_area_similarity VAL uncertain COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	COL name VAL Black Gold Records COL ended VAL f COL id VAL l188	0
+COL label_area_similarity VAL uncertain COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	COL name VAL Oranjy Moldova COL label_type VAL  COL ended VAL  COL id VAL l1398	0
+COL label_area_similarity VAL uncertain COL name VAL Spaghetti Records COL label_type VAL Original Production COL ended VAL  COL id VAL l316	COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	1
+COL label_area_similarity VAL uncertain COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	0
+COL label_area_similarity VAL uncertain COL name VAL SIMP Records COL label_type VAL Original Production COL ended VAL f COL id VAL l534	COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂q6 COL label_type VAL Imprnit COL ended VAL f COL id VAL l880	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	COL name VAL Lo5Traxx Reocrds COL ended VAL f COL id VAL l973	1
+COL label_area_similarity VAL uncertain COL name VAL Young 2K COL ended VAL f COL id VAL l1277	COL name VAL Youn9 2K COL ended VAL f COL id VAL l1443	1
+COL label_area_similarity VAL high COL name VAL Tender Collecti0n COL ended VAL f COL id VAL l93	COL name VAL Tender COL ended VAL f COL id VAL l1055	1
+COL label_area_similarity VAL uncertain COL name VAL Warfear Collectiev COL ended VAL t COL id VAL l1107	COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	0
+COL label_area_similarity VAL uncertain COL name VAL Atlantic Rhythms COL ended VAL  COL id VAL l1242	COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	0
+COL label_area_similarity VAL uncertain COL name VAL Sadurn Strip COL label_type VAL Original Production COL ended VAL f COL id VAL l1332	COL name VAL Karma Chief Records COL label_type VAL Imprint COL ended VAL f COL id VAL l681	0
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Recorss COL label_type VAL Original Production COL ended VAL f COL id VAL l1441	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	0
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	0
+COL label_area_similarity VAL uncertain COL name VAL Analogic Uberleben COL label_type VAL Bootleg Production COL ended VAL f COL id VAL l77	COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	0
+COL label_area_similarity VAL uncertain COL name VAL Amedhsyt COL ended VAL  COL id VAL l81	COL name VAL Amethyst COL ended VAL f COL id VAL l808	1
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Potomac Records COL label_type VAL Production COL ended VAL f COL id VAL l713	0
+COL label_area_similarity VAL uncertain COL name VAL Loaf Recordd COL ended VAL f COL id VAL l587	COL name VAL Loaf Records COL ended VAL  COL id VAL l597	1
+COL label_area_similarity VAL uncertain COL name VAL Odher Int Universal COL ended VAL f COL id VAL l393	COL name VAL Spaghetti Records COL label_type VAL Original Production COL ended VAL  COL id VAL l316	0
+COL label_area_similarity VAL uncertain COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	COL name VAL HTown Recorts COL ended VAL f COL id VAL l1363	0
+COL label_area_similarity VAL uncertain COL name VAL Moldova Orange COL label_type VAL Holding COL ended VAL f COL id VAL l1220	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	0
+COL label_area_similarity VAL uncertain COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	COL name VAL  COL ended VAL f COL id VAL l259	0
+COL label_area_similarity VAL uncertain COL name VAL Loaf Records COL ended VAL  COL id VAL l597	COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	0
+COL label_area_similarity VAL uncertain COL name VAL Potm9ac Records COL label_type VAL Production COL ended VAL f COL id VAL l549	COL name VAL Potomac Records COL label_type VAL Production COL ended VAL f COL id VAL l713	1
+COL label_area_similarity VAL uncertain COL name VAL Devouter Records COL ended VAL f COL id VAL l1184	COL name VAL Young Jortan COL ended VAL f COL id VAL l179	0
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Inc Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l88	COL name VAL Frux COL label_type VAL Original Production COL ended VAL f COL id VAL l1023	0
+COL label_area_similarity VAL uncertain COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	COL name VAL  COL ended VAL f COL id VAL l240	0
+COL label_area_similarity VAL uncertain COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	COL name VAL  COL ended VAL f COL id VAL l259	0
+COL label_area_similarity VAL uncertain COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	0
+COL label_area_similarity VAL uncertain COL name VAL Sonks COL label_type VAL Publisher COL ended VAL f COL id VAL l304	COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	0
+COL label_area_similarity VAL uncertain COL name VAL BFJ Cloyhing CO COL ended VAL f COL id VAL l200	COL name VAL  COL ended VAL f COL id VAL l659	1
+COL label_area_similarity VAL uncertain COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	0
+COL label_area_similarity VAL uncertain COL name VAL Production Pathétik COL label_type VAL Imprint COL ended VAL f COL id VAL l1145	COL name VAL Jellyfish Factory Records COL ended VAL f COL id VAL l870	0
+COL label_area_similarity VAL uncertain COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	0
+COL label_area_similarity VAL uncertain COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	COL name VAL  COL ended VAL f COL id VAL l1157	1
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	1
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL Self Recoeds COL ended VAL f COL id VAL l1329	1
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Inc Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l88	COL name VAL Tete San Ko Publixing Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1122	1
+COL label_area_similarity VAL uncertain COL name VAL Mad King Production COL ended VAL f COL id VAL l816	COL name VAL aMd King Produktion COL ended VAL f COL id VAL l1121	1
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l484	COL name VAL Rufus Recordinks COL ended VAL f COL id VAL l835	0
+COL label_area_similarity VAL uncertain COL name VAL Bee Jazz COL label_type VAL Original Production COL ended VAL f COL id VAL l650	COL name VAL Tender Collecti0n COL ended VAL f COL id VAL l93	0
+COL label_area_similarity VAL uncertain COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	COL name VAL Ubeahleben Analogic COL label_type VAL Production Bootleg COL ended VAL f COL id VAL l351	0
+COL label_area_similarity VAL uncertain COL name VAL Mercury Records COL label_type VAL Holding COL ended VAL f COL id VAL l1298	COL name VAL Guest Records COL ended VAL f COL id VAL l756	0
+COL label_area_similarity VAL uncertain COL name VAL Queens L8tho COL ended VAL f COL id VAL l716	COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	1
+COL label_area_similarity VAL uncertain COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	COL name VAL CoolN0te COL ended VAL  COL id VAL l905	0
+COL label_area_similarity VAL uncertain COL name VAL Death Bevomes Me COL label_type VAL Orgiinal Production COL ended VAL f COL id VAL l1304	COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	0
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	0
+COL label_area_similarity VAL uncertain COL name VAL Weather Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l562	COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	0
+COL label_area_similarity VAL uncertain COL name VAL Everything ro Everyone Records COL ended VAL f COL id VAL l986	COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	0
+COL label_area_similarity VAL uncertain COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	COL name VAL Nomy Production COL ended VAL f COL id VAL l805	0
+COL label_area_similarity VAL uncertain COL name VAL Mudant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l603	COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	1
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1264	COL name VAL SPHERE RECORDS COL ended VAL f COL id VAL l1007	0
+COL label_area_similarity VAL uncertain COL name VAL Clan Alba Productions COL label_type VAL Original Production COL ended VAL f COL id VAL l1268	COL name VAL  COL ended VAL f COL id VAL l1192	0
+COL label_area_similarity VAL uncertain COL name VAL Tkb Records COL ended VAL f COL id VAL l1068	COL name VAL Frux COL label_type VAL Original Production COL ended VAL f COL id VAL l1023	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL Angelina Recordz COL ended VAL f COL id VAL l975	0
+COL label_area_similarity VAL uncertain COL name VAL DM SAT video production COL label_type VAL Distributor COL ended VAL f COL id VAL l858	COL name VAL SanCtuS Recordin9s COL ended VAL f COL id VAL l706	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefer Music COL ended VAL f COL id VAL l537	COL name VAL Hzg Records COL ended VAL f COL id VAL l662	0
+COL label_area_similarity VAL uncertain COL name VAL CoolN0te COL ended VAL  COL id VAL l905	COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	0
+COL label_area_similarity VAL uncertain COL name VAL Sabres of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l151	COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	0
+COL label_area_similarity VAL uncertain COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	COL name VAL Devil in the Woods COL label_type VAL Original Production COL ended VAL t COL id VAL l1015	0
+COL label_area_similarity VAL uncertain COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	COL name VAL  COL ended VAL f COL id VAL l259	0
+COL label_area_similarity VAL uncertain COL name VAL Recorcls Potomac COL label_type VAL Production COL ended VAL f COL id VAL l94	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l73	0
+COL label_area_similarity VAL uncertain COL name VAL Scorpios COL ended VAL t COL id VAL l652	COL name VAL Padio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l396	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	COL name VAL records supporter COL ended VAL  COL id VAL l218	0
+COL label_area_similarity VAL uncertain COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	0
+COL label_area_similarity VAL uncertain COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	COL name VAL Unknown House COL label_type VAL Distributor COL ended VAL f COL id VAL l333	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂36 COL label_type VAL Imprint COL ended VAL f COL id VAL l879	COL name VAL  COL ended VAL f COL id VAL l1192	0
+COL label_area_similarity VAL uncertain COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l1457	COL name VAL Dissident Street Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1034	0
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	0
+COL label_area_similarity VAL uncertain COL name VAL Digita1 Entertainment COL ended VAL f COL id VAL l920	COL name VAL Digital Entertainment COL ended VAL f COL id VAL l1274	1
+COL label_area_similarity VAL uncertain COL name VAL Gaijin Entertainment COL label_type VAL Production COL ended VAL f COL id VAL l1223	COL name VAL Mudant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l603	0
+COL label_area_similarity VAL uncertain COL name VAL CoolN0te COL ended VAL  COL id VAL l905	COL name VAL Recordings Eccentric COL ended VAL f COL id VAL l287	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	0
+COL label_area_similarity VAL uncertain COL name VAL HRB Music COL ended VAL f COL id VAL l277	COL name VAL HRB Music Company COL ended VAL f COL id VAL l466	1
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	COL name VAL aMd King Produktion COL ended VAL f COL id VAL l1121	0
+COL label_area_similarity VAL uncertain COL name VAL South House COL label_type VAL Proudction COL ended VAL f COL id VAL l958	COL name VAL South Americqn House COL label_type VAL Production COL ended VAL f COL id VAL l1319	1
+COL label_area_similarity VAL uncertain COL name VAL LXR Records COL ended VAL f COL id VAL l897	COL name VAL Krazy Kat COL label_type VAL Original COL ended VAL f COL id VAL l493	0
+COL label_area_similarity VAL uncertain COL name VAL Sonks COL label_type VAL Publisher COL ended VAL f COL id VAL l304	COL name VAL Everyhting to Everyone Records COL ended VAL  COL id VAL l987	0
+COL label_area_similarity VAL uncertain COL name VAL Death Bevomes Me COL label_type VAL Orgiinal Production COL ended VAL f COL id VAL l1304	COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	1
+COL label_area_similarity VAL uncertain COL name VAL Amethyst COL ended VAL f COL id VAL l808	COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	0
+COL label_area_similarity VAL uncertain COL name VAL MAW Woahds Publishign COL label_type VAL Publisher COL ended VAL f COL id VAL l14	COL name VAL MAW Words Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l965	1
+COL label_area_similarity VAL uncertain COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	0
+COL label_area_similarity VAL uncertain COL name VAL Shoshanah Hojan COL label_type VAL Manufacturer COL ended VAL f COL id VAL l919	COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	1
+COL label_area_similarity VAL uncertain COL name VAL Tender COL ended VAL f COL id VAL l1055	COL name VAL ELASTICA COL ended VAL  COL id VAL l345	0
+COL label_area_similarity VAL uncertain COL name VAL Odher Int Universal COL ended VAL f COL id VAL l393	COL name VAL Devil in the Woods COL label_type VAL Original Production COL ended VAL t COL id VAL l1015	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	COL name VAL Dollar Music Gang COL label_type VAL Production COL ended VAL f COL id VAL l1240	1
+COL label_area_similarity VAL uncertain COL name VAL BFJ Clothinh CO COL ended VAL f COL id VAL l201	COL name VAL Production Pathétik COL label_type VAL Imprint COL ended VAL f COL id VAL l1145	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicate Sonks COL ended VAL f COL id VAL l631	COL name VAL WordSound COL label_type VAL Original Production COL ended VAL f COL id VAL l702	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicate Sonks COL ended VAL f COL id VAL l631	COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	1
+COL label_area_similarity VAL uncertain COL name VAL Levande Begravd Records COL ended VAL f COL id VAL l517	COL name VAL Levaride Begravd Records COL ended VAL f COL id VAL l1488	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1192	COL name VAL  COL ended VAL  COL id VAL l23	0
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	0
+COL label_area_similarity VAL uncertain COL name VAL Muzica Mangini COL ended VAL  COL id VAL l829	COL name VAL  COL ended VAL  COL id VAL l1009	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l259	COL name VAL  COL ended VAL  COL id VAL l1009	0
+COL label_area_similarity VAL uncertain COL name VAL Kobalt Label Services America Inc COL label_type VAL Holding COL ended VAL  COL id VAL l608	COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	1
+COL label_area_similarity VAL uncertain COL name VAL CBSSonv Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l305	COL name VAL Haunt COL label_type VAL Production COL ended VAL f COL id VAL l1108	0
+COL label_area_similarity VAL uncertain COL name VAL All Other COL label_type VAL Production COL ended VAL f COL id VAL l638	COL name VAL All Otyer COL label_type VAL Production COL ended VAL f COL id VAL l853	1
+COL label_area_similarity VAL uncertain COL name VAL Tkp Records COL ended VAL f COL id VAL l669	COL name VAL Picture Show Recorss COL label_type VAL Original Production COL ended VAL f COL id VAL l1441	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL  COL id VAL l1009	COL name VAL Tender Collecti0n COL ended VAL f COL id VAL l93	0
+COL label_area_similarity VAL uncertain COL name VAL WordS0und COL label_type VAL Original Production COL ended VAL f COL id VAL l46	COL name VAL WordSoind COL label_type VAL Original Production COL ended VAL f COL id VAL l47	1
+COL label_area_similarity VAL uncertain COL name VAL Sabre5 of Paradise COL label_type VAL Original Production COL ended VAL f COL id VAL l477	COL name VAL Sabrej of Paradise COL label_type VAL Production Original COL ended VAL f COL id VAL l478	1
+COL label_area_similarity VAL uncertain COL name VAL Redd Klah  GhetOVision COL ended VAL f COL id VAL l495	COL name VAL Young Jortan COL ended VAL f COL id VAL l179	0
+COL label_area_similarity VAL uncertain COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	0
+COL label_area_similarity VAL uncertain COL name VAL Syndicate Sonks COL ended VAL f COL id VAL l631	COL name VAL Syndicade Songs II COL ended VAL f COL id VAL l632	1
+COL label_area_similarity VAL uncertain COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	COL name VAL Sound on Sound COL ended VAL f COL id VAL l4	0
+COL label_area_similarity VAL uncertain COL name VAL CBSSony Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l590	COL name VAL Fonovideo Produzioni Discog4afiche COL ended VAL f COL id VAL l753	0
+COL label_area_similarity VAL uncertain COL name VAL Moldova Orange COL label_type VAL Holding COL ended VAL f COL id VAL l1220	COL name VAL Imag'lnosis COL ended VAL f COL id VAL l1271	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Records COL ended VAL f COL id VAL l766	COL name VAL Young 2K COL ended VAL f COL id VAL l1277	0
+COL label_area_similarity VAL uncertain COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	COL name VAL Hag Records COL ended VAL f COL id VAL l766	1
+COL label_area_similarity VAL uncertain COL name VAL Loaf Records COL ended VAL  COL id VAL l597	COL name VAL Songs of Universzl COL label_type VAL  COL ended VAL f COL id VAL l610	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	0
+COL label_area_similarity VAL uncertain COL name VAL Picture Show Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1264	COL name VAL Bee Jats COL label_type VAL Original Production COL ended VAL f COL id VAL l850	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	1
+COL label_area_similarity VAL uncertain COL name VAL CBSSony Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l590	COL name VAL Soulmade Producti0ns COL label_type VAL Puction COL ended VAL f COL id VAL l380	0
+COL label_area_similarity VAL uncertain COL name VAL Nomy Produktion COL ended VAL f COL id VAL l255	COL name VAL Wild Rice Music COL label_type VAL Publisher COL ended VAL f COL id VAL l164	0
+COL label_area_similarity VAL uncertain COL name VAL LIGHT SHOXX COL ended VAL f COL id VAL l334	COL name VAL LIGHT SHOXX COL ended VAL f COL id VAL l820	1
+COL label_area_similarity VAL uncertain COL name VAL Spaghetti Records COL label_type VAL Original Production COL ended VAL  COL id VAL l316	COL name VAL Spagbetti Records COL label_type VAL Original Production COL ended VAL f COL id VAL l896	1
+COL label_area_similarity VAL uncertain COL name VAL Young Jortan COL ended VAL f COL id VAL l179	COL name VAL Young Jordan COL ended VAL f COL id VAL l1371	1
+COL label_area_similarity VAL uncertain COL name VAL Eraly Learning Centre COL label_type VAL Distributor COL ended VAL f COL id VAL l1195	COL name VAL Century Rec0rds COL label_type VAL Production COL ended VAL f COL id VAL l1066	0
+COL label_area_similarity VAL uncertain COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	COL name VAL Ameghyst COL ended VAL f COL id VAL l832	0
+COL label_area_similarity VAL uncertain COL name VAL K0balt Label Services America Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1103	COL name VAL PHU Violetta COL ended VAL f COL id VAL l3	0
+COL label_area_similarity VAL uncertain COL name VAL Koze Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l236	COL name VAL Mudant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l603	0
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publixing COL label_type VAL Publisher COL ended VAL  COL id VAL l981	COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	0
+COL label_area_similarity VAL uncertain COL name VAL Tete San Ko Publixing Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1122	COL name VAL Weatner Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l1011	0
+COL label_area_similarity VAL uncertain COL name VAL Springalo Toones COL label_type VAL Publer COL ended VAL f COL id VAL l153	COL name VAL Springalo To0nes COL label_type VAL Publisher COL ended VAL f COL id VAL l988	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1442	COL name VAL Self Recoeds COL ended VAL f COL id VAL l1329	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL  COL id VAL l936	COL name VAL Songs of Universal COL label_type VAL Publisher COL ended VAL f COL id VAL l675	0
+COL label_area_similarity VAL uncertain COL name VAL Self Serve Records COL ended VAL  COL id VAL l844	COL name VAL DolnoÅlÄskie Stowarzyszenie Artystyczne COL ended VAL f COL id VAL l474	0
+COL label_area_similarity VAL uncertain COL name VAL Weather Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l562	COL name VAL Weatner Factory COL label_type VAL Distributor COL ended VAL f COL id VAL l1011	1
+COL label_area_similarity VAL uncertain COL name VAL CBSSony Songs COL label_type VAL Publisher COL ended VAL  COL id VAL l590	COL name VAL Compacd Disc Center COL ended VAL f COL id VAL l1087	0
+COL label_area_similarity VAL uncertain COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	COL name VAL Shinen Multimedia COL ended VAL f COL id VAL l1128	0
+COL label_area_similarity VAL uncertain COL name VAL South Americqn House COL label_type VAL Production COL ended VAL f COL id VAL l1319	COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	0
+COL label_area_similarity VAL uncertain COL name VAL Ni Endertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l1465	COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	0
+COL label_area_similarity VAL uncertain COL name VAL Koze S0ngs COL label_type VAL Publisher COL ended VAL f COL id VAL l786	COL name VAL Kose Songs COL label_type VAL Publisher COL ended VAL f COL id VAL l787	1
+COL label_area_similarity VAL uncertain COL name VAL South Americqn House COL label_type VAL Production COL ended VAL f COL id VAL l1319	COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	0
+COL label_area_similarity VAL uncertain COL name VAL Extreme Electronics COL ended VAL f COL id VAL l884	COL name VAL Music Shop COL label_type VAL Original Production COL ended VAL  COL id VAL l701	0
+COL label_area_similarity VAL uncertain COL name VAL Patio Music COL label_type VAL Original Production COL ended VAL f COL id VAL l214	COL name VAL Yacca COL label_type VAL  COL ended VAL f COL id VAL l438	0
+COL label_area_similarity VAL uncertain COL name VAL World ov WIls COL ended VAL f COL id VAL l498	COL name VAL World of WIls COL ended VAL f COL id VAL l1257	1
+COL label_area_similarity VAL uncertain COL name VAL Jellyfijh Factory Records COL ended VAL f COL id VAL l1118	COL name VAL Sadurn Strip COL label_type VAL Original Production COL ended VAL f COL id VAL l1332	0
+COL label_area_similarity VAL uncertain COL name VAL Death Me COL label_type VAL Original Production COL ended VAL f COL id VAL l1471	COL name VAL Toxic Shock Records COL label_type VAL Prction COL ended VAL  COL id VAL l945	0
+COL label_area_similarity VAL uncertain COL name VAL Tkb Rec0rds COL ended VAL  COL id VAL l668	COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	0
+COL label_area_similarity VAL uncertain COL name VAL Songs Syndicate II COL ended VAL f COL id VAL l739	COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	0
+COL label_area_similarity VAL uncertain COL name VAL Cype Records COL label_type VAL Original Production COL ended VAL f COL id VAL l797	COL name VAL Hag Rekords COL ended VAL f COL id VAL l106	0
+COL label_area_similarity VAL uncertain COL name VAL MAW Words Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l965	COL name VAL  COL ended VAL f COL id VAL l1351	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l73	COL name VAL Lateral Mgmt London Stockholm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l1331	1
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l1192	COL name VAL  COL ended VAL f COL id VAL l1421	1
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Other Int Universal COL ended VAL f COL id VAL l227	0
+COL label_area_similarity VAL uncertain COL name VAL Tkp Records COL ended VAL f COL id VAL l669	COL name VAL Akl Other COL label_type VAL Production COL ended VAL f COL id VAL l852	0
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Mercury Recordz COL label_type VAL Holding COL ended VAL f COL id VAL l296	0
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL WordS0und COL label_type VAL Original Production COL ended VAL f COL id VAL l46	0
+COL label_area_similarity VAL uncertain COL name VAL Mutant1000000 COL label_type VAL Publisher COL ended VAL f COL id VAL l484	COL name VAL Mutant1000090 COL label_type VAL Publisher COL ended VAL f COL id VAL l604	1
+COL label_area_similarity VAL uncertain COL name VAL Spaghetti Records COL label_type VAL Original Production COL ended VAL  COL id VAL l316	COL name VAL Warfear Coloective COL ended VAL t COL id VAL l803	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	COL name VAL N: Entertainment COL label_type VAL Impr COL ended VAL f COL id VAL l1466	0
+COL label_area_similarity VAL uncertain COL name VAL 櫻坂46 COL label_type VAL Imprint COL ended VAL f COL id VAL l827	COL name VAL Toxic Shock Records COL label_type VAL Prction COL ended VAL  COL id VAL l945	0
+COL label_area_similarity VAL uncertain COL name VAL Sethnefee Music COL ended VAL f COL id VAL l862	COL name VAL Century Records COL label_type VAL  COL ended VAL f COL id VAL l1078	0
+COL label_area_similarity VAL uncertain COL name VAL Krazy Kat COL label_type VAL Original COL ended VAL f COL id VAL l493	COL name VAL Krazt Kat COL label_type VAL Original Production COL ended VAL f COL id VAL l1297	1
+COL label_area_similarity VAL uncertain COL name VAL Charlotte Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l260	COL name VAL Charlote Lawrence Music Publishing COL label_type VAL Publisher COL ended VAL  COL id VAL l982	1
+COL label_area_similarity VAL uncertain COL name VAL Tradition Records COL label_type VAL Original Production COL ended VAL  COL id VAL l1228	COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	0
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL f COL id VAL l815	COL name VAL Traclition Records COL label_type VAL Original Production COL ended VAL t COL id VAL l1431	0
+COL label_area_similarity VAL uncertain COL name VAL All Other COL label_type VAL Production COL ended VAL f COL id VAL l638	COL name VAL DTCM COL label_type VAL Publisher COL ended VAL f COL id VAL l612	0
+COL label_area_similarity VAL uncertain COL name VAL Rkeords COL ended VAL f COL id VAL l1385	COL name VAL Patio Mu5ic COL label_type VAL Original Production COL ended VAL f COL id VAL l395	0
+COL label_area_similarity VAL uncertain COL name VAL Lateral Mgmt London Stoc1<holm AB COL label_type VAL Publisher COL ended VAL f COL id VAL l72	COL name VAL Patio Mu5ic COL label_type VAL Original Production COL ended VAL f COL id VAL l395	0
+COL label_area_similarity VAL uncertain COL name VAL Spaghetri Records COL label_type VAL Original Production COL ended VAL f COL id VAL l914	COL name VAL Punk Uprisings Records COL ended VAL f COL id VAL l325	0
+COL label_area_similarity VAL uncertain COL name VAL  COL ended VAL f COL id VAL l721	COL name VAL Yacka COL label_type VAL Production COL ended VAL f COL id VAL l434	0
+COL label_area_similarity VAL low COL name VAL Ni Entertainment COL label_type VAL Imprint COL ended VAL f COL id VAL l885	COL name VAL Trend COL label_type VAL Production COL ended VAL f COL id VAL l1396	0
+COL label_area_similarity VAL uncertain COL name VAL Litho Queens COL ended VAL f COL id VAL l1376	COL name VAL Unkbown House COL label_type VAL Distributor COL ended VAL f COL id VAL l457	0
+COL label_area_similarity VAL uncertain COL name VAL Hzg Records COL ended VAL f COL id VAL l662	COL name VAL Hag Records COL ended VAL f COL id VAL l766	1
+COL label_area_similarity VAL uncertain COL name VAL Hzg Records COL ended VAL f COL id VAL l662	COL name VAL Digital Entertainment COL ended VAL f COL id VAL l1274	0
+COL label_area_similarity VAL uncertain COL name VAL LosTraxx Records COL ended VAL f COL id VAL l577	COL name VAL LosTraxx Recordw COL ended VAL f COL id VAL l974	1
+COL label_area_similarity VAL uncertain COL name VAL Evil Ink COL ended VAL f COL id VAL l1003	COL name VAL Refugees Of Rap COL ended VAL f COL id VAL l840	0
+COL label_area_similarity VAL uncertain COL name VAL LXR Records COL ended VAL f COL id VAL l897	COL name VAL  COL ended VAL f COL id VAL l1351	0
+COL label_area_similarity VAL uncertain COL name VAL Rufus Recordings COL ended VAL f COL id VAL l1019	COL name VAL Tete San Ko Publixing Inc COL label_type VAL Publisher COL ended VAL f COL id VAL l1122	0
+COL label_area_similarity VAL uncertain COL name VAL Glopal 29 Public COL ended VAL f COL id VAL l1226	COL name VAL Serotonin Shift Music Publishing COL label_type VAL Publisher COL ended VAL f COL id VAL l404	0
+COL label_area_similarity VAL uncertain COL name VAL Tender Collecti0n COL ended VAL f COL id VAL l93	COL name VAL Kobalt Label Services Anerica Inc COL label_type VAL Holding COL ended VAL f COL id VAL l1104	0
+COL label_area_similarity VAL uncertain COL name VAL Dollar Mu5ic Gang COL label_type VAL Production COL ended VAL  COL id VAL l978	COL name VAL Dollar Musiv Gang COL label_type VAL Production COL ended VAL f COL id VAL l979	1
+COL label_area_similarity VAL uncertain COL name VAL Heron Pond Productions COL ended VAL f COL id VAL l815	COL name VAL Atlantic Rhythms COL ended VAL  COL id VAL l1242	0
+COL label_area_similarity VAL uncertain COL name VAL Blee0 COL label_type VAL Distributor COL ended VAL f COL id VAL l799	COL name VAL Bleep COL label_type VAL Distributor COL ended VAL f COL id VAL l1043	1
+COL label_area_similarity VAL uncertain COL name VAL Loaf Records COL ended VAL  COL id VAL l597	COL name VAL Hinky Music COL label_type VAL Publisher COL ended VAL  COL id VAL l971	0
+COL label_area_similarity VAL uncertain COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	COL name VAL Everything ro Everyone Records COL ended VAL f COL id VAL l986	1
+COL label_area_similarity VAL uncertain COL name VAL Homan Shoshanah COL label_type VAL Manufacturer COL ended VAL f COL id VAL l1463	COL name VAL Funnybone Records COL ended VAL f COL id VAL l1168	0
+COL label_area_similarity VAL uncertain COL name VAL World ov WIls COL ended VAL f COL id VAL l498	COL name VAL Everything to Everyone Records COL ended VAL f COL id VAL l782	0

@@ -1,0 +1,125 @@
+COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1079	COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1836	1
+COL name VAL The Singles Collectoon COL type VAL 1.0 COL id VAL rg1037	COL name VAL Ghouls Ghouls Ghouls COL type VAL 1.0 COL id VAL rg4299	0
+COL name VAL Introducing Nitin Sawhney COL type VAL 1.0 COL id VAL rg265	COL name VAL Trew COL type VAL 1.0 COL id VAL rg481	0
+COL name VAL Playing the Piano 2013 in Yokohama COL type VAL  COL id VAL rg534	COL name VAL Feats of the Blooe Monsters COL type VAL 1.0 COL id VAL rg4235	0
+COL name VAL Shu•bi•dua 10 COL type VAL 1.0 COL id VAL rg3933	COL name VAL Баллигоулан COL type VAL 1.0 COL id VAL rg3551	0
+COL name VAL Лучшее COL type VAL 1.0 COL id VAL rg1597	COL name VAL The Hollow of Morning COL type VAL 1.0 COL id VAL rg2559	0
+COL name VAL Up COL type VAL 1.0 COL id VAL rg229	COL name VAL Bonne Nuit Petit Kaki  COL id VAL rg2457	0
+COL name VAL Raus mit der Sprache COL type VAL 1.0 COL id VAL rg1998	COL name VAL Raus mit der Spracge COL type VAL 1.0 COL id VAL rg2445	1
+COL name VAL Eskalation COL type VAL 1.0 COL id VAL rg703	COL name VAL The Other Side of Triviality COL type VAL 1.0 COL id VAL rg1277	0
+COL name VAL The Singles C0llection COL type VAL 1.0 COL id VAL rg1038	COL name VAL BEATING SURVIVER Another 4th incoming of beating terror COL type VAL  COL id VAL rg2091	0
+COL name VAL Consonant COL type VAL 1.0 COL id VAL rg1836	COL name VAL Poppele COL type VAL 1.0 COL id VAL rg1711	0
+COL name VAL Down and Out COL type VAL 3.0 COL id VAL rg1449	COL name VAL KXLU 889 FM Los Angeles Live Volume 2 COL type VAL 1.0 COL id VAL rg3048	0
+COL name VAL 東方幻奏録 COL type VAL 1.0 COL id VAL rg3156	COL name VAL Power COL type VAL 11.0 COL id VAL rg1859	0
+COL name VAL Trance 75 2012 Volume 1 COL type VAL 1.0 COL id VAL rg4334	COL name VAL Volztile Molotov COL type VAL 1.0 COL id VAL rg712	0
+COL name VAL あきれた男たち COL type VAL 1.0 COL id VAL rg3729	COL name VAL The Silent Ballet Volume II Acquiescence and Oblivion COL type VAL 1.0 COL id VAL rg983	0
+COL name VAL Good News for Modern Man COL type VAL 1.0 COL id VAL rg4170	COL name VAL Collective Demise COL type VAL 1.0 COL id VAL rg3474	0
+COL name VAL Dr Sin COL type VAL 1.0 COL id VAL rg2427	COL name VAL Godzilla Gets Friends COL type VAL 3.0 COL id VAL rg4351	0
+COL name VAL Vibes Fron the Tribe COL type VAL 1.0 COL id VAL rg99	COL name VAL Vibes From the Tribe COL type VAL 1.0 COL id VAL rg1792	1
+COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg1062	COL name VAL Bedtime Songs COL type VAL 1.0 COL id VAL rg2132	1
+COL name VAL Blue Thunder COL type VAL 1.0 COL id VAL rg2584	COL name VAL All You Pretty Girls COL type VAL 2.0 COL id VAL rg1925	0
+COL name VAL 83  93 druga płyta COL type VAL  COL id VAL rg2894	COL name VAL Crápula COL type VAL 1.0 COL id VAL rg1541	0
+COL name VAL Bil Boqute COL type VAL 1.0 COL id VAL rg1321	COL name VAL Bil Boqvet COL type VAL 1.0 COL id VAL rg4083	1
+COL name VAL Collective Demise COL type VAL 1.0 COL id VAL rg3639	COL name VAL RotznRoll Radio  Pargypiepel COL type VAL .10 COL id VAL rg3800	0
+COL name VAL Lovesongs for Underdogs COL type VAL 1.0 COL id VAL rg3936	COL name VAL Cup Of Tea COL id VAL rg1754	0
+COL name VAL Planetary Dvst COL type VAL 10. COL id VAL rg518	COL name VAL Planetary Dust COL type VAL 1.0 COL id VAL rg3320	1
+COL name VAL On the Beach 4 Las Salinas Ibiza COL type VAL 1.0 COL id VAL rg1093	COL name VAL Wigstock The Mobie COL type VAL 1.0 COL id VAL rg1219	0
+COL name VAL You Know My Steez COL type VAL 2.0 COL id VAL rg1553	COL name VAL You Knovv My Steez COL type VAL 2.0 COL id VAL rg1554	1
+COL name VAL Venus COL type VAL 1.0 COL id VAL rg3196	COL name VAL Sehnsucht Die Balladen 19841999 COL type VAL 1.0 COL id VAL rg1901	0
+COL name VAL Mystiv Bud COL type VAL 1.0 COL id VAL rg3007	COL name VAL  COL type VAL 1.0 COL id VAL rg3008	1
+COL name VAL The Christmas Collection Volume 4 COL type VAL 11.0 COL id VAL rg687	COL name VAL  COL type VAL 11.0 COL id VAL rg693	1
+COL name VAL Descendo o Morro nº 3 e nº 4 COL type VAL 1.0 COL id VAL rg1640	COL name VAL Toons Tunes From tbe Past COL type VAL 1.0 COL id VAL rg820	0
+COL name VAL Its Sw'lng Time COL type VAL 1.0 COL id VAL rg1132	COL name VAL Its Swibg Time COL type VAL 1.0 COL id VAL rg2288	1
+COL name VAL Hellsound 6 COL type VAL 1.0 COL id VAL rg3315	COL name VAL De Klok Tikt COL type VAL 1.0 COL id VAL rg4199	0
+COL name VAL Our Blue Rainbow COL type VAL 1.0 COL id VAL rg1067	COL name VAL Our Blue Rsinbow COL type VAL 1.0 COL id VAL rg2854	1
+COL name VAL Lulu COL type VAL 1.0 COL id VAL rg1464	COL name VAL Lulu COL type VAL 10. COL id VAL rg3783	1
+COL name VAL Mad Weight COL type VAL 1.0 COL id VAL rg2900	COL name VAL Mad Weignt COL type VAL 1.0 COL id VAL rg3980	1
+COL name VAL Tonefiom COL type VAL 1.0 COL id VAL rg282	COL name VAL Tonefilm COL type VAL 1.0 COL id VAL rg3406	1
+COL name VAL E Plurib8s MOTO COL type VAL 1.0 COL id VAL rg3539	COL name VAL Symphonies Nos 8 9 COL type VAL 1.0 COL id VAL rg1036	0
+COL name VAL Psi Com COL type VAL 1.0 COL id VAL rg3041	COL name VAL twelve message COL type VAL 1.0 COL id VAL rg29	0
+COL name VAL 20 años COL type VAL 1.0 COL id VAL rg3243	COL name VAL Guess Whos Back on the Streets COL type VAL 1.0 COL id VAL rg4086	0
+COL name VAL Dem0nstration COL type VAL 1.0 COL id VAL rg2406	COL name VAL The Edge Edition COL type VAL 11.0 COL id VAL rg1630	0
+COL name VAL Black Mahogani COL type VAL 1.0 COL id VAL rg2143	COL name VAL Year of the Monkey COL type VAL 1.0 COL id VAL rg3063	0
+COL name VAL Culture Shock COL type VAL 1.0 COL id VAL rg1989	COL name VAL Cultur4 Shock COL type VAL 1.0 COL id VAL rg2516	1
+COL name VAL Sound Design COL type VAL  COL id VAL rg1392	COL name VAL Alice Nine Complete Collection 20062009 COL type VAL 1.0 COL id VAL rg2054	0
+COL name VAL Source Code COL type VAL 1.0 COL id VAL rg2008	COL name VAL Beats Rhymes and Life COL type VAL 1.0 COL id VAL rg2208	0
+COL name VAL Now Hear This March q011 COL type VAL 1.0 COL id VAL rg1583	COL name VAL Musiques de t4anse COL type VAL 1.0 COL id VAL rg496	0
+COL name VAL Les Faux Bijoux et Gilles Droulez chantent Léo Ferré les inédits COL type VAL 1.0 COL id VAL rg3741	COL name VAL Great Composers  Disc B COL type VAL 1.0 COL id VAL rg1415	0
+COL name VAL Blues du jour COL type VAL 1.0 COL id VAL rg1502	COL name VAL Skitarg COL type VAL 1.0 COL id VAL rg39	0
+COL name VAL The Thomas Sankara CD COL type VAL  COL id VAL rg2628	COL name VAL Voices in Love  Love Lost COL type VAL 1.0 COL id VAL rg2996	0
+COL name VAL String Quartets op 9 op 10 op posth COL type VAL 1.0 COL id VAL rg1476	COL name VAL Marcp AntonioS olís COL type VAL 1.0 COL id VAL rg1180	0
+COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg1492	COL name VAL mK Hoordosis 3 COL type VAL 1.0 COL id VAL rg3236	1
+COL name VAL Fcking Hardcore 5 COL type VAL 1.0 COL id VAL rg280	COL name VAL Fcking Hardclre 5 COL type VAL 1.0 COL id VAL rg1977	1
+COL name VAL Two Thousand Miles From Here COL type VAL 3.0 COL id VAL rg1156	COL name VAL Two Thousand Miles Fr0m Here COL type VAL 3.0 COL id VAL rg2890	1
+COL name VAL In Holland 3 COL type VAL  COL id VAL rg4221	COL name VAL Chansons indociles COL type VAL 1.0 COL id VAL rg1642	0
+COL name VAL Sometimes Sounds Collapse COL type VAL 3.0 COL id VAL rg2417	COL name VAL Phoenix EP COL type VAL 3.0 COL id VAL rg1416	0
+COL name VAL hTe Chronicles of Narnia COL id VAL rg3717	COL name VAL Figure 8 COL type VAL 1.0 COL id VAL rg4015	0
+COL name VAL Closet Full of Clothes COL type VAL 1.0 COL id VAL rg2507	COL name VAL Romāna yaronis COL type VAL 1.0 COL id VAL rg1249	0
+COL name VAL El iniciado COL type VAL 1.0 COL id VAL rg766	COL name VAL Original Hits  Rap  Soul COL type VAL 1.0 COL id VAL rg2430	0
+COL name VAL Rebound COL type VAL 1.0 COL id VAL rg1005	COL name VAL The Rock n Roll Era 1962 COL type VAL 1.0 COL id VAL rg1883	0
+COL name VAL Dlla COL type VAL 1.0 COL id VAL rg1330	COL name VAL Kind of Reinhardt COL type VAL 1.0 COL id VAL rg1482	0
+COL name VAL The Colors Of My Life COL type VAL 1.0 COL id VAL rg1842	COL name VAL The Lesley Garrett Gift Collection COL type VAL 1.0 COL id VAL rg867	0
+COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg1767	COL name VAL Квартирник в Москве ВЦой АРыбин 34 января 1983 COL type VAL 1.0 COL id VAL rg3074	1
+COL name VAL Blue Thunder COL type VAL 1.0 COL id VAL rg2584	COL name VAL Trying to Get It Right COL type VAL 1.0 COL id VAL rg2472	0
+COL name VAL Hold Down Iy COL type VAL 1.0 COL id VAL rg1793	COL name VAL Gen Helwegs Grund COL type VAL 1.0 COL id VAL rg3688	0
+COL name VAL Disaster COL type VAL 1.0 COL id VAL rg425	COL name VAL Музыка Народов Птиц COL type VAL 1.0 COL id VAL rg2084	0
+COL name VAL Wenn der weiße Flieder wieder blüht COL type VAL 1.0 COL id VAL rg1835	COL name VAL Future A Journey Through the Electronic Underground COL type VAL 1.0 COL id VAL rg4163	0
+COL name VAL ActionThriller 1  Film Trailer Music COL type VAL 1.0 COL id VAL rg1176	COL name VAL Complete Symphonies  Legends  Slavonic Dances COL type VAL 1.0 COL id VAL rg3268	0
+COL name VAL An Ode for St Cecilias Day  Cecilia volgi un sguargo COL type VAL 1.0 COL id VAL rg650	COL name VAL De Falla  Gimenez  Toldra  Vives  Turina COL type VAL 1.0 COL id VAL rg2324	0
+COL name VAL Repercussions COL type VAL 1.0 COL id VAL rg521	COL name VAL Super Smash Bros Brawl COL type VAL 1.0 COL id VAL rg551	0
+COL name VAL Hooked on Swing COL id VAL rg2286	COL name VAL FOR INSTALLATION COL type VAL 3.0 COL id VAL rg4029	0
+COL name VAL IT 80 Ital:ans Do It Better COL type VAL 1.0 COL id VAL rg1611	COL name VAL IT 80 Italians Do It Better COL type VAL 1.0 COL id VAL rg1638	1
+COL name VAL Ранние записи COL type VAL 1.0 COL id VAL rg3374	COL name VAL Tonefilm COL type VAL 1.0 COL id VAL rg754	0
+COL name VAL Immer schlimmer COL type VAL 1.0 COL id VAL rg808	COL name VAL Immer schlummer COL type VAL  COL id VAL rg1717	1
+COL name VAL Persona II Inn0cent Sin  The Errors of Their Youth COL type VAL 1.0 COL id VAL rg4146	COL name VAL Bonme Nuit Petit Kaki  COL id VAL rg2456	0
+COL name VAL Uptiwn Jump COL type VAL 1.0 COL id VAL rg995	COL name VAL Beautiful Queen – Royal Queen Albert  Beautiful Homer COL id VAL rg3332	0
+COL name VAL The Sgones of Wisdom COL type VAL 1.0 COL id VAL rg2775	COL name VAL Th eUnbecoming COL type VAL 3.0 COL id VAL rg2127	0
+COL name VAL The Chinchees COL type VAL 1.0 COL id VAL rg3393	COL name VAL Light Music  Light Activity COL type VAL 11.0 COL id VAL rg861	0
+COL name VAL DeFalla COL type VAL 1.0 COL id VAL rg2027	COL name VAL Copernicus Star COL type VAL 1.0 COL id VAL rg4252	0
+COL name VAL 6D COL type VAL  COL id VAL rg360	COL name VAL 5 Trowels COL type VAL 1.0 COL id VAL rg4449	0
+COL name VAL Gens qui rient gens qui pleurent COL type VAL 1.0 COL id VAL rg1785	COL name VAL Not Fade Away COL type VAL 1.0 COL id VAL rg1410	0
+COL name VAL Convenienc3 2000 original cast COL type VAL 1.0 COL id VAL rg1323	COL name VAL Lisa Dal Bello COL type VAL 1.0 COL id VAL rg4384	0
+COL name VAL  COL type VAL 1.0 COL id VAL rg2543	COL name VAL 3652001 COL type VAL 1.0 COL id VAL rg2742	0
+COL name VAL Jazzland Remixed Volume 1 COL type VAL 1.0 COL id VAL rg3022	COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg3584	0
+COL name VAL Sexuaisong COL type VAL 1.0 COL id VAL rg2396	COL name VAL Sexuals0ng COL type VAL 1.0 COL id VAL rg2397	1
+COL name VAL Boogie Man COL type VAL 1.0 COL id VAL rg3095	COL name VAL Alibis For Life COL type VAL 11.0 COL id VAL rg3181	0
+COL name VAL House Of Blues Chicago COL type VAL 1.0 COL id VAL rg2821	COL name VAL Learning English Lesson 1 COL type VAL 1.0 COL id VAL rg3051	0
+COL name VAL Triângulo sem bermudas COL type VAL 11.0 COL id VAL rg1104	COL name VAL Twin Cities Electropunk Volume 5 COL type VAL 1.0 COL id VAL rg3336	0
+COL name VAL The Big Bladk Plastic Explosion COL type VAL 3.0 COL id VAL rg1993	COL name VAL 19740119 afternoon show Hollywood Sportatorium Hollywood FL USA COL type VAL 1.0 COL id VAL rg1075	0
+COL name VAL Katia  Marielle Labèque COL type VAL 1.0 COL id VAL rg3617	COL name VAL Inferno COL type VAL 1.0 COL id VAL rg1889	0
+COL name VAL Manuel COL type VAL 11.0 COL id VAL rg3733	COL name VAL Achilles  Engineer COL type VAL 1.0 COL id VAL rg2224	0
+COL name VAL Revime Decay  Polar Vortex COL type VAL 1.0 COL id VAL rg3294	COL name VAL hug COL type VAL 1.0 COL id VAL rg742	0
+COL name VAL Muisc for Great Films of the Silent Era COL type VAL 1.0 COL id VAL rg315	COL name VAL Ashes of Mv Paradise COL type VAL 1.0 COL id VAL rg442	0
+COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg462	COL name VAL Philosophy and Religion in the West COL type VAL 11.0 COL id VAL rg1078	1
+COL name VAL Pleasures of Conf0rmity COL type VAL 1.0 COL id VAL rg2802	COL name VAL Coma COL type VAL 3.0 COL id VAL rg3856	0
+COL name VAL Fcking Hardcore 5 COL type VAL 1.0 COL id VAL rg280	COL name VAL Auroral Chorus II The Music of the Magnetosphere COL type VAL 1.0 COL id VAL rg3705	0
+COL name VAL Smashesâ²Trashes COL type VAL 1.0 COL id VAL rg192	COL name VAL Smashes▲Tras COL type VAL 1.0 COL id VAL rg3837	1
+COL name VAL Θα είμαι εδώ COL type VAL 1.0 COL id VAL rg352	COL name VAL Θα είμαι εδώ COL type VAL  COL id VAL rg1146	1
+COL name VAL Die letzte Flucht COL type VAL 11.0 COL id VAL rg1427	COL name VAL Kädenjälki COL type VAL 1.0 COL id VAL rg2391	0
+COL name VAL Songs in the langua9e of mushrooms COL type VAL 1.0 COL id VAL rg1109	COL name VAL An Ode for St Cecilias Day  Cecilia volgi un sguargo COL type VAL 1.0 COL id VAL rg650	0
+COL name VAL Angeo Eyes COL type VAL 2.0 COL id VAL rg1328	COL name VAL Angel Eyes COL type VAL 2.0 COL id VAL rg2788	1
+COL name VAL Collection COL type VAL 10. COL id VAL rg351	COL name VAL Feel the Groove COL type VAL 11.0 COL id VAL rg3471	0
+COL name VAL Prism COL type VAL 1.0 COL id VAL rg2654	COL name VAL La La Lu and the Lazy Moon COL type VAL 1.0 COL id VAL rg500	0
+COL name VAL I Got Time Shine Stars COL type VAL 2.0 COL id VAL rg2634	COL name VAL  COL type VAL 1.0 COL id VAL rg3317	0
+COL name VAL Jingles Volvme 10 COL type VAL 110. COL id VAL rg2112	COL name VAL A Celebration Live COL type VAL 1.0 COL id VAL rg2946	0
+COL name VAL Charade  Experiment in Terror COL type VAL 1.0 COL id VAL rg4319	COL name VAL Gräjtaste Hittar COL id VAL rg2186	0
+COL name VAL The Wilcl One COL type VAL 1.0 COL id VAL rg2152	COL name VAL Gen Helwegs Grund COL type VAL 10. COL id VAL rg3425	0
+COL name VAL Eenmamsoptocht COL type VAL 1.0 COL id VAL rg2948	COL name VAL Obl:gations to the Odd COL type VAL 1.0 COL id VAL rg1659	0
+COL name VAL Etermal Pyre COL type VAL 2.0 COL id VAL rg675	COL name VAL The Many Moods of COL type VAL 1.0 COL id VAL rg15	0
+COL name VAL Nicht hoch im Himmel COL type VAL 1.0 COL id VAL rg3660	COL name VAL Apeshit A Mixtape Tribute to The Gorillaz COL type VAL 1.0 COL id VAL rg4012	0
+COL name VAL Serious Beat5 Vol 4 COL type VAL 1.0 COL id VAL rg3522	COL name VAL Serious Beats Vol 4 COL type VAL 1.0 COL id VAL rg3523	1
+COL name VAL Le Cimetière d3s éléphants COL type VAL 1.0 COL id VAL rg3570	COL name VAL Llve at the Freight and Salvage COL type VAL 1.0 COL id VAL rg2428	0
+COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg2328	COL name VAL Mountain Fiesta COL type VAL 1.0 COL id VAL rg3567	1
+COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg2997	COL name VAL Imis Avernis COL type VAL 1.0 COL id VAL rg3585	1
+COL name VAL Live in Muenster 2003 COL type VAL 1.0 COL id VAL rg952	COL name VAL  COL type VAL 1.0 COL id VAL rg3685	0
+COL name VAL Natural Selection COL type VAL 1.0 COL id VAL rg3545	COL name VAL Розовая вода COL type VAL 1.0 COL id VAL rg2959	0
+COL name VAL Zenith COL type VAL 1.0 COL id VAL rg4333	COL name VAL One and Only Rock Ballads COL type VAL 1.0 COL id VAL rg4306	0
+COL name VAL Homenaje inconcluso a Rafael Hernández y Pedro Flores COL type VAL 1.0 COL id VAL rg3960	COL name VAL The Gold Collection COL type VAL 1.0 COL id VAL rg3751	0
+COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3761	COL name VAL The Piano Artistry of Bruce Rowland COL type VAL 1.0 COL id VAL rg3998	1
+COL name VAL 19940903 Folky nefolky Helfštýn Czech Republic COL type VAL 1.0 COL id VAL rg108	COL name VAL Waste and Insainty COL type VAL 1.0 COL id VAL rg2446	0
+COL name VAL Die Meistersinger von Nürnberg COL type VAL 1.0 COL id VAL rg1625	COL name VAL Signifying Blues COL type VAL 1.0 COL id VAL rg1238	0
+COL name VAL Things Just Aint the Same COL type VAL 2.0 COL id VAL rg1596	COL name VAL Persona II Inn0cent Sin  The Errors of Their Youth COL type VAL 1.0 COL id VAL rg4146	0
+COL name VAL Sua vain hän kaipaa COL type VAL 1.0 COL id VAL rg1519	COL name VAL Paddy Noonan Irish Dew COL id VAL rg627	0
+COL name VAL Riase the Pressure COL type VAL 1.0 COL id VAL rg3246	COL name VAL Raise the Pressure COL type VAL 1.0 COL id VAL rg3675	1
+COL name VAL The Price I Pqy COL type VAL 2.0 COL id VAL rg1121	COL name VAL Antena pachamama COL type VAL  COL id VAL rg2877	0
+COL name VAL Messiah COL type VAL 1.0 COL id VAL rg354	COL name VAL Light in the Attic Records Fall z008 Sampler COL type VAL 1.0 COL id VAL rg901	0

@@ -12,7 +12,7 @@ COL label_area_similarity VAL uncertain COL name VAL NRG Komrads COL ended VAL f
 COL label_area_similarity VAL uncertain COL name VAL InAkustik GmbH COL label_type VAL Distributor COL ended VAL f COL id VAL l131	COL name VAL Black Saddle Entertwinment COL ended VAL f COL id VAL l135	0
 COL label_area_similarity VAL uncertain COL name VAL Elektra Recorts COL label_type VAL Holding COL ended VAL f COL id VAL l586	COL name VAL Take Off Your Shoes Records COL ended VAL f COL id VAL l1307	0
 COL label_area_similarity VAL uncertain COL name VAL Propane Muxic COL label_type VAL Original Production COL ended VAL f COL id VAL l750	COL name VAL Solitarv Records COL ended VAL f COL id VAL l1137	0
-COL label_area_similarity VAL uncertain COL name VAL SP Records COL label_type VAL Publisher COL ended VAL f COL id VAL l665	COL name VAL Stereo Enchainet COL ended VAL f COL id VAL l1114	0
+COL label_area_similarity VAL low COL name VAL SP Records COL label_type VAL Publisher COL ended VAL f COL id VAL l665	COL name VAL Stereo Enchainet COL ended VAL f COL id VAL l1114	0
 COL label_area_similarity VAL uncertain COL name VAL Mini Mac Muslc COL ended VAL f COL id VAL l545	COL name VAL Mini Mac Mvsic COL ended VAL f COL id VAL l546	1
 COL label_area_similarity VAL uncertain COL name VAL Fallwater Music COL label_type VAL Publisher COL ended VAL f COL id VAL l536	COL name VAL Gerhard Ksiser GmbH COL label_type VAL Production COL ended VAL f COL id VAL l763	0
 COL label_area_similarity VAL uncertain COL name VAL Because London Records COL ended VAL f COL id VAL l306	COL name VAL Endemol France COL ended VAL f COL id VAL l703	0
@@ -134,7 +134,7 @@ COL label_area_similarity VAL uncertain COL name VAL Take Off Your Sh0es Records
 COL label_area_similarity VAL high COL name VAL Arvida Muslc COL label_type VAL Publisher COL ended VAL f COL id VAL l329	COL name VAL Arvida Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1454	1
 COL label_area_similarity VAL uncertain COL name VAL Siderian Rec9rds COL label_type VAL Production COL ended VAL f COL id VAL l1231	COL name VAL Black Saddle Ente4tainment COL ended VAL f COL id VAL l285	0
 COL label_area_similarity VAL uncertain COL name VAL Last Affair Records COL label_type VAL Original Production COL ended VAL f COL id VAL l722	COL name VAL Last Affaur Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1133	1
-COL label_area_similarity VAL uncertain COL name VAL Tumi Mus8c COL ended VAL f COL id VAL l364	COL name VAL Tumk Music COL ended VAL f COL id VAL l365	1
+COL label_area_similarity VAL high COL name VAL Tumi Mus8c COL ended VAL f COL id VAL l364	COL name VAL Tumk Music COL ended VAL f COL id VAL l365	1
 COL label_area_similarity VAL uncertain COL name VAL Jazzhaus COL label_type VAL Production COL ended VAL f COL id VAL l1166	COL name VAL Fesihaus COL ended VAL f COL id VAL l1207	0
 COL label_area_similarity VAL uncertain COL name VAL SP Recorcls COL label_type VAL Publisher COL ended VAL f COL id VAL l406	COL name VAL SDK Media COL ended VAL f COL id VAL l130	0
 COL label_area_similarity VAL uncertain COL name VAL Eleltra Records COL label_type VAL Holding COL ended VAL f COL id VAL l859	COL name VAL BlueZ Records COL label_type VAL Original Production COL ended VAL f COL id VAL l242	0
@@ -154,7 +154,7 @@ COL label_area_similarity VAL uncertain COL name VAL Bellwoot Records COL label_
 COL label_area_similarity VAL uncertain COL name VAL Electric MVM COL label_type VAL Production COL ended VAL f COL id VAL l1218	COL name VAL Numarec Mustic COL ended VAL f COL id VAL l553	0
 COL label_area_similarity VAL uncertain COL name VAL NatsumeAtari Inc COL ended VAL f COL id VAL l116	COL name VAL Bellwoot Records COL label_type VAL Imprint COL ended VAL f COL id VAL l1148	0
 COL label_area_similarity VAL high COL name VAL Grameophone music COL label_type VAL Original Production COL ended VAL f COL id VAL l520	COL name VAL Grameophone muzic COL label_type VAL Original Production COL ended VAL f COL id VAL l1048	1
-COL label_area_similarity VAL low COL name VAL Tumk Music COL ended VAL f COL id VAL l365	COL name VAL Grameopone music COL label_type VAL Original Production COL ended VAL f COL id VAL l142	0
+COL label_area_similarity VAL uncertain COL name VAL Tumk Music COL ended VAL f COL id VAL l365	COL name VAL Grameopone music COL label_type VAL Original Production COL ended VAL f COL id VAL l142	0
 COL label_area_similarity VAL uncertain COL name VAL Badlandz Recordings COL ended VAL f COL id VAL l442	COL name VAL Tutyi Intersong Éditions musicales COL label_type VAL Publisher COL ended VAL f COL id VAL l620	0
 COL label_area_similarity VAL uncertain COL name VAL Badlandz Recordings COL ended VAL f COL id VAL l442	COL name VAL The Releajing Eskimo COL label_type VAL Original Production COL ended VAL f COL id VAL l1159	0
 COL label_area_similarity VAL uncertain COL name VAL Bellwoot Records COL label_type VAL Imprint COL ended VAL f COL id VAL l1148	COL name VAL Omerta Music Group COL ended VAL f COL id VAL l1438	0
@@ -252,7 +252,7 @@ COL label_area_similarity VAL uncertain COL name VAL Timewave Records COL ended 
 COL label_area_similarity VAL uncertain COL name VAL Pachira Recorts COL ended VAL f COL id VAL l1428	COL name VAL Dkgital Cellars COL label_type VAL Original Production COL ended VAL f COL id VAL l369	0
 COL label_area_similarity VAL uncertain COL name VAL SDK Meclia COL ended VAL f COL id VAL l663	COL name VAL Dark Site MGMT COL ended VAL f COL id VAL l13	0
 COL label_area_similarity VAL uncertain COL name VAL Traditional Cros5roads COL label_type VAL Production COL ended VAL f COL id VAL l1091	COL name VAL Strutj  Frets COL ended VAL f COL id VAL l1281	0
-COL label_area_similarity VAL low COL name VAL SP Recorcls COL label_type VAL Publisher COL ended VAL f COL id VAL l406	COL name VAL Propane Mujic COL label_type VAL Original Production COL ended VAL f COL id VAL l1414	0
+COL label_area_similarity VAL uncertain COL name VAL SP Recorcls COL label_type VAL Publisher COL ended VAL f COL id VAL l406	COL name VAL Propane Mujic COL label_type VAL Original Production COL ended VAL f COL id VAL l1414	0
 COL label_area_similarity VAL uncertain COL name VAL Stereofreese COL label_type VAL Distributor COL ended VAL t COL id VAL l951	COL name VAL Strutj  Frets COL ended VAL f COL id VAL l1281	0
 COL label_area_similarity VAL uncertain COL name VAL Only One Recorcls COL ended VAL t COL id VAL l55	COL name VAL Hittite Requiem Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1418	0
 COL label_area_similarity VAL uncertain COL name VAL Mini Mac Mvsic COL ended VAL f COL id VAL l546	COL name VAL Solitary Rec0rds COL ended VAL f COL id VAL l1138	0
@@ -273,7 +273,7 @@ COL label_area_similarity VAL uncertain COL name VAL Stere0freeze COL label_type
 COL label_area_similarity VAL uncertain COL name VAL Jahazi Medya COL label_type VAL Publisher COL ended VAL f COL id VAL l643	COL name VAL Jahazj Media COL label_type VAL Publisher COL ended VAL f COL id VAL l644	1
 COL label_area_similarity VAL uncertain COL name VAL Culyert Music COL ended VAL f COL id VAL l315	COL name VAL Ruelas Publishing COL ended VAL f COL id VAL l432	0
 COL label_area_similarity VAL uncertain COL name VAL IOSYS COL label_type VAL Original Production COL ended VAL f COL id VAL l370	COL name VAL IOSYS COL label_type VAL Original Production COL ended VAL f COL id VAL l1453	1
-COL label_area_similarity VAL uncertain COL name VAL Tumk Music COL ended VAL f COL id VAL l365	COL name VAL Electric MVM COL label_type VAL Production COL ended VAL f COL id VAL l1218	0
+COL label_area_similarity VAL low COL name VAL Tumk Music COL ended VAL f COL id VAL l365	COL name VAL Electric MVM COL label_type VAL Production COL ended VAL f COL id VAL l1218	0
 COL label_area_similarity VAL uncertain COL name VAL Emme Record Label COL ended VAL f COL id VAL l691	COL name VAL Emme Recorcl Label COL ended VAL f COL id VAL l1130	1
 COL label_area_similarity VAL uncertain COL name VAL Omerta Mujic Group COL ended VAL f COL id VAL l8	COL name VAL Pachira Recorts COL ended VAL f COL id VAL l1428	0
 COL label_area_similarity VAL uncertain COL name VAL ตราหนูขาว COL ended VAL f COL id VAL l1489	COL name VAL Wontstop Records COL label_type VAL Production COL ended VAL f COL id VAL l1088	0
@@ -324,7 +324,7 @@ COL label_area_similarity VAL uncertain COL name VAL Fesihaus COL ended VAL f CO
 COL label_area_similarity VAL uncertain COL name VAL Mon Mothma Recordings COL ended VAL f COL id VAL l39	COL name VAL Mon Modhma Recordings COL ended VAL f COL id VAL l1266	1
 COL label_area_similarity VAL uncertain COL name VAL Elektra Recorts COL label_type VAL Holding COL ended VAL f COL id VAL l586	COL name VAL Eleltra Records COL label_type VAL Holding COL ended VAL f COL id VAL l859	1
 COL label_area_similarity VAL uncertain COL name VAL Pachira Records COL ended VAL f COL id VAL l456	COL name VAL Mon Mothna Recordings COL ended VAL f COL id VAL l1267	0
-COL label_area_similarity VAL uncertain COL name VAL Propane Muxic COL label_type VAL Original Production COL ended VAL f COL id VAL l750	COL name VAL Propane Music COL label_type VAL Original Production COL ended VAL f COL id VAL l1047	1
+COL label_area_similarity VAL high COL name VAL Propane Muxic COL label_type VAL Original Production COL ended VAL f COL id VAL l750	COL name VAL Propane Music COL label_type VAL Original Production COL ended VAL f COL id VAL l1047	1
 COL label_area_similarity VAL uncertain COL name VAL Elektra Recorts COL label_type VAL Holding COL ended VAL f COL id VAL l586	COL name VAL Direct Holdings Holland BV COL ended VAL f COL id VAL l591	0
 COL label_area_similarity VAL uncertain COL name VAL Tasty COL ended VAL f COL id VAL l101	COL name VAL Gerhard Kaiser GmbH COL label_type VAL Production COL ended VAL f COL id VAL l764	0
 COL label_area_similarity VAL uncertain COL name VAL Stere0freeze COL label_type VAL Distributor COL ended VAL t COL id VAL l952	COL name VAL Stereofreeze COL label_type VAL Distributor COL ended VAL t COL id VAL l1179	1
@@ -356,7 +356,7 @@ COL label_area_similarity VAL uncertain COL name VAL La Paloma COL ended VAL f C
 COL label_area_similarity VAL uncertain COL name VAL BlueZ Recorcls COL label_type VAL Original Production COL ended VAL f COL id VAL l467	COL name VAL BlueZ Recordz COL label_type VAL Original Production COL ended VAL f COL id VAL l468	1
 COL label_area_similarity VAL uncertain COL name VAL The Releajing Eskimo COL label_type VAL Original Production COL ended VAL f COL id VAL l1159	COL name VAL Hidlr Music COL label_type VAL Publisher COL ended VAL f COL id VAL l1039	0
 COL label_area_similarity VAL uncertain COL name VAL QFLM COL label_type VAL Publisher COL ended VAL f COL id VAL l698	COL name VAL ตราหนูขาว COL ended VAL f COL id VAL l622	0
-COL label_area_similarity VAL low COL name VAL Propane Muxic COL label_type VAL Original Production COL ended VAL f COL id VAL l750	COL name VAL desa vu productions COL ended VAL f COL id VAL l322	0
+COL label_area_similarity VAL uncertain COL name VAL Propane Muxic COL label_type VAL Original Production COL ended VAL f COL id VAL l750	COL name VAL desa vu productions COL ended VAL f COL id VAL l322	0
 COL label_area_similarity VAL uncertain COL name VAL Tumi Mus8c COL ended VAL f COL id VAL l364	COL name VAL KLT Ekoijpenak COL ended VAL f COL id VAL l566	0
 COL label_area_similarity VAL uncertain COL name VAL Grameopone music COL label_type VAL Original Production COL ended VAL f COL id VAL l142	COL name VAL Mon Mothma Recordings COL ended VAL f COL id VAL l39	0
 COL label_area_similarity VAL uncertain COL name VAL Vinci0n Records COL label_type VAL Original Production COL ended VAL t COL id VAL l32	COL name VAL Siderian Rec9rds COL label_type VAL Production COL ended VAL f COL id VAL l1231	0
@@ -374,7 +374,7 @@ COL label_area_similarity VAL uncertain COL name VAL Timewave Recoahds COL ended
 COL label_area_similarity VAL uncertain COL name VAL Sentai Holdings LLC COL label_type VAL Holding COL ended VAL f COL id VAL l1061	COL name VAL Fallwater Muslc COL label_type VAL Publisher COL ended VAL f COL id VAL l572	0
 COL label_area_similarity VAL uncertain COL name VAL QFLM COL label_type VAL Publisher COL ended VAL f COL id VAL l698	COL name VAL Eleltra Records COL label_type VAL Holding COL ended VAL f COL id VAL l859	0
 COL label_area_similarity VAL uncertain COL name VAL Vincion Record5 COL label_type VAL Original Production COL ended VAL t COL id VAL l31	COL name VAL Vinci0n Records COL label_type VAL Original Production COL ended VAL t COL id VAL l32	1
-COL label_area_similarity VAL high COL name VAL desa vu productions COL ended VAL f COL id VAL l322	COL name VAL deja vu productions COL ended VAL f COL id VAL l699	1
+COL label_area_similarity VAL uncertain COL name VAL desa vu productions COL ended VAL f COL id VAL l322	COL name VAL deja vu productions COL ended VAL f COL id VAL l699	1
 COL label_area_similarity VAL uncertain COL name VAL MUZA Rwcords COL ended VAL f COL id VAL l1129	COL name VAL Last Affaur Records COL label_type VAL Original Production COL ended VAL f COL id VAL l1133	0
 COL label_area_similarity VAL uncertain COL name VAL Inclecibels COL ended VAL f COL id VAL l61	COL name VAL Pachira Rec0rds COL ended VAL f COL id VAL l1241	0
 COL label_area_similarity VAL uncertain COL name VAL Kärringa Jonson Rekords COL ended VAL f COL id VAL l1427	COL name VAL Famos COL ended VAL f COL id VAL l341	0
@@ -406,7 +406,7 @@ COL label_area_similarity VAL uncertain COL name VAL Mon Mothma Recordings COL e
 COL label_area_similarity VAL uncertain COL name VAL Cr2 Recordst COL label_type VAL Production COL ended VAL f COL id VAL l1275	COL name VAL OneFitMusic Record Label COL label_type VAL Original Production COL ended VAL f COL id VAL l1181	0
 COL label_area_similarity VAL uncertain COL name VAL Bullshit Revordz COL label_type VAL Original Production COL ended VAL f COL id VAL l212	COL name VAL Bullshit Recordz COL label_type VAL Original Production COL ended VAL f COL id VAL l1201	1
 COL label_area_similarity VAL uncertain COL name VAL Ruelas Publixing COL ended VAL f COL id VAL l49	COL name VAL Dark Side MGMT COL ended VAL f COL id VAL l1491	0
-COL label_area_similarity VAL uncertain COL name VAL SP Records COL label_type VAL Publisher COL ended VAL f COL id VAL l665	COL name VAL Stereo Enchainet COL ended VAL f COL id VAL l1114	0
+COL label_area_similarity VAL low COL name VAL SP Records COL label_type VAL Publisher COL ended VAL f COL id VAL l665	COL name VAL Stereo Enchainet COL ended VAL f COL id VAL l1114	0
 COL label_area_similarity VAL uncertain COL name VAL World Sound COL ended VAL f COL id VAL l1310	COL name VAL World S0und COL ended VAL f COL id VAL l1350	1
 COL label_area_similarity VAL uncertain COL name VAL Tutyi Intersong Éditions musicales COL label_type VAL Publisher COL ended VAL f COL id VAL l620	COL name VAL BitPhitz COL ended VAL f COL id VAL l811	0
 COL label_area_similarity VAL uncertain COL name VAL Tripal Kitchen COL ended VAL f COL id VAL l931	COL name VAL BlueZ Records COL label_type VAL Original Production COL ended VAL f COL id VAL l242	0
@@ -484,7 +484,7 @@ COL label_area_similarity VAL uncertain COL name VAL Badlands Recordings COL end
 COL label_area_similarity VAL uncertain COL name VAL Struts  Frets COL ended VAL f COL id VAL l1144	COL name VAL Dark Side MGMT COL ended VAL f COL id VAL l1491	0
 COL label_area_similarity VAL uncertain COL name VAL Continental Garden COL label_type VAL Original Production COL ended VAL f COL id VAL l182	COL name VAL Tutti Intersong Éditions musicales COL label_type VAL Publisher COL ended VAL f COL id VAL l564	0
 COL label_area_similarity VAL uncertain COL name VAL Pachira Recorts COL ended VAL f COL id VAL l1428	COL name VAL Because London Records COL ended VAL f COL id VAL l306	0
-COL label_area_similarity VAL uncertain COL name VAL InAkustik GmbH COL label_type VAL Distributor COL ended VAL f COL id VAL l131	COL name VAL deja vu productions COL ended VAL f COL id VAL l699	0
+COL label_area_similarity VAL low COL name VAL InAkustik GmbH COL label_type VAL Distributor COL ended VAL f COL id VAL l131	COL name VAL deja vu productions COL ended VAL f COL id VAL l699	0
 COL label_area_similarity VAL uncertain COL name VAL NRG Komrads COL ended VAL f COL id VAL l29	COL name VAL Badlands Recordings COL ended VAL f COL id VAL l1429	0
 COL label_area_similarity VAL uncertain COL name VAL Solitarv Records COL ended VAL f COL id VAL l1137	COL name VAL Gerhard Ksiser GmbH COL label_type VAL Production COL ended VAL f COL id VAL l763	0
 COL label_area_similarity VAL uncertain COL name VAL zicki records COL ended VAL f COL id VAL l1098	COL name VAL Siderian Records COL label_type VAL Production COL ended VAL f COL id VAL l458	0
@@ -520,7 +520,7 @@ COL label_area_similarity VAL uncertain COL name VAL Pemaco Rd Recordst COL ende
 COL label_area_similarity VAL uncertain COL name VAL Pretty Bov Floyd Records COL ended VAL f COL id VAL l359	COL name VAL Pretty Boy Floyd Records COL ended VAL f COL id VAL l1292	1
 COL label_area_similarity VAL low COL name VAL deja vu productions COL ended VAL f COL id VAL l699	COL name VAL QFLM COL label_type VAL Publisher COL ended VAL f COL id VAL l672	0
 COL label_area_similarity VAL uncertain COL name VAL Jimmy Classic COL ended VAL f COL id VAL l83	COL name VAL Fesihaus COL ended VAL f COL id VAL l1207	0
-COL label_area_similarity VAL uncertain COL name VAL SP Recorcls COL label_type VAL Publisher COL ended VAL f COL id VAL l406	COL name VAL Vegas Records COL label_type VAL Original Production COL ended VAL f COL id VAL l402	0
+COL label_area_similarity VAL low COL name VAL SP Recorcls COL label_type VAL Publisher COL ended VAL f COL id VAL l406	COL name VAL Vegas Records COL label_type VAL Original Production COL ended VAL f COL id VAL l402	0
 COL label_area_similarity VAL uncertain COL name VAL Bullhead COL ended VAL f COL id VAL l210	COL name VAL The Teskey Brothers pty ltd COL label_type VAL Holding COL ended VAL f COL id VAL l578	0
 COL label_area_similarity VAL uncertain COL name VAL The Teskey Bfothers pty ltd COL label_type VAL Holding COL ended VAL f COL id VAL l579	COL name VAL The Teskey Brothers pty ltd COL label_type VAL Holding COL ended VAL f COL id VAL l907	1
 COL label_area_similarity VAL uncertain COL name VAL Mon Mothma Recordings COL ended VAL f COL id VAL l39	COL name VAL Mon Mothna Recordings COL ended VAL f COL id VAL l1267	1
@@ -585,7 +585,7 @@ COL label_area_similarity VAL uncertain COL name VAL Jahazj Media COL label_type
 COL label_area_similarity VAL uncertain COL name VAL Dio Dron COL label_type VAL Original Production COL ended VAL f COL id VAL l146	COL name VAL Timewave Recoahds COL ended VAL f COL id VAL l429	0
 COL label_area_similarity VAL uncertain COL name VAL ตราหนูขาว COL ended VAL f COL id VAL l1489	COL name VAL Omi Recorcls COL ended VAL f COL id VAL l1248	0
 COL label_area_similarity VAL uncertain COL name VAL Hollywood Boulevard Mustic COL label_type VAL Publisher COL ended VAL f COL id VAL l1170	COL name VAL Gerhard Kaiser GmbH COL label_type VAL Production COL ended VAL f COL id VAL l1309	0
-COL label_area_similarity VAL high COL name VAL Grameopone music COL label_type VAL Original Production COL ended VAL f COL id VAL l142	COL name VAL Grameophone music COL label_type VAL Original Production COL ended VAL f COL id VAL l520	1
+COL label_area_similarity VAL uncertain COL name VAL Grameopone music COL label_type VAL Original Production COL ended VAL f COL id VAL l142	COL name VAL Grameophone music COL label_type VAL Original Production COL ended VAL f COL id VAL l520	1
 COL label_area_similarity VAL uncertain COL name VAL Karaoke Kslk COL label_type VAL Original Production COL ended VAL f COL id VAL l138	COL name VAL Monarcj COL label_type VAL Distributor COL ended VAL f COL id VAL l1399	0
 COL label_area_similarity VAL uncertain COL name VAL Tarnarradio COL label_type VAL Original Production COL ended VAL t COL id VAL l873	COL name VAL Ruelas Publixing COL ended VAL f COL id VAL l49	0
 COL label_area_similarity VAL uncertain COL name VAL Mon Mothna Recordings COL ended VAL f COL id VAL l1267	COL name VAL Vinci0n Records COL label_type VAL Original Production COL ended VAL t COL id VAL l32	0
