@@ -64,9 +64,9 @@ def run_iteration(iter_num, config: dict[str, ExperimentConfig], scores: Dict[st
 
         # A cleaner and more performant solution would be to update both in one go, possible TODO
         update_input_files(entity.template_cp, cp_input_fp,
-                           entity, relation_maps, scores, is_bin)
+                           entity, relation_maps, scores, iter_num, is_bin)
         update_input_files(entity.template_conv, conv_input_fp,
-                           entity, relation_maps, scores, is_bin)
+                           entity, relation_maps, scores, iter_num, is_bin)
 
         # Generate new Scores
         cp_output_fp = out_path / \
@@ -158,8 +158,7 @@ def extract_pairs(fp):
     return pairs
 
 
-def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relationship_maps, all_scores, is_bin=False):
-    threshold = 0.01
+def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relationship_maps, all_scores, iteration, is_bin=False, ):
     with open(template_fp, 'r', encoding='utf-8') as infile, open(out_fp, 'w', encoding='utf-8') as outfile:
         for line in infile:
             record_pair = json.loads(line.strip())
@@ -169,27 +168,29 @@ def update_input_files(template_fp, out_fp, entity_cfg: ExperimentConfig, relati
                 right_id = record_pair[1].get('id')
 
                 for r in entity_cfg.relations:
-                    relation_map = relationship_maps[f"{entity_cfg.name}{r.name}"]
-                    related_scores = all_scores[r.name]
-
-                    score = calc_monge_elkan(
-                        left_id, right_id, relation_map, related_scores)
-
-                    # BINNING
-                    if is_bin == True:
-                        if score >= 0.67:
-                            score = "high"
-                        elif score <= 0.33:
-                            score = "low"
-                        elif 0.33 < score < 0.67:
-                            score = "uncertain"  # uncertain
+                    if iteration == 0:
+                        record_pair[0][r.score_col] = ""
                     else:
-                        # is score meaningful enough? If too fuzzy, ignore
-                        if abs(score - 0.5) < threshold:
-                            score = 0.5
+                        relation_map = relationship_maps[f"{entity_cfg.name}{r.name}"]
+                        related_scores = all_scores[r.name]
 
-                    record_pair[0][r.score_col] = score
-                    # record_pair[1][r.score_col] = score
+                        score = calc_monge_elkan(
+                            left_id, right_id, relation_map, related_scores)
+
+                        if score is None:
+                            record_pair[0][r.score_col] = ""
+                        else:
+                            # BINNING
+                            if is_bin == True:
+                                if score >= 0.55:
+                                    score = "high"
+                                elif score <= 0.45:
+                                    score = "low"
+                                elif 0.45 < score < 0.55:
+                                    score = "uncertain"  # uncertain
+
+                            record_pair[0][r.score_col] = score
+                            # record_pair[1][r.score_col] = score
 
             outfile.write(json.dumps(record_pair) + '\n')
 
@@ -225,7 +226,7 @@ def calc_monge_elkan(left_id, right_id, relationship_map: Dict[str, List[str]], 
         monge_elkan = (1/len(dependencies_left)) * sum(scores)
         return round(monge_elkan, 2)
     else:
-        return 0.5
+        return None
 
 
 def main():
