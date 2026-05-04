@@ -38,6 +38,7 @@ POLLUTION_LEVELS=("source" "low" "medium" "high")
 #NUM_SEEDS=3
 # SEEDS=(40 50 60)
 SEEDS=(1 2 3 4 5)
+# SEEDS=(1 2)
 
 #NUM_SIZES=1
 TRAIN_SIZES=(1) # '1' represents 100% or full

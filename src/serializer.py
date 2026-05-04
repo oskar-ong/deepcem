@@ -14,10 +14,7 @@ DROPOUT_PROB = 0.2
 
 def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
     # Monge elkan
-    final_score = 0.5
-
-    if is_bin == True:
-        final_score = "UNC"
+    final_score = ""
 
     # Get dependent entities
     deps_left = entity_to_deps.get(left_id, set())
@@ -46,20 +43,20 @@ def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dro
             scores.append(c_max)
 
         monge_elkan = (1/len(deps_left)) * sum(scores)
-    else:
-        monge_elkan = 0.5
 
-    # Signal Dropout logic
-    final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
+        # Signal Dropout logic
+        final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
 
-    # BINNING
-    if is_bin == True:
-        if final_score >= 0.67:
+        # BINNING
+        # if is_bin == True:
+        if final_score >= 0.55:
             final_score = "high"
-        elif final_score <= 0.33:
+        elif final_score <= 0.45:
             final_score = "low"
-        elif 0.33 < final_score < 0.67:
+        elif 0.45 < final_score < 0.55:
             final_score = "uncertain"
+    else:
+        final_score = ""
 
     return final_score
 

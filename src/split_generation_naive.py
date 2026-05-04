@@ -401,59 +401,6 @@ def add_labels(pairs, uf, df, id_col):
     return labeled_pairs
 
 
-def calculate_relationship_scores(left_id, right_id, entity_to_deps, dep_uf, dropout_prob, is_bin=False):
-    # Monge elkan
-    final_score = 0.5
-
-    if is_bin == True:
-        final_score = "UNC"
-
-    # Get dependent entities
-    deps_left = entity_to_deps.get(left_id, set())
-    deps_right = entity_to_deps.get(right_id, set())
-
-    if len(deps_right) < len(deps_left):
-        tmp = deps_right
-        deps_right = deps_left
-        deps_left = tmp
-
-    scores = []
-
-    if deps_left and deps_right:
-        for d_left in deps_left:
-            c_max = 0.0  # current max score for this dependency
-            for d_right in deps_right:
-                if d_left in dep_uf.parent and d_right in dep_uf.parent:
-                    if dep_uf.find(d_left) == dep_uf.find(d_right):
-                        score = 1
-                    else:
-                        score = 0
-                else:
-                    score = 0
-                if score > c_max:
-                    c_max = score
-            scores.append(c_max)
-
-        monge_elkan = (1/len(deps_left)) * sum(scores)
-    else:
-        monge_elkan = 0.5
-
-    # Signal Dropout logic
-    # final_score = 0.5 if random.random() < dropout_prob else max_pool_score
-    final_score = 0.5 if random.random() < dropout_prob else round(monge_elkan, 2)
-
-    # BINNING
-    if is_bin == True:
-        if final_score >= 0.85:
-            final_score = "HIGH"
-        if final_score <= 0.15:
-            final_score = "LOW"
-        if 0.15 < final_score < 0.85:
-            final_score = "UNC"  # uncertain
-
-    return final_score
-
-
 def profile_components(components: list[Dict[str, Set[str]]], configs: Dict[str, EntityConfig], entity_ufs: Dict[str, UnionFind]):
     analysis_data = []
 
@@ -529,84 +476,8 @@ def main():
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
 
-    global_rel_map: Dict[Tuple[str, str],
-                         Set[Tuple[str, str]]] = defaultdict(set)
-    entity_ufs: Dict[str, UnionFind] = {}
-    relation_maps = {}  # Store these for inference later
-    splitting_blacklist = set()
-
-    # Dynamic Blacklist
-    do_blacklist = args.blacklist
-    if do_blacklist == True:
-        for cfg_name, cfg in CONFIGS.items():
-            for rel_dict in cfg.rels:
-                # We prune the top 5% of most common relations to break the Giant Component
-                hubs = get_dynamic_blacklist(
-                    rel_dict["junction_table"], CONFIGS[rel_dict["rel_name"]].id_col, percentile=0.95)
-                splitting_blacklist.update(hubs)
-
-    for cfg_name, cfg in CONFIGS.items():
-        # create a union find for each entity type based on duplicate csv (transitive closure)
-        uf = build_unionfind_with_singletons(
-            cfg.path_basics, cfg.path_dups, cfg.id_col)
-        entity_ufs[cfg.name] = uf
-
-        # connect each duplicate to their root in global map
-        # for every reference
-        for node in uf.parent.keys():
-            # find the root
-            root = uf.find(node)
-            # if reference is not the root -> duplicate
-            if node != root:
-                # add connection to global relation map
-                # duplicate -> root
-                global_rel_map[(node, cfg_name)].add((root, cfg_name))
-                # root -> duplicate
-                global_rel_map[(root, cfg_name)].add((node, cfg_name))
-
-        for rel_dict in cfg.rels:
-            rel_name = rel_dict["rel_name"]
-            rel_cfg = CONFIGS[rel_name]
-
-            # blacklist = get_high_degree_nodes(rel_dict["junction_table"], rel_cfg.id_col, threshold = 10)
-            # print(blacklist)
-            m_to_d = build_relation_map(
-                rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col, splitting_blacklist)
-            relation_maps[cfg_name+rel_name] = m_to_d
-
-            for m_id, d_ids in m_to_d.items():
-                for d_id in d_ids:
-                    global_rel_map[(m_id, cfg_name)].add((d_id, rel_name))
-                    global_rel_map[(d_id, rel_name)].add((m_id, cfg_name))
-
-    components = find_connected_components(global_rel_map)
-
-    # --- Analysis ---
-    # Identify the largest component
-    largest_comp_size = max(len(c["all_nodes"]) for c in components)
-    print(f"Largest component size: {largest_comp_size}")
-
-    # Analyze the bottlenecks
-    # df_centrality = analyze_graph_centrality(global_rel_map)
-    # print("Top 10 nodes responsible for connectivity:")
-    # print(df_centrality.head(10))
-
-    # Export for inspection
-    # df_centrality.to_csv(f"{args.dataset}_graph_bottlenecks.csv", index=False)
-    df_stats = profile_components(components, CONFIGS, entity_ufs)
-    with open(f"pickles/{args.dataset}_stats.pickle", 'wb') as f:
-        pickle.dump(df_stats, f, pickle.HIGHEST_PROTOCOL)
-
     # --- Assign Components to Splits. Creates subsets for all splits for entities
-    splits = assign_components_to_splits(components)
-
-    # pickling to evaluate created components and splits in different file
-    with open(f"pickles/{args.dataset}_components.pickle", 'wb') as f:
-        pickle.dump(components, f, pickle.HIGHEST_PROTOCOL)
-    with open(f"pickles/{args.dataset}_splits.pickle", 'wb') as f:
-        pickle.dump(splits, f, pickle.HIGHEST_PROTOCOL)
-    with open(f"pickles/{args.dataset}_global_relmap.pickle", 'wb') as f:
-        pickle.dump(global_rel_map, f, pickle.HIGHEST_PROTOCOL)
+    splits = split_dataset()
 
     # --- Pair Generation ---
     processed_entities: Dict[str, processedEntity] = {}
