@@ -300,7 +300,7 @@ REGISTRY = {
 
 DITTO_CONFIG = {
     "batch_size": 32,
-    "max_len": 128,
+    "max_len": 512,
     "learning_rate": 3e-5,
     "epochs": 10,
     "lm": "distilbert",  # roberta

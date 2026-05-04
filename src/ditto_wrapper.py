@@ -95,7 +95,7 @@ def refinetune(task, dataset_dir, base, log, special_tokens=None, train_suffix="
         "--task", task,
         "--batch_size", f"{DITTO_CONFIG['batch_size']}",
         "--max_len", f"{DITTO_CONFIG['max_len']}",
-        "--lr", f"{DITTO_CONFIG['learning_rate']}",
+        "--lr", f"1e-5",
         "--n_epochs", f"{DITTO_CONFIG['epochs']}",
         "--finetuning",
         "--lm", f"{DITTO_CONFIG['lm']}",
