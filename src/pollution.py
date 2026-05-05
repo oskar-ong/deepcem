@@ -145,9 +145,14 @@ def pollute(fp: str, id_col: str, drop_list: List[str]) -> Dict[str, pd.DataFram
     """
 
     df = pd.read_csv(fp)
-    df = df.set_index(id_col)
     df = df.astype(str)
     df = df.drop(columns=drop_list)
+
+    if df[id_col].duplicated().any():
+        print(
+            f"Warning: Duplicate IDs found. Dropping duplicates.")
+        df = df.drop_duplicates(subset=[id_col])
+    df = df.set_index(id_col)
 
     total_length = len(df)
     df_by_pollution = {"source": df}
@@ -170,6 +175,9 @@ def pollute(fp: str, id_col: str, drop_list: List[str]) -> Dict[str, pd.DataFram
 
         # Sample new rows to reach target percentage
         n_to_sample = int(total_length * add_frac)
+        print(n_to_sample)
+        print(len(remaining_indices))
+        n_to_sample = min(n_to_sample, len(remaining_indices))
         new_indices = pd.Series(remaining_indices).sample(
             n=n_to_sample,
             random_state=42

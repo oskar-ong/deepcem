@@ -183,7 +183,7 @@ REGISTRY = {
             id_col="pokemon",
             path_basics="./data/interim/pokemon/pokemon.csv",
             path_dups="./data/interim/pokemon/pokemon_dups.csv",
-            path_out_dir="./data/processed/pokemon/pokemon/",
+            path_out_dir="./data/processed/pokemon/",
             rels=[
                 {"rel_name": "ability",
                     "junction_table": "./data/interim/pokemon/poke_ability.csv"},
@@ -202,7 +202,7 @@ REGISTRY = {
             id_col="ability",
             path_basics="./data/interim/pokemon/ability.csv",
             path_dups="./data/interim/pokemon/ability_dups.csv",
-            path_out_dir="./data/processed/pokemon/ability/",
+            path_out_dir="./data/processed/pokemon/",
             rels=[
                 {"rel_name": "pokemon", "junction_table": "./data/interim/pokemon/poke_ability.csv"}],
             block_key_func=create_block_key_ability,
@@ -213,7 +213,7 @@ REGISTRY = {
             id_col="item",
             path_basics="./data/interim/pokemon/item.csv",
             path_dups="./data/interim/pokemon/item_dups.csv",
-            path_out_dir="./data/processed/pokemon/item/",
+            path_out_dir="./data/processed/pokemon/",
             rels=[
                 {"rel_name": "pokemon",
                     "junction_table": "./data/interim/pokemon/poke_item.csv"}
@@ -226,7 +226,7 @@ REGISTRY = {
             id_col="move",
             path_basics="./data/interim/pokemon/move.csv",
             path_dups="./data/interim/pokemon/move_dups.csv",
-            path_out_dir="./data/processed/pokemon/move/",
+            path_out_dir="./data/processed/pokemon/",
             rels=[
                 {"rel_name": "pokemon",
                     "junction_table": "./data/interim/pokemon/poke_move.csv"}
@@ -239,7 +239,7 @@ REGISTRY = {
             id_col="species",
             path_basics="./data/interim/pokemon/species.csv",
             path_dups="./data/interim/pokemon/species_dups.csv",
-            path_out_dir="./data/processed/pokemon/species/",
+            path_out_dir="./data/processed/pokemon/",
             rels=[
                 {"rel_name": "pokemon",
                     "junction_table": "./data/interim/pokemon/pokemon_species.csv"}

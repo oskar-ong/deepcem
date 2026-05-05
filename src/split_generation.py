@@ -168,6 +168,8 @@ def validate_splits(splits, global_rel_map, entity_ufs):
 
 def build_relation_map(csv_fp: str, column1: str, column2: str, blacklist: set = None) -> Dict[str, Set[str]]:
     relation_map: Dict[str, Set[str]] = defaultdict(set)
+    if blacklist == None:
+        blacklist = []
     with open(csv_fp, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:

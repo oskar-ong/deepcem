@@ -15,7 +15,7 @@ from data_structures import UnionFind, processedEntity
 from serializer import write_splits
 from entity_config import REGISTRY, EntityConfig
 from pollution import pollute
-from split_generation import add_labels, build_unionfind_with_singletons, propagate_dependency_pairs
+from split_generation import add_labels, build_relation_map, build_unionfind_with_singletons, propagate_dependency_pairs
 
 
 def generate_pos_pairs(df):
@@ -46,8 +46,11 @@ def generate_neg_pairs(df, n_neg):
         for i in range(len(indices)):
             for j in range(i + 1, len(indices)):
                 id1, id2 = indices[i], indices[j]
-                if df.at[id1, 'cluster_id'] != df.at[id2, 'cluster_id']:
-                    hard_negs.append((id1, id2, 0))
+                try:
+                    if df.at[id1, 'cluster_id'] != df.at[id2, 'cluster_id']:
+                        hard_negs.append((id1, id2, 0))
+                except ValueError as e:
+                    print(f"e {df.at[id1, 'cluster_id']}")
                 if len(hard_negs) >= n_neg:
                     return hard_negs
 
@@ -77,20 +80,33 @@ def main():
 
     # --- Pair Generation ---
     processed_entities: Dict[str, processedEntity] = {}
-
+    relation_maps = {}
     for cfg_name, cfg in CONFIGS.items():
         uf = build_unionfind_with_singletons(
             cfg.path_basics, cfg.path_dups, cfg.id_col)
         entity_ufs[cfg.name] = uf
 
+        for rel_dict in cfg.rels:
+            rel_name = rel_dict["rel_name"]
+            rel_cfg = CONFIGS[rel_name]
+
+            m_to_d = build_relation_map(
+                rel_dict["junction_table"], cfg.id_col, rel_cfg.id_col, None)
+            relation_maps[cfg_name+rel_name] = m_to_d
+
         df_basics = pd.read_csv(cfg.path_basics)
         df_basics = df_basics.drop(columns=cfg.drop_list)
+        if df_basics[cfg.id_col].duplicated().any():
+            print(
+                f"Warning: Duplicate IDs found in {cfg.name}. Dropping duplicates.")
+            df_basics = df_basics.drop_duplicates(subset=[cfg.id_col])
         uf: UnionFind = entity_ufs[cfg.name]
         # map every entity to its root
         mapping = {entity: uf.find(entity) for entity in uf.parent.keys()}
 
         def prep_df(df_basics):
             df = df_basics.copy()
+
             df['cluster_id'] = df[cfg.id_col].map(mapping)
             df['block_key'] = df.apply(cfg.block_key_func, axis=1)
             df = df.set_index(cfg.id_col)
@@ -101,6 +117,7 @@ def main():
         # positive sampling
         pos_pairs = generate_pos_pairs(df)
         total_pos_count = len(pos_pairs)
+        print(f"Total number of matches: {total_pos_count}")
 
         if total_pos_count < n_pos:
             raise ValueError(
@@ -114,32 +131,34 @@ def main():
         random.shuffle(neg_pairs)
 
         train_pos = pos_pairs[:n_pos]
-        print(len(train_pos))
+        # print(len(train_pos))
         train_neg = neg_pairs[:n_pos * ratio]
         train = (train_pos + train_neg)
         random.shuffle(train)
-        print(len(train))
+        print(f"Train Set length = {len(train)}")
 
         remaining_pos = pos_pairs[n_pos:]
         remaining_neg = neg_pairs[n_pos * ratio:]
 
-        remaining_pairs = remaining_pos + remaining_neg
+        # remaining_pairs = remaining_pos + remaining_neg
 
-        split_idx = int(len(remaining_pairs) * 0.3)
-        val = remaining_pairs[:split_idx]  # first third
+        split_idx_pos = int(len(remaining_pos) * 0.3)
+        split_idx_neg = int(len(remaining_neg) * 0.3)
+
+        val = remaining_pos[:split_idx_pos]  # first third
+        print(f"VAL: n pos: {len(val)}")
+        val = val + remaining_neg[:split_idx_neg]  # first third
+        print(f"VAL: n total: {len(val)}")
         random.shuffle(val)
-        test = remaining_pairs[split_idx:]  # other two thirds
+        test = remaining_pos[split_idx_pos:]  # other two thirds
+        print(f"TEST: n pos: {len(test)}")
+        test = test + remaining_neg[split_idx_neg:]  # other two thirds
+        print(f"TEST: n total: {len(test)}")
         random.shuffle(test)
 
         # Store for saving and inference later
         processed_entities[cfg.name] = processedEntity(
             uf, df_basics, {"train": train, "valid": val, "test": test}, [], {}, {})
-
-    return None
-    for name, ids in [("Train", train_ids), ("Test", test_ids)]:
-        roots = {entity_ufs[cfg_name].find(
-            i) for i in ids if i in entity_ufs[cfg_name].parent}
-        print(f"{name} unique roots: {len(roots)}")
 
     # --- Pairs for Inference ---
     # Create cartesian product for all related entries
@@ -196,15 +215,15 @@ def main():
         # Write splits for each pollution level
         for level, df in processed_entities[cfg.name].dfs_by_pollution.items():
             write_splits(cfg, CONFIGS, processed_entities,
-                         relation_maps, level, args.binning)
+                         relation_maps, level, True)
 
     # --- Check requirements ---
     # No leakage
     # Relational Evidence remains
-    validate_splits(splits, global_rel_map, entity_ufs)
-    metadata_fp = f"{args.dataset}_metadata.json"
-    generate_metadata(args, components, processed_entities, metadata_fp)
-    print_overlap_table(processed_entities)
+    # validate_splits(splits, global_rel_map, entity_ufs)
+    # metadata_fp = f"{args.dataset}_metadata.json"
+    # generate_metadata(args, components, processed_entities, metadata_fp)
+    # print_overlap_table(processed_entities)
 
     copied = set()
     for cfg in CONFIGS.values():
