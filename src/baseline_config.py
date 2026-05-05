@@ -30,6 +30,35 @@ imdb_entities = {
         dir_path=""
     )
 }
+
+pokemon_entities = {
+
+    "pokemon": BaselineConfig(
+        name="pokemon",
+        model="pokemon_pokemon_baseline",
+        dir_path=""
+    ),
+    "ability": BaselineConfig(
+        name="ability",
+        model="pokemon_ability_baseline",
+        dir_path=""
+    ),
+    "item": BaselineConfig(
+        name="item",
+        model="pokemon_item_baseline",
+        dir_path=""
+    ),
+    "move": BaselineConfig(
+        name="move",
+        model="pokemon_move_baseline",
+        dir_path=""
+    ),
+    "species": BaselineConfig(
+        name="species",
+        model="pokemon_species_baseline",
+        dir_path=""
+    )
+}
 music_entities = {
     "track": BaselineConfig(
         name="track",
@@ -85,5 +114,6 @@ music_entities = {
 
 REGISTRY = {
     "imdb": imdb_entities,
-    "music": music_entities
+    "music": music_entities,
+    "pokemon": pokemon_entities
 }
