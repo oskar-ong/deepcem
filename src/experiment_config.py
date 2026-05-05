@@ -72,36 +72,96 @@ imdb_entities = {
         injected_scores_dir=""
     )
 }
-imdb_hard_entities = {
+pokemon_entities = {
 
-    "movie": ExperimentConfig(
-        name="movie",
-        model="imdb_hard_movie_rel_score",
-        model_base="imdb_hard_movie",
-        id_col="tconst",
+    "pokemon": ExperimentConfig(
+        name="pokemon",
+        model="pokemon_pokemon_rel_score",
+        model_base="pokemon_pokemon",
+        id_col="pokemon",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
-        relations=[Relation(name="name", junction_table="./data/imdb_hard/title_principals.csv",
-                            fk="nconst", score_col="name_score")],
+        relations=[
+            Relation(name="ability", junction_table="./data/pokemon/poke_ability.csv",
+                     fk="ability", score_col="pokemon_ability_similarity"),
+            Relation(name="item", junction_table="./data/pokemon/poke_item.csv",
+                     fk="item", score_col="pokemon_item_similarity"),
+            Relation(name="move", junction_table="./data/pokemon/poke_move.csv",
+                     fk="move", score_col="pokemon_move_similarity"),
+            Relation(name="species", junction_table="./data/pokemon/pokemon_species.csv",
+                     fk="species", score_col="pokemon_species_similarity"),
+        ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
         empty_scores_dir="",
         injected_scores_dir=""
     ),
-    "name": ExperimentConfig(
-        name="name",
-        model="imdb_hard_name_rel_score",
-        model_base="imdb_hard_name",
-        id_col="nconst",
+    "ability": ExperimentConfig(
+        name="ability",
+        model="pokemon_ability_rel_score",
+        model_base="pokemon_ability",
+        id_col="ability",
         template_cp="cp_unlabeled.jsonl",
         template_conv="test_unlabeled.jsonl",
-        relations=[Relation(name="movie", junction_table="./data/imdb_hard/title_principals.csv",
-                            fk="tconst", score_col="movie_score")],
+        relations=[
+            Relation(name="pokemon", junction_table="./data/pokemon/poke_ability.csv",
+                     fk="pokemon", score_col="ability_pokemon_similarity")
+        ],
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
+    ),
+    "item": ExperimentConfig(
+        name="item",
+        model="pokemon_item_rel_score",
+        model_base="pokemon_item",
+        id_col="item",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
+        relations=[
+            Relation(name="pokemon", junction_table="./data/pokemon/poke_item.csv",
+                     fk="pokemon", score_col="item_pokemon_similarity")
+        ],
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
+    ),
+    "move": ExperimentConfig(
+        name="move",
+        model="pokemon_move_rel_score",
+        model_base="pokemon_move",
+        id_col="move",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
+        relations=[
+            Relation(name="pokemon", junction_table="./data/pokemon/poke_move.csv",
+                     fk="pokemon", score_col="move_pokemon_similarity")
+        ],
+        true_cp_fp=f"cp_labeled.jsonl",
+        true_test_fp=f"test_labeled.jsonl",
+        empty_scores_dir="",
+        injected_scores_dir=""
+    ),
+    "species": ExperimentConfig(
+        name="species",
+        model="pokemon_species_rel_score",
+        model_base="pokemon_species",
+        id_col="species",
+        template_cp="cp_unlabeled.jsonl",
+        template_conv="test_unlabeled.jsonl",
+        relations=[
+            Relation(name="pokemon", junction_table="./data/pokemon/pokemon_species.csv",
+                     fk="pokemon", score_col="species_pokemon_similarity")
+        ],
         true_cp_fp=f"cp_labeled.jsonl",
         true_test_fp=f"test_labeled.jsonl",
         empty_scores_dir="",
         injected_scores_dir=""
     )
+
+
 }
 
 music_entities = {
