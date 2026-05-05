@@ -363,5 +363,5 @@ DITTO_CONFIG = {
     "max_len": 512,
     "learning_rate": 3e-5,
     "epochs": 10,
-    "lm": "distilbert",  # roberta
+    "lm": "roberta",  # roberta
 }
