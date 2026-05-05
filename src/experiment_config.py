@@ -354,7 +354,7 @@ music_entities = {
 }
 REGISTRY = {
     "imdb": imdb_entities,
-    "imdb_hard": imdb_hard_entities,
+    "pokemon": pokemon_entities,
     "music": music_entities
 }
 
