@@ -48,6 +48,12 @@ def create_block_key_move(row: pd.Series) -> str:
     return re.sub(r'[^a-z0-9]', '', title)
 
 
+def create_block_key_species(row: pd.Series) -> str:
+    title = str(row.get("species", "")).lower()
+    title = re.sub(r'^(the|a|an)\s+', '', title)
+    return re.sub(r'[^a-z0-9]', '', title)
+
+
 def create_block_key_item(row: pd.Series) -> str:
     title = str(row.get("item", "")).lower()
     title = re.sub(r'^(the|a|an)\s+', '', title)
@@ -175,17 +181,18 @@ REGISTRY = {
         "pokemon": EntityConfig(
             name="pokemon",
             id_col="pokemon",
-            path_basics="./data/raw/pokemon/new_ids/pokemon.csv",
-            path_dups="./data/raw/pokemon/new_ids/pokemon_dups.csv",
+            path_basics="./data/interim/pokemon/pokemon.csv",
+            path_dups="./data/interim/pokemon/pokemon_dups.csv",
             path_out_dir="./data/processed/pokemon/pokemon/",
             rels=[
                 {"rel_name": "ability",
-                    "junction_table": "./data/raw/pokemon/new_ids/poke_ability.csv"},
+                    "junction_table": "./data/interim/pokemon/poke_ability.csv"},
                 {"rel_name": "item",
-                    "junction_table": "./data/raw/pokemon/new_ids/poke_item.csv"},
+                    "junction_table": "./data/interim/pokemon/poke_item.csv"},
                 {"rel_name": "move",
-                    "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"},
-                # {"rel_name": "species", "junction_table": "./data/raw/pokemon/50/poke_species.csv"},
+                    "junction_table": "./data/interim/pokemon/poke_move.csv"},
+                {"rel_name": "species",
+                    "junction_table": "./data/interim/pokemon/pokemon_species.csv"},
             ],
             block_key_func=create_block_key_pokemon,
             drop_list=[],
@@ -193,23 +200,23 @@ REGISTRY = {
         "ability": EntityConfig(
             name="ability",
             id_col="ability",
-            path_basics="./data/raw/pokemon/new_ids/ability.csv",
-            path_dups="./data/raw/pokemon/new_ids/ability_dups.csv",
+            path_basics="./data/interim/pokemon/ability.csv",
+            path_dups="./data/interim/pokemon/ability_dups.csv",
             path_out_dir="./data/processed/pokemon/ability/",
             rels=[
-                {"rel_name": "pokemon", "junction_table": "./data/raw/pokemon/new_ids/poke_ability.csv"}],
+                {"rel_name": "pokemon", "junction_table": "./data/interim/pokemon/poke_ability.csv"}],
             block_key_func=create_block_key_ability,
             drop_list=[],
         ),
         "item": EntityConfig(
             name="item",
             id_col="item",
-            path_basics="./data/raw/pokemon/new_ids/item.csv",
-            path_dups="./data/raw/pokemon/new_ids/item_dups.csv",
+            path_basics="./data/interim/pokemon/item.csv",
+            path_dups="./data/interim/pokemon/item_dups.csv",
             path_out_dir="./data/processed/pokemon/item/",
             rels=[
                 {"rel_name": "pokemon",
-                    "junction_table": "./data/raw/pokemon/new_ids/poke_item.csv"}
+                    "junction_table": "./data/interim/pokemon/poke_item.csv"}
             ],
             block_key_func=create_block_key_item,
             drop_list=[],
@@ -217,14 +224,27 @@ REGISTRY = {
         "move": EntityConfig(
             name="move",
             id_col="move",
-            path_basics="./data/raw/pokemon/new_ids/move.csv",
-            path_dups="./data/raw/pokemon/new_ids/move_dups.csv",
+            path_basics="./data/interim/pokemon/move.csv",
+            path_dups="./data/interim/pokemon/move_dups.csv",
             path_out_dir="./data/processed/pokemon/move/",
             rels=[
                 {"rel_name": "pokemon",
-                    "junction_table": "./data/raw/pokemon/new_ids/poke_move.csv"}
+                    "junction_table": "./data/interim/pokemon/poke_move.csv"}
             ],
             block_key_func=create_block_key_move,
+            drop_list=[]
+        ),
+        "species": EntityConfig(
+            name="species",
+            id_col="species",
+            path_basics="./data/interim/pokemon/species.csv",
+            path_dups="./data/interim/pokemon/species_dups.csv",
+            path_out_dir="./data/processed/pokemon/species/",
+            rels=[
+                {"rel_name": "pokemon",
+                    "junction_table": "./data/interim/pokemon/pokemon_species.csv"}
+            ],
+            block_key_func=create_block_key_species,
             drop_list=[]
         )
     },

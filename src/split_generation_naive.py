@@ -1,98 +1,78 @@
 from __future__ import annotations
-from sklearn.model_selection import train_test_split
-import numpy as np
-import json
+
 import argparse
-import csv
 import itertools
 from pathlib import Path
 import pickle
 import random
-from collections import defaultdict
-from queue import Queue
+
 import shutil
-from typing import Dict, List, Literal, Set, Tuple
+from typing import Dict
 
 import pandas as pd
-import networkx as nx
 
 from data_structures import UnionFind, processedEntity
 from serializer import write_splits
 from entity_config import REGISTRY, EntityConfig
 from pollution import pollute
-
-# --- Parameters ---
-SPLIT_RATIOS = (0.7, 0.1, 0.2)  # Train, Val, Test
-NEG_RATIO = 3                # Negatives per 1 Positive
-RANDOM_SEED = 0
-BLOCK_LIMIT = 10               # Max records per block to avoid N^2 growth
-SplitMode = Literal["count", "nodes"]
+from split_generation import add_labels, build_unionfind_with_singletons, propagate_dependency_pairs
 
 
-def generate_pos_pairs(df, n_required):
-    """Samples n_required pairs that share the same cluster_id."""
-    pos_pool = []
-    # Group by cluster_id to find all actual matches
+def generate_pos_pairs(df):
+    pos_pairs = []
     clusters = df.groupby('cluster_id').groups
-
     for cluster_id, indices in clusters.items():
         if len(indices) < 2:
             continue
-        # Generate all combinations in this cluster
         for p1, p2 in itertools.combinations(indices, 2):
-            pos_pool.append((p1, p2, 1))
-
-    random.shuffle(pos_pool)
-    return pos_pool[:n_required]
+            pos_pairs.append((p1, p2, 1))
+    return pos_pairs
 
 
-def generate_hard_neg(df, n_required):
-    """Samples pairs with the same block_key but different cluster_id."""
-    hard_neg_pool = []
+def generate_neg_pairs(df, n_neg):
+    hard_negs = []
     blocks = df.groupby('block_key').groups
 
-    for block_key, indices in blocks.items():
+    block_keys = list(blocks.keys())
+    random.shuffle(block_keys)  # Shuffle blocks for variety
+
+    for key in block_keys:
+        indices = list(blocks[key])
         if len(indices) < 2:
             continue
 
-        # We sample pairs within the block to avoid O(N^2) if a block is huge
-        # Try to find hard negatives in this block
-        block_list = list(indices)
-        for _ in range(len(block_list) * 2):  # heuristic attempt limit
-            id1, id2 = random.sample(block_list, 2)
-            if df.at[id1, 'cluster_id'] != df.at[id2, 'cluster_id']:
-                hard_neg_pool.append((id1, id2, 0))
+        # Try to find hard negs in this block without exhaustive O(n^2)
+        random.shuffle(indices)
+        for i in range(len(indices)):
+            for j in range(i + 1, len(indices)):
+                id1, id2 = indices[i], indices[j]
+                if df.at[id1, 'cluster_id'] != df.at[id2, 'cluster_id']:
+                    hard_negs.append((id1, id2, 0))
+                if len(hard_negs) >= n_neg:
+                    return hard_negs
 
-            if len(hard_neg_pool) >= n_required:
-                return hard_neg_pool
-
-    random.shuffle(hard_neg_pool)
-    return hard_neg_pool[:n_required]
-
-
-def generate_easy_neg(df, n_required):
-    """Samples pairs at random that have different cluster_ids."""
-    easy_neg_pool = []
+    easy_negs = []
+    remaining = n_neg - len(hard_negs)
     ids = df.index.tolist()
 
-    while len(easy_neg_pool) < n_required:
+    while len(easy_negs) < remaining:
         id1, id2 = random.sample(ids, 2)
         if df.at[id1, 'cluster_id'] != df.at[id2, 'cluster_id']:
-            easy_neg_pool.append((id1, id2, 0))
+            easy_negs.append((id1, id2, 0))
 
-    return easy_neg_pool
+    return hard_negs + easy_negs
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str)
     parser.add_argument("pos_pairs", type=int)
-    parser.add_argument("neg_pairs", type=int)
+    parser.add_argument("ratio", type=int)
     args = parser.parse_args()
 
     CONFIGS: Dict[str, EntityConfig] = REGISTRY[args.dataset]
-    pos_pairs = args.pos_pairs
-    neg_pairs = args.neg_pairs
+    n_pos = args.pos_pairs
+    ratio = args.ratio
     entity_ufs: Dict[str, UnionFind] = {}
 
     # --- Pair Generation ---
@@ -119,25 +99,43 @@ def main():
         df = prep_df(df_basics)
 
         # positive sampling
-        pos_pairs = generate_pos_pairs()
+        pos_pairs = generate_pos_pairs(df)
+        total_pos_count = len(pos_pairs)
 
-        # hard negative sampling
-        hard_neg_pairs = generate_hard_neg()
+        if total_pos_count < n_pos:
+            raise ValueError(
+                f"Not enough positive pairs available! Needed: {n_pos}, aviable: {total_pos_count}")
 
-        # easy negative sampling
-        easy_neg_pairs = generate_easy_neg()
+        total_neg_count = total_pos_count * args.ratio
 
-        # assign to train, valid, test split
-        train, temp = train_test_split()
-        val, test = train_test_split()
+        neg_pairs = generate_neg_pairs(df, total_neg_count)
 
-        for pairs in [train, val, test]:
-            random.shuffle(pairs)
+        random.shuffle(pos_pairs)
+        random.shuffle(neg_pairs)
+
+        train_pos = pos_pairs[:n_pos]
+        print(len(train_pos))
+        train_neg = neg_pairs[:n_pos * ratio]
+        train = (train_pos + train_neg)
+        random.shuffle(train)
+        print(len(train))
+
+        remaining_pos = pos_pairs[n_pos:]
+        remaining_neg = neg_pairs[n_pos * ratio:]
+
+        remaining_pairs = remaining_pos + remaining_neg
+
+        split_idx = int(len(remaining_pairs) * 0.3)
+        val = remaining_pairs[:split_idx]  # first third
+        random.shuffle(val)
+        test = remaining_pairs[split_idx:]  # other two thirds
+        random.shuffle(test)
 
         # Store for saving and inference later
         processed_entities[cfg.name] = processedEntity(
             uf, df_basics, {"train": train, "valid": val, "test": test}, [], {}, {})
 
+    return None
     for name, ids in [("Train", train_ids), ("Test", test_ids)]:
         roots = {entity_ufs[cfg_name].find(
             i) for i in ids if i in entity_ufs[cfg_name].parent}
@@ -180,12 +178,12 @@ def main():
 
         processed_entities[cfg.name].dfs_by_pollution = dfs_by_pollution
 
-        pairs_full = processed_entities[cfg.name].pairs["train"]
-        labels = [p[2] for p in pairs_full]
+        # pairs_full = processed_entities[cfg.name].pairs["train"]
+        # labels = [p[2] for p in pairs_full]
 
-        train_log = get_log_subsets(pairs_full, labels, 5, 3, 6)
+        # train_log = get_log_subsets(pairs_full, labels, 5, 3, 6)
 
-        processed_entities[cfg.name].train_log = train_log
+        # processed_entities[cfg.name].train_log = train_log
 
     with open(f"pickles/{args.dataset}_processed_entities.pickle", 'wb') as f:
         pickle.dump(processed_entities, f, pickle.HIGHEST_PROTOCOL)

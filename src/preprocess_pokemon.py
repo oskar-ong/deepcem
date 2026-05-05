@@ -3,50 +3,12 @@ import uuid
 import pandas as pd
 import os
 
-# --- SIMPLIFIED CONFIGURATION ---
-# 'fks' and 'JUNCTION_SCHEMA' values are now just lists of entity names.
-ENTITY_SCHEMA = {
-    "track":         {"pk": "track", "prefix": "t", "fks": ["artist_credit", "recording", "medium"]},
-    "recording":     {"pk": "recording", "prefix": "r", "fks": ["artist_credit"]},
-    "medium":     {"pk": "medium", "prefix": "m", "fks": ["release"]},
-    "release":     {"pk": "release", "prefix": "rl", "fks": ["release_group", "artist_credit"]},
-    "release_group":     {"pk": "release_group", "prefix": "rg", "fks": ["artist_credit"]},
-    "artist_credit": {"pk": "artist_credit", "prefix": "ac", "fks": []},
-    "artist":        {"pk": "artist", "prefix": "a", "fks": ["area"]},
-    "area":          {"pk": "area", "prefix": "b", "fks": []},
-    "place":          {"pk": "place", "prefix": "p", "fks": ["area"]},
-    "label": {"pk": "label", "prefix": "l", "fks": ["area"]}
-}
-
-JUNCTION_SCHEMA = {
-    "artist_credit_name": [("artist_credit", "artist_credit"), ("artist", "artist")]
-}
-
-INPUT_DIR = "./data/raw/music/50/"
-OUTPUT_DIR = "./data/interim/music/"
-
-
-ENTITY_SCHEMA_IMDB = {
-    "title_basics":         {"pk": "tconst", "prefix": "m", "fks": []},
-    "name_basics":     {"pk": "nconst", "prefix": "n", "fks": []}
-}
-
-JUNCTION_SCHEMA_IMDB = {
-    "title_principals": [
-        ("tconst", "title_basics"),
-        ("nconst", "name_basics")
-    ]
-}
-
-INPUT_DIR_IMDB = "./data/raw/imdb/"
-OUTPUT_DIR_IMDB = "./data/interim/imdb/"
-
 ENTITY_SCHEMA_POKEMON = {
-    "pokemon":         {"pk": "pokemon", "prefix": "p", "fks": ["species"]},
-    "ability":     {"pk": "ability", "prefix": "a", "fks": []},
-    "species": {"pk": "species", "prefix": "s", "fks": []},
-    "item": {"pk": "item", "prefix": "i", "fks": []},
-    "move": {"pk": "move", "prefix": "m", "fks": []}
+    "pokemon":         {"pk": "pokemon", "prefix": "p", "fks": ["species"], "denormalize": False},
+    "ability":     {"pk": "ability", "prefix": "a", "fks": [], "denormalize": True},
+    "species": {"pk": "species", "prefix": "s", "fks": [], "denormalize": True},
+    "item": {"pk": "item", "prefix": "i", "fks": [], "denormalize": True},
+    "move": {"pk": "move", "prefix": "m", "fks": [], "denormalize": True}
 }
 
 JUNCTION_SCHEMA_POKEMON = {
@@ -67,9 +29,6 @@ JUNCTION_SCHEMA_POKEMON = {
 INPUT_DIR_POKEMON = "./data/raw/pokemon/50/"
 OUTPUT_DIR_POKEMON = "./data/interim/pokemon/"
 
-
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(OUTPUT_DIR_IMDB, exist_ok=True)
 os.makedirs(OUTPUT_DIR_POKEMON, exist_ok=True)
 
 
@@ -80,11 +39,34 @@ class SchemaTransformer:
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.id_maps = {}
+        self.dfs = {}
+
+    def denormalize(self):
+        for table, info in self.entities.items():
+            df = pd.read_csv(os.path.join(self.input_dir, f"{table}.csv"))
+
+            if info["denormalize"] == True:
+
+                df_desc = pd.read_csv(os.path.join(
+                    self.input_dir, f"{table}_desc.csv"))
+                df_name = pd.read_csv(os.path.join(
+                    self.input_dir, f"{table}_name.csv"))
+
+                df_desc_filtered = df_desc[df_desc["language"] == 9]
+                df_name_filtered = df_name[df_name["local_language"] == 9]
+
+                df = df.merge(
+                    df_desc_filtered[[info["pk"], "flavor_text"]], on=info["pk"], how="left")
+                df = df.merge(
+                    df_name_filtered[[info["pk"], "name"]], on=info["pk"], how="left")
+
+            self.dfs[table] = df
 
     def generate_mappings(self):
         print("--- Phase 1: Generating ID Mappings ---")
         for table, info in self.entities.items():
-            df = pd.read_csv(os.path.join(self.input_dir, f"{table}.csv"))
+            # df = pd.read_csv(os.path.join(self.input_dir, f"{table}.csv"))
+            df = self.dfs[table]
             # Generate new IDs using the prefix and row index
             unique_ids = df[info['pk']].astype(str).unique()
             self.id_maps[table] = {
@@ -96,7 +78,8 @@ class SchemaTransformer:
         print("\n--- Phase 2: Transforming Entities & Creating New Junctions ---")
         for table, info in self.entities.items():
             print(f"Processing entity: {table}")
-            df = pd.read_csv(os.path.join(self.input_dir, f"{table}.csv"))
+            # df = pd.read_csv(os.path.join(self.input_dir, f"{table}.csv"))
+            df = self.dfs[table]
             pk_col = info['pk']
 
             # 1. Update Primary Key
@@ -152,10 +135,7 @@ class SchemaTransformer:
 # Run
 transformer = SchemaTransformer(
     ENTITY_SCHEMA_POKEMON, JUNCTION_SCHEMA_POKEMON, INPUT_DIR_POKEMON, OUTPUT_DIR_POKEMON)
-# transformer = SchemaTransformer(
-#     ENTITY_SCHEMA, JUNCTION_SCHEMA, INPUT_DIR, OUTPUT_DIR)
-# transformer = SchemaTransformer(
-#     ENTITY_SCHEMA_IMDB, JUNCTION_SCHEMA_IMDB, INPUT_DIR_IMDB, OUTPUT_DIR_IMDB)
+transformer.denormalize()
 transformer.generate_mappings()
 transformer.transform_entities()
 transformer.transform_existing_junctions()
