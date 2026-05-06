@@ -15,7 +15,7 @@
 
 # --- How long will it take per task? 
 # lets say 1 model takes 15 min to train (5 epochs) -> 10 models = 2h30min
-#SBATCH --time=04:00:00
+#SBATCH --time=06:00:00
 # NEED TO ADJUST THIS EVERYTIME EXPERIMENT NUMBER CHANGES!!!
 # TOTAL EXPERIMENTS: POLLUTION * SEEDS * SIZES 
 #SBATCH --array=0-19%4
