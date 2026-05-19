@@ -1,6 +1,7 @@
 import argparse
 import json
 from collections import Counter
+import re
 
 
 def process_file(filepath):
@@ -16,10 +17,21 @@ def process_file(filepath):
             match_val = data.get('match')
             stats[match_val] += 1
 
-            # Create a unique key for the pair to compare across files
-            # Using IDs is the most reliable way to identify the same pair
-            left_id = data['left'].get('id')
-            right_id = data['right'].get('id')
+            if "baseline.jsonl" in filepath:
+                id_re_pattern = r"COL id VAL (\S+)"
+
+                left_id_match = re.search(id_re_pattern, data["left"])
+                right_id_match = re.search(id_re_pattern, data["right"])
+
+                if left_id_match and right_id_match:
+                    left_id = left_id_match.group(1)
+                    right_id = right_id_match.group(1)
+                else:
+                    raise KeyError("Value for ID missing")
+
+            else:
+                left_id = data['left'].get('id')
+                right_id = data['right'].get('id')
             pair_key = (left_id, right_id)
 
             pair_labels[pair_key] = {
@@ -73,8 +85,22 @@ def compare_jsonl_files(file1_path, file2_path):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("fp1", type=str)
-    parser.add_argument("fp2", type=str)
-    args = parser.parse_args()
-    compare_jsonl_files(args.fp1, args.fp2)
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("fp1", type=str)
+    # parser.add_argument("fp2", type=str)
+    # args = parser.parse_args()
+    # fp1 = args.fp1
+    # fp2 = args.fp2
+
+    # job : 9790002_15
+    # imdb, high
+    # fp1 = "ditto_out/baseline.jsonl"
+    # fp2 = "ditto_out/movie_3_conv_results.jsonl"
+
+    # job : 9798848_15
+    # music, high
+
+    fp1 = "music_results/baseline.jsonl"
+    fp2 = "music_results/track_3_conv_results.jsonl"
+
+    compare_jsonl_files(fp1, fp2)

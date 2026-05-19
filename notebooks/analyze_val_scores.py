@@ -1,10 +1,27 @@
 import pathlib
 import re
 
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+
 from results_analysis import run_sql_query
 
 
 keywords = ["Dataset:", "JOB", ]
+
+
+def parse_task(task: str):
+    # imdb_movie_baseline_medium
+    split_task = task.split("_")
+
+    result = split_task[1]
+
+    if split_task[1] == "artist" and split_task[2] == "credit":
+        result = "artist_credit"
+
+    if split_task[1] == "release" and split_task[2] == "group":
+        result = "release_group"
+    return result
 
 
 def parse_keywords(input_filename, output_filename):
@@ -14,6 +31,7 @@ def parse_keywords(input_filename, output_filename):
             best_dev_f1 = 0.0
             task = "default"
             new_task = ""
+            result = {}
             for line in input_file:
 
                 if any(key in line for key in keywords):
@@ -36,9 +54,8 @@ def parse_keywords(input_filename, output_filename):
 
                 if "epoch 10:" in line:
                     output_file.write(f"{best_dev_f1} \n")
-
                     task = parse_task(task)
-                    return {task: best_dev_f1}
+                    result[task] = best_dev_f1
                     # print(f"best best_dev_f1: {best_dev_f1}")
 
                     # TODO: Save best dev f1 for current task
@@ -49,17 +66,19 @@ def parse_keywords(input_filename, output_filename):
                 if "EXPERIMENT" in line:
                     break
 
-        print(f"Parsing complete. Matching lines saved to {output_filename}")
+        # print(f"Parsing complete. Matching lines saved to {output_filename}")
+        return result
 
     except FileNotFoundError:
         print(f"Error: The file '{input_filename}' was not found.")
 
 
-def parse_filename(filename: str):
-    split_by_dash = filename.split("-")
-    split_by_dot = split_by_dash[1].split(".")[0]
-    result = f"{split_by_dash[1]}_{split_by_dot[0]}"
-    return result
+def parse_filename(file_name: str):
+    clean_name = file_name.rsplit(".", 1)[0]  # remove .out suffix
+
+    split_by_dash = clean_name.split("-")  # split by dash
+
+    return f"{split_by_dash[1]}_{split_by_dash[2]}"
 
 
 def process_directory(directory_path, jobid):
@@ -74,7 +93,7 @@ def process_directory(directory_path, jobid):
     for file_path in base_dir.iterdir():
 
         if file_path.is_file() and file_path.name.startswith(f"e2e-{jobid}"):
-            print(f"Processing: {file_path.name}...")
+            # print(f"Processing: {file_path.name}")
 
             output_file = output_dir / f"parsed_{file_path.name}"
 
@@ -82,9 +101,9 @@ def process_directory(directory_path, jobid):
             val_scores = parse_keywords(file_path, output_file)
 
             array_job = parse_filename(file_path.name)
-            print(array_job)
+            # print(f"array job: {array_job}")
             df = query_exp(array_job)
-            print(df.shape)
+            # print(df)
 
             df_pivoted = df.pivot(
                 index="entity", columns="metric_type", values="f1_score"
@@ -103,7 +122,24 @@ def process_directory(directory_path, jobid):
             )
 
             results.extend(file_results)
-    return results
+
+    df = pd.DataFrame(results, columns=["entity", "val", "baseline", "test"])
+
+    # Target variable: 1 if baseline > test, else 0
+    df["baseline_is_higher"] = (df["baseline"] > df["test"]).astype(int)
+
+    df_sorted = df.sort_values(by=["val"])
+
+    X = df[["val"]]
+    y = df["baseline_is_higher"]
+
+    tree = DecisionTreeClassifier(max_depth=1)
+    tree.fit(X, y)
+
+    threshold = tree.tree_.threshold[0]
+    print(
+        f"threshold for val f1: {threshold:.4f}")
+    return df_sorted
 
 
 def query_exp(job_id):
