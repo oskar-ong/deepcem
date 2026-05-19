@@ -436,14 +436,31 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
             if subset.empty:
                 continue
 
-            ax.bar_label(
-                container,
-                fmt='%.3f',      # Format to 2 decimal places
-                padding=15,       # Space between bar/error bar and text
-                fontsize=9,
-                fontweight='bold'
-            )
+            # ax.bar_label(
+            #     container,
+            #     fmt='%.3f',
+            #     padding=-15,
+            #     fontsize=9,
+            #     fontweight='bold'
+            # )
 
+            for bar, val in zip(container, subset['mean_f1'].values):
+                # Calculate X (center of the bar)
+                x_pos = bar.get_x() + bar.get_width() / 2
+
+                # Position at the base: lower_limit + a tiny buffer
+                # va='bottom' ensures the text sits ON TOP of this coordinate
+                ax.text(
+                    x=x_pos,
+                    y=lower_limit + 0.01,
+                    s=f'{val:.3f}',
+                    ha='center',
+                    va='bottom',
+                    fontsize=9,
+                    fontweight='bold',
+                    color='white'   # Use white so it's readable against the bar color
+                    # rotation=90      # Vertical labels look cleaner at the bottom
+                )
             # metric_label = container.get_label()
             # print(metric_label)
             # subset = entity_df[entity_df['metric_type']
@@ -452,15 +469,26 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
             x_coords = [bar.get_x() + bar.get_width() / 2 for bar in container]
 
             y_stds = subset['std_f1'].values
-            print(subset['std_f1'].values)
+            # print(subset['std_f1'].values)
             y_means = subset['mean_f1'].values
+
+            lower_err = y_stds
+            upper_err = []
+
+            for m, s in zip(y_means, y_stds):
+                if (m + s) > 1.0:
+                    upper_err.append(1.0 - m)  # Clamp to the ceiling of 1.0
+                else:
+                    upper_err.append(s)
+
+            asymmetric_err = [lower_err, upper_err]
 
             # Only plot if we have matching data (prevents size mismatch errors)
             if len(x_coords) == len(y_stds):
                 ax.errorbar(
                     x=x_coords,
                     y=y_means,
-                    yerr=y_stds,  # This represents ±1 Standard Deviation
+                    yerr=asymmetric_err,
                     fmt='none',  # 'none' means don't connect with a line
                     c='black',
                     capsize=4,   # Width of the horizontal "caps"
@@ -469,7 +497,7 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
                 )
 
         # 3. Final formatting
-        plt.ylim(lower_limit, 1.05)
+        plt.ylim(lower_limit, 1)
         plt.title(f"Entity: {entity}")
         plt.xlabel("Pollution Level")
         plt.ylabel("Mean F1-Score")
@@ -624,3 +652,25 @@ def investigate_outliers(outlier_row, job_id):
 
     raw_metrics_df = run_sql_query(query)
     return raw_metrics_df
+
+
+def analyze_main(jobid, dataset, lm):
+    df = query_metrics(jobid)
+
+    latex_code = generate_comparison_latex(df, test_metric='test')
+
+    print(latex_code)
+
+    plot_degradation_barplot(df, dataset, "main", lm)
+
+    return df
+
+
+def analyze_prelim(jobid, dataset, lm):
+    df = query_prelimary(jobid)
+
+    latex_code = generate_comparison_latex_prelim(df, dataset)
+
+    print(latex_code)
+
+    plot_degradation_barplot(df, dataset, "prelim", lm)
