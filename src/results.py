@@ -99,8 +99,13 @@ if __name__ == "__main__":
 
     # job : 9798848_15
     # music, high
+    # fp1 = "music_results/baseline.jsonl"
+    # fp2 = "music_results/track_3_conv_results.jsonl"
 
-    fp1 = "music_results/baseline.jsonl"
-    fp2 = "music_results/track_3_conv_results.jsonl"
+    # Find an iteration that used to be correct, but degraded
+    # job : 9798848_15
+    # imdb, high
+    fp1 = "music_results/9798848_16/artist_credit_1_conv_results.jsonl"
+    fp2 = "music_results/9798848_16/artist_credit_3_conv_results.jsonl"
 
     compare_jsonl_files(fp1, fp2)

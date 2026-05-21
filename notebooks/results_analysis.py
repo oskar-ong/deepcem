@@ -18,6 +18,18 @@ def run_sql_query(query: str) -> pd.DataFrame:
     return df
 
 
+def run_sql_query_params(query: str, params=None) -> pd.DataFrame:
+    conn = sqlite3.connect('../cem_results.db')
+    try:
+
+        # Execute and load into DataFrame
+        df = pd.read_sql_query(query, conn, params=(params,))
+
+    finally:
+        conn.close()
+    return df
+
+
 def query_metrics(job_id):
     query = f"""SELECT 
         r.dataset,
@@ -173,6 +185,262 @@ def query_prelimary(job_id):
     # This ensures that when you generate the table or plot, the rows are in order
     df = df.sort_values(by=['dataset', 'entity', 'pollution', 'metric_type'])
     return df
+
+
+def query_retem(job_id):
+    query = f"""SELECT * FROM metrics WHERE 
+    is_final = 1 AND run_id = '{job_id}' AND metric_type = 'test';"""
+
+    df = run_sql_query(query)
+    # df.drop(columns=["batch_size", "max_len",
+    #         "learning_rate", "lm", "neg_ratio"], inplace=True)
+    return df
+
+
+def query_baseline(job_id):
+    query = f"""SELECT * FROM metrics WHERE 
+    is_final = 1 AND run_id = '{job_id}' AND metric_type = 'baseline';"""
+
+    df = run_sql_query(query)
+    # df.drop(columns=["batch_size", "max_len",
+    #         "learning_rate", "lm", "neg_ratio"], inplace=True)
+    return df
+
+
+def plot_retem_vs_base_old(jobid):
+
+    query = """
+    SELECT 
+        t.run_id AS job_id,
+        t.f1_score AS retem_f1,
+        b.f1_score AS baseline_f1,
+        r.pollution AS pollution
+    FROM metrics t
+    JOIN metrics b ON t.run_id = b.run_id
+    JOIN runs r ON t.run_id = r.run_id
+    WHERE
+    t.run_id LIKE ? AND
+    t.is_final = 1 
+      AND t.metric_type = 'test'
+      AND b.metric_type = 'baseline'
+    """
+    like_pattern = f"{jobid}_%"
+
+    df = run_sql_query_params(query, like_pattern)
+
+    if df.empty:
+        print("No matching pairs found. Verify how 'test' and 'baseline' rows are linked in your schema.")
+        return
+
+    # 2. Calculate the difference for the Y-axis
+    df['f1_diff'] = df['retem_f1'] - df['baseline_f1']
+
+    pollution_colors = {
+        'source': '#2ca02c',  # Clean green
+        'low': '#1f77b4',     # Muted blue
+        'medium': '#ff7f0e',  # Alert orange
+        'high': '#d62728'     # Warning red
+    }
+
+    plt.figure(figsize=(10, 6))
+
+    for level in ['source', 'low', 'medium', 'high']:
+        sub_df = df[df['pollution'] == level]
+
+        # Only plot if this specific pollution level exists in your current query slice
+        if not sub_df.empty:
+            plt.scatter(
+                sub_df['baseline_f1'],
+                sub_df['f1_diff'],
+                label=level.capitalize(),       # Capitalizes 'low' to 'Low' for clean display
+                s=40,       # Shrank from 130 to 40 so they take up less physical space
+                alpha=0.5,  # Made 50% transparent so overlaps blend together
+                facecolors='none',  # Makes the circles hollow
+                edgecolors=pollution_colors[level],  # Colors the outer ring
+                linewidths=1.5,
+                zorder=3
+            )
+
+    # Red baseline reference line (Y=0)
+    plt.axhline(0, color='red', linestyle='--',
+                linewidth=1.5, alpha=0.6, zorder=2)
+
+    plt.legend(
+        title="Pollution Level",
+        title_fontsize=11,
+        fontsize=10,
+        loc='upper right',
+        frameon=True,
+        shadow=False,
+        facecolor='white',
+        edgecolor='#ccc'
+    )
+    # 4. Label each point with a short snippet of its Job ID
+    # for _, row in df.iterrows():
+    #     job_label = str(row['job_id'])
+    #     # If your job IDs are long UUID strings, slice them down to 8 characters so the plot isn't crowded
+    #     if len(job_label) > 8:
+    #         job_label = job_label[:8] + "..."
+
+    #     plt.annotate(
+    #         job_label,
+    #         (row['retem_f1'], row['f1_diff']),
+    #         textcoords="offset points",
+    #         xytext=(0, 8),
+    #         ha='center',
+    #         fontsize=8.5,
+    #         fontweight='semibold',
+    #         alpha=0.8
+    #     )
+
+    # Aesthetics and scaling
+    plt.title('F1 Score difference: RETEM vs. Baseline',
+              fontsize=13, pad=15, fontweight='bold')
+    plt.xlabel('Baseline F1 Score', fontsize=11, labelpad=10)
+    plt.ylabel('F1 Score Improvement (RETEM - Baseline)',
+               fontsize=11, labelpad=10)
+
+    plt.grid(True, linestyle=':', alpha=0.5, zorder=1)
+
+    # Set reasonable plot padding
+    plt.xlim(df['retem_f1'].min() - 0.05,
+             min(df['retem_f1'].max() + 0.05, 1.02))
+
+    plt.tight_layout()
+    plt.show()
+
+
+def plot_retem_vs_base(jobid, title):
+    # 1. Fetch data safely
+    query = """
+    SELECT 
+        t.run_id AS job_id,
+        t.f1_score AS retem_f1,
+        b.f1_score AS baseline_f1,
+        r.pollution AS pollution
+    FROM metrics t
+    JOIN metrics b ON t.run_id = b.run_id
+    JOIN runs r    ON t.run_id = r.run_id
+    WHERE t.run_id LIKE ? 
+      AND t.is_final = 1 
+      AND t.metric_type = 'test'
+      AND b.metric_type = 'baseline'
+    """
+    like_pattern = f"{jobid}_%"
+    df = run_sql_query_params(query, like_pattern)
+
+    if df.empty:
+        print(f"No matching pairs found for pattern: {like_pattern}")
+        return
+
+    # Calculate the performance delta (Y-axis)
+    df['f1_diff'] = df['retem_f1'] - df['baseline_f1']
+
+    # Setup Academic Styling & Color Profile
+    sns.set_theme(style="whitegrid")
+
+    pollution_colors = {
+        'source': '#2ca02c',  # Clean green
+        'low': '#1f77b4',     # Muted blue
+        'medium': '#ff7f0e',  # Alert orange
+        'high': '#d62728'     # Warning red
+    }
+    logical_order = ['source', 'low', 'medium', 'high']
+    X_AXIS_METRIC = 'baseline_f1'
+
+    if X_AXIS_METRIC == 'baseline_f1':
+        leg_pos = "upper right"
+    else:
+        leg_pos = "upper_left"
+
+    # =========================================================================
+    # FIXED: Initialize JointGrid BARE (No global hue variable)
+    # =========================================================================
+    g = sns.JointGrid(
+        data=df,
+        x=X_AXIS_METRIC,
+        y="f1_diff",
+        height=7
+    )
+
+    # =========================================================================
+    # FIXED: Plot scatter dots onto the center axis manually.
+    # This preserves color data while maintaining hollow circles.
+    # =========================================================================
+    for level in logical_order:
+        sub_df = df[df['pollution'] == level]
+        if not sub_df.empty:
+            g.ax_joint.scatter(
+                sub_df[X_AXIS_METRIC],
+                sub_df['f1_diff'],
+                label=level.capitalize(),
+                s=55,
+                alpha=0.7,
+                facecolors='none',       # Hollow circles to handle overplotting
+                edgecolors=pollution_colors[level],
+                linewidths=1.5,
+                zorder=3
+            )
+
+    # 3. Draw clean, stacked marginal histograms manually on the side axes
+    sns.histplot(
+        data=df, x=X_AXIS_METRIC, ax=g.ax_marg_x, hue="pollution",
+        palette=pollution_colors, hue_order=logical_order,
+        multiple="stack", element="step", alpha=0.35, legend=False
+    )
+    sns.histplot(
+        data=df, y="f1_diff", ax=g.ax_marg_y, hue="pollution",
+        palette=pollution_colors, hue_order=logical_order,
+        multiple="stack", element="step", alpha=0.35, legend=False
+    )
+
+    # Add Red Baseline Reference Line (Y=0)
+    g.ax_joint.axhline(0, color='red', linestyle='--',
+                       linewidth=1.5, alpha=0.6, zorder=2)
+
+    # Polish Labels & Typography
+    x_label_text = 'RETEM F1 Score (Absolute)' if X_AXIS_METRIC == 'retem_f1' else 'Baseline F1 Score'
+    g.set_axis_labels(
+        x_label_text, 'F1 Score Improvement (RETEM - Baseline)', fontsize=11, labelpad=10)
+    g.fig.suptitle(
+        f"Difference F1 Score: Baseline vs RETEM - {title}", y=1.03, fontweight='bold', fontsize=13)
+
+    # 5. Generate the crisp, discrete legend
+    leg = g.ax_joint.legend(
+        title="Pollution Level",
+        title_fontsize=11,
+        fontsize=10,
+        loc=leg_pos,
+        frameon=True,
+        facecolor='white',
+        edgecolor='#ccc'
+    )
+
+    # =========================================================================
+    # THESIS POLISH: Force legend icons to match the plot perfectly (Hollow)
+    # =========================================================================
+    try:
+        handles = leg.legend_handles if hasattr(
+            leg, 'legend_handles') else leg.legendHandles
+        for handle in handles:
+            handle.set_facecolor('none')   # Keep the inside hollow
+            # Beef up the outline slightly so it's readable
+            handle.set_linewidth(2.0)
+            # Make the outline 100% opaque in the legend
+            handle.set_alpha(1.0)
+    except Exception:
+        pass
+    # =========================================================================
+
+    # Pad boundaries dynamically so dots near 0.0 or 1.0 don't get sliced in half
+    g.ax_joint.set_xlim(df[X_AXIS_METRIC].min() - 0.04,
+                        min(df[X_AXIS_METRIC].max() + 0.04, 1.02))
+
+    plt.show()
+    return df
+
+# Example usage:
+# plot_all_job_performances('your_database.db')
 
 
 def generate_comparison_latex(df, test_metric='test', dataset_name='music'):
