@@ -69,6 +69,30 @@ def query_metrics(job_id):
     return df
 
 
+def query_metrics_by_config(array_job, pollution, entity_type):
+    query = f"""SELECT 
+        r.dataset,
+        m.entity,
+        m.metric_type,
+        m.f1_score,
+        r.seed,
+        r.train_size,
+        r.pollution,
+        r.batch_size,
+        r.max_len,
+        r.learning_rate,
+        r.epochs,
+        r.lm,
+        r.neg_ratio
+    FROM metrics m
+    JOIN runs r ON m.run_id = r.run_id
+    WHERE m.is_final = 1  AND m.run_id LIKE '{array_job}_%' AND r.pollution = '{pollution}' AND m.entity = '{entity_type}'
+    ORDER BY r.dataset, m.entity, m.metric_type;"""
+
+    df = run_sql_query(query)
+    return df
+
+
 def query_metrics_p1(job_id):
     query = f"""SELECT 
         r.dataset,
@@ -207,110 +231,7 @@ def query_baseline(job_id):
     return df
 
 
-def plot_retem_vs_base_old(jobid):
-
-    query = """
-    SELECT 
-        t.run_id AS job_id,
-        t.f1_score AS retem_f1,
-        b.f1_score AS baseline_f1,
-        r.pollution AS pollution
-    FROM metrics t
-    JOIN metrics b ON t.run_id = b.run_id
-    JOIN runs r ON t.run_id = r.run_id
-    WHERE
-    t.run_id LIKE ? AND
-    t.is_final = 1 
-      AND t.metric_type = 'test'
-      AND b.metric_type = 'baseline'
-    """
-    like_pattern = f"{jobid}_%"
-
-    df = run_sql_query_params(query, like_pattern)
-
-    if df.empty:
-        print("No matching pairs found. Verify how 'test' and 'baseline' rows are linked in your schema.")
-        return
-
-    # 2. Calculate the difference for the Y-axis
-    df['f1_diff'] = df['retem_f1'] - df['baseline_f1']
-
-    pollution_colors = {
-        'source': '#2ca02c',  # Clean green
-        'low': '#1f77b4',     # Muted blue
-        'medium': '#ff7f0e',  # Alert orange
-        'high': '#d62728'     # Warning red
-    }
-
-    plt.figure(figsize=(10, 6))
-
-    for level in ['source', 'low', 'medium', 'high']:
-        sub_df = df[df['pollution'] == level]
-
-        # Only plot if this specific pollution level exists in your current query slice
-        if not sub_df.empty:
-            plt.scatter(
-                sub_df['baseline_f1'],
-                sub_df['f1_diff'],
-                label=level.capitalize(),       # Capitalizes 'low' to 'Low' for clean display
-                s=40,       # Shrank from 130 to 40 so they take up less physical space
-                alpha=0.5,  # Made 50% transparent so overlaps blend together
-                facecolors='none',  # Makes the circles hollow
-                edgecolors=pollution_colors[level],  # Colors the outer ring
-                linewidths=1.5,
-                zorder=3
-            )
-
-    # Red baseline reference line (Y=0)
-    plt.axhline(0, color='red', linestyle='--',
-                linewidth=1.5, alpha=0.6, zorder=2)
-
-    plt.legend(
-        title="Pollution Level",
-        title_fontsize=11,
-        fontsize=10,
-        loc='upper right',
-        frameon=True,
-        shadow=False,
-        facecolor='white',
-        edgecolor='#ccc'
-    )
-    # 4. Label each point with a short snippet of its Job ID
-    # for _, row in df.iterrows():
-    #     job_label = str(row['job_id'])
-    #     # If your job IDs are long UUID strings, slice them down to 8 characters so the plot isn't crowded
-    #     if len(job_label) > 8:
-    #         job_label = job_label[:8] + "..."
-
-    #     plt.annotate(
-    #         job_label,
-    #         (row['retem_f1'], row['f1_diff']),
-    #         textcoords="offset points",
-    #         xytext=(0, 8),
-    #         ha='center',
-    #         fontsize=8.5,
-    #         fontweight='semibold',
-    #         alpha=0.8
-    #     )
-
-    # Aesthetics and scaling
-    plt.title('F1 Score difference: RETEM vs. Baseline',
-              fontsize=13, pad=15, fontweight='bold')
-    plt.xlabel('Baseline F1 Score', fontsize=11, labelpad=10)
-    plt.ylabel('F1 Score Improvement (RETEM - Baseline)',
-               fontsize=11, labelpad=10)
-
-    plt.grid(True, linestyle=':', alpha=0.5, zorder=1)
-
-    # Set reasonable plot padding
-    plt.xlim(df['retem_f1'].min() - 0.05,
-             min(df['retem_f1'].max() + 0.05, 1.02))
-
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_retem_vs_base(jobid, title):
+def plot_retem_vs_base(jobid, filename):
     # 1. Fetch data safely
     query = """
     SELECT 
@@ -337,7 +258,18 @@ def plot_retem_vs_base(jobid, title):
     df['f1_diff'] = df['retem_f1'] - df['baseline_f1']
 
     # Setup Academic Styling & Color Profile
-    sns.set_theme(style="whitegrid")
+    # sns.set_theme(style="whitegrid")
+    sns.set_theme(
+        style="whitegrid",
+        rc={
+            "axes.edgecolor": "#CBD5E1",
+            "grid.color": "#F1F5F9",
+            "text.usetex": True,
+            "font.family": "serif",
+            "text.latex.preamble": r"\usepackage{lmodern}",
+            # "font.family": "sans-serif",
+        },
+    )
 
     pollution_colors = {
         'source': '#2ca02c',  # Clean green
@@ -353,9 +285,6 @@ def plot_retem_vs_base(jobid, title):
     else:
         leg_pos = "upper_left"
 
-    # =========================================================================
-    # FIXED: Initialize JointGrid BARE (No global hue variable)
-    # =========================================================================
     g = sns.JointGrid(
         data=df,
         x=X_AXIS_METRIC,
@@ -363,17 +292,13 @@ def plot_retem_vs_base(jobid, title):
         height=7
     )
 
-    # =========================================================================
-    # FIXED: Plot scatter dots onto the center axis manually.
-    # This preserves color data while maintaining hollow circles.
-    # =========================================================================
     for level in logical_order:
         sub_df = df[df['pollution'] == level]
         if not sub_df.empty:
             g.ax_joint.scatter(
                 sub_df[X_AXIS_METRIC],
                 sub_df['f1_diff'],
-                label=level.capitalize(),
+                label=level,
                 s=55,
                 alpha=0.7,
                 facecolors='none',       # Hollow circles to handle overplotting
@@ -399,15 +324,15 @@ def plot_retem_vs_base(jobid, title):
                        linewidth=1.5, alpha=0.6, zorder=2)
 
     # Polish Labels & Typography
-    x_label_text = 'RETEM F1 Score (Absolute)' if X_AXIS_METRIC == 'retem_f1' else 'Baseline F1 Score'
+    x_label_text = 'RETEM F1 Score (Absolute)' if X_AXIS_METRIC == 'retem_f1' else 'Baseline F1 score'
     g.set_axis_labels(
-        x_label_text, 'F1 Score Improvement (RETEM - Baseline)', fontsize=11, labelpad=10)
-    g.fig.suptitle(
-        f"Difference F1 Score: Baseline vs RETEM - {title}", y=1.03, fontweight='bold', fontsize=13)
+        x_label_text, '$\Delta$ F1 score (RETEM $-$ Baseline)', fontsize=11, labelpad=10)
+    # g.fig.suptitle(
+    #     f"Difference F1 Score: Baseline vs RETEM - {title}", y=1.03, fontweight='bold', fontsize=13)
 
     # 5. Generate the crisp, discrete legend
     leg = g.ax_joint.legend(
-        title="Pollution Level",
+        title="Pollution level",
         title_fontsize=11,
         fontsize=10,
         loc=leg_pos,
@@ -436,6 +361,18 @@ def plot_retem_vs_base(jobid, title):
     g.ax_joint.set_xlim(df[X_AXIS_METRIC].min() - 0.04,
                         min(df[X_AXIS_METRIC].max() + 0.04, 1.02))
 
+    plt.tight_layout()
+
+    # 4. Save/Show
+    out_path = Path(f"../plots/scatter/")
+    out_path.mkdir(parents=True, exist_ok=True)
+    # plt.savefig(out_path / f"f1_score_{entity}.png")
+    # Change this in your script:
+    plt.savefig(
+        out_path / f"{filename}.pdf",
+        bbox_inches='tight',
+        backend='pdf'
+    )
     plt.show()
     return df
 
@@ -584,81 +521,6 @@ def generate_comparison_latex_prelim(df, dataset_name='music'):
     return "\n".join(latex_lines)
 
 
-def plot_degradation_line(df, dataset, rtype, lm="roberta"):
-    # 1. Re-sort pollution for correct plotting
-    pollution_order = ['source', 'low', 'medium', 'high']
-    df['pollution'] = pd.Categorical(
-        df['pollution'], categories=pollution_order, ordered=True)
-
-# 1. Get unique entities from your dataframe
-    entities = df['entity'].unique()
-
-    # 2. Iterate through each entity to create individual plots
-    for entity in entities:
-        # Filter data for the specific entity
-        entity_df = df[df['entity'] == entity].sort_values("pollution")
-
-        # Initialize a new figure for each plot
-        plt.figure(figsize=(8, 5))
-        sns.set_theme(style="whitegrid")
-        ax = plt.gca()
-
-        # Define color palette to match previous plots
-        palette = sns.color_palette(
-            "tab10", n_colors=len(df['metric_type'].unique()))
-        metrics = entity_df['metric_type'].unique()
-
-        # 3. Plot lines and SD bands for each metric type (Baseline, Phase 1, Phase 2, etc.)
-        for i, metric in enumerate(metrics):
-            subset = entity_df[entity_df['metric_type'] == metric]
-            color = palette[i]
-
-            # Plot the line
-            sns.lineplot(
-                data=subset,
-                x="pollution",
-                y="mean_f1",
-                marker="o",
-                label=metric,
-                color=color
-            )
-            # Edit here: Use Barplot instead
-            # sns.barplot(
-            #     data=subset,
-            #     x="pollution",
-            #     y="mean_f1",
-            #     # marker="o",
-            #     label=metric,
-            #     color=color
-            # )
-
-            # Plot the shaded SD band (Mean +/- SD)
-            # Mapping categorical x-axis to numeric positions for fill_between
-            x_coords = range(len(subset['pollution']))
-            ax.fill_between(
-                x_coords,
-                subset['mean_f1'] - subset['std_f1'],
-                subset['mean_f1'] + subset['std_f1'],
-                alpha=0.2,
-                color=color
-            )
-
-        # 4. Final formatting for the individual plot
-        plt.ylim(0, 1)  # Fix Y-axis from 0 to 1
-        plt.title(f"Entity: {entity}")
-        plt.xlabel("Pollution Level")
-        plt.ylabel("Mean F1-Score")
-        plt.legend(title="Metric Type", loc='lower left')
-        plt.tight_layout()
-
-        # 5. Save or Show the individual plot
-        out_path = Path(
-            f"../img/{lm}/{dataset}/{rtype}")
-        Path(out_path).mkdir(parents=True, exist_ok=True)
-        plt.savefig(f"../img/{lm}/{dataset}/{rtype}/f1_score_{entity}.png")
-        plt.show()
-
-
 def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
     pollution_order = ['source', 'low', 'medium', 'high']
     df['pollution'] = pd.Categorical(
@@ -671,25 +533,46 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
 
     entities = df['entity'].unique()
 
+    thesis_palette = {
+        "baseline": "#1E3A8A",
+        "phase1": "#3B82F6",
+        "phase2": "#C2410C",
+        "test": "#C2410C",
+    }
+
     for entity in entities:
         entity_df = df[df['entity'] == entity].sort_values("pollution")
 
-        valid_data = entity_df.dropna(subset=['mean_f1', 'std_f1'])
+        valid_data = entity_df.dropna(subset=['mean_f1'])
         if valid_data.empty:
             continue
 
-        min_score = (entity_df['mean_f1'] - valid_data['std_f1']).min()
+        min_score = (entity_df['mean_f1'] -
+                     entity_df['std_f1'].fillna(0)).min()
         lower_limit = min_score - 0.05
 
         plt.figure(figsize=(8, 5))
-        sns.set_theme(style="whitegrid")
+        # sns.set_theme(style="whitegrid")
+
+        sns.set_theme(
+            style="whitegrid",
+            rc={
+                "axes.edgecolor": "#CBD5E1",
+                "grid.color": "#F1F5F9",
+                "text.usetex": True,
+                "font.family": "serif",
+                "text.latex.preamble": r"\usepackage{lmodern}",
+                # "font.family": "sans-serif",
+            },
+        )
 
         ax = sns.barplot(
             data=entity_df,
             x="pollution",
             y="mean_f1",
             hue="metric_type",
-            palette="tab10"
+            # palette="tab10"
+            palette=thesis_palette
         )
 
         for i, metric_label in enumerate(metric_types):
@@ -698,192 +581,195 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
 
             container = ax.containers[i]
 
-            subset = entity_df[entity_df['metric_type']
-                               == metric_label].sort_values("pollution")
+            # subset = entity_df[entity_df['metric_type']
+            #                    == metric_label].sort_values("pollution")
 
-            if subset.empty:
-                continue
+            subset = (
+                entity_df[entity_df['metric_type'] == metric_label]
+                .set_index("pollution")
+                .reindex(pollution_order)
+                .reset_index()
+            )
 
-            # ax.bar_label(
-            #     container,
-            #     fmt='%.3f',
-            #     padding=-15,
-            #     fontsize=9,
-            #     fontweight='bold'
-            # )
+            valid_err_x = []
+            valid_err_means = []
+            valid_err_lower = []
+            valid_err_upper = []
 
-            for bar, val in zip(container, subset['mean_f1'].values):
-                # Calculate X (center of the bar)
+            for bar, val, std in zip(container, subset['mean_f1'].values, subset['std_f1'].values):
+                if pd.isna(val):
+                    continue  # Skip bars that have no data
+
+                # Safely default zero/NaN standard deviations to 0.0
+                current_std = 0.0 if pd.isna(std) or std <= 0 else std
                 x_pos = bar.get_x() + bar.get_width() / 2
 
-                # Position at the base: lower_limit + a tiny buffer
-                # va='bottom' ensures the text sits ON TOP of this coordinate
+                # Calculate label placement apex
+                if (val + current_std) > 1.0:
+                    top_of_error = 1.0
+                else:
+                    top_of_error = val + current_std
+
+                y_pos = top_of_error + 0.001
+
+                # Always place the text label (even when std is 0)
                 ax.text(
                     x=x_pos,
-                    y=lower_limit + 0.01,
+                    y=y_pos,
                     s=f'{val:.3f}',
                     ha='center',
                     va='bottom',
                     fontsize=9,
-                    fontweight='bold',
-                    color='white'   # Use white so it's readable against the bar color
-                    # rotation=90      # Vertical labels look cleaner at the bottom
+                    color='black'
                 )
-            # metric_label = container.get_label()
-            # print(metric_label)
-            # subset = entity_df[entity_df['metric_type']
-            #                    == metric_label].sort_values("pollution")
 
-            x_coords = [bar.get_x() + bar.get_width() / 2 for bar in container]
+                # Only collect error coordinates if a physical error band should exist
+                if current_std > 0:
+                    valid_err_x.append(x_pos)
+                    valid_err_means.append(val)
+                    valid_err_lower.append(current_std)
+                    if (val + current_std) > 1.0:
+                        valid_err_upper.append(1.0 - val)
+                    else:
+                        valid_err_upper.append(current_std)
 
-            y_stds = subset['std_f1'].values
-            # print(subset['std_f1'].values)
-            y_means = subset['mean_f1'].values
-
-            lower_err = y_stds
-            upper_err = []
-
-            for m, s in zip(y_means, y_stds):
-                if (m + s) > 1.0:
-                    upper_err.append(1.0 - m)  # Clamp to the ceiling of 1.0
-                else:
-                    upper_err.append(s)
-
-            asymmetric_err = [lower_err, upper_err]
-
-            # Only plot if we have matching data (prevents size mismatch errors)
-            if len(x_coords) == len(y_stds):
+            # Only plot error bars if valid non-zero error configurations exist
+            if valid_err_x:
                 ax.errorbar(
-                    x=x_coords,
-                    y=y_means,
-                    yerr=asymmetric_err,
-                    fmt='none',  # 'none' means don't connect with a line
+                    x=valid_err_x,
+                    y=valid_err_means,
+                    yerr=[valid_err_lower, valid_err_upper],
+                    fmt='none',
                     c='black',
-                    capsize=4,   # Width of the horizontal "caps"
+                    capsize=4,
                     elinewidth=1.2,
                     alpha=0.8
                 )
 
+            # if subset.empty:
+            #     continue
+
+            # # for bar, val in zip(container, subset['mean_f1'].values):
+            # #     # Calculate X (center of the bar)
+            # #     x_pos = bar.get_x() + bar.get_width() / 2
+            # #     y_pos = bar.get_y()
+
+            # #     # Position at the base: lower_limit + a tiny buffer
+            # #     # va='bottom' ensures the text sits ON TOP of this coordinate
+            # #     ax.text(
+            # #         x=x_pos,
+            # #         y=y_pos,
+            # #         s=f'{val:.3f}',
+            # #         ha='center',
+            # #         va='bottom',
+            # #         fontsize=9,
+            # #         # fontweight='bold',
+            # #         color='black'   # Use white so it's readable against the bar color
+            # #         # rotation=90      # Vertical labels look cleaner at the bottom
+            # #     )
+
+            # x_coords = [bar.get_x() + bar.get_width() / 2 for bar in container]
+
+            # y_stds = subset['std_f1'].values
+            # # print(subset['std_f1'].values)
+            # y_means = subset['mean_f1'].values
+
+            # lower_err = y_stds
+            # upper_err = []
+
+            # for m, s in zip(y_means, y_stds):
+            #     if (m + s) > 1.0:
+            #         upper_err.append(1.0 - m)  # Clamp to the ceiling of 1.0
+            #     else:
+            #         upper_err.append(s)
+
+            # asymmetric_err = [lower_err, upper_err]
+            # # Move your error list zipper logic slightly higher or calculate upper cap on the fly:
+            # for idx, (bar, val, std) in enumerate(zip(container, subset['mean_f1'].values, subset['std_f1'].values)):
+            #     x_pos = bar.get_x() + bar.get_width() / 2
+
+            #     # Calculate where the top of the error bar actually ends
+            #     if (val + std) > 1.0:
+            #         top_of_error = 1.0
+            #     else:
+            #         top_of_error = val + std
+
+            #     # Position text slightly above the error bar tip
+            #     y_pos = top_of_error + 0.001
+
+            #     ax.text(
+            #         x=x_pos,
+            #         y=y_pos,
+            #         s=f'{val:.3f}',
+            #         ha='center',
+            #         va='bottom',
+            #         fontsize=9,
+            #         color='black'
+            #     )
+
+            # # Only plot if we have matching data (prevents size mismatch errors)
+            # if len(x_coords) == len(y_stds):
+            #     ax.errorbar(
+            #         x=x_coords,
+            #         y=y_means,
+            #         yerr=asymmetric_err,
+            #         fmt='none',  # 'none' means don't connect with a line
+            #         c='black',
+            #         capsize=4,   # Width of the horizontal "caps"
+            #         elinewidth=1.2,
+            #         alpha=0.8
+            #     )
+
         # 3. Final formatting
-        plt.ylim(lower_limit, 1)
-        plt.title(f"Entity: {entity}")
-        plt.xlabel("Pollution Level")
-        plt.ylabel("Mean F1-Score")
+        plt.ylim(lower_limit, 1.03)
+        # plt.title(f"Entity: {entity}")
+        plt.xlabel("Pollution level")
+        plt.ylabel("Mean F1 score")
+
+        # ---------------------------------------------------------
+        # CUSTOM LEGEND SIGNATURES
+        # ---------------------------------------------------------
+        # 1. Extract the internal handles (the colored bars) and current labels
+        handles, labels = ax.get_legend_handles_labels()
+
+        # 2. Define your clean, publication-ready display names
+        legend_mapping = {
+            "baseline": "Baseline",
+            "phase1": "Placeholder",
+            "phase2": "Oracle",
+            "test": "RETEM",
+        }
+
+        # 3. Map the old labels to the new ones (falls back to original if key missing)
+        new_labels = [legend_mapping.get(label, label) for label in labels]
+
+        # 4. Re-draw the legend using the updated text strings
+        ax.legend(
+            handles=handles,
+            labels=new_labels,
+            # title="Model Variant",  # Optional: Customize the legend header text
+            loc="upper left",
+            bbox_to_anchor=(1, 1),
+            frameon=True,
+            facecolor="white",
+            edgecolor="#E2E8F0",
+        )
 
         # Move legend outside if it's crowded
-        plt.legend(title="Metric Type", loc='upper left',
-                   bbox_to_anchor=(1, 1))
+        # plt.legend(title="Metric type", loc='upper left',
+        #            bbox_to_anchor=(1, 1))
         plt.tight_layout()
 
         # 4. Save/Show
         out_path = Path(f"../img/barplots/{lm}/{dataset}/{rtype}")
         out_path.mkdir(parents=True, exist_ok=True)
-        plt.savefig(out_path / f"f1_score_{entity}.png")
-        plt.show()
-
-
-# Boxplot
-def plot_degradation_boxplot(df, dataset, rtype, lm="roberta", y_min=0.5):
-    pollution_order = ['source', 'low', 'medium', 'high']
-    df['pollution'] = pd.Categorical(
-        df['pollution'], categories=pollution_order, ordered=True)
-
-    entities = df['entity'].unique()
-    metric_types = df['metric_type'].unique()
-    n_metrics = len(metric_types)
-
-    for entity in entities:
-        entity_df = df[df['entity'] == entity].sort_values("pollution")
-
-        min_score = entity_df['f1_score'].min()
-        lower_limit = min_score - 0.1
-
-        plt.figure(figsize=(10, 6))
-        sns.set_theme(style="whitegrid")
-
-        # 2. Plot the Boxplot
-        # Note: 'y' should be your raw score column (e.g., 'f1_score')
-        # If you only have 'mean_f1', this will just show a line.
-        ax = sns.boxplot(
-            data=entity_df,
-            x="pollution",
-            y="f1_score",  # Use the raw score column here
-            hue="metric_type",
-            palette="tab10",
-            # showmeans=True,
-            # meanprops={
-            #     "marker": "d",
-            #     "markerfacecolor": "white",
-            #     "markeredgecolor": "black",
-            #     "markersize": 5
-            # },
-            fliersize=4,      # Size of outlier points
-            linewidth=1.5
+        # plt.savefig(out_path / f"f1_score_{entity}.png")
+        # Change this in your script:
+        plt.savefig(
+            out_path / f"{entity}.pdf",
+            bbox_inches='tight',
+            backend='pdf'
         )
-
-        for i, p_level in enumerate(pollution_order):
-            for j, m_type in enumerate(metric_types):
-                # Filter for this specific box
-                subset = entity_df[(entity_df['pollution'] == p_level) &
-                                   (entity_df['metric_type'] == m_type)]
-
-                if not subset.empty:
-                    # Calculate mean
-                    mean_val = subset['f1_score'].mean()
-
-                    # Calculate X-coordinate:
-                    # i is the category center (0, 1, 2...)
-                    # The second part calculates the shift based on hue index
-                    width = 0.8  # Default seaborn box width
-                    x_pos = i + (j - (n_metrics - 1) / 2) * (width / n_metrics)
-
-                    # Add text slightly above the mean marker
-                    ax.text(
-                        x_pos,
-                        mean_val + 0.02,
-                        f'{mean_val:.2f}',
-                        ha='center',
-                        va='bottom',
-                        fontsize=9,
-                        fontweight='bold',
-                        color='black'
-                    )
-
-        # Optional: Add a swarmplot on top to show individual data points
-        # sns.stripplot(
-        #     data=entity_df,
-        #     x="pollution",
-        #     y="f1_score",
-        #     hue="metric_type",
-        #     dodge=True,
-        #     alpha=0.3,
-        #     palette="dark:black"
-        # )
-
-        # 3. Final formatting
-        plt.ylim(lower_limit, 1.05)
-        plt.title(f"Score Distribution - Entity: {entity}", pad=20)
-        plt.xlabel("Pollution Level")
-        plt.ylabel("F1-Score")
-
-        # Handle legend (preventing duplicates if using stripplot)
-        handles, labels = ax.get_legend_handles_labels()
-        # If you have 3 metric types, just take the first 3 handles
-        unique_labels = len(df['metric_type'].unique())
-        plt.legend(
-            handles[:unique_labels],
-            labels[:unique_labels],
-            title="Metric Type",
-            loc='upper left',
-            bbox_to_anchor=(1, 1)
-        )
-
-        plt.tight_layout()
-
-        # 4. Save/Show
-        out_path = Path(f"../img/boxplots/{lm}/{dataset}/{rtype}")
-        out_path.mkdir(parents=True, exist_ok=True)
-        plt.savefig(out_path / f"boxplot_f1_{entity}.png")
         plt.show()
 
 
