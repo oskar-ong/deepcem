@@ -616,7 +616,7 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
                 ax.text(
                     x=x_pos,
                     y=y_pos,
-                    s=f'{val:.3f}',
+                    s=f'{val:.4f}',
                     ha='center',
                     va='bottom',
                     fontsize=9,
@@ -721,7 +721,7 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
             #     )
 
         # 3. Final formatting
-        plt.ylim(lower_limit, 1.03)
+        plt.ylim(lower_limit, 1.01)
         # plt.title(f"Entity: {entity}")
         plt.xlabel("Pollution level")
         plt.ylabel("Mean F1 score")
@@ -761,7 +761,7 @@ def plot_degradation_barplot(df, dataset, rtype, lm="roberta"):
         plt.tight_layout()
 
         # 4. Save/Show
-        out_path = Path(f"../img/barplots/{lm}/{dataset}/{rtype}")
+        out_path = Path(f"../plots/bar/{dataset}-{rtype}")
         out_path.mkdir(parents=True, exist_ok=True)
         # plt.savefig(out_path / f"f1_score_{entity}.png")
         # Change this in your script:
