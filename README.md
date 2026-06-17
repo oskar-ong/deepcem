@@ -1,4 +1,3 @@
-```markdown
 # RETEM: Relationally Enriched Transformer-based Entity Matching
 
 RETEM is an end-to-end entity matching pipeline optimized for High-Performance Computing (HPC) environments running SLURM. This repository 
