@@ -4,7 +4,7 @@ RETEM is an end-to-end entity matching pipeline optimized for High-Performance C
 features an extended fork of the **Ditto** entity matcher, updated to support modern GPU-enabled parallel computing and recent PyTorch API changes.
 
 All experiment metrics, parameters, and results are automatically tracked and logged inside a local SQLite database (`cem_results.db`).
-Relevant results discussed in the thesis can be explored in notebooks/results_<dataset>.ipynb.
+Relevant results discussed in the thesis can be explored in notebooks/results_DATASET.ipynb.
 
 ---
 
@@ -104,9 +104,5 @@ The core execution pipeline progresses through four major stages:
 ├── cem_results.db                      # Local SQLite database tracking experiment results
 ├── requirements.txt                    # Python package dependencies
 └── README.md                           # Project documentation
-
-```
-
-```
 
 ```
