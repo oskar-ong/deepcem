@@ -1,131 +1,112 @@
-# RETEM - Relationally Enriched Transformer-based Entity Matching
+```markdown
+# RETEM: Relationally Enriched Transformer-based Entity Matching
 
-RETEM is an end-to-end entity matching pipeline designed for HPC environments using SLURM. 
-This repository includes a fork of the **Ditto** entity matcher, extended to support GPU enabled parallel computing and updates of deprecated 
-pytorch functions. 
+RETEM is an end-to-end entity matching pipeline optimized for High-Performance Computing (HPC) environments running SLURM. This repository 
+features an extended fork of the **Ditto** entity matcher, updated to support modern GPU-enabled parallel computing and recent PyTorch API changes.
 
-Results from all experiments are automatically logged in a SQLite database **cem_results.db**.
-
-## Clone repository
-
-git clone repo 
+All experiment metrics, parameters, and results are automatically tracked and logged inside a local SQLite database (`cem_results.db`).
+Relevant results discussed in the thesis can be explored in notebooks/results_<dataset>.ipynb.
 
 ---
-## Install Ditto Submodule 
 
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/oskar-ong/retem.git](https://github.com/oskar-ong/retem.git)
+cd retem
+
+```
+
+### 2. Environment Setup & Submodule Installation
+
+Ensure you have Conda installed, then run the following sequence to build the environment and install the customized Ditto submodule:
+
+```bash
+# Create and activate the environment
+conda create -y -n retem_env python=3.11
+conda activate retem_env
+
+# Configure channel priority and install dependencies
+conda config --env --set channel_priority strict 
+CONDA_OVERRIDE_CUDA=12.4 conda install -y \
+  -c pytorch -c nvidia -c conda-forge -c defaults \
+  pytorch pytorch-cuda=12.4 \
+  pandas scikit-learn jsonlines tqdm transformers tensorboardX nltk spacy
+
+# Initialize and pull the Ditto submodule
 git submodule update --init --recursive
 
-conda activate <env>
-
+# Install the customized Ditto fork in editable mode
 python -m pip install -e ./models/ditto
 
+```
+
 ---
 
-## Run Experiment: 
+## Running Experiments
 
-If you have a GPU enabled local machine you can directly run the python script: 
+### HPC Cluster (SLURM)
 
-python exp_main.py -<dataset> 
+To submit the main experiment to a SLURM queue, pass the target dataset name as an argument:
 
-Note: Local execution has not been tested. 
-
-If you have access to a HPC cluster with a Slurm workload management: 
-
+```bash
 sbatch experiment.sh <dataset>
 
-## Pipeline Stages
+```
 
-1. **Dataset Preparation:** Utilities to ingest, clean, and split raw entity data into train/validation/test sets.
-2. **Preprocessing:** * **Relational Enrichment:** Injecting contextual/relational graph information into the entity profiles.
-   * **Serialization:** Converting enriched entity pairs into Ditto-compliant text sequences.
-3. **2-Phase Finetuning (Curriculum Learning):** Training the underlying language model sequentially, starting with easy matches and progressing to hard/noisy pairs.
-4. **Iterative Matching:** A feedback loop that dynamically updates match classifications and propagates constraints across the dataset.
+* **Baselines:** Run baseline experiments using `sbatch baseline.sh <dataset>`.
+* **Configuration:** Adjust random seeds and data pollution levels directly inside `experiment.sh`. To tweak Ditto's hyperparameters, modify `experiment_config.py` or `baseline_config.py`.
+
+### Local Execution (Testing)
+
+If your local machine has a compatible GPU, you can run the pipeline script directly:
+
+```bash
+python exp_main.py <dataset>
+
+```
+
+> **Note:** Local execution is unverified. Running via the SLURM workload manager is highly recommended.
 
 ---
 
-## Important directories and files
+## Pipeline Architecture (exp_main.py)
+
+The core execution pipeline progresses through four major stages:
+
+1. **Dataset Preparation:** Ingests, cleans, and splits raw entity data into robust train, validation, and test partitions.
+2. **Preprocessing:**
+* **Relational Enrichment:** Injects relational graph information directly into the entity profiles to boost matching accuracy.
+* **Serialization:** Converts the enriched entity pairs into text sequences compliant with Ditto’s input format.
+
+1. **2-Phase Fine-Tuning:** Trains the underlying Transformer model sequentially— first attribute only with empty relationship scores, then with relationship scores.
+2. **Iterative Matching:** Executes a feedback loop that dynamically updates match classifications and propagates matching decisions across related entity profiles.
+
+---
+
+## Repository Structure
 
 ```text
-├── data/                               # Raw, interim and processed datasets
-├── src/                                # Source code
-│   ├── exp_baseline.py/                # Baseline Experiment
-│   └── exp_main.py/                    # Main experiment
-│   ├── models/ditto/                   # Customized fork of the Ditto entity matcher
-│   ├── normalize_with_new_ids.py       # Dataset normalization and assignment of new identifieres to avoid leakage
-│   ├── pollution.py                    # Dataset pollution
-│   ├── split_generation.py             # ML dataset split generation 
-│   ├── split_generation_naive.py       # ML dataset split generation without mitigating relational leakage
-├── baseline.sh                         # Slurm batch script for baseline experiment
-├── cem_results.db/                     # SQLite DB results
-├── experiment.sh                       # Slurm batch script for main experiment
+├── data/                               # Raw, interim, and processed datasets
+├── src/                                # Pipeline source code
+│   ├── baseline_config.py              # Configuration for baseline experiment
+│   ├── experiment_config.py            # Configuration for main experiment
+│   ├── exp_baseline.py                 # Baseline experiment workflow
+│   ├── exp_main.py                     # Main RETEM experiment pipeline
+│   ├── normalize_with_new_ids.py       # Dataset normalization & ID re-assignment to prevent leakage
+│   ├── pollution.py                    # Utilities for simulating data pollution/noise
+│   ├── split_generation.py             # ML split generation with relational leakage mitigation
+│   └── split_generation_naive.py       # Naive ML split generation (Independent, random sampling)
+├── models/
+│   └── ditto/                          # Customized fork of the Ditto entity matcher
+├── baseline.sh                         # SLURM batch script for baseline runs
+├── experiment.sh                       # SLURM batch script for main RETEM runs
+├── cem_results.db                      # Local SQLite database tracking experiment results
+├── requirements.txt                    # Python package dependencies
 └── README.md                           # Project documentation
-├── requirements.txt                    # Python dependencies
 
 ```
----
-
-<!-- ## Pipeline Step-by-Step Breakdown
-
-If you need to run steps manually or debug locally on a small subset, you can trigger individual scripts:
-
-### Step 1: Dataset Preparation
-
-```bash
-python src/preparation/prepare_data.py --input data/raw/ --output data/interim/
-
-```
-
-### Step 2: Preprocessing & Serialization
-
-```bash
-python src/preprocessing/enrich_and_serialize.py --config config/enrichment_rules.json
-
-```
-
-### Step 3: Two-Phase Curriculum Finetuning
-
-```bash
-# Phase 1: Train on easy pairs
-python src/training/train.py --phase 1 --config config/train_phase1.json
-# Phase 2: Train on hard pairs (Curriculum Learning)
-python src/training/train.py --phase 2 --config config/train_phase2.json
-
-```
-
-### Step 4: Iterative Matching
-
-```bash
-python src/matching/iterative_match.py --checkpoint checkpoints/best_model.pt
-
-``` -->
-
-<!-- ---
-
-## 🗄️ Results Tracking (SQL Database)
-
-At the end of every pipeline run (both Baseline and Custom), performance metrics are committed to your configured SQL database.
-
-### Metrics Tracked:
-
-| Column Name | Description |
-| --- | --- |
-| `run_id` | Unique identifier for the experiment run |
-| `timestamp` | Date and time of execution |
-| `experiment_type` | `baseline` or `custom_pipeline` |
-| `precision` | Precision score on the test set |
-| `recall` | Recall score on the test set |
-| `f1_score` | F1-Score achievement |
-| `epoch_count` | Total epochs completed across training phases |
-| `slurm_job_id` | Associated HPC Job ID for log cross-referencing |
-
-To view results, you can query your database directly or use the quick summary script:
-
-```bash
-python src/utils/fetch_results.py --limit 10
-
-``` -->
-
-
 
 ```
 
