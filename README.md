@@ -1,4 +1,4 @@
-# RETEM: Relationally Enriched Transformer-based Entity Matching
+# RETEM: Relationally Enriched Transformers-based Entity Matching
 
 RETEM is an end-to-end entity matching pipeline optimized for High-Performance Computing (HPC) environments running SLURM. This repository 
 features an extended fork of the **Ditto** entity matcher, updated to support modern GPU-enabled parallel computing and recent PyTorch API changes.
@@ -62,24 +62,41 @@ sbatch experiment.sh <dataset>
 If your local machine has a compatible GPU, you can run the pipeline script directly:
 
 ```bash
-python exp_main.py <dataset>
+python src/exp_main.py <dataset>
 
 ```
 
 > **Note:** Local execution is unverified. Running via the SLURM workload manager is highly recommended.
 
 ---
+## Datasets
 
-## Pipeline Architecture (exp_main.py)
+Available Datasets are 
+
+- imdb
+- music
+- pokemon
+
+Adding custom datasets requires: 
+
+1) normalization via src/normalize_with_new_ids.py 
+2) creation of new entity_config.py entry 
+3) creation of ML splits via split_generation.py or split_generation_naive.py
+4) creation of experiment_config.py entry 
+5) reference to the ml splits filepath in models/ditto/configs.json 
+
+---
+
+## Pipeline Architecture
 
 The core execution pipeline progresses through four major stages:
 
-1. **Dataset Preparation:** Ingests, cleans, and splits raw entity data into robust train, validation, and test partitions.
+1. **Dataset Preparation:** Creation of ML splits
 2. **Preprocessing:**
 * **Relational Enrichment:** Injects relational graph information directly into the entity profiles to boost matching accuracy.
 * **Serialization:** Converts the enriched entity pairs into text sequences compliant with Ditto’s input format.
 
-1. **2-Phase Fine-Tuning:** Trains the underlying Transformer model sequentially— first attribute only with empty relationship scores, then with relationship scores.
+1. **2-Phase Fine-Tuning:** Trains the underlying Transformer model sequentially: first attribute only with empty relationship scores, then with relationship scores.
 2. **Iterative Matching:** Executes a feedback loop that dynamically updates match classifications and propagates matching decisions across related entity profiles.
 
 ---
